@@ -1,0 +1,960 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Boiler Service Liverpool | £75 Fixed Price | Gas Safe | Same Day | Ideal Plumbing Solutions"
+  description="Annual boiler service in Liverpool from £75. Gas Safe registered engineers. Service certificate provided same day. All major brands. Liverpool, Wirral, Warrington and St Helens covered. Call 07399 676656."
+  canonical="https://www.idealplumbingsolutions.co.uk/boiler-service-liverpool"
+>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Plumber"],
+    "name": "Ideal Plumbing Solutions",
+    "url": "https://www.idealplumbingsolutions.co.uk/boiler-service-liverpool",
+    "telephone": "+4407399676656",
+    "priceRange": "££",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "250",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Boiler Service Liverpool",
+    "alternateName": ["Annual Boiler Service Liverpool", "Boiler Servicing Liverpool", "Gas Boiler Service Liverpool"],
+    "description": "Annual gas boiler service in Liverpool from £75 fixed price. Gas Safe registered engineers. Service certificate provided same day. All major brands including Worcester Bosch, Vaillant, Ideal and Baxi.",
+    "provider": { "@type": "Plumber", "name": "Ideal Plumbing Solutions", "telephone": "+4407399676656" },
+    "areaServed": [
+      { "@type": "Place", "name": "Liverpool" },
+      { "@type": "Place", "name": "Wirral" },
+      { "@type": "Place", "name": "Warrington" },
+      { "@type": "Place", "name": "St Helens" }
+    ],
+    "offers": [
+      { "@type": "Offer", "name": "Annual Boiler Service Liverpool", "price": "75", "priceCurrency": "GBP", "description": "Full annual gas boiler service including all checks, cleaning and service certificate." },
+      { "@type": "Offer", "name": "Boiler Service and Gas Safety Certificate Liverpool", "price": "120", "priceCurrency": "GBP", "description": "Combined annual boiler service and CP12 gas safety certificate. One visit, two documents." }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a boiler service cost in Liverpool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Our annual boiler service in Liverpool costs £75 fixed price. This includes all checks, cleaning, efficiency tests and a service certificate. A combined boiler service and gas safety certificate (CP12) is £120. No hidden fees. Liverpool market rates range from £55 to £110 for a standard service." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a boiler service take in Liverpool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A standard annual boiler service takes between 45 minutes and 1 hour. If additional cleaning or minor repairs are required it may take slightly longer. We confirm the time and any additional costs before carrying out any extra work." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I service my boiler?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Boilers should be serviced annually. All major manufacturers including Worcester Bosch, Vaillant and Ideal require annual servicing as a condition of their warranty. Landlords should service boilers annually alongside their CP12 gas safety certificate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens during a boiler service?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Our Gas Safe engineer carries out a full inspection including: visual check of the boiler and flue, checking gas pressure and flow, cleaning the burner and heat exchanger, testing the ignition, checking safety devices, inspecting seals and gaskets and verifying correct operation. A service certificate is issued on completion." }
+      },
+      {
+        "@type": "Question",
+        "name": "Will an unserviced boiler void my warranty?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. All major boiler manufacturers including Worcester Bosch, Vaillant, Ideal and Baxi require annual servicing by a Gas Safe registered engineer as a condition of their warranty. Missing a service can void a 10-year warranty, leaving you responsible for the full cost of any repairs or replacement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you service all boiler brands in Liverpool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We service all major boiler brands across Liverpool including Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm, Intergas and Alpha. Our Gas Safe engineers carry the most common parts and tools for all of these brands on every visit." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide a boiler service certificate for landlords?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide a full service certificate on completion of every boiler service. Landlords can combine the boiler service with a CP12 gas safety certificate for £120 in a single visit, providing all documentation needed for tenants and letting agents." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .bs-page { }
+    .bs-page h2 { text-align: center; color: var(--navy); }
+    .bs-page .section-sub { text-align: center; }
+    .bs-page p { font-size: 0.97rem; }
+    .bs-page li { font-size: 0.97rem; }
+    .bs-page .faq-body p { font-size: 0.95rem; }
+    .bs-page .review-card > p { font-size: 0.94rem; line-height: 1.75; }
+
+    /* CHECK LIST */
+    .check-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .check-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .check-num {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      min-width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .check-text strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .check-text p { color: var(--muted); font-size: 0.88rem; margin: 0; }
+
+    /* BRANDS */
+    .brand-pill-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .brand-pill {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .brand-pill strong { display: block; color: var(--navy); font-size: 1.1rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; margin-bottom: 0.25rem; }
+    .brand-pill p { color: var(--muted); font-size: 0.87rem; margin: 0; }
+
+    /* SIGNS */
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .sign-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .sign-icon { color: var(--orange); font-weight: 900; font-size: 1.2rem; flex-shrink: 0; min-width: 1.25rem; }
+    .sign-item strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.15rem; }
+    .sign-item p { color: var(--muted); font-size: 0.85rem; margin: 0; }
+
+    /* WARRANTY BOX */
+    .warranty-box {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .warranty-box h3 { color: var(--orange); font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .warranty-box p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 1rem; }
+    .warranty-brands {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .warranty-brand {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-sm);
+      padding: 0.3rem 0.75rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    /* COMBINE BOX */
+    .combine-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .combine-box h3 { color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .combine-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin: 0.5rem 0 0.25rem;
+    }
+    .combine-price small { font-size: 1rem; color: var(--muted); }
+    .saving-pill {
+      display: inline-block;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+    .combine-box p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.25rem; }
+    .combine-items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+    .combine-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      padding: 0.5rem 0.75rem;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+    }
+    .combine-item span { color: var(--orange); font-weight: 700; }
+
+    /* LANDLORD BAR */
+    .landlord-bar {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+    .landlord-bar strong { color: var(--orange); font-size: 1rem; display: block; }
+    .landlord-bar p { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin: 0; }
+
+    /* SERVICES GRID */
+    .bs-services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .bs-service-link {
+      background: var(--navy);
+      border-top: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.35rem;
+      transition: transform 0.18s;
+    }
+    .bs-service-link:hover { transform: translateY(-3px); }
+    .bs-service-link strong { color: var(--orange); font-size: 1rem; font-weight: 800; }
+    .bs-service-link span { color: rgba(255,255,255,0.8); font-size: 0.88rem; }
+
+    .bs-page a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); transition: border-color 0.2s; }
+    .bs-page a:hover { border-color: var(--navy); }
+    .bs-page .btn { border-bottom: none; }
+  </style>
+
+  <div class="bs-page">
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">
+        <span class="badge-dot"></span>
+        Gas Safe Registered · Certificate Same Day · All Major Brands
+      </div>
+      <h1>Boiler Service Liverpool</h1>
+      <p class="page-hero-sub" style="font-size:1rem;">Annual boiler service from <strong>£75 fixed price</strong>. Gas Safe registered engineers. Certificate provided same day. Protects your warranty. All major brands across Liverpool, Wirral, Warrington and St Helens.</p>
+
+      <div style="display:flex;flex-direction:row;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
+        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:140px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--orange);line-height:1;">£75</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">Annual Service</div>
+        </div>
+        <div style="background:var(--orange);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:140px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--white);line-height:1;">£120</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.9);font-weight:700;">Service and CP12</div>
+        </div>
+        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:140px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--orange);line-height:1;">1hr</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">Average Duration</div>
+        </div>
+      </div>
+
+      <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-bottom:1.5rem;">Fixed price. No hidden fees. Certificate included. Free annual reminder service.</p>
+
+      <div class="hero-actions">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);">CALL 07399 676656</a>
+        <a href="/contact-3" class="btn btn-lg" style="background:var(--white);color:var(--navy);border:2px solid var(--navy);">BOOK ONLINE</a>
+      </div>
+
+      <div class="trust-row">
+        <div class="trust-item">
+          <strong>Gas Safe</strong>
+          <span>Registered<br>Engineers</span>
+        </div>
+        <div class="trust-item">
+          <strong>No Sub-</strong>
+          <span>Contractors<br>Ever</span>
+        </div>
+        <div class="trust-item">
+          <strong>5.0 ★</strong>
+          <span>250 Google<br>Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section-pad" style="background:var(--bg);">
+    <div class="container">
+      <h2>Boiler Service Prices Liverpool</h2>
+      <p class="section-sub">Fixed prices. No hidden charges. No call-out fee. The price we quote is the price you pay.</p>
+
+      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1.5rem;">
+        <div class="price-card">
+          <div class="price-tier">STANDARD SERVICE</div>
+          <div class="price-name">Annual Boiler Service</div>
+          <div class="price-sub">All major brands. All Liverpool postcodes.</div>
+          <div class="price-amount">£<span>75</span></div>
+          <ul>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Full 10-point inspection</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Burner and heat exchanger clean</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Flue and combustion test</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Service certificate same day</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Free annual renewal reminder</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-navy btn-full">Book Now</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <div class="price-card-badge">BEST VALUE FOR LANDLORDS</div>
+          <div class="price-tier">COMBINED</div>
+          <div class="price-name">Service and Gas Safety Certificate</div>
+          <div class="price-sub">One visit. Two documents.</div>
+          <div class="price-amount">£<span>120</span></div>
+          <ul>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Full annual boiler service</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> CP12 gas safety certificate</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Both documents emailed same day</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Landlord and letting agent compliant</li>
+            <li><span style="color:#16a34a;font-weight:700;">✓</span> Portfolio discounts available</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-orange btn-full">Book Combined Visit</a>
+        </div>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-top:1.5rem;text-align:center;">
+        <strong style="color:var(--navy);display:block;margin-bottom:0.35rem;">How does our price compare?</strong>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0;">Liverpool boiler service prices range from £55 to £110 according to <a href="https://www.hamuch.com/cost/boiler-service/liverpool" target="_blank" rel="noopener">HaMuch price data</a>. At £75 we are competitively priced while using only our own Gas Safe registered engineers, not sub-contractors. The <a href="https://www.mybuilder.com/central-heating/price-guides/boiler-service-cost" target="_blank" rel="noopener">MyBuilder national average is £80</a> for a standard gas boiler service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ANNUAL SERVICING MATTERS -->
+  <section class="section-pad" style="background:var(--white);">
+    <div class="container">
+      <h2>Why Every Liverpool Boiler Needs an Annual Service</h2>
+      <p class="section-sub">An annual boiler service is not just good practice. For most Liverpool homeowners it is essential for safety, savings and warranty protection.</p>
+
+      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
+        <div style="background:var(--bg);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Safety</h3>
+          <p style="color:var(--muted);">A poorly maintained boiler is the leading cause of carbon monoxide leaks in the home. An annual service catches failing components, blocked flues and incomplete combustion before they become dangerous. The <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">HSE recommends annual gas appliance servicing</a> for all domestic properties. See <a href="https://www.nhs.uk/conditions/carbon-monoxide-poisoning/" target="_blank" rel="noopener">NHS carbon monoxide guidance</a> for the health risks of a faulty boiler.</p>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Warranty Protection</h3>
+          <p style="color:var(--muted);">All major boiler manufacturers require annual servicing by a Gas Safe registered engineer as a condition of their warranty. Missing a single service can void a 10-year Worcester Bosch or Vaillant warranty, leaving you personally responsible for the full cost of any repair or replacement. We provide a service certificate as proof for your warranty records.</p>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Efficiency and Lower Bills</h3>
+          <p style="color:var(--muted);">A serviced boiler runs up to 10% more efficiently than an unserviced one. Over a year that translates to a meaningful reduction in gas bills. The <a href="https://energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust</a> recommends annual servicing as one of the most cost-effective ways to reduce home energy use. A £75 service typically pays for itself within months through improved efficiency.</p>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Fewer Breakdowns</h3>
+          <p style="color:var(--muted);">80% of boiler breakdowns in winter are caused by faults that could have been detected and fixed during a routine service. An annual service catches worn parts, low pressure, scale buildup and ignition issues before they cause a complete breakdown. The average emergency boiler repair in Liverpool costs £150 to £500. A £75 service is the best insurance available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE CHECK -->
+  <section class="section-pad" style="background:var(--bg);">
+    <div class="container">
+      <h2>What Our Gas Safe Engineers Check During a Liverpool Boiler Service</h2>
+      <p class="section-sub">A thorough 10-point inspection covering every aspect of your boiler's safety and performance. Takes around 45 minutes to 1 hour.</p>
+
+      <div class="check-grid">
+        <div class="check-item">
+          <div class="check-num">1</div>
+          <div class="check-text">
+            <strong>Visual inspection of the boiler and casing</strong>
+            <p>We check the boiler body, casing and surrounding area for signs of corrosion, leaks, damage or poor installation that could indicate a developing problem.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">2</div>
+          <div class="check-text">
+            <strong>Burner and heat exchanger inspection and clean</strong>
+            <p>The burner is removed, inspected and cleaned. A dirty burner reduces efficiency and can cause carbon monoxide production. The heat exchanger is inspected for scaling, corrosion and blockages.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">3</div>
+          <div class="check-text">
+            <strong>Flue flow and combustion analysis</strong>
+            <p>We test the flue to confirm harmful gases including carbon monoxide are being safely expelled from the property. A flue analysis confirms the boiler is burning gas correctly and efficiently.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">4</div>
+          <div class="check-text">
+            <strong>Gas pressure and flow rate check</strong>
+            <p>Gas pressure at the boiler inlet and burner is checked and adjusted if necessary to confirm the boiler is receiving the correct supply and operating within safe parameters.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">5</div>
+          <div class="check-text">
+            <strong>Ignition and safety device testing</strong>
+            <p>The ignition system and all safety devices including the flame failure device, overheat thermostat and pressure relief valve are tested to confirm correct operation.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">6</div>
+          <div class="check-text">
+            <strong>Seals, gaskets and condensate check</strong>
+            <p>All internal seals and gaskets are inspected for wear or deterioration. The condensate trap and pipework are checked to confirm they are clear and draining correctly.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">7</div>
+          <div class="check-text">
+            <strong>System pressure and expansion vessel check</strong>
+            <p>Boiler pressure is checked and topped up if necessary. The expansion vessel is checked for correct pressure and operation to prevent pressure build-up in the system.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">8</div>
+          <div class="check-text">
+            <strong>Controls and thermostat operation</strong>
+            <p>The programmer, thermostat and any smart controls are tested to confirm they are operating correctly and communicating properly with the boiler.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">9</div>
+          <div class="check-text">
+            <strong>Magnetic filter and inhibitor check</strong>
+            <p>If a magnetic system filter is fitted we clean it and check inhibitor levels in the heating circuit. Correct inhibitor levels prevent sludge build-up that can damage the boiler and reduce efficiency.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-num">10</div>
+          <div class="check-text">
+            <strong>Full operational test</strong>
+            <p>The boiler is run through a full heating and hot water cycle to confirm correct operation. Any observations or recommendations are explained clearly before we leave.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WARRANTY SECTION -->
+  <section class="section-pad" style="background:var(--white);">
+    <div class="container">
+      <h2>Protect Your Boiler Warranty with an Annual Service</h2>
+      <p class="section-sub">Missing an annual service can void your boiler warranty completely. Here is what the major manufacturers require.</p>
+
+      <div class="warranty-box">
+        <h3>Annual Servicing is a Warranty Condition</h3>
+        <p>Every major boiler manufacturer requires annual servicing by a Gas Safe registered engineer to keep the warranty valid. Skip a service and you risk losing years of warranty cover worth thousands of pounds.</p>
+        <div class="warranty-brands">
+          <span class="warranty-brand">Worcester Bosch: up to 10 years</span>
+          <span class="warranty-brand">Vaillant: up to 10 years</span>
+          <span class="warranty-brand">Ideal: up to 10 years</span>
+          <span class="warranty-brand">Baxi: up to 7 years</span>
+          <span class="warranty-brand">Potterton: up to 7 years</span>
+        </div>
+        <p style="font-size:0.88rem;">We provide a dated, signed service certificate on completion of every service. Keep this safe as proof of servicing for your warranty records.</p>
+        <a href="tel:07399676656" class="btn btn-orange btn-lg">Book Your Annual Service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNS YOUR BOILER NEEDS SERVICING -->
+  <section class="section-pad" style="background:var(--bg);">
+    <div class="container">
+      <h2>Signs Your Liverpool Boiler Needs Servicing Now</h2>
+      <p class="section-sub">Do not wait for the annual reminder if your boiler is showing any of these signs. Call us and we can often attend the same day across Liverpool.</p>
+
+      <div class="signs-grid">
+        <div class="sign-item">
+          <span class="sign-icon">!</span>
+          <div>
+            <strong>Higher than usual gas bills</strong>
+            <p>An inefficient boiler works harder to produce the same heat, using more gas in the process. A service can restore efficiency and reduce bills immediately.</p>
+          </div>
+        </div>
+        <div class="sign-item">
+          <span class="sign-icon">!</span>
+          <div>
+            <strong>Boiler taking longer to heat the home</strong>
+            <p>If your radiators are taking noticeably longer to warm up, scale build-up on the heat exchanger or a failing pump are common causes, both identifiable during a service.</p>
+          </div>
+        </div>
+        <div class="sign-item">
+          <span class="sign-icon">!</span>
+          <div>
+            <strong>Unusual noises: banging, kettling or whistling</strong>
+            <p>These sounds typically indicate limescale build-up, air in the system or a worn component. Left untreated they can lead to a complete breakdown.</p>
+          </div>
+        </div>
+        <div class="sign-item" style="border-left-color:var(--red);">
+          <span class="sign-icon" style="color:var(--red);">!</span>
+          <div>
+            <strong>Yellow or orange flame</strong>
+            <p>The boiler flame should always be blue. A yellow or orange flame indicates incomplete combustion and a potential carbon monoxide risk. Call us immediately. See <a href="https://www.nhs.uk/conditions/carbon-monoxide-poisoning/" target="_blank" rel="noopener">NHS carbon monoxide guidance</a>.</p>
+          </div>
+        </div>
+        <div class="sign-item">
+          <span class="sign-icon">!</span>
+          <div>
+            <strong>Boiler losing pressure repeatedly</strong>
+            <p>A boiler that keeps losing pressure has either a small leak somewhere in the system or a failing pressure relief valve. Both are easily identified and usually resolved during a service visit.</p>
+          </div>
+        </div>
+        <div class="sign-item">
+          <span class="sign-icon">!</span>
+          <div>
+            <strong>Boiler has not been serviced in over 12 months</strong>
+            <p>If you cannot remember when your boiler was last serviced it has almost certainly been too long. Book a service now to protect your warranty and avoid a winter breakdown.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS WE SERVICE -->
+  <section class="section-pad" style="background:var(--white);">
+    <div class="container">
+      <h2>Boiler Brands We Service in Liverpool</h2>
+      <p class="section-sub">Our Gas Safe engineers are experienced with all major boiler brands. We carry common parts and tools for every brand on every visit.</p>
+
+      <div class="brand-pill-grid">
+        <div class="brand-pill">
+          <strong>Worcester Bosch</strong>
+          <p>The UK's most popular boiler brand. Full service including Greenstar range, Greenstar i, Greenstar CDi and all Worcester Bosch combi and system models.</p>
+        </div>
+        <div class="brand-pill">
+          <strong>Vaillant</strong>
+          <p>Specialists in the ecoTEC Plus, ecoTEC Pro and ecoFIT ranges. Vaillant boilers have specific service requirements our engineers are fully trained to meet.</p>
+        </div>
+        <div class="brand-pill">
+          <strong>Ideal</strong>
+          <p>Full service of the Logic, Logic Plus, Vogue and Esprit ranges. UK-manufactured boilers with strong spare parts availability across Liverpool and Merseyside.</p>
+        </div>
+        <div class="brand-pill">
+          <strong>Baxi</strong>
+          <p>Service of all Baxi Duo-tec, Platinum, Megaflo and EcoBlue models. Good parts availability across the North West and a reliable service record.</p>
+        </div>
+        <div class="brand-pill">
+          <strong>Potterton, Glow-worm and Alpha</strong>
+          <p>We also service Potterton, Glow-worm, Intergas and Alpha boilers across Liverpool. If your boiler brand is not listed, call us and we can confirm availability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMBINE WITH CP12 -->
+  <section class="section-pad" style="background:var(--bg);">
+    <div class="container">
+      <h2>Combine Your Service with a Gas Safety Certificate</h2>
+      <p class="section-sub">The smartest option for Liverpool landlords. One visit, one invoice, two documents emailed the same day.</p>
+
+      <div class="combine-box">
+        <div class="saving-pill">SAVE TIME AND MONEY</div>
+        <h3>Boiler Service and CP12 Combined</h3>
+        <div class="combine-price">£120 <small>fully inclusive</small></div>
+        <p>A boiler service and a gas safety certificate (CP12) are two separate documents with different purposes. Combining them on a single visit saves your tenant a second disruption and saves you money compared to booking separately.</p>
+        <div class="combine-items">
+          <div class="combine-item"><span>✓</span> Full 10-point annual boiler service</div>
+          <div class="combine-item"><span>✓</span> CP12 gas safety certificate (legally required for landlords)</div>
+          <div class="combine-item"><span>✓</span> Both documents emailed to you the same day</div>
+          <div class="combine-item"><span>✓</span> Accepted by all Liverpool letting agents and Liverpool City Council</div>
+          <div class="combine-item"><span>✓</span> One visit, minimal disruption for tenants</div>
+          <div class="combine-item"><span>✓</span> Free annual renewal reminder for both documents</div>
+        </div>
+        <a href="tel:07399676656" class="btn btn-orange btn-lg">Book Combined Visit</a>
+      </div>
+
+      <div class="landlord-bar">
+        <strong>Portfolio Landlords Welcome</strong>
+        <p>Managing multiple Liverpool properties? We service boilers and complete CP12 certificates across your entire portfolio with consolidated invoicing, direct letting agent coordination and annual compliance scheduling. See <a href="https://www.nrla.org.uk/resources/gas-safety" target="_blank" rel="noopener" style="color:var(--orange);border-bottom:none;">NRLA gas safety guidance</a> for landlord obligations.</p>
+        <a href="tel:07399676656" class="btn btn-orange">Discuss Portfolio Requirements</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section-pad eicr-process-section">
+    <div class="container">
+      <h2 style="text-align:center;">How Our Liverpool Boiler Service Works</h2>
+      <p class="section-sub">Simple, professional and completed within one hour. Here is exactly what to expect.</p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Book Your Service</h3>
+            <p>Call us or book online. Same-day and next-day appointments available across Liverpool and Merseyside. We can work directly with your tenant to arrange access if needed.</p>
+            <span class="step-note">Same-day available</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>10-Point Inspection</h3>
+            <p>Our Gas Safe engineer carries out a full 10-point inspection and service of your boiler. All brands, all Liverpool postcodes. Takes 45 minutes to 1 hour.</p>
+            <span class="step-note">45 mins to 1 hour</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Certificate Issued</h3>
+            <p>Your service certificate is emailed the same day. If we find any issues we explain them clearly and provide a written quote before carrying out any additional work.</p>
+            <span class="step-note">Same-day digital copy</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Annual Reminder Set</h3>
+            <p>We set a free annual reminder so you are notified 4 weeks before your next service is due. No missed deadlines, no voided warranties, no stress.</p>
+            <span class="step-note">Free reminder included</span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg">BOOK YOUR SERVICE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-header">
+        <h2>Why Choose Ideal Plumbing for Your Liverpool Boiler Service?</h2>
+        <p>Gas Safe registered. No sub-contractors. £75 fixed price. All Liverpool and Merseyside postcodes.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <strong>Gas Safe Registered</strong>
+          <p>Every engineer is Gas Safe registered. Only Gas Safe engineers can legally service gas boilers. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);border-bottom:none;">gassaferegister.co.uk</a>.</p>
+        </div>
+        <div class="why-card">
+          <strong>Our Own Engineers. No Sub-Contractors.</strong>
+          <p>Every engineer we send is our own directly employed staff. Fully trained, vetted and insured. You know exactly who is coming to your Liverpool home.</p>
+        </div>
+        <div class="why-card">
+          <strong>£75 Fixed Price</strong>
+          <p>One price. No surprises. No call-out fee. No add-ons. The £75 covers the full service and certificate. Any additional work is quoted separately before we start.</p>
+        </div>
+        <div class="why-card">
+          <strong>All Major Brands Covered</strong>
+          <p>Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm and more. We carry common parts for all major brands on every visit.</p>
+        </div>
+        <div class="why-card">
+          <strong>Free Annual Reminders</strong>
+          <p>We send an automatic email 4 weeks before your service is due every year. Never miss a service, never void a warranty and never risk a breakdown.</p>
+        </div>
+        <div class="why-card">
+          <strong>12-Month Workmanship Guarantee</strong>
+          <p>Every service is backed by our 12-month guarantee. If anything we service fails due to our work we come back and fix it at no charge.</p>
+        </div>
+      </div>
+      <div class="why-cta">
+        <p>Ready to book your Liverpool boiler service?</p>
+        <a href="tel:07399676656" class="btn btn-orange btn-lg">CALL 07399 676656</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="reviews-header">
+        <div>
+          <h2>What Liverpool Customers Say</h2>
+          <p class="section-sub">Real boiler service reviews from Liverpool homeowners and landlords</p>
+        </div>
+        <div class="reviews-score">
+          <span class="score-number">5.0</span>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="score-label">Google · 250 reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <p>Annual boiler service booked and completed within 24 hours. Engineer arrived on time, was clean and thorough, and had the service certificate in my inbox before he had even left the street. Will be using every year without question.</p>
+          <div class="review-footer">
+            <div class="reviewer-avatar">P</div>
+            <div class="reviewer-info"><strong>Paul M</strong><span class="review-location">Aigburth · Worcester Bosch Service</span></div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <p>Combined the boiler service with the gas safety certificate for my rental property. One visit, one price, two documents emailed the same day. The letting agent accepted them without any issues. Exactly what a landlord needs. Portfolio booked in too.</p>
+          <div class="review-footer">
+            <div class="reviewer-avatar">K</div>
+            <div class="reviewer-info"><strong>Karen D</strong><span class="review-location">Wavertree · Landlord Combined Visit</span></div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <p>The engineer spotted a deteriorating seal during the service that would have caused a breakdown within weeks. Replaced it on the spot for a small additional cost. Saved me a winter emergency call-out. Honest, professional and very fair pricing.</p>
+          <div class="review-footer">
+            <div class="reviewer-avatar">T</div>
+            <div class="reviewer-info"><strong>Tom H</strong><span class="review-location">West Derby · Vaillant Service</span></div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-cta">
+        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" class="link-arrow">See all 250 reviews on Google →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-pad" style="background:var(--bg);">
+    <div class="container">
+      <h2>Boiler Service Liverpool: Common Questions</h2>
+      <p class="section-sub">Straight answers to what Liverpool homeowners ask before booking.</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-orange">COST</span>How much does a boiler service cost in Liverpool?</summary>
+          <div class="faq-body">
+            <p>Our boiler service costs £75 fixed price for a standard annual gas boiler service including the service certificate. A combined boiler service and CP12 gas safety certificate is £120. Liverpool market rates range from £55 to £110 according to <a href="https://www.hamuch.com/cost/boiler-service/liverpool" target="_blank" rel="noopener">HaMuch data</a>. We charge £75 and use only our own Gas Safe engineers, not sub-contractors.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-navy">DURATION</span>How long does a boiler service take?</summary>
+          <div class="faq-body">
+            <p>A standard annual boiler service takes between 45 minutes and 1 hour. If additional cleaning or minor repairs are identified during the service it may take slightly longer. We confirm any additional time and cost with you before carrying out any extra work. Your tenant or yourself simply needs to provide access at the start.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-green">FREQUENCY</span>How often should I have my boiler serviced?</summary>
+          <div class="faq-body">
+            <p>Every year, without exception. All major manufacturers including Worcester Bosch, Vaillant, Ideal and Baxi require annual servicing as a warranty condition. The <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">HSE</a> also recommends annual servicing for safety. Landlords should service the boiler annually, ideally combining it with the CP12 gas safety certificate to save time and money.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-orange">WARRANTY</span>Will missing a service void my boiler warranty?</summary>
+          <div class="faq-body">
+            <p>Yes. All major boiler manufacturers require annual servicing by a Gas Safe registered engineer as a condition of their warranty. A Worcester Bosch, Vaillant or Ideal boiler with a 10-year warranty can have that warranty voided entirely if a single annual service is missed. We provide a signed, dated service certificate for your records on completion of every service visit.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-navy">BRANDS</span>Do you service all boiler brands in Liverpool?</summary>
+          <div class="faq-body">
+            <p>Yes. We service Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm, Intergas and Alpha boilers across Liverpool. Our engineers carry the most common parts and tools for all major brands. If your boiler brand is not listed, call us on 07399 676656 and we can confirm availability before you book.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-green">LANDLORDS</span>Do you provide a service certificate for landlords?</summary>
+          <div class="faq-body">
+            <p>Yes. We provide a full service certificate on completion of every visit. Landlords can also combine the boiler service with a CP12 gas safety certificate for £120 in a single visit, providing everything needed for tenants, letting agents and <a href="https://liverpool.gov.uk/housing/landlords/" target="_blank" rel="noopener">Liverpool City Council HMO licensing</a>. See <a href="https://www.nrla.org.uk/resources/gas-safety" target="_blank" rel="noopener">NRLA guidance</a> for full landlord gas safety obligations.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-orange">SAME DAY</span>Can you service my boiler the same day in Liverpool?</summary>
+          <div class="faq-body">
+            <p>Yes. Same-day and next-day boiler service appointments are regularly available across Liverpool and Merseyside. Call us on 07399 676656 and we will confirm the earliest available slot. This is particularly useful when a new tenancy is starting or an urgent service is required to maintain warranty cover.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-tag tag-navy">REPAIRS</span>What happens if the engineer finds a problem during the service?</summary>
+          <div class="faq-body">
+            <p>We identify and explain any issues clearly before carrying out any additional work. Minor repairs are often completed on the same visit. We provide a written quote for any work above the standard service price and you decide whether to proceed. We never carry out work without your agreement first. Most engineers carry common parts on the van so small repairs can be completed immediately.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVERAGE -->
+  <section class="section-pad" style="background:var(--white);">
+    <div class="container">
+      <h2>Boiler Servicing Across Liverpool and Merseyside</h2>
+      <p class="section-sub">We service boilers across all Liverpool postcodes and the wider Merseyside area. Same-day slots available.</p>
+      <div class="coverage-grid">
+        <div class="coverage-area">
+          <h3>City and South</h3>
+          <div>
+            <span class="area-pill">City Centre L1</span>
+            <span class="area-pill">Toxteth L8</span>
+            <span class="area-pill">Aigburth L17</span>
+            <span class="area-pill">Allerton L18</span>
+            <span class="area-pill">Woolton L25</span>
+            <span class="area-pill">Garston L19</span>
+          </div>
+        </div>
+        <div class="coverage-area">
+          <h3>North and East</h3>
+          <div>
+            <span class="area-pill">Anfield L4</span>
+            <span class="area-pill">Wavertree L15</span>
+            <span class="area-pill">West Derby L12</span>
+            <span class="area-pill">Bootle L20</span>
+            <span class="area-pill">Crosby L23</span>
+            <span class="area-pill">Kirkby L32</span>
+          </div>
+        </div>
+        <div class="coverage-area">
+          <h3>Outskirts</h3>
+          <div>
+            <span class="area-pill">Formby L37</span>
+            <span class="area-pill">Southport PR8</span>
+            <span class="area-pill">Maghull L31</span>
+            <span class="area-pill">Huyton L36</span>
+            <span class="area-pill">Aintree L10</span>
+            <span class="area-pill">Fazakerley L10</span>
+          </div>
+        </div>
+        <div class="coverage-area">
+          <h3>Wider Merseyside</h3>
+          <div>
+            <span class="area-pill">Wirral CH</span>
+            <span class="area-pill">St Helens WA</span>
+            <span class="area-pill">Warrington WA</span>
+            <span class="area-pill">Birkenhead CH41</span>
+            <span class="area-pill">Wallasey CH44</span>
+            <span class="area-pill">Stockton Heath WA4</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES -->
+  <section class="section-pad" style="background:var(--bg);">
+    <div class="container">
+      <h2>Other Plumbing and Gas Services in Liverpool</h2>
+      <p class="section-sub">Everything Liverpool homeowners and landlords need. All Gas Safe registered.</p>
+      <div class="bs-services-grid">
+        <a href="/gas-safety-certificate-liverpool" class="bs-service-link">
+          <strong>Gas Safety Certificates Liverpool</strong>
+          <span>CP12 landlord certificates from £65. Combine with boiler service for £120. Same-day available.</span>
+        </a>
+        <a href="/boiler-installation-liverpool" class="bs-service-link">
+          <strong>New Boiler Installation Liverpool</strong>
+          <span>Worcester Bosch, Vaillant, Ideal and Baxi. Fully fitted from £1,800. Free survey.</span>
+        </a>
+        <a href="/central-heating-installation-liverpool" class="bs-service-link">
+          <strong>Central Heating Liverpool</strong>
+          <span>Full central heating installations, power flushing, radiator additions and system upgrades.</span>
+        </a>
+        <a href="/" class="bs-service-link">
+          <strong>Emergency Plumber Liverpool</strong>
+          <span>24/7 emergency response. 30 minute arrival. Gas Safe registered. From £80/hour.</span>
+        </a>
+        <a href="/bathroom-fitters-liverpool" class="bs-service-link">
+          <strong>Bathroom Fitters Liverpool</strong>
+          <span>Full bathroom installations, toilet replacements, taps, sinks and showers.</span>
+        </a>
+        <a href="/contact-3" class="bs-service-link">
+          <strong>Book a Service Online</strong>
+          <span>Book your boiler service or any other plumbing work. Same-day appointments available.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO COPY -->
+  <section class="section-pad" style="background:var(--white);">
+    <div class="container">
+      <div class="copy-grid">
+        <div class="copy-block">
+          <h2>Boiler Servicing in Liverpool's Older Properties</h2>
+          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">Do older Liverpool boilers need servicing more often?</h3>
+          <p>Not necessarily more often, but the consequences of missing a service are greater. Liverpool's older housing stock frequently contains boilers that are 10 to 20 years old. These boilers are more prone to scale build-up, seal deterioration and ignition problems. Annual servicing is the only reliable way to catch deteriorating components before they cause a breakdown. The <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">HSE recommends annual servicing</a> for all domestic gas appliances regardless of age.</p>
+          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">Is a boiler service the same as a boiler repair?</h3>
+          <p>No. A service is a planned maintenance visit to check, clean and optimise the boiler. A repair is reactive work to fix a fault that has already developed. Regular servicing significantly reduces the likelihood of needing a repair. If our engineer identifies a fault during the service, they explain it clearly and provide a written quote before carrying out any additional work. See <a href="https://energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust boiler servicing guidance</a> for independent advice.</p>
+        </div>
+        <div class="copy-block">
+          <h2>Boiler Servicing for Liverpool Landlords and Letting Agents</h2>
+          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">Are landlords legally required to service boilers?</h3>
+          <p>The annual legal requirement for landlords is the gas safety certificate (CP12), not specifically a boiler service. However, boiler manufacturers require annual servicing to maintain warranty cover, and the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">HSE</a> requires landlords to keep all gas appliances in good working order. In practice this means an annual service is essential. We recommend combining both in a single visit for £120. <a href="https://liverpool.gov.uk/housing/landlords/" target="_blank" rel="noopener">Liverpool City Council</a> actively inspects rental properties and a well-serviced boiler protects against enforcement action.</p>
+          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">Can a letting agent book a boiler service on behalf of a landlord?</h3>
+          <p>Yes. We work with Liverpool letting agents directly, coordinating access with tenants and providing all certificates and documentation to the agent and landlord. If you are a letting agent managing multiple Liverpool properties, call us to discuss a preferred supplier arrangement. See <a href="https://www.nrla.org.uk/resources/gas-safety" target="_blank" rel="noopener">NRLA guidance on landlord gas obligations</a> for further information on landlord responsibilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container" style="text-align:center">
+      <div class="page-hero-badge" style="margin:0 auto 1.25rem;">
+        <span class="badge-dot"></span>
+        Gas Safe Registered · Same Day Available · Liverpool and Merseyside
+      </div>
+      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Liverpool Boiler Service Today</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">£75 fixed price. All major brands. Service certificate same day. Free annual reminders. No sub-contractors.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;">CALL 07399 676656</a>
+        <a href="/contact-3" class="btn btn-outline btn-lg btn-full">Book Online</a>
+      </div>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Boiler broken down? Call us 24/7 on 07399 676656 for emergency boiler repair across Liverpool.</p>
+    </div>
+  </section>
+
+  </div>
+
+</BaseLayout>
