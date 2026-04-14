@@ -3,24 +3,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Central Heating Installation Liverpool | Full Systems From £3,500 | Gas Safe | Ideal Plumbing"
-  description="Central heating installation across Liverpool from £3,500. Full systems, radiator additions, power flushing and smart controls. Gas Safe registered. Free survey. Liverpool, Wirral, Warrington and St Helens. Call 07399 676656."
+  title="Central Heating Installation Liverpool | Full Systems From £3,500 | Gas Safe"
+  description="Central heating installation Liverpool from £3,500 fully fitted. Radiator additions from £200. Smart controls, power flushing and system upgrades. Gas Safe registered. Free survey. Call 07399 676656."
   canonical="https://www.idealplumbingsolutions.co.uk/central-heating-installation-liverpool"
 >
 
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Plumber"],
+    "@type": "LocalBusiness",
+    "@id": "https://www.idealplumbingsolutions.co.uk/#business",
     "name": "Ideal Plumbing Solutions",
-    "url": "https://www.idealplumbingsolutions.co.uk/central-heating-installation-liverpool",
     "telephone": "+4407399676656",
+    "email": "idealplumbingsolutions@gmail.com",
     "priceRange": "££",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "250",
-      "bestRating": "5"
+    "address": { "@type": "PostalAddress", "addressLocality": "Liverpool", "addressRegion": "Merseyside", "addressCountry": "GB" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "53.4084", "longitude": "-2.9916" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "250", "bestRating": "5", "worstRating": "1" },
+    "areaServed": [
+      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "Warrington" }, { "@type": "City", "name": "St Helens" },
+      { "@type": "City", "name": "Bootle" }, { "@type": "City", "name": "Crosby" },
+      { "@type": "City", "name": "Formby" }, { "@type": "City", "name": "Southport" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Central Heating Installation Liverpool",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Full Central Heating Installation Liverpool", "price": "3500", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+        { "@type": "Offer", "name": "Central Heating System Upgrade Liverpool", "price": "1500", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+        { "@type": "Offer", "name": "Radiator Addition Liverpool", "price": "200", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" }
+      ]
     }
   }
   </script>
@@ -30,18 +43,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Central Heating Installation Liverpool",
-    "description": "Full central heating installation across Liverpool from £3,500. Radiator additions from £200. Power flushing from £350. Gas Safe registered engineers. Free survey. Liverpool, Wirral, Warrington and St Helens.",
+    "serviceType": "Central Heating Installation and Upgrade",
+    "description": "Full central heating installation across Liverpool from £3,500. System upgrades from £1,500. Radiator additions from £200. Smart controls, power flushing and ECO4 grants available. Gas Safe registered. Free survey.",
     "provider": { "@type": "Plumber", "name": "Ideal Plumbing Solutions", "telephone": "+4407399676656" },
     "areaServed": [
-      { "@type": "Place", "name": "Liverpool" },
-      { "@type": "Place", "name": "Wirral" },
-      { "@type": "Place", "name": "Warrington" },
-      { "@type": "Place", "name": "St Helens" }
-    ],
-    "offers": [
-      { "@type": "Offer", "name": "Full Central Heating Installation Liverpool", "price": "3500", "priceCurrency": "GBP", "description": "Complete new central heating system including boiler, radiators, pipework and controls." },
-      { "@type": "Offer", "name": "Radiator Addition Liverpool", "price": "200", "priceCurrency": "GBP", "description": "Single radiator addition to existing central heating system, fully fitted." },
-      { "@type": "Offer", "name": "Power Flush Liverpool", "price": "350", "priceCurrency": "GBP", "description": "Full central heating power flush to remove sludge, scale and debris from the system." }
+      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "Warrington" }, { "@type": "City", "name": "St Helens" }
     ]
   }
   </script>
@@ -51,814 +58,427 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does central heating installation cost in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A full central heating system in Liverpool costs from £3,500 for a smaller property up to £7,000 for a large home. Liverpool rates are typically 10 to 15% lower than the national average. Adding a single radiator costs from £200. Power flushing costs from £350. We provide a free written fixed-price quote after a site survey." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does central heating installation take in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A full central heating installation in Liverpool typically takes 3 to 5 days for an average-sized property. Adding a single radiator to an existing system usually takes half a day. A power flush takes 4 to 8 hours depending on system size." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a government grant for central heating in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Eligible Liverpool homeowners may qualify for the ECO4 scheme which provides free or heavily subsidised central heating upgrades for households on qualifying benefits or low incomes. Liverpool City Council also runs local schemes for vulnerable residents. We assess eligibility at the free survey." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a power flush and does my Liverpool system need one?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A power flush uses high-velocity water and cleaning chemicals to remove sludge, scale and debris from your heating system. Signs your Liverpool system needs a power flush include cold spots on radiators, a noisy boiler, slow warm-up times and reduced efficiency. We recommend a power flush before any new boiler installation." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need planning permission for central heating in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Standard central heating installation does not require planning permission. However, gas work requires Gas Safe registration and is notifiable under Building Regulations via the Competent Person Scheme. We handle all Building Regulations notifications as part of our service." }
-      },
-      {
-        "@type": "Question",
-        "name": "What radiators do you recommend for Liverpool properties?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For most Liverpool homes we recommend double panel convector radiators for maximum heat output. Flat panel radiators suit modern interiors and have a lower profile. For Liverpool's older Victorian and Edwardian properties, column radiators complement period features while providing excellent heat output. We assess and size every radiator correctly at the free survey." }
-      }
+      { "@type": "Question", "name": "How much does central heating installation cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A full central heating installation in Liverpool starts from £3,500 for a smaller property and can reach £6,000 to £7,000 for a larger home. This includes the boiler, all radiators, pipework, controls and Gas Safe certificate. Upgrading an existing system starts from £1,500. Adding a single radiator costs from £200 supply and fit. Liverpool rates are typically 10 to 15% lower than southern England. We provide a free written fixed-price quote after a site survey." } },
+      { "@type": "Question", "name": "How long does central heating installation take in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A full central heating installation in a typical 3-bed Liverpool property takes 3 to 5 days. Smaller properties or like-for-like system replacements take 2 to 3 days. A single radiator addition takes half a day. We always confirm the expected duration at the free survey and work to a fixed completion timeline." } },
+      { "@type": "Question", "name": "Do I need a power flush with a new central heating system?", "acceptedAnswer": { "@type": "Answer", "text": "For a full new system installation, a power flush is not required as all pipework and radiators are new. For an upgrade or extension on an existing system, a power flush is strongly recommended before connecting new components to the existing circuit. All new systems are filled with inhibitor and a magnetic filter is fitted as standard." } },
+      { "@type": "Question", "name": "Is there a government grant for central heating in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "Eligible Liverpool homeowners on qualifying benefits including Universal Credit, Pension Credit or Child Tax Credit may qualify for the ECO4 scheme which can fund a full central heating installation or upgrade. The Boiler Upgrade Scheme provides up to £7,500 towards heat pump installation. We assess eligibility at the free survey at no cost." } },
+      { "@type": "Question", "name": "Can you install central heating in a Liverpool Victorian property?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our engineers have 30 years experience working in Liverpool's Victorian and Edwardian housing stock. These properties often have solid walls, limited floor voids and non-standard layouts that require careful pipework planning. We assess every property at the free survey and design the system around the specific characteristics of your home." } },
+      { "@type": "Question", "name": "Are you Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Ideal Plumbing Solutions is Gas Safe registered. All central heating installations are carried out by our own directly employed Gas Safe registered engineers. We never use sub-contractors. Verify our registration at gassaferegister.co.uk." } }
     ]
   }
   </script>
 
-  <style>
-    .ch-page h2 { text-align: center; color: var(--navy); }
-    .ch-page .section-sub { text-align: center; }
-    .ch-page p { font-size: 0.97rem; }
-    .ch-page li { font-size: 0.97rem; }
-    .ch-page .faq-body p { font-size: 0.95rem; }
-
-    .service-cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-    .service-card-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      text-align: center;
-    }
-    .service-card-icon {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--orange);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    .service-card-item h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 0.5rem; }
-    .service-card-item p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
-    .service-card-price { display: inline-block; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.3rem 0.75rem; font-size: 0.85rem; font-weight: 700; color: var(--navy); }
-
-    .included-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-    .included-row {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-    .included-tick { color: var(--orange); font-weight: 900; font-size: 1.1rem; flex-shrink: 0; }
-    .included-row strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.1rem; }
-    .included-row span { color: var(--muted); font-size: 0.85rem; }
-
-    .sign-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--orange);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    .sign-icon { color: var(--orange); font-weight: 900; font-size: 1.1rem; flex-shrink: 0; min-width: 1.1rem; }
-    .sign-item strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.15rem; }
-    .sign-item p { color: var(--muted); font-size: 0.85rem; margin: 0; }
-
-    .flush-box {
-      background: var(--navy);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .flush-box h3 { color: var(--orange); font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .flush-box p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 0; }
-    .flush-price { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--white); line-height: 1; margin: 0.5rem 0; }
-    .flush-price small { font-size: 1rem; color: rgba(255,255,255,0.7); }
-    .flush-signs {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-      margin: 1rem 0 1.25rem;
-      text-align: left;
-    }
-    .flush-sign {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: var(--radius-sm);
-      padding: 0.6rem 1rem;
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.9);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .flush-sign span { color: var(--orange); font-weight: 700; }
-
-    .smart-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .smart-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .smart-card h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .smart-card p { color: var(--muted); font-size: 0.88rem; margin: 0; }
-
-    .grant-box {
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-left: 4px solid #16a34a;
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .grant-box h3 { color: #15803d; font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .grant-box p { color: #166534; font-size: 0.92rem; margin-bottom: 0.75rem; }
-
-    .ch-services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .ch-service-link {
-      background: var(--navy);
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.35rem;
-      transition: transform 0.18s;
-    }
-    .ch-service-link:hover { transform: translateY(-3px); }
-    .ch-service-link strong { color: var(--orange); font-size: 1rem; font-weight: 800; }
-    .ch-service-link span { color: rgba(255,255,255,0.8); font-size: 0.88rem; }
-
-    .ch-page a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); transition: border-color 0.2s; }
-    .ch-page a:hover { border-color: var(--navy); }
-    .ch-page .btn { border-bottom: none; }
-  </style>
-
-  <div class="ch-page">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.idealplumbingsolutions.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Central Heating Installation Liverpool", "item": "https://www.idealplumbingsolutions.co.uk/central-heating-installation-liverpool" }
+    ]
+  }
+  </script>
 
   <!-- HERO -->
   <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge">
+    <div class="container" style="text-align:center;">
+      <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="badge-dot"></span>
-        Gas Safe Registered · Free Survey · Liverpool and Merseyside
+        Liverpool Central Heating Specialists
       </div>
       <h1>Central Heating Installation Liverpool</h1>
-      <p class="page-hero-sub" style="font-size:1rem;">Full central heating systems from <strong>£3,500</strong>. Radiator additions. Power flushing. Smart controls. Gas Safe registered engineers. Our own staff, no sub-contractors. Free survey across Liverpool, Wirral, Warrington and St Helens.</p>
+      <p class="page-hero-sub">Full central heating systems from £3,500. Radiator additions from £200. Smart controls, system upgrades and power flushing. Gas Safe registered engineers. Free survey across Liverpool and Merseyside.</p>
 
-      <div style="display:flex;flex-direction:row;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
-        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:130px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:900;color:var(--orange);line-height:1;">£3,500</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">Full System From</div>
+      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">£3,500</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Full System</div>
         </div>
-        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:130px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:900;color:var(--orange);line-height:1;">£200</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">Radiator From</div>
-        </div>
-        <div style="background:var(--orange);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:130px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:900;color:var(--white);line-height:1;">FREE</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.9);font-weight:700;">Site Survey</div>
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">FREE</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Site Survey</div>
         </div>
       </div>
 
-      <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-bottom:1.5rem;">Fixed prices. No hidden fees. Gas Safe certificate included. Finance available.</p>
-
-      <div class="hero-actions">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);">CALL 07399 676656</a>
-        <a href="/contact-3" class="btn btn-lg" style="background:var(--white);color:var(--navy);border:2px solid var(--navy);">BOOK FREE SURVEY</a>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book a Free Survey</a>
       </div>
 
-      <div class="trust-row">
-        <div class="trust-item">
-          <strong>Gas Safe</strong>
-          <span>Registered<br>Engineers</span>
-        </div>
-        <div class="trust-item">
-          <strong>No Sub-</strong>
-          <span>Contractors<br>Ever</span>
-        </div>
-        <div class="trust-item">
-          <strong>5.0 ★</strong>
-          <span>250 Google<br>Reviews</span>
-        </div>
+      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Gas Safe Registered</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Free Fixed-Price Survey</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> ECO4 Grants Available</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> 250 Five-Star Reviews</span>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES OVERVIEW -->
-  <section class="section-pad" style="background:var(--bg);">
-    <div class="container">
-      <h2>Central Heating Services Across Liverpool</h2>
-      <p class="section-sub">From full new system installations to single radiator additions and power flushing. Everything your Liverpool home needs, carried out by our own Gas Safe engineers.</p>
+  <div class="pf">
 
-      <div class="service-cards">
-        <div class="service-card-item">
-          <div class="service-card-icon">NEW</div>
-          <h3>Full Central Heating Installation</h3>
-          <p>Complete new central heating system for Liverpool properties with no existing heating. Includes new boiler, full radiator circuit, all pipework, controls and Gas Safe certificate.</p>
-          <span class="service-card-price">From £3,500 fully installed</span>
+  <!-- MINI REVIEW TRUST BAR -->
+  <section style="background:#1a3a5c;padding:1.25rem 0;">
+    <div class="container">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
         </div>
-        <div class="service-card-item">
-          <div class="service-card-icon">UPG</div>
-          <h3>System Upgrade and Replacement</h3>
-          <p>Replacing an old or inefficient central heating system. We remove the old system, upgrade pipework where needed, fit a new boiler and install modern radiators and controls.</p>
-          <span class="service-card-price">From £1,500 depending on scope</span>
-        </div>
-        <div class="service-card-item">
-          <div class="service-card-icon">+RAD</div>
-          <h3>Radiator Addition</h3>
-          <p>Adding radiators to rooms not currently connected to your central heating. We size the radiator correctly for the room, connect to the existing circuit and balance the system.</p>
-          <span class="service-card-price">From £200 per radiator fitted</span>
-        </div>
-        <div class="service-card-item">
-          <div class="service-card-icon">FLUSH</div>
-          <h3>Power Flushing</h3>
-          <p>High-velocity power flush to remove sludge, scale and debris from your existing system. Restores heating efficiency, eliminates cold spots on radiators and protects your boiler.</p>
-          <span class="service-card-price">From £350 for a standard system</span>
-        </div>
-        <div class="service-card-item">
-          <div class="service-card-icon">SMART</div>
-          <h3>Smart Controls and Thermostats</h3>
-          <p>Installation of smart thermostats, programmers and electronic thermostatic radiator valves (eTRVs) to control your heating from your phone and reduce energy bills.</p>
-          <span class="service-card-price">From £150 supply and fit</span>
-        </div>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:440px;">"Full central heating fitted in our Victorian terrace in four days. Every room warm for the first time in years. Immaculate work throughout." Karen M, Aigburth</div>
+        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Central Heating Installation Costs Liverpool</h2>
-      <p class="section-sub">Liverpool rates are typically 10 to 15% lower than the national average. All prices include labour, materials and Gas Safe certification. Free site survey required for exact quote.</p>
+      <h2>Central Heating Installation Prices Liverpool</h2>
+      <p class="pf-sub">Free site survey required to confirm your exact price. All prices include installation, controls, Gas Safe certificate and 12-month workmanship guarantee.</p>
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1.5rem;">
-        <div class="price-card">
-          <div class="price-tier">FULL NEW SYSTEM</div>
-          <div class="price-name">No Existing Heating</div>
-          <div class="price-sub">Full installation from scratch</div>
-          <div class="price-amount">£<span>3,500</span><small>+</small></div>
-          <ul>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> New boiler supplied and fitted</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Full radiator circuit and pipework</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Controls and thermostat</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Gas Safe certificate included</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> 3 to 5 days typical</li>
+      <div class="pf-pricing-grid">
+
+        <div class="pf-price-card pf-price-card-featured">
+          <div class="pf-price-badge">MOST COMMON</div>
+          <div class="pf-price-tier">FULL SYSTEM</div>
+          <div class="pf-price-name">New Central Heating Installation</div>
+          <div class="pf-price-sub">Properties with no existing central heating</div>
+          <div class="pf-price-amount">£3,500</div>
+          <ul class="pf-price-list">
+            <li>New A-rated combi or system boiler</li>
+            <li>Full radiator set designed for your property</li>
+            <li>All pipework routed and fitted</li>
+            <li>Smart thermostat and controls</li>
+            <li>Magnetic system filter fitted</li>
+            <li>Inhibitor dosed to BS 7593 standard</li>
+            <li>Gas Safe certificate issued</li>
+            <li>12-month workmanship guarantee</li>
           </ul>
-          <a href="tel:07399676656" class="btn btn-navy btn-full">Get Free Quote</a>
+          <a href="tel:07399676656" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
         </div>
 
-        <div class="price-card price-card--featured">
-          <div class="price-card-badge">MOST COMMON</div>
-          <div class="price-tier">SYSTEM UPGRADE</div>
-          <div class="price-name">Existing System Replacement</div>
-          <div class="price-sub">Like-for-like or improved layout</div>
-          <div class="price-amount">£<span>1,500</span><small>+</small></div>
-          <ul>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Old system removed and disposed</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> New boiler and updated pipework</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> New radiators where needed</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> System balanced and tested</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Gas Safe certificate included</li>
+        <div class="pf-price-card">
+          <div class="pf-price-tier">SYSTEM UPGRADE</div>
+          <div class="pf-price-name">Heating System Upgrade</div>
+          <div class="pf-price-sub">Upgrading or extending an existing system</div>
+          <div class="pf-price-amount">£1,500</div>
+          <ul class="pf-price-list">
+            <li>New boiler where required</li>
+            <li>Additional radiators and pipework</li>
+            <li>System flush before new components fitted</li>
+            <li>New controls and smart thermostat</li>
+            <li>Magnetic filter fitted</li>
+            <li>Gas Safe certificate issued</li>
+            <li>12-month workmanship guarantee</li>
           </ul>
-          <a href="tel:07399676656" class="btn btn-orange btn-full">Book Free Survey</a>
+          <a href="tel:07399676656" class="btn btn-navy btn-full">Book Free Survey</a>
         </div>
 
-        <div class="price-card">
-          <div class="price-tier">RADIATOR ADDITION</div>
-          <div class="price-name">Single Room</div>
-          <div class="price-sub">Connect to existing system</div>
-          <div class="price-amount">£<span>200</span><small>+</small></div>
-          <ul>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Correctly sized for the room</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Connected to existing circuit</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> System balanced after fitting</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Usually completed same day</li>
+        <div class="pf-price-card">
+          <div class="pf-price-tier">RADIATOR ADDITION</div>
+          <div class="pf-price-name">Single Radiator Supply and Fit</div>
+          <div class="pf-price-sub">Adding one or more radiators to existing system</div>
+          <div class="pf-price-amount">£200</div>
+          <ul class="pf-price-list">
+            <li>Radiator supplied and fitted</li>
+            <li>TRV thermostatic valve fitted</li>
+            <li>Pipework connected to existing circuit</li>
+            <li>System balanced after fitting</li>
+            <li>No damage to existing decoration where possible</li>
+            <li>Inhibitor topped up</li>
           </ul>
-          <a href="tel:07399676656" class="btn btn-navy btn-full">Get Quote</a>
+          <a href="tel:07399676656" class="btn btn-navy btn-full">Book Free Survey</a>
         </div>
+
       </div>
 
-      <div style="background:var(--bg);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-top:1.5rem;text-align:center;">
-        <strong style="color:var(--navy);display:block;margin-bottom:0.35rem;">Why prices vary so much</strong>
-        <p style="color:var(--muted);font-size:0.9rem;margin:0;">The cost of central heating depends on your property size, number of radiators needed, boiler type, pipework complexity and whether the system is new or a replacement. The national average is £3,100 to £7,700 according to <a href="https://www.greenmatch.co.uk/heating/cost" target="_blank" rel="noopener">GreenMatch</a>. Liverpool rates are typically 10 to 15% lower. We visit your property, assess the full picture and provide a written fixed-price quote before any commitment is made.</p>
+      <div class="pf-alert" style="margin-top:2rem;">
+        <strong>Why a free site survey matters before quoting</strong>
+        <p>Central heating installation costs vary significantly based on property size, wall construction, floor type, boiler location and pipework complexity. Liverpool's mix of Victorian terraces, 1960s semis, converted flats and modern builds means no two installations are the same. We visit your property, assess every factor and provide a written fixed-price quote with no obligation to proceed.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;margin-top:2rem;padding:1.25rem 1rem;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;text-align:center;">
+        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1.75rem;font-weight:900;color:#15803d;line-height:1;">5.0 <span style="color:#f59e0b;">★★★★★</span></div><div style="font-size:0.78rem;color:#166534;font-weight:700;">250 Google Reviews</div></div>
+        <div><div style="font-size:0.85rem;font-weight:700;color:#15803d;">Gas Safe Registered</div><div style="font-size:0.78rem;color:#166534;">Verify at gassaferegister.co.uk</div></div>
+        <div><div style="font-size:0.85rem;font-weight:700;color:#15803d;">Fixed Price Guaranteed</div><div style="font-size:0.78rem;color:#166534;">No surprises on invoice day</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNS YOU NEED A NEW SYSTEM -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Signs Your Liverpool Home Needs a Central Heating Upgrade</h2>
+      <p class="pf-sub">Liverpool's housing stock includes a high proportion of older properties that either have no central heating or systems that are significantly underperforming. These are the signs most commonly reported by Liverpool homeowners before they call us.</p>
+
+      <div class="pf-signs" style="margin-top:2rem;">
+        <div class="pf-sign"><div><strong>No central heating at all</strong><p>A significant number of Liverpool's older properties, including converted flats, bedsits and some Victorian terraces, have never had central heating installed. A full system from £3,500 transforms the property completely and adds measurable value.</p></div></div>
+        <div class="pf-sign"><div><strong>Rooms that are never warm enough</strong><p>An undersized boiler, poorly balanced system or missing radiators in key rooms means the heating can never keep up. An upgrade or radiator addition resolves this without replacing the whole system in most cases.</p></div></div>
+        <div class="pf-sign"><div><strong>System takes a very long time to warm up</strong><p>A heating system that takes 30 to 45 minutes to reach temperature is losing efficiency. Sludge build-up, a failing pump or an undersized boiler are the most common causes. We diagnose the root cause at the free survey.</p></div></div>
+        <div class="pf-sign"><div><strong>Cold spots on radiators</strong><p>Cold at the bottom indicates sludge and magnetite build-up. Cold at the top indicates air in the system. Persistent cold spots after bleeding suggest a power flush is needed before any further work is considered.</p></div></div>
+        <div class="pf-sign"><div><strong>Very high heating bills with poor results</strong><p>An inefficient system burning more gas to produce less heat is the most expensive heating problem. A combination of a new A-rated boiler, properly balanced radiators and smart controls typically reduces heating bills by 20 to 35%.</p></div></div>
+        <div class="pf-sign"><div><strong>EPC rating of F or G</strong><p>A poor Energy Performance Certificate rating almost always indicates an inefficient heating system. A new central heating installation is the single biggest improvement available for EPC rating and can add significant property value. See the <a href="https://www.gov.uk/check-energy-performance-certificate" target="_blank" rel="noopener">GOV.UK EPC checker</a>.</p></div></div>
+      </div>
+
+      <div style="background:#f97316;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
+        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Recognise any of these? Book a free no-obligation survey and we will tell you exactly what your Liverpool home needs.</p>
+        <a href="tel:07399676656" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 07399 676656</a>
       </div>
     </div>
   </section>
 
   <!-- WHAT IS INCLUDED -->
-  <section class="section-pad" style="background:var(--bg);">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>What Is Included in Your Liverpool Central Heating Installation</h2>
-      <p class="section-sub">No hidden extras. No surprise additions on the invoice. This is what every full installation includes.</p>
+      <p class="pf-sub">No hidden extras. Here is everything included in the price we quote at your free survey.</p>
 
-      <div class="included-grid">
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Free site survey and written fixed-price quote</strong><span>We assess your property, calculate heat loss for each room and recommend the correct boiler size and radiator positions before any work begins.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>New boiler supply and installation</strong><span>Worcester Bosch, Vaillant, Ideal or Baxi. A-rated condensing boiler correctly sized for your Liverpool property and heating demand.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Full radiator circuit and all pipework</strong><span>All copper pipework, fittings and connections run neatly through your property with minimal disruption to floors and walls.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Radiators correctly sized per room</strong><span>Each radiator is sized using a heat loss calculation to ensure your Liverpool property heats evenly and efficiently with no cold rooms.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Smart thermostat and controls</strong><span>Included to comply with Boiler Plus regulations. App-controlled options available. We explain how to use everything before we leave.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>System flush and corrosion inhibitor</strong><span>The completed system is flushed and treated with corrosion inhibitor to prevent sludge build-up and protect the boiler from day one.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Magnetic system filter</strong><span>Fitted to catch debris and magnetite before it reaches the boiler. Required by most manufacturers to maintain warranty validity.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Gas Safe installation certificate</strong><span>Issued on completion and registered under the Competent Person Scheme. Covers all Building Regulations notification requirements.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Full system balance and test</strong><span>The system is balanced so every radiator heats evenly. We run a full heating and hot water cycle to confirm everything is working correctly.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>12-month workmanship guarantee</strong><span>All installation work is covered by our 12-month guarantee in addition to the manufacturer boiler warranty.</span></div>
-        </div>
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>New A-rated boiler</strong><p>Worcester Bosch, Vaillant, Ideal or Baxi. Correctly sized for your property based on the number of radiators and hot water demand. All boilers are A-rated condensing models compliant with <a href="https://www.gov.uk/guidance/boiler-plus" target="_blank" rel="noopener">Boiler Plus regulations</a>.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full radiator set designed for your property</strong><p>We design the radiator layout specifically for your home, calculating the correct output for each room based on size, insulation and heat loss. Every room gets the right amount of heat.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All pipework routed and fitted</strong><p>All pipe routes are planned to minimise disruption to existing decoration where possible. We work neatly and clean up fully at the end of every working day.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Smart thermostat and heating controls</strong><p>A new smart thermostat and programmer installed and set up. Smart controls such as Nest or Hive available on request. Required under <a href="https://www.gov.uk/guidance/boiler-plus" target="_blank" rel="noopener">Boiler Plus regulations</a> for all new installations.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Magnetic system filter</strong><p>A magnetic filter is fitted to capture debris and sludge before it reaches the boiler heat exchanger. Required by most manufacturers to maintain the warranty and essential for long-term system health.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Inhibitor dosed to BS 7593 standard</strong><p>The system is filled with corrosion inhibitor dosed to the correct concentration. This protects all metal components from internal corrosion and is a warranty condition for all major boiler manufacturers.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full system commissioning and balancing</strong><p>Every radiator is balanced individually to deliver the correct heat output. System pressure is set and a full heating and hot water cycle is run before we leave. Your new system works correctly from day one.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gas Safe certificate and Benchmark certificate</strong><p>Both issued on the day of completion. The Gas Safe certificate is a legal requirement for any gas installation. The Benchmark certificate is required by all major manufacturers to register and validate the boiler warranty.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>12-month workmanship guarantee</strong><p>All our installations carry a 12-month workmanship guarantee in addition to the manufacturer warranty on the boiler itself. If anything fails as a result of our installation work, we return and resolve it at no cost.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section-pad eicr-process-section">
+  <!-- LIVERPOOL OLDER PROPERTIES -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2 style="text-align:center;">How Our Liverpool Central Heating Installation Works</h2>
-      <p class="section-sub">From free survey to a fully working heating system, here is exactly what to expect.</p>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Free Site Survey</h3>
-            <p>We visit your Liverpool property, assess your heating requirements and carry out a full heat loss calculation for every room. Written fixed-price quote provided with no obligation.</p>
-            <span class="step-note">Free. No obligation.</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Design and Planning</h3>
-            <p>We plan the radiator positions and pipework route to minimise disruption to your property. Boiler type and brand confirmed. Installation date agreed.</p>
-            <span class="step-note">Your input at every stage</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Installation Carried Out</h3>
-            <p>Our own Gas Safe engineers carry out the full installation. We protect floors, work neatly and clean up fully each day. Most standard installations take 3 to 5 days.</p>
-            <span class="step-note">3 to 5 days typical</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Handover and Certificate</h3>
-            <p>We balance the system, run full tests and walk you through the controls before we leave. Gas Safe certificate issued and Building Regulations notification submitted.</p>
-            <span class="step-note">Full demonstration included</span>
-          </div>
-        </div>
+      <h2>Central Heating in Liverpool's Victorian and Period Properties</h2>
+      <p class="pf-sub">Liverpool has one of the highest concentrations of Victorian and Edwardian housing in England. Central heating installation in these properties requires specific knowledge and experience.</p>
+
+      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
+        <h3>What Makes Liverpool's Older Properties Different</h3>
+        <p>Victorian and Edwardian terraces, Georgian townhouses and Edwardian semis in areas including Aigburth, Allerton, Sefton Park, Mossley Hill, Crosby and Woolton present specific challenges for central heating installation. Solid brick walls without cavities, limited access beneath suspended timber floors, chimney breasts used as flue routes and non-standard room proportions all affect how pipework must be routed.</p>
+        <p>An installer without specific Liverpool experience can underestimate the complexity of these installations and either quote incorrectly or route pipework in ways that damage period features unnecessarily. Our engineers have been working in Liverpool's Victorian and Edwardian housing stock since the 1990s. We plan every pipe route to preserve original features where possible and to minimise visible pipework throughout.</p>
+        <p>For properties with solid walls where standard pipe boxing would be intrusive, we discuss alternative routing options at the survey. We never cut corners that would affect the long-term performance of your system or damage features that cannot be easily restored.</p>
       </div>
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">BOOK FREE SURVEY</a>
+
+      <div class="pf-card pf-card-orange" style="margin-top:2rem;">
+        <h3>First-Time Central Heating in a Liverpool Property</h3>
+        <p>If your Liverpool property has never had central heating, a full installation from £3,500 is one of the most transformative and financially sound home improvements you can make. A property with no central heating is at a significant disadvantage in the Liverpool sales and rental market. A new system adds warmth, improves the EPC rating, satisfies buyer expectations and can add considerably more than its cost to the property value.</p>
+        <p>The <a href="https://www.energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust</a> identifies central heating installation as one of the highest-impact improvements available for improving a property's energy efficiency and reducing annual heating costs. We carry out free surveys for homeowners considering installation before sale or rental.</p>
       </div>
     </div>
   </section>
 
-  <!-- SIGNS YOUR SYSTEM NEEDS REPLACING -->
-  <section class="section-pad" style="background:var(--white);">
+  <!-- HOW LONG DOES IT TAKE -->
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Signs Your Liverpool Heating System Needs Replacing</h2>
-      <p class="section-sub">Liverpool's older housing stock means many properties are running on heating systems installed 20 or more years ago. Here are the signs it is time to upgrade.</p>
+      <h2>How Long Does Central Heating Installation Take in Liverpool?</h2>
+      <p class="pf-sub">Every Liverpool property is different. Here are realistic timelines based on our installations across the city.</p>
 
-      <div class="sign-item">
-        <span class="sign-icon">!</span>
-        <div>
-          <strong>Radiators cold at the top or bottom</strong>
-          <p>Cold spots on radiators indicate sludge and scale build-up blocking the water flow. A power flush can often resolve this without a full replacement.</p>
+      <div class="pf-durations" style="margin-top:2rem;">
+        <div class="pf-duration-card">
+          <div class="pf-duration-time">2-3<br><span style="font-size:0.9rem;">days</span></div>
+          <div><strong>Small property or flat. Up to 6 radiators.</strong><p>A 1 to 2 bed property or flat with straightforward pipe access. Includes boiler, all radiators, controls and commissioning. Common in Liverpool city centre and converted properties across L1 to L8.</p></div>
+        </div>
+        <div class="pf-duration-card">
+          <div class="pf-duration-time">3-5<br><span style="font-size:0.9rem;">days</span></div>
+          <div><strong>Standard 3 bed property. 7 to 10 radiators.</strong><p>The most common Liverpool installation. Victorian terraces, 1960s semis and 3-bed modern houses across Aigburth, Wavertree, West Derby and Allerton. Includes full system, boiler and smart controls.</p></div>
+        </div>
+        <div class="pf-duration-card">
+          <div class="pf-duration-time">5-7<br><span style="font-size:0.9rem;">days</span></div>
+          <div><strong>Larger property. 11 or more radiators.</strong><p>4 and 5-bed properties in Woolton, Formby, Crosby, Heswall and the wider Merseyside area. More radiators, longer pipe runs and additional complexity. System boiler setup may be required.</p></div>
+        </div>
+        <div class="pf-duration-card">
+          <div class="pf-duration-time">0.5<br><span style="font-size:0.9rem;">day</span></div>
+          <div><strong>Single radiator addition to existing system.</strong><p>Adding one radiator to an existing working central heating system. Pipe connection, balancing and inhibitor top-up included. We can often attend within 2 to 3 days of enquiry.</p></div>
         </div>
       </div>
-      <div class="sign-item">
-        <span class="sign-icon">!</span>
-        <div>
-          <strong>Some rooms not heating at all</strong>
-          <p>Rooms that have never been connected to the central heating system, or where radiators have been removed, can be added to your existing system from £200 per radiator.</p>
-        </div>
-      </div>
-      <div class="sign-item">
-        <span class="sign-icon">!</span>
-        <div>
-          <strong>Old gravity-fed system with tanks in the loft</strong>
-          <p>Many Liverpool Victorian properties have old gravity-fed open-vented systems with header tanks in the loft and hot water cylinders. Converting to a modern sealed system dramatically improves efficiency and reliability.</p>
-        </div>
-      </div>
-      <div class="sign-item">
-        <span class="sign-icon">!</span>
-        <div>
-          <strong>System making noise or losing pressure regularly</strong>
-          <p>A noisy, inefficient system that regularly loses pressure indicates either a power flush is overdue or components need replacing. Both are far more cost-effective to address early.</p>
-        </div>
-      </div>
-      <div class="sign-item">
-        <span class="sign-icon">!</span>
-        <div>
-          <strong>High energy bills despite a reasonably new boiler</strong>
-          <p>If your boiler is relatively new but your heating bills remain high, the issue is often the distribution system: undersized radiators, no thermostatic radiator valves or poor system design.</p>
-        </div>
-      </div>
-      <div class="sign-item">
-        <span class="sign-icon">!</span>
-        <div>
-          <strong>Property has no central heating at all</strong>
-          <p>A significant number of Liverpool's older properties including bedsits, converted flats and some terraced houses have never had central heating. A full installation starts from £3,500.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- POWER FLUSHING -->
-  <section class="section-pad" style="background:var(--bg);">
-    <div class="container">
-      <h2>Power Flushing Liverpool: Restore Your System's Efficiency</h2>
-      <p class="section-sub">Power flushing is the most cost-effective way to restore an underperforming central heating system in Liverpool without a full replacement.</p>
-
-      <div class="flush-box">
-        <h3>What Is a Power Flush?</h3>
-        <div class="flush-price">From £350 <small>for a standard system</small></div>
-        <p style="margin-bottom:1rem;">A power flush uses high-velocity water combined with specialist cleaning chemicals to remove sludge, magnetite, scale and debris from your radiators, pipework and boiler. The entire system is treated and inhibitor added to prevent future build-up.</p>
-        <div class="flush-signs">
-          <div class="flush-sign"><span>!</span> Radiators cold in the middle or at the bottom</div>
-          <div class="flush-sign"><span>!</span> Boiler making banging or kettling sounds</div>
-          <div class="flush-sign"><span>!</span> System taking a long time to warm up</div>
-          <div class="flush-sign"><span>!</span> Some radiators not heating at all</div>
-          <div class="flush-sign"><span>!</span> Boiler cutting out on high heat demand</div>
-          <div class="flush-sign"><span>!</span> New boiler being installed on an old system</div>
-        </div>
-        <p style="margin-bottom:1.25rem;font-size:0.9rem;">All major boiler manufacturers including Worcester Bosch and Vaillant require a system flush before installing a new boiler to maintain warranty validity. We always recommend a power flush as part of any new boiler installation on an existing system.</p>
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">Book a Power Flush</a>
+      <div class="pf-info-bar" style="margin-top:2rem;">
+        <p style="font-size:0.88rem;color:var(--text);">All timelines are confirmed at the free site survey. Victorian properties with limited floor void access can add 1 to 2 days. We work to a fixed completion schedule agreed at the survey. You are not left waiting for engineers who do not arrive.</p>
       </div>
     </div>
   </section>
 
   <!-- SMART CONTROLS -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Smart Heating Controls for Liverpool Homes</h2>
-      <p class="section-sub">Modern smart controls can reduce your heating bills by up to 30% by letting you control the heating room by room from your phone.</p>
+      <p class="pf-sub">A smart thermostat transforms how you control your central heating. Required under Boiler Plus regulations for all new installations and strongly recommended for upgrades.</p>
 
-      <div class="smart-grid">
-        <div class="smart-card">
-          <h3>Smart Thermostats</h3>
-          <p>App-controlled thermostats such as Nest, Hive and Honeywell allow you to control your heating from anywhere. Learning thermostats programme themselves around your routine. All our central heating installations include a smart-compatible thermostat as standard to comply with <a href="https://www.gov.uk/guidance/boiler-plus" target="_blank" rel="noopener">Boiler Plus regulations</a>.</p>
-        </div>
-        <div class="smart-card">
-          <h3>Thermostatic Radiator Valves (TRVs)</h3>
-          <p>TRVs allow you to set different temperatures in different rooms so you only heat the rooms you are using. Electronic eTRVs can be controlled remotely via an app. An excellent retrofit option for Liverpool properties with existing central heating.</p>
-        </div>
-        <div class="smart-card">
-          <h3>Zone Controls</h3>
-          <p>For larger Liverpool properties and HMO landlords, zone controls allow different areas of the property to be heated independently. Particularly useful for period houses where upstairs and downstairs have different heating requirements.</p>
-        </div>
-        <div class="smart-card">
-          <h3>Smart Controls and Your Energy Bills</h3>
-          <p>The <a href="https://energysavingtrust.org.uk/advice/thermostats-and-heating-controls/" target="_blank" rel="noopener">Energy Saving Trust</a> estimates that installing smart heating controls in a typical semi-detached Liverpool home could save around £150 per year. Combined with a new A-rated boiler the annual saving can exceed £490.</p>
-        </div>
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Nest and Hive smart thermostats</strong><p>Control your Liverpool home's heating from your phone anywhere in the world. Set schedules, monitor energy use and let the thermostat learn your routine. Both Nest and Hive are available as part of any new installation or as a standalone upgrade to your existing system.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Thermostatic radiator valves (TRVs)</strong><p>TRVs on every radiator allow individual room temperature control. The sitting room runs warmer than the spare bedroom. No heat wasted in unused rooms. The <a href="https://energysavingtrust.org.uk/advice/thermostats-and-heating-controls/" target="_blank" rel="noopener">Energy Saving Trust</a> estimates TRVs in a typical Liverpool semi can save up to £75 per year on heating bills.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Zone control for larger properties</strong><p>Larger Liverpool homes in Woolton, Formby and Crosby can benefit from a zoned heating system, with separate heating circuits for upstairs and downstairs, or for different wings of the property. We design zone systems at the free survey for properties with 10 or more radiators.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Energy savings from smart controls</strong><p>The Energy Saving Trust estimates that installing smart heating controls in a typical Liverpool semi-detached home could save around £150 per year on heating bills. Combined with a new A-rated boiler, the annual saving can exceed £490, making the controls a significant financial investment as well as a convenience.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- GOVERNMENT GRANTS -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- GRANTS AND FINANCE -->
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Government Grants for Liverpool Heating Upgrades</h2>
-      <p class="section-sub">Eligible Liverpool homeowners may qualify for significant financial support towards central heating installation costs.</p>
+      <h2>Government Grants for Liverpool Central Heating Upgrades</h2>
+      <p class="pf-sub">Eligible Liverpool homeowners may be able to fund part or all of their central heating installation through government schemes. We assess eligibility at the free survey at no cost.</p>
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
-        <div class="grant-box">
-          <h3>ECO4 Scheme</h3>
-          <p>The ECO4 scheme provides free or heavily subsidised central heating upgrades for Liverpool households on qualifying benefits or low incomes. This can include free boilers, insulation and heating controls. <a href="https://www.gov.uk/apply-great-british-insulation-scheme" target="_blank" rel="noopener" style="color:#15803d;">Check your eligibility at GOV.UK</a>.</p>
-          <a href="tel:07399676656" class="btn btn-navy" style="background:#15803d;">Check ECO4 Eligibility at Free Survey</a>
-        </div>
-        <div style="background:#fff7ed;border:1px solid #fed7aa;border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.75rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Boiler Upgrade Scheme (BUS)</h3>
-          <p style="color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;">The <a href="https://www.gov.uk/apply-boiler-upgrade-scheme" target="_blank" rel="noopener">Boiler Upgrade Scheme</a> offers grants of up to £7,500 towards a heat pump installation. Eligible for owner-occupiers in England replacing an existing gas or oil boiler.</p>
-          <a href="tel:07399676656" class="btn btn-orange">Ask About Heat Pump Eligibility</a>
-        </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:var(--radius);padding:1.75rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Liverpool City Council Schemes</h3>
-          <p style="color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;"><a href="https://liverpool.gov.uk" target="_blank" rel="noopener">Liverpool City Council</a> periodically runs local schemes offering heating assistance for vulnerable residents and lower-income households. We check current availability at every free survey visit.</p>
-          <a href="tel:07399676656" class="btn btn-navy">Ask at Free Survey</a>
-        </div>
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>ECO4 Scheme. Free central heating for eligible households.</strong><p>Liverpool homeowners on qualifying benefits including Universal Credit, Pension Credit or Child Tax Credit may qualify for a fully funded central heating installation or upgrade under the <a href="https://www.gov.uk/apply-great-british-insulation-scheme" target="_blank" rel="noopener">ECO4 scheme</a>. Properties with an EPC rating of D or below are often eligible. We assess your eligibility at the free survey.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Boiler Upgrade Scheme. Up to £7,500 for heat pumps.</strong><p>The <a href="https://www.gov.uk/apply-boiler-upgrade-scheme" target="_blank" rel="noopener">Boiler Upgrade Scheme</a> provides grants of up to £7,500 towards air source or ground source heat pump installation. If you are considering a low-carbon alternative to gas central heating, we can advise on suitability for your Liverpool property at the free survey.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>0% and low-rate finance available.</strong><p>We work with finance partners to offer flexible payment options for Liverpool homeowners who prefer to spread the cost of a central heating installation. Ask about finance options at the free survey. Subject to status and eligibility.</p></div></div>
       </div>
     </div>
   </section>
 
   <!-- WHY CHOOSE -->
-  <section class="why-section">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <div class="why-header">
-        <h2>Why Choose Ideal Plumbing for Your Liverpool Central Heating?</h2>
-        <p>Gas Safe registered. No sub-contractors. 30 years of Liverpool heating expertise.</p>
+      <h2>Why Over 250 Liverpool Homeowners Choose Ideal Plumbing for Central Heating</h2>
+      <p class="pf-sub">Gas Safe registered engineers. Fixed prices. Our own staff. 30 years Liverpool experience. All Merseyside postcodes covered.</p>
+      <div class="pf-why-grid">
+        <div class="pf-why-item"><h3>Free Survey and Fixed Price</h3><p>We visit your Liverpool property, assess everything and give you a written fixed-price quote before any work begins. No surprises on invoice day regardless of what we find during installation.</p></div>
+        <div class="pf-why-item"><h3>30 Years Liverpool Experience</h3><p>Victorian terraces, Georgian townhouses, 1960s semis, modern apartments, converted flats. We have installed central heating in every type of Liverpool property and understand the specific challenges of the city's diverse housing stock.</p></div>
+        <div class="pf-why-item"><h3>Our Own Engineers. No Sub-Contractors.</h3><p>Every installation is carried out by our own directly employed Gas Safe registered engineers. Never a sub-contractor. You get the same experienced professional throughout the full installation, not a different face each day.</p></div>
+        <div class="pf-why-item"><h3>Boiler Plus Compliant</h3><p>All our installations meet <a href="https://www.gov.uk/guidance/boiler-plus" target="_blank" rel="noopener">Boiler Plus regulations</a> and current Building Regulations. A compliant installation protects your investment and your legal position as a homeowner or landlord.</p></div>
+        <div class="pf-why-item"><h3>ECO4 Grant Assessments</h3><p>We assess every eligible Liverpool homeowner for ECO4 funding at the free survey at no cost. If you qualify, we handle the application process and advise on the fastest route to approval.</p></div>
+        <div class="pf-why-item"><h3>Gas Safe Registered</h3><p>Over 250 five-star Google reviews from Liverpool homeowners and landlords. Gas Safe registered and verifiable at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
       </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <strong>Gas Safe Registered Engineers</strong>
-          <p>All our engineers are Gas Safe registered. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);border-bottom:none;">gassaferegister.co.uk</a>. Legally required for all boiler and gas work.</p>
+      <div style="background:var(--navy);border-radius:10px;padding:2rem;text-align:center;margin-top:2rem;">
+        <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;margin-bottom:1.25rem;">Free survey. Fixed price. Gas Safe registered. 30 years Liverpool experience. 250 five-star reviews.</p>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+          <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+          <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Free Survey Online</a>
         </div>
-        <div class="why-card">
-          <strong>Our Own Engineers. No Sub-Contractors.</strong>
-          <p>Every engineer is our own directly employed staff. You get the same trained, vetted professionals throughout the entire installation. No strangers turning up on day three.</p>
-        </div>
-        <div class="why-card">
-          <strong>30 Years Liverpool Experience</strong>
-          <p>We have installed and upgraded central heating in every type of Liverpool property. Victorian terraces, converted flats, 1960s semis and new builds. We understand the challenges specific to each.</p>
-        </div>
-        <div class="why-card">
-          <strong>Fixed Prices. No Surprises.</strong>
-          <p>The price quoted after your free survey is the price on your invoice. Any unforeseen work is discussed and agreed with you before it is carried out.</p>
-        </div>
-        <div class="why-card">
-          <strong>Building Regulations Handled</strong>
-          <p>All gas installations are notified under the Competent Person Scheme. We handle all Building Regulations notifications on your behalf as part of the installation price.</p>
-        </div>
-        <div class="why-card">
-          <strong>12-Month Workmanship Guarantee</strong>
-          <p>Every installation is covered by our 12-month workmanship guarantee in addition to manufacturer boiler warranties. If anything fails due to our work we fix it.</p>
-        </div>
-      </div>
-      <div class="why-cta">
-        <p>Ready to book your free Liverpool heating survey?</p>
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">CALL 07399 676656</a>
       </div>
     </div>
   </section>
 
   <!-- REVIEWS -->
-  <section class="reviews-section">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <div class="reviews-header">
-        <div>
-          <h2>What Liverpool Customers Say</h2>
-          <p class="section-sub">Real reviews from Liverpool homeowners and landlords</p>
-        </div>
-        <div class="reviews-score">
-          <span class="score-number">5.0</span>
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="score-label">Google · 250 reviews</div>
-          </div>
-        </div>
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <h2 style="margin-bottom:0.1rem;">What Liverpool Customers Say</h2>
+        <p class="pf-sub" style="margin:0 0 0.75rem;">Real central heating installation reviews from Liverpool homeowners</p>
+        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
+        <div style="color:#f59e0b;font-size:1rem;">★★★★★</div>
+        <div style="font-size:0.75rem;color:var(--muted);">Google · 250 reviews</div>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Full central heating installed in our Aigburth Victorian terrace. Four days, spotlessly clean, every radiator heating perfectly. The engineers were professional throughout and the price matched the quote exactly. Could not be happier with the result.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">M</div>
-            <div class="reviewer-info"><strong>Mark T</strong><span class="review-location">Aigburth · Full System Install</span></div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Had a power flush done on our 1980s semi. The difference is remarkable. Radiators heat up in half the time and our gas bill has already dropped noticeably. The engineer was thorough and explained everything clearly throughout the process.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">L</div>
-            <div class="reviewer-info"><strong>Lisa H</strong><span class="review-location">West Derby · Power Flush</span></div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Added four radiators to our extended kitchen and dining room. Quoted on Monday, fitted on Wednesday, system balanced and tested by Friday afternoon. All four rooms warm for the first time since the extension was built. Really pleased.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">S</div>
-            <div class="reviewer-info"><strong>Stephen R</strong><span class="review-location">Woolton · Radiator Additions</span></div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
+      <div class="pf-reviews">
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Full central heating fitted in our Victorian terrace in four days. The engineers were meticulous about routing the pipes to avoid damaging original features. Every room is warm for the first time in years. Immaculate work throughout and exactly the price quoted.</p><div class="pf-review-footer"><div class="pf-review-avatar">K</div><div><div class="pf-review-name">Karen M</div><div class="pf-review-loc">Aigburth · Full Central Heating Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Upgraded the heating system in my 4-bed Woolton property. New boiler, four additional radiators and a Nest thermostat. The difference in how quickly the house warms up is remarkable. Bills already noticeably lower. The fixed price survey was genuinely fixed.</p><div class="pf-review-footer"><div class="pf-review-avatar">P</div><div><div class="pf-review-name">Paul R</div><div class="pf-review-loc">Woolton · System Upgrade and Smart Controls</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Had three radiators added to rooms that were always cold. Half a day's work, system balanced properly afterwards and every room now heats evenly. Small job done with the same professionalism as a full installation. Would not use anyone else.</p><div class="pf-review-footer"><div class="pf-review-avatar">L</div><div><div class="pf-review-name">Louise T</div><div class="pf-review-loc">Crosby · Radiator Additions</div></div><div class="pf-review-stars">★★★★★</div></div></div>
       </div>
-      <div class="reviews-cta">
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" class="link-arrow">See all 250 reviews on Google →</a>
+      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all 250 reviews on Google →</a></div>
+    </div>
+  </section>
+
+  <!-- MID CTA -->
+  <section style="background:var(--navy);padding:2rem 0;">
+    <div class="container" style="text-align:center;">
+      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Ready to book your free central heating survey?</h3>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Free fixed-price survey across all Liverpool and Merseyside postcodes. No obligation to proceed. Gas Safe registered engineers.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Free Survey</a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- PROCESS -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Central Heating Liverpool: Common Questions</h2>
-      <p class="section-sub">Straight answers to what Liverpool homeowners ask before booking a free survey.</p>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-orange">COST</span>How much does central heating cost in Liverpool?</summary>
-          <div class="faq-body">
-            <p>A full new central heating system in Liverpool starts from £3,500 for a smaller property and can reach £7,000 for a larger home. Upgrading an existing system starts from £1,500. Adding a single radiator costs from £200. Liverpool rates are typically 10 to 15% lower than southern England according to <a href="https://harrisonejonesheating.co.uk/central-heating-service/central-heating-installation-liverpool" target="_blank" rel="noopener">Harrison E Jones Heating</a>. We provide a free written fixed-price quote after a site survey.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-navy">TIMING</span>How long does central heating installation take?</summary>
-          <div class="faq-body">
-            <p>A full central heating installation in an average Liverpool property takes 3 to 5 days. Adding a single radiator to an existing system usually takes half a day. A power flush takes 4 to 8 hours depending on the system size. A full system upgrade typically takes 1 to 3 days.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-green">GRANTS</span>Is there a government grant for central heating in Liverpool?</summary>
-          <div class="faq-body">
-            <p>Eligible Liverpool homeowners may qualify for the <a href="https://www.gov.uk/apply-great-british-insulation-scheme" target="_blank" rel="noopener">ECO4 scheme</a> which provides free or subsidised central heating upgrades for those on qualifying benefits or low incomes. The <a href="https://www.gov.uk/apply-boiler-upgrade-scheme" target="_blank" rel="noopener">Boiler Upgrade Scheme</a> offers up to £7,500 for heat pump installations. We assess eligibility at the free site survey.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-orange">POWER FLUSH</span>What is a power flush and do I need one?</summary>
-          <div class="faq-body">
-            <p>A power flush uses high-velocity water and cleaning chemicals to remove sludge, scale and debris from your heating system. You likely need one if you have cold spots on radiators, a noisy boiler, slow warm-up times or are installing a new boiler on an existing system. Power flushing starts from £350 and typically takes 4 to 8 hours across Liverpool.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-navy">REGULATIONS</span>Do I need planning permission or Building Regulations approval?</summary>
-          <div class="faq-body">
-            <p>Standard central heating installation does not require planning permission. However, gas work is notifiable under Building Regulations via the Competent Person Scheme. We handle all Building Regulations notifications as part of the installation. See <a href="https://www.gov.uk/building-regulations-approval" target="_blank" rel="noopener">GOV.UK Building Regulations guidance</a> for full details.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-green">OLD HOMES</span>Can you install central heating in Liverpool's older Victorian properties?</summary>
-          <div class="faq-body">
-            <p>Yes, this is one of our specialisms. Liverpool's Victorian and Edwardian terraces often have unusual layouts, chimney flue routes, cellar entries and solid walls that require careful planning. Our engineers have 30 years experience working on Liverpool's older housing stock. We assess every property individually at the free survey and plan around its specific challenges.</p>
-          </div>
-        </details>
+      <h2>How Our Liverpool Central Heating Installation Works</h2>
+      <p class="pf-sub">From free survey to a fully working heating system. Here is exactly what to expect.</p>
+      <div class="pf-steps" style="margin-top:2rem;">
+        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>Our Gas Safe engineer visits your Liverpool property, assesses the layout, wall construction, existing pipework and boiler location. We discuss your requirements and provide a written fixed-price quote with a clear completion timeline. No obligation to proceed.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>System designed for your property</strong><p>We design the radiator layout, pipework routes and boiler specification specifically for your home. Every radiator is sized for the room it serves. Pipe routes are planned to minimise disruption to existing decoration.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Installation carried out</strong><p>Our own Gas Safe engineers carry out the full installation to the agreed timeline. We protect floors and surfaces throughout and clean up fully at the end of every working day. You are never left with an unfinished system overnight.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>System flushed, inhibitor dosed and filter fitted</strong><p>The completed system is flushed, inhibitor is dosed to BS 7593 standard and the magnetic filter is fitted before the boiler is connected. This protects the new boiler from day one and satisfies all manufacturer warranty conditions.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Full commissioning, balancing and demonstration</strong><p>Every radiator is balanced individually. System pressure is set and a full heating and hot water cycle is run. We walk you through the new controls before we leave so you are fully comfortable operating everything.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">6</div><div><strong>Gas Safe certificate and warranty registered</strong><p>The Gas Safe certificate and Benchmark certificate are issued on the day of completion. We register the boiler warranty with the manufacturer on your behalf. All documentation is emailed to you the same day.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POWER FLUSH -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <h2>Power Flushing for Liverpool Heating Systems</h2>
+      <p class="pf-sub">If you are upgrading an existing system rather than installing new, a power flush before any new components are connected is strongly recommended.</p>
+
+      <div class="pf-card pf-card-orange" style="margin-top:2rem;">
+        <h3>Why a Power Flush Before a System Upgrade Matters</h3>
+        <p>Connecting new radiators, a new boiler or new pipework to a contaminated existing system introduces sludge and magnetite into the new components immediately. This accelerates wear on the new boiler heat exchanger and can cause partial blockages in new radiators within months. All major manufacturers require a clean system as a warranty condition.</p>
+        <p>A power flush removes sludge, magnetite and debris from the existing pipework before any new components are connected. This protects your new equipment from day one and is required by Worcester Bosch, Vaillant and all other major manufacturers under their warranty terms. A power flush costs from £350 and is available as a bundle with any system upgrade at a better combined price.</p>
+        <p>For full new system installations where all pipework and radiators are new, a power flush is not required. We advise at the free survey whether a power flush is recommended for your specific installation.</p>
+      </div>
+
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="/power-flushing-liverpool" class="btn btn-navy btn-lg" style="color:#ffffff;">Learn About Power Flushing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BEFORE FAQ -->
+  <section style="background:#f97316;padding:1.75rem 0;">
+    <div class="container" style="text-align:center;">
+      <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Free survey. Fixed price. Gas Safe registered. 30 years Liverpool experience. Ready to book?</p>
+      <a href="tel:07399676656" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 07399 676656</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Central Heating Installation Liverpool. Your Questions Answered</h2>
+      <p class="pf-sub">Straight answers to what Liverpool homeowners ask most before booking.</p>
+      <div class="pf-faq">
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does central heating installation cost in Liverpool?</summary><div class="pf-faq-body"><p>A full central heating installation in Liverpool starts from £3,500 for a smaller property and can reach £6,000 to £7,000 for a larger home. System upgrades start from £1,500. Adding a single radiator costs from £200 supply and fit. All prices include boiler, radiators, pipework, controls and Gas Safe certificate. We provide a free written fixed-price quote after the site survey.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TIME</span>&nbsp; How long does central heating installation take?</summary><div class="pf-faq-body"><p>A full installation in a typical 3-bed Liverpool property takes 3 to 5 days. Smaller properties take 2 to 3 days. Larger properties with 11 or more radiators take 5 to 7 days. A single radiator addition takes half a day. We confirm the timeline at the free survey and work to a fixed schedule.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">FLUSH</span>&nbsp; Do I need a power flush with a new central heating system?</summary><div class="pf-faq-body"><p>For a full new system installation, a power flush is not required as all pipework and radiators are new. For an upgrade or extension on an existing system, a power flush is strongly recommended before connecting new components to the existing circuit. We advise at the free survey whether a power flush is recommended for your specific installation.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GRANTS</span>&nbsp; Is there a government grant for central heating in Liverpool?</summary><div class="pf-faq-body"><p>Eligible Liverpool homeowners on qualifying benefits may qualify for the <a href="https://www.gov.uk/apply-great-british-insulation-scheme" target="_blank" rel="noopener">ECO4 scheme</a> which can fund a full central heating installation or upgrade. The <a href="https://www.gov.uk/apply-boiler-upgrade-scheme" target="_blank" rel="noopener">Boiler Upgrade Scheme</a> provides up to £7,500 towards heat pump installation. We assess eligibility at the free survey at no cost.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">VICTORIAN</span>&nbsp; Can you install central heating in a Liverpool Victorian property?</summary><div class="pf-faq-body"><p>Yes. Our engineers have 30 years experience in Liverpool's Victorian and Edwardian housing stock. These properties often have solid walls, limited floor void access and non-standard layouts requiring careful pipework planning. We assess every property at the free survey and design the system specifically around your home's characteristics. We plan pipe routes to preserve original features where possible.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. Ideal Plumbing Solutions is Gas Safe registered. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. All central heating installations are carried out by our own directly employed Gas Safe registered engineers. We never use sub-contractors.</p></div></details>
       </div>
     </div>
   </section>
 
   <!-- COVERAGE -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Central Heating Installation Across Liverpool and Merseyside</h2>
-      <p class="section-sub">We install and service central heating systems across all Liverpool postcodes and the wider Merseyside area.</p>
-      <div class="coverage-grid">
-        <div class="coverage-area">
-          <h3>City and South</h3>
-          <div>
-            <span class="area-pill">City Centre L1</span>
-            <span class="area-pill">Aigburth L17</span>
-            <span class="area-pill">Allerton L18</span>
-            <span class="area-pill">Woolton L25</span>
-            <span class="area-pill">Garston L19</span>
-            <span class="area-pill">Toxteth L8</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>North and East</h3>
-          <div>
-            <span class="area-pill">Anfield L4</span>
-            <span class="area-pill">Wavertree L15</span>
-            <span class="area-pill">West Derby L12</span>
-            <span class="area-pill">Bootle L20</span>
-            <span class="area-pill">Crosby L23</span>
-            <span class="area-pill">Kirkby L32</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>Outskirts</h3>
-          <div>
-            <span class="area-pill">Formby L37</span>
-            <span class="area-pill">Southport PR8</span>
-            <span class="area-pill">Maghull L31</span>
-            <span class="area-pill">Huyton L36</span>
-            <span class="area-pill">Aintree L10</span>
-            <span class="area-pill">Fazakerley L10</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>Wider Merseyside</h3>
-          <div>
-            <span class="area-pill">Wirral CH</span>
-            <span class="area-pill">St Helens WA</span>
-            <span class="area-pill">Warrington WA</span>
-            <span class="area-pill">Birkenhead CH41</span>
-            <span class="area-pill">Wallasey CH44</span>
-            <span class="area-pill">Stockton Heath WA4</span>
-          </div>
-        </div>
+      <p class="pf-sub" style="text-align:center;">We carry out central heating installations across all Liverpool postcodes and the wider Merseyside area.</p>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>Liverpool City and South</h3>
+        <p>Central heating installations across Liverpool city centre, Aigburth, Allerton, Woolton, Garston, Toxteth, Sefton Park and Mossley Hill. South Liverpool has a high concentration of Victorian and Edwardian properties, many without central heating or with ageing systems requiring full replacement. We install multiple full systems in south Liverpool every month.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">City Centre L1</span><span class="pf-pill">Aigburth L17</span><span class="pf-pill">Allerton L18</span><span class="pf-pill">Woolton L25</span><span class="pf-pill">Garston L19</span><span class="pf-pill">Toxteth L8</span><span class="pf-pill">Sefton Park L17</span><span class="pf-pill">Mossley Hill L18</span></div>
+      </div>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>North and East Liverpool</h3>
+        <p>Central heating installations across Anfield, Wavertree, West Derby, Bootle, Crosby, Norris Green, Fazakerley and Kirkby. North Liverpool includes a mix of Victorian terraced housing and post-war properties, many of which benefit significantly from either first-time central heating installation or system upgrades.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Anfield L4</span><span class="pf-pill">Wavertree L15</span><span class="pf-pill">West Derby L12</span><span class="pf-pill">Bootle L20</span><span class="pf-pill">Crosby L23</span><span class="pf-pill">Kirkby L32</span><span class="pf-pill">Norris Green L11</span><span class="pf-pill">Fazakerley L9</span></div>
+      </div>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>Liverpool Outskirts and Wider Merseyside</h3>
+        <p>Full central heating installation service across Formby, Southport, Maghull, Huyton, Aintree, Childwall, Wirral, St Helens, Warrington, Birkenhead, Wallasey and Heswall. Larger properties in Formby, Southport and the Wirral often require system boiler setups and zone controls for multiple floors.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Formby L37</span><span class="pf-pill">Southport PR8</span><span class="pf-pill">Maghull L31</span><span class="pf-pill">Wirral CH</span><span class="pf-pill">St Helens WA</span><span class="pf-pill">Warrington WA</span><span class="pf-pill">Birkenhead CH41</span><span class="pf-pill">Heswall CH60</span></div>
       </div>
     </div>
   </section>
 
-  <!-- OTHER SERVICES -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- RELATED SERVICES -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Other Plumbing and Gas Services in Liverpool</h2>
-      <p class="section-sub">Everything Liverpool homeowners and landlords need. All Gas Safe registered.</p>
-      <div class="ch-services-grid">
-        <a href="/boiler-installation-liverpool" class="ch-service-link">
-          <strong>Boiler Installation Liverpool</strong>
-          <span>Worcester Bosch, Vaillant, Ideal, Baxi. Fully fitted from £1,800. Free survey. 10-year warranty.</span>
-        </a>
-        <a href="/boiler-service-liverpool" class="ch-service-link">
-          <strong>Boiler Service Liverpool</strong>
-          <span>Annual boiler service £75. Gas Safe certificate provided. All major brands.</span>
-        </a>
-        <a href="/gas-safety-certificate-liverpool" class="ch-service-link">
-          <strong>Gas Safety Certificates Liverpool</strong>
-          <span>CP12 landlord certificates from £65. Same-day available. Digital copy emailed.</span>
-        </a>
-        <a href="/" class="ch-service-link">
-          <strong>Emergency Plumber Liverpool</strong>
-          <span>24/7 emergency response. 30 minute arrival. Gas Safe registered. From £80/hour.</span>
-        </a>
-        <a href="/bathroom-fitters-liverpool" class="ch-service-link">
-          <strong>Bathroom Fitters Liverpool</strong>
-          <span>Full bathroom installations, wet rooms, en suites and shower rooms.</span>
-        </a>
-        <a href="/contact-3" class="ch-service-link">
-          <strong>Book a Free Survey</strong>
-          <span>Free no-obligation site survey and written fixed-price quote. No commitment to proceed.</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO COPY -->
-  <section class="section-pad" style="background:var(--white);">
-    <div class="container">
-      <div class="copy-grid">
-        <div class="copy-block">
-          <h2>Central Heating in Liverpool's Victorian and Period Properties</h2>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">What are the challenges of installing central heating in older Liverpool homes?</h3>
-          <p>Liverpool has one of the highest concentrations of Victorian and Edwardian housing in England. These properties present specific challenges for central heating installation: solid walls that require surface-mounted pipework or careful channelling, chimneys used as flue routes that may need lining, cellar entries that affect pipework routing and original features that need to be preserved. Our engineers have 30 years experience navigating these challenges across Liverpool's terraced streets. The <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">HSE gas safety standards</a> apply regardless of property age and we bring every installation up to current regulations.</p>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">How do I know what size boiler I need for my Liverpool home?</h3>
-          <p>Boiler sizing depends on the number of radiators, property size, number of bathrooms and insulation levels. Our engineers carry out a full heat loss calculation at the free survey to ensure the boiler is correctly sized. An oversized boiler short-cycles, reducing efficiency and warranty life. An undersized boiler struggles to maintain temperature on cold Liverpool days. Getting the sizing right from the start is one of the most important decisions in a central heating installation.</p>
-        </div>
-        <div class="copy-block">
-          <h2>Why Power Flushing Is the Most Overlooked Liverpool Heating Service</h2>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">How much can a power flush save on energy bills?</h3>
-          <p>A sludge-filled central heating system can reduce boiler efficiency by 15 to 25%. On a typical Liverpool household spending £900 per year on gas heating, that represents a saving of £135 to £225 per year after a power flush costing £350. In many cases the power flush pays for itself within two years through reduced energy bills alone. The <a href="https://energysavingtrust.org.uk/advice/thermostats-and-heating-controls/" target="_blank" rel="noopener">Energy Saving Trust</a> recommends regular system maintenance as a key energy-saving measure.</p>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">Do I need a power flush before a new boiler in Liverpool?</h3>
-          <p>Almost always yes if your system is more than 5 years old. All major boiler manufacturers including Worcester Bosch and Vaillant require the system to be flushed and inhibitor added as a warranty condition. Installing a new boiler on an unflushed system can cause sludge to damage the new heat exchanger within months, voiding the warranty. We include a power flush recommendation in every free survey and carry out the flush immediately before the new boiler installation in the same visit where possible.</p>
-        </div>
+      <h2>Related Heating Services in Liverpool</h2>
+      <p class="pf-sub">Central heating installation often goes hand in hand with these services.</p>
+      <div class="pf-related">
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. Same-day and next-day available.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Liverpool</strong><span>System upgrade? Power flush from £350 before new components are connected. Protects your new system from day one.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Installation Liverpool</strong><span>New radiators and TRV upgrades from £200 supply and fit. Added to any existing system.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Annual Boiler Service Liverpool</strong><span>Keep your new system warranty valid. £120 fixed price. Benchmark updated. Certificate same day.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Liverpool</strong><span>CP12 landlord certificate from £80. Combined with boiler service for £175.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/get-started" class="pf-related-link"><div><strong>Book a Free Survey</strong><span>Free no-obligation site survey and written fixed-price quote. All Liverpool postcodes covered.</span></div><span class="pf-related-arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -866,17 +486,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container" style="text-align:center">
-      <div class="page-hero-badge" style="margin:0 auto 1.25rem;">
-        <span class="badge-dot"></span>
-        Gas Safe Registered · Free Survey · Liverpool and Merseyside
-      </div>
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free Liverpool Heating Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Full systems from £3,500. Radiator additions from £200. Power flushing from £350. Gas Safe registered. No sub-contractors. Fixed price guaranteed.</p>
+      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free Central Heating Survey in Liverpool Today</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Full systems from £3,500. Free site survey. Fixed price guaranteed. Gas Safe registered. 30 years Liverpool experience. ECO4 grants assessed.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;">CALL 07399 676656</a>
-        <a href="/contact-3" class="btn btn-outline btn-lg btn-full">Book Free Survey Online</a>
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
       </div>
-      <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;">No heating? Call us 24/7 on 07399 676656 for emergency heating repairs across Liverpool.</p>
+      <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
     </div>
   </section>
 
