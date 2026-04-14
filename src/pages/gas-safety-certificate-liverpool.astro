@@ -3,26 +3,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Gas Safety Certificate Liverpool | CP12 from £65 | Same-Day | Ideal Plumbing Solutions"
-  description="Gas safety certificates (CP12) for Liverpool landlords from £65. Gas Safe registered engineers. Same-day certificates. Digital copy emailed same day. Liverpool, Wirral, Warrington and St Helens covered. Call 07399 676656."
+  title="Gas Safety Certificate Liverpool | CP12 from £80 | Same-Day | Ideal Plumbing Solutions"
+  description="Gas safety certificate Liverpool from £80. CP12 for landlords. Gas Safe registered. Digital certificate emailed same day. Fines up to £6,000 for non-compliance. Combined service and CP12 from £175. Call 07399 676656."
   canonical="https://www.idealplumbingsolutions.co.uk/gas-safety-certificate-liverpool"
 >
 
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Plumber"],
+    "@type": "LocalBusiness",
+    "@id": "https://www.idealplumbingsolutions.co.uk/#business",
     "name": "Ideal Plumbing Solutions",
-    "image": "https://www.idealplumbingsolutions.co.uk/ideal-plumbing-logo.png",
-    "url": "https://www.idealplumbingsolutions.co.uk/gas-safety-certificate-liverpool",
     "telephone": "+4407399676656",
     "email": "idealplumbingsolutions@gmail.com",
     "priceRange": "££",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "250",
-      "bestRating": "5"
+    "address": { "@type": "PostalAddress", "addressLocality": "Liverpool", "addressRegion": "Merseyside", "addressCountry": "GB" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "53.4084", "longitude": "-2.9916" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "250", "bestRating": "5", "worstRating": "1" },
+    "areaServed": [
+      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "Warrington" }, { "@type": "City", "name": "St Helens" },
+      { "@type": "City", "name": "Bootle" }, { "@type": "City", "name": "Crosby" },
+      { "@type": "City", "name": "Aigburth" }, { "@type": "City", "name": "Wavertree" },
+      { "@type": "City", "name": "West Derby" }, { "@type": "City", "name": "Woolton" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Gas Safety Certificate Liverpool",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Gas Safety Certificate Liverpool CP12", "price": "80", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+        { "@type": "Offer", "name": "Gas Safety Certificate and Boiler Service Combined Liverpool", "price": "175", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" }
+      ]
     }
   }
   </script>
@@ -32,23 +43,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Gas Safety Certificate Liverpool",
-    "alternateName": ["CP12 Liverpool", "Landlord Gas Safety Certificate Liverpool", "Gas Safety Check Liverpool"],
-    "description": "Gas Safe registered CP12 gas safety certificates for Liverpool landlords from £65. Same-day service available. Digital certificate emailed same day. Covers Liverpool L1-L40, Wirral, Warrington and St Helens.",
-    "provider": {
-      "@type": "Plumber",
-      "name": "Ideal Plumbing Solutions",
-      "telephone": "+4407399676656"
-    },
+    "alternateName": ["CP12 Liverpool", "Gas Certificate Liverpool", "Landlord Gas Safety Certificate Liverpool", "Gas Safety Check Liverpool"],
+    "serviceType": "Gas Safety Inspection and CP12 Certificate",
+    "description": "Gas Safe registered CP12 gas safety certificates for Liverpool landlords from £80. Same-day service available. Digital certificate emailed same day. Covers all Liverpool postcodes, Wirral, Warrington and St Helens.",
+    "provider": { "@type": "Plumber", "name": "Ideal Plumbing Solutions", "telephone": "+4407399676656" },
     "areaServed": [
-      { "@type": "Place", "name": "Liverpool" },
-      { "@type": "Place", "name": "Wirral" },
-      { "@type": "Place", "name": "Warrington" },
-      { "@type": "Place", "name": "St Helens" }
-    ],
-    "offers": [
-      { "@type": "Offer", "name": "Gas Safety Certificate Liverpool - Single Appliance", "price": "65", "priceCurrency": "GBP", "description": "CP12 gas safety certificate covering one gas appliance. Certificate emailed same day." },
-      { "@type": "Offer", "name": "Gas Safety Certificate Liverpool - Additional Appliance", "price": "10", "priceCurrency": "GBP", "description": "Additional gas appliances added to the same inspection at £10 each." },
-      { "@type": "Offer", "name": "Gas Safety Certificate with Boiler Service Liverpool", "price": "120", "priceCurrency": "GBP", "description": "Combined CP12 and annual boiler service. Best value option for landlords." }
+      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "Warrington" }, { "@type": "City", "name": "St Helens" }
     ]
   }
   </script>
@@ -58,46 +59,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does a gas safety certificate cost in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Our CP12 gas safety certificate costs £65 for the first gas appliance. Additional appliances are £10 each. A combined CP12 and boiler service is £120. All prices include the digital certificate emailed the same day. No hidden fees." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does a gas safety check take in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A standard gas safety check with one boiler takes 30 to 45 minutes. Properties with additional appliances such as gas cookers or gas fires take slightly longer. We can usually complete the inspection and email the certificate the same day." }
-      },
-      {
-        "@type": "Question",
-        "name": "How often do landlords need a gas safety certificate?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Landlords must renew the CP12 gas safety certificate every 12 months under the Gas Safety (Installation and Use) Regulations 1998. A new certificate must also be provided to new tenants before they move in." }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens if a landlord does not have a gas safety certificate?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Landlords without a valid CP12 certificate face fines of up to £6,000 per property and potential imprisonment. Tenants can also reclaim rent and landlords cannot serve valid Section 21 notices. Liverpool City Council actively enforces gas safety compliance." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you do same-day gas safety certificates in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer same-day gas safety certificate appointments across Liverpool and Merseyside. Call us in the morning and we can often complete the inspection and email the certificate the same day." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is checked during a gas safety inspection?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Our Gas Safe engineers check all gas appliances including boilers, gas cookers and gas fires. We test for gas leaks, check flue flow and ventilation, verify gas pressure, test safety devices and inspect all pipework and connections. A CP12 certificate is issued if everything passes." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between a gas safety certificate and a boiler service?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A gas safety certificate (CP12) is a legal check confirming all gas appliances are safe. A boiler service is a maintenance check ensuring the boiler is running efficiently. They are different things. We recommend combining both on the same visit to save time and money." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer portfolio landlord discounts?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Liverpool landlords with multiple properties can discuss a discounted rate with us. We also coordinate directly with tenants and letting agents to arrange access, handling all the scheduling so you do not have to." }
-      }
+      { "@type": "Question", "name": "How much does a gas safety certificate cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A CP12 gas safety certificate in Liverpool costs £80 for the first gas appliance. Additional appliances are £10 each. A combined gas safety certificate and annual boiler service costs £175 in a single visit. The Checkatrade average for Liverpool is £76 to £108. No call-out fee and no hidden charges on any visit." } },
+      { "@type": "Question", "name": "Is a gas safety certificate a legal requirement for Liverpool landlords?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Under the Gas Safety (Installation and Use) Regulations 1998, all landlords in England must hold a valid CP12 gas safety certificate for every rental property containing gas appliances. The certificate must be renewed every 12 months. Landlords must provide a copy to existing tenants within 28 days of issue and to new tenants before they move in. Non-compliance can result in fines up to £6,000 per property and criminal prosecution." } },
+      { "@type": "Question", "name": "Does a lapsed gas safety certificate affect a Section 21 notice?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A landlord who has not provided a valid gas safety certificate to their tenant may be unable to serve a valid Section 21 notice to regain possession of the property. Courts have ruled that compliance with gas safety obligations is a prerequisite for a valid Section 21. A lapsed or unserved CP12 can prevent eviction proceedings entirely. This makes annual renewal and correct service of the certificate to tenants a critical legal obligation beyond the safety implications." } },
+      { "@type": "Question", "name": "How long do I need to keep a gas safety certificate?", "acceptedAnswer": { "@type": "Answer", "text": "Landlords must keep a record of the gas safety inspection for a minimum of two years from the date of issue. You must be able to produce this record to the HSE, your local authority or a tenant on request. We email the digital certificate to you on the same day as the inspection, providing a permanent record you can retrieve at any time." } },
+      { "@type": "Question", "name": "Can tenants request a copy of the gas safety certificate?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tenants have a legal right to receive a copy of the gas safety certificate. Landlords must provide a copy to existing tenants within 28 days of issue and to new tenants before they move in. If a tenant requests a copy and does not receive one, they can report the landlord to the HSE or their local authority. We email the certificate directly so you can forward it to tenants immediately." } },
+      { "@type": "Question", "name": "What is the renewal grace period for a gas safety certificate?", "acceptedAnswer": { "@type": "Answer", "text": "If the inspection is carried out between 10 and 12 months after the previous inspection, the new certificate runs from the expiry date of the old one rather than the date of the new inspection. This means you do not lose the full 12 months of coverage. For example, if your certificate expires on 1 October and the inspection is carried out on 15 September, the new certificate will still be valid until 1 October the following year." } },
+      { "@type": "Question", "name": "How long does a gas safety certificate take?", "acceptedAnswer": { "@type": "Answer", "text": "A standard CP12 inspection for one gas appliance takes 30 to 45 minutes. Properties with multiple gas appliances take longer. A combined gas safety certificate and boiler service takes around 60 to 75 minutes. We confirm the duration when you book." } },
+      { "@type": "Question", "name": "What is the difference between a gas safety certificate and a boiler service?", "acceptedAnswer": { "@type": "Answer", "text": "A gas safety certificate (CP12) is a legal safety inspection confirming gas appliances are safe. It does not clean, maintain or service the boiler. A boiler service is a maintenance check keeping the boiler running efficiently and is required by manufacturers annually to keep the warranty valid. Both are needed every year. We offer them combined for £175 in a single visit." } },
+      { "@type": "Question", "name": "What happens if an appliance fails the inspection?", "acceptedAnswer": { "@type": "Answer", "text": "We follow the Gas Industry Unsafe Situations Procedure. An Immediately Dangerous appliance will be turned off and disconnected before we leave. An At Risk fault will be noted and a written repair quote provided. We never start repair work without your approval. A certificate cannot be issued until all Immediately Dangerous faults are resolved." } },
+      { "@type": "Question", "name": "Are you Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Ideal Plumbing Solutions is Gas Safe registered. Verify at gassaferegister.co.uk. All gas safety certificates are carried out by our own directly employed Gas Safe registered engineers. We never use sub-contractors." } }
     ]
   }
   </script>
@@ -105,847 +76,445 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How to Get a Gas Safety Certificate in Liverpool",
-    "description": "Gas Safe registered CP12 gas safety certificates for Liverpool landlords from £65. Same-day service. Digital certificate emailed same day.",
-    "estimatedCost": { "@type": "MonetaryAmount", "currency": "GBP", "value": "65" },
-    "totalTime": "PT1H",
-    "step": [
-      { "@type": "HowToStep", "position": 1, "name": "Book Your Appointment", "text": "Call us or use our online form. We confirm a convenient time, often the same day. We can coordinate directly with your tenant if needed." },
-      { "@type": "HowToStep", "position": 2, "name": "We Inspect Your Property", "text": "Our Gas Safe registered engineer inspects all gas appliances, checks flues, tests for leaks and verifies gas pressure. Takes 30 to 45 minutes for a standard property." },
-      { "@type": "HowToStep", "position": 3, "name": "Certificate Issued", "text": "Your CP12 gas safety certificate is emailed to you the same day. A paper copy is available on request. Accepted by all Liverpool letting agents and Liverpool City Council." },
-      { "@type": "HowToStep", "position": 4, "name": "Stay Compliant", "text": "We send you a renewal reminder 4 weeks before your certificate expires so you never miss the deadline. Portfolio landlords get consolidated scheduling across all their properties." }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.idealplumbingsolutions.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Gas Safety Certificate Liverpool", "item": "https://www.idealplumbingsolutions.co.uk/gas-safety-certificate-liverpool" }
     ]
   }
   </script>
 
-  <style>
-    .gsc-page h2 { text-align: center; color: var(--navy); }
-    .gsc-page .section-sub { text-align: center; }
-    .gsc-page p { font-size: 0.97rem; }
-    .gsc-page li { font-size: 0.97rem; }
-    .gsc-page .faq-item summary { font-size: 1rem; }
-    .gsc-page .faq-body p { font-size: 0.95rem; }
-    .gsc-page .review-card > p { font-size: 0.94rem; line-height: 1.75; }
-    .penalty-box {
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      border-left: 4px solid var(--red);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .penalty-box h3 { color: var(--red); font-size: 1.2rem; margin-bottom: 0.75rem; }
-    .penalty-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      margin-top: 0.75rem;
-    }
-    .penalty-item {
-      background: var(--white);
-      border: 1px solid #fecaca;
-      border-radius: var(--radius-sm);
-      padding: 0.75rem 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .penalty-item strong { color: var(--red); font-size: 1rem; min-width: 80px; }
-    .penalty-item span { font-size: 0.9rem; color: var(--text); }
-    .check-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-    .check-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--orange);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-    .check-item-num {
-      background: var(--orange);
-      color: var(--white);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1rem;
-      width: 1.75rem;
-      height: 1.75rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .check-item-text strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .check-item-text p { color: var(--muted); font-size: 0.88rem; margin: 0; }
-    .upsell-box {
-      background: var(--navy);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .upsell-box h3 { color: var(--orange); font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .upsell-box p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 1.25rem; }
-    .upsell-price { font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; font-weight: 900; color: var(--white); line-height: 1; margin-bottom: 0.25rem; }
-    .upsell-price small { font-size: 1rem; color: rgba(255,255,255,0.7); }
-    .upsell-saving { display: inline-block; background: var(--orange); color: var(--white); font-size: 0.8rem; font-weight: 800; padding: 0.2rem 0.75rem; border-radius: 999px; margin-bottom: 1rem; }
-    .obligation-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .obligation-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      text-align: left;
-    }
-    .obligation-icon {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.75rem;
-      font-weight: 900;
-      color: var(--orange);
-      line-height: 1;
-      min-width: 2.5rem;
-    }
-    .obligation-item strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.25rem; }
-    .obligation-item p { color: var(--muted); font-size: 0.88rem; margin: 0; }
-    .portfolio-bar {
-      background: var(--navy);
-      border-radius: var(--radius);
-      padding: 1.5rem 2rem;
-      margin-top: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1rem;
-    }
-    .portfolio-bar strong { color: var(--orange); font-size: 1rem; display: block; }
-    .portfolio-bar p { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin: 0; }
-    .fail-box {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-top: 1rem;
-      text-align: center;
-    }
-    .fail-box h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 0.75rem; }
-    .fail-box p { font-size: 0.92rem; color: var(--muted); }
-    .gsc-services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .gsc-service-link {
-      background: var(--navy);
-      border: none;
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.35rem;
-      transition: transform 0.18s, box-shadow 0.18s;
-    }
-    .gsc-service-link:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .gsc-service-link strong { font-size: 1rem; font-weight: 800; color: var(--orange); }
-    .gsc-service-link span { font-size: 0.88rem; color: rgba(255,255,255,0.8); }
-    .reminder-bar {
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      margin-top: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.5rem;
-    }
-    .reminder-bar strong { color: #15803d; font-size: 1rem; }
-    .reminder-bar p { color: #166534; font-size: 0.88rem; margin: 0; }
-    .gsc-page a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); transition: border-color 0.2s; }
-    .gsc-page a:hover { border-color: var(--navy); }
-    .gsc-page .btn { border-bottom: none; }
-  </style>
-
-  <div class="gsc-page">
-
   <!-- HERO -->
   <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge">
+    <div class="container" style="text-align:center;">
+      <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="badge-dot"></span>
-        Gas Safe Registered · Same-Day Available · Liverpool and Merseyside
+        Liverpool CP12 Gas Safety Specialists
       </div>
-      <h1>Gas Safety Certificates Liverpool</h1>
-      <p class="page-hero-sub" style="font-size:1rem;">CP12 gas safety certificates for landlords and homeowners from <strong>£65</strong>. Gas Safe registered engineers. Certificate emailed the same day. Covers Liverpool L1 to L40, Wirral, Warrington and St Helens.</p>
+      <h1>Gas Safety Certificate Liverpool</h1>
+      <p class="page-hero-sub">CP12 gas safety certificates for Liverpool landlords from £80. Same-day available. Selling a property? Buyers increasingly request one before exchange.</p>
 
-      <div style="display:flex;flex-direction:row;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
-        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:140px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--orange);line-height:1;">£65</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">First Appliance</div>
+      <div style="display:flex;gap:1rem;max-width:340px;margin:1.25rem auto;">
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;min-width:0;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--orange);line-height:1;">£80</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">CP12 Fixed Price</div>
         </div>
-        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:140px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--orange);line-height:1;">£10</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">Extra Appliance</div>
-        </div>
-        <div style="background:var(--orange);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:140px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--white);line-height:1;">£120</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.9);font-weight:700;">CP12 + Boiler Service</div>
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;min-width:0;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:900;color:var(--orange);line-height:1;white-space:nowrap;">Same-Day</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Available</div>
         </div>
       </div>
 
-      <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-bottom:1.5rem;">Fixed pricing. Certificate included. Same-day digital copy. No hidden fees.</p>
-
-      <div class="hero-actions">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);">CALL 07399 676656</a>
-        <a href="/contact-3" class="btn btn-lg" style="background:var(--white);color:var(--navy);border:2px solid var(--navy);">BOOK ONLINE</a>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book a CP12 Online</a>
       </div>
 
-      <div class="trust-row">
-        <div class="trust-item">
-          <strong>Same Day</strong>
-          <span>Certificate<br>Available</span>
-        </div>
-        <div class="trust-item">
-          <strong>30 to 45</strong>
-          <span>Minutes<br>Per Visit</span>
-        </div>
-        <div class="trust-item">
-          <strong>5.0 ★</strong>
-          <span>250 Google<br>Reviews</span>
-        </div>
+      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Gas Safe Registered</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> No Call-Out Fee</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Certificate Same Day</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> 250 Five-Star Reviews</span>
       </div>
     </div>
   </section>
 
-  <!-- WHAT IS A CP12 -->
-  <section class="section-pad" style="background:var(--bg);">
-    <div class="container">
-      <h2>What Is a Gas Safety Certificate (CP12)?</h2>
-      <p class="section-sub">Everything Liverpool landlords need to know about the CP12 in plain English.</p>
+  <div class="pf">
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
-        <div style="background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.75rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.75rem;">The Official Name</h3>
-          <p style="color:var(--muted);">A Gas Safety Certificate is officially called a Landlord Gas Safety Record (LGSR) or CP12. It is an official document issued by a <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe registered engineer</a> confirming that all gas appliances, flues and pipework in a property have been inspected and are safe to use.</p>
+  <!-- MINI REVIEW TRUST BAR -->
+  <section style="background:#1a3a5c;padding:1.25rem 0;">
+    <div class="container">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
         </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.75rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.75rem;">Who Needs One</h3>
-          <p style="color:var(--muted);">Under the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a>, all landlords with gas appliances in their rental properties must have a valid CP12. It must be renewed every 12 months. Homeowners are not legally required to have one but are strongly advised to.</p>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:440px;">"CP12 certificate emailed within the hour of the engineer leaving. Accepted by the letting agent the same afternoon. Could not ask for more." Sarah L, Liverpool Landlord</div>
+        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING top of page -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <h2>Gas Safety Certificate Prices Liverpool</h2>
+      <p class="pf-sub">Fixed prices. No call-out fee. No hidden charges. Digital certificate emailed the same day on every visit.</p>
+
+      <div class="pf-pricing-grid">
+
+        <div class="pf-price-card">
+          <div class="pf-price-tier">GAS SAFETY CERTIFICATE</div>
+          <div class="pf-price-name">CP12 Inspection</div>
+          <div class="pf-price-sub">First gas appliance. All Liverpool postcodes.</div>
+          <div class="pf-price-amount">£80</div>
+          <ul class="pf-price-list">
+            <li>Full CP12 safety inspection carried out</li>
+            <li>All gas appliances in property checked</li>
+            <li>Gas pressure and leak check</li>
+            <li>Flue integrity and ventilation checked</li>
+            <li>Digital CP12 certificate emailed same day</li>
+            <li>NRLA and letting agent accepted</li>
+            <li>Records kept 2 years as required by law</li>
+            <li>Additional appliances £10 each</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-navy btn-full">Book CP12 Now</a>
         </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.75rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.75rem;">How Long It Is Valid</h3>
-          <p style="color:var(--muted);">A CP12 is valid for 12 months from the date of issue. Landlords must keep a copy of the certificate for at least two years, provide a copy to existing tenants within 28 days of the check, and give new tenants a copy before they move in. See further guidance at <a href="https://www.citizensadvice.org.uk/housing/renting-privately/during-your-tenancy/gas-safety-checks/" target="_blank" rel="noopener">Citizens Advice</a>.</p>
+
+        <div class="pf-price-card pf-price-card-featured">
+          <div class="pf-price-badge">BEST VALUE FOR LANDLORDS</div>
+          <div class="pf-price-tier">COMBINED VISIT</div>
+          <div class="pf-price-name">CP12 and Annual Boiler Service</div>
+          <div class="pf-price-sub">One visit. Two documents. Same day.</div>
+          <div class="pf-price-amount">£175</div>
+          <ul class="pf-price-list">
+            <li>Full CP12 gas safety certificate included</li>
+            <li>Full annual boiler service included</li>
+            <li>Benchmark certificate updated</li>
+            <li>Inhibitor level tested and topped up</li>
+            <li>Both documents emailed same day</li>
+            <li>Saves buying separately</li>
+            <li>Keeps manufacturer warranty valid</li>
+            <li>Annual reminder for both certificates</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-orange btn-full" style="color:#ffffff;">Book Combined Visit</a>
         </div>
+
+        <div class="pf-price-card">
+          <div class="pf-price-tier">PORTFOLIO LANDLORDS</div>
+          <div class="pf-price-name">Multiple Properties</div>
+          <div class="pf-price-sub">Two or more properties. Call for rates.</div>
+          <div class="pf-price-amount" style="font-size:1.8rem;line-height:1.2;">From £70<small style="font-size:0.9rem;color:var(--muted);"> per property</small></div>
+          <ul class="pf-price-list">
+            <li>Reduced rates for portfolios of 2 or more</li>
+            <li>All properties scheduled in one call</li>
+            <li>Tenant access coordinated on your behalf</li>
+            <li>All certificates emailed same day</li>
+            <li>Single invoice across all properties</li>
+            <li>Annual reminder for every property</li>
+            <li>Priority booking for urgent renewals</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-navy btn-full">Call for Portfolio Rates</a>
+        </div>
+
+      </div>
+
+      <div class="pf-alert" style="margin-top:2rem;">
+        <strong>How does £80 compare to the Liverpool market?</strong>
+        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/gas-safety-certificate-cost/" target="_blank" rel="noopener">Checkatrade average for Liverpool is £76 to £108</a>. Our £80 is at the competitive end of the market with no call-out fee, no hidden charges and only our own Gas Safe engineers. The certificate is emailed the same day on every visit.</p>
       </div>
     </div>
   </section>
 
   <!-- LEGAL OBLIGATIONS -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Liverpool Landlord Legal Obligations</h2>
-      <p class="section-sub">These are not optional. The law is clear and <a href="https://liverpool.gov.uk/housing/landlords/" target="_blank" rel="noopener" style="color:var(--navy);border-bottom:1px solid rgba(26,58,92,0.25);">Liverpool City Council</a> actively enforces compliance.</p>
+      <h2>Liverpool Landlords. This Is a Legal Requirement.</h2>
+      <p class="pf-sub">Under the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a>, every landlord in England must hold a valid CP12 gas safety certificate for every rental property containing gas appliances. Non-compliance carries serious legal and financial consequences.</p>
 
-      <div class="obligation-grid">
-        <div class="obligation-item">
-          <div class="obligation-icon">1</div>
-          <div>
-            <strong>Annual gas safety check required</strong>
-            <p>All gas appliances, flues and pipework in your rental property must be checked every 12 months by a Gas Safe registered engineer. No exceptions.</p>
-          </div>
-        </div>
-        <div class="obligation-item">
-          <div class="obligation-icon">2</div>
-          <div>
-            <strong>Certificate to tenants within 28 days</strong>
-            <p>You must provide a copy of the completed CP12 to your tenants within 28 days of the inspection being carried out.</p>
-          </div>
-        </div>
-        <div class="obligation-item">
-          <div class="obligation-icon">3</div>
-          <div>
-            <strong>New tenants must receive certificate before moving in</strong>
-            <p>Before a new tenant takes up residence, they must be given a copy of the current gas safety certificate. This is a legal requirement, not a courtesy.</p>
-          </div>
-        </div>
-        <div class="obligation-item">
-          <div class="obligation-icon">4</div>
-          <div>
-            <strong>Keep records for at least two years</strong>
-            <p>Landlords must retain copies of all gas safety certificates for a minimum of two years. Liverpool City Council can request these at any time.</p>
-          </div>
-        </div>
-        <div class="obligation-item">
-          <div class="obligation-icon">5</div>
-          <div>
-            <strong>Applies to all gas appliances you provide</strong>
-            <p>The obligation covers all gas appliances supplied as part of the tenancy: boilers, gas cookers, gas fires and gas hobs. If you supply it, you are responsible for it.</p>
-          </div>
-        </div>
-      </div>
+      <div class="pf-who-grid" style="margin-top:2rem;">
 
-      <div class="penalty-box">
-        <h3>Penalties for Non-Compliance</h3>
-        <div class="penalty-grid">
-          <div class="penalty-item">
-            <strong>£6,000</strong>
-            <span>Maximum fine per property for not having a valid CP12</span>
-          </div>
-          <div class="penalty-item">
-            <strong>Imprisonment</strong>
-            <span>In serious cases, criminal prosecution is possible under <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener" style="color:var(--red);border-bottom:1px solid rgba(220,38,38,0.3);">HSE gas safety legislation</a></span>
-          </div>
-          <div class="penalty-item">
-            <strong>Invalid S21</strong>
-            <span>You cannot serve a valid Section 21 eviction notice without a current gas safety certificate</span>
-          </div>
-          <div class="penalty-item">
-            <strong>Rent repayment</strong>
-            <span>Tenants can apply to reclaim up to 12 months rent if the property was not gas safe compliant</span>
+        <div class="pf-who-item" style="border-left:3px solid #dc2626;">
+          <div style="background:#dc2626;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+          <div>
+            <strong>Fines up to £6,000 per property</strong>
+            <p>The <a href="https://www.hse.gov.uk" target="_blank" rel="noopener">Health and Safety Executive</a> and Liverpool City Council both actively enforce gas safety compliance. A single non-compliant property can result in a fine of up to £6,000. In serious cases, criminal prosecution and imprisonment are possible. A gas safety certificate costs £80. The fine for non-compliance is up to £6,000. This is not a calculation worth getting wrong.</p>
           </div>
         </div>
+
+        <div class="pf-who-item" style="border-left:3px solid #dc2626;">
+          <div style="background:#dc2626;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+          <div>
+            <strong>A lapsed CP12 can block a Section 21 notice</strong>
+            <p>A landlord who has not provided a valid gas safety certificate to their tenant may be unable to serve a valid Section 21 notice to regain possession. Courts have ruled that compliance with gas safety obligations is a legal prerequisite for a valid Section 21. A lapsed or unserved CP12 can prevent eviction proceedings entirely, leaving you unable to recover your property. Annual renewal and correct service of the certificate are not optional.</p>
+          </div>
+        </div>
+
+        <div class="pf-who-item" style="border-left:3px solid #dc2626;">
+          <div style="background:#dc2626;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+          <div>
+            <strong>Certificate must be provided to tenants within 28 days</strong>
+            <p>You must provide a copy of the valid CP12 to existing tenants within 28 days of issue. New tenants must receive a copy before they move in. Failure to provide the certificate on time is a separate breach of the regulations that can also affect the validity of a Section 21 notice. We email the digital certificate the same day so you can forward it to tenants immediately.</p>
+          </div>
+        </div>
+
+        <div class="pf-who-item" style="border-left:3px solid #dc2626;">
+          <div style="background:#dc2626;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
+          <div>
+            <strong>Certificate must be renewed every 12 months</strong>
+            <p>A CP12 is valid for 12 months from the date of inspection. Letting it lapse even briefly puts you in breach of the regulations. Tip: if the inspection is carried out between 10 and 12 months after the previous one, the new certificate runs from the expiry date of the old one rather than the inspection date, preserving the full 12 months of coverage without any gap. We add all landlords to our annual reminder list so your certificate never lapses.</p>
+          </div>
+        </div>
+
+        <div class="pf-who-item" style="border-left:3px solid #dc2626;">
+          <div style="background:#dc2626;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</div>
+          <div>
+            <strong>Records must be kept for two years</strong>
+            <p>Landlords must keep a record of the gas safety inspection for a minimum of two years from the date of issue and must be able to produce it to the HSE, local authority or a tenant on request. We email the digital certificate the same day, creating a permanent timestamped record. We recommend storing all certificates in a dedicated folder for each property.</p>
+          </div>
+        </div>
+
+        <div class="pf-who-item" style="border-left:3px solid #dc2626;">
+          <div style="background:#dc2626;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">6</div>
+          <div>
+            <strong>Required for HMO licensing in Liverpool</strong>
+            <p>A valid CP12 is a mandatory requirement for any <a href="https://liverpool.gov.uk/housing/landlords/" target="_blank" rel="noopener">Liverpool City Council HMO licence</a>. Without it your licence application will not be processed and your property cannot legally operate as a house in multiple occupation. Liverpool City Council's housing enforcement team actively inspect HMO properties and check gas safety compliance as a priority.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- WHAT IS A CP12 -->
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Gas Safety Certificate Prices Liverpool</h2>
-      <p class="section-sub">Fixed prices. No hidden fees. Certificate included. Cheaper than most Liverpool competitors.</p>
+      <h2>What Is a Gas Safety Certificate (CP12)?</h2>
+      <p class="pf-sub">A CP12 is the official document issued by a Gas Safe registered engineer following a gas safety inspection. It is the only document that satisfies the legal obligation under the Gas Safety Regulations 1998.</p>
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1.5rem;">
-        <div class="price-card">
-          <div class="price-tier">STANDARD</div>
-          <div class="price-name">Single Appliance</div>
-          <div class="price-sub">One boiler, cooker or gas fire</div>
-          <div class="price-amount">£<span>65</span></div>
-          <ul>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Full CP12 inspection</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Digital certificate same day</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Landlord compliant</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Annual renewal reminder</li>
-          </ul>
-          <a href="tel:07399676656" class="btn btn-navy btn-full">Book Now</a>
-        </div>
-
-        <div class="price-card price-card--featured">
-          <div class="price-card-badge">BEST VALUE</div>
-          <div class="price-tier">COMBINED</div>
-          <div class="price-name">CP12 and Boiler Service</div>
-          <div class="price-sub">One visit. Two jobs done.</div>
-          <div class="price-amount">£<span>120</span></div>
-          <ul>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Full CP12 gas safety certificate</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Full annual boiler service</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Both documents emailed same day</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Saves time and money</li>
-          </ul>
-          <a href="tel:07399676656" class="btn btn-orange btn-full">Book Combined Visit</a>
-        </div>
-
-        <div class="price-card">
-          <div class="price-tier">EXTRA APPLIANCES</div>
-          <div class="price-name">Additional Appliances</div>
-          <div class="price-sub">Added to the same inspection</div>
-          <div class="price-amount">£<span>10</span><small>/appliance</small></div>
-          <ul>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Gas cookers</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Gas fires</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> Gas hobs</li>
-            <li><span style="color:#16a34a;font-weight:700;">✓</span> All covered in same visit</li>
-          </ul>
-          <a href="tel:07399676656" class="btn btn-navy btn-full">Get Quote</a>
-        </div>
+      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
+        <h3>What a Gas Safety Certificate Confirms</h3>
+        <p>A CP12 gas safety certificate confirms that all gas appliances, pipework, flues and ventilation in a rental property have been inspected by a Gas Safe registered engineer and found to be safe for continued use. It records the date of inspection, the engineer's Gas Safe registration number, every appliance checked, its location and the result of each check.</p>
+        <p>The CP12 was introduced under the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a> and is the legal standard for gas safety compliance in rental properties across England, Scotland and Wales. It must be renewed every 12 months and can only be issued by a <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe registered engineer</a>. It cannot be issued by a general plumber, electrician or any other trade.</p>
       </div>
 
-      <div class="reminder-bar">
-        <strong>Free Annual Renewal Reminders</strong>
-        <p>We email you 4 weeks before your certificate expires so you never miss the renewal deadline. No charge. No setup needed. Just tell us when you book.</p>
+      <div class="pf-card pf-card-orange" style="margin-top:2rem;">
+        <h3>Gas Safety Certificate vs Boiler Service. What Is the Difference?</h3>
+        <p>A gas safety certificate is a legal safety inspection. It checks that appliances are safe but does not clean, maintain or service the boiler. A boiler service is a maintenance check that keeps the boiler operating efficiently and is required annually by manufacturers to keep the warranty valid. They are two completely separate things and both are needed every year.</p>
+        <p>Combining both on the same visit costs £175 and saves time, coordination and cost compared to booking them separately. Most Liverpool landlords who work with us book the combined visit annually.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHAT WE CHECK -->
-  <section class="section-pad" style="background:var(--white);">
+  <!-- WHAT IS CHECKED -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>What Our Gas Safe Engineers Check</h2>
-      <p class="section-sub">A thorough inspection covering every aspect of gas safety in your Liverpool property. Takes 30 to 45 minutes for a standard home.</p>
+      <h2 style="text-align:center;">What Our Gas Safe Engineers Check During the Inspection</h2>
+      <p class="pf-sub" style="text-align:center;">Every gas appliance in the property is inspected individually. The inspection takes 30 to 45 minutes for a single appliance. A written result is recorded for each item on the CP12.</p>
 
-      <div class="check-list">
-        <div class="check-item">
-          <div class="check-item-num">1</div>
-          <div class="check-item-text">
-            <strong>Visual Inspection of All Gas Appliances</strong>
-            <p>We inspect boilers, gas cookers, gas fires and hobs for signs of wear, damage or poor installation that could pose a safety risk.</p>
-          </div>
-        </div>
-        <div class="check-item">
-          <div class="check-item-num">2</div>
-          <div class="check-item-text">
-            <strong>Gas Leak Detection</strong>
-            <p>We test all pipework and connections using professional gas detection equipment to confirm there are no leaks anywhere in the system.</p>
-          </div>
-        </div>
-        <div class="check-item">
-          <div class="check-item-num">3</div>
-          <div class="check-item-text">
-            <strong>Flue Flow and Ventilation Check</strong>
-            <p>We test the flue to confirm harmful gases including carbon monoxide are being safely expelled from the property. A blocked or damaged flue is a serious risk.</p>
-          </div>
-        </div>
-        <div class="check-item">
-          <div class="check-item-num">4</div>
-          <div class="check-item-text">
-            <strong>Gas Pressure Verification</strong>
-            <p>Gas pressure is checked and confirmed to be within the safe operating range for all appliances in the property.</p>
-          </div>
-        </div>
-        <div class="check-item">
-          <div class="check-item-num">5</div>
-          <div class="check-item-text">
-            <strong>Safety Device Testing</strong>
-            <p>All safety devices including flame failure devices are tested to confirm they are working correctly and would cut off gas supply in the event of a fault.</p>
-          </div>
-        </div>
-        <div class="check-item">
-          <div class="check-item-num">6</div>
-          <div class="check-item-text">
-            <strong>Operational Safety Check</strong>
-            <p>Each appliance is turned on and tested to confirm it operates safely and efficiently. Any concerns are documented on the CP12 certificate.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-top:1.5rem;text-align:center;">
-        <p style="color:var(--muted);font-size:0.9rem;margin:0;">For information on what <a href="https://www.nhs.uk/conditions/carbon-monoxide-poisoning/" target="_blank" rel="noopener">carbon monoxide poisoning</a> looks like and how to protect your tenants, visit the NHS guidance page. A working carbon monoxide alarm is strongly recommended in every room with a gas appliance. See <a href="https://www.hse.gov.uk/gas/domestic/co-alarms.htm" target="_blank" rel="noopener">HSE carbon monoxide alarm guidance</a>.</p>
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gas supply pressure and flow rate</strong><p>Gas supply pressure tested at the meter and at each appliance to confirm correct supply throughout the property. Low pressure or restricted flow can cause appliances to operate unsafely.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gas leak check</strong><p>All pipework and appliance connections tested for gas leaks using calibrated detection equipment. Any leak found is classified using the Gas Industry Unsafe Situations Procedure and addressed before we leave.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Flue integrity and combustion products</strong><p>Flues tested for integrity, correct sealing and safe discharge of combustion gases. A damaged or blocked flue causes carbon monoxide to build up inside the property.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Ventilation adequacy</strong><p>All gas appliances checked for adequate ventilation as specified by the manufacturer. Blocked or inadequate ventilation is a common cause of incomplete combustion and carbon monoxide risk.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Safety device operation</strong><p>All appliance safety devices tested including flame failure devices, pressure relief valves and overheat cut-outs. Each must demonstrate correct operation before the appliance can pass the inspection.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Signs of incomplete combustion</strong><p>Checked for staining, sooting or carbon deposits around appliances. These indicate a combustion problem and potential carbon monoxide risk that must be resolved before the certificate is issued.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All gas appliances in the property</strong><p>Every gas appliance inspected individually, including boiler, gas fires, gas hobs, cookers and any other gas-connected appliances. All recorded separately on the CP12.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>CP12 certificate issued and emailed same day</strong><p>On completion, the CP12 is issued digitally and emailed the same day. Includes the engineer's Gas Safe registration number, inspection date and result for every appliance checked.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section-pad eicr-process-section">
-    <div class="container">
-      <h2 style="text-align:center;">How It Works</h2>
-      <p class="section-sub">Simple, professional gas safety inspection from first call to digital certificate.</p>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Book Your Appointment</h3>
-            <p>Call us or book online. We confirm a time that suits you or your tenant. Same-day appointments regularly available across Liverpool and Merseyside.</p>
-            <span class="step-note">Same-day slots often available</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>We Inspect the Property</h3>
-            <p>Our Gas Safe registered engineer carries out a full inspection of all gas appliances, flues and pipework. Takes 30 to 45 minutes for a standard property.</p>
-            <span class="step-note">30 to 45 minutes</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Certificate Issued</h3>
-            <p>Your CP12 gas safety certificate is emailed to you the same day. Accepted by all Liverpool letting agents, Liverpool City Council and mortgage lenders.</p>
-            <span class="step-note">Same-day digital copy</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Renewal Reminder Sent</h3>
-            <p>We automatically send you a renewal reminder 4 weeks before expiry. Portfolio landlords get a consolidated schedule across all properties.</p>
-            <span class="step-note">Free renewal reminders included</span>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">CALL 07399 676656</a>
+  <!-- MID CTA BREAK -->
+  <section style="background:var(--navy);padding:2rem 0;">
+    <div class="container" style="text-align:center;">
+      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Need a gas safety certificate today?</h3>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Same-day CP12 inspections available across Liverpool and Merseyside. £80 fixed price. No call-out fee. Certificate emailed same day.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book Online</a>
       </div>
     </div>
   </section>
 
-  <!-- WHAT IF IT FAILS -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- WHAT IF FAULT FOUND -->
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>What Happens If the Inspection Finds a Problem?</h2>
-      <p class="section-sub">We do not fail appliances to generate extra work. If an appliance is safe, the certificate will pass. Here is what happens if we find a genuine issue.</p>
+      <p class="pf-sub">We follow the Gas Industry Unsafe Situations Procedure on every inspection. Here is exactly what happens if a fault is found, and what it means for your certificate.</p>
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
-        <div class="fail-box">
-          <h3>Immediately Dangerous (ID)</h3>
-          <p>If an appliance poses an immediate danger we are legally obligated to cap or disconnect it and explain exactly why. We then provide a written quote for the repair. You are not obligated to have the remedial work done by us.</p>
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item" style="border-left:3px solid #dc2626;">
+          <div style="background:#dc2626;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+          <div><strong>Immediately Dangerous</strong><p>If an appliance poses an immediate risk of injury or death, our engineer will turn it off, disconnect the gas supply to that appliance and place a warning notice on it. We explain the problem and provide a written repair quote before leaving. A CP12 cannot be issued until the fault is rectified.</p></div>
         </div>
-        <div class="fail-box">
-          <h3>At Risk (AR)</h3>
-          <p>If an appliance is not immediately dangerous but poses a risk, it will be noted on the certificate. We recommend the repair and provide a quote but can still issue the certificate in some circumstances.</p>
+        <div class="pf-who-item" style="border-left:3px solid #d97706;">
+          <div style="background:#d97706;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+          <div><strong>At Risk</strong><p>If an appliance has a fault that could become dangerous but is not immediately so, our engineer advises you of the risk and provides a written repair quote. We strongly recommend addressing At Risk faults before the next tenancy. A CP12 can be issued noting the fault.</p></div>
         </div>
-        <div class="fail-box" style="border-top:3px solid var(--orange);">
-          <h3>Pass</h3>
-          <p>If everything is safe your CP12 certificate is issued immediately and emailed to you the same day. Valid for 12 months from the date of inspection.</p>
+        <div class="pf-who-item" style="border-left:3px solid #16a34a;">
+          <div style="background:#16a34a;color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;min-width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+          <div><strong>Not to Current Standard</strong><p>Some older appliances meet the safety standard at the time of installation but not current standards. Our engineer notes these on the CP12 with a recommendation. The appliance passes but the issue is documented for your records.</p></div>
         </div>
-      </div>
-
-      <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-top:1.5rem;text-align:center;">
-        <p style="color:var(--muted);font-size:0.9rem;margin:0;">Most common remedial work after a failed inspection: boiler service to restore efficiency (from £75), flue repair or replacement (from £150), and carbon monoxide alarm installation (from £35). We can usually carry out any remedial work on the same visit.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMBINED BOILER SERVICE UPSELL -->
-  <section class="section-pad" style="background:var(--white);">
-    <div class="container">
-      <h2>Save Time with a Combined CP12 and Boiler Service</h2>
-      <p class="section-sub">A gas safety certificate and a boiler service are two different things. Many Liverpool landlords book them together on the same visit to save time and money.</p>
-
-      <div class="upsell-box">
-        <div class="upsell-saving">SAVE TIME AND MONEY</div>
-        <h3>CP12 and Boiler Service</h3>
-        <div class="upsell-price">£120 <small>combined</small></div>
-        <p>One visit. One booking. Two documents emailed the same day. CP12 gas safety certificate plus a full annual boiler service. The manufacturer recommends an annual service and it is required by most boiler warranty conditions.</p>
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">Book Combined Visit</a>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center;">
-          <strong style="color:var(--navy);display:block;margin-bottom:0.35rem;">What the boiler service includes</strong>
-          <p style="font-size:0.88rem;color:var(--muted);margin:0;">Full internal inspection, cleaning of key components, efficiency check, pressure test, heat exchanger check, flue analysis and confirmation the boiler meets <a href="https://energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust efficiency guidelines</a>.</p>
+        <div class="pf-who-item pf-who-yes">
+          <span class="pf-who-icon">✓</span>
+          <div><strong>Written quote before any repair work</strong><p>If a repair is needed, we provide a written quote before any additional work is carried out. We never start repair work without your approval. Straightforward repairs can often be completed on the same visit.</p></div>
         </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center;">
-          <strong style="color:var(--navy);display:block;margin-bottom:0.35rem;">Why landlords combine both</strong>
-          <p style="font-size:0.88rem;color:var(--muted);margin:0;">One visit to the tenant instead of two. One invoice. Lower combined cost than booking separately. Boiler warranties from Worcester Bosch, Vaillant and Ideal all require annual servicing. See your boiler manufacturer terms for details.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE -->
-  <section class="why-section">
-    <div class="container">
-      <div class="why-header">
-        <h2>Why Choose Ideal Plumbing for Your Liverpool Gas Safety Certificate?</h2>
-        <p>Gas Safe registered. No sub-contractors. Liverpool and Merseyside specialists.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <strong>Gas Safe Registered</strong>
-          <p>All our engineers are Gas Safe registered. Only Gas Safe engineers can legally issue a CP12. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);border-bottom:none;">gassaferegister.co.uk</a>.</p>
-        </div>
-        <div class="why-card">
-          <strong>Same-Day Certificates</strong>
-          <p>Call us in the morning and we can often complete the inspection and email your CP12 certificate the same day across Liverpool and Merseyside.</p>
-        </div>
-        <div class="why-card">
-          <strong>Our Own Engineers</strong>
-          <p>Every engineer is our own directly employed staff. No sub-contractors. You get the same trained, vetted professional on every visit.</p>
-        </div>
-        <div class="why-card">
-          <strong>Free Renewal Reminders</strong>
-          <p>We send you an automatic email 4 weeks before your certificate expires so you never miss the deadline and never risk a fine.</p>
-        </div>
-        <div class="why-card">
-          <strong>Letting Agent Coordination</strong>
-          <p>We coordinate directly with your tenants and letting agents to arrange access. You do not need to be present during the inspection.</p>
-        </div>
-        <div class="why-card">
-          <strong>Portfolio Landlord Discounts</strong>
-          <p>Multiple Liverpool properties? We offer discounted rates for portfolio landlords with consolidated scheduling and invoicing across all your properties.</p>
-        </div>
-      </div>
-
-      <div class="portfolio-bar">
-        <strong>Portfolio Landlords Welcome</strong>
-        <p>Managing 2, 5 or 50 Liverpool properties? We offer dedicated portfolio landlord pricing, direct letting agent liaison and a full annual compliance schedule. Call us to discuss your portfolio.</p>
-        <a href="tel:07399676656" class="btn btn-orange">Discuss Portfolio Pricing</a>
-      </div>
-
-      <div class="why-cta">
-        <p>Ready to book your Liverpool gas safety certificate?</p>
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">CALL 07399 676656</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="reviews-header">
-        <div>
-          <h2>What Liverpool Landlords Say</h2>
-          <p class="section-sub">Real reviews from Liverpool landlords and letting agents</p>
-        </div>
-        <div class="reviews-score">
-          <span class="score-number">5.0</span>
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="score-label">Google · 250 reviews</div>
-          </div>
-        </div>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Gas safety certificates done on four rental properties across Liverpool in one day. All reports emailed the same afternoon. Accepted by our letting agent without any issues. Excellent, professional service throughout. Will use every year.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">G</div>
-            <div class="reviewer-info">
-              <strong>Gary F</strong>
-              <span class="review-location">Liverpool · Portfolio Landlord</span>
-            </div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Certificate urgently needed before a new tenant moved into my Anfield property. Called Monday morning, inspection done that afternoon, certificate in my inbox by 5pm. Exactly what a busy landlord needs. Very reasonably priced too.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">H</div>
-            <div class="reviewer-info">
-              <strong>Helen W</strong>
-              <span class="review-location">Anfield · New Tenancy</span>
-            </div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Booked the combined CP12 and boiler service. One engineer, one visit, both documents emailed the same day. Far less disruption for my tenant than having two separate visits. Great value and the engineer was thorough and professional.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">R</div>
-            <div class="reviewer-info">
-              <strong>Rachel E</strong>
-              <span class="review-location">Wavertree · CP12 and Boiler Service</span>
-            </div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
-      <div class="reviews-cta">
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" class="link-arrow">See all 250 reviews on Google →</a>
       </div>
     </div>
   </section>
 
   <!-- HMO SECTION -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>HMO Landlords and Gas Safety in Liverpool</h2>
-      <p class="section-sub">Houses in Multiple Occupation have additional gas safety obligations. We provide all documentation required for <a href="https://liverpool.gov.uk/housing/landlords/hmo/" target="_blank" rel="noopener" style="color:var(--navy);">Liverpool City Council HMO licensing</a>.</p>
+      <p class="pf-sub">Liverpool has one of the highest concentrations of HMO properties in the North West. Gas safety compliance is a mandatory condition of every HMO licence.</p>
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
-        <div style="background:var(--bg);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.5rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.5rem;">HMO Gas Safety Requirements</h3>
-          <p style="color:var(--muted);font-size:0.92rem;">HMO properties are subject to stricter gas safety requirements under <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">HSE regulations</a>. Annual CP12 certificates are mandatory. Liverpool Council HMO licensing applications require an up-to-date gas safety certificate. We carry out all inspections and provide the full documentation package needed for HMO licensing.</p>
-        </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-top:3px solid var(--navy);border-radius:var(--radius);padding:1.5rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.5rem;">What We Provide for HMO Landlords</h3>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;text-align:left;max-width:400px;margin:0 auto;">
-            <li style="padding-left:1.25rem;position:relative;font-size:0.92rem;color:var(--text);"><span style="position:absolute;left:0;color:var(--orange);font-weight:700;">✓</span>Full CP12 certificates for all gas appliances in the property</li>
-            <li style="padding-left:1.25rem;position:relative;font-size:0.92rem;color:var(--text);"><span style="position:absolute;left:0;color:var(--orange);font-weight:700;">✓</span>Documentation formatted for Liverpool Council HMO applications</li>
-            <li style="padding-left:1.25rem;position:relative;font-size:0.92rem;color:var(--text);"><span style="position:absolute;left:0;color:var(--orange);font-weight:700;">✓</span>Coordination with tenants and managing agents to arrange access</li>
-            <li style="padding-left:1.25rem;position:relative;font-size:0.92rem;color:var(--text);"><span style="position:absolute;left:0;color:var(--orange);font-weight:700;">✓</span>Portfolio discounts for multiple HMO properties</li>
-            <li style="padding-left:1.25rem;position:relative;font-size:0.92rem;color:var(--text);"><span style="position:absolute;left:0;color:var(--orange);font-weight:700;">✓</span>Annual renewal schedule management so you never miss a deadline</li>
-          </ul>
-        </div>
+      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
+        <h3>Liverpool HMO Licensing and Gas Safety</h3>
+        <p>A valid CP12 is a mandatory requirement for any <a href="https://liverpool.gov.uk/housing/landlords/" target="_blank" rel="noopener">Liverpool City Council HMO licence</a>. The certificate must cover all gas appliances in the property and must be renewed every 12 months. Liverpool City Council's housing enforcement team actively inspect HMO properties and check gas safety compliance as a priority.</p>
+        <p>HMO properties often have multiple gas appliances including individual boilers or gas fires in shared rooms, communal gas hobs and central boiler systems. Our engineers are experienced with all HMO configurations across Liverpool and Merseyside and can carry out the full inspection covering every appliance in a single visit.</p>
+        <p>For portfolio HMO landlords we offer coordinated inspection scheduling, tenant access management and a single invoice across all properties. All certificates are emailed the same day. Call us on 07399 676656 to discuss your portfolio.</p>
       </div>
 
-      <div style="background:var(--navy);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-top:1.5rem;text-align:center;">
-        <p style="color:rgba(255,255,255,0.9);font-size:0.95rem;margin:0 0 0.75rem;">HMO landlord in Liverpool? Call us to discuss your compliance requirements. See <a href="https://www.nrla.org.uk/resources/gas-safety" target="_blank" rel="noopener" style="color:var(--orange);border-bottom:none;">NRLA gas safety guidance</a> for landlord obligations.</p>
-        <a href="tel:07399676656" class="btn btn-orange">Call 07399 676656</a>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg" style="color:#ffffff;box-shadow:0 4px 14px rgba(249,115,22,0.3);">Call for Portfolio Rates</a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- BUYING SELLING RENTING -->
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Gas Safety Certificate Liverpool: Common Questions</h2>
-      <p class="section-sub">Straight answers to what Liverpool landlords ask most.</p>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-orange">COST</span>How much does a gas safety certificate cost in Liverpool?</summary>
-          <div class="faq-body">
-            <p>Our CP12 gas safety certificate costs £65 for the first gas appliance. Additional appliances are £10 each. A combined CP12 and full annual boiler service is £120. All prices include the digital certificate emailed the same day. No call-out fee and no hidden charges. For comparison, <a href="https://www.checkatrade.com/blog/cost-guides/gas-safety-certificate-cost/" target="_blank" rel="noopener">Checkatrade's gas safety certificate cost guide</a> shows the Liverpool market average is £76 to £108.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-navy">LEGAL</span>Is a gas safety certificate a legal requirement for Liverpool landlords?</summary>
-          <div class="faq-body">
-            <p>Yes. Under the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a>, all landlords in England must have a valid CP12 certificate for every rental property with gas appliances. The certificate must be renewed every 12 months. Non-compliance risks fines up to £6,000 per property and in serious cases criminal prosecution. <a href="https://liverpool.gov.uk/housing/landlords/" target="_blank" rel="noopener">Liverpool City Council</a> actively enforces gas safety compliance.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-green">TIMING</span>Can you do a same-day gas safety certificate in Liverpool?</summary>
-          <div class="faq-body">
-            <p>Yes. Same-day appointments are regularly available across Liverpool and Merseyside. Call us in the morning and we can often complete the inspection and email the certificate that afternoon. This is particularly useful when a new tenancy is starting or a certificate has expired.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-orange">DURATION</span>How long does a gas safety check take?</summary>
-          <div class="faq-body">
-            <p>A standard gas safety check covering one boiler takes 30 to 45 minutes. Properties with additional gas appliances such as a gas cooker or gas fire take slightly longer. You or your tenant do not need to be present for the entire inspection, just to provide access at the start.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-navy">DIFFERENCE</span>What is the difference between a gas safety certificate and a boiler service?</summary>
-          <div class="faq-body">
-            <p>They are two different things. A gas safety certificate (CP12) is a legal safety check confirming all gas appliances are safe to use. It does not clean or maintain the boiler. A boiler service is a maintenance check ensuring the boiler runs efficiently and safely. We recommend combining both on the same visit for £120 to save time and money.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-red">FAIL</span>What happens if the inspection finds a problem?</summary>
-          <div class="faq-body">
-            <p>We do not fail appliances to generate extra work. If an appliance is safe, it will pass. If we find an immediately dangerous situation we are legally obligated to cap or disconnect the appliance and explain exactly why. We then provide a written quote for the repair. You are not obligated to use us for the remedial work. Most repairs can be carried out on the same visit.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-green">PORTFOLIO</span>Do you offer discounts for portfolio landlords?</summary>
-          <div class="faq-body">
-            <p>Yes. Liverpool landlords with multiple properties can arrange a discounted rate. We also handle all scheduling and tenant coordination across your portfolio, provide consolidated invoicing and send renewal reminders for every property so nothing slips through. Call us to discuss your portfolio requirements.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-navy">LETTING AGENTS</span>Do you coordinate with letting agents?</summary>
-          <div class="faq-body">
-            <p>Yes. We work directly with letting agents and managing agents across Liverpool. We arrange access with tenants, carry out the inspection and send the digital certificate directly to the letting agent and landlord. Many Liverpool letting agents use us as their preferred gas safety provider. See <a href="https://www.nrla.org.uk/resources/gas-safety" target="_blank" rel="noopener">NRLA guidance on landlord obligations</a> for further information.</p>
-          </div>
-        </details>
+      <h2>Gas Safety Certificates for Buying, Selling and Renting in Liverpool</h2>
+      <p class="pf-sub">A gas safety certificate is not just a landlord obligation. It is increasingly essential at every stage of a property transaction in Liverpool.</p>
+
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Selling a Liverpool property</strong><p>A valid gas safety certificate and recent boiler service history reassures buyers and removes one of the most common pre-exchange objections. Liverpool buyers increasingly request gas safety documentation before exchange. A property with no gas safety record gives buyers leverage to negotiate below asking price or pull out entirely. A CP12 at £80 is one of the lowest-cost steps you can take before listing.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Buying a Liverpool property</strong><p>If you are purchasing a Liverpool property and want an independent gas safety inspection before completion, we carry out a full CP12 inspection and provide a written report on every gas appliance. This is separate from a homebuyer's survey and gives you specific, detailed information about the gas installation before you commit. If faults are found, you have documented evidence to renegotiate or request remedial work from the vendor.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Renting out for the first time</strong><p>A CP12 is required before any tenant moves in. New tenants must receive a copy on or before the tenancy start date. First-time landlords who miss this step face immediate non-compliance under the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety Regulations 1998</a>. We can often attend within 24 to 48 hours and email the certificate the same day.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Change of tenancy</strong><p>The most commonly missed trigger. If your existing CP12 is more than 12 months old when a new tenant moves in, the certificate must be renewed before the new tenancy begins. An expired CP12 cannot be passed to a new tenant. Call us when you receive notice from a departing tenant and we will schedule the inspection in time for the new tenancy start date.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Remortgaging or equity release</strong><p>Some Liverpool mortgage lenders and equity release providers request evidence of current gas safety compliance as part of the application process, particularly for buy-to-let remortgages. A valid CP12 satisfies this requirement. We issue the digital certificate the same day so it is ready for your mortgage broker without delay.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Insurance and home warranty requirements</strong><p>Some Liverpool landlord insurance policies require evidence of annual gas safety inspections to remain valid. A lapsed CP12 can give an insurer grounds to reduce or reject a claim relating to a gas appliance. Same-day available if you need a certificate to satisfy an insurance requirement at short notice.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Why Over 250 Liverpool Landlords Choose Ideal Plumbing for Their CP12</h2>
+      <p class="pf-sub">Gas Safe registered. £80 fixed price. Our own engineers. Certificate emailed same day. Annual reminder included. All Liverpool postcodes covered.</p>
+      <div class="pf-why-grid">
+        <div class="pf-why-item"><h3>£80 Fixed Price. No Hidden Charges.</h3><p>One price for the full inspection and digital certificate. No call-out fee. No extra charges on the day. Additional appliances are £10 each, agreed before we start.</p></div>
+        <div class="pf-why-item"><h3>Certificate Emailed Same Day</h3><p>The digital CP12 is emailed to you the same day as the inspection, every time. Forward it to your tenant immediately to satisfy the 28-day requirement. No waiting days for paperwork.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every inspection is carried out by our own directly employed Gas Safe registered engineers. Never a sub-contractor. You know exactly who is coming to your property.</p></div>
+        <div class="pf-why-item"><h3>Annual Reminder Included Free</h3><p>We add every landlord to our annual reminder list and contact you when your CP12 is due for renewal. Your certificate never lapses. No charge, no obligation to rebook.</p></div>
+        <div class="pf-why-item"><h3>Tenant Access Coordinated</h3><p>We liaise directly with your tenants to arrange access for the inspection. Particularly useful for portfolio landlords or those who manage properties from outside Liverpool.</p></div>
+        <div class="pf-why-item"><h3>Portfolio Rates Available</h3><p>Reduced rates for landlords with two or more properties. From £70 per property. Single invoice, coordinated scheduling, all certificates emailed same day. Call us to discuss.</p></div>
+      </div>
+      <div style="background:var(--navy);border-radius:10px;padding:2rem;text-align:center;margin-top:2rem;">
+        <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;margin-bottom:1.25rem;">£80 fixed price. Same-day available. Certificate emailed same day. Annual reminder. Gas Safe registered.</p>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+          <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+          <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a CP12 Online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <h2 style="margin-bottom:0.1rem;">What Liverpool Landlords Say</h2>
+        <p class="pf-sub" style="margin:0 0 0.75rem;">Real gas safety certificate reviews from Liverpool landlords and letting agents</p>
+        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
+        <div style="color:#f59e0b;font-size:1rem;">★★★★★</div>
+        <div style="font-size:0.75rem;color:var(--muted);">Google · 250 reviews</div>
+      </div>
+      <div class="pf-reviews">
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>CP12 certificate emailed within the hour of the engineer leaving. Accepted by the letting agent the same afternoon. Straightforward, professional and exactly the price quoted. All five of my Liverpool properties now on their annual reminder list.</p><div class="pf-review-footer"><div class="pf-review-avatar">S</div><div><div class="pf-review-name">Sarah L</div><div class="pf-review-loc">Liverpool · Portfolio Landlord</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Booked the combined CP12 and boiler service for my Wavertree rental. One visit, one invoice, two documents by email the same day. The tenant did not need to take time off work, which always helps with access. Brilliant service.</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Michael C</div><div class="pf-review-loc">Wavertree · Combined CP12 and Service</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>I manage 12 properties across Liverpool and Wirral. Ideal Plumbing coordinate all the tenant access, complete all 12 in two days and send every certificate by email. Single invoice, no hassle. This is what property management should look like.</p><div class="pf-review-footer"><div class="pf-review-avatar">R</div><div><div class="pf-review-name">Rachel T</div><div class="pf-review-loc">Liverpool · 12-Property Portfolio</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all 250 reviews on Google →</a></div>
+    </div>
+  </section>
+
+  <!-- SECOND MID CTA -->
+  <section style="background:var(--navy);padding:2rem 0;">
+    <div class="container" style="text-align:center;">
+      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Ready to book your gas safety certificate?</h3>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Same-day available across Liverpool and Merseyside. £80 fixed price. No call-out fee. Certificate emailed same day. Portfolio rates available.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book Online</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>How Our Liverpool Gas Safety Certificate Works</h2>
+      <p class="pf-sub">From booking to certificate in your inbox. Here is exactly what to expect.</p>
+      <div class="pf-steps" style="margin-top:2rem;">
+        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Book by phone or online</strong><p>Call 07399 676656 or book via our contact page. Morning and afternoon slots available across all Liverpool postcodes. Same-day available for urgent certificates. We can arrange tenant access directly if needed.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Gas Safe engineer arrives</strong><p>Our own Gas Safe registered engineer arrives within the agreed window. They carry all testing equipment and documentation. You or your tenant can ask to see the engineer's Gas Safe registration card at any time.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Full inspection carried out</strong><p>Every gas appliance inspected individually. The engineer tests gas pressure, checks for leaks, inspects flue integrity and ventilation, tests safety devices and checks for signs of incomplete combustion. Takes 30 to 45 minutes per appliance.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Results explained. Faults quoted in writing.</strong><p>The engineer explains the result for each appliance. If a fault is found, you receive a written repair quote before any additional work begins. No work starts without your approval. An Immediately Dangerous appliance will be made safe before the engineer leaves.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>CP12 certificate emailed same day. Reminder set.</strong><p>The digital CP12 is emailed to you the same day on completion. Includes the engineer's Gas Safe number, inspection date and result for every appliance. You are added to our annual reminder list so you never miss a renewal.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BEFORE FAQ -->
+  <section style="background:#f97316;padding:1.75rem 0;">
+    <div class="container" style="text-align:center;">
+      <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">£80 fixed price. Same-day available. Certificate emailed same day. No call-out fee. Ready to book?</p>
+      <a href="tel:07399676656" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 07399 676656</a>
+    </div>
+  </section>
+
+  <!-- FAQ 10 questions -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Gas Safety Certificate Liverpool. Your Questions Answered</h2>
+      <p class="pf-sub">Straight answers to what Liverpool landlords and homeowners ask most before booking.</p>
+      <div class="pf-faq">
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does a gas safety certificate cost in Liverpool?</summary><div class="pf-faq-body"><p>A CP12 gas safety certificate costs £80 for the first gas appliance, with additional appliances at £10 each. A combined gas safety certificate and annual boiler service costs £175 in a single visit. The <a href="https://www.checkatrade.com/blog/cost-guides/gas-safety-certificate-cost/" target="_blank" rel="noopener">Checkatrade average for Liverpool is £76 to £108</a>. No call-out fee and no hidden charges on any visit.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LEGAL</span>&nbsp; Is a gas safety certificate a legal requirement for Liverpool landlords?</summary><div class="pf-faq-body"><p>Yes. Under the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a>, every landlord in England must hold a valid CP12 for every rental property with gas appliances. The certificate must be renewed every 12 months. Landlords must provide a copy to existing tenants within 28 days and to new tenants before they move in. Non-compliance risks fines up to £6,000 per property.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">SECTION 21</span>&nbsp; Does a lapsed gas safety certificate affect a Section 21 notice?</summary><div class="pf-faq-body"><p>Yes. A landlord who has not provided a valid gas safety certificate to their tenant may be unable to serve a valid Section 21 notice to regain possession. Courts have ruled that compliance with gas safety obligations is a legal prerequisite for a valid Section 21. A lapsed or unserved CP12 can prevent eviction proceedings entirely. Annual renewal and correct service of the certificate to tenants are critical for landlords who may ever need to rely on Section 21.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RECORDS</span>&nbsp; How long do I need to keep a gas safety certificate?</summary><div class="pf-faq-body"><p>Landlords must keep a record of the gas safety inspection for a minimum of two years from the date of issue and must be able to produce it to the HSE, local authority or a tenant on request. We email the digital certificate the same day, creating a permanent timestamped record. We recommend storing all CP12 certificates in a dedicated folder organised by property.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TENANTS</span>&nbsp; Can tenants request a copy of the gas safety certificate?</summary><div class="pf-faq-body"><p>Yes. Tenants have a legal right to receive a copy of the gas safety certificate. Landlords must provide a copy to existing tenants within 28 days of issue and to new tenants before they move in. If a tenant requests a copy and does not receive one, they can report the landlord to the HSE or their local authority. We email the certificate directly so you can forward it to tenants on the same day.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RENEWAL</span>&nbsp; Is there a grace period for renewing a gas safety certificate?</summary><div class="pf-faq-body"><p>Yes. If the inspection is carried out between 10 and 12 months after the previous inspection, the new certificate runs from the expiry date of the old one rather than the inspection date. This means you do not lose the full 12 months of coverage. For example, if your certificate expires on 1 October and the inspection is carried out on 15 September, the new certificate will still run until 1 October the following year. This allows you to renew slightly early without shortening the validity period.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">DIFFERENCE</span>&nbsp; What is the difference between a gas safety certificate and a boiler service?</summary><div class="pf-faq-body"><p>A gas safety certificate (CP12) is a legal safety inspection confirming all gas appliances are safe. It does not service or maintain the boiler. A boiler service is a maintenance check that keeps the boiler running efficiently and is required annually by manufacturers to keep the warranty valid. Both are needed every year. We offer them combined for £175 in a single visit.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">FAULTS</span>&nbsp; What happens if an appliance fails the inspection?</summary><div class="pf-faq-body"><p>We follow the Gas Industry Unsafe Situations Procedure. An Immediately Dangerous appliance will be turned off and disconnected before we leave. An At Risk fault will be noted and a written repair quote provided. We never start repair work without your approval. A certificate cannot be issued until all Immediately Dangerous faults are resolved.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">SAME DAY</span>&nbsp; Can I get a same-day gas safety certificate in Liverpool?</summary><div class="pf-faq-body"><p>Yes, subject to availability. We offer same-day CP12 inspections across Liverpool and Merseyside. Call us on 07399 676656 to check availability. The digital certificate is emailed the same day on completion. For a gas emergency, call Cadent Gas on 0800 111 999 first.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. Ideal Plumbing Solutions is Gas Safe registered. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It is a legal requirement for any engineer issuing a CP12 to be Gas Safe registered. All inspections are carried out by our own directly employed engineers. We never use sub-contractors.</p></div></details>
       </div>
     </div>
   </section>
 
   <!-- COVERAGE -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Gas Safety Certificates Across Liverpool and Merseyside</h2>
-      <p class="section-sub">We carry out CP12 inspections across all Liverpool postcodes and the wider Merseyside area.</p>
-      <div class="coverage-grid">
-        <div class="coverage-area">
-          <h3>City and South</h3>
-          <div>
-            <span class="area-pill">City Centre L1</span>
-            <span class="area-pill">Toxteth L8</span>
-            <span class="area-pill">Aigburth L17</span>
-            <span class="area-pill">Allerton L18</span>
-            <span class="area-pill">Woolton L25</span>
-            <span class="area-pill">Garston L19</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>North and East</h3>
-          <div>
-            <span class="area-pill">Anfield L4</span>
-            <span class="area-pill">Everton L5</span>
-            <span class="area-pill">Wavertree L15</span>
-            <span class="area-pill">West Derby L12</span>
-            <span class="area-pill">Bootle L20</span>
-            <span class="area-pill">Kirkby L32</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>Outskirts</h3>
-          <div>
-            <span class="area-pill">Formby L37</span>
-            <span class="area-pill">Crosby L23</span>
-            <span class="area-pill">Southport PR8</span>
-            <span class="area-pill">Maghull L31</span>
-            <span class="area-pill">Huyton L36</span>
-            <span class="area-pill">Aintree L10</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>Wider Merseyside</h3>
-          <div>
-            <span class="area-pill">Wirral CH</span>
-            <span class="area-pill">St Helens WA</span>
-            <span class="area-pill">Warrington WA</span>
-            <span class="area-pill">Birkenhead CH41</span>
-            <span class="area-pill">Wallasey CH44</span>
-            <span class="area-pill">Stockton Heath WA4</span>
-          </div>
-        </div>
+      <p class="pf-sub" style="text-align:center;">We carry out CP12 inspections across all Liverpool L postcodes and the wider Merseyside area. Same-day available throughout.</p>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>Liverpool City and South</h3>
+        <p>Gas safety certificates across Liverpool city centre, Aigburth, Allerton, Woolton, Garston, Toxteth, Sefton Park and Mossley Hill. South Liverpool has a high concentration of private rental properties, many in Aigburth, Allerton and Woolton, that require annual CP12 certificates and HMO licensing compliance.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">City Centre L1</span><span class="pf-pill">Aigburth L17</span><span class="pf-pill">Allerton L18</span><span class="pf-pill">Woolton L25</span><span class="pf-pill">Garston L19</span><span class="pf-pill">Toxteth L8</span><span class="pf-pill">Sefton Park L17</span><span class="pf-pill">Mossley Hill L18</span></div>
+      </div>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>North and East Liverpool</h3>
+        <p>Gas safety certificates across Anfield, Wavertree, West Derby, Bootle, Crosby, Norris Green, Fazakerley and Kirkby. North Liverpool has a very high concentration of HMO and student rental properties requiring annual CP12 certificates and HMO licence compliance. We service multiple portfolio landlords across this area every month.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Anfield L4</span><span class="pf-pill">Wavertree L15</span><span class="pf-pill">West Derby L12</span><span class="pf-pill">Bootle L20</span><span class="pf-pill">Crosby L23</span><span class="pf-pill">Kirkby L32</span><span class="pf-pill">Norris Green L11</span><span class="pf-pill">Fazakerley L9</span></div>
+      </div>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>Liverpool Outskirts and Wider Merseyside</h3>
+        <p>Full CP12 service across Formby, Southport, Maghull, Huyton, Aintree, Childwall, Wirral, St Helens, Warrington, Birkenhead, Wallasey and Heswall. We coordinate tenant access across the full Merseyside area and manage entire landlord portfolios from a single call.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Formby L37</span><span class="pf-pill">Southport PR8</span><span class="pf-pill">Maghull L31</span><span class="pf-pill">Wirral CH</span><span class="pf-pill">St Helens WA</span><span class="pf-pill">Warrington WA</span><span class="pf-pill">Birkenhead CH41</span><span class="pf-pill">Wallasey CH44</span><span class="pf-pill">Heswall CH60</span></div>
       </div>
     </div>
   </section>
 
-  <!-- OTHER SERVICES -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- RELATED SERVICES -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Other Plumbing and Gas Services in Liverpool</h2>
-      <p class="section-sub">Everything Liverpool landlords and homeowners need. All Gas Safe registered.</p>
-      <div class="gsc-services-grid">
-        <a href="/boiler-service-liverpool" class="gsc-service-link">
-          <strong>Boiler Service Liverpool</strong>
-          <span>Annual boiler service £75. Combine with CP12 for £120. Gas Safe engineer. Same-day available.</span>
-        </a>
-        <a href="/boiler-installation-liverpool" class="gsc-service-link">
-          <strong>Boiler Installation Liverpool</strong>
-          <span>New combi, system and regular boilers from £1,800. Worcester Bosch, Vaillant, Ideal. 10 year warranty.</span>
-        </a>
-        <a href="/central-heating-installation-liverpool" class="gsc-service-link">
-          <strong>Central Heating Liverpool</strong>
-          <span>Full central heating installations, upgrades, radiator additions and power flushing.</span>
-        </a>
-        <a href="/" class="gsc-service-link">
-          <strong>Emergency Plumber Liverpool</strong>
-          <span>24/7 emergency response. 30 minute arrival. Gas Safe registered. From £80/hour.</span>
-        </a>
-        <a href="/bathroom-fitters-liverpool" class="gsc-service-link">
-          <strong>Bathroom Fitters Liverpool</strong>
-          <span>Full bathroom installations, toilet replacements, taps, sinks and showers.</span>
-        </a>
-        <a href="/contact-3" class="gsc-service-link">
-          <strong>Get a Free Quote</strong>
-          <span>Book any plumbing or gas service online. Same-day appointments often available.</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO COPY -->
-  <section class="section-pad" style="background:var(--white);">
-    <div class="container">
-      <div class="copy-grid">
-        <div class="copy-block">
-          <h2>Gas Safety Certificates for Liverpool Landlords</h2>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">Why is the CP12 so important?</h3>
-          <p>The CP12 is not just a legal box to tick. A gas safety check carried out by a qualified engineer is the only reliable way to confirm that your tenants are not at risk from gas leaks, carbon monoxide poisoning or faulty appliances. According to the <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">HSE</a>, around 40 people die from accidental carbon monoxide poisoning in England and Wales every year, many from faulty gas appliances. The CP12 inspection exists to catch these faults before they become fatal.</p>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">How to choose a gas safety engineer in Liverpool</h3>
-          <p>Always verify the engineer is Gas Safe registered before allowing them to inspect your property. It is illegal for an unregistered person to carry out gas work or issue a CP12 certificate. You can check any engineer's registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. All Ideal Plumbing Solutions engineers carry their Gas Safe ID card and you are welcome to verify their registration on arrival.</p>
-        </div>
-        <div class="copy-block">
-          <h2>Liverpool's Rental Market and Gas Safety Compliance</h2>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">How many rental properties are there in Liverpool?</h3>
-          <p>Liverpool has one of the largest private rental sectors in England, with a high concentration of student lets, HMOs and traditional private rentals particularly around the city centre, Anfield, Wavertree and the university areas. <a href="https://liverpool.gov.uk/housing/landlords/" target="_blank" rel="noopener">Liverpool City Council</a> actively enforces gas safety compliance and inspects landlords following tenant complaints. Having an up-to-date CP12 is the simplest protection against enforcement action.</p>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">What are letting agents required to check?</h3>
-          <p>Liverpool letting agents are required to confirm that a valid gas safety certificate is in place before letting a property. Most reputable letting agents will not place tenants in a property without a current CP12. See <a href="https://www.citizensadvice.org.uk/housing/renting-privately/during-your-tenancy/gas-safety-checks/" target="_blank" rel="noopener">Citizens Advice guidance on gas safety in rented properties</a> for tenant rights information.</p>
-        </div>
+      <h2>Related Services for Liverpool Landlords</h2>
+      <p class="pf-sub">Everything Liverpool landlords and homeowners need. All Gas Safe registered.</p>
+      <div class="pf-related">
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Annual Boiler Service Liverpool</strong><span>£120 fixed price. Combined with CP12 for £175. Benchmark updated. Certificate emailed same day.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. Same-day available.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Liverpool</strong><span>Cold radiators or noisy boiler? Power flush from £350. Protects your boiler and warranty.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/central-heating-installation-liverpool" class="pf-related-link"><div><strong>Central Heating Liverpool</strong><span>Full system installations and radiator upgrades. All Gas Safe registered.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Installation Liverpool</strong><span>New radiators and TRV upgrades from £200 supply and fit.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/get-started" class="pf-related-link"><div><strong>Book a CP12 Online</strong><span>Book your gas safety certificate online. Same-day available across Liverpool and Merseyside.</span></div><span class="pf-related-arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -953,17 +522,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container" style="text-align:center">
-      <div class="page-hero-badge" style="margin:0 auto 1.25rem;">
-        <span class="badge-dot"></span>
-        Gas Safe Registered · Same-Day Available · Liverpool and Merseyside
-      </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Liverpool Gas Safety Certificate Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">From £65. Same-day certificates. Free renewal reminders. Portfolio landlord discounts available.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">£80 fixed price. Same-day available. Certificate emailed same day. Gas Safe registered. No call-out fee. Annual reminder included.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;">CALL 07399 676656</a>
-        <a href="/contact-3" class="btn btn-outline btn-lg btn-full">Book Online</a>
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a CP12 Online</a>
       </div>
-      <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Gas emergency? Call Cadent Gas on 0800 111 999 first, then call us.</p>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:0.5rem;">Need the combined CP12 and boiler service? That is £175 in a single visit.</p>
+      <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
     </div>
   </section>
 
