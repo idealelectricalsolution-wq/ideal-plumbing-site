@@ -152,17 +152,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3>Send Us a Message</h3>
           <p>Fill in the form and we will be in touch to confirm your booking or survey date.</p>
 
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/thank-you"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <div style="display:none;">
-              <label>Do not fill this in: <input name="bot-field" /></label>
-            </div>
+          <div id="form-success" style="display:none;background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:var(--radius);padding:2rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:0.75rem;">✓</div>
+            <strong style="display:block;color:#15803d;font-size:1.1rem;margin-bottom:0.5rem;">Message sent successfully</strong>
+            <p style="color:#166534;font-size:0.9rem;margin:0;">We will be in touch within 2 hours during business hours. For emergencies call <a href="tel:07399676656" style="color:#15803d;font-weight:700;">07399 676656</a> directly.</p>
+          </div>
+
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="c36b8ee5-f01d-4b11-9d40-a2e5e5e16ffd" />
+            <input type="hidden" name="subject" value="New Enquiry - Ideal Plumbing Solutions Website" />
+            <input type="checkbox" name="botcheck" style="display:none;" />
 
             <div class="form-group">
               <label for="name">Your Name *</label>
@@ -208,10 +207,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <textarea id="message" name="message" placeholder="Describe the work you need or any questions you have. Include any urgency, property type or specific requirements."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-orange btn-full" style="font-size:1.05rem;padding:0.9rem;color:#ffffff;">Send Enquiry</button>
+            <button type="submit" id="submit-btn" class="btn btn-orange btn-full" style="font-size:1.05rem;padding:0.9rem;color:#ffffff;">Send Enquiry</button>
 
             <p class="form-note">We respond to all enquiries within 2 hours during business hours. For emergencies call <a href="tel:07399676656">07399 676656</a> directly.</p>
           </form>
+
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', async function(e) {
+              e.preventDefault();
+              const btn = document.getElementById('submit-btn');
+              btn.textContent = 'Sending...';
+              btn.disabled = true;
+              const data = new FormData(this);
+              const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: data
+              });
+              if (response.ok) {
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+              } else {
+                btn.textContent = 'Send Enquiry';
+                btn.disabled = false;
+                alert('Something went wrong. Please call us on 07399 676656 directly.');
+              }
+            });
+          </script>
         </div>
 
         <!-- CONTACT INFO -->
