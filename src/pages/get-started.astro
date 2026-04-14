@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout
   title="Get Started | Book a Plumber in Liverpool | Ideal Plumbing Solutions"
   description="Book a Gas Safe registered plumber in Liverpool. Free surveys for boiler installation, central heating and bathroom fitting. 24/7 emergency response. Call 07399 676656 or fill in our booking form."
-  canonical="https://www.idealplumbingsolutions.co.uk/contact-3"
+  canonical="https://www.idealplumbingsolutions.co.uk/get-started"
 >
 
   <style>
@@ -26,146 +26,84 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       border-radius: var(--radius);
       padding: 2rem;
     }
-    .contact-form-wrap h3 {
-      color: var(--navy);
-      font-size: 1.3rem;
-      margin-bottom: 0.25rem;
-      text-align: center;
-    }
-    .contact-form-wrap p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
+    .contact-form-wrap h3 { color: var(--navy); font-size: 1.3rem; margin-bottom: 0.25rem; text-align: center; }
+    .contact-form-wrap p { color: var(--muted); font-size: 0.9rem; text-align: center; margin-bottom: 1.5rem; }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      margin-bottom: 1rem;
-    }
-    .form-group label {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--navy);
-    }
+    .form-group { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+    .form-group label { font-size: 0.88rem; font-weight: 700; color: var(--navy); }
     .form-group input,
     .form-group select,
     .form-group textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-size: 0.95rem;
-      font-family: inherit;
-      color: var(--text);
-      background: var(--bg);
-      box-sizing: border-box;
-      transition: border-color 0.2s;
+      width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border);
+      border-radius: var(--radius-sm); font-size: 0.95rem; font-family: inherit;
+      color: var(--text); background: var(--bg); box-sizing: border-box; transition: border-color 0.2s;
     }
     .form-group input:focus,
     .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--orange);
-      background: var(--white);
-    }
+    .form-group textarea:focus { outline: none; border-color: var(--orange); background: var(--white); }
     .form-group textarea { resize: vertical; min-height: 120px; }
     .form-group select { cursor: pointer; }
-    .form-note {
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-align: center;
-      margin-top: 0.75rem;
-    }
+    .form-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 0.75rem; }
 
-    .contact-info-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+    .contact-info-wrap { display: flex; flex-direction: column; gap: 1rem; }
 
-    .contact-card {
-      background: var(--navy);
+    .contact-card-phone {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
       border-radius: var(--radius);
       padding: 1.5rem;
       text-align: center;
     }
-    .contact-card-label {
-      font-size: 0.75rem;
-      font-weight: 800;
-      color: rgba(255,255,255,0.6);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
-    }
-    .contact-card-value {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.75rem;
-      font-weight: 900;
-      color: var(--orange);
-      line-height: 1.1;
-      margin-bottom: 0.35rem;
-    }
-    .contact-card p {
-      color: rgba(255,255,255,0.75);
-      font-size: 0.85rem;
-      margin: 0;
-    }
+    .contact-card-phone .label { font-size: 0.72rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+    .contact-card-phone .number { font-family: 'Barlow Condensed', sans-serif; font-size: 2.25rem; font-weight: 900; color: var(--orange); line-height: 1; margin-bottom: 0.4rem; }
+    .contact-card-phone p { color: var(--muted); font-size: 0.85rem; margin: 0 0 1rem; }
 
-    .service-select-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
-    .service-select-btn {
-      background: var(--bg);
+    .contact-card-email {
+      background: var(--white);
       border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 0.75rem 0.5rem;
-      text-align: center;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--navy);
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .service-select-btn:hover { border-color: var(--orange); background: #fff7ed; }
-
-    .urgency-bar {
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      border-left: 4px solid var(--red);
+      border-left: 4px solid var(--navy);
       border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
+      padding: 1.5rem;
       text-align: center;
     }
-    .urgency-bar strong { color: var(--red); display: block; font-size: 1rem; margin-bottom: 0.35rem; }
-    .urgency-bar p { color: var(--red); font-size: 0.9rem; margin: 0; }
+    .contact-card-email .label { font-size: 0.72rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+    .contact-card-email .email-addr { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--navy); line-height: 1.2; margin-bottom: 0.4rem; }
+    .contact-card-email p { color: var(--muted); font-size: 0.85rem; margin: 0 0 1rem; }
 
-    .trust-strip {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      margin-top: 1rem;
+    .contact-card-coverage {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
     }
+    .contact-card-coverage .label { font-size: 0.72rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+    .contact-card-coverage .areas { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--navy); line-height: 1.3; margin-bottom: 0.4rem; }
+    .contact-card-coverage p { color: var(--muted); font-size: 0.83rem; margin: 0; }
+
+    .trust-strip { display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 1rem; }
     .trust-strip-item {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-      padding: 1rem;
+      padding: 0.85rem 1rem;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      justify-content: center;
+      gap: 0.6rem;
+      text-align: center;
     }
-    .trust-strip-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
+    .trust-tick { font-size: 1rem; font-weight: 900; color: #16a34a; flex-shrink: 0; }
+    .trust-strip-item strong { display: block; color: var(--navy); font-size: 0.88rem; }
+    .trust-strip-item span { color: var(--muted); font-size: 0.78rem; }
+
+    .urgency-bar {
+      background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626;
+      border-radius: var(--radius); padding: 1.25rem 1.5rem; text-align: center;
     }
-    .trust-strip-item strong { display: block; color: var(--navy); font-size: 0.9rem; }
-    .trust-strip-item span { color: var(--muted); font-size: 0.82rem; }
+    .urgency-bar strong { color: #dc2626; display: block; font-size: 1rem; margin-bottom: 0.35rem; }
+    .urgency-bar p { color: #dc2626; font-size: 0.9rem; margin: 0; }
 
     .contact-page a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
     .contact-page .btn { border-bottom: none; }
@@ -175,34 +113,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div class="contact-page">
 
   <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge">
+  <section class="page-hero" style="padding-bottom:1.5rem;">
+    <div class="container" style="text-align:center;">
+      <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="badge-dot"></span>
-        Gas Safe Registered · 24/7 Available · Liverpool and Merseyside
+        Gas Safe Registered · 24/7 Available
       </div>
       <h1>Get Started with Ideal Plumbing Solutions</h1>
-      <p class="page-hero-sub" style="font-size:1rem;">Call us now for emergencies. Fill in the form below for free surveys, quotes and non-urgent bookings. We respond to all enquiries within 2 hours during business hours.</p>
+      <p class="page-hero-sub">Call us now for emergencies. Fill in the form below for free surveys, quotes and non-urgent bookings. We respond to all enquiries within 2 hours during business hours.</p>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:340px;margin:0 auto 1.5rem;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;">CALL 07399 676656</a>
-        <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin:0;">24/7 for emergencies. 7am to 7pm for enquiries.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:1.25rem auto 0;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 07399 676656</a>
+        <p style="color:var(--navy);font-size:0.82rem;margin:0;font-weight:600;">24/7 for emergencies · 7am to 7pm for enquiries</p>
       </div>
     </div>
   </section>
 
   <!-- EMERGENCY BANNER -->
-  <section style="background:var(--bg);padding:1.5rem 0;">
+  <section style="background:var(--bg);padding:1.25rem 0;">
     <div class="container">
       <div class="urgency-bar">
         <strong>Plumbing emergency? Do not use the form. Call us now.</strong>
-        <p>Burst pipe, gas leak, boiler breakdown or flooding: call <a href="tel:07399676656" style="color:var(--red);border-bottom:1px solid rgba(220,38,38,0.3);">07399 676656</a> immediately. We respond 24/7 across Liverpool, Wirral, Warrington and St Helens. Gas emergency? Call Cadent Gas on 0800 111 999 first.</p>
+        <p>Burst pipe, gas leak, boiler breakdown or flooding: call <a href="tel:07399676656" style="color:#dc2626;border-bottom:1px solid rgba(220,38,38,0.3);">07399 676656</a> immediately. We respond 24/7 across Liverpool, Wirral, Warrington and St Helens. Gas emergency? Call Cadent Gas on 0800 111 999 first.</p>
       </div>
     </div>
   </section>
 
   <!-- MAIN CONTACT SECTION -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:var(--white);">
     <div class="container">
       <h2>Book an Appointment or Free Survey</h2>
       <p class="section-sub">For free surveys, quotes and non-urgent bookings. We respond within 2 hours during business hours.</p>
@@ -250,8 +188,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <option value="Boiler Service">Boiler Service</option>
                 <option value="Gas Safety Certificate">Gas Safety Certificate (CP12)</option>
                 <option value="Central Heating Installation">Central Heating Installation - Free Survey</option>
-                <option value="Bathroom Fitting">Bathroom Fitting - Free Survey</option>
                 <option value="Power Flushing">Power Flushing</option>
+                <option value="Radiators">Radiator Installation or Upgrade</option>
+                <option value="Bathroom Fitting">Bathroom Fitting - Free Survey</option>
+                <option value="Hot Water Cylinder">Hot Water Cylinder - Free Survey</option>
+                <option value="Shower Installation">Shower Installation</option>
                 <option value="General Plumbing">General Plumbing</option>
                 <option value="Other">Other - Please describe below</option>
               </select>
@@ -267,7 +208,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <textarea id="message" name="message" placeholder="Describe the work you need or any questions you have. Include any urgency, property type or specific requirements."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-orange btn-full" style="font-size:1.05rem;padding:0.9rem;">Send Enquiry</button>
+            <button type="submit" class="btn btn-orange btn-full" style="font-size:1.05rem;padding:0.9rem;color:#ffffff;">Send Enquiry</button>
 
             <p class="form-note">We respond to all enquiries within 2 hours during business hours. For emergencies call <a href="tel:07399676656">07399 676656</a> directly.</p>
           </form>
@@ -276,50 +217,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- CONTACT INFO -->
         <div class="contact-info-wrap">
 
-          <div class="contact-card">
-            <div class="contact-card-label">Phone</div>
-            <div class="contact-card-value">07399 676656</div>
+          <div class="contact-card-phone">
+            <div class="label">Phone</div>
+            <div class="number">07399 676656</div>
             <p>24/7 for emergencies. 7am to 7pm for general enquiries. A real person always answers.</p>
-            <a href="tel:07399676656" class="btn btn-orange btn-full" style="margin-top:1rem;border-bottom:none;">Call Now</a>
+            <a href="tel:07399676656" class="btn btn-orange btn-full" style="color:#ffffff;">Call Now</a>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-card-label">Email</div>
-            <div class="contact-card-value" style="font-size:1.1rem;">idealplumbingsolutions<br>@gmail.com</div>
+          <div class="contact-card-email">
+            <div class="label">Email</div>
+            <div class="email-addr">idealplumbingsolutions<br>@gmail.com</div>
             <p>For non-urgent enquiries, quotes and documentation requests. We respond within 2 hours during business hours.</p>
-            <a href="mailto:idealplumbingsolutions@gmail.com" class="btn btn-full" style="margin-top:1rem;background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.25);border-bottom:none;">Send Email</a>
+            <a href="mailto:idealplumbingsolutions@gmail.com" class="btn btn-full" style="background:var(--navy);color:#ffffff;">Send Email</a>
           </div>
 
-          <div class="contact-card" style="background:var(--bg);border:1px solid var(--border);">
-            <div class="contact-card-label" style="color:var(--muted);">Coverage</div>
-            <div class="contact-card-value" style="color:var(--navy);font-size:1.25rem;line-height:1.2;">Liverpool · Wirral<br>Warrington · St Helens</div>
-            <p style="color:var(--muted);">All Liverpool postcodes L1 to L40. Plus the wider Merseyside area including Wirral, Warrington and St Helens.</p>
+          <div class="contact-card-coverage">
+            <div class="label">Coverage</div>
+            <div class="areas">Liverpool · Wirral<br>Warrington · St Helens</div>
+            <p>All Liverpool postcodes L1 to L40. Plus the wider Merseyside area including Wirral, Warrington and St Helens.</p>
           </div>
 
           <div class="trust-strip">
             <div class="trust-strip-item">
-              <span class="trust-strip-icon">✓</span>
+              <span class="trust-tick">✓</span>
               <div>
                 <strong>Gas Safe Registered</strong>
                 <span>Verify at gassaferegister.co.uk</span>
               </div>
             </div>
             <div class="trust-strip-item">
-              <span class="trust-strip-icon">✓</span>
+              <span class="trust-tick">✓</span>
               <div>
                 <strong>Our Own Engineers</strong>
                 <span>No sub-contractors. Ever.</span>
               </div>
             </div>
             <div class="trust-strip-item">
-              <span class="trust-strip-icon">✓</span>
+              <span class="trust-tick">✓</span>
               <div>
                 <strong>12-Month Guarantee</strong>
                 <span>All workmanship guaranteed</span>
               </div>
             </div>
             <div class="trust-strip-item">
-              <span class="trust-strip-icon">✓</span>
+              <span class="trust-tick">✓</span>
               <div>
                 <strong>250 Five-Star Reviews</strong>
                 <span>Google · 5.0 rating</span>
@@ -333,91 +274,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- WHAT TO EXPECT -->
-  <section class="section-pad" style="background:var(--bg);">
+  <section class="pf-section" style="background:var(--bg);">
     <div class="container">
       <h2>What Happens After You Contact Us</h2>
       <p class="section-sub">We make the process as straightforward as possible. Here is exactly what to expect.</p>
 
       <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
         <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;">
-          <div style="background:var(--orange);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
-          <div>
-            <strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">We respond within 2 hours</strong>
-            <p style="color:var(--muted);font-size:0.88rem;margin:0;">A real person calls or emails you back to understand your requirements and confirm availability. No automated responses.</p>
-          </div>
+          <div style="background:var(--orange);color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+          <div><strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">We respond within 2 hours</strong><p style="color:var(--muted);font-size:0.88rem;margin:0;">A real person calls or emails you back to understand your requirements and confirm availability. No automated responses.</p></div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;">
-          <div style="background:var(--orange);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
-          <div>
-            <strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">Free survey booked (where applicable)</strong>
-            <p style="color:var(--muted);font-size:0.88rem;margin:0;">For boiler installations, central heating and bathroom fitting we arrange a free site survey at a time that suits you. Simple jobs and servicing are booked directly.</p>
-          </div>
+          <div style="background:var(--orange);color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+          <div><strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">Free survey booked where applicable</strong><p style="color:var(--muted);font-size:0.88rem;margin:0;">For boiler installations, central heating, hot water cylinders and bathroom fitting we arrange a free site survey at a time that suits you. Simple jobs and servicing are booked directly.</p></div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;">
-          <div style="background:var(--orange);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
-          <div>
-            <strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">Written fixed-price quote provided</strong>
-            <p style="color:var(--muted);font-size:0.88rem;margin:0;">We provide a written fixed-price quote before any work begins. The price quoted is the price you pay. No surprises and no additions on the invoice.</p>
-          </div>
+          <div style="background:var(--orange);color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+          <div><strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">Written fixed-price quote provided</strong><p style="color:var(--muted);font-size:0.88rem;margin:0;">We provide a written fixed-price quote before any work begins. The price quoted is the price you pay. No surprises and no additions on the invoice.</p></div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;">
-          <div style="background:var(--orange);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
-          <div>
-            <strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">Work carried out to the highest standard</strong>
-            <p style="color:var(--muted);font-size:0.88rem;margin:0;">Our own Gas Safe registered engineers carry out all the work. No sub-contractors. Every job is covered by our 12-month workmanship guarantee.</p>
-          </div>
+          <div style="background:var(--orange);color:#ffffff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.25rem;min-width:2.25rem;height:2.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
+          <div><strong style="display:block;color:var(--navy);margin-bottom:0.2rem;">Work carried out to the highest standard</strong><p style="color:var(--muted);font-size:0.88rem;margin:0;">Our own Gas Safe registered engineers carry out all the work. No sub-contractors. Every job is covered by our 12-month workmanship guarantee.</p></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SERVICES QUICK LINKS -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:var(--white);">
     <div class="container">
       <h2>Our Services</h2>
       <p class="section-sub">Everything Liverpool homeowners and landlords need. All Gas Safe registered.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
-        <a href="/gas-safety-certificate-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <div>
-            <strong style="display:block;color:var(--navy);font-size:1rem;">Gas Safety Certificates</strong>
-            <span style="color:var(--muted);font-size:0.85rem;">CP12 landlord certificates from £65. Same-day available.</span>
-          </div>
-          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;">→</span>
+      <div style="display:grid;grid-template-columns:1fr;gap:0.75rem;margin-top:1.5rem;">
+        <a href="/gas-safety-certificate-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Gas Safety Certificates</strong><span style="color:var(--muted);font-size:0.83rem;">CP12 from £80. Same-day available. Combined with boiler service for £175.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
         </a>
-        <a href="/boiler-installation-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <div>
-            <strong style="display:block;color:var(--navy);font-size:1rem;">Boiler Installation</strong>
-            <span style="color:var(--muted);font-size:0.85rem;">Worcester Bosch, Vaillant, Ideal, Baxi. From £1,800. Free survey.</span>
-          </div>
-          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;">→</span>
+        <a href="/boiler-installation-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Boiler Installation</strong><span style="color:var(--muted);font-size:0.83rem;">Worcester Bosch, Vaillant, Ideal, Baxi. From £1,800 fully fitted. Free survey.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
         </a>
-        <a href="/boiler-service-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <div>
-            <strong style="display:block;color:var(--navy);font-size:1rem;">Boiler Service</strong>
-            <span style="color:var(--muted);font-size:0.85rem;">Annual boiler service £75. Certificate same day. All brands.</span>
-          </div>
-          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;">→</span>
+        <a href="/boiler-service-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Boiler Service</strong><span style="color:var(--muted);font-size:0.83rem;">Annual boiler service £120. Benchmark updated. Certificate emailed same day.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
         </a>
-        <a href="/central-heating-installation-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <div>
-            <strong style="display:block;color:var(--navy);font-size:1rem;">Central Heating</strong>
-            <span style="color:var(--muted);font-size:0.85rem;">Full systems from £3,500. Radiators from £200. Power flushing from £350.</span>
-          </div>
-          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;">→</span>
+        <a href="/central-heating-installation-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Central Heating</strong><span style="color:var(--muted);font-size:0.83rem;">Full systems from £3,500. Radiators from £200. Power flushing from £350.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
         </a>
-        <a href="/bathroom-fitters-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <div>
-            <strong style="display:block;color:var(--navy);font-size:1rem;">Bathroom Fitting</strong>
-            <span style="color:var(--muted);font-size:0.85rem;">Full renovations from £2,500. En suites, wet rooms, showers. Free survey.</span>
-          </div>
-          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;">→</span>
+        <a href="/power-flushing-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Power Flushing</strong><span style="color:var(--muted);font-size:0.83rem;">Cold radiators or noisy boiler? Power flush from £350.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
         </a>
-        <a href="/" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:var(--radius);padding:1.25rem 1.5rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <div>
-            <strong style="display:block;color:var(--navy);font-size:1rem;">Emergency Plumber</strong>
-            <span style="color:var(--muted);font-size:0.85rem;">24/7 response. 30 minute arrival. Gas Safe. From £80/hour.</span>
-          </div>
-          <span style="color:var(--red);font-weight:900;font-size:1.2rem;">→</span>
+        <a href="/bathroom-fitters-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Bathroom Fitting</strong><span style="color:var(--muted);font-size:0.83rem;">Full renovations from £2,500 labour. Plumbing and tiling included. Free survey.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
+        </a>
+        <a href="/hot-water-cylinders-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Hot Water Cylinders</strong><span style="color:var(--muted);font-size:0.83rem;">Vented from £600. Unvented mains pressure from £900. G3 qualified engineers.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
+        </a>
+        <a href="/showers-liverpool" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Shower Installation</strong><span style="color:var(--muted);font-size:0.83rem;">Electric, mixer and digital showers from £200. Walk-in shower areas from £800.</span></div>
+          <span style="color:var(--orange);font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
+        </a>
+        <a href="/" style="background:var(--bg);border:1px solid var(--border);border-left:3px solid #dc2626;border-radius:var(--radius);padding:1rem 1.25rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+          <div><strong style="display:block;color:var(--navy);font-size:0.95rem;">Emergency Plumber</strong><span style="color:var(--muted);font-size:0.83rem;">24/7 response. 30 minute arrival. Gas Safe. From £80 minimum charge.</span></div>
+          <span style="color:#dc2626;font-weight:900;font-size:1.2rem;flex-shrink:0;margin-left:0.75rem;">→</span>
         </a>
       </div>
     </div>
@@ -428,7 +351,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center">
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need Help Right Now?</h2>
       <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">For emergencies, call us directly. For planned work, fill in the form above and we will be back in touch within 2 hours.</p>
-      <a href="tel:07399676656" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;">CALL 07399 676656</a>
+      <a href="tel:07399676656" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 07399 676656</a>
       <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:1rem;">Gas emergency? Call Cadent Gas on 0800 111 999 first, then call us.</p>
     </div>
   </section>
