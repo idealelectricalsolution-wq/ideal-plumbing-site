@@ -281,7 +281,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .pf h3 { color: var(--pf-navy); font-size: 1.05rem; margin: 0 0 0.4rem; }
     .pf p { color: var(--pf-text); font-size: 0.95rem; line-height: 1.75; margin: 0 0 0.75rem; }
     .pf p:last-child { margin-bottom: 0; }
-    .pf-sub { text-align: center; color: var(--pf-muted); font-size: 0.9rem; margin: 0 auto 0.25rem; max-width: 640px; }
+    .pf-sub { text-align: center; color: var(--pf-muted); font-size: 0.95rem; margin: 0 auto 0.25rem; max-width: 640px; }
     .pf a { color: var(--pf-navy); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.2); }
     .pf a:hover { border-color: var(--pf-navy); }
     .pf .btn { border-bottom: none; }
@@ -318,7 +318,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 1.5rem;
       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
-    .pf-card + .pf-card { margin-top: 1rem; }
+    .pf-card + .pf-card { margin-top: 2rem; }
     .pf-card-orange { border-top: 4px solid var(--pf-orange); }
     .pf-card-navy { border-top: 4px solid var(--pf-navy); }
     .pf-card-left-orange { border-left: 4px solid var(--pf-orange); }
@@ -347,7 +347,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .pf-badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; padding: 0.35rem 0.9rem; font-size: 0.8rem; font-weight: 700; color: var(--pf-white); }
 
     /* ===== WHO SECTION ===== */
-    .pf-who-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-top: 1rem; }
+    .pf-who-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-who-item {
       background: var(--pf-white);
       border: 1px solid var(--pf-border);
@@ -362,11 +362,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .pf-who-icon { font-size: 1rem; font-weight: 900; flex-shrink: 0; margin-top: 0.15rem; }
     .pf-who-yes .pf-who-icon { color: var(--pf-green); }
     .pf-who-no .pf-who-icon { color: var(--pf-amber); }
-    .pf-who-item strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.2rem; }
-    .pf-who-item p { font-size: 0.84rem; color: var(--pf-muted); margin: 0; }
+    .pf-who-item strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .pf-who-item p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; }
 
     /* ===== SIGNS ===== */
-    .pf-signs { display: grid; grid-template-columns: 1fr; gap: 0.6rem; margin-top: 1rem; }
+    .pf-signs { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-sign {
       background: var(--pf-white);
       border: 1px solid var(--pf-border);
@@ -380,8 +380,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       gap: 0.4rem;
     }
     .pf-sign-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pf-orange); flex-shrink: 0; margin-top: 0.45rem; }
-    .pf-sign strong { display: block; color: var(--pf-navy); font-size: 0.9rem; margin-bottom: 0.15rem; text-align: center; }
-    .pf-sign p { font-size: 0.82rem; color: var(--pf-muted); margin: 0; text-align: center; }
+    .pf-sign strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.15rem; text-align: center; }
+    .pf-sign p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; text-align: center; }
 
     /* ===== PROS CONS ===== */
     .pf-pros {
@@ -393,11 +393,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .pf-pros h3 { color: var(--pf-green); margin-bottom: 0.75rem; }
     .pf-check-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
-    .pf-check-list li { font-size: 0.88rem; color: #14532d; padding-left: 1.3rem; position: relative; line-height: 1.5; }
+    .pf-check-list li { font-size: 0.93rem; color: #14532d; padding-left: 1.3rem; position: relative; line-height: 1.5; }
     .pf-check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--pf-green); font-weight: 700; }
 
     /* ===== LIMITATIONS ===== */
-    .pf-limitations { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+    .pf-limitations { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
     .pf-limit {
       background: #fef3c7;
       border: 1px solid #f59e0b;
@@ -409,12 +409,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       align-items: flex-start;
     }
     .pf-limit-x { color: #b45309; font-weight: 900; font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .pf-limit strong { display: block; color: var(--pf-navy); font-size: 0.9rem; margin-bottom: 0.2rem; }
-    .pf-limit p { font-size: 0.83rem; color: #78350f; margin: 0; line-height: 1.5; }
+    .pf-limit strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .pf-limit p { font-size: 0.93rem; color: #78350f; margin: 0; line-height: 1.5; }
     .pf-limit p a { color: #78350f; border-color: rgba(120,53,15,0.25); }
 
     /* ===== RISKS ===== */
-    .pf-risks { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+    .pf-risks { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
     .pf-risk {
       background: var(--pf-red-light);
       border: 1px solid var(--pf-red-border);
@@ -426,8 +426,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       align-items: flex-start;
     }
     .pf-risk-icon { color: var(--pf-red); font-weight: 900; font-size: 0.95rem; flex-shrink: 0; margin-top: 0.15rem; }
-    .pf-risk strong { display: block; color: #7f1d1d; font-size: 0.9rem; margin-bottom: 0.2rem; }
-    .pf-risk p { font-size: 0.83rem; color: #7f1d1d; margin: 0; line-height: 1.5; }
+    .pf-risk strong { display: block; color: #7f1d1d; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .pf-risk p { font-size: 0.93rem; color: #7f1d1d; margin: 0; line-height: 1.5; }
 
     /* ===== HONEST BOX ===== */
     .pf-honest {
@@ -440,10 +440,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       box-shadow: 0 4px 16px rgba(26,58,92,0.1);
     }
     .pf-honest h3 { color: var(--pf-navy); font-size: 1.15rem; margin-bottom: 0.5rem; }
-    .pf-honest p { color: var(--pf-muted); font-size: 0.9rem; }
+    .pf-honest p { color: var(--pf-muted); font-size: 0.95rem; }
 
     /* ===== ALTERNATIVES ===== */
-    .pf-alts { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+    .pf-alts { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-alt {
       background: var(--pf-white);
       border: 1px solid #d1d9e6;
@@ -454,11 +454,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-align: center;
     }
     .pf-alt h3 { font-size: 1rem; color: var(--pf-navy); margin-bottom: 0.4rem; text-align: center; }
-    .pf-alt p { font-size: 0.86rem; color: var(--pf-muted); margin-bottom: 0.6rem; text-align: center; }
+    .pf-alt p { font-size: 0.93rem; color: var(--pf-muted); margin-bottom: 0.6rem; text-align: center; }
     .pf-alt-tag { display: inline-block; background: var(--pf-off); border: 1px solid var(--pf-border); border-radius: 999px; padding: 0.2rem 0.7rem; font-size: 0.76rem; font-weight: 700; color: var(--pf-navy); }
 
     /* ===== PRICING ===== */
-    .pf-pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.25rem; }
+    .pf-pricing-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1.25rem; }
     .pf-price-card {
       background: var(--pf-white);
       border: 1px solid #d1d9e6;
@@ -488,15 +488,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .pf-price-tier { font-size: 0.7rem; font-weight: 800; color: var(--pf-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
     .pf-price-name { font-size: 1.1rem; font-weight: 800; color: var(--pf-navy); margin-bottom: 0.15rem; }
-    .pf-price-sub { font-size: 0.82rem; color: var(--pf-muted); margin-bottom: 0.75rem; }
+    .pf-price-sub { font-size: 0.9rem; color: var(--pf-muted); margin-bottom: 0.75rem; }
     .pf-price-amount { font-family: 'Barlow Condensed', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--pf-orange); line-height: 1; margin-bottom: 0.1rem; }
     .pf-price-amount small { font-size: 1rem; color: var(--pf-muted); }
     .pf-price-list { list-style: none; text-align: left; display: flex; flex-direction: column; gap: 0.4rem; margin: 1rem 0; }
-    .pf-price-list li { font-size: 0.88rem; color: var(--pf-text); padding-left: 1.3rem; position: relative; }
+    .pf-price-list li { font-size: 0.93rem; color: var(--pf-text); padding-left: 1.3rem; position: relative; }
     .pf-price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--pf-green); font-weight: 700; }
 
     /* ===== DURATION CARDS ===== */
-    .pf-durations { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+    .pf-durations { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-duration-card {
       background: var(--pf-white);
       border: 1px solid #d1d9e6;
@@ -510,10 +510,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .pf-duration-time { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; color: var(--pf-orange); line-height: 1; min-width: 90px; text-align: center; flex-shrink: 0; }
     .pf-duration-card strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .pf-duration-card p { font-size: 0.84rem; color: var(--pf-muted); margin: 0; }
+    .pf-duration-card p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; }
 
     /* ===== MAINTENANCE SCHEDULE ===== */
-    .pf-schedule { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+    .pf-schedule { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1rem; }
     .pf-schedule-item {
       background: #fff7ed;
       border: 1px solid #fed7aa;
@@ -524,10 +524,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       gap: 0.75rem;
     }
     .pf-schedule-num { background: var(--pf-orange); color: var(--pf-white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.95rem; min-width: 1.7rem; height: 1.7rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .pf-schedule-item p { font-size: 0.88rem; color: var(--pf-text); margin: 0; }
+    .pf-schedule-item p { font-size: 0.93rem; color: var(--pf-text); margin: 0; }
 
     /* ===== STEPS ===== */
-    .pf-steps { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+    .pf-steps { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
     .pf-step {
       background: #eef2f8;
       border: 1px solid #ccd6e8;
@@ -539,10 +539,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .pf-step-num { background: var(--pf-navy); color: var(--pf-white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.05rem; min-width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .pf-step strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.2rem; }
-    .pf-step p { font-size: 0.84rem; color: var(--pf-muted); margin: 0; line-height: 1.6; }
+    .pf-step p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; line-height: 1.6; }
 
     /* ===== PREPARE ===== */
-    .pf-prepare { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+    .pf-prepare { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
     .pf-prep-item {
       background: var(--pf-white);
       border: 1px solid var(--pf-border);
@@ -553,11 +553,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       align-items: flex-start;
     }
     .pf-prep-tick { color: var(--pf-orange); font-weight: 900; font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .pf-prep-item strong { display: block; color: var(--pf-navy); font-size: 0.9rem; margin-bottom: 0.15rem; }
-    .pf-prep-item p { font-size: 0.83rem; color: var(--pf-muted); margin: 0; }
+    .pf-prep-item strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.15rem; }
+    .pf-prep-item p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; }
 
     /* ===== WHY CHOOSE ===== */
-    .pf-why-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.25rem; }
+    .pf-why-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1.25rem; }
     .pf-why-item {
       background: var(--pf-white);
       border: 1px solid #d1d9e6;
@@ -567,11 +567,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-align: center;
       box-shadow: 0 4px 14px rgba(0,0,0,0.09);
     }
-    .pf-why-item h3 { font-size: 0.95rem; margin-bottom: 0.4rem; }
-    .pf-why-item p { font-size: 0.85rem; color: var(--pf-muted); }
+    .pf-why-item h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+    .pf-why-item p { font-size: 0.93rem; color: var(--pf-muted); }
 
     /* ===== REVIEWS ===== */
-    .pf-reviews { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.25rem; }
+    .pf-reviews { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1.25rem; }
     .pf-review {
       background: var(--pf-white);
       border: 1px solid #d1d9e6;
@@ -580,15 +580,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       box-shadow: 0 4px 14px rgba(0,0,0,0.09);
     }
     .pf-review-quote { font-size: 2.5rem; color: var(--pf-orange); line-height: 1; margin-bottom: 0.5rem; font-family: Georgia, serif; }
-    .pf-review p { font-size: 0.88rem; color: var(--pf-text); line-height: 1.7; margin-bottom: 1rem; }
+    .pf-review p { font-size: 0.93rem; color: var(--pf-text); line-height: 1.7; margin-bottom: 1rem; }
     .pf-review-footer { display: flex; align-items: center; gap: 0.75rem; }
     .pf-review-avatar { background: var(--pf-navy); color: var(--pf-white); width: 2.25rem; height: 2.25rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0; }
-    .pf-review-name { font-size: 0.88rem; font-weight: 700; color: var(--pf-navy); }
-    .pf-review-loc { font-size: 0.78rem; color: var(--pf-muted); }
+    .pf-review-name { font-size: 0.93rem; font-weight: 700; color: var(--pf-navy); }
+    .pf-review-loc { font-size: 0.85rem; color: var(--pf-muted); }
     .pf-review-stars { color: var(--pf-orange); font-size: 0.85rem; margin-left: auto; }
 
     /* ===== FAQ ===== */
-    .pf-faq { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+    .pf-faq { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
     .pf-faq-item {
       background: var(--pf-white);
       border: 2px solid #d1d9e6;
@@ -611,14 +611,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .pf-faq-item summary::after { content: "+"; margin-left: auto; color: var(--pf-orange); font-size: 1.2rem; font-weight: 900; flex-shrink: 0; }
     .pf-faq-item[open] summary::after { content: "−"; }
     .pf-faq-body { padding: 0 1.25rem 1rem; }
-    .pf-faq-body p { font-size: 0.87rem; color: var(--pf-muted); line-height: 1.7; }
+    .pf-faq-body p { font-size: 0.93rem; color: var(--pf-muted); line-height: 1.7; }
     .pf-faq-tag { font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0; }
     .pf-tag-orange { background: var(--pf-orange); color: var(--pf-white); }
     .pf-tag-navy { background: var(--pf-navy); color: var(--pf-white); }
     .pf-tag-green { background: var(--pf-green); color: var(--pf-white); }
 
     /* ===== COVERAGE ===== */
-    .pf-coverage { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+    .pf-coverage { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-coverage-area {
       background: var(--pf-white);
       border: 1px solid #d1d9e6;
@@ -627,12 +627,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 1.1rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-    .pf-coverage-area h3 { font-size: 0.88rem; font-weight: 800; color: var(--pf-navy); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .pf-coverage-area h3 { font-size: 0.93rem; font-weight: 800; color: var(--pf-navy); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; }
     .pf-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .pf-pill { background: var(--pf-off); border: 1px solid var(--pf-border); border-radius: 999px; padding: 0.2rem 0.65rem; font-size: 0.78rem; font-weight: 600; color: var(--pf-navy); }
 
     /* ===== RELATED SERVICES ===== */
-    .pf-related { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-top: 1rem; }
+    .pf-related { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-related-link {
       background: var(--pf-white);
       border: 1px solid var(--pf-border);
@@ -648,7 +648,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .pf-related-link:hover { transform: translateX(4px); box-shadow: var(--pf-shadow-md); }
     .pf-related-link strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.1rem; }
-    .pf-related-link span { color: var(--pf-muted); font-size: 0.82rem; }
+    .pf-related-link span { color: var(--pf-muted); font-size: 0.9rem; }
     .pf-related-arrow { color: var(--pf-orange); font-weight: 900; font-size: 1.1rem; flex-shrink: 0; }
 
     /* ===== ALERT BOX ===== */
@@ -661,7 +661,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-align: center;
     }
     .pf-alert strong { color: var(--pf-navy); display: block; margin-bottom: 0.35rem; font-size: 0.95rem; }
-    .pf-alert p { font-size: 0.88rem; color: #78350f; }
+    .pf-alert p { font-size: 0.93rem; color: #78350f; }
 
     /* ===== INFO BAR ===== */
     .pf-info-bar {
@@ -672,7 +672,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 1.1rem 1.5rem;
       text-align: center;
     }
-    .pf-info-bar p { font-size: 0.87rem; color: var(--pf-muted); }
+    .pf-info-bar p { font-size: 0.93rem; color: var(--pf-muted); }
 
     /* ===== SECTION LABELS ===== */
     .pf-section-label { display: inline-block; background: var(--pf-orange-light); border: 1px solid var(--pf-orange-border); border-radius: 999px; padding: 0.25rem 0.85rem; font-size: 0.72rem; font-weight: 800; color: var(--pf-orange); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
@@ -738,7 +738,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2>Power Flushing Prices Liverpool</h2>
       <p class="pf-sub">Fixed prices. All chemicals, inhibitor and written report included. No hidden extras.</p>
 
-      <div style="background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #dc2626;border-radius:10px;padding:0.9rem 1.25rem;margin-bottom:1.25rem;text-align:center;">
+      <div style="background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #dc2626;border-radius:10px;padding:0.9rem 1.25rem;margin-bottom:2rem;text-align:center;">
         <p style="color:#7f1d1d;font-size:0.88rem;margin:0;font-weight:600;">Liverpool demand is highest October to March. Our schedule typically fills 2 to 3 weeks ahead during winter. Call today to check this week's availability.</p>
       </div>
       <div class="pf-pricing-grid">
@@ -787,11 +787,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a href="tel:07399676656" class="btn btn-navy btn-full">Book Now</a>
         </div>
       </div>
-      <div class="pf-alert" style="margin-top:1.25rem;">
+      <div class="pf-alert" style="margin-top:2rem;">
         <strong>How does this compare to the market?</strong>
         <p>According to the <a href="https://www.checkatrade.com/blog/cost-guides/power-flush-cost/" target="_blank" rel="noopener">Checkatrade power flush cost guide</a>, national average prices start at around £450 for a 2-bed property. Our Liverpool pricing starts at £350 using only our own Gas Safe engineers, never sub-contractors. <a href="https://www.citizensadvice.org.uk/consumer/buying-and-owning/buying-and-owning-your-home/getting-work-done-on-your-home/" target="_blank" rel="noopener">Citizens Advice</a> recommends always getting a written quote and checking trader credentials before booking any home heating work.</p>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;margin-top:1.25rem;padding:1.25rem 1rem;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;text-align:center;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;margin-top:2rem;padding:1.25rem 1rem;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;text-align:center;">
         <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1.75rem;font-weight:900;color:#15803d;line-height:1;">5.0 <span style="color:#f59e0b;">★★★★★</span></div><div style="font-size:0.78rem;color:#166534;font-weight:700;">250 Google Reviews</div></div>
         <div><div style="font-size:0.85rem;font-weight:700;color:#15803d;">Gas Safe Registered</div><div style="font-size:0.78rem;color:#166534;">Verify at gassaferegister.co.uk</div></div>
         <div><div style="font-size:0.85rem;font-weight:700;color:#15803d;">Fixed Price Guarantee</div><div style="font-size:0.78rem;color:#166534;">No hidden extras ever</div></div>
@@ -804,7 +804,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>The Benefits of Power Flushing</h2>
       <p class="pf-sub">When a power flush is the right solution, the benefits are significant and measurable.</p>
-      <div style="margin-top:1.5rem;">
+      <div style="margin-top:2rem;">
         <div class="pf-pros">
           <h3 style="text-align:center;">What a Successful Power Flush Achieves</h3>
           <ul class="pf-check-list">
@@ -820,7 +820,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Carbon emissions reduced through improved system efficiency</li>
           </ul>
         </div>
-        <div class="pf-info-bar" style="margin-top:1rem;">
+        <div class="pf-info-bar" style="margin-top:2rem;">
           <div style="display:flex;flex-direction:column;gap:0.5rem;">
             <div style="font-size:0.85rem;color:var(--pf-text);">✓ The <a href="https://energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust</a> identifies central heating maintenance as one of the most cost-effective ways to reduce home energy use.</div>
             <div style="font-size:0.85rem;color:var(--pf-text);">✓ The <a href="https://www.ciphe.org.uk" target="_blank" rel="noopener">Chartered Institute of Plumbing and Heating Engineering</a> recommends power flushing as part of a regular maintenance programme.</div>
@@ -837,7 +837,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>What Is Power Flushing?</h2>
       <p class="pf-sub">A plain English explanation of the process, the equipment and what it actually does inside your heating system.</p>
-      <div style="margin-top:1.5rem;">
+      <div style="margin-top:2rem;">
         <div class="pf-card pf-card-orange">
           <h3>The Simple Version</h3>
           <p>Power flushing is a professional deep-cleaning process for central heating systems. A specialist machine connects to your heating circuit and pumps water mixed with chemical cleaning agents through every radiator, pipe and the boiler heat exchanger at high velocity. The turbulent flow dislodges built-up sludge, rust, magnetite and debris that has settled inside the system over years of use. The contaminated water is filtered and flushed to drain. The system is then refilled with clean water treated with a corrosion inhibitor to prevent future build-up.</p>
@@ -845,12 +845,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p style="font-size:0.86rem;color:var(--pf-navy);font-weight:600;margin:0;">Important. Power flushing uses HIGH velocity but LOW pressure, typically around 2 bar. This is similar to your boiler's own operating pressure. It does not blast or damage pipes when carried out correctly.</p>
           </div>
         </div>
-        <div class="pf-card pf-card-navy" style="margin-top:1rem;">
+        <div class="pf-card pf-card-navy" style="margin-top:2rem;">
           <h3>What Is Magnetite and Why Is It the Problem?</h3>
           <p>Magnetite is a black iron oxide sludge that forms when steel radiators and pipework corrode in the presence of water. Over time it settles in the lowest points of the system, including the bottom of radiators, the heat exchanger in your boiler and in pipework bends. Even a thin layer inside a boiler heat exchanger significantly reduces heat transfer efficiency.</p>
           <p>Magnetite is magnetic. You can test for it by holding a magnet against a copper pipe near your boiler. If the magnet sticks, there is significant magnetite contamination inside. According to the <a href="https://www.powerflushassociation.com/faq.html" target="_blank" rel="noopener">Power Flush Association</a>, magnetite is responsible for the majority of central heating inefficiency and premature boiler failures in UK homes.</p>
         </div>
-        <div class="pf-card" style="margin-top:1rem;">
+        <div class="pf-card" style="margin-top:2rem;">
           <h3>Power Flushing vs a Standard Drain-Down</h3>
           <p>A common misconception is that draining the heating system achieves the same result. It does not. A drain-down removes water but leaves the vast majority of sludge and magnetite clinging to the inside surfaces of radiators and pipework. Only the high-velocity flow of a professional power flush machine can dislodge and remove this contamination effectively.</p>
         </div>
@@ -868,17 +868,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-duration-card"><div class="pf-duration-time">5–7 hrs</div><div><strong>Standard system, 3 to 4 bed, 8 to 12 radiators</strong><p>The most common Liverpool property type. According to <a href="https://boilercentral.com/guides/what-does-a-power-flush-do/" target="_blank" rel="noopener">Boiler Central</a>, a 3-bed house with a moderately contaminated system typically takes around 6 hours.</p></div></div>
         <div class="pf-duration-card"><div class="pf-duration-time">Full day</div><div><strong>Large or heavily contaminated system</strong><p>Larger properties with 13 or more radiators, systems that have never been flushed, or older open-vented systems. We always complete in a single visit.</p></div></div>
       </div>
-      <div class="pf-info-bar" style="margin-top:1rem;">
+      <div class="pf-info-bar" style="margin-top:2rem;">
         <p>We always recommend a morning start, ideally 8am to 9am, to keep the full day free if needed. Someone must be home throughout to provide access.</p>
       </div>
-      <div class="pf-card pf-card-orange" style="margin-top:1.25rem;">
+      <div class="pf-card pf-card-orange" style="margin-top:2rem;">
         <div style="text-align:center;margin-bottom:0.75rem;">
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--pf-orange);line-height:1;">Every 5 to 7 Years</div>
           <div style="font-size:0.8rem;font-weight:700;color:var(--pf-navy);margin-top:0.2rem;">The industry recommended interval</div>
         </div>
         <p>The <a href="https://www.ciphe.org.uk" target="_blank" rel="noopener">Chartered Institute of Plumbing and Heating Engineering</a> and the <a href="https://www.powerflushassociation.com/faq.html" target="_blank" rel="noopener">Power Flush Association</a> both recommend this interval for a well-maintained system. Annual boiler servicing should include inhibitor level checks between flushes. If inhibitor levels are allowed to drop, corrosion accelerates and the system may need flushing sooner.</p>
       </div>
-      <div style="margin-top:1rem;">
+      <div style="margin-top:2rem;">
         <p style="font-weight:700;color:var(--pf-navy);margin-bottom:0.5rem;font-size:0.9rem;text-align:center;">The full maintenance schedule to minimise how often you need a flush</p>
         <div class="pf-schedule">
           <div class="pf-schedule-item"><div class="pf-schedule-num">1</div><p>Annual boiler service including inhibitor level check</p></div>
@@ -930,7 +930,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Power flush machine connected</strong><p>The machine is connected to the system, usually at the central heating pump connection point or at a radiator tail, depending on system design.</p></div></div>
         <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Full system flushed in both directions, 60 to 90 minutes minimum</strong><p>The machine pumps water through the entire system in both directions, reversing flow repeatedly to dislodge stubborn deposits. The dirty water passes through the machine's filter, which captures the debris.</p></div></div>
         <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Individual radiators treated</strong><p>Each radiator is isolated and flushed individually for a thorough clean. Heavily contaminated radiators may need additional attention using an agitator to break up stubborn deposits.</p></div></div>
-        <div style="background:#1a3a5c;border-radius:8px;padding:1.25rem 1.5rem;margin-top:0.75rem;">
+        <div style="background:#1a3a5c;border-radius:8px;padding:1.25rem 1.5rem;margin-top:2rem;">
           <p style="color:#f97316;font-weight:800;font-size:0.88rem;margin:0 0 0.6rem;text-transform:uppercase;letter-spacing:0.05em;text-align:center;">Steps 6 to 9 — Final Completion</p>
           <div style="display:grid;grid-template-columns:1fr;gap:0.4rem;">
             <div style="color:rgba(255,255,255,0.9);font-size:0.85rem;display:flex;gap:0.5rem;"><span style="color:#f97316;font-weight:700;flex-shrink:0;">6.</span> Chemical neutraliser added and pH of system water checked to prevent internal corrosion</div>
@@ -958,7 +958,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-sign"><div><strong>TRV or lockshield valves stuck or unresponsive</strong><p>Magnetite can seize radiator valves. If they no longer operate freely, sludge build-up inside the valve body is the most likely cause.</p></div></div>
         <div class="pf-sign" style="border-left-color:var(--pf-red);"><div><strong>Installing a new boiler on an existing system</strong><p>All major manufacturers require a clean system as a warranty condition. <a href="https://www.worcester-bosch.co.uk/professionals/support/technical-support" target="_blank" rel="noopener">Worcester Bosch</a> and <a href="https://www.vaillant.co.uk/for-installers/" target="_blank" rel="noopener">Vaillant</a> both specify this in their installation requirements. Sludge from an existing system can damage a new heat exchanger within months if not flushed first.</p></div></div>
       </div>
-      <div style="background:#f97316;border-radius:10px;padding:1.5rem;text-align:center;margin-top:1.5rem;">
+      <div style="background:#f97316;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
         <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Recognised two or more of these signs? Your system very likely needs a power flush.</p>
         <a href="tel:07399676656" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 07399 676656 NOW</a>
       </div>
@@ -1003,7 +1003,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Had the power flush done alongside the new boiler installation. The amount of black sludge that came out of our Victorian terrace was genuinely shocking. New boiler has been running perfectly since and we have the written report for the warranty. Could not recommend more highly.</p><div class="pf-review-footer"><div class="pf-review-avatar">S</div><div><div class="pf-review-name">Sandra P</div><div class="pf-review-loc">Anfield · Power Flush and New Boiler</div></div><div class="pf-review-stars">★★★★★</div></div></div>
         <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Three radiators in our 1980s semi were barely warm. Tried bleeding them multiple times with no improvement. The power flush cleared the blockages in all three within about two hours of starting. By the time the engineer left every radiator was heating evenly. Heating bills have already dropped.</p><div class="pf-review-footer"><div class="pf-review-avatar">D</div><div><div class="pf-review-name">Diane H</div><div class="pf-review-loc">Huyton · Cold Spot Resolution</div></div><div class="pf-review-stars">★★★★★</div></div></div>
       </div>
-      <div style="text-align:center;margin-top:1.25rem;"><a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--pf-navy);">See all 250 reviews on Google →</a></div>
+      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--pf-navy);">See all 250 reviews on Google →</a></div>
     </div>
   </section>
 
@@ -1067,7 +1067,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-risk"><span class="pf-risk-icon">!</span><div><strong>End-of-life components may fail</strong><p>Power flushing on a system with existing structural weakness may cause failure of components that were already at end of life. This uncovers a problem that would have emerged anyway.</p></div></div>
         <div class="pf-risk"><span class="pf-risk-icon">!</span><div><strong>Never attempt DIY power flushing</strong><p>DIY power flushing carries significant risk of system damage, chemical injury and voided warranties. It should always be carried out by a qualified professional. Verify any engineer is registered at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe Register</a> before allowing them to work on your heating system.</p></div></div>
       </div>
-      <div class="pf-honest" style="margin-top:1.5rem;">
+      <div class="pf-honest" style="margin-top:2rem;">
         <h3>Our Honest Assessment Before Every Job</h3>
         <p>Before we carry out any power flush in Liverpool, we assess the system condition, pipe type, radiator age and contamination level. If we believe the risks outweigh the benefits for your specific system, we will tell you and recommend the most appropriate alternative instead.</p>
         <p>We would rather lose a job than cause unnecessary damage to your property. A proper assessment takes 20 to 30 minutes and costs nothing. All our work meets the standards set by the <a href="https://www.powerflushassociation.com" target="_blank" rel="noopener">Power Flush Association</a> and <a href="https://www.ciphe.org.uk" target="_blank" rel="noopener">CIPHE</a>.</p>
