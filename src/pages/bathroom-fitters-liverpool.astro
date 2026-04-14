@@ -3,24 +3,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Bathroom Fitters Liverpool | Full Installations From £2,500 | No Sub-Contractors | Ideal Plumbing"
-  description="Bathroom fitters in Liverpool from £2,500. Full bathroom renovations, en suites, wet rooms and shower rooms. One contractor for plumbing, tiling and fitting. Free survey. Liverpool and Merseyside. Call 07399 676656."
+  title="Bathroom Fitters Liverpool | Full Installations From £2,500 | No Sub-Contractors"
+  description="Bathroom fitters Liverpool from £2,500 labour. Full bathrooms, en suites, wet rooms and shower rooms. One contractor for plumbing, tiling and fitting. No sub-contractors. Free survey. Call 07399 676656."
   canonical="https://www.idealplumbingsolutions.co.uk/bathroom-fitters-liverpool"
 >
 
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Plumber"],
+    "@type": "LocalBusiness",
+    "@id": "https://www.idealplumbingsolutions.co.uk/#business",
     "name": "Ideal Plumbing Solutions",
-    "url": "https://www.idealplumbingsolutions.co.uk/bathroom-fitters-liverpool",
     "telephone": "+4407399676656",
+    "email": "idealplumbingsolutions@gmail.com",
     "priceRange": "££",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "250",
-      "bestRating": "5"
+    "address": { "@type": "PostalAddress", "addressLocality": "Liverpool", "addressRegion": "Merseyside", "addressCountry": "GB" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "53.4084", "longitude": "-2.9916" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "250", "bestRating": "5", "worstRating": "1" },
+    "areaServed": [
+      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "Warrington" }, { "@type": "City", "name": "St Helens" },
+      { "@type": "City", "name": "Aigburth" }, { "@type": "City", "name": "Wavertree" },
+      { "@type": "City", "name": "Woolton" }, { "@type": "City", "name": "Crosby" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Bathroom Fitting Services Liverpool",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Full Bathroom Installation Liverpool", "price": "2500", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+        { "@type": "Offer", "name": "En Suite Installation Liverpool", "price": "2000", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+        { "@type": "Offer", "name": "Wet Room Installation Liverpool", "price": "3500", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+        { "@type": "Offer", "name": "Shower Installation Liverpool", "price": "400", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" }
+      ]
     }
   }
   </script>
@@ -30,19 +44,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Bathroom Fitters Liverpool",
-    "alternateName": ["Bathroom Installation Liverpool", "Bathroom Renovation Liverpool", "Bathroom Refurbishment Liverpool"],
-    "description": "Bathroom fitters across Liverpool from £2,500 for labour. Full bathroom renovations, en suites, wet rooms, shower rooms and accessible bathrooms. One contractor for plumbing, tiling and all fitting. Free survey. Liverpool and Merseyside.",
+    "serviceType": "Bathroom Installation and Renovation",
+    "description": "Bathroom fitters across Liverpool from £2,500 labour. Full bathroom renovations, en suites, wet rooms, shower rooms and accessible bathrooms. One contractor for plumbing, tiling and all fitting. No sub-contractors. Free survey.",
     "provider": { "@type": "Plumber", "name": "Ideal Plumbing Solutions", "telephone": "+4407399676656" },
     "areaServed": [
-      { "@type": "Place", "name": "Liverpool" },
-      { "@type": "Place", "name": "Wirral" },
-      { "@type": "Place", "name": "Warrington" },
-      { "@type": "Place", "name": "St Helens" }
-    ],
-    "offers": [
-      { "@type": "Offer", "name": "Full Bathroom Renovation Liverpool", "price": "2500", "priceCurrency": "GBP", "description": "Full bathroom renovation including all plumbing, fitting and tiling. Labour from £2,500. Supply and fit from £4,500." },
-      { "@type": "Offer", "name": "Shower Installation Liverpool", "price": "400", "priceCurrency": "GBP", "description": "Shower installation including plumbing and enclosure fitting." },
-      { "@type": "Offer", "name": "Wet Room Installation Liverpool", "price": "3500", "priceCurrency": "GBP", "description": "Full wet room installation including tanking, drainage and fitting." }
+      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "Warrington" }, { "@type": "City", "name": "St Helens" }
     ]
   }
   </script>
@@ -52,757 +59,382 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does a bathroom fitter cost in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Bathroom fitting in Liverpool costs from £2,500 for labour on a standard bathroom renovation. A full supply and fit including bathroom suite, tiling and all fittings starts from £4,500. Wet rooms start from £3,500. Shower installations start from £400. The Checkatrade average for Liverpool is £1,780 to £4,865 for labour." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does a bathroom renovation take in Liverpool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A standard full bathroom renovation in Liverpool takes 7 to 10 working days. A simpler bathroom refresh or shower installation takes 2 to 4 days. Wet rooms and accessible bathrooms requiring structural work take 10 to 14 days." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you handle all the trades or will I need to arrange separate contractors?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We handle everything. Our team covers all the plumbing, fitting and tiling in one installation. You do not need to arrange separate plumbers, tilers or fitters. This is our most important differentiator: one contractor, one point of contact, no juggling multiple tradesmen." }
-      },
-      {
-        "@type": "Question",
-        "name": "Will a new bathroom increase my Liverpool property value?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. A well-fitted new bathroom can increase Liverpool property value by up to 5%. For a property worth £200,000 that represents a £10,000 uplift. Modern bathrooms with quality fittings are consistently cited by Liverpool estate agents as a key factor in faster sales and higher offers." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is included in a full bathroom installation?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Our full bathroom installation service includes: removal and disposal of the existing bathroom, all plumbing work, fitting the new suite (bath, toilet, basin), shower installation if required, full tiling to walls and floor, fitting of all accessories, sealing and finishing. We provide a written fixed-price quote covering all of this before work begins." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you fit bathrooms from Liverpool bathroom showrooms?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. If you have already chosen your bathroom suite from a showroom, retailer or online, we can provide a labour-only quote to fit your chosen products. We also offer a supply and fit service where we source the bathroom products on your behalf." }
-      }
+      { "@type": "Question", "name": "How much does a bathroom installation cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "Labour for a full bathroom renovation in Liverpool starts from £2,500. A supply and fit service including the bathroom suite, tiling and all fittings starts from £4,500. En suite labour starts from £2,000, supply and fit from £3,500. Wet rooms start from £3,500 supply and fit. Individual shower installations from £400. The Checkatrade average for Liverpool is £1,780 to £4,865 for labour only. We provide a free written fixed-price quote after a site survey." } },
+      { "@type": "Question", "name": "How long does a bathroom installation take in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A standard full bathroom renovation takes 5 to 7 days. An en suite takes 3 to 5 days. A wet room takes 5 to 7 days due to the tanking and waterproofing involved. A single shower installation takes 1 to 2 days. We always confirm the exact timeline at the free survey and work to a fixed schedule." } },
+      { "@type": "Question", "name": "Do you do the plumbing, tiling and fitting or just the plumbing?", "acceptedAnswer": { "@type": "Answer", "text": "We handle everything. One contractor for plumbing, tiling, all fitting and waste connections. You do not need to coordinate separate tradespeople. This is the single biggest advantage of using Ideal Plumbing Solutions for your Liverpool bathroom renovation and is the most common reason customers tell us they chose us over competitors." } },
+      { "@type": "Question", "name": "Can you fit a bathroom in a Liverpool Victorian property?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have 30 years experience in Liverpool's Victorian and Edwardian housing stock. These properties often have existing bathrooms in unusual positions, limited pipe access, solid walls and original features to work around. We assess every property at the free survey and design the bathroom layout around the specific characteristics of your home." } },
+      { "@type": "Question", "name": "Will a new bathroom add value to my Liverpool property?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A modern, well-fitted bathroom can increase Liverpool property value by up to 5%. On a property worth £200,000 that is a £10,000 uplift from an investment starting at £4,500. Liverpool estate agents consistently identify bathroom quality as one of the top three factors in buyer decisions. A supply and fit installation starting at £4,500 typically delivers more than its cost in added value." } },
+      { "@type": "Question", "name": "Are you Gas Safe registered for the plumbing work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All plumbing work including any gas connections for heated towel rails or bathroom heating is carried out by our own Gas Safe registered engineers. All tiling and fitting is carried out by our own employed fitters. We never use sub-contractors on any bathroom installation." } }
     ]
   }
   </script>
 
-  <style>
-    .bf-page h2 { text-align: center; color: var(--navy); }
-    .bf-page .section-sub { text-align: center; }
-    .bf-page p { font-size: 0.97rem; }
-    .bf-page li { font-size: 0.97rem; }
-    .bf-page .faq-body p { font-size: 0.95rem; }
-
-    .service-type-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-    .service-type-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      text-align: center;
-    }
-    .service-type-icon {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--orange);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    .service-type-card h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .service-type-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
-    .service-type-price { display: inline-block; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.3rem 0.75rem; font-size: 0.85rem; font-weight: 700; color: var(--navy); }
-
-    .advantage-box {
-      background: var(--navy);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .advantage-box h3 { color: var(--orange); font-size: 1.4rem; margin-bottom: 0.75rem; }
-    .advantage-box p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 0; }
-    .advantage-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-      margin: 1rem 0 1.25rem;
-      text-align: left;
-    }
-    .advantage-item {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: var(--radius-sm);
-      padding: 0.75rem 1rem;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.9);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-    .advantage-item span { color: var(--orange); font-weight: 700; flex-shrink: 0; }
-
-    .included-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-    .included-row {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-    .included-tick { color: var(--orange); font-weight: 900; font-size: 1.1rem; flex-shrink: 0; }
-    .included-row strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.1rem; }
-    .included-row span { color: var(--muted); font-size: 0.85rem; }
-
-    .bathroom-type-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .bathroom-type-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .bathroom-type-card h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .bathroom-type-card p { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.5rem; }
-    .bathroom-price-tag { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.3rem 0.75rem; font-size: 0.85rem; font-weight: 700; color: var(--navy); }
-
-    .value-box {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 4px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .value-stat { font-family: 'Barlow Condensed', sans-serif; font-size: 4rem; font-weight: 900; color: var(--orange); line-height: 1; }
-    .value-box h3 { color: var(--navy); font-size: 1.2rem; margin: 0.5rem 0; }
-    .value-box p { color: var(--muted); font-size: 0.9rem; }
-
-    .trend-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-    .trend-item {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--orange);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-    }
-    .trend-item strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .trend-item p { color: var(--muted); font-size: 0.85rem; margin: 0; }
-
-    .bf-services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .bf-service-link {
-      background: var(--navy);
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.35rem;
-      transition: transform 0.18s;
-    }
-    .bf-service-link:hover { transform: translateY(-3px); }
-    .bf-service-link strong { color: var(--orange); font-size: 1rem; font-weight: 800; }
-    .bf-service-link span { color: rgba(255,255,255,0.8); font-size: 0.88rem; }
-
-    .bf-page a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); transition: border-color 0.2s; }
-    .bf-page a:hover { border-color: var(--navy); }
-    .bf-page .btn { border-bottom: none; }
-  </style>
-
-  <div class="bf-page">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.idealplumbingsolutions.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Bathroom Fitters Liverpool", "item": "https://www.idealplumbingsolutions.co.uk/bathroom-fitters-liverpool" }
+    ]
+  }
+  </script>
 
   <!-- HERO -->
   <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge">
+    <div class="container" style="text-align:center;">
+      <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="badge-dot"></span>
-        One Contractor · No Juggling Tradesmen · Liverpool and Merseyside
+        Liverpool Bathroom Fitters
       </div>
       <h1>Bathroom Fitters Liverpool</h1>
-      <p class="page-hero-sub" style="font-size:1rem;">Full bathroom renovations from <strong>£2,500</strong> labour. En suites. Wet rooms. Shower rooms. We handle everything: plumbing, tiling and fitting. One contractor. No sub-contractors. Free survey across Liverpool and Merseyside.</p>
+      <p class="page-hero-sub">Full bathroom installations from £2,500 labour. One contractor for plumbing, tiling and fitting. No sub-contractors ever. En suites, wet rooms, shower rooms and accessible bathrooms. Free survey across Liverpool and Merseyside.</p>
 
-      <div style="display:flex;flex-direction:row;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
-        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:130px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:900;color:var(--orange);line-height:1;">£2,500</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">Labour From</div>
+      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">£2,500</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Labour From</div>
         </div>
-        <div style="background:var(--navy);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:130px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:900;color:var(--orange);line-height:1;">7-10</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.85);font-weight:700;">Days Typical</div>
-        </div>
-        <div style="background:var(--orange);border-radius:var(--radius);padding:0.75rem 1.5rem;text-align:center;min-width:130px;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:900;color:var(--white);line-height:1;">FREE</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.9);font-weight:700;">Site Survey</div>
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">FREE</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Site Survey</div>
         </div>
       </div>
 
-      <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-bottom:1.5rem;">Fixed price quotes. No hidden extras. Supply and fit or labour only available.</p>
-
-      <div class="hero-actions">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);">CALL 07399 676656</a>
-        <a href="/contact-3" class="btn btn-lg" style="background:var(--white);color:var(--navy);border:2px solid var(--navy);">BOOK FREE SURVEY</a>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book a Free Survey</a>
       </div>
 
-      <div class="trust-row">
-        <div class="trust-item">
-          <strong>One Team</strong>
-          <span>Plumbing, Tiling<br>and Fitting</span>
-        </div>
-        <div class="trust-item">
-          <strong>No Sub-</strong>
-          <span>Contractors<br>Ever</span>
-        </div>
-        <div class="trust-item">
-          <strong>5.0 ★</strong>
-          <span>250 Google<br>Reviews</span>
-        </div>
+      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> No Sub-Contractors</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Plumbing and Tiling Included</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Free Fixed-Price Survey</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> 250 Five-Star Reviews</span>
       </div>
     </div>
   </section>
 
-  <!-- THE BIG ADVANTAGE -->
-  <section class="section-pad" style="background:var(--bg);">
+  <div class="pf">
+
+  <!-- MINI REVIEW TRUST BAR -->
+  <section style="background:#1a3a5c;padding:1.25rem 0;">
+    <div class="container">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+        </div>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:440px;">"One team handled absolutely everything. No chasing separate trades, no gaps in the schedule. The bathroom looks incredible." Helen R, Woolton</div>
+        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONE CONTRACTOR DIFFERENTIATOR -->
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>One Contractor for Everything. The Ideal Difference.</h2>
-      <p class="section-sub">Most Liverpool bathroom renovations go wrong because homeowners are juggling multiple tradesmen. We are different.</p>
+      <p class="pf-sub">Most Liverpool bathroom fitters only handle the plumbing. You then need to find and coordinate a separate tiler and separate fitter. We handle everything with our own employed team.</p>
 
-      <div class="advantage-box">
-        <h3>No Juggling Multiple Tradesmen</h3>
-        <div class="advantage-list">
-          <div class="advantage-item"><span>✓</span> One team handles the plumbing, tiling, fitting and all finishing work</div>
-          <div class="advantage-item"><span>✓</span> One fixed-price quote covering everything from strip-out to final seal</div>
-          <div class="advantage-item"><span>✓</span> One point of contact throughout. Call us, not a chain of subcontractors</div>
-          <div class="advantage-item"><span>✓</span> No waiting for a tiler to finish before the plumber can start</div>
-          <div class="advantage-item"><span>✓</span> No disputes between tradesmen about who is responsible for a problem</div>
-          <div class="advantage-item"><span>✓</span> One 12-month guarantee covering all the work, not split between trades</div>
-        </div>
-        <p style="font-size:0.9rem;">Most problems with Liverpool bathroom renovations come from poorly coordinated separate trades. We eliminate this entirely by keeping everything in-house with our own employed team.</p>
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All plumbing carried out by our own Gas Safe engineers</strong><p>Every water connection, waste pipe, bath, shower and toilet is plumbed by our own directly employed Gas Safe registered engineers. Any gas connections for heated towel rails or bathroom heating are covered under the same team.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All tiling carried out by our own fitters</strong><p>Floor tiling, wall tiling and waterproofing are all handled by our own employed tilers. No sub-contractors, no day-rate labourers. The same team who plumb the bathroom tiles it.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>No scheduling gaps between trades</strong><p>When you use separate tradespeople, delays in one trade hold up the next. The plumber finishes but the tiler is not available for another week. With one team, the schedule runs continuously. Liverpool homeowners consistently tell us this is the single biggest reason they chose us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>One point of contact and one invoice</strong><p>You call one number and speak to one team throughout the entire project. One invoice on completion with no disputes about who is responsible for what. No pointing between trades when something needs resolving.</p></div></div>
       </div>
-    </div>
-  </section>
 
-  <!-- SERVICES -->
-  <section class="section-pad" style="background:var(--white);">
-    <div class="container">
-      <h2>Bathroom Fitting Services Across Liverpool</h2>
-      <p class="section-sub">From a simple shower replacement to a complete bathroom transformation. Everything covered by our own team.</p>
-
-      <div class="service-type-grid">
-        <div class="service-type-card">
-          <div class="service-type-icon">FULL</div>
-          <h3>Full Bathroom Renovation</h3>
-          <p>Complete strip-out and refurbishment of your existing bathroom. New bath, toilet, basin, shower and all tiling. We handle everything from removing the old bathroom to the final grout and seal.</p>
-          <span class="service-type-price">Labour from £2,500 · Supply and fit from £4,500</span>
-        </div>
-        <div class="service-type-card">
-          <div class="service-type-icon">EN S</div>
-          <h3>En Suite Installation</h3>
-          <p>New en suite bathroom in an existing bedroom or new extension space. We handle all pipework routing, full fitting and tiling. Popular choice for Liverpool's Victorian terraces and larger semis.</p>
-          <span class="service-type-price">Labour from £2,000 · Supply and fit from £3,500</span>
-        </div>
-        <div class="service-type-card">
-          <div class="service-type-icon">WET</div>
-          <h3>Wet Room Installation</h3>
-          <p>Full wet room with waterproof tanking, linear or central drain, wall-to-wall tiling and frameless glass panels. Requires specialist installation to prevent water damage. Our most popular premium option.</p>
-          <span class="service-type-price">From £3,500 supply and fit</span>
-        </div>
-        <div class="service-type-card">
-          <div class="service-type-icon">SHWR</div>
-          <h3>Shower Installation and Replacement</h3>
-          <p>Electric shower, power shower, mixer shower or thermostatic bar valve installation. New enclosure, tray or wet wall boarding. Walk-in shower conversions from bath to shower.</p>
-          <span class="service-type-price">From £400 supply and fit</span>
-        </div>
-        <div class="service-type-card">
-          <div class="service-type-icon">ACC</div>
-          <h3>Accessible and Level-Access Bathrooms</h3>
-          <p>Bathroom adaptations for elderly or disabled Liverpool residents. Walk-in shower, level-access shower tray, grab rails, raised toilet seat and fold-down shower seats. All installed with care and respect.</p>
-          <span class="service-type-price">From £2,500 supply and fit</span>
-        </div>
-        <div class="service-type-card">
-          <div class="service-type-icon">FIT</div>
-          <h3>Labour-Only Bathroom Fitting</h3>
-          <p>Already chosen your bathroom suite from B&Q, Victorian Plumbing, Bathstore or another retailer? We provide competitive labour-only quotes to fit your chosen products to the highest standard.</p>
-          <span class="service-type-price">Labour from £2,500 for a full bathroom</span>
-        </div>
+      <div style="background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #dc2626;border-radius:10px;padding:1rem 1.25rem;margin-top:2rem;text-align:center;">
+        <p style="color:#7f1d1d;font-size:0.88rem;margin:0;font-weight:600;">Most bathroom renovation delays and disputes in Liverpool happen when homeowners coordinate separate plumbers, tilers and fitters independently. We eliminate this entirely.</p>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
-  <section class="section-pad" style="background:var(--bg);">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Bathroom Fitting Prices Liverpool</h2>
-      <p class="section-sub">Honest price ranges so you can plan your budget. Written fixed-price quote provided at the free survey. The <a href="https://www.checkatrade.com/Search/Bathroom-Fitter/in/Liverpool" target="_blank" rel="noopener" style="color:var(--navy);">Checkatrade average for Liverpool bathroom fitting is £1,780 to £4,865</a>.</p>
+      <p class="pf-sub">Free site survey required to confirm your exact price. Supply and fit prices include bathroom suite, tiling and all fittings. Labour-only prices apply when you supply the suite and tiles yourself.</p>
 
-      <div class="bathroom-type-grid">
-        <div class="bathroom-type-card">
-          <h3>Full Bathroom Renovation</h3>
-          <p>Strip-out, full plumbing, new suite, tiling and all finishing. Labour only or supply and fit available.</p>
-          <div class="bathroom-price-tag">Labour: from £2,500 · Supply and fit: from £4,500</div>
+      <div class="pf-pricing-grid">
+
+        <div class="pf-price-card pf-price-card-featured">
+          <div class="pf-price-badge">MOST POPULAR</div>
+          <div class="pf-price-tier">FULL BATHROOM</div>
+          <div class="pf-price-name">Complete Bathroom Renovation</div>
+          <div class="pf-price-sub">Full strip out and new installation</div>
+          <div class="pf-price-amount" style="font-size:2.5rem;">£2,500<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
+          <ul class="pf-price-list">
+            <li>Full strip out of existing bathroom</li>
+            <li>New bath, toilet and basin fitted</li>
+            <li>All plumbing and waste connections</li>
+            <li>Full wall and floor tiling</li>
+            <li>Heated towel rail fitted</li>
+            <li>New lighting and ventilation</li>
+            <li>Supply and fit from £4,500</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
         </div>
-        <div class="bathroom-type-card">
-          <h3>En Suite Installation</h3>
-          <p>New en suite in existing bedroom space. All plumbing, fitting and tiling included.</p>
-          <div class="bathroom-price-tag">Labour: from £2,000 · Supply and fit: from £3,500</div>
+
+        <div class="pf-price-card">
+          <div class="pf-price-tier">EN SUITE</div>
+          <div class="pf-price-name">En Suite Installation</div>
+          <div class="pf-price-sub">New en suite from scratch</div>
+          <div class="pf-price-amount" style="font-size:2.5rem;">£2,000<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
+          <ul class="pf-price-list">
+            <li>New shower, toilet and basin</li>
+            <li>All plumbing and waste connections</li>
+            <li>Full wall and floor tiling</li>
+            <li>Heated towel rail fitted</li>
+            <li>Ventilation installed</li>
+            <li>Supply and fit from £3,500</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-navy btn-full">Book Free Survey</a>
         </div>
-        <div class="bathroom-type-card">
-          <h3>Wet Room</h3>
-          <p>Full wet room with tanking, drain and frameless glass. Specialist installation required.</p>
-          <div class="bathroom-price-tag">Supply and fit: from £3,500</div>
+
+        <div class="pf-price-card">
+          <div class="pf-price-tier">WET ROOM AND SHOWERS</div>
+          <div class="pf-price-name">Wet Room or Shower Installation</div>
+          <div class="pf-price-sub">Wet rooms and individual showers</div>
+          <div class="pf-price-amount" style="font-size:2.5rem;">£400<small style="font-size:1rem;color:var(--muted);"> shower</small></div>
+          <ul class="pf-price-list">
+            <li>Shower enclosure supply and fit from £400</li>
+            <li>Wet room from £3,500 supply and fit</li>
+            <li>Full tanking and waterproofing included</li>
+            <li>Linear drain and tiled floor</li>
+            <li>Walk-in and level access designs</li>
+            <li>Thermostatic and digital controls available</li>
+          </ul>
+          <a href="tel:07399676656" class="btn btn-navy btn-full">Book Free Survey</a>
         </div>
-        <div class="bathroom-type-card">
-          <h3>Shower Installation</h3>
-          <p>New shower installation or replacement. Enclosure, tray and all plumbing included.</p>
-          <div class="bathroom-price-tag">Supply and fit: from £400</div>
-        </div>
-        <div class="bathroom-type-card">
-          <h3>Accessible Bathroom</h3>
-          <p>Level-access shower, grab rails, raised toilet and all adaptations. Caring and professional installation.</p>
-          <div class="bathroom-price-tag">Supply and fit: from £2,500</div>
-        </div>
-        <div class="bathroom-type-card">
-          <h3>Bathroom Refresh</h3>
-          <p>Replacing toilet, basin or taps without a full renovation. Individual fixture replacement and replumbing.</p>
-          <div class="bathroom-price-tag">From £300 per fixture</div>
-        </div>
+
       </div>
 
-      <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-top:1.5rem;text-align:center;">
-        <strong style="color:var(--navy);display:block;margin-bottom:0.35rem;">Why we do not quote over the phone</strong>
-        <p style="color:var(--muted);font-size:0.9rem;margin:0;">Bathroom fitting costs depend on the size of the room, position of existing pipework, wall construction, access to soil stacks and your chosen fixtures. A phone quote cannot account for these variables accurately. We visit your Liverpool property, assess the full picture and provide a written fixed-price quote covering everything before any commitment is made.</p>
+      <div class="pf-alert" style="margin-top:2rem;">
+        <strong>How do our prices compare to the Liverpool market?</strong>
+        <p>The <a href="https://www.checkatrade.com/Search/Bathroom-Fitter/in/Liverpool" target="_blank" rel="noopener">Checkatrade average for Liverpool bathroom fitting is £1,780 to £4,865 for labour only</a>. Our prices are transparent and include plumbing, tiling and all fitting in a single quote. There are no separate tiler or fitter charges to add on top.</p>
       </div>
     </div>
   </section>
 
   <!-- WHAT IS INCLUDED -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>What Is Included in Your Liverpool Bathroom Installation</h2>
-      <p class="section-sub">Our fully managed service covers every stage from initial strip-out to final finishing. No extra invoices on completion.</p>
+      <p class="pf-sub">No hidden extras. One price covers everything from strip-out to final clean.</p>
 
-      <div class="included-grid">
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Free site survey and written fixed-price quote</strong><span>We visit your bathroom, discuss your requirements and provide a written quote before any work begins. No obligation to proceed.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Strip-out and disposal of existing bathroom</strong><span>We remove and dispose of the existing bath, toilet, basin and tiling. Responsible disposal included in the price.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>All plumbing work</strong><span>Hot and cold supply pipework, waste pipework connection to soil stack, isolation valves and all connections. Fully compliant with current regulations.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Bathroom suite installation</strong><span>Bath, toilet, basin, shower and all related fixtures fitted to the highest standard. Labour only or supply and fit both available.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Full tiling to walls and floor</strong><span>Wall and floor tiling using your chosen tiles. Adhesive, grout and all materials included. Tiling carried out by our own team, not a separate tiler.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Accessories and fixtures</strong><span>Towel rails, toilet roll holders, mirror fixings, shower trays and screens all fitted and sealed to a professional finish.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Full sealing and silicone finishing</strong><span>All joins sealed with colour-matched silicone to prevent water ingress. Particularly important in Liverpool's wet climate.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>Clean-up on completion</strong><span>We clean the bathroom thoroughly before handover. You see the finished result, not the mess of the installation process.</span></div>
-        </div>
-        <div class="included-row">
-          <span class="included-tick">✓</span>
-          <div><strong>12-month workmanship guarantee</strong><span>All our bathroom work carries a 12-month guarantee. If anything fails due to our workmanship we come back and fix it at no charge.</span></div>
-        </div>
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full strip-out and disposal</strong><p>We remove and dispose of the existing bathroom suite, tiles and waste. All materials are taken away and disposed of responsibly. No skips required on your driveway.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All plumbing and waste connections</strong><p>Every water supply connection, waste pipe, bath, shower, toilet and basin connection is plumbed by our own Gas Safe registered engineers. Includes hot and cold supply to all fixtures.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full wall and floor tiling</strong><p>All tiling carried out by our own employed tilers. Includes surface preparation, adhesive, grout and all tile cuts. Waterproofing applied to wet areas before tiling. We do not tile over damp or damaged substrates.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bathroom suite fitted and sealed</strong><p>Bath, shower enclosure or tray, toilet and basin all fitted, sealed and tested. All chrome fittings and accessories installed. Silicone applied to all edges and joints to a professional finish.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Heated towel rail</strong><p>Heated towel rail supplied and connected to the heating circuit or wired as a dedicated electric unit. Positioned to your specification.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Ventilation installed</strong><p>An extractor fan is fitted and ducted to outside where required. Correct ventilation is essential for preventing condensation and mould in Liverpool bathrooms, particularly in Victorian properties with solid walls.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full clean on completion</strong><p>We clean the bathroom fully before we leave. Grout haze removed, chrome polished, all surfaces wiped down. You see the finished result, not a building site.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>12-month workmanship guarantee</strong><p>All our installations carry a 12-month workmanship guarantee. If anything fails as a result of our installation work, we return and resolve it at no cost.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section-pad eicr-process-section">
+  <!-- BATHROOM SERVICES -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2 style="text-align:center;">How Our Liverpool Bathroom Installation Works</h2>
-      <p class="section-sub">From first call to a fully fitted bathroom, here is what to expect from our managed service.</p>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Free Site Survey</h3>
-            <p>We visit your Liverpool property, measure the bathroom and discuss your requirements and budget. We advise on layout, fixtures and tiles and provide a written fixed-price quote.</p>
-            <span class="step-note">Free. No obligation.</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Choose Your Suite and Tiles</h3>
-            <p>We can supply everything or you can choose your own products. We advise on quality and compatibility. Installation date agreed and materials ordered.</p>
-            <span class="step-note">Supply and fit or labour only</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Installation Carried Out</h3>
-            <p>Our own team carries out the full installation. Plumbing, tiling and all fitting handled by the same team. Typically 7 to 10 days for a full bathroom.</p>
-            <span class="step-note">7 to 10 days typical</span>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Handover and Guarantee</h3>
-            <p>We walk you through the finished bathroom and hand over all product warranties. 12-month workmanship guarantee issued covering all our work.</p>
-            <span class="step-note">12-month guarantee included</span>
-          </div>
-        </div>
+      <h2>Bathroom Services We Offer Across Liverpool</h2>
+      <p class="pf-sub">From a full bathroom renovation to a single shower installation. All work carried out by our own team with no sub-contractors.</p>
+
+      <div class="pf-why-grid" style="margin-top:2rem;">
+        <div class="pf-why-item"><h3>Full Bathroom Renovations</h3><p>Complete strip-out and new installation. New suite, new tiling, new waste and supply connections. The most popular service for Liverpool homeowners looking to add value or update a tired bathroom. Labour from £2,500. Supply and fit from £4,500.</p></div>
+        <div class="pf-why-item"><h3>En Suite Installations</h3><p>Converting a bedroom into a master bedroom with en suite, or installing an en suite in a property that does not have one. We handle all stud wall construction, plumbing, tiling and fitting. Labour from £2,000. Supply and fit from £3,500.</p></div>
+        <div class="pf-why-item"><h3>Wet Rooms</h3><p>Full wet room installation including tanking, linear drain, level access tiling and thermostatic or digital shower controls. Wet rooms require specialist waterproofing. We apply full tanking systems, not just waterproof paint. From £3,500 supply and fit.</p></div>
+        <div class="pf-why-item"><h3>Shower Installations</h3><p>New shower enclosure, tray and screen supply and fit from £400. Thermostatic mixer showers, power showers and digital shower systems available. Walk-in shower areas without a tray from £800 supply and fit.</p></div>
+        <div class="pf-why-item"><h3>Accessible and Wetroom Bathrooms</h3><p>Level access showers, grab rails, fold-down shower seats and raised toilet seats for Liverpool homeowners requiring accessible bathroom solutions. Walk-in baths and shower baths also available. All installations designed around the specific requirements of the occupant.</p></div>
+        <div class="pf-why-item"><h3>Individual Fixture Replacements</h3><p>Replacing a single bath, toilet or basin without a full renovation. Labour from £150 per fixture. Useful for rental properties, landlord refurbishments or when only one element needs updating.</p></div>
       </div>
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">BOOK FREE SURVEY</a>
+    </div>
+  </section>
+
+  <!-- STYLES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <h2>Popular Bathroom Styles in Liverpool Homes</h2>
+      <p class="pf-sub">We install any bathroom style. Here are the most popular choices across Liverpool's diverse housing stock.</p>
+
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Contemporary minimalist</strong><p>Clean lines, large format tiles, concealed cistern toilets and frameless shower screens. Very popular in Liverpool city centre apartments and modern homes in Allerton and Childwall. Works particularly well with underfloor heating where the budget allows.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Traditional and period style</strong><p>Roll-top baths, high-cistern toilets, column basins and metro tiling. Popular in Liverpool's Victorian and Edwardian properties in Aigburth, Sefton Park, Mossley Hill and Crosby where period aesthetics are important. We advise on the right fixtures to complement original features.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Family bathrooms</strong><p>Practical, durable and easy to clean. Full-size bath with shower over, basin with vanity unit for storage, and easy-clean wall panels as an alternative to grout-heavy tiling in high-use areas. Popular across 3 and 4-bed family homes throughout Liverpool.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Wet rooms and walk-in showers</strong><p>Level access, no shower tray, linear drain. Increasingly popular with Liverpool homeowners planning ahead for accessibility or simply preferring the open, spacious feel. Requires full waterproofing behind all wall and floor tiles. We do not cut corners on tanking.</p></div></div>
       </div>
     </div>
   </section>
 
   <!-- PROPERTY VALUE -->
-  <section class="section-pad" style="background:var(--bg);">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>A New Bathroom Adds Real Value to Your Liverpool Property</h2>
-      <p class="section-sub">A bathroom renovation is one of the most financially rewarding home improvements for Liverpool homeowners and landlords.</p>
+      <p class="pf-sub">A bathroom renovation is one of the most financially rewarding home improvements available to Liverpool homeowners.</p>
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem;">
-        <div class="value-box">
-          <div class="value-stat">5%</div>
-          <h3>Average Property Value Uplift</h3>
-          <p>A modern, well-fitted bathroom can increase your Liverpool property value by up to 5%. On a property worth £200,000 that is a £10,000 uplift from an investment of £4,500 to £6,000. Liverpool estate agents consistently report that bathroom quality is one of the top three factors buyers consider.</p>
-        </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.5rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Faster Sale and Higher Offers</h3>
-          <p style="color:var(--muted);font-size:0.9rem;">Properties with updated bathrooms in Liverpool sell faster and receive stronger offers. Buyers who identify bathroom renovation as a required cost after purchase use it as a negotiating lever, often seeking reductions of £5,000 to £10,000. Investing in the bathroom before listing removes this negotiating point entirely.</p>
-        </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-top:3px solid var(--navy);border-radius:var(--radius);padding:1.5rem;text-align:center;">
-          <h3 style="color:var(--navy);margin-bottom:0.5rem;">Rental Value and Demand</h3>
-          <p style="color:var(--muted);font-size:0.9rem;">Liverpool landlords with updated bathrooms can command higher monthly rents and attract better quality tenants. The city's large student population and young professional renters expect modern bathroom standards. A bathroom renovation often justifies a rent increase of £50 to £150 per month, delivering full payback in 3 to 4 years.</p>
-        </div>
+      <div class="pf-card pf-card-orange" style="margin-top:2rem;">
+        <h3>What a New Bathroom Is Worth in Liverpool</h3>
+        <p>A modern, well-fitted bathroom can increase Liverpool property value by up to 5%. On a property worth £200,000, that is a £10,000 uplift from an investment starting at £4,500. Liverpool estate agents consistently identify bathroom quality as one of the top three factors buyers consider when making an offer, alongside kitchen quality and overall condition.</p>
+        <p>A tired or poorly maintained bathroom is one of the most common reasons Liverpool buyers reduce their offer or use a property survey as leverage to negotiate. A new bathroom removes this objection entirely and often recovers more than its cost in the final sale price. We offer free surveys for Liverpool homeowners considering a bathroom renovation before listing their property for sale.</p>
+      </div>
+
+      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
+        <h3>Bathroom Renovation for Liverpool Landlords</h3>
+        <p>A modern, functional bathroom significantly improves the rental yield and tenant retention of a Liverpool rental property. Tenants in Liverpool's competitive rental market compare properties carefully, and a dated bathroom is consistently cited as a reason to choose a different property. A supply and fit bathroom renovation from £4,500 on a Liverpool rental property typically recovers its cost within 18 to 24 months through reduced void periods and improved rental rates.</p>
+        <p>We work with Liverpool landlords across all postcodes and can often coordinate tenant access and work within tight void periods to minimise income loss between tenancies.</p>
       </div>
     </div>
   </section>
 
-  <!-- POPULAR STYLES -->
-  <section class="section-pad" style="background:var(--white);">
+  <!-- VICTORIAN PROPERTIES -->
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Popular Bathroom Styles in Liverpool Homes</h2>
-      <p class="section-sub">We advise on the styles that work best for different Liverpool property types, from Victorian terraces to modern apartments.</p>
+      <h2>Bathroom Fitting in Liverpool's Victorian and Period Properties</h2>
+      <p class="pf-sub">Liverpool's Victorian terraces and Edwardian semis present specific challenges for bathroom renovation. Our 30 years of experience in Liverpool's housing stock means we anticipate problems before they happen.</p>
 
-      <div class="trend-grid">
-        <div class="trend-item">
-          <strong>Minimalist with Brassware Accents</strong>
-          <p>Clean lines, floating vanity units and brushed brass or matte black taps and accessories. Works well in both Liverpool's period properties and modern apartments. Very popular in 2025 and 2026.</p>
-        </div>
-        <div class="trend-item">
-          <strong>Walk-In Shower Conversion</strong>
-          <p>Converting an underused bath to a large walk-in shower is the most requested bathroom renovation across Liverpool. Creates more space, is easier to clean and is highly attractive to buyers and renters.</p>
-        </div>
-        <div class="trend-item">
-          <strong>Heritage and Period Style</strong>
-          <p>Roll-top baths, traditional column radiators and Victorian-style floor tiles complement Liverpool's terraced properties beautifully. Our team has extensive experience fitting heritage-style bathrooms in period Liverpool homes.</p>
-        </div>
-        <div class="trend-item">
-          <strong>Wet Room with Large Format Tiles</strong>
-          <p>Luxury wet rooms with large format porcelain or stone tiles, frameless glass and linear drains are increasingly popular in Liverpool's executive homes and new builds. Requires specialist tanking and installation.</p>
-        </div>
-        <div class="trend-item">
-          <strong>Compact Bathroom Maximisation</strong>
-          <p>Many Liverpool terraced properties have small bathrooms. We specialise in making the most of compact spaces using space-saving suites, combination units and clever storage solutions without compromising on quality.</p>
-        </div>
+      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
+        <h3>What Makes Victorian Liverpool Bathrooms Different</h3>
+        <p>Many of Liverpool's Victorian terraces have bathrooms in positions that were added as later extensions, over an outrigger, converted from a bedroom, or installed in a ground-floor extension. Waste pipes in these positions often require longer runs to connect to the soil stack, and the existing joists may need reinforcement to support a new bath.</p>
+        <p>Solid brick walls in Victorian properties cannot have pipes chased in as easily as cavity walls. Supply pipes are usually surface-run in neat boxing or run under floorboards. We assess all of this at the free survey and plan the installation accordingly. Victorian properties with original cast iron waste pipes may require sections to be replaced where they have corroded, which we identify and include in the quote before work begins.</p>
+        <p>For period properties where preserving original features is important, we plan the installation to avoid damaging original coving, picture rails, skirting boards and other period details wherever possible.</p>
       </div>
     </div>
   </section>
 
   <!-- WHY CHOOSE -->
-  <section class="why-section">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <div class="why-header">
-        <h2>Why Choose Ideal Plumbing as Your Liverpool Bathroom Fitters?</h2>
-        <p>One team. No sub-contractors. 30 years fitting bathrooms across Liverpool and Merseyside.</p>
+      <h2>Why Over 250 Liverpool Homeowners Choose Ideal Plumbing for Their Bathroom</h2>
+      <p class="pf-sub">One contractor. No sub-contractors. Plumbing and tiling included. Fixed price. 30 years Liverpool experience.</p>
+      <div class="pf-why-grid">
+        <div class="pf-why-item"><h3>One Team. No Sub-Contractors.</h3><p>Every aspect of your bathroom installation is carried out by our own employed team. Plumbing, tiling, fitting. Never a sub-contractor or day-rate labourer. You know who is in your Liverpool home throughout the entire project.</p></div>
+        <div class="pf-why-item"><h3>Plumbing and Tiling Included</h3><p>You do not need to find a separate tiler. Our team handles everything. This eliminates the scheduling gaps and disputes that make bathroom renovations miserable when homeowners coordinate separate trades themselves.</p></div>
+        <div class="pf-why-item"><h3>Free Fixed-Price Survey</h3><p>We visit your Liverpool property, assess everything and give you a written fixed-price quote before any work begins. The price we quote is the price on the invoice. No additions, no surprises after the work is done.</p></div>
+        <div class="pf-why-item"><h3>30 Years Liverpool Experience</h3><p>Victorian terraces, Georgian townhouses, 1960s semis, modern apartments, converted flats. We have fitted bathrooms in every type of Liverpool property and know what to anticipate before we start.</p></div>
+        <div class="pf-why-item"><h3>Full Clean on Completion</h3><p>We clean the bathroom fully before we leave. Grout haze removed, chrome polished, all surfaces cleaned. You see the finished result on day one, not a construction site that needs cleaning before use.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>All bathroom installations carry a 12-month workmanship guarantee. If anything fails as a result of our installation work, we return and resolve it at no cost. Gas Safe registered for all plumbing work.</p></div>
       </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <strong>One Team for Everything</strong>
-          <p>Plumbing, tiling and all fitting handled by our own employed team. No separate contractors, no waiting, no disputes. One invoice, one guarantee, one point of contact.</p>
+      <div style="background:var(--navy);border-radius:10px;padding:2rem;text-align:center;margin-top:2rem;">
+        <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;margin-bottom:1.25rem;">One team. Free survey. Fixed price. Plumbing and tiling included. No sub-contractors. 250 five-star reviews.</p>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+          <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+          <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Free Survey Online</a>
         </div>
-        <div class="why-card">
-          <strong>No Sub-Contractors. Ever.</strong>
-          <p>Every person who enters your Liverpool home is our own directly employed, vetted and insured staff. We never use agency workers or sub-contracted tradesmen for any part of a bathroom installation.</p>
-        </div>
-        <div class="why-card">
-          <strong>Fixed Price. No Surprises.</strong>
-          <p>The price in your written quote is the price on your final invoice. We do not add extras or hidden charges after the work starts. What we quote is what you pay.</p>
-        </div>
-        <div class="why-card">
-          <strong>30 Years Liverpool Experience</strong>
-          <p>We have fitted hundreds of bathrooms across Liverpool's terraced houses, semis, apartments and period properties. We understand the specific challenges of each property type.</p>
-        </div>
-        <div class="why-card">
-          <strong>Supply and Fit or Labour Only</strong>
-          <p>Already chosen your suite? We will fit it. Want us to source everything? We can do that too. Both options available at competitive prices with the same quality guarantee.</p>
-        </div>
-        <div class="why-card">
-          <strong>12-Month Workmanship Guarantee</strong>
-          <p>All our bathroom work carries a full 12-month guarantee. If anything fails due to our workmanship we return and fix it at no charge to you.</p>
-        </div>
-      </div>
-      <div class="why-cta">
-        <p>Ready to book your free Liverpool bathroom survey?</p>
-        <a href="tel:07399676656" class="btn btn-orange btn-lg">CALL 07399 676656</a>
       </div>
     </div>
   </section>
 
   <!-- REVIEWS -->
-  <section class="reviews-section">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <div class="reviews-header">
-        <div>
-          <h2>What Liverpool Customers Say</h2>
-          <p class="section-sub">Real reviews from Liverpool homeowners who chose Ideal Plumbing for their bathroom renovation</p>
-        </div>
-        <div class="reviews-score">
-          <span class="score-number">5.0</span>
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="score-label">Google · 250 reviews</div>
-          </div>
-        </div>
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <h2 style="margin-bottom:0.1rem;">What Liverpool Customers Say</h2>
+        <p class="pf-sub" style="margin:0 0 0.75rem;">Real bathroom installation reviews from Liverpool homeowners</p>
+        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
+        <div style="color:#f59e0b;font-size:1rem;">★★★★★</div>
+        <div style="font-size:0.75rem;color:var(--muted);">Google · 250 reviews</div>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Full bathroom renovation in our Wavertree terrace. They stripped out the old avocado suite, replumbed everything, tiled floor to ceiling and fitted the new suite in nine days. The finish is absolutely superb and the price matched the quote down to the penny. Could not be more pleased.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">A</div>
-            <div class="reviewer-info"><strong>Angela T</strong><span class="review-location">Wavertree · Full Renovation</span></div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Had a walk-in shower installed to replace an old bath we never used. The team handled everything in four days including all the tiling. The most stress-free building work I have ever had done. One team, one invoice, no issues. Highly recommend to any Liverpool homeowner.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">P</div>
-            <div class="reviewer-info"><strong>Peter H</strong><span class="review-location">Allerton · Shower Conversion</span></div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-quote">"</div>
-          <p>Wet room installation in our Victorian terraced house. It was a complex job involving rerouting waste pipes and fitting a linear drain. The team were knowledgeable about period properties, worked cleanly and the finished wet room is stunning. Worth every penny.</p>
-          <div class="review-footer">
-            <div class="reviewer-avatar">C</div>
-            <div class="reviewer-info"><strong>Claire M</strong><span class="review-location">Aigburth · Wet Room</span></div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
+      <div class="pf-reviews">
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>One team handled absolutely everything. Plumbing, tiling, fitting, cleaning up. No chasing separate trades, no gaps in the schedule. The bathroom looks incredible and was finished in exactly the time they said it would take. The fixed price held to the penny.</p><div class="pf-review-footer"><div class="pf-review-avatar">H</div><div><div class="pf-review-name">Helen R</div><div class="pf-review-loc">Woolton · Full Bathroom Renovation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>New wet room installed in our Victorian terrace in Aigburth. The survey visit was thorough and they spotted issues with the original waste pipe before work started. The tanking is done properly. I could see it before the tiles went on. Very professional team throughout.</p><div class="pf-review-footer"><div class="pf-review-avatar">G</div><div><div class="pf-review-name">Gary T</div><div class="pf-review-loc">Aigburth · Wet Room Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>En suite fitted in the master bedroom of my Crosby property before putting it on the market. Estate agent said it would add value. Sold for above asking price within two weeks of listing. The bathroom was specifically mentioned by the buyers. Worth every penny.</p><div class="pf-review-footer"><div class="pf-review-avatar">V</div><div><div class="pf-review-name">Vivienne C</div><div class="pf-review-loc">Crosby · En Suite Before Sale</div></div><div class="pf-review-stars">★★★★★</div></div></div>
       </div>
-      <div class="reviews-cta">
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" class="link-arrow">See all 250 reviews on Google →</a>
+      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all 250 reviews on Google →</a></div>
+    </div>
+  </section>
+
+  <!-- MID CTA -->
+  <section style="background:var(--navy);padding:2rem 0;">
+    <div class="container" style="text-align:center;">
+      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Ready to book your free bathroom survey?</h3>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Free fixed-price survey across all Liverpool and Merseyside postcodes. One team for plumbing, tiling and fitting. No obligation to proceed.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Free Survey</a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- PROCESS -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Bathroom Fitters Liverpool: Common Questions</h2>
-      <p class="section-sub">Straight answers to what Liverpool homeowners ask before booking.</p>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-orange">COST</span>How much does bathroom fitting cost in Liverpool?</summary>
-          <div class="faq-body">
-            <p>Labour for a full bathroom renovation in Liverpool starts from £2,500. A supply and fit service including the bathroom suite, tiling and all fittings starts from £4,500. Wet rooms start from £3,500. Individual shower installations start from £400. The <a href="https://www.checkatrade.com/Search/Bathroom-Fitter/in/Liverpool" target="_blank" rel="noopener">Checkatrade average for Liverpool is £1,780 to £4,865</a> for labour only.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-navy">TIMING</span>How long does a bathroom renovation take in Liverpool?</summary>
-          <div class="faq-body">
-            <p>A standard full bathroom renovation takes 7 to 10 working days. A simpler shower installation or partial renovation takes 2 to 4 days. Wet rooms and accessible bathrooms involving structural changes take 10 to 14 days. We confirm the exact timeline at the free survey so you can plan accordingly.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-green">TRADES</span>Do I need to arrange my own tiler and plumber separately?</summary>
-          <div class="faq-body">
-            <p>No. This is our most important differentiator. Our own team handles all the plumbing, tiling and fitting. You do not need to arrange, coordinate or manage separate tradesmen. One team, one quote, one point of contact throughout. This is particularly valuable in Liverpool where coordinating multiple trades in terrace properties can be very disruptive.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-orange">SUPPLY</span>Can I supply my own bathroom suite and just pay for labour?</summary>
-          <div class="faq-body">
-            <p>Yes. If you have already purchased your bathroom suite from a showroom or retailer, we can provide a competitive labour-only quote. We are experienced fitting products from all major brands and retailers including Bathstore, Victorian Plumbing, B&Q, Wickes and specialist Liverpool bathroom showrooms. Please ensure products are complete before the installation date.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-navy">VALUE</span>Will a new bathroom increase my Liverpool property value?</summary>
-          <div class="faq-body">
-            <p>Yes. A well-fitted new bathroom can increase Liverpool property value by up to 5%. For a property worth £200,000 that is a £10,000 uplift from an investment starting at £4,500. Liverpool estate agents consistently identify bathroom quality as one of the top three factors in buyer decisions. See <a href="https://www.gov.uk/guidance/energy-performance-certificates" target="_blank" rel="noopener">GOV.UK EPC guidance</a> for how bathroom improvements affect property energy ratings.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-green">OLD HOMES</span>Can you fit a new bathroom in Liverpool's Victorian terraces?</summary>
-          <div class="faq-body">
-            <p>Yes. We specialise in Liverpool's period properties. Victorian terraces present specific challenges: limited pipe access, solid walls, old waste stacks and no cavity. Our engineers have 30 years experience working in these properties and understand how to route new plumbing with minimal disruption to original features. We assess every property individually at the free survey.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-tag tag-orange">WET ROOM</span>What is the difference between a wet room and a walk-in shower?</summary>
-          <div class="faq-body">
-            <p>A walk-in shower has a shower tray with a low lip or threshold. A wet room has no tray and uses a fully tanked and waterproofed floor that drains into a floor-level drain. Wet rooms require specialist tanking to prevent water seeping through the floor and into the room below, which is why they cost more. We strongly recommend using experienced wet room specialists rather than a standard bathroom fitter who does not specialise in tanking.</p>
-          </div>
-        </details>
+      <h2>How Our Liverpool Bathroom Installation Works</h2>
+      <p class="pf-sub">From free survey to a fully finished bathroom. Here is exactly what to expect.</p>
+      <div class="pf-steps" style="margin-top:2rem;">
+        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>We visit your Liverpool property, assess the existing bathroom, plumbing configuration, waste routing, wall construction and any specific requirements. We discuss your style preferences and provide a written fixed-price quote covering everything from strip-out to final clean.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Suite and tiles selected</strong><p>For supply and fit installations we help you select the suite, tiles and fittings within your budget. For labour-only jobs you source your own suite and tiles. We advise on tile specification, particularly for wet rooms where waterproofing matters.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Strip out and preparation</strong><p>The existing bathroom is stripped out fully. All old tiles, suite and waste pipes removed. Walls and floor are prepared for new installation. Any damp or structural issues identified at this stage are discussed with you before work continues.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>First fix plumbing and waterproofing</strong><p>All new supply and waste pipes positioned. Full tanking applied to wet areas before any tiling begins. This step is not skippable. Bathrooms that leak into the rooms below in Liverpool's terraced housing cause significant damage. We tank everything correctly.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Tiling, fitting and second fix</strong><p>Wall and floor tiling completed. Suite fitted and plumbed. All chrome fittings, accessories and towel rail installed. Silicone applied to all joints. Ventilation connected and tested.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">6</div><div><strong>Full test and clean on completion</strong><p>Every connection is tested, all taps run, toilet flushed and shower checked before we leave. The bathroom is cleaned fully including grout haze removal. You see the finished result on the day we complete, not after you have cleaned up after us.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BEFORE FAQ -->
+  <section style="background:#f97316;padding:1.75rem 0;">
+    <div class="container" style="text-align:center;">
+      <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">One team. Free survey. Fixed price. Plumbing and tiling included. No sub-contractors. Ready to book?</p>
+      <a href="tel:07399676656" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 07399 676656</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Bathroom Fitters Liverpool. Your Questions Answered</h2>
+      <p class="pf-sub">Straight answers to what Liverpool homeowners ask most before booking.</p>
+      <div class="pf-faq">
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does a bathroom installation cost in Liverpool?</summary><div class="pf-faq-body"><p>Labour for a full bathroom renovation starts from £2,500. Supply and fit including suite, tiling and fittings starts from £4,500. En suite labour from £2,000, supply and fit from £3,500. Wet rooms from £3,500 supply and fit. Shower enclosures from £400 supply and fit. Individual fixture replacement from £150 labour. The <a href="https://www.checkatrade.com/Search/Bathroom-Fitter/in/Liverpool" target="_blank" rel="noopener">Checkatrade average for Liverpool is £1,780 to £4,865 for labour only</a>. We provide a free written fixed-price quote after the site survey.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TIME</span>&nbsp; How long does a bathroom installation take?</summary><div class="pf-faq-body"><p>A standard full bathroom renovation takes 5 to 7 days. An en suite takes 3 to 5 days. A wet room takes 5 to 7 days due to the tanking and waterproofing. A single shower installation takes 1 to 2 days. We confirm the exact timeline at the free survey and work to a fixed schedule with no unexplained gaps.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">TRADES</span>&nbsp; Do you do the plumbing, tiling and fitting or just the plumbing?</summary><div class="pf-faq-body"><p>We handle everything with our own employed team. Plumbing, tiling and all fitting. No sub-contractors. You do not need to coordinate separate trades. This is the single most common reason Liverpool homeowners tell us they chose us over other bathroom fitters. One team. One schedule. One point of contact. One invoice.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">VICTORIAN</span>&nbsp; Can you fit a bathroom in a Liverpool Victorian property?</summary><div class="pf-faq-body"><p>Yes. We have 30 years experience in Liverpool's Victorian and Edwardian housing stock. These properties often have bathrooms in unusual positions, original cast iron waste pipes, limited pipe access and solid walls. We assess everything at the free survey and plan the installation around the specific characteristics of your home. We include any necessary waste pipe replacements in the quote before work begins.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">VALUE</span>&nbsp; Will a new bathroom add value to my Liverpool property?</summary><div class="pf-faq-body"><p>Yes. A modern, well-fitted bathroom can increase Liverpool property value by up to 5%. On a property worth £200,000 that is a £10,000 uplift from an investment starting at £4,500. Liverpool estate agents consistently identify bathroom quality as one of the top three factors buyers consider. A supply and fit installation typically delivers more than its cost in added value.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered for the plumbing work?</summary><div class="pf-faq-body"><p>Yes. All plumbing work is carried out by our own Gas Safe registered engineers. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. All tiling and fitting is carried out by our own employed fitters. We never use sub-contractors on any bathroom installation.</p></div></details>
       </div>
     </div>
   </section>
 
   <!-- COVERAGE -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Bathroom Fitters Across Liverpool and Merseyside</h2>
-      <p class="section-sub">We fit bathrooms across all Liverpool postcodes and the wider Merseyside area.</p>
-      <div class="coverage-grid">
-        <div class="coverage-area">
-          <h3>City and South</h3>
-          <div>
-            <span class="area-pill">City Centre L1</span>
-            <span class="area-pill">Aigburth L17</span>
-            <span class="area-pill">Allerton L18</span>
-            <span class="area-pill">Woolton L25</span>
-            <span class="area-pill">Garston L19</span>
-            <span class="area-pill">Toxteth L8</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>North and East</h3>
-          <div>
-            <span class="area-pill">Anfield L4</span>
-            <span class="area-pill">Wavertree L15</span>
-            <span class="area-pill">West Derby L12</span>
-            <span class="area-pill">Bootle L20</span>
-            <span class="area-pill">Crosby L23</span>
-            <span class="area-pill">Kirkby L32</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>Outskirts</h3>
-          <div>
-            <span class="area-pill">Formby L37</span>
-            <span class="area-pill">Southport PR8</span>
-            <span class="area-pill">Maghull L31</span>
-            <span class="area-pill">Huyton L36</span>
-            <span class="area-pill">Aintree L10</span>
-            <span class="area-pill">Childwall L16</span>
-          </div>
-        </div>
-        <div class="coverage-area">
-          <h3>Wider Merseyside</h3>
-          <div>
-            <span class="area-pill">Wirral CH</span>
-            <span class="area-pill">St Helens WA</span>
-            <span class="area-pill">Warrington WA</span>
-            <span class="area-pill">Birkenhead CH41</span>
-            <span class="area-pill">Wallasey CH44</span>
-            <span class="area-pill">Heswall CH60</span>
-          </div>
-        </div>
+      <p class="pf-sub" style="text-align:center;">We fit bathrooms across all Liverpool postcodes and the wider Merseyside area.</p>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>Liverpool City and South</h3>
+        <p>Bathroom installations across Liverpool city centre, Aigburth, Allerton, Woolton, Garston, Toxteth, Sefton Park and Mossley Hill. South Liverpool's Victorian and Edwardian properties are our most common bathroom renovation type. Period-appropriate styling in high-ceiling rooms with solid walls and original features to preserve.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">City Centre L1</span><span class="pf-pill">Aigburth L17</span><span class="pf-pill">Allerton L18</span><span class="pf-pill">Woolton L25</span><span class="pf-pill">Garston L19</span><span class="pf-pill">Toxteth L8</span><span class="pf-pill">Sefton Park L17</span><span class="pf-pill">Mossley Hill L18</span></div>
+      </div>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>North and East Liverpool</h3>
+        <p>Bathroom fitting across Anfield, Wavertree, West Derby, Bootle, Crosby, Norris Green, Fazakerley and Kirkby. North Liverpool's rental sector drives strong demand for bathroom renovations between tenancies. We work within void periods to minimise income loss for Liverpool landlords.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Anfield L4</span><span class="pf-pill">Wavertree L15</span><span class="pf-pill">West Derby L12</span><span class="pf-pill">Bootle L20</span><span class="pf-pill">Crosby L23</span><span class="pf-pill">Kirkby L32</span><span class="pf-pill">Norris Green L11</span><span class="pf-pill">Fazakerley L9</span></div>
+      </div>
+
+      <div class="pf-card" style="margin-top:2rem;">
+        <h3>Liverpool Outskirts and Wider Merseyside</h3>
+        <p>Full bathroom fitting across Formby, Southport, Maghull, Huyton, Wirral, St Helens, Warrington, Birkenhead, Wallasey and Heswall. Larger properties in Formby and the Wirral often require wet rooms and master bathroom upgrades with premium fixtures and large format tiling.</p>
+        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Formby L37</span><span class="pf-pill">Southport PR8</span><span class="pf-pill">Maghull L31</span><span class="pf-pill">Wirral CH</span><span class="pf-pill">St Helens WA</span><span class="pf-pill">Warrington WA</span><span class="pf-pill">Birkenhead CH41</span><span class="pf-pill">Heswall CH60</span></div>
       </div>
     </div>
   </section>
 
-  <!-- OTHER SERVICES -->
-  <section class="section-pad" style="background:var(--bg);">
+  <!-- RELATED SERVICES -->
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Other Plumbing and Gas Services in Liverpool</h2>
-      <p class="section-sub">Everything Liverpool homeowners and landlords need. Gas Safe registered throughout.</p>
-      <div class="bf-services-grid">
-        <a href="/gas-safety-certificate-liverpool" class="bf-service-link">
-          <strong>Gas Safety Certificates Liverpool</strong>
-          <span>CP12 landlord certificates from £65. Same-day available. Digital copy emailed same day.</span>
-        </a>
-        <a href="/boiler-installation-liverpool" class="bf-service-link">
-          <strong>Boiler Installation Liverpool</strong>
-          <span>Worcester Bosch, Vaillant, Ideal, Baxi. Fully fitted from £1,800. Free survey included.</span>
-        </a>
-        <a href="/boiler-service-liverpool" class="bf-service-link">
-          <strong>Boiler Service Liverpool</strong>
-          <span>Annual boiler service £75. Certificate provided. All brands. Annual reminders included.</span>
-        </a>
-        <a href="/central-heating-installation-liverpool" class="bf-service-link">
-          <strong>Central Heating Liverpool</strong>
-          <span>Full systems from £3,500. Radiator additions from £200. Power flushing from £350.</span>
-        </a>
-        <a href="/" class="bf-service-link">
-          <strong>Emergency Plumber Liverpool</strong>
-          <span>24/7 emergency response. Gas Safe registered. 30 minute arrival. From £80/hour.</span>
-        </a>
-        <a href="/contact-3" class="bf-service-link">
-          <strong>Book a Free Survey</strong>
-          <span>Free no-obligation site survey and written fixed-price quote. Book online or by phone.</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO COPY -->
-  <section class="section-pad" style="background:var(--white);">
-    <div class="container">
-      <div class="copy-grid">
-        <div class="copy-block">
-          <h2>Bathroom Fitting in Liverpool's Victorian and Period Properties</h2>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">What makes bathroom fitting in Liverpool's older homes different?</h3>
-          <p>Liverpool's Victorian and Edwardian terraces dominate the city's housing stock. These properties have characteristics that require specialist knowledge: solid external walls with no cavity, waste pipes routing through multiple floors, old cast iron soil stacks, original cornicing and features worth preserving, and limited space in back additions. Our team has 30 years fitting bathrooms in Liverpool's terraced streets and understands how to solve these challenges without compromising the quality of the finished result. The <a href="https://www.ciphe.org.uk" target="_blank" rel="noopener">Chartered Institute of Plumbing and Heating Engineering</a> sets the standards we work to on every installation.</p>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">Do I need planning permission for a bathroom renovation in Liverpool?</h3>
-          <p>In most cases no. Standard bathroom renovations do not require planning permission in Liverpool. However, if you are converting a bedroom to an en suite, adding an extension to house a new bathroom or making structural changes, you may need <a href="https://liverpool.gov.uk/planning-and-building-control/" target="_blank" rel="noopener">Liverpool City Council planning approval</a>. We advise on all regulatory requirements at the free survey visit.</p>
-        </div>
-        <div class="copy-block">
-          <h2>Why One Contractor Matters for Liverpool Bathroom Renovations</h2>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">What goes wrong when you use multiple tradesmen?</h3>
-          <p>The most common complaints about bathroom renovations in Liverpool come from coordination failures between separate tradesmen. The plumber finishes before the tiler is available, leaving pipework exposed. The tiler finds the plumbing is not in the right position for the planned tile layout. No one takes responsibility when a leak appears after completion because each trade blames the other. Using a single contractor eliminates all of these problems. See <a href="https://www.mybuilder.com/bathroom-fitting/bathroom-fitter-tradespeople/liverpool" target="_blank" rel="noopener">MyBuilder's advice on hiring bathroom fitters</a> for what questions to ask before committing.</p>
-          <h3 style="color:var(--navy);font-size:1rem;margin:0.75rem 0 0.4rem;text-align:center;">How do I get an accurate bathroom renovation quote in Liverpool?</h3>
-          <p>Any reputable Liverpool bathroom fitter will want to visit your property before providing a quote. Quotes given over the phone or online without a site visit are unreliable and often lead to additional charges once the work starts. We always visit, always assess and always provide a written fixed-price quote before any commitment. The <a href="https://www.citizensadvice.org.uk/consumer/buying-and-owning/buying-and-owning-your-home/getting-work-done-on-your-home/" target="_blank" rel="noopener">Citizens Advice guide on getting work done on your home</a> has useful guidance on contracts and consumer rights.</p>
-        </div>
+      <h2>Related Services in Liverpool</h2>
+      <p class="pf-sub">Everything Liverpool homeowners and landlords need. All Gas Safe registered.</p>
+      <div class="pf-related">
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool</strong><span>New boiler from £1,800 fully fitted. Pair with a bathroom renovation for maximum impact.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/central-heating-installation-liverpool" class="pf-related-link"><div><strong>Central Heating Liverpool</strong><span>Full central heating systems from £3,500. Radiator additions and smart controls.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiators Liverpool</strong><span>Heated towel rail installation from £150. Radiator supply and fit from £200.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Liverpool</strong><span>CP12 from £80. Required for landlords. Combined with boiler service for £175.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Liverpool</strong><span>Cold radiators or noisy boiler? Power flush from £350. Ideal before a bathroom renovation.</span></div><span class="pf-related-arrow">→</span></a>
+        <a href="/get-started" class="pf-related-link"><div><strong>Book a Free Survey</strong><span>Free no-obligation survey and written fixed-price quote. All Liverpool postcodes covered.</span></div><span class="pf-related-arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -810,17 +442,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container" style="text-align:center">
-      <div class="page-hero-badge" style="margin:0 auto 1.25rem;">
-        <span class="badge-dot"></span>
-        One Team · No Sub-Contractors · Liverpool and Merseyside
-      </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free Liverpool Bathroom Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Labour from £2,500. Supply and fit from £4,500. One team for everything. 12-month guarantee. No sub-contractors.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Labour from £2,500. Supply and fit from £4,500. Free survey. Fixed price. One team for plumbing, tiling and fitting. No sub-contractors.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;">CALL 07399 676656</a>
-        <a href="/contact-3" class="btn btn-outline btn-lg btn-full">Book Free Survey Online</a>
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
       </div>
-      <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Plumbing emergency? Call us 24/7 on 07399 676656 for emergency plumbing across Liverpool.</p>
+      <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
     </div>
   </section>
 
