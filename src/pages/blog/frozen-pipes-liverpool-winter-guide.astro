@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Frozen Pipes in Liverpool: How to Prevent Them and What to Do if They Burst"
+  description="Liverpool winters cause hundreds of frozen pipe emergencies every year. Most could be prevented. Here is the complete guide for homeowners in Liverpool's older housing stock."
+  canonical="https://www.idealplumbingsolutions.co.uk/blog/frozen-pipes-liverpool-winter-guide"
+>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Frozen Pipes in Liverpool: How to Prevent Them and What to Do if They Burst",
+    "description": "Liverpool winters cause hundreds of frozen pipe emergencies every year. Most could be prevented. Here is the complete guide for homeowners in Liverpool's older housing stock.",
+    "author": { "@type": "Organization", "name": "Ideal Plumbing Solutions", "url": "https://www.idealplumbingsolutions.co.uk" },
+    "publisher": { "@type": "Organization", "name": "Ideal Plumbing Solutions", "logo": { "@type": "ImageObject", "url": "https://www.idealplumbingsolutions.co.uk/ideal-plumbing-logo.png" } },
+    "datePublished": "2025-10-01",
+    "dateModified": "2026-04-01",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.idealplumbingsolutions.co.uk/blog/frozen-pipes-liverpool-winter-guide" },
+    "keywords": "frozen pipes Liverpool, prevent frozen pipes, burst pipe winter Liverpool, frozen pipe what to do"
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.idealplumbingsolutions.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Learning Centre", "item": "https://www.idealplumbingsolutions.co.uk/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Frozen Pipes in Liverpool: How to Prevent Them and What to Do if They Burst", "item": "https://www.idealplumbingsolutions.co.uk/blog/frozen-pipes-liverpool-winter-guide" }
+    ]
+  }
+  </script>
+  <style>
+    .blog-post { max-width: 780px; margin: 0 auto; padding: 0 1.25rem; }
+    .blog-breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; padding-top: 1.5rem; }
+    .blog-breadcrumb a { color: var(--navy); text-decoration: none; font-weight: 600; }
+    .blog-breadcrumb a:hover { color: var(--orange); }
+    .blog-cat-tag { display: inline-block; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; }
+    .blog-meta strong { color: var(--navy); }
+    .blog-body h2 { color: var(--navy); font-size: 1.4rem; font-weight: 800; margin: 2rem 0 0.75rem; }
+    .blog-body h3 { color: var(--navy); font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+    .blog-body p { color: var(--text); line-height: 1.75; margin-bottom: 1rem; font-size: 0.97rem; }
+    .blog-body ul, .blog-body ol { margin: 0 0 1rem 1.25rem; }
+    .blog-body li { color: var(--text); line-height: 1.7; margin-bottom: 0.35rem; font-size: 0.97rem; }
+    .blog-body a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
+    .blog-body a:hover { color: var(--orange); border-color: var(--orange); }
+    .blog-callout { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-callout strong { color: var(--navy); display: block; margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .blog-callout p { color: var(--text); margin: 0; font-size: 0.9rem; }
+    .blog-stat { background: var(--navy); border-radius: var(--radius); padding: 1.5rem; text-align: center; margin: 1.5rem 0; }
+    .blog-stat .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .blog-stat .stat-label { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-top: 0.35rem; }
+    .blog-warning { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-warning strong { color: #dc2626; display: block; margin-bottom: 0.35rem; }
+    .blog-warning p { color: #7f1d1d; margin: 0; font-size: 0.9rem; }
+    .blog-success { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-success strong { color: #15803d; display: block; margin-bottom: 0.35rem; }
+    .blog-success p { color: #166534; margin: 0; font-size: 0.9rem; }
+    .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    .price-table th { background: var(--navy); color: #fff; padding: 0.75rem 1rem; text-align: left; font-size: 0.82rem; letter-spacing: 0.03em; }
+    .price-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text); }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table .price-td { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .blog-related { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 2.5rem; }
+    .blog-related h3 { color: var(--navy); font-size: 1rem; margin-bottom: 1rem; }
+    .blog-related a { display: block; color: var(--navy); text-decoration: none; font-size: 0.88rem; font-weight: 700; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .blog-related a:last-child { border-bottom: none; }
+    .blog-related a:hover { color: var(--orange); }
+    .blog-related a::before { content: "→ "; color: var(--orange); }
+    .blog-author { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .blog-author-avatar { background: var(--navy); color: #fff; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; flex-shrink: 0; }
+    .blog-author strong { display: block; color: var(--navy); font-size: 0.88rem; }
+    .blog-author span { color: var(--muted); font-size: 0.78rem; }
+  </style>
+  <section style="background:var(--white);border-bottom:3px solid var(--orange);padding:2rem 0 0;">
+    <div class="blog-post">
+      <div class="blog-breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog">Learning Centre</a> &rsaquo; Emergency
+      </div>
+      <span class="blog-cat-tag" style="background:#dc2626;">EMERGENCY</span>
+      <h1 class="blog-title">Frozen Pipes in Liverpool: How to Prevent Them and What to Do if They Burst</h1>
+      <p style="font-size:1.05rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem;">Liverpool's Victorian housing stock is particularly vulnerable to frozen pipes in winter. Most burst pipe emergencies are preventable with simple preparation. Here is your complete guide.</p>
+      <div class="blog-meta">
+        <span><strong>By</strong> Ideal Plumbing Solutions</span>
+        <span><strong>Gas Safe Registered Engineers</strong></span>
+        <span>October 2025</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--white);padding:2rem 0 3rem;">
+    <div class="blog-post">
+      <div class="blog-body">
+        <h2>Why Liverpool Homes Are Particularly at Risk</h2>
+        <p>Liverpool experiences genuine winter cold snaps, particularly in January and February. The city's Victorian and Edwardian housing stock creates a specific vulnerability: exposed pipes in uninsulated lofts, cellar entries, outrigger extensions and external walls that were never built with modern insulation standards in mind.</p>
+        <p>A frozen pipe does not always burst immediately. The damage often happens when the pipe thaws and the ice-weakened section splits under pressure. A property that shows no problem on a freezing night can have water pouring through the ceiling the following morning when the temperature rises.</p>
+
+        <div class="blog-stat">
+          <div class="stat-num">400</div>
+          <div class="stat-label">Litres per hour that a burst pipe releases into your Liverpool property. After 30 minutes that is enough water to cause significant structural damage.</div>
+        </div>
+
+        <h2>Which Liverpool Properties Are Most at Risk?</h2>
+        <p>Not all Liverpool properties carry the same frozen pipe risk. The following are the highest-risk characteristics:</p>
+        <ul>
+          <li>Victorian and Edwardian terraces with uninsulated loft pipes or cellar water tanks</li>
+          <li>Properties with pipes running through unheated extensions, garages or outbuildings</li>
+          <li>Pipes in cellar entries (the common external passageways in Liverpool terraces)</li>
+          <li>Properties that are left unheated for extended periods such as holiday homes or properties between tenancies</li>
+          <li>Properties with very old copper pipework that has been weakened by previous frost damage</li>
+        </ul>
+
+        <h2>How to Prevent Frozen Pipes in Liverpool</h2>
+
+        <h3>Insulate exposed pipes before winter</h3>
+        <p>Lag all pipes in lofts, garages, cellar entries and external walls using foam pipe insulation. This is inexpensive from any DIY retailer and straightforward to fit. Pay particular attention to the cold water tank in the loft if your property has one. The tank itself should be insulated on all sides except the bottom, which allows heat from the property to reach it.</p>
+        <p>The <a href="https://energysavingtrust.org.uk/advice/insulation/" target="_blank" rel="noopener">Energy Saving Trust</a> recommends insulating any pipe that is not in a heated space as a priority winter preparation measure.</p>
+
+        <h3>Keep the heating on a low background temperature</h3>
+        <p>When leaving your Liverpool property for more than 24 hours in cold weather, set the heating to maintain a minimum of 13 to 15 degrees throughout the property rather than turning it off completely. This is far cheaper than repairing a burst pipe and the water damage it causes.</p>
+
+        <h3>Know where your stopcock is</h3>
+        <p>In a burst pipe emergency, seconds matter. Every occupant of a Liverpool property should know exactly where the stopcock is located. In Victorian terraces it is typically under the kitchen sink, in the cellar or near the front door. If the stopcock has not been used recently, check that it operates freely before winter arrives.</p>
+
+        <h3>Drip your taps in a severe cold snap</h3>
+        <p>If temperatures are forecast to drop below -5 degrees, leaving taps dripping slightly overnight allows water to move through the pipes, significantly reducing the risk of freezing. Moving water freezes at a much lower temperature than still water.</p>
+
+        <h2>How to Spot a Frozen Pipe Before It Bursts</h2>
+        <p>The critical window is between freezing and bursting. If you catch a frozen pipe before it splits, the repair is significantly cheaper and the damage is prevented entirely.</p>
+        <ul>
+          <li>No water from taps despite the mains supply being on</li>
+          <li>Reduced water flow from some but not all outlets</li>
+          <li>Frost visible on an exposed pipe section</li>
+          <li>Unusual bulging or discolouration on a pipe</li>
+        </ul>
+
+        <h2>What to Do if You Suspect a Frozen Pipe</h2>
+        <p>Call us on 07399 676656 immediately. Do not attempt to thaw a frozen pipe with a naked flame or boiling water. These methods cause more damage than the freeze itself.</p>
+        <p>If the pipe is accessible and you want to attempt thawing, a warm (not hot) hairdryer applied gradually from the tap end of the pipe working back toward the frozen section is the safest method. Stop immediately if you see any cracking or water seeping from a joint.</p>
+        <p>Turn off the stopcock as a precaution even if the pipe has not yet burst. If it does split during thawing, the water supply is already isolated.</p>
+
+        <h2>What to Do if the Pipe Has Already Burst</h2>
+        <p>Follow the same steps as for any burst pipe emergency:</p>
+        <ol>
+          <li>Turn off the water at the stopcock immediately</li>
+          <li>Turn off the boiler and immersion heater</li>
+          <li>Open all cold taps to drain the system</li>
+          <li>Move valuables away from the water and take photos of all damage</li>
+          <li>Call us on 07399 676656. we respond 24/7 across all Liverpool L1 to L40 postcodes</li>
+          <li>Call your insurer once the immediate emergency is managed</li>
+        </ol>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="pf-faq">
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-red">EMERGENCY</span>&nbsp; What should I do if I think a pipe has frozen?</summary><div class="pf-faq-body"><p>Turn off the stopcock as a precaution. Do not use a naked flame to thaw the pipe. Call us on 07399 676656 immediately. A frozen pipe caught before it bursts is a minor problem. A burst pipe causes water damage that can run into thousands of pounds. Acting quickly is always the right call.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">PREVENTION</span>&nbsp; What is the most important thing I can do to prevent frozen pipes?</summary><div class="pf-faq-body"><p>Insulate exposed pipes in unheated spaces before winter. Loft pipes, cellar entry pipes and pipes in unheated extensions are the highest-risk locations in Liverpool's Victorian housing. Foam pipe lagging is inexpensive and straightforward to fit. Keeping the heating on a low background temperature when leaving the property is also important.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TIMING</span>&nbsp; When are Liverpool pipes most at risk of freezing?</summary><div class="pf-faq-body"><p>January and February see the most frozen pipe emergencies in Liverpool. The risk is highest when temperatures stay below freezing for more than 24 hours, particularly after a rapid drop from mild weather. Properties left unheated over the Christmas and New Year period are particularly vulnerable.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">INSURANCE</span>&nbsp; Does home insurance cover burst pipes from freezing?</summary><div class="pf-faq-body"><p>Most standard home insurance policies cover escape of water damage from burst pipes, including those caused by freezing. Check your policy excess and whether trace and access is included. We provide full documentation for insurance claims. Take photos of all damage before any cleanup.</p></div></details>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <div class="blog-author-avatar">IP</div>
+        <div>
+          <strong>Ideal Plumbing Solutions</strong>
+          <span>Gas Safe registered engineers · 30 years Liverpool experience · Our own employed team</span>
+        </div>
+      </div>
+
+      <div class="blog-related">
+        <h3>Related Guides and Services</h3>
+        <a href="/">24/7 Emergency Plumber Liverpool: 30 Minute Response</a>
+        <a href="/blog/emergency-plumber-liverpool-what-to-do">Burst Pipe in Liverpool? What to Do Right Now</a>
+        <a href="/blog/central-heating-liverpool-victorian-terrace">Central Heating in Liverpool's Victorian Terraces</a>
+        <a href="/central-heating-installation-liverpool">Central Heating Installation Liverpool from £3,500</a>
+        <a href="/get-started">Book a Plumbing Inspection Before Winter</a>
+        <a href="/radiators-liverpool">Radiator Installation Liverpool from £200</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--navy);padding:2.5rem 0;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#ffffff;font-size:1.5rem;margin-bottom:0.5rem;">Need a Gas Safe Plumber in Liverpool?</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.5rem;">Gas Safe registered. Our own engineers. Fixed prices. All Liverpool postcodes covered.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+        <a href="/" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Call 07399 676656. 24/7</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

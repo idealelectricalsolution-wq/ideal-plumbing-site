@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know"
+  description="Around 60 people die from accidental carbon monoxide poisoning in England and Wales every year. Central heating boilers are responsible for 26% of CO deaths. Here is how to protect your Liverpool home."
+  canonical="https://www.idealplumbingsolutions.co.uk/blog/carbon-monoxide-safety-liverpool"
+>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know",
+    "description": "Around 60 people die from accidental carbon monoxide poisoning in England and Wales every year. Central heating boilers are responsible for 26% of CO deaths. Here is how to protect your Liverpool home.",
+    "author": { "@type": "Organization", "name": "Ideal Plumbing Solutions", "url": "https://www.idealplumbingsolutions.co.uk" },
+    "publisher": { "@type": "Organization", "name": "Ideal Plumbing Solutions", "logo": { "@type": "ImageObject", "url": "https://www.idealplumbingsolutions.co.uk/ideal-plumbing-logo.png" } },
+    "datePublished": "2025-12-01",
+    "dateModified": "2026-04-01",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.idealplumbingsolutions.co.uk/blog/carbon-monoxide-safety-liverpool" },
+    "keywords": "carbon monoxide safety Liverpool, CO alarm Liverpool, carbon monoxide signs home, gas boiler carbon monoxide"
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.idealplumbingsolutions.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Learning Centre", "item": "https://www.idealplumbingsolutions.co.uk/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know", "item": "https://www.idealplumbingsolutions.co.uk/blog/carbon-monoxide-safety-liverpool" }
+    ]
+  }
+  </script>
+  <style>
+    .blog-post { max-width: 780px; margin: 0 auto; padding: 0 1.25rem; }
+    .blog-breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; padding-top: 1.5rem; }
+    .blog-breadcrumb a { color: var(--navy); text-decoration: none; font-weight: 600; }
+    .blog-breadcrumb a:hover { color: var(--orange); }
+    .blog-cat-tag { display: inline-block; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; }
+    .blog-meta strong { color: var(--navy); }
+    .blog-body h2 { color: var(--navy); font-size: 1.4rem; font-weight: 800; margin: 2rem 0 0.75rem; }
+    .blog-body h3 { color: var(--navy); font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+    .blog-body p { color: var(--text); line-height: 1.75; margin-bottom: 1rem; font-size: 0.97rem; }
+    .blog-body ul, .blog-body ol { margin: 0 0 1rem 1.25rem; }
+    .blog-body li { color: var(--text); line-height: 1.7; margin-bottom: 0.35rem; font-size: 0.97rem; }
+    .blog-body a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
+    .blog-body a:hover { color: var(--orange); border-color: var(--orange); }
+    .blog-callout { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-callout strong { color: var(--navy); display: block; margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .blog-callout p { color: var(--text); margin: 0; font-size: 0.9rem; }
+    .blog-stat { background: var(--navy); border-radius: var(--radius); padding: 1.5rem; text-align: center; margin: 1.5rem 0; }
+    .blog-stat .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .blog-stat .stat-label { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-top: 0.35rem; }
+    .blog-warning { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-warning strong { color: #dc2626; display: block; margin-bottom: 0.35rem; }
+    .blog-warning p { color: #7f1d1d; margin: 0; font-size: 0.9rem; }
+    .blog-success { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-success strong { color: #15803d; display: block; margin-bottom: 0.35rem; }
+    .blog-success p { color: #166534; margin: 0; font-size: 0.9rem; }
+    .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    .price-table th { background: var(--navy); color: #fff; padding: 0.75rem 1rem; text-align: left; font-size: 0.82rem; letter-spacing: 0.03em; }
+    .price-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text); }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table .price-td { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .blog-related { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 2.5rem; }
+    .blog-related h3 { color: var(--navy); font-size: 1rem; margin-bottom: 1rem; }
+    .blog-related a { display: block; color: var(--navy); text-decoration: none; font-size: 0.88rem; font-weight: 700; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .blog-related a:last-child { border-bottom: none; }
+    .blog-related a:hover { color: var(--orange); }
+    .blog-related a::before { content: "→ "; color: var(--orange); }
+    .blog-author { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .blog-author-avatar { background: var(--navy); color: #fff; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; flex-shrink: 0; }
+    .blog-author strong { display: block; color: var(--navy); font-size: 0.88rem; }
+    .blog-author span { color: var(--muted); font-size: 0.78rem; }
+  </style>
+  <section style="background:var(--white);border-bottom:3px solid var(--orange);padding:2rem 0 0;">
+    <div class="blog-post">
+      <div class="blog-breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog">Learning Centre</a> &rsaquo; Gas Safety
+      </div>
+      <span class="blog-cat-tag" style="background:#1a3a5c;">GAS SAFETY</span>
+      <h1 class="blog-title">Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know</h1>
+      <p style="font-size:1.05rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem;">Carbon monoxide is produced by faulty gas appliances and cannot be seen, smelled or tasted. Here is what every Liverpool homeowner and landlord needs to know to protect their household.</p>
+      <div class="blog-meta">
+        <span><strong>By</strong> Ideal Plumbing Solutions</span>
+        <span><strong>Gas Safe Registered Engineers</strong></span>
+        <span>December 2025</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--white);padding:2rem 0 3rem;">
+    <div class="blog-post">
+      <div class="blog-body">
+        <h2>The Gas You Cannot See, Smell or Taste</h2>
+        <p>Carbon monoxide is produced when gas appliances burn fuel incompletely due to a lack of oxygen. It is colourless, odourless and tasteless. It kills by binding to the haemoglobin in red blood cells, preventing them from carrying oxygen around the body. The first sign that something is wrong is often a headache. By the time more severe symptoms appear, the person affected may already be too confused or incapacitated to act.</p>
+        <p>According to the <a href="https://ukhsa.blog.gov.uk/2025/11/18/how-to-protect-your-home-and-family-from-the-invisible-danger-of-carbon-monoxide/" target="_blank" rel="noopener">UK Health Security Agency</a>, around 20 people die each year in England and Wales from unintentional carbon monoxide poisoning, with many more hospitalised. In England, 68% of carbon monoxide deaths occur in autumn and winter, when gas appliances are used more intensively and windows are kept closed.</p>
+
+        <div class="blog-stat">
+          <div class="stat-num">4,000</div>
+          <div class="stat-label">Cases of carbon monoxide poisoning treated in A&E departments across England every year, according to the Department of Health and Social Care. Most were preventable.</div>
+        </div>
+
+        <h2>Why Liverpool Homes Face a Specific Risk</h2>
+        <p>Liverpool has one of the highest concentrations of Victorian and Edwardian housing in England. Many of these properties have original chimney flues, older gas fires and boiler installations that predate current safety standards. Blocked or deteriorated flues are one of the most common causes of carbon monoxide build-up in domestic properties.</p>
+        <p>A study of more than 27,000 properties by Liverpool John Moores University, supported by the Merseyside Fire Service, found that fewer than 10% of homes have a single carbon monoxide alarm. This means the vast majority of Liverpool properties have no independent detection capability if a gas appliance begins producing CO.</p>
+
+        <h2>Which Appliances Produce Carbon Monoxide?</h2>
+        <p>Any appliance that burns a carbon-based fuel can produce carbon monoxide if it is faulty, poorly maintained or inadequately ventilated. In Liverpool homes, the most common sources are:</p>
+        <ul>
+          <li>Gas boilers (responsible for 26% of CO deaths in the UK according to industry data)</li>
+          <li>Gas fires, including decorative fuel-effect fires which are not always connected to a flue</li>
+          <li>Gas cookers and hobs when burners are left on without ignition</li>
+          <li>Blocked or damaged flues on any gas appliance</li>
+          <li>Portable generators or camping stoves used indoors</li>
+        </ul>
+
+        <p>According to the <a href="https://www.hse.gov.uk/gas/domestic/co.htm" target="_blank" rel="noopener">Health and Safety Executive</a>, around 7 people die every year specifically from carbon monoxide produced by gas appliances and flues that have not been properly installed, maintained or ventilated. This is entirely preventable with regular servicing and properly installed CO alarms.</p>
+
+        <h2>Symptoms of Carbon Monoxide Poisoning</h2>
+        <p>Carbon monoxide poisoning is frequently misdiagnosed as flu, food poisoning or general fatigue. The critical distinction is that CO poisoning does not cause a raised temperature or blocked nose. If you notice the following symptoms and they improve when you leave the property, CO poisoning is a possibility that must be ruled out immediately.</p>
+
+        <ul>
+          <li>Persistent headache, particularly in the morning or after sleeping</li>
+          <li>Dizziness and nausea</li>
+          <li>Shortness of breath</li>
+          <li>Tiredness and confusion</li>
+          <li>Stomach pain</li>
+          <li>Symptoms that improve when you leave the property and return when you go back</li>
+        </ul>
+
+        <div class="blog-warning">
+          <strong>If you suspect carbon monoxide poisoning, act immediately</strong>
+          <p>Get everyone out of the property immediately. Call 999 if anyone is unwell. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:#dc2626;">Cadent Gas on 0800 111 999</a> to report the suspected leak. Do not re-enter until a Gas Safe registered engineer has inspected and cleared the property. See the <a href="https://www.nhs.uk/conditions/carbon-monoxide-poisoning/" target="_blank" rel="noopener" style="color:#dc2626;">NHS carbon monoxide guidance</a> for full medical advice.</p>
+        </div>
+
+        <h2>Visual Warning Signs on Gas Appliances</h2>
+        <p>While CO itself is invisible, incomplete combustion produces visible signs that indicate a problem. Regular visual checks of your gas appliances are an important part of home safety.</p>
+        <ul>
+          <li>Yellow or orange flames instead of a crisp blue flame (except fuel-effect fires designed to display this colour)</li>
+          <li>Soot marks, staining or black deposits around or above an appliance</li>
+          <li>Increased condensation on windows in the room with a gas appliance</li>
+          <li>Pilot light that keeps going out</li>
+          <li>A musty or unusual smell near the boiler or gas fire</li>
+        </ul>
+
+        <h2>How to Protect Your Liverpool Home</h2>
+
+        <h3>Install a carbon monoxide alarm</h3>
+        <p>An audible CO alarm is the only reliable way to detect carbon monoxide before symptoms occur. Alarms should meet <a href="https://www.bsigroup.com/en-GB/" target="_blank" rel="noopener">British Standard BS EN 50291</a>, which is mandatory for alarms sold in the UK. Place an alarm in every room containing a gas appliance and on each floor of the property. Replace the alarm as per the manufacturer's instructions, typically every 5 to 7 years.</p>
+        <p>From October 2022, <a href="https://www.gov.uk/guidance/smoke-and-carbon-monoxide-alarms-explanatory-booklet-for-landlords" target="_blank" rel="noopener">regulations require landlords in England</a> to provide a CO alarm in any room with a fixed combustion appliance (excluding gas cookers). This is now a legal requirement for landlords.</p>
+
+        <h3>Book an annual gas safety inspection</h3>
+        <p>Annual servicing by a Gas Safe registered engineer is the single most important preventative measure against CO poisoning. An engineer will check flue integrity, combustion efficiency and all safety devices. Landlords are legally required to hold a valid <a href="/gas-safety-certificate-liverpool">CP12 gas safety certificate</a>. Homeowners are strongly advised to service annually and keep their boiler warranty valid.</p>
+
+        <h3>Never block ventilation</h3>
+        <p>Gas appliances require adequate ventilation to burn correctly. Never block air bricks, ventilation grilles or flue outlets. Do not use portable gas or petrol generators indoors. Never use a gas hob or barbecue to heat a room.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="pf-faq">
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">DETECTION</span>&nbsp; How do you detect carbon monoxide if you cannot smell it?</summary><div class="pf-faq-body"><p>A carbon monoxide alarm is the only reliable way to detect it. CO has no colour, smell or taste. An audible alarm meeting British Standard BS EN 50291 should be installed in every room containing a gas appliance. Alarms typically last 5 to 7 years before needing replacement.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">SYMPTOMS</span>&nbsp; How do CO poisoning symptoms differ from flu?</summary><div class="pf-faq-body"><p>Carbon monoxide poisoning does not cause a raised temperature or blocked nose. Key symptoms include headache, dizziness, nausea and tiredness. If symptoms improve when you leave the property and return when you go back, CO poisoning is a possibility that must be investigated immediately.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LANDLORDS</span>&nbsp; Are landlords required to provide CO alarms in Liverpool?</summary><div class="pf-faq-body"><p>Yes. Since October 2022, landlords in England are legally required to provide a CO alarm in any room with a fixed combustion appliance (excluding gas cookers). Failure to comply can result in a fine of up to £5,000.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">PREVENTION</span>&nbsp; How do I prevent carbon monoxide in my Liverpool home?</summary><div class="pf-faq-body"><p>Install CO alarms in every room with a gas appliance, book an annual gas safety inspection with a Gas Safe registered engineer, never block ventilation around appliances, and check for visual warning signs such as orange flames and soot marks around appliances. Annual boiler servicing is the most important preventative step.</p></div></details>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <div class="blog-author-avatar">IP</div>
+        <div>
+          <strong>Ideal Plumbing Solutions</strong>
+          <span>Gas Safe registered engineers · 30 years Liverpool experience · Our own employed team</span>
+        </div>
+      </div>
+
+      <div class="blog-related">
+        <h3>Related Guides and Services</h3>
+        <a href="/gas-safety-certificate-liverpool">Gas Safety Certificate Liverpool from £80</a>
+        <a href="/boiler-service-liverpool">Annual Boiler Service Liverpool, £120 Fixed Price</a>
+        <a href="/blog/what-is-a-gas-safety-certificate-landlords-guide">Gas Safety Certificate: Complete Landlord Guide</a>
+        <a href="/blog/signs-your-boiler-needs-replacing-liverpool">7 Signs Your Boiler Needs Replacing</a>
+        <a href="/get-started">Book a Gas Safety Inspection</a>
+        <a href="/">24/7 Emergency Plumber Liverpool</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--navy);padding:2.5rem 0;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#ffffff;font-size:1.5rem;margin-bottom:0.5rem;">Need a Gas Safe Plumber in Liverpool?</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.5rem;">Gas Safe registered. Our own engineers. Fixed prices. All Liverpool postcodes covered.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 07399 676656</a>
+        <a href="/gas-safety-certificate-liverpool" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Gas Safety Inspection</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
