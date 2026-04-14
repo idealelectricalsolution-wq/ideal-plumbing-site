@@ -2,121 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const posts = [
-  {
-    slug: "how-much-does-a-new-boiler-cost-liverpool",
-    category: "BOILERS",
-    categoryColor: "tag-orange",
-    title: "How Much Does a New Boiler Cost in Liverpool in 2026?",
-    excerpt: "Liverpool boiler installation prices range from £1,800 for a like-for-like combi swap to £7,000 for a full system replacement. Here is exactly what affects the price and what you should pay.",
-    date: "April 2026",
-    readTime: "6 min read"
-  },
-  {
-    slug: "what-is-a-gas-safety-certificate-landlords-guide",
-    category: "GAS SAFETY",
-    categoryColor: "tag-navy",
-    title: "What Is a Gas Safety Certificate? A Liverpool Landlord's Complete Guide",
-    excerpt: "Everything Liverpool landlords need to know about the CP12. Who needs one, what is checked, the legal penalties for non-compliance and how to get it right first time.",
-    date: "March 2026",
-    readTime: "8 min read"
-  },
-  {
-    slug: "signs-your-boiler-needs-replacing-liverpool",
-    category: "BOILERS",
-    categoryColor: "tag-orange",
-    title: "7 Signs Your Liverpool Boiler Needs Replacing in 2026",
-    excerpt: "Your boiler is trying to tell you something. Here are the seven signs Liverpool homeowners miss that indicate a replacement is more cost-effective than another repair.",
-    date: "March 2026",
-    readTime: "5 min read"
-  },
-  {
-    slug: "what-is-a-power-flush-liverpool",
-    category: "CENTRAL HEATING",
-    categoryColor: "tag-green",
-    title: "What Is a Power Flush and Does My Liverpool Home Need One?",
-    excerpt: "Cold spots on radiators, a noisy boiler and slow warm-up times are classic signs. A power flush from £350 can restore efficiency and save your Liverpool home £200 a year in energy bills.",
-    date: "February 2026",
-    readTime: "5 min read"
-  },
-  {
-    slug: "emergency-plumber-liverpool-what-to-do",
-    category: "EMERGENCY",
-    categoryColor: "tag-red",
-    title: "Burst Pipe in Liverpool? Here Is Exactly What To Do Right Now",
-    excerpt: "The first 10 minutes after a burst pipe are critical. Follow these steps to minimise water damage to your Liverpool property before the plumber arrives.",
-    date: "February 2026",
-    readTime: "4 min read"
-  },
-  {
-    slug: "best-boiler-brands-liverpool-2026",
-    category: "BOILERS",
-    categoryColor: "tag-orange",
-    title: "Worcester Bosch vs Vaillant: Which Is the Best Boiler for Liverpool Homes?",
-    excerpt: "The two most popular premium boiler brands compared head to head for Liverpool properties. Efficiency, warranty, reliability and price all assessed by our Gas Safe engineers.",
-    date: "January 2026",
-    readTime: "7 min read"
-  },
-  {
-    slug: "central-heating-liverpool-victorian-terrace",
-    category: "CENTRAL HEATING",
-    categoryColor: "tag-green",
-    title: "Installing Central Heating in Liverpool's Victorian Terraces: What You Need to Know",
-    excerpt: "Liverpool has one of the highest concentrations of Victorian housing in England. Here is what is different about installing central heating in a period property and what it costs.",
-    date: "January 2026",
-    readTime: "6 min read"
-  },
-  {
-    slug: "bathroom-renovation-liverpool-property-value",
-    category: "BATHROOMS",
-    categoryColor: "tag-navy",
-    title: "Does a New Bathroom Add Value to a Liverpool Property? The Numbers.",
-    excerpt: "A well-fitted bathroom can add up to 5% to your Liverpool property value. Here is what the research shows, what styles Liverpool buyers and renters want and what you should spend.",
-    date: "December 2025",
-    readTime: "5 min read"
-  },
-  {
-    slug: "carbon-monoxide-safety-liverpool",
-    category: "GAS SAFETY",
-    categoryColor: "tag-navy",
-    title: "Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know",
-    excerpt: "Around 40 people die from accidental carbon monoxide poisoning in England every year, most from faulty gas appliances. Here is how to protect your Liverpool home.",
-    date: "December 2025",
-    readTime: "5 min read"
-  },
-  {
-    slug: "eco4-scheme-liverpool-free-boiler",
-    category: "GRANTS",
-    categoryColor: "tag-green",
-    title: "ECO4 Scheme Liverpool: Could You Get a Free Boiler in 2026?",
-    excerpt: "The ECO4 scheme provides free boilers and heating upgrades for eligible Liverpool households on benefits or low incomes. Here is how to check if you qualify and how to apply.",
-    date: "November 2025",
-    readTime: "6 min read"
-  },
-  {
-    slug: "hmo-gas-safety-liverpool-landlords",
-    category: "LANDLORDS",
-    categoryColor: "tag-orange",
-    title: "HMO Gas Safety in Liverpool: A Complete Compliance Guide for Landlords",
-    excerpt: "HMO landlords in Liverpool face stricter gas safety requirements than single-let landlords. This guide covers everything you need for Liverpool City Council HMO licensing.",
-    date: "November 2025",
-    readTime: "7 min read"
-  },
-  {
-    slug: "frozen-pipes-liverpool-winter-guide",
-    category: "EMERGENCY",
-    categoryColor: "tag-red",
-    title: "Frozen Pipes in Liverpool: How to Prevent Them and What to Do if They Burst",
-    excerpt: "Liverpool winters cause hundreds of frozen pipe emergencies every year. Most could be prevented. Here is the complete guide for homeowners in Liverpool's older housing stock.",
-    date: "October 2025",
-    readTime: "5 min read"
-  }
+  { slug: "how-much-does-a-new-boiler-cost-liverpool", category: "BOILERS", borderColor: "#f97316", title: "How Much Does a New Boiler Cost in Liverpool in 2026?", excerpt: "Liverpool boiler installation prices range from £1,800 for a like-for-like combi swap to £7,000 for a full system replacement. Here is exactly what affects the price and what you should pay.", date: "April 2026", readTime: "6 min read" },
+  { slug: "signs-your-boiler-needs-replacing-liverpool", category: "BOILERS", borderColor: "#f97316", title: "7 Signs Your Liverpool Boiler Needs Replacing in 2026", excerpt: "Your boiler is trying to tell you something. Here are the seven signs Liverpool homeowners miss that indicate a replacement is more cost-effective than another repair.", date: "March 2026", readTime: "5 min read" },
+  { slug: "best-boiler-brands-liverpool-2026", category: "BOILERS", borderColor: "#f97316", title: "Worcester Bosch vs Vaillant: Which Is the Best Boiler for Liverpool Homes?", excerpt: "The two most popular premium boiler brands compared head to head. Efficiency, warranty, reliability and price all assessed by our Gas Safe engineers.", date: "January 2026", readTime: "7 min read" },
+  { slug: "carbon-monoxide-safety-liverpool", category: "GAS SAFETY", borderColor: "#1a3a5c", title: "Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know", excerpt: "Around 40 people die from accidental carbon monoxide poisoning in England every year, most from faulty gas appliances. Here is how to protect your Liverpool home.", date: "December 2025", readTime: "5 min read" },
+  { slug: "hmo-gas-safety-liverpool-landlords", category: "LANDLORDS", borderColor: "#7c3aed", title: "HMO Gas Safety in Liverpool: A Complete Compliance Guide for Landlords", excerpt: "HMO landlords in Liverpool face stricter gas safety requirements. This guide covers everything you need for Liverpool City Council HMO licensing.", date: "November 2025", readTime: "7 min read" },
+  { slug: "what-is-a-power-flush-liverpool", category: "CENTRAL HEATING", borderColor: "#16a34a", title: "What Is a Power Flush and Does My Liverpool Home Need One?", excerpt: "Cold spots on radiators, a noisy boiler and slow warm-up times are classic signs. A power flush from £350 can restore efficiency and save your Liverpool home £200 a year in energy bills.", date: "February 2026", readTime: "5 min read" },
+  { slug: "central-heating-liverpool-victorian-terrace", category: "CENTRAL HEATING", borderColor: "#16a34a", title: "Installing Central Heating in Liverpool's Victorian Terraces: What You Need to Know", excerpt: "Liverpool has one of the highest concentrations of Victorian housing in England. Here is what is different about installing central heating in a period property and what it costs.", date: "January 2026", readTime: "6 min read" },
+  { slug: "emergency-plumber-liverpool-what-to-do", category: "EMERGENCY", borderColor: "#dc2626", title: "Burst Pipe in Liverpool? Here Is Exactly What To Do Right Now", excerpt: "The first 10 minutes after a burst pipe are critical. Follow these steps to minimise water damage to your Liverpool property before the plumber arrives.", date: "February 2026", readTime: "4 min read" },
+  { slug: "frozen-pipes-liverpool-winter-guide", category: "EMERGENCY", borderColor: "#dc2626", title: "Frozen Pipes in Liverpool: How to Prevent Them and What to Do if They Burst", excerpt: "Liverpool winters cause hundreds of frozen pipe emergencies every year. Most could be prevented. Here is the complete guide for homeowners in Liverpool's older housing stock.", date: "October 2025", readTime: "5 min read" },
+  { slug: "bathroom-renovation-liverpool-property-value", category: "BATHROOMS", borderColor: "#0891b2", title: "Does a New Bathroom Add Value to a Liverpool Property? The Numbers.", excerpt: "A well-fitted bathroom can add up to 5% to your Liverpool property value. Here is what the research shows and what you should spend.", date: "December 2025", readTime: "5 min read" },
+  { slug: "eco4-scheme-liverpool-free-boiler", category: "GRANTS", borderColor: "#16a34a", title: "ECO4 Scheme Liverpool: Could You Get a Free Boiler in 2026?", excerpt: "The ECO4 scheme provides free boilers and heating upgrades for eligible Liverpool households on benefits or low incomes. Here is how to check if you qualify.", date: "November 2025", readTime: "6 min read" },
 ];
-
-const categories = ["All", "Boilers", "Gas Safety", "Central Heating", "Bathrooms", "Emergency", "Landlords", "Grants"];
 ---
 
 <BaseLayout
-  title="Plumbing and Gas Learning Centre Liverpool | Ideal Plumbing Solutions Blog"
+  title="Plumbing and Gas Learning Centre Liverpool | Ideal Plumbing Solutions"
   description="Expert plumbing and gas advice for Liverpool homeowners and landlords. Boiler costs, gas safety guides, central heating tips and emergency advice from Gas Safe registered engineers."
   canonical="https://www.idealplumbingsolutions.co.uk/blog"
 >
@@ -124,278 +25,264 @@ const categories = ["All", "Boilers", "Gas Safety", "Central Heating", "Bathroom
   <style>
     .blog-page h2 { text-align: center; color: var(--navy); }
     .blog-page .section-sub { text-align: center; }
-
-    .category-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-    .category-pill {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 0.4rem 1rem;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--navy);
-      cursor: pointer;
-      transition: all 0.15s;
-      text-decoration: none;
-    }
-    .category-pill:hover,
-    .category-pill.active {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-    }
-
-    .posts-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .post-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.18s, box-shadow 0.18s;
-      text-decoration: none;
-    }
-    .post-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
-    }
-    .post-card-top {
-      background: var(--navy);
-      padding: 1.75rem 1.75rem 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .post-card-body {
-      padding: 1.25rem 1.75rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .post-card-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.3;
-      margin: 0;
-    }
-    .post-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .post-date { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
-    .post-read { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
-    .post-card-excerpt {
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.65;
-      flex: 1;
-      margin-bottom: 1rem;
-    }
-    .post-read-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--orange);
-      text-decoration: none;
-      border-bottom: none;
-    }
-
-    .tag-orange { background: var(--orange); color: var(--white); }
-    .tag-navy { background: rgba(255,255,255,0.15); color: var(--white); border: 1px solid rgba(255,255,255,0.25); }
-    .tag-green { background: #16a34a; color: var(--white); }
-    .tag-red { background: var(--red); color: var(--white); }
-
-    .faq-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 800;
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-sm);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      align-self: flex-start;
-    }
-
-    .newsletter-box {
-      background: var(--navy);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .newsletter-box h3 { color: var(--orange); font-size: 1.3rem; margin-bottom: 0.5rem; }
-    .newsletter-box p { color: rgba(255,255,255,0.8); font-size: 0.92rem; margin-bottom: 1.25rem; }
-    .newsletter-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .newsletter-form input {
-      padding: 0.75rem 1rem;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.1);
-      color: var(--white);
-      font-size: 0.95rem;
-      font-family: inherit;
-      width: 100%;
-      box-sizing: border-box;
-    }
+    .category-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.5rem; }
+    .category-pill { background: var(--white); border: 1px solid var(--border); border-radius: 999px; padding: 0.4rem 1rem; font-size: 0.82rem; font-weight: 700; color: var(--navy); transition: all 0.15s; text-decoration: none; }
+    .category-pill:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .posts-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.25rem; }
+    @media (min-width: 640px) { .posts-grid { grid-template-columns: 1fr 1fr; } }
+    .post-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.18s, box-shadow 0.18s; text-decoration: none; color: inherit; }
+    .post-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .post-card-bar { height: 4px; flex-shrink: 0; }
+    .post-card-inner { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+    .post-cat-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.6rem; align-self: flex-start; color: #fff; }
+    .post-card-title { font-size: 1rem; font-weight: 800; color: var(--navy); line-height: 1.35; margin: 0 0 0.5rem; }
+    .post-meta { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .post-card-excerpt { color: var(--muted); font-size: 0.87rem; line-height: 1.65; flex: 1; margin-bottom: 1rem; }
+    .post-read-link { font-size: 0.85rem; font-weight: 700; color: var(--orange); }
+    .category-section { margin-top: 2.5rem; }
+    .cat-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+    .cat-header-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .cat-header h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin: 0; }
+    .featured-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--navy); border-radius: var(--radius); padding: 1.5rem 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.75rem; }
+    .featured-label { font-size: 0.7rem; font-weight: 800; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; }
+    .featured-card h3 { color: var(--navy); font-size: 1.2rem; margin: 0; line-height: 1.35; }
+    .featured-card p { color: var(--muted); font-size: 0.88rem; margin: 0; max-width: 520px; }
+    .newsletter-box { background: var(--navy); border-radius: var(--radius); padding: 2rem; text-align: center; margin-top: 2rem; }
+    .newsletter-box h3 { color: var(--orange); font-size: 1.2rem; margin-bottom: 0.4rem; }
+    .newsletter-box > p { color: rgba(255,255,255,0.8); font-size: 0.88rem; margin-bottom: 1.25rem; }
+    .newsletter-form { display: flex; flex-direction: column; gap: 0.75rem; max-width: 380px; margin: 0 auto; }
+    .newsletter-form input { padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); background: rgba(255,255,255,0.1); color: var(--white); font-size: 0.95rem; font-family: inherit; width: 100%; box-sizing: border-box; }
     .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
     .newsletter-form input:focus { outline: none; border-color: var(--orange); }
-    .newsletter-note { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.25rem; }
-
-    .featured-card {
-      background: var(--bg);
-      border: 2px solid var(--navy);
-      border-top: 4px solid var(--orange);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    .featured-label { font-size: 0.72rem; font-weight: 800; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-    .featured-card h3 { color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem; }
-    .featured-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
-
-    .blog-page a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
+    .newsletter-note { font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+    .blog-page a { color: var(--navy); font-weight: 700; text-decoration: none; }
     .blog-page .btn { border-bottom: none; }
-    .blog-page a:hover { border-color: var(--navy); }
-    .post-card { border-bottom: none; }
-    .post-read-link { border-bottom: none !important; }
+    .service-link { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: var(--radius-sm); padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; text-decoration: none; }
+    .service-link:hover { background: #fff7ed; }
+    .service-link span { font-weight: 700; color: var(--navy); font-size: 0.88rem; }
+    .service-link em { color: var(--orange); font-weight: 900; font-style: normal; }
   </style>
 
   <div class="blog-page">
 
-  <!-- HERO -->
   <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge">
+    <div class="container" style="text-align:center;">
+      <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="badge-dot"></span>
         Expert Advice from Gas Safe Registered Engineers
       </div>
       <h1>Liverpool Plumbing and Gas Learning Centre</h1>
-      <p class="page-hero-sub" style="font-size:1rem;">Free guides, cost breakdowns and expert advice for Liverpool homeowners and landlords. Written by our Gas Safe registered engineers with 30 years of Liverpool experience.</p>
+      <p class="page-hero-sub">Free guides and expert advice for Liverpool homeowners and landlords. Written by our Gas Safe engineers with 30 years of Liverpool experience.</p>
     </div>
   </section>
 
-  <!-- FEATURED POST -->
-  <section class="section-pad" style="background:var(--bg);">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Most Popular Guide</h2>
-      <p class="section-sub">Our most read article for Liverpool landlords and homeowners this month.</p>
-
+      <h2>Most Read This Month</h2>
+      <p class="section-sub" style="margin-bottom:1.5rem;">Our most popular guide for Liverpool landlords right now.</p>
       <div class="featured-card">
         <div class="featured-label">Most Read This Month</div>
-        <span class="faq-tag tag-navy" style="margin:0 auto 0.75rem;">GAS SAFETY</span>
+        <span style="display:inline-block;background:#1a3a5c;color:#fff;font-size:0.7rem;font-weight:800;padding:0.2rem 0.6rem;border-radius:999px;letter-spacing:0.06em;text-transform:uppercase;">GAS SAFETY</span>
         <h3>What Is a Gas Safety Certificate? A Liverpool Landlord's Complete Guide</h3>
-        <p>Everything Liverpool landlords need to know about the CP12. Who needs one, what happens during the inspection, the legal penalties for non-compliance and how to avoid a £6,000 fine. Written by our Gas Safe engineers.</p>
-        <a href="/blog/what-is-a-gas-safety-certificate-landlords-guide" class="btn btn-orange">Read the Guide</a>
+        <p>Everything Liverpool landlords need to know about the CP12. Who needs one, what is checked, the legal penalties and how to avoid a £6,000 fine. Written by our Gas Safe engineers.</p>
+        <a href="/blog/what-is-a-gas-safety-certificate-landlords-guide" class="btn btn-orange" style="color:#ffffff;">Read the Guide</a>
       </div>
-
       <div class="category-pills">
-        {categories.map(cat => (
-          <a href={cat === "All" ? "/blog" : `/blog/category/${cat.toLowerCase().replace(" ", "-")}`} class="category-pill">
-            {cat}
-          </a>
-        ))}
+        <a href="#all-guides" class="category-pill">All</a>
+        <a href="#boilers" class="category-pill">Boilers</a>
+        <a href="#gas-safety" class="category-pill">Gas Safety</a>
+        <a href="#central-heating" class="category-pill">Central Heating</a>
+        <a href="#emergency" class="category-pill">Emergency</a>
+        <a href="#bathrooms" class="category-pill">Bathrooms</a>
+        <a href="#landlords" class="category-pill">Landlords</a>
+        <a href="#grants" class="category-pill">Grants</a>
       </div>
     </div>
   </section>
 
-  <!-- ALL POSTS -->
-  <section class="section-pad" style="background:var(--white);">
+  <section class="pf-section" style="background:var(--white);" id="all-guides">
     <div class="container">
       <h2>All Guides and Articles</h2>
-      <p class="section-sub">{posts.length} guides covering boilers, gas safety, central heating, bathrooms and emergency plumbing for Liverpool homeowners.</p>
+      <p class="section-sub">11 guides covering boilers, gas safety, central heating, bathrooms and emergency plumbing for Liverpool homeowners and landlords.</p>
 
-      <div class="posts-grid">
-        {posts.map(post => (
-          <a href={`/blog/${post.slug}`} class="post-card">
-            <div class="post-card-top">
-              <span class={`faq-tag ${post.categoryColor}`}>{post.category}</span>
-              <h3 class="post-card-title">{post.title}</h3>
-              <div class="post-meta">
-                <span class="post-date">{post.date}</span>
-                <span class="post-date">·</span>
-                <span class="post-read">{post.readTime}</span>
+      <div class="category-section" id="boilers">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#f97316;"></div>
+          <h3>Boilers</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "BOILERS").map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
               </div>
-            </div>
-            <div class="post-card-body">
-              <p class="post-card-excerpt">{post.excerpt}</p>
-              <span class="post-read-link">Read guide →</span>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="category-section" id="gas-safety">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#1a3a5c;"></div>
+          <h3>Gas Safety</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "GAS SAFETY").map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
 
       <div class="newsletter-box">
         <h3>Get Liverpool Plumbing Advice by Email</h3>
         <p>Seasonal tips, new guides and reminders before your annual boiler service or gas safety certificate expires. No spam. Unsubscribe any time.</p>
-        <form
-          name="newsletter"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          class="newsletter-form"
-        >
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
           <input type="hidden" name="form-name" value="newsletter" />
           <div style="display:none;"><input name="bot-field" /></div>
           <input type="email" name="email" placeholder="Your email address" required />
-          <button type="submit" class="btn btn-orange btn-full">Subscribe to Updates</button>
+          <button type="submit" class="btn btn-orange btn-full" style="color:#ffffff;">Subscribe to Updates</button>
           <p class="newsletter-note">We will never share your email. Unsubscribe at any time.</p>
         </form>
+      </div>
+
+      <div class="category-section" id="central-heating">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#16a34a;"></div>
+          <h3>Central Heating</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "CENTRAL HEATING").map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="category-section" id="emergency">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#dc2626;"></div>
+          <h3>Emergency</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "EMERGENCY").map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="category-section" id="bathrooms">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#0891b2;"></div>
+          <h3>Bathrooms</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "BATHROOMS").map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="category-section" id="landlords">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#7c3aed;"></div>
+          <h3>Landlords</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "LANDLORDS").map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="category-section" id="grants">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#16a34a;"></div>
+          <h3>Grants</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "GRANTS").map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- QUICK LINKS -->
-  <section class="section-pad" style="background:var(--bg);">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Need a Plumber in Liverpool?</h2>
       <p class="section-sub">Reading is great. But if you need us, we are one call away. Gas Safe registered. Our own engineers. No sub-contractors.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:1.5rem auto 0;">
-        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.2rem;border-bottom:none;">CALL 07399 676656</a>
-        <a href="/get-started" class="btn btn-navy btn-lg btn-full" style="border-bottom:none;">Book Online or Free Survey</a>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:340px;margin:1.5rem auto;">
+        <a href="tel:07399676656" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.2rem;color:#ffffff;">CALL 07399 676656</a>
+        <a href="/get-started" class="btn btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book Online or Free Survey</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr;gap:0.75rem;margin-top:1.5rem;">
-        <a href="/gas-safety-certificate-liverpool" style="background:var(--white);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius-sm);padding:0.9rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <span style="font-weight:700;color:var(--navy);font-size:0.9rem;">Gas Safety Certificates from £65</span>
-          <span style="color:var(--orange);font-weight:900;">→</span>
-        </a>
-        <a href="/boiler-installation-liverpool" style="background:var(--white);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius-sm);padding:0.9rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <span style="font-weight:700;color:var(--navy);font-size:0.9rem;">New Boiler Installation from £1,800</span>
-          <span style="color:var(--orange);font-weight:900;">→</span>
-        </a>
-        <a href="/boiler-service-liverpool" style="background:var(--white);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius-sm);padding:0.9rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <span style="font-weight:700;color:var(--navy);font-size:0.9rem;">Annual Boiler Service £75</span>
-          <span style="color:var(--orange);font-weight:900;">→</span>
-        </a>
-        <a href="/bathroom-fitters-liverpool" style="background:var(--white);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius-sm);padding:0.9rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:none;">
-          <span style="font-weight:700;color:var(--navy);font-size:0.9rem;">Bathroom Fitting from £2,500 Labour</span>
-          <span style="color:var(--orange);font-weight:900;">→</span>
-        </a>
+      <div style="display:grid;grid-template-columns:1fr;gap:0.6rem;margin-top:1.5rem;">
+        <a href="/gas-safety-certificate-liverpool" class="service-link"><span>Gas Safety Certificates from £80</span><em>&rarr;</em></a>
+        <a href="/boiler-installation-liverpool" class="service-link"><span>New Boiler Installation from £1,800</span><em>&rarr;</em></a>
+        <a href="/boiler-service-liverpool" class="service-link"><span>Annual Boiler Service £120</span><em>&rarr;</em></a>
+        <a href="/central-heating-installation-liverpool" class="service-link"><span>Central Heating from £3,500</span><em>&rarr;</em></a>
+        <a href="/bathroom-fitters-liverpool" class="service-link"><span>Bathroom Fitting from £2,500 Labour</span><em>&rarr;</em></a>
+        <a href="/hot-water-cylinders-liverpool" class="service-link"><span>Hot Water Cylinders from £600</span><em>&rarr;</em></a>
+        <a href="/showers-liverpool" class="service-link"><span>Shower Installation from £200</span><em>&rarr;</em></a>
       </div>
     </div>
   </section>

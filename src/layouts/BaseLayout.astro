@@ -131,58 +131,212 @@ const { title, description, canonical } = Astro.props;
       background: var(--navy);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 200;
       border-bottom: 3px solid var(--orange);
     }
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 1.25rem;
+      padding: 0.6rem 1.25rem;
       max-width: 1140px;
       margin: 0 auto;
+      gap: 1rem;
     }
+
+    /* LOGO */
     .nav-logo {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       color: var(--white);
       text-decoration: none;
-      line-height: 1.1;
+      line-height: 1;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-logo span { color: var(--orange); }
-    .nav-logo small { display: block; font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; text-transform: uppercase; }
-    .nav-phone {
+    .nav-logo small {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 0.1rem;
+    }
+
+    /* DESKTOP LINKS */
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 0.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
     }
+    .nav-links > li { position: relative; }
+    .nav-links > li > a,
+    .nav-links > li > button {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: color 0.15s;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      white-space: nowrap;
+    }
+    .nav-links > li > a:hover,
+    .nav-links > li > button:hover { color: var(--orange); }
+    .nav-links > li > a.nav-emergency { color: #fca5a5; }
+    .nav-links > li > a.nav-emergency:hover { color: #f87171; }
+
+    /* DROPDOWN */
+    .nav-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      min-width: 520px;
+      padding: 1rem;
+      display: none;
+      z-index: 300;
+    }
+    .nav-dropdown-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem;
+    }
+    .nav-dropdown a {
+      display: block;
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--navy);
+      font-size: 0.83rem;
+      font-weight: 700;
+      transition: background 0.12s, color 0.12s;
+    }
+    .nav-dropdown a:hover { background: #fff7ed; color: var(--orange); }
+    .nav-dropdown a small { display: block; font-weight: 400; color: var(--muted); font-size: 0.73rem; margin-top: 0.1rem; }
+
+    /* Show dropdown on hover or focus-within */
+    .has-dropdown:hover .nav-dropdown,
+    .has-dropdown:focus-within .nav-dropdown { display: block; }
+    .has-dropdown > button::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
+
+    /* CALL BUTTON */
+    .nav-phone { flex-shrink: 0; }
     .nav-phone a.call {
       background: var(--orange);
       color: var(--white);
-      padding: 0.5rem 1.25rem;
+      padding: 0.45rem 1rem;
       border-radius: var(--radius-sm);
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-decoration: none;
       letter-spacing: 0.03em;
+      white-space: nowrap;
     }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
+
+    /* HAMBURGER */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
     }
-    .nav-links a {
-      color: rgba(255,255,255,0.8);
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    /* MOBILE NAV */
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: #122840;
+      padding: 0.75rem 1.25rem 1rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a, .nav-mobile button.nav-mob-toggle {
+      color: rgba(255,255,255,0.85);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 700;
-      transition: color 0.15s;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: none;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
     }
-    .nav-links a:hover { color: var(--orange); }
-    @media (max-width: 768px) {
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mob-sub {
+      display: none;
+      flex-direction: column;
+      padding-left: 1rem;
+      border-left: 2px solid var(--orange);
+      margin: 0.25rem 0 0.5rem;
+    }
+    .nav-mob-sub.open { display: flex; }
+    .nav-mob-sub a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      padding: 0.4rem 0;
+      border-bottom: none;
+    }
+    .nav-mob-sub a:hover { color: var(--orange); }
+    .nav-mobile a.nav-mob-emergency { color: #fca5a5; }
+    .nav-mob-cta {
+      margin-top: 0.75rem;
+      background: var(--orange);
+      color: var(--white) !important;
+      border-radius: var(--radius-sm);
+      text-align: center !important;
+      justify-content: center !important;
+      padding: 0.65rem 1rem !important;
+      border-bottom: none !important;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem !important;
+      letter-spacing: 0.03em;
+    }
+
+    @media (max-width: 900px) {
       .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
     }
 
     /* ========================================
@@ -857,26 +1011,119 @@ const { title, description, canonical } = Astro.props;
 <body>
 
   <!-- NAV -->
-  <nav class="site-nav">
+  <nav class="site-nav" id="site-nav">
     <div class="nav-inner">
+
       <a href="/" class="nav-logo">
-        Ideal <span>Plumbing</span> Solutions
-        <small>Liverpool · Gas Safe Registered</small>
+        Ideal <span>Plumbing</span>
+        <small>Gas Safe · Liverpool</small>
       </a>
+
       <ul class="nav-links">
-        <li><a href="/">Emergency</a></li>
-        <li><a href="/boiler-installation-liverpool">Boilers</a></li>
-        <li><a href="/gas-safety-certificate-liverpool">Gas Safety</a></li>
-        <li><a href="/central-heating-installation-liverpool">Heating</a></li>
-        <li><a href="/bathroom-fitters-liverpool">Bathrooms</a></li>
-        <li><a href="/hot-water-cylinders-liverpool">Hot Water</a></li>
-        <li><a href="/showers-liverpool">Showers</a></li>
+        <li><a href="/" class="nav-emergency">Emergency</a></li>
+
+        <li class="has-dropdown">
+          <button>Services</button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-grid">
+              <a href="/boiler-installation-liverpool">
+                Boiler Installation
+                <small>From £1,800 fully fitted</small>
+              </a>
+              <a href="/boiler-service-liverpool">
+                Boiler Service
+                <small>£120 fixed price</small>
+              </a>
+              <a href="/gas-safety-certificate-liverpool">
+                Gas Safety Certificate
+                <small>CP12 from £80</small>
+              </a>
+              <a href="/central-heating-installation-liverpool">
+                Central Heating
+                <small>Full systems from £3,500</small>
+              </a>
+              <a href="/power-flushing-liverpool">
+                Power Flushing
+                <small>From £350</small>
+              </a>
+              <a href="/radiators-liverpool">
+                Radiators
+                <small>Supply and fit from £200</small>
+              </a>
+              <a href="/bathroom-fitters-liverpool">
+                Bathroom Fitters
+                <small>Labour from £2,500</small>
+              </a>
+              <a href="/hot-water-cylinders-liverpool">
+                Hot Water Cylinders
+                <small>Vented from £600</small>
+              </a>
+              <a href="/showers-liverpool">
+                Shower Installation
+                <small>From £200</small>
+              </a>
+              <a href="/get-started">
+                Book a Free Survey
+                <small>All services · All Liverpool postcodes</small>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="/blog">Learning Centre</a></li>
+        <li><a href="/get-started">Get Started</a></li>
       </ul>
-      <div class="nav-phone">
-        <a href="tel:07399676656" class="call">Call Now</a>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-phone">
+          <a href="tel:07399676656" class="call">Call Now</a>
+        </div>
       </div>
+
+    </div>
+
+    <!-- MOBILE NAV -->
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="/" class="nav-mob-emergency">Emergency Plumber 24/7</a>
+      <button class="nav-mob-toggle" id="mob-services-toggle">
+        Services <span id="mob-arrow">▾</span>
+      </button>
+      <div class="nav-mob-sub" id="mob-services-sub">
+        <a href="/boiler-installation-liverpool">Boiler Installation</a>
+        <a href="/boiler-service-liverpool">Boiler Service</a>
+        <a href="/gas-safety-certificate-liverpool">Gas Safety Certificate</a>
+        <a href="/central-heating-installation-liverpool">Central Heating</a>
+        <a href="/power-flushing-liverpool">Power Flushing</a>
+        <a href="/radiators-liverpool">Radiators</a>
+        <a href="/bathroom-fitters-liverpool">Bathroom Fitters</a>
+        <a href="/hot-water-cylinders-liverpool">Hot Water Cylinders</a>
+        <a href="/showers-liverpool">Shower Installation</a>
+      </div>
+      <a href="/blog">Learning Centre</a>
+      <a href="/get-started">Get Started</a>
+      <a href="tel:07399676656" class="nav-mob-cta">CALL 07399 676656</a>
     </div>
   </nav>
+
+  <script>
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('nav-mobile');
+    const mobServicesToggle = document.getElementById('mob-services-toggle');
+    const mobServicesSub = document.getElementById('mob-services-sub');
+    const mobArrow = document.getElementById('mob-arrow');
+
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+
+    mobServicesToggle.addEventListener('click', () => {
+      mobServicesSub.classList.toggle('open');
+      mobArrow.textContent = mobServicesSub.classList.contains('open') ? '▴' : '▾';
+    });
+  </script>
 
   <slot />
 
