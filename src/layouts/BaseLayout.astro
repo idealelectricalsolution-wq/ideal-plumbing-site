@@ -17,7 +17,6 @@ const { title, description, canonical } = Astro.props;
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* ===== BASE TOKENS ===== */
       --navy:       #1a3a5c;
       --navy-mid:   #2256a0;
       --orange:     #f97316;
@@ -37,8 +36,6 @@ const { title, description, canonical } = Astro.props;
       --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
       --shadow:     0 4px 16px rgba(0,0,0,0.10);
 
-      /* ===== PF DESIGN SYSTEM ALIASES ===== */
-      /* These map the page design system to the base tokens */
       --pf-white:         #ffffff;
       --pf-off:           #f8fafc;
       --pf-border:        #e2e8f0;
@@ -52,8 +49,6 @@ const { title, description, canonical } = Astro.props;
       --pf-radius:        10px;
       --pf-shadow:        0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
       --pf-shadow-md:     0 4px 12px rgba(0,0,0,0.08);
-
-      /* ===== PF TINT COLOURS (no base equivalent) ===== */
       --pf-orange-light:  #fff7ed;
       --pf-orange-border: #fed7aa;
       --pf-green-light:   #f0fdf4;
@@ -82,8 +77,8 @@ const { title, description, canonical } = Astro.props;
     }
 
     h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); }
-    h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
-    h3 { font-size: 1.4rem; }
+    h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); text-align: center; }
+    h3 { font-size: 1.4rem; text-align: center; }
 
     a { color: inherit; }
     img { max-width: 100%; display: block; }
@@ -143,8 +138,6 @@ const { title, description, canonical } = Astro.props;
       margin: 0 auto;
       gap: 1rem;
     }
-
-    /* LOGO */
     .nav-logo {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -165,8 +158,6 @@ const { title, description, canonical } = Astro.props;
       text-transform: uppercase;
       margin-top: 0.1rem;
     }
-
-    /* DESKTOP LINKS */
     .nav-links {
       display: flex;
       align-items: center;
@@ -200,8 +191,6 @@ const { title, description, canonical } = Astro.props;
     .nav-links > li > button:hover { color: var(--orange); }
     .nav-links > li > a.nav-emergency { color: #fca5a5; }
     .nav-links > li > a.nav-emergency:hover { color: #f87171; }
-
-    /* DROPDOWN */
     .nav-dropdown {
       position: absolute;
       top: calc(100% + 8px);
@@ -231,16 +220,13 @@ const { title, description, canonical } = Astro.props;
       font-size: 0.83rem;
       font-weight: 700;
       transition: background 0.12s, color 0.12s;
+      text-align: left;
     }
     .nav-dropdown a:hover { background: #fff7ed; color: var(--orange); }
     .nav-dropdown a small { display: block; font-weight: 400; color: var(--muted); font-size: 0.73rem; margin-top: 0.1rem; }
-
-    /* Show dropdown on hover or focus-within */
     .has-dropdown:hover .nav-dropdown,
     .has-dropdown:focus-within .nav-dropdown { display: block; }
     .has-dropdown > button::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
-
-    /* CALL BUTTON */
     .nav-phone { flex-shrink: 0; }
     .nav-phone a.call {
       background: var(--orange);
@@ -254,8 +240,6 @@ const { title, description, canonical } = Astro.props;
       letter-spacing: 0.03em;
       white-space: nowrap;
     }
-
-    /* HAMBURGER */
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -273,8 +257,6 @@ const { title, description, canonical } = Astro.props;
       border-radius: 2px;
       transition: all 0.2s;
     }
-
-    /* MOBILE NAV */
     .nav-mobile {
       display: none;
       flex-direction: column;
@@ -333,7 +315,6 @@ const { title, description, canonical } = Astro.props;
       font-size: 1rem !important;
       letter-spacing: 0.03em;
     }
-
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
@@ -368,8 +349,7 @@ const { title, description, canonical } = Astro.props;
       white-space: nowrap;
     }
     .live-dot {
-      width: 8px;
-      height: 8px;
+      width: 8px; height: 8px;
       background: #16a34a;
       border-radius: 50%;
       display: inline-block;
@@ -380,8 +360,7 @@ const { title, description, canonical } = Astro.props;
       50% { opacity: 0.6; transform: scale(1.3); }
     }
     .badge-dot {
-      width: 8px;
-      height: 8px;
+      width: 8px; height: 8px;
       background: var(--orange);
       border-radius: 50%;
       display: inline-block;
@@ -431,16 +410,41 @@ const { title, description, canonical } = Astro.props;
     .section-sub { text-align: center; font-size: 1.1rem; color: var(--muted); margin-bottom: 2rem; max-width: 640px; margin-left: auto; margin-right: auto; }
 
     /* ========================================
-       PF DESIGN SYSTEM — shared across all pages
+       PF DESIGN SYSTEM
     ======================================== */
-
     .pf { font-family: inherit; }
     .pf * { box-sizing: border-box; }
-    .pf h2 { color: var(--pf-navy); text-align: center; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 0.5rem; }
-    .pf h3 { color: var(--pf-navy); font-size: 1.05rem; margin: 0 0 0.4rem; }
-    .pf p { color: var(--pf-text); font-size: 0.95rem; line-height: 1.75; margin: 0 0 0.75rem; }
+
+    .pf h2 {
+      color: var(--pf-navy);
+      text-align: center;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin: 0 0 0.5rem;
+    }
+    .pf h3 {
+      color: var(--pf-navy);
+      font-size: 1.05rem;
+      margin: 0 0 0.4rem;
+      text-align: center;
+    }
+    .pf p {
+      color: var(--pf-text);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin: 0 0 0.75rem;
+    }
     .pf p:last-child { margin-bottom: 0; }
-    .pf-sub { text-align: center; color: var(--pf-muted); font-size: 0.95rem; margin: 0 auto 0.25rem; max-width: 640px; }
+
+    /* pf-sub uses .pf .pf-sub for higher specificity than .pf p */
+    .pf .pf-sub {
+      text-align: center;
+      color: var(--pf-muted);
+      font-size: 0.95rem;
+      margin: 0 auto 0.25rem;
+      max-width: 640px;
+      display: block;
+    }
+
     .pf a { color: var(--pf-navy); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.2); }
     .pf a:hover { border-color: var(--pf-navy); }
     .pf .btn { border-bottom: none; }
@@ -449,11 +453,10 @@ const { title, description, canonical } = Astro.props;
     .pf .btn-orange { color: #ffffff; }
     .pf .btn-orange:hover { color: #ffffff; border-bottom: none; }
 
-    /* Section padding */
     .pf-section { padding: 2rem 0; }
     .pf-section-sm { padding: 2rem 0; }
 
-    /* Info card */
+    /* Cards */
     .pf-card {
       background: var(--pf-white);
       border: 2px solid #d1d9e6;
@@ -469,7 +472,7 @@ const { title, description, canonical } = Astro.props;
     .pf-card-left-red { border-left: 4px solid var(--pf-red); }
     .pf-card-left-amber { border-left: 4px solid var(--pf-amber); }
 
-    /* Who section */
+    /* Who grid */
     .pf-who-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-who-item {
       background: var(--pf-white);
@@ -485,8 +488,8 @@ const { title, description, canonical } = Astro.props;
     .pf-who-icon { font-size: 1rem; font-weight: 900; flex-shrink: 0; margin-top: 0.15rem; }
     .pf-who-yes .pf-who-icon { color: var(--pf-green); }
     .pf-who-no .pf-who-icon { color: var(--pf-amber); }
-    .pf-who-item strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .pf-who-item p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; }
+    .pf-who-item strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; text-align: left; }
+    .pf-who-item p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; text-align: left; }
 
     /* Signs */
     .pf-signs { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
@@ -505,7 +508,7 @@ const { title, description, canonical } = Astro.props;
     .pf-sign strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.15rem; text-align: center; }
     .pf-sign p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; text-align: center; }
 
-    /* Pros / benefits */
+    /* Pros */
     .pf-pros {
       background: var(--pf-green-light);
       border: 1px solid var(--pf-green-border);
@@ -515,7 +518,7 @@ const { title, description, canonical } = Astro.props;
     }
     .pf-pros h3 { color: var(--pf-green); margin-bottom: 0.75rem; }
     .pf-check-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
-    .pf-check-list li { font-size: 0.93rem; color: #14532d; padding-left: 1.3rem; position: relative; line-height: 1.5; }
+    .pf-check-list li { font-size: 0.93rem; color: #14532d; padding-left: 1.3rem; position: relative; line-height: 1.5; text-align: left; }
     .pf-check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--pf-green); font-weight: 700; }
 
     /* Limitations */
@@ -531,8 +534,8 @@ const { title, description, canonical } = Astro.props;
       align-items: flex-start;
     }
     .pf-limit-x { color: #b45309; font-weight: 900; font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .pf-limit strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .pf-limit p { font-size: 0.93rem; color: #78350f; margin: 0; line-height: 1.5; }
+    .pf-limit strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; text-align: left; }
+    .pf-limit p { font-size: 0.93rem; color: #78350f; margin: 0; line-height: 1.5; text-align: left; }
     .pf-limit p a { color: #78350f; border-color: rgba(120,53,15,0.25); }
 
     /* Risks */
@@ -548,8 +551,8 @@ const { title, description, canonical } = Astro.props;
       align-items: flex-start;
     }
     .pf-risk-icon { color: var(--pf-red); font-weight: 900; font-size: 0.95rem; flex-shrink: 0; margin-top: 0.15rem; }
-    .pf-risk strong { display: block; color: #7f1d1d; font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .pf-risk p { font-size: 0.93rem; color: #7f1d1d; margin: 0; line-height: 1.5; }
+    .pf-risk strong { display: block; color: #7f1d1d; font-size: 0.95rem; margin-bottom: 0.2rem; text-align: left; }
+    .pf-risk p { font-size: 0.93rem; color: #7f1d1d; margin: 0; line-height: 1.5; text-align: left; }
 
     /* Honest box */
     .pf-honest {
@@ -574,8 +577,8 @@ const { title, description, canonical } = Astro.props;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       text-align: center;
     }
-    .pf-alt h3 { font-size: 1rem; color: var(--pf-navy); margin-bottom: 0.4rem; text-align: center; }
-    .pf-alt p { font-size: 0.93rem; color: var(--pf-muted); margin-bottom: 0.6rem; text-align: center; }
+    .pf-alt h3 { font-size: 1rem; color: var(--pf-navy); margin-bottom: 0.4rem; }
+    .pf-alt p { font-size: 0.93rem; color: var(--pf-muted); margin-bottom: 0.6rem; }
     .pf-alt-tag { display: inline-block; background: var(--pf-off); border: 1px solid var(--pf-border); border-radius: 999px; padding: 0.2rem 0.7rem; font-size: 0.76rem; font-weight: 700; color: var(--pf-navy); }
 
     /* Pricing */
@@ -616,7 +619,7 @@ const { title, description, canonical } = Astro.props;
     .pf-price-list li { font-size: 0.93rem; color: var(--pf-text); padding-left: 1.3rem; position: relative; }
     .pf-price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--pf-green); font-weight: 700; }
 
-    /* Duration cards */
+    /* Durations */
     .pf-durations { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-duration-card {
       background: var(--pf-white);
@@ -630,8 +633,8 @@ const { title, description, canonical } = Astro.props;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
     .pf-duration-time { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; color: var(--pf-orange); line-height: 1; min-width: 90px; text-align: center; flex-shrink: 0; }
-    .pf-duration-card strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .pf-duration-card p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; }
+    .pf-duration-card strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; text-align: left; }
+    .pf-duration-card p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; text-align: left; }
 
     /* Maintenance schedule */
     .pf-schedule { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1rem; }
@@ -645,7 +648,7 @@ const { title, description, canonical } = Astro.props;
       gap: 0.75rem;
     }
     .pf-schedule-num { background: var(--pf-orange); color: var(--pf-white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.95rem; min-width: 1.7rem; height: 1.7rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .pf-schedule-item p { font-size: 0.93rem; color: var(--pf-text); margin: 0; }
+    .pf-schedule-item p { font-size: 0.93rem; color: var(--pf-text); margin: 0; text-align: left; }
 
     /* Steps */
     .pf-steps { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
@@ -659,10 +662,10 @@ const { title, description, canonical } = Astro.props;
       align-items: flex-start;
     }
     .pf-step-num { background: var(--pf-navy); color: var(--pf-white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.05rem; min-width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .pf-step strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.2rem; }
-    .pf-step p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; line-height: 1.6; }
+    .pf-step strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.2rem; text-align: left; }
+    .pf-step p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; line-height: 1.6; text-align: left; }
 
-    /* Prepare checklist */
+    /* Prepare */
     .pf-prepare { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
     .pf-prep-item {
       background: var(--pf-white);
@@ -674,10 +677,10 @@ const { title, description, canonical } = Astro.props;
       align-items: flex-start;
     }
     .pf-prep-tick { color: var(--pf-orange); font-weight: 900; font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .pf-prep-item strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.15rem; }
-    .pf-prep-item p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; }
+    .pf-prep-item strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.15rem; text-align: left; }
+    .pf-prep-item p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; text-align: left; }
 
-    /* Why choose */
+    /* Why grid */
     .pf-why-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1.25rem; }
     .pf-why-item {
       background: var(--pf-white);
@@ -701,7 +704,7 @@ const { title, description, canonical } = Astro.props;
       box-shadow: 0 4px 14px rgba(0,0,0,0.09);
     }
     .pf-review-quote { font-size: 2.5rem; color: var(--pf-orange); line-height: 1; margin-bottom: 0.5rem; font-family: Georgia, serif; }
-    .pf-review p { font-size: 0.93rem; color: var(--pf-text); line-height: 1.7; margin-bottom: 1rem; }
+    .pf-review p { font-size: 0.93rem; color: var(--pf-text); line-height: 1.7; margin-bottom: 1rem; text-align: left; }
     .pf-review-footer { display: flex; align-items: center; gap: 0.75rem; }
     .pf-review-avatar { background: var(--pf-navy); color: var(--pf-white); width: 2.25rem; height: 2.25rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0; }
     .pf-review-name { font-size: 0.93rem; font-weight: 700; color: var(--pf-navy); }
@@ -732,7 +735,7 @@ const { title, description, canonical } = Astro.props;
     .pf-faq-item summary::after { content: "+"; margin-left: auto; color: var(--pf-orange); font-size: 1.2rem; font-weight: 900; flex-shrink: 0; }
     .pf-faq-item[open] summary::after { content: "−"; }
     .pf-faq-body { padding: 0 1.25rem 1rem; }
-    .pf-faq-body p { font-size: 0.93rem; color: var(--pf-muted); line-height: 1.7; }
+    .pf-faq-body p { font-size: 0.93rem; color: var(--pf-muted); line-height: 1.7; text-align: left; }
     .pf-faq-tag { font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0; }
     .pf-tag-orange { background: var(--pf-orange); color: var(--pf-white); }
     .pf-tag-navy { background: var(--pf-navy); color: var(--pf-white); }
@@ -752,7 +755,7 @@ const { title, description, canonical } = Astro.props;
     .pf-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .pf-pill { background: var(--pf-off); border: 1px solid var(--pf-border); border-radius: 999px; padding: 0.2rem 0.65rem; font-size: 0.78rem; font-weight: 600; color: var(--pf-navy); }
 
-    /* Related services */
+    /* Related */
     .pf-related { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1rem; }
     .pf-related-link {
       background: var(--pf-white);
@@ -768,11 +771,11 @@ const { title, description, canonical } = Astro.props;
       border-bottom: none;
     }
     .pf-related-link:hover { transform: translateX(4px); box-shadow: var(--pf-shadow-md); }
-    .pf-related-link strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.1rem; }
-    .pf-related-link span { color: var(--pf-muted); font-size: 0.9rem; }
+    .pf-related-link strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.1rem; text-align: left; }
+    .pf-related-link span { color: var(--pf-muted); font-size: 0.9rem; text-align: left; }
     .pf-related-arrow { color: var(--pf-orange); font-weight: 900; font-size: 1.1rem; flex-shrink: 0; }
 
-    /* Alert box */
+    /* Alert */
     .pf-alert {
       background: var(--pf-orange-light);
       border: 1px solid var(--pf-orange-border);
@@ -793,16 +796,14 @@ const { title, description, canonical } = Astro.props;
       padding: 1.1rem 1.5rem;
       text-align: center;
     }
-    .pf-info-bar p { font-size: 0.93rem; color: var(--pf-muted); }
+    .pf-info-bar p { font-size: 0.93rem; color: var(--pf-muted); text-align: center; }
 
     /* Section label */
     .pf-section-label { display: inline-block; background: var(--pf-orange-light); border: 1px solid var(--pf-orange-border); border-radius: 999px; padding: 0.25rem 0.85rem; font-size: 0.72rem; font-weight: 800; color: var(--pf-orange); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
 
     /* ========================================
-       EXISTING COMPONENT STYLES
+       LEGACY COMPONENT STYLES
     ======================================== */
-
-    /* Pricing cards (legacy) */
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
     .price-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; box-shadow: var(--shadow-sm); position: relative; }
     .price-card--featured { border: 2px solid var(--orange); box-shadow: 0 8px 24px rgba(249,115,22,0.15); }
@@ -816,7 +817,6 @@ const { title, description, canonical } = Astro.props;
     .price-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin: 0.5rem 0; }
     .price-card ul li { font-size: 1rem; color: var(--text); padding-left: 0.25rem; }
 
-    /* Emergency levels */
     .emerg-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
     .emerg-level { border-radius: var(--radius); padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
     .emerg-level--danger { background: #fef2f2; border: 1px solid #fecaca; }
@@ -829,15 +829,13 @@ const { title, description, canonical } = Astro.props;
     .emerg-level ul li { font-size: 0.94rem; color: var(--text); padding-left: 0.5rem; position: relative; }
     .emerg-level ul li::before { content: '·'; position: absolute; left: 0; color: var(--muted); }
 
-    /* Process steps */
     .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
     .process-step { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.75rem; background: var(--navy); border-radius: var(--radius); padding: 1.75rem 1.25rem; }
     .step-number { width: 2.75rem; height: 2.75rem; background: var(--orange); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 900; flex-shrink: 0; }
-    .step-content h3 { font-size: 1.1rem; color: var(--white); margin-bottom: 0.35rem; text-align: center; }
-    .step-content p { font-size: 0.94rem; color: rgba(255,255,255,0.8); text-align: center; }
+    .step-content h3 { font-size: 1.1rem; color: var(--white); margin-bottom: 0.35rem; }
+    .step-content p { font-size: 0.94rem; color: rgba(255,255,255,0.8); }
     .step-note { font-size: 0.78rem; font-weight: 700; color: var(--orange); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 0.2rem 0.6rem; border-radius: 4px; width: fit-content; }
 
-    /* Jobs grid */
     .jobs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
     .job-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; }
     .job-card--warning { border-left: 4px solid var(--red); }
@@ -847,7 +845,6 @@ const { title, description, canonical } = Astro.props;
     .job-time { font-size: 0.85rem; color: var(--muted); }
     .job-card p { font-size: 0.93rem; color: var(--muted); }
 
-    /* Why choose (legacy) */
     .why-section { background: var(--white); padding: 2.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .why-header { text-align: center; margin-bottom: 2rem; }
     .why-header h2 { color: var(--navy); }
@@ -859,7 +856,6 @@ const { title, description, canonical } = Astro.props;
     .why-cta { text-align: center; margin-top: 2rem; }
     .why-cta p { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; }
 
-    /* Reviews (legacy) */
     .reviews-section { background: var(--bg); padding: 2.5rem 0; }
     .reviews-header { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem; gap: 1rem; }
     .reviews-header h2 { color: var(--navy); }
@@ -879,7 +875,6 @@ const { title, description, canonical } = Astro.props;
     .reviews-cta { text-align: center; margin-top: 1.5rem; }
     .link-arrow { color: var(--orange); font-weight: 700; text-decoration: none; font-size: 0.95rem; }
 
-    /* FAQ (legacy) */
     .faq-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem; }
     .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); }
     .faq-item summary { padding: 1.1rem 1.25rem; cursor: pointer; font-weight: 700; color: var(--navy); font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
@@ -893,27 +888,23 @@ const { title, description, canonical } = Astro.props;
     .tag-red { background: #fef2f2; color: var(--red); }
     .tag-green { background: #f0fdf4; color: var(--green); }
 
-    /* Coverage (legacy) */
     .coverage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
     .coverage-area { text-align: center; }
     .coverage-area h3 { font-size: 1rem; color: var(--navy); margin-bottom: 0.75rem; font-weight: 800; }
     .area-pill { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.45rem 1rem; font-size: 0.9rem; color: var(--navy); font-weight: 700; margin: 0.25rem; }
 
-    /* Services grid */
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
     .service-card { background: var(--navy); border: none; border-top: 3px solid var(--orange); border-radius: var(--radius); padding: 1.5rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; transition: transform 0.18s, box-shadow 0.18s; }
     .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
     .service-card strong { font-size: 1rem; font-weight: 800; color: var(--orange); }
     .service-card span { font-size: 0.85rem; color: rgba(255,255,255,0.8); }
 
-    /* Qual cards */
     .quals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     .qual-card { background: var(--white); border: 2px solid var(--navy); border-radius: var(--radius); padding: 1.25rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; box-shadow: var(--shadow-sm); }
     .qual-num { font-family: 'Barlow Condensed', sans-serif; font-size: 1.75rem; font-weight: 900; color: var(--orange); line-height: 1; }
     .qual-card strong { font-size: 0.95rem; color: var(--navy); }
     .qual-card span { font-size: 0.82rem; color: var(--muted); }
 
-    /* Self help */
     .selfhelp-wrapper { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; }
     .selfhelp-header { text-align: center; margin-bottom: 1.5rem; }
     .selfhelp-header h2 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); }
@@ -926,7 +917,6 @@ const { title, description, canonical } = Astro.props;
     .selfhelp-warning { display: flex; gap: 0.75rem; align-items: center; justify-content: center; text-align: center; background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius-sm); padding: 1rem; margin-top: 1.5rem; }
     .selfhelp-warning p { font-size: 0.9rem; color: var(--red); margin: 0; }
 
-    /* Safety cards */
     .safety-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
     .safety-card { border-radius: var(--radius); padding: 1.5rem; }
     .safety-card--gas { background: #fef2f2; border: 1px solid #fecaca; }
@@ -934,33 +924,28 @@ const { title, description, canonical } = Astro.props;
     .safety-card--never { background: #f8fafc; border: 1px solid var(--border); }
     .safety-card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--navy); }
     .safety-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
-    .safety-card ul li { font-size: 0.9rem; color: var(--text); padding-left: 1rem; position: relative; }
+    .safety-card ul li { font-size: 0.9rem; color: var(--text); padding-left: 1rem; position: relative; text-align: left; }
     .safety-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
     .safety-card--never ul li::before { content: '✕'; color: var(--red); }
 
-    /* CTAs */
     .mid-cta { background: var(--orange); padding: 3rem 0; text-align: center; }
     .mid-cta h2 { color: var(--white); margin-bottom: 0.5rem; }
     .mid-cta p { color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; font-size: 1.05rem; }
     .final-cta { background: #1a3a5c; padding: 2.5rem 0; }
 
-    /* Gas safe bar */
     .gas-safe-bar { background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius); padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; gap: 0.5rem; margin-top: 2rem; flex-wrap: wrap; }
     .gas-safe-bar strong { color: var(--orange-dark); font-size: 1rem; }
     .gas-safe-bar span { font-size: 0.9rem; color: var(--muted); }
 
-    /* Insurance bar */
     .insurance-bar { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; background: var(--white); border: 2px solid var(--navy); border-radius: var(--radius); padding: 1rem 1.5rem; margin-top: 1.5rem; font-size: 0.9rem; }
     .insurance-bar strong { color: var(--navy); display: block; }
     .insurance-bar span { color: var(--muted); }
 
-    /* Copy block */
     .copy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-    .copy-block h2 { text-align: center; color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
-    .copy-block p { text-align: center; font-size: 1rem; color: var(--muted); line-height: 1.85; margin-bottom: 0.75rem; }
+    .copy-block h2 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
+    .copy-block p { font-size: 1rem; color: var(--muted); line-height: 1.85; margin-bottom: 0.75rem; }
     .copy-block a { color: var(--orange); font-weight: 700; text-decoration: none; }
 
-    /* Response badge */
     .response-badge { display: inline-flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius); padding: 0.75rem 1.5rem; margin: 0 auto 1.5rem; }
     .response-num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--orange); line-height: 1; }
     .response-num small { font-size: 1rem; }
@@ -1013,67 +998,32 @@ const { title, description, canonical } = Astro.props;
   <!-- NAV -->
   <nav class="site-nav" id="site-nav">
     <div class="nav-inner">
-
       <a href="/" class="nav-logo">
         Ideal <span>Plumbing</span>
         <small>Gas Safe · Liverpool</small>
       </a>
-
       <ul class="nav-links">
         <li><a href="/" class="nav-emergency">Emergency</a></li>
-
         <li class="has-dropdown">
           <button>Services</button>
           <div class="nav-dropdown">
             <div class="nav-dropdown-grid">
-              <a href="/boiler-installation-liverpool">
-                Boiler Installation
-                <small>From £1,800 fully fitted</small>
-              </a>
-              <a href="/boiler-service-liverpool">
-                Boiler Service
-                <small>£120 fixed price</small>
-              </a>
-              <a href="/gas-safety-certificate-liverpool">
-                Gas Safety Certificate
-                <small>CP12 from £80</small>
-              </a>
-              <a href="/central-heating-installation-liverpool">
-                Central Heating
-                <small>Full systems from £3,500</small>
-              </a>
-              <a href="/power-flushing-liverpool">
-                Power Flushing
-                <small>From £350</small>
-              </a>
-              <a href="/radiators-liverpool">
-                Radiators
-                <small>Supply and fit from £200</small>
-              </a>
-              <a href="/bathroom-fitters-liverpool">
-                Bathroom Fitters
-                <small>Labour from £2,500</small>
-              </a>
-              <a href="/hot-water-cylinders-liverpool">
-                Hot Water Cylinders
-                <small>Vented from £600</small>
-              </a>
-              <a href="/showers-liverpool">
-                Shower Installation
-                <small>From £200</small>
-              </a>
-              <a href="/get-started">
-                Book a Free Survey
-                <small>All services · All Liverpool postcodes</small>
-              </a>
+              <a href="/boiler-installation-liverpool">Boiler Installation<small>From £1,800 fully fitted</small></a>
+              <a href="/boiler-service-liverpool">Boiler Service<small>£120 fixed price</small></a>
+              <a href="/gas-safety-certificate-liverpool">Gas Safety Certificate<small>CP12 from £80</small></a>
+              <a href="/central-heating-installation-liverpool">Central Heating<small>Full systems from £3,500</small></a>
+              <a href="/power-flushing-liverpool">Power Flushing<small>From £350</small></a>
+              <a href="/radiators-liverpool">Radiators<small>Supply and fit from £200</small></a>
+              <a href="/bathroom-fitters-liverpool">Bathroom Fitters<small>Labour from £2,500</small></a>
+              <a href="/hot-water-cylinders-liverpool">Hot Water Cylinders<small>Vented from £600</small></a>
+              <a href="/showers-liverpool">Shower Installation<small>From £200</small></a>
+              <a href="/get-started">Book a Free Survey<small>All services · All Liverpool postcodes</small></a>
             </div>
           </div>
         </li>
-
         <li><a href="/blog">Learning Centre</a></li>
         <li><a href="/get-started">Get Started</a></li>
       </ul>
-
       <div style="display:flex;align-items:center;gap:0.75rem;">
         <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -1082,15 +1032,12 @@ const { title, description, canonical } = Astro.props;
           <a href="tel:07399676656" class="call">Call Now</a>
         </div>
       </div>
-
     </div>
 
     <!-- MOBILE NAV -->
     <div class="nav-mobile" id="nav-mobile">
       <a href="/" class="nav-mob-emergency">Emergency Plumber 24/7</a>
-      <button class="nav-mob-toggle" id="mob-services-toggle">
-        Services <span id="mob-arrow">▾</span>
-      </button>
+      <button class="nav-mob-toggle" id="mob-services-toggle">Services <span id="mob-arrow">▾</span></button>
       <div class="nav-mob-sub" id="mob-services-sub">
         <a href="/boiler-installation-liverpool">Boiler Installation</a>
         <a href="/boiler-service-liverpool">Boiler Service</a>
