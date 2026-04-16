@@ -243,16 +243,21 @@ const { title, description, canonical } = Astro.props;
     .nav-hamburger {
       display: none;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 4px;
+      padding: 10px 8px;
+      margin-right: -8px;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
     }
     .nav-hamburger span {
       display: block;
-      width: 22px;
-      height: 2px;
+      width: 26px;
+      height: 3px;
       background: var(--white);
       border-radius: 2px;
       transition: all 0.2s;
@@ -261,17 +266,17 @@ const { title, description, canonical } = Astro.props;
       display: none;
       flex-direction: column;
       background: #122840;
-      padding: 0.75rem 1.25rem 1rem;
+      padding: 0.5rem 1.25rem 1.25rem;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
     .nav-mobile.open { display: flex; }
     .nav-mobile a, .nav-mobile button.nav-mob-toggle {
       color: rgba(255,255,255,0.85);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 700;
-      padding: 0.55rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       background: none;
       border-left: none;
       border-right: none;
@@ -283,6 +288,7 @@ const { title, description, canonical } = Astro.props;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      min-height: 44px;
     }
     .nav-mobile a:last-child { border-bottom: none; }
     .nav-mob-sub {
@@ -294,11 +300,14 @@ const { title, description, canonical } = Astro.props;
     }
     .nav-mob-sub.open { display: flex; }
     .nav-mob-sub a {
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      color: rgba(255,255,255,0.7);
-      padding: 0.4rem 0;
+      color: rgba(255,255,255,0.75);
+      padding: 0.65rem 0;
       border-bottom: none;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
     }
     .nav-mob-sub a:hover { color: var(--orange); }
     .nav-mobile a.nav-mob-emergency { color: #fca5a5; }
@@ -309,15 +318,18 @@ const { title, description, canonical } = Astro.props;
       border-radius: var(--radius-sm);
       text-align: center !important;
       justify-content: center !important;
-      padding: 0.65rem 1rem !important;
+      padding: 0.85rem 1rem !important;
       border-bottom: none !important;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1rem !important;
+      font-size: 1.1rem !important;
       letter-spacing: 0.03em;
+      min-height: 48px;
     }
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
+      .nav-inner { padding: 0.75rem 1rem; }
+      .nav-logo { font-size: 1rem; }
     }
 
     /* ========================================
@@ -435,7 +447,8 @@ const { title, description, canonical } = Astro.props;
     }
     .pf p:last-child { margin-bottom: 0; }
 
-    /* pf-sub uses .pf .pf-sub for higher specificity than .pf p */
+    /* pf-sub: both selectors so it works inside or outside .pf wrapper */
+    .pf-sub,
     .pf .pf-sub {
       text-align: center;
       color: var(--pf-muted);
@@ -891,7 +904,8 @@ const { title, description, canonical } = Astro.props;
     .coverage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
     .coverage-area { text-align: center; }
     .coverage-area h3 { font-size: 1rem; color: var(--navy); margin-bottom: 0.75rem; font-weight: 800; }
-    .area-pill { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.45rem 1rem; font-size: 0.9rem; color: var(--navy); font-weight: 700; margin: 0.25rem; }
+    .area-pill { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.45rem 1rem; font-size: 0.9rem; color: var(--navy); font-weight: 700; margin: 0.25rem; text-decoration: none; transition: background 0.12s, color 0.12s, border-color 0.12s; }
+    a.area-pill:hover { background: var(--orange); color: var(--white); border-color: var(--orange); cursor: pointer; }
 
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
     .service-card { background: var(--navy); border: none; border-top: 3px solid var(--orange); border-radius: var(--radius); padding: 1.5rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; transition: transform 0.18s, box-shadow 0.18s; }
