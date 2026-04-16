@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const posts = [
   { slug: "how-much-does-a-new-boiler-cost-liverpool", category: "BOILERS", borderColor: "#f97316", title: "How Much Does a New Boiler Cost in Liverpool in 2026?", excerpt: "Liverpool boiler installation prices range from £1,800 for a like-for-like combi swap to £7,000 for a full system replacement. Here is exactly what affects the price and what you should pay.", date: "April 2026", readTime: "6 min read" },
@@ -7,6 +7,8 @@ const posts = [
   { slug: "best-boiler-brands-liverpool-2026", category: "BOILERS", borderColor: "#f97316", title: "Worcester Bosch vs Vaillant: Which Is the Best Boiler for Liverpool Homes?", excerpt: "The two most popular premium boiler brands compared head to head. Efficiency, warranty, reliability and price all assessed by our Gas Safe engineers.", date: "January 2026", readTime: "7 min read" },
   { slug: "carbon-monoxide-safety-liverpool", category: "GAS SAFETY", borderColor: "#1a3a5c", title: "Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know", excerpt: "Around 40 people die from accidental carbon monoxide poisoning in England every year, most from faulty gas appliances. Here is how to protect your Liverpool home.", date: "December 2025", readTime: "5 min read" },
   { slug: "hmo-gas-safety-liverpool-landlords", category: "LANDLORDS", borderColor: "#7c3aed", title: "HMO Gas Safety in Liverpool: A Complete Compliance Guide for Landlords", excerpt: "HMO landlords in Liverpool face stricter gas safety requirements. This guide covers everything you need for Liverpool City Council HMO licensing.", date: "November 2025", readTime: "7 min read" },
+  { slug: "power-flushing-central-heating-liverpool", category: "CENTRAL HEATING", borderColor: "#16a34a", title: "Power Flushing Central Heating: The Complete Liverpool Guide. Costs, Signs and What Really Happens.", excerpt: "Everything Liverpool homeowners need to know before spending a penny on a power flush. What it actually does, what it costs in 2026, the 8 signs you need one, and when a cheaper alternative is fine.", date: "April 2026", readTime: "8 min read" },
+  { slug: "how-to-choose-power-flush-plumber-liverpool", category: "CENTRAL HEATING", borderColor: "#16a34a", title: "How to Choose a Power Flush Plumber in Liverpool, Wirral, St Helens and Formby. The Questions to Ask in 2026.", excerpt: "Hundreds of plumbers claim to offer power flushing across Merseyside. Here are the 9 questions to ask before you book, what good answers look like, and the red flags that should send you elsewhere.", date: "April 2026", readTime: "7 min read" },
   { slug: "what-is-a-power-flush-liverpool", category: "CENTRAL HEATING", borderColor: "#16a34a", title: "What Is a Power Flush and Does My Liverpool Home Need One?", excerpt: "Cold spots on radiators, a noisy boiler and slow warm-up times are classic signs. A power flush from £350 can restore efficiency and save your Liverpool home £200 a year in energy bills.", date: "February 2026", readTime: "5 min read" },
   { slug: "central-heating-liverpool-victorian-terrace", category: "CENTRAL HEATING", borderColor: "#16a34a", title: "Installing Central Heating in Liverpool's Victorian Terraces: What You Need to Know", excerpt: "Liverpool has one of the highest concentrations of Victorian housing in England. Here is what is different about installing central heating in a period property and what it costs.", date: "January 2026", readTime: "6 min read" },
   { slug: "emergency-plumber-liverpool-what-to-do", category: "EMERGENCY", borderColor: "#dc2626", title: "Burst Pipe in Liverpool? Here Is Exactly What To Do Right Now", excerpt: "The first 10 minutes after a burst pipe are critical. Follow these steps to minimise water damage to your Liverpool property before the plumber arrives.", date: "February 2026", readTime: "4 min read" },
@@ -39,6 +41,7 @@ const posts = [
     .post-meta { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.75rem; }
     .post-card-excerpt { color: var(--muted); font-size: 0.87rem; line-height: 1.65; flex: 1; margin-bottom: 1rem; }
     .post-read-link { font-size: 0.85rem; font-weight: 700; color: var(--orange); }
+    .new-badge { display: inline-block; background: var(--orange); color: #fff; font-size: 0.65rem; font-weight: 800; padding: 0.1rem 0.45rem; border-radius: 999px; letter-spacing: 0.05em; text-transform: uppercase; margin-left: 0.4rem; vertical-align: middle; }
     .category-section { margin-top: 2.5rem; }
     .cat-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
     .cat-header-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
@@ -47,6 +50,12 @@ const posts = [
     .featured-label { font-size: 0.7rem; font-weight: 800; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; }
     .featured-card h3 { color: var(--navy); font-size: 1.2rem; margin: 0; line-height: 1.35; }
     .featured-card p { color: var(--muted); font-size: 0.88rem; margin: 0; max-width: 520px; }
+    .new-posts-strip { background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-top: 1.5rem; }
+    .new-posts-strip strong { display: block; color: var(--navy); font-size: 0.88rem; margin-bottom: 0.75rem; }
+    .new-posts-strip a { display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 0.5rem 0; border-bottom: 1px solid #fed7aa; }
+    .new-posts-strip a:last-of-type { border-bottom: none; padding-bottom: 0; }
+    .new-posts-strip a span { color: var(--navy); font-weight: 700; font-size: 0.87rem; line-height: 1.4; }
+    .new-posts-strip a em { color: var(--orange); font-weight: 900; font-style: normal; flex-shrink: 0; margin-left: 0.75rem; }
     .newsletter-box { background: var(--navy); border-radius: var(--radius); padding: 2rem; text-align: center; margin-top: 2rem; }
     .newsletter-box h3 { color: var(--orange); font-size: 1.2rem; margin-bottom: 0.4rem; }
     .newsletter-box > p { color: rgba(255,255,255,0.8); font-size: 0.88rem; margin-bottom: 1.25rem; }
@@ -87,6 +96,19 @@ const posts = [
         <p>Everything Liverpool landlords need to know about the CP12. Who needs one, what is checked, the legal penalties and how to avoid a £6,000 fine. Written by our Gas Safe engineers.</p>
         <a href="/blog/what-is-a-gas-safety-certificate-landlords-guide" class="btn btn-orange" style="color:#ffffff;">Read the Guide</a>
       </div>
+
+      <div class="new-posts-strip">
+        <strong>New this month</strong>
+        <a href="/blog/power-flushing-central-heating-liverpool">
+          <span>Power Flushing Central Heating: The Complete Liverpool Guide. Costs, Signs and What Really Happens. <span class="new-badge">NEW</span></span>
+          <em>&rarr;</em>
+        </a>
+        <a href="/blog/how-to-choose-power-flush-plumber-liverpool">
+          <span>How to Choose a Power Flush Plumber in Liverpool, Wirral, St Helens and Formby. <span class="new-badge">NEW</span></span>
+          <em>&rarr;</em>
+        </a>
+      </div>
+
       <div class="category-pills">
         <a href="#all-guides" class="category-pill">All</a>
         <a href="#boilers" class="category-pill">Boilers</a>
@@ -103,7 +125,7 @@ const posts = [
   <section class="pf-section" style="background:var(--white);" id="all-guides">
     <div class="container">
       <h2>All Guides and Articles</h2>
-      <p class="section-sub">11 guides covering boilers, gas safety, central heating, bathrooms and emergency plumbing for Liverpool homeowners and landlords.</p>
+      <p class="section-sub">13 guides covering boilers, gas safety, central heating, bathrooms and emergency plumbing for Liverpool homeowners and landlords.</p>
 
       <div class="category-section" id="boilers">
         <div class="cat-header">
@@ -117,7 +139,7 @@ const posts = [
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
                 <h3 class="post-card-title">{post.title}</h3>
-                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
                 <p class="post-card-excerpt">{post.excerpt}</p>
                 <span class="post-read-link">Read guide &rarr;</span>
               </div>
@@ -138,7 +160,7 @@ const posts = [
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
                 <h3 class="post-card-title">{post.title}</h3>
-                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
                 <p class="post-card-excerpt">{post.excerpt}</p>
                 <span class="post-read-link">Read guide &rarr;</span>
               </div>
@@ -159,7 +181,7 @@ const posts = [
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
                 <h3 class="post-card-title">{post.title}</h3>
-                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
                 <p class="post-card-excerpt">{post.excerpt}</p>
                 <span class="post-read-link">Read guide &rarr;</span>
               </div>
@@ -180,7 +202,7 @@ const posts = [
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
                 <h3 class="post-card-title">{post.title}</h3>
-                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
                 <p class="post-card-excerpt">{post.excerpt}</p>
                 <span class="post-read-link">Read guide &rarr;</span>
               </div>
@@ -201,7 +223,7 @@ const posts = [
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
                 <h3 class="post-card-title">{post.title}</h3>
-                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
                 <p class="post-card-excerpt">{post.excerpt}</p>
                 <span class="post-read-link">Read guide &rarr;</span>
               </div>
@@ -222,7 +244,7 @@ const posts = [
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
                 <h3 class="post-card-title">{post.title}</h3>
-                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
                 <p class="post-card-excerpt">{post.excerpt}</p>
                 <span class="post-read-link">Read guide &rarr;</span>
               </div>
@@ -243,7 +265,7 @@ const posts = [
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
                 <h3 class="post-card-title">{post.title}</h3>
-                <div class="post-meta">{post.date} · {post.readTime}</div>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
                 <p class="post-card-excerpt">{post.excerpt}</p>
                 <span class="post-read-link">Read guide &rarr;</span>
               </div>
@@ -267,6 +289,7 @@ const posts = [
         <a href="/gas-safety-certificate-liverpool" class="service-link"><span>Gas Safety Certificates from £80</span><em>&rarr;</em></a>
         <a href="/boiler-installation-liverpool" class="service-link"><span>New Boiler Installation from £1,800</span><em>&rarr;</em></a>
         <a href="/boiler-service-liverpool" class="service-link"><span>Annual Boiler Service £120</span><em>&rarr;</em></a>
+        <a href="/power-flushing-liverpool" class="service-link"><span>Power Flushing from £350</span><em>&rarr;</em></a>
         <a href="/central-heating-installation-liverpool" class="service-link"><span>Central Heating from £3,500</span><em>&rarr;</em></a>
         <a href="/bathroom-fitters-liverpool" class="service-link"><span>Bathroom Fitting from £2,500 Labour</span><em>&rarr;</em></a>
         <a href="/hot-water-cylinders-liverpool" class="service-link"><span>Hot Water Cylinders from £600</span><em>&rarr;</em></a>
