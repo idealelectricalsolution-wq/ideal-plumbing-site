@@ -554,17 +554,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="coverage-area"><h3>Outskirts</h3><div><a href="/emergency-plumber-formby" class="area-pill">Formby L37</a><a href="/emergency-plumber-southport" class="area-pill">Southport PR8</a><a href="/emergency-plumber-norris-green" class="area-pill">Norris Green L11</a><a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley L10</a><a href="/emergency-plumber-aintree" class="area-pill">Aintree L10</a><a href="/emergency-plumber-mossley-hill" class="area-pill">Mossley Hill L18</a></div></div>
       </div>
       <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1.5rem;">
-        <a href="/emergency-plumber-wirral" style="display:block;background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem;text-align:center;text-decoration:none;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
+        <a href="/emergency-plumber-wirral" class="coverage-link-card">
           <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--navy);">Emergency Plumber Wirral</h3>
           <div style="margin-bottom:0.75rem;"><span class="area-pill">Birkenhead CH41</span><span class="area-pill">Wallasey CH44</span><span class="area-pill">Heswall CH60</span><span class="area-pill">Bebington CH63</span><span class="area-pill">West Kirby CH48</span><span class="area-pill">Bromborough CH62</span></div>
           <span style="font-size:0.82rem;font-weight:700;color:var(--orange);">View Wirral emergency cover &rarr;</span>
         </a>
-        <a href="/emergency-plumber-st-helens" style="display:block;background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem;text-align:center;text-decoration:none;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
+        <a href="/emergency-plumber-st-helens" class="coverage-link-card">
           <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--navy);">Emergency Plumber St Helens</h3>
           <div style="margin-bottom:0.75rem;"><span class="area-pill">Town Centre WA10</span><span class="area-pill">Newton-le-Willows WA12</span><span class="area-pill">Haydock WA11</span><span class="area-pill">Rainford WA11</span><span class="area-pill">Billinge WN5</span><span class="area-pill">Earlestown WA12</span></div>
           <span style="font-size:0.82rem;font-weight:700;color:var(--orange);">View St Helens emergency cover &rarr;</span>
         </a>
-        <a href="/emergency-plumber-formby" style="display:block;background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);border-radius:var(--radius);padding:1.25rem;text-align:center;text-decoration:none;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
+        <a href="/emergency-plumber-formby" class="coverage-link-card">
           <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--navy);">Emergency Plumber Formby</h3>
           <div style="margin-bottom:0.75rem;"><span class="area-pill">Formby L37</span><span class="area-pill">Maghull L31</span><span class="area-pill">Crosby L23</span><span class="area-pill">Southport PR8</span></div>
           <span style="font-size:0.82rem;font-weight:700;color:var(--orange);">View Formby emergency cover &rarr;</span>
@@ -725,5 +725,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   </div>
+
+  <style>
+    .coverage-link-card {
+      display: block;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      text-decoration: none;
+      transition: box-shadow 0.15s;
+    }
+    .coverage-link-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 
 </BaseLayout>
