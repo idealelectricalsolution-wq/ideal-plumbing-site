@@ -1,6 +1,6 @@
 ---
 const { title, description, canonical } = Astro.props;
-const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://liverpoolemergencyplumber.co.uk').href;
+const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, ''), 'https://liverpoolemergencyplumber.co.uk').href;
 ---
 <!DOCTYPE html>
 <html lang="en">
