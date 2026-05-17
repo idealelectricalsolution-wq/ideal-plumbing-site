@@ -13,11 +13,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "Plumber"],
     "name": "Liverpool Emergency Plumber",
-    "image": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png",
     "url": "https://liverpoolemergencyplumber.co.uk",
     "telephone": "+441515580334",
     "email": "emergencyplumberliverpool@gmail.com",
-    "priceRange": "££",
+    "priceRange": "From £80/hour",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "29 Park Road",
+      "addressLocality": "Kirkby",
+      "addressRegion": "Merseyside",
+      "postalCode": "L32 2AL",
+      "addressCountry": "GB"
+    },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -25,35 +32,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       "closes": "23:59"
     },
     "areaServed": [
-      { "@type": "Place", "name": "Liverpool" }, { "@type": "Place", "name": "Bootle" },
-      { "@type": "Place", "name": "Crosby" }, { "@type": "Place", "name": "Maghull" },
-      { "@type": "Place", "name": "Kirkby" }, { "@type": "Place", "name": "Huyton" },
-      { "@type": "Place", "name": "Wavertree" }, { "@type": "Place", "name": "Aigburth" },
-      { "@type": "Place", "name": "Woolton" }, { "@type": "Place", "name": "West Derby" },
-      { "@type": "Place", "name": "Formby" }, { "@type": "Place", "name": "Southport" },
-      { "@type": "Place", "name": "Wirral" }, { "@type": "Place", "name": "Birkenhead" },
-      { "@type": "Place", "name": "Wallasey" }, { "@type": "Place", "name": "Heswall" },
-      { "@type": "Place", "name": "St Helens" }, { "@type": "Place", "name": "Warrington" },
-      { "@type": "Place", "name": "Stockton Heath" }
+      { "@type": "Place", "name": "Liverpool City Centre" },
+      { "@type": "Place", "name": "Aigburth" },
+      { "@type": "Place", "name": "Aintree" },
+      { "@type": "Place", "name": "Allerton" },
+      { "@type": "Place", "name": "Anfield" },
+      { "@type": "Place", "name": "Bootle" },
+      { "@type": "Place", "name": "Childwall" },
+      { "@type": "Place", "name": "Crosby" },
+      { "@type": "Place", "name": "Everton" },
+      { "@type": "Place", "name": "Fazakerley" },
+      { "@type": "Place", "name": "Formby" },
+      { "@type": "Place", "name": "Garston" },
+      { "@type": "Place", "name": "Huyton" },
+      { "@type": "Place", "name": "Kirkby" },
+      { "@type": "Place", "name": "Maghull" },
+      { "@type": "Place", "name": "Mossley Hill" },
+      { "@type": "Place", "name": "Norris Green" },
+      { "@type": "Place", "name": "Old Swan" },
+      { "@type": "Place", "name": "Southport" },
+      { "@type": "Place", "name": "St Helens" },
+      { "@type": "Place", "name": "Toxteth" },
+      { "@type": "Place", "name": "Walton" },
+      { "@type": "Place", "name": "Wavertree" },
+      { "@type": "Place", "name": "West Derby" },
+      { "@type": "Place", "name": "Wirral" },
+      { "@type": "Place", "name": "Woolton" }
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "250",
+      "reviewCount": "3",
       "bestRating": "5"
     },
     "review": [
       {
         "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "author": { "@type": "Person", "name": "Sarah M" },
-        "reviewBody": "Pipe burst under the sink at 11pm flooding the kitchen. Called and they arrived within 25 minutes. Fixed it quickly, cleaned up and the price was exactly what they quoted. Cannot fault them."
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "James Alexander" },
+        "datePublished": "2026-05-14",
+        "reviewBody": "Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!"
       },
       {
         "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "author": { "@type": "Person", "name": "John K" },
-        "reviewBody": "Boiler packed in the middle of winter. Had an engineer here in 20 minutes, diagnosed the problem and had us back up and running within the hour. Fair pricing and absolutely professional."
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "John Manley" },
+        "datePublished": "2026-05-16",
+        "reviewBody": "Fantastic service, less than two hours after phoning up to order a new shower the job was done. The young man who fitted it was a credit to himself. I would highly recommend this company."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Elaine McHugh" },
+        "datePublished": "2026-05-15",
+        "reviewBody": "Excellent service."
       }
     ]
   }
@@ -127,8 +159,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="trust-row">
-        <div class="trust-item"><strong>1,200+</strong><span>Emergencies Fixed</span></div>
-        <div class="trust-item"><strong>28min</strong><span>Avg Response Time</span></div>
+        <div class="trust-item"><strong>30min</strong><span>Guaranteed Response</span></div>
+        <div class="trust-item"><strong>From £80</strong><span>Fixed Hourly Rate</span></div>
         <div class="trust-item"><strong>24/7</strong><span>We Always Answer</span></div>
       </div>
 
@@ -136,8 +168,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ £2M Public Liability</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 30 Years Experience</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fully Insured</span>
       </div>
     </div>
   </section>
@@ -308,9 +339,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="pf-sub">Fast, pro emergency response every time.</p>
       <div class="pf-steps" style="margin-top:2rem;">
         <div class="pf-step"><div class="pf-step-num">1</div><div><strong>You Call. We Answer.</strong><p>A real person answers 24/7. No voicemail. No automated system. We give you safety advice while sending an engineer to your Liverpool property.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>We Are On Our Way</strong><p>Our own Gas Safe engineer sent at once. We text you their name and arrival time. Average response 28 minutes across Liverpool L1 to L40.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>We Are On Our Way</strong><p>Our own Gas Safe engineer sent at once. We text you their name and arrival time. Target response 30 minutes across Liverpool L1 to L40.</p></div></div>
         <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Diagnosis and Quote</strong><p>We find the fault. We explain it clearly in plain English. Written quote given before any work begins. No pressure. No surprises on the invoice.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Problem Solved</strong><p>We fix it using parts from the van. 95% of Liverpool emergency jobs done on the first visit. We test everything and clean up before leaving.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Problem Solved</strong><p>We fix it using parts from the van where possible. We test everything and clean up before leaving.</p></div></div>
       </div>
       <div style="text-align:center;margin-top:2rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;box-shadow:0 4px 14px rgba(249,115,22,0.4);">CALL 0151 558 0334</a>
@@ -322,15 +353,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- WHY CHOOSE -->
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Why Liverpool Homeowners Choose Ideal Plumbing</h2>
-      <p class="pf-sub">Gas Safe registered. Our own engineers. 30 years experience. All Liverpool L1 to L40 postcodes covered 24/7.</p>
+      <h2>Why Liverpool Homeowners Choose Us</h2>
+      <p class="pf-sub">Gas Safe registered. Our own engineers. All Liverpool L1 to L40 postcodes covered 24/7.</p>
       <div class="pf-why-grid" style="margin-top:2rem;">
         <div class="pf-why-item"><h3>Clear Fixed Rates</h3><p>£80 per hour weekdays. £120 weekends. £150 out of hours. 1 hour minimum on every call-out. After that we charge in 30 minute blocks. Parts at cost. Written quote before work starts. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>30 Minute Guaranteed Response</h3><p>Fastest in Liverpool. Average arrival time 28 minutes across all L1 to L40 postcodes. We know emergencies cannot wait.</p></div>
+        <div class="pf-why-item"><h3>30 Minute Target Response</h3><p>We aim to be with you within 30 minutes across Liverpool L1 to L40. We know emergencies cannot wait.</p></div>
         <div class="pf-why-item"><h3>Our Own Engineers. No Sub-Contractors.</h3><p>Every engineer we send is our own employed staff. Fully trained. Vetted. Insured. You know who is coming to your home.</p></div>
         <div class="pf-why-item"><h3>Gas Safe Registered</h3><p>All engineers Gas Safe registered. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. Required by law for all boiler and gas work. Certificates given for all gas work.</p></div>
         <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>No voicemail. No automated system. No call centre. A real person answers within 3 rings at 3am on Christmas Day.</p></div>
-        <div class="pf-why-item"><h3>Fixed Pricing. No Hidden Charges.</h3><p>The price we quote is the price on the invoice. No hidden charges. Written quote before work begins. 95% of jobs fixed on the first visit with parts from the van.</p></div>
+        <div class="pf-why-item"><h3>Fixed Pricing. No Hidden Charges.</h3><p>The price we quote is the price on the invoice. No hidden charges. Written quote before work begins.</p></div>
         <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>All our work carries a full 12-month guarantee. If anything we fix fails within 12 months we come back and sort it. No argument. No charge.</p></div>
       </div>
 
@@ -352,17 +383,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div style="text-align:center;margin-bottom:1.5rem;">
         <h2 style="margin-bottom:0.1rem;">What Liverpool Customers Say</h2>
-        <p class="pf-sub" style="margin:0 0 0.75rem;text-align:center;">Real reviews from Liverpool homeowners and landlords</p>
+        <p class="pf-sub" style="margin:0 0 0.75rem;text-align:center;">Real reviews from Liverpool homeowners</p>
         <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
         <div style="color:#f59e0b;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 250 reviews</div>
+        <div style="font-size:0.75rem;color:var(--muted);">Google · 3 reviews</div>
       </div>
       <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Pipe burst under the sink at 11pm flooding the kitchen. Called and they arrived within 25 minutes. Fixed it quickly. Cleaned up after themselves. The price was exactly what they quoted on the phone. Cannot fault them at all.</p><div class="pf-review-footer"><div class="pf-review-avatar">S</div><div><div class="pf-review-name">Sarah M</div><div class="pf-review-loc">Aigburth · Burst Pipe</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Boiler packed in the middle of winter. No heating. No hot water. They had an engineer here in 20 minutes. Diagnosed the problem and had us back up and running within the hour. Fair pricing. Pro throughout.</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">John K</div><div class="pf-review-loc">Anfield · Boiler Breakdown</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>30 years in Liverpool and these are the most honest plumbers I have used. No hidden fees. Turned up when they said they would. Actually answered the phone at 2am. Own engineers too. Not some random sub-contractor. Will not use anyone else.</p><div class="pf-review-footer"><div class="pf-review-avatar">D</div><div><div class="pf-review-name">David R</div><div class="pf-review-loc">West Derby · Gas Leak</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">James Alexander</div><div class="pf-review-loc">Burst Pipe Emergency</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Fantastic service, less than two hours after phoning up to order a new shower the job was done. The young man who fitted it was a credit to himself. I would highly recommend this company.</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">John Manley</div><div class="pf-review-loc">Shower Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Excellent service.</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Elaine McHugh</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
       </div>
-      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all 250 reviews on Google →</a></div>
+      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all reviews on Google →</a></div>
     </div>
   </section>
 
@@ -443,7 +474,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="selfhelp-wrapper">
         <div class="selfhelp-header">
           <h2>Try This First. Free Liverpool Plumbing Fault Guide</h2>
-          <p>These steps fix around 30% of plumbing problems without needing a call-out.</p>
+          <p>These steps fix many plumbing problems without needing a call-out.</p>
         </div>
         <div class="selfhelp-steps">
           <div class="selfhelp-step"><div class="selfhelp-num">1</div><div><strong>Find Your Stopcock</strong><p>In most Liverpool homes it is under the kitchen sink, in a hallway cupboard or under the stairs. Victorian terraces often have it in the cellar or near the front door. Turn it clockwise to stop all water.</p></div></div>
@@ -463,7 +494,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#ffffff;">
     <div class="container">
       <h2>Frozen Pipes in Liverpool. What to Do.</h2>
-      <p class="pf-sub">Liverpool winters cause hundreds of frozen pipe emergencies every year. Many can be stopped before they happen.</p>
+      <p class="pf-sub">Liverpool winters cause many frozen pipe emergencies every year. Many can be stopped before they happen.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
         <div class="job-card"><h3>How to Spot a Frozen Pipe</h3><div class="job-meta"><span class="job-price">Act fast</span><span class="job-time">Before it bursts</span></div><p>No water from taps in cold weather. Frost showing on an exposed pipe. Bulging or colour change on a pipe section. A frozen pipe that has not yet burst can often be thawed safely. Call us at once before it splits.</p></div>
         <div class="job-card"><h3>Which Liverpool Properties Are Most at Risk?</h3><div class="job-meta"><span class="job-price">Victorian terraces</span><span class="job-time">Old stock risk</span></div><p>Liverpool's Victorian and Edwardian terraces often have external or loft pipes that were never lagged to modern standards. Properties with pipes running through unheated spaces are most at risk in cold snaps.</p></div>
@@ -616,13 +647,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Liverpool?</summary><div class="pf-faq-body"><p>Fixed hourly rates with a 1 hour minimum. Weekdays 9am to 5pm £80. Weekends 9am to 1pm £120. Out of hours nights and bank holidays £150. After the first hour we charge in 30 minute blocks. Parts at cost. Most jobs cost between £80 and £350. Written quote before work begins.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to work on gas appliances without this. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We give gas safety certificates for all gas work done.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">ENGINEERS</span>&nbsp; Do you use sub-contractors?</summary><div class="pf-faq-body"><p>No. Every engineer we send to your Liverpool property is our own employed staff. We never use sub-contractors or agency workers. You get the same trained, vetted, insured pro every time.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RESPONSE</span>&nbsp; How quickly can you reach me in Liverpool?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Liverpool L1 to L40. Our average arrival time is 28 minutes. City centre, Anfield and Wavertree typically under 20 minutes. Outlying areas like Formby, Kirkby and Maghull around 35 minutes.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RESPONSE</span>&nbsp; How quickly can you reach me in Liverpool?</summary><div class="pf-faq-body"><p>We aim for a 30 minute response across Liverpool L1 to L40. City centre, Anfield and Wavertree typically under 20 minutes. Outlying areas like Formby, Kirkby and Maghull around 35 minutes.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">POSTCODES</span>&nbsp; What postcodes do you cover in Liverpool?</summary><div class="pf-faq-body"><p>We cover all Liverpool postcodes from L1 to L40. This includes the city centre, Anfield, Aigburth, Wavertree, West Derby, Woolton, Old Swan, Childwall, Allerton, Garston, Bootle, Crosby, Maghull, Kirkby, Huyton, Norris Green, Fazakerley, Aintree, Formby and Southport.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COMMERCIAL</span>&nbsp; Do you cover commercial properties in Liverpool?</summary><div class="pf-faq-body"><p>Yes. We cover commercial emergencies 24/7 across Liverpool. Shops, restaurants, offices, hotels and warehouses. Same fixed rates as residential. No commercial premium. We can invoice on 30-day payment terms for set-up businesses.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. All our work carries a full 12-month workmanship guarantee. If anything we fix fails within 12 months due to our work we come back and sort it at no charge. No argument. No quibble.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">FROZEN PIPES</span>&nbsp; What should I do if my pipes are frozen in Liverpool?</summary><div class="pf-faq-body"><p>Do not try to thaw frozen pipes with a naked flame. Turn off the water at the stopcock at once. Call us at once. A frozen pipe costs far less to fix than a burst one. Liverpool's Victorian terraces are very at risk due to external and loft pipes that were never lagged to modern standards.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">INSURANCE</span>&nbsp; Can you help with water damage insurance claims?</summary><div class="pf-faq-body"><p>Yes. We provide full docs for insurance claims. An itemised invoice. Photos of the damage and repair. A written report on the cause. Gas safety certificates where needed. We can also speak to your insurer directly if needed.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LANDLORDS</span>&nbsp; Do you work with Liverpool landlords and letting agents?</summary><div class="pf-faq-body"><p>Yes. We work with single landlords and letting agents across Liverpool, Wirral, Warrington and St Helens. We provide annual gas safety certificates (CP12) from £80. We handle tenant emergency call-outs. We offer monthly cover plans for portfolio landlords. See <a href="https://www.nrla.org.uk/resources/gas-safety" target="_blank" rel="noopener">NRLA landlord gas safety guidance</a> for your legal duties.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LANDLORDS</span>&nbsp; Do you work with Liverpool landlords and letting agents?</summary><div class="pf-faq-body"><p>Yes. We work with single landlords and letting agents across Liverpool, Wirral and St Helens. We provide annual gas safety certificates (CP12) from £80. We handle tenant emergency call-outs. We offer monthly cover plans for portfolio landlords. See <a href="https://www.nrla.org.uk/resources/gas-safety" target="_blank" rel="noopener">NRLA landlord gas safety guidance</a> for your legal duties.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">3AM</span>&nbsp; Do you really answer calls at 3am?</summary><div class="pf-faq-body"><p>Yes. A real person answers 24 hours a day, 7 days a week. No voicemail. No automated system. No call centre. We answer within 3 rings. Christmas Day. Bank Holidays. 3am Sunday mornings. Call us right now to test it.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">NO HOT WATER</span>&nbsp; What should I do if I have no hot water in Liverpool?</summary><div class="pf-faq-body"><p>Check your boiler pressure gauge first. It should read between 1 and 1.5 bar. Below 0.5 bar, repressurise using the filling loop. Note any error codes on the boiler display before calling us. If neither fixes the issue, call us on 0151 558 0334. We attend no hot water emergencies 24/7 across Liverpool.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">BLOCKED DRAIN</span>&nbsp; What should I do if my toilet is blocked or overflowing?</summary><div class="pf-faq-body"><p>Stop flushing at once. More flushing will overflow sewage onto the floor. Turn off the water supply to the toilet at the isolation valve on the pipe behind it if you can. Call us on 0151 558 0334. Do not use chemical drain cleaners. They rarely work on full blockages and can damage older Liverpool pipework.</p></div></details>
@@ -635,17 +666,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#ffffff;">
     <div class="container">
       <h2>Fully Qualified Plumbers Serving Liverpool</h2>
-      <p class="pf-sub">Every engineer we send to your Liverpool property holds all of these. All gas work is registered with <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe Register</a>.</p>
+      <p class="pf-sub">Every engineer we send to your Liverpool property holds these qualifications. All gas work is registered with <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe Register</a>.</p>
       <div class="quals-grid" style="margin-top:2rem;">
         <div class="qual-card"><div class="qual-num">1</div><strong>Gas Safe Registered</strong><span>Required for all gas and boiler work</span><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="font-size:0.78rem;font-weight:700;color:var(--orange);text-decoration:none;margin-top:0.25rem;">Verify our registration →</a></div>
-        <div class="qual-card"><div class="qual-num">2</div><strong>30 Years Experience</strong><span>Liverpool and Merseyside specialists</span></div>
+        <div class="qual-card"><div class="qual-num">2</div><strong>Experienced Engineers</strong><span>Liverpool and Merseyside specialists</span></div>
         <div class="qual-card"><div class="qual-num">3</div><strong>City and Guilds</strong><span>Formally qualified plumbers</span></div>
-        <div class="qual-card"><div class="qual-num">4</div><strong>Fully Insured</strong><span>Public liability £2,000,000</span></div>
+        <div class="qual-card"><div class="qual-num">4</div><strong>Fully Insured</strong><span>Public liability cover in place</span></div>
       </div>
       <div class="insurance-bar" style="margin-top:1.5rem;">
         <strong>Insurance, Guarantee and Accreditations</strong>
-        <span>✓ Public liability £2,000,000</span>
-        <span>✓ Professional indemnity included</span>
+        <span>✓ Public liability insurance in place</span>
         <span>✓ Gas Safe registered and verified</span>
         <span>✓ Our own engineers, no sub-contractors</span>
         <span>✓ 12-month workmanship guarantee on all work</span>
@@ -661,7 +691,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="copy-block">
           <h2>Why Response Time Matters for Liverpool Plumbing Emergencies</h2>
           <h3 style="font-size:1.1rem;margin:0.75rem 0 0.4rem;text-align:center;">How quickly can a burst pipe cause damage?</h3>
-          <p>When a pipe bursts, every minute counts. A burst pipe can release 400 litres of water an hour into your Liverpool property. Our 30 minute response is a real promise. Our engineers know Liverpool's roads. They carry the most common parts on the van. 95% of jobs are fixed on the first visit.</p>
+          <p>When a pipe bursts, every minute counts. A burst pipe can release hundreds of litres of water an hour into your Liverpool property. Our 30 minute response is a real target. Our engineers know Liverpool's roads. They carry the most common parts on the van so most jobs can be fixed on the first visit.</p>
           <h3 style="font-size:1.1rem;margin:0.75rem 0 0.4rem;text-align:center;">How to find a reliable 24 hour or out of hours plumber in Liverpool</h3>
           <p>Always check Gas Safe registration. Verify reviews on Google or Trustpilot. Ask for a clear price before anyone attends. Our fixed rates and 1 hour minimum are stated clearly. Our Gas Safe registration can be verified at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p>
         </div>
@@ -685,7 +715,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Available Now Across Liverpool L1 to L40. 24/7
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Liverpool?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. Full emergency plumbing services across Liverpool, Wirral, Warrington and St Helens.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. Full emergency plumbing services across Liverpool, Wirral, St Helens and Formby.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Slot Online</a>
