@@ -1,5 +1,6 @@
 ---
 const { title, description, canonical } = Astro.props;
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://liverpoolemergencyplumber.co.uk').href;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@ const { title, description, canonical } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  {canonical && <link rel="canonical" href={canonical} />}
+  <link rel="canonical" href={canonicalURL} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
@@ -1013,8 +1014,8 @@ const { title, description, canonical } = Astro.props;
   <nav class="site-nav" id="site-nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
-        Ideal <span>Plumbing</span>
-        <small>Gas Safe · Liverpool</small>
+        Liverpool <span>Emergency Plumber</span>
+        <small>Gas Safe · 24/7</small>
       </a>
       <ul class="nav-links">
         <li><a href="/" class="nav-emergency">Emergency</a></li>
@@ -1092,7 +1093,7 @@ const { title, description, canonical } = Astro.props;
   <footer class="site-footer">
     <div class="container">
       <p>Liverpool Emergency Plumber · Liverpool · <a href="tel:0151 558 0334">0151 558 0334</a> · <a href="mailto:emergencyplumberliverpool@gmail.com">emergencyplumberliverpool@gmail.com</a></p>
-      <p style="margin-top:0.5rem;">Gas Safe Registered · NICEIC Approved · Serving Liverpool, Wirral, Warrington and St Helens</p>
+      <p style="margin-top:0.5rem;">Gas Safe Registered · Serving Liverpool, Wirral, St Helens and Formby</p>
       <p style="margin-top:0.5rem;font-size:0.78rem;color:rgba(255,255,255,0.4);">&copy; 2026 Liverpool Emergency Plumber. All rights reserved. · <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);">Gas Safe Registered</a> · Verify our registration at gassaferegister.co.uk</p>
     </div>
   </footer>
