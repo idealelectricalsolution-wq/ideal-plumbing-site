@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Maghull | Fastest 30min Response | From £80 | Gas Safe"
-  description="Emergency plumber Maghull available 24/7. 30 minute response across L31. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-maghull"
+  title="Emergency Plumber Maghull | 15min Response | From £80"
+  description="Emergency plumber in Maghull L31. 15 minute run from our Kirkby base. We're next door. Covers Liverpool Road, Deyes Lane, Park Lane, Lydiate and the wider L31. Sefton suburban specialists. Gas Safe registered. From £80 an hour."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Maghull",
+    "alternateName": ["24 Hour Plumber Maghull", "Maghull Emergency Plumber L31"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Maghull available 24/7. 30 minute response across L31. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Maghull L31. We cover Liverpool Road, Deyes Lane, Park Lane, Northway, Lydiate, Melling and the wider L31. 15 minute run from our Kirkby base. Sefton suburban specialists. Gas Safe registered. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Maghull, L31" },
+    "areaServed": [
+      { "@type": "Place", "name": "Maghull, L31" },
+      { "@type": "Place", "name": "Lydiate" },
+      { "@type": "Place", "name": "Melling" },
+      { "@type": "Place", "name": "Liverpool Road North" },
+      { "@type": "Place", "name": "Deyes Lane" },
+      { "@type": "Place", "name": "Switch Island" },
+      { "@type": "Place", "name": "Northway A59" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Maghull", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Maghull", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Maghull", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Maghull", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Maghull", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +39,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Maghull?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Maghull?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Maghull L31. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "My hot water cylinder in Maghull is leaking. What should I do?", "acceptedAnswer": { "@type": "Answer", "text": "Turn off the water supply to the cylinder at the isolation valve on the cold feed pipe (usually the pipe entering at the bottom). If the leak is from the cylinder body itself, the cylinder must be replaced   cylinders cannot be repaired once the tank has failed. If the leak is from a fitting or valve, we may be able to repair it without replacing the whole cylinder. Call 0151 558 0334 immediately and we will attend within 30 minutes to assess." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Maghull?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Maghull?", "acceptedAnswer": { "@type": "Answer", "text": "We're based in Kirkby. Maghull is the next postcode over. 10 to 15 minutes via the A59 or through Switch Island. Most calls reach us inside 20 minutes from first contact. A real person picks up the phone any time of day or night." } },
+      { "@type": "Question", "name": "Are you local to Maghull?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We're at 29 Park Road, Kirkby, L32 2AL. Kirkby is the next postcode south of Maghull. Many of our customers are within 4 miles of our base. The other plumbers ranking for emergency plumber Maghull are based further away or run national call centres." } },
+      { "@type": "Question", "name": "Do you work on 1970s and 1980s semis?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. That stock is most of Maghull. Copper supply pipes with compression fittings. System boilers with hot water cylinders. 40 to 50 year old heating systems. We know the typical fault patterns and carry common parts on the van." } },
+      { "@type": "Question", "name": "My hot water cylinder is leaking. What should I do?", "acceptedAnswer": { "@type": "Answer", "text": "Turn off the water supply at the isolation valve on the cold feed pipe (the pipe entering at the bottom). If the leak is from the cylinder body itself, the cylinder must be replaced. If the leak is from a fitting or valve, we may be able to repair it. Call us on 0151 558 0334. New cylinders from £600 fitted." } },
+      { "@type": "Question", "name": "Do you cover Lydiate and Melling?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Lydiate, Melling, Aughton borders, and the rest of L31 are all covered at the same fixed rates. Same 15 minute response from Kirkby." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is done by our own Gas Safe engineers. Check our entry at gassaferegister.co.uk. It's against the law to work on gas without it." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,14 +67,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Maghull
+        Available 24/7 in Maghull L31
       </div>
-      <h1>Emergency Plumber Maghull</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Maghull L31. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Maghull</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Liverpool Road, Deyes Lane, Park Lane, Northway, Lydiate, Melling and the wider L31. 15 minute run from our Kirkby base. We're next door. £80 an hour fixed. Gas Safe registered.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Guaranteed Response in Maghull</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">15<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Response from our Kirkby base</span>
         <p style="color:rgba(255,255,255,0.85);font-size:0.85rem;margin:0.3rem 0 0;">From <strong style="color:var(--orange);">£80/hour</strong> · 1 hour minimum · Fixed rates</p>
       </div>
 
@@ -71,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Next-Door in Kirkby</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +100,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"No hot water and a strange noise from the boiler. Called Ideal who arrived within 30 minutes. Diagnosed a noisy pump on its way out, replaced it and had the system running quietly and correctly within the hour. Fair price and excellent work." Susan G, Maghull</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Excellent service" Elaine McHugh</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LOCAL PROOF -->
+  <section class="pf-section" style="background:#fef3c7;border-top:3px solid var(--orange);border-bottom:3px solid var(--orange);">
+    <div class="container">
+      <div style="max-width:760px;margin:0 auto;text-align:center;">
+        <h2 style="margin-bottom:0.75rem;">Maghull Is The Next Postcode From Us.</h2>
+        <p style="font-size:1.05rem;color:var(--navy);line-height:1.65;margin-bottom:0;">Our office and stores are at <strong>29 Park Road, Kirkby, L32 2AL</strong>. Kirkby is L32, Maghull is L31. We're next door. The A59 or a quick run through Switch Island gets us to most of Maghull in 10 minutes.</p>
+        <p style="font-size:0.95rem;color:var(--muted);line-height:1.65;margin-top:0.75rem;">The other plumbers ranking for emergency plumber Maghull are based in Liverpool city, Lancashire, or are national call centres dispatching to whoever's nearest. Our vans drive Liverpool Road North every day.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">MAGHULL HOMES WE COVER</span>
+      <h2>One Plumber. Every Type of L31 Home.</h2>
+      <p class="pf-sub">Maghull is almost entirely a 20th-century town. Semi-detached and detached on planned estates. Here's what we usually find.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>1930s and 1940s Pre-War Semis</h3>
+          <p>The earliest stock of modern Maghull, built when the Northway opened in 1933 and the town started growing. Bay windows, three-bed family layouts. Copper pipework and heating systems all replaced two or three times since.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>1950s and 1960s Post-War Estates</h3>
+          <p>Maghull's population went from 10,000 in 1951 to 22,000 by 1971. Most of the housing dates from that boom. Original pipework now 60 to 70 years old. Pinhole leaks and corroded cylinder connections are common.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>1970s and 1980s Private Estates</h3>
+          <p>The dormitory boom era. Detached and semi-detached on quiet streets off Deyes Lane, School Lane and Park Lane. System boilers, hot water cylinders, three-port valves. We carry common parts.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Modern Sefton East New Builds</h3>
+          <p>The 2010s Sefton East housing zone added new estates around Maghull. Modern combi boilers, push-fit plumbing, often still under maker warranty. We honour warranty terms when we work.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>McCarthy & Stone Retirement Living</h3>
+          <p>The Royal British Legion site on Liverpool Road South is now 44 retirement flats. More retirement schemes across town. Shared boiler systems, communal hot water. We work with managing agents.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Canalside and Old Village Period Properties</h3>
+          <p>The old village core near Red Lion Bridge and the Leeds and Liverpool Canal has older Victorian and Edwardian stock. Lead supply pipes, cast iron waste, mixed-era upgrades. We know the patchwork.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Maghull. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Maghull. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -108,7 +177,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="pf-price-sub">9am to 5pm</div>
           <div class="pf-price-amount">£80<small>/hr</small></div>
           <ul class="pf-price-list">
-            <li>30 min Maghull response</li>
+            <li>15 min response from Kirkby</li>
             <li>Gas Safe engineer</li>
             <li>1 hour minimum</li>
             <li>Parts at cost</li>
@@ -145,48 +214,74 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="pf-alert" style="margin-top:1.5rem;">
-        <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <strong>No call-out fee</strong>
+        <p>You pay our hourly rate from when we start work. The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade typical price for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. We sit at the bottom end.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">MAGHULL LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Maghull. Commuter Suburb Needs Fast Reliable Cover.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Maghull is a Sefton commuter suburb with excellent rail links to Liverpool and Ormskirk, attracting families and professionals who want a quieter residential area within easy reach of the city. The housing stock is predominantly 1970s and 1980s private semi-detached and detached houses on the residential estates running off the main Liverpool Road corridor, with some older properties in the historic village centre.
+      <h2>How L31 Plumbing Actually Looks</h2>
 
-The 1970s and 1980s housing that defines most of Maghull has plumbing and heating systems of that era   copper supply pipes with compression fittings, system boilers with hot water cylinders, and heating systems with pump configurations that were state-of-the-art 40 years ago but are now subject to routine age-related failures. Commuter households in Maghull face a particular problem   a boiler failure or burst pipe discovered when returning from work at 7pm needs to be fixed immediately, not left until the next morning. We attend Maghull emergencies 24/7 and can have an engineer with you within 30 minutes regardless of the time you discover the problem. We also carry out <a href="/power-flushing-liverpool" style="color:var(--orange);font-weight:700;">power flushing</a> for systems with reduced radiator performance and <a href="/boiler-service-liverpool" style="color:var(--orange);font-weight:700;">annual boiler servicing</a> across all L31 postcodes.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Maghull is in Sefton Metropolitan Borough Council, not Liverpool. Molyneux ward, Park ward, Sudell ward. Population around 28,000. A dormitory town for Liverpool, with strong rail links to the city centre, Ormskirk and beyond.</p>
+
+        <p>It's almost entirely a 20th-century town. The railway came in 1849. The Northway A59 was built in 1933 as one of Britain's first dual carriageways. Most of the housing went up between the 1930s and the 1980s. The population doubled in the 1950s and again in the 1970s.</p>
+
+        <p>The old village core is at Red Lion Bridge, where the original ridge of high ground gave protection from the River Alt flooding. The Leeds and Liverpool Canal runs through. The Maghull Homes Manor House from 1888 still stands.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>Frank Hornby, inventor of Hornby trains, Meccano and Dinky Toys, lived in Maghull. His house in the grounds of Maricourt Catholic High School was the first building outside London to receive a Blue Plaque. That's the kind of place Maghull is.</p>
+
+        <p>The housing tells the story of 20th-century English suburbia. 1930s bay-window semis. 1950s post-war planned estates. 1970s dormitory cul-de-sacs. 1990s and 2000s infill. 2010s Sefton East new builds. Plus McCarthy and Stone retirement flats on the Royal British Legion site. Each era has its own plumbing patterns.</p>
+
+        <p>We've worked them all. Same fixed rates whichever decade your home is from.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Maghull</h2>
-      <p class="pf-sub">The faults we attend most frequently in Maghull L31.</p>
+      <h2>Common Emergency Jobs in Maghull</h2>
+      <p class="pf-sub">What we attend most often in L31.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
+
         <div class="job-card">
-          <h3>1970s System Boiler Failures</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Maghull's 1970s housing stock with original or first-replacement system boilers is prone to pump seal failures, heat exchanger corrosion and three-port valve failures. We carry parts for all common system boiler brands and resolve most L31 heating emergencies on the first visit.</p>
+          <h3>System Boiler Failures</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Most Maghull homes have system boilers feeding a hot water cylinder. Pump seal failures, three-port valve sticking and heat exchanger corrosion are the usual culprits. We carry parts for the common brands.</p>
         </div>
         <div class="job-card">
-          <h3>Hot Water Cylinder Failures</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Properties in Maghull with system boilers feed a separate hot water cylinder. Cylinder failures   leaking, not heating, or immersion heater failure   leave the household without hot water even when heating is working. Immersion heater replacement from £150 same day. Cylinder replacement from £600.</p>
+          <h3>Hot Water Cylinder Faults</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>A leaking, scaled or failed cylinder leaves you with no hot water. Immersion heater replacement from £150 same day. Full cylinder swap from £600. Unvented work needs G3 qualification, which our engineers hold.</p>
         </div>
         <div class="job-card">
-          <h3>Evening and Weekend Emergencies for Commuters</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Maghull commuter households frequently discover plumbing faults in the evening after returning from Liverpool. We treat 7pm and 8pm call-outs the same as any other   fixed weekday rates of £80/hr apply until 9pm on weekdays. Call 0151 558 0334 at any time.</p>
+          <h3>Commuter Evening Call-Outs</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Most Maghull plumbing faults are discovered at 6pm or 7pm when you get home from work. We treat evening calls the same as any other. Weekday rates apply until 9pm. We don't try to push you into an out-of-hours rate.</p>
+        </div>
+        <div class="job-card">
+          <h3>1960s Copper Pipe Pinholes</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>The 1950s and 1960s estates have original copper pipework now 60 to 70 years old. Pinhole leaks under floors and in lofts are common. We patch the failing section and check the rest of the run for early signs.</p>
+        </div>
+        <div class="job-card">
+          <h3>Blocked Drains</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>The older clay drain runs are at the end of their life. Tree roots find their way in. Ground movement cracks pipes. We clear with high-pressure jetting. CCTV survey on request to find the source.</p>
+        </div>
+        <div class="job-card">
+          <h3>Retirement Flat Block Emergencies</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>McCarthy and Stone and other retirement schemes have shared boiler systems and communal hot water. A fault affects every flat. We coordinate with managing agents and provide written reports.</p>
         </div>
       </div>
     </div>
@@ -194,64 +289,66 @@ The 1970s and 1980s housing that defines most of Maghull has plumbing and heatin
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Maghull Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps to protect your home while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most commuter suburb with 1970s and 1980s private housing it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Maghull call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Maghull semis it's under the kitchen sink, in the garage, or near the front door. In newer estates it's often in the airing cupboard. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the home is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can top it up with the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need proof. We give you our own fault report with photos as well, ready for your insurer.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Maghull</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Maghull L31. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L31. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Maghull</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Maghull</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L31 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Maghull</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Maghull</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L31 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Maghull</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Maghull</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L31.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Maghull</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year warranty. ECO4 grant check on every quote. Free survey across L31.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Maghull</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Maghull</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Common upgrade in 1970s and 1980s Maghull estates.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Maghull</strong><span>CP12 paperwork from £80. Same-day if needed. Combined boiler service and CP12 from £175. All L31 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Swaps</strong><span>New radiators from £200 supply and fit. TRV upgrades from £50. Common upgrade with combi boiler swaps.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Electric showers from £200 supply and fit. Shower mixer from £300. Cartridge swaps from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Maghull Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Maghull Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Maghull</h3><p>We know Maghull and the L31 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Maghull is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Maghull property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Commuter suburb with 1970s and 1980s private housing</h3><p>We work in Maghull regularly and understand the specific plumbing and heating challenges of commuter suburb with 1970s and 1980s private housing. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Maghull carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>15 Minute Response from Next Door</h3><p>Our base at 29 Park Road, Kirkby is the next postcode from Maghull. 10 to 15 minutes via the A59 or through Switch Island.</p></div>
+        <div class="pf-why-item"><h3>Sefton Suburban Specialists</h3><p>Maghull is in Sefton, not Liverpool. We know the council, the wards (Molyneux, Park, Sudell), the Neighbourhood Plan and the local planning rules.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first.</p></div>
+        <div class="pf-why-item"><h3>System Boiler and Cylinder Skills</h3><p>Maghull homes still use system boilers and hot water cylinders more than most areas. We're G3 qualified for unvented work. Plenty of plumbers aren't.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Useful Information for Maghull Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Maghull.</p>
+      <p class="pf-sub">External resources for plumbing, heating, council and grant matters.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.merseyrail.org" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Merseyrail Maghull services</a></li><li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.which.co.uk/reviews/boilers/article/types-of-boiler" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Which? advice on hot water cylinders</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Maghull</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Check any gas engineer working at your Maghull home.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 if you smell gas anywhere in Maghull.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water (0345 672 3723).</li>
+          <li><a href="https://www.sefton.gov.uk/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Sefton Metropolitan Borough Council</a>. Local council for Maghull, Lydiate and Melling.</li>
+          <li><a href="https://www.gov.uk/apply-home-insulation-grant" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">ECO4 grant scheme</a>. Government grants for boiler swaps and insulation. Older system boilers often qualify.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Health and Safety Executive guidance on gas at home.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +356,37 @@ The 1970s and 1980s housing that defines most of Maghull has plumbing and heatin
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Maghull. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Maghull?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Maghull?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Maghull L31. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Maghull?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Maghull fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">CYLINDER</span>&nbsp; My hot water cylinder in Maghull is leaking. What should I do?</summary><div class="pf-faq-body"><p>Turn off the water supply to the cylinder at the isolation valve on the cold feed pipe (usually the pipe entering at the bottom). If the leak is from the cylinder body itself, the cylinder must be replaced   cylinders cannot be repaired once the tank has failed. If the leak is from a fitting or valve, we may be able to repair it without replacing the whole cylinder. Call 0151 558 0334 immediately and we will attend within 30 minutes to assess.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Maghull?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Maghull?</summary><div class="pf-faq-body"><p>We're based in Kirkby. Maghull is the next postcode over. 10 to 15 minutes via the A59 or through Switch Island. Most calls reach us inside 20 minutes from first contact. A real person picks up the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">LOCAL</span>&nbsp; Are you local to Maghull?</summary><div class="pf-faq-body"><p>Yes. We're at 29 Park Road, Kirkby, L32 2AL. Kirkby is the next postcode south of Maghull. Many of our customers are within 4 miles of our base. The other plumbers ranking for emergency plumber Maghull are based further away or run national call centres.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">SEMIS</span>&nbsp; Do you work on 1970s and 1980s semis?</summary><div class="pf-faq-body"><p>Yes. That stock is most of Maghull. Copper supply pipes with compression fittings. System boilers with hot water cylinders. 40 to 50 year old heating systems. We know the typical fault patterns and carry common parts on the van.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">CYLINDER</span>&nbsp; My hot water cylinder is leaking. What should I do?</summary><div class="pf-faq-body"><p>Turn off the water supply at the isolation valve on the cold feed pipe (the pipe entering at the bottom). If the leak is from the cylinder body itself, the cylinder must be replaced. If the leak is from a fitting or valve, we may be able to repair it. Call us on 0151 558 0334. New cylinders from £600 fitted.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">AREAS</span>&nbsp; Do you cover Lydiate and Melling?</summary><div class="pf-faq-body"><p>Yes. Lydiate, Melling, Aughton borders, and the rest of L31 are all covered at the same fixed rates. Same 15 minute response from Kirkby.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All gas work is done by our own Gas Safe engineers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It's against the law to work on gas without it.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Maghull and Nearby Areas</h2>
-      <p class="pf-sub">We cover Maghull L31 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Maghull L31 and all surrounding north Liverpool and Sefton. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-crosby" class="area-pill">Crosby</a><a href="/emergency-plumber-aintree" class="area-pill">Aintree</a><a href="/emergency-plumber-formby" class="area-pill">Formby</a><a href="/emergency-plumber-kirkby" class="area-pill">Kirkby</a>
+        <a href="/emergency-plumber-kirkby" class="area-pill">Kirkby</a>
+        <a href="/emergency-plumber-aintree" class="area-pill">Aintree</a>
+        <a href="/emergency-plumber-crosby" class="area-pill">Crosby</a>
+        <a href="/emergency-plumber-formby" class="area-pill">Formby</a>
+        <a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a>
+        <a href="/emergency-plumber-norris-green" class="area-pill">Norris Green</a>
+        <a href="/emergency-plumber-southport" class="area-pill">Southport</a>
       </div>
     </div>
   </section>
@@ -294,7 +400,7 @@ The 1970s and 1980s housing that defines most of Maghull has plumbing and heatin
         Available Now in Maghull. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Maghull?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">15 minute run from next-door Kirkby. £80 fixed. Gas Safe registered. Sefton suburban specialists. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
