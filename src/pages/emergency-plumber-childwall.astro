@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Childwall | Fastest 30min Response | From £80 | Gas Safe"
-  description="Emergency plumber Childwall available 24/7. 30 minute response across L16. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-childwall"
+  title="Emergency Plumber Childwall | 30min Response | From £80"
+  description="Emergency plumber in Childwall L16. 30 minute response across Childwall Valley Road, Score Lane, Stand Park Road and the wider L16. Family home specialists. Gas Safe. From £80 an hour. Call 0151 558 0334."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Childwall",
+    "alternateName": ["24 Hour Plumber Childwall", "Childwall Emergency Plumber L16"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Childwall available 24/7. 30 minute response across L16. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Childwall L16. We cover Childwall Valley Road, Childwall Abbey Road, Score Lane, Stand Park Road and the wider L16. 30 minute response. Gas Safe registered. Family home specialists. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Childwall, L16" },
+    "areaServed": [
+      { "@type": "Place", "name": "Childwall, L16" },
+      { "@type": "Place", "name": "Childwall Valley" },
+      { "@type": "Place", "name": "Score Lane" },
+      { "@type": "Place", "name": "Childwall Abbey" },
+      { "@type": "Place", "name": "Broad Green" },
+      { "@type": "Place", "name": "Gateacre" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Childwall", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Childwall", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Childwall", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Childwall", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Childwall", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +38,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Childwall?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Childwall?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Childwall L16. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "How often should I have the drains checked in my Childwall property?", "acceptedAnswer": { "@type": "Answer", "text": "If your Childwall property has mature garden trees and you have experienced even one drain blockage, we recommend a CCTV drain survey to assess the extent of root intrusion in the clay pipes. Without inspection, a drain cleared today may block again within months as roots continue growing. A CCTV survey identifies how far the roots have penetrated and whether a section of pipe needs replacing. Call 0151 558 0334 for a survey quote." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Childwall?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Childwall?", "acceptedAnswer": { "@type": "Answer", "text": "We promise a 30 minute response across Childwall L16. Most calls reach us in 20 to 25 minutes from our Kirkby base. A real person picks up the phone any time of day or night." } },
+      { "@type": "Question", "name": "Why do drains block so often in Childwall?", "acceptedAnswer": { "@type": "Answer", "text": "Tree roots in old clay drain pipes. Childwall has big gardens with mature trees. The clay drain runs are 80 to 90 years old. Roots find their way into the joints. A drain cleared today can block again in months as the roots keep growing. We run a CCTV survey to show where the trouble is. We clear with high-pressure jetting." } },
+      { "@type": "Question", "name": "Do you work on 1930s and 1950s semis in Childwall?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The 1930s and 1950s semis make up most of Childwall. We work on them every week. We know the typical layouts. We know where the stopcock is. We carry common parts on the van for the faults we see again and again in this housing." } },
+      { "@type": "Question", "name": "Do you cover student rentals near Hope University?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Liverpool Hope University's Hope Park campus is nearby. We cover the student and rental homes around it. We do CP12 gas safety paperwork ahead of each academic year. We give written reports for landlord insurance claims as standard." } },
+      { "@type": "Question", "name": "Can you do shower valve and cartridge repairs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shower mixer cartridges fail after 8 to 10 years of regular use. A new cartridge from £100 usually fixes the shower without replacing the whole valve. We carry common cartridges on the van. Same-visit job in most cases." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is done by our own Gas Safe engineers. Check our entry at gassaferegister.co.uk. It's against the law to work on gas without it." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,10 +66,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Childwall
+        Available 24/7 in Childwall L16
       </div>
-      <h1>Emergency Plumber Childwall</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Childwall L16. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Childwall</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Childwall Valley Road, Score Lane, Stand Park Road, Padstow Road and the wider L16. 30 minute response. £80 an hour fixed. Gas Safe registered. We know the 1930s and 1950s family homes that fill Childwall.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
@@ -71,7 +84,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Family Home Experts</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +99,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Shower stopped working completely on a Saturday morning   no water at all from the shower head. Ideal arrived within 27 minutes, identified a blocked thermostatic cartridge, replaced it and had us fully operational before midday. Perfect." Michael F, Childwall</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!" James Alexander</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">CHILDWALL HOMES WE COVER</span>
+      <h2>One Plumber. Every Type of Childwall Home.</h2>
+      <p class="pf-sub">Childwall is mostly 1930s and 1950s semis. Here's what we usually find behind the front door.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>1930s Semi-Detached</h3>
+          <p>The most common Childwall home. Three or four bedrooms. Bay windows, solid build, big gardens. Original pipework was lead and copper. Most has been part-upgraded. Combi boilers were often fitted in awkward spots in the 1990s. We know the layouts.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>1950s Family Semis</h3>
+          <p>Built when Childwall grew south after the war. Streets like Score Lane, Welbourne Road and Bowland Avenue. Simpler layouts than the 1930s stock. Standard combi or system boilers. Family bathrooms often updated twice in the last 40 years.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Large Detached Family Homes</h3>
+          <p>Burns Close, Sulgrave Close, Chelwood Avenue. Four and five-bed detached on quiet cul-de-sacs. Two bathrooms or more. Mains pressure unvented cylinders are common. We're G3 qualified for that work.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Period Homes Near Childwall Abbey</h3>
+          <p>The older streets near Childwall Abbey and Childwall Priory Road have some Victorian and 1900s stock. Original features, lead supply pipes still in service in places. We work around period detail with care.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Modern New Builds and Gated Estates</h3>
+          <p>The newer developments around the L16 border. Modern boilers, mains pressure systems, often still under maker warranty. We honour the warranty terms when we work.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Hope University Rentals</h3>
+          <p>The streets around Liverpool Hope University's Hope Park campus have a strong student and staff rental base. We cover landlord call-outs and CP12 gas safety paperwork ahead of each academic year.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Childwall. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Childwall. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -145,48 +201,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="pf-alert" style="margin-top:1.5rem;">
-        <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <strong>Independent price check</strong>
+        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade typical price for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. Our rates are fixed and shown before you call. No call-out fee.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">CHILDWALL LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Childwall. What L16's Affluent Family Homes Need.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Childwall is a consistently affluent south-east Liverpool suburb with a high concentration of 1930s and 1950s semi-detached properties that were built to a higher specification than the Victorian terraces of inner Liverpool. Properties along Childwall Valley Road, Childwall Abbey Road and the surrounding streets are predominantly large family homes with three or four bedrooms, gardens, garages and heating systems that have been upgraded multiple times.
+      <h2>What Childwall Family Homes Need</h2>
 
-The 1930s construction period means that many Childwall properties have original clay drainage systems under the garden and under the house that are now approaching 90 years old. Tree roots from the large gardens that characterise the area are a persistent cause of drain blockages in L16. We clear drain blockages in Childwall and can carry out CCTV surveys to assess the extent of root intrusion before recommending repairs. We also install and service <a href="/showers-liverpool" style="color:var(--orange);font-weight:700;">thermostatic and digital showers</a>, carry out <a href="/radiators-liverpool" style="color:var(--orange);font-weight:700;">radiator upgrades</a> for larger Childwall homes, and provide <a href="/boiler-service-liverpool" style="color:var(--orange);font-weight:700;">annual boiler servicing</a> across L16.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Childwall is one of south Liverpool's strongest family-home suburbs. A 3-bed semi sells for £250,000 to £350,000. A 4-bed detached on Burns Close or Sulgrave Close can reach £500,000 and up. The streets are wide. The gardens are big. The schools are good.</p>
+
+        <p>The housing is mostly 1930s and 1950s semis. Solid brick, bay windows, three or four bedrooms. These homes were built better than the Victorian terraces of inner Liverpool. The pipework is from the 1930s onwards, much of it part-upgraded over the years.</p>
+
+        <p>The big gardens are the catch. Mature trees mean roots in the clay drain runs. The drains are now 80 to 90 years old. Roots find the joints. A blockage cleared today can come back in months if the roots aren't dealt with. We run a CCTV survey to show where the trouble is.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>Childwall has good landmarks for local proof. Childwall Abbey Hotel on Childwall Abbey Road. Childwall Golf Club. Childwall Woods and Fields. Liverpool Hope University's Hope Park campus is just south.</p>
+
+        <p>The school catchment drives strong family demand. Childwall Sports and Science Academy, the Bluecoat School nearby in Wavertree. Family bathrooms get refreshed every 10 to 15 years. Shower mixers wear out. Combi boilers get swapped after 12 to 15 years. We do all of it.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Childwall</h2>
-      <p class="pf-sub">The faults we attend most frequently in Childwall L16.</p>
+      <h2>Common Emergency Jobs in Childwall</h2>
+      <p class="pf-sub">What we attend most often in L16.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
+
         <div class="job-card">
-          <h3>Garden Tree Root Drain Blockages</h3>
+          <h3>Tree Root Drain Blockages</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Childwall's large gardens with mature trees are a persistent source of root intrusion into clay drainage systems. Roots enter through joints in 90-year-old clay pipes and cause progressive blockages that worsen every season until cleared properly.</p>
-        </div>
-        <div class="job-card">
-          <h3>Combi Boiler Scale Build-Up</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Liverpool water hardness varies by area, and Childwall properties experience moderate limescale accumulation in combi boiler heat exchangers over time. This reduces efficiency and eventually causes failure. Annual servicing catches this early. We service all major brands across L16.</p>
+          <p>Childwall's big mature gardens send roots into 80-year-old clay drain runs. Blockages get worse each year if you don't deal with them. We clear with high-pressure jetting. CCTV survey on request to show what's going on under the lawn.</p>
         </div>
         <div class="job-card">
           <h3>Shower Valve and Cartridge Failures</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Childwall's family homes with upgraded shower systems frequently develop thermostatic valve cartridge failures after eight to ten years of regular use. Cartridge replacement from £100 usually restores full shower function without replacing the whole valve.</p>
+          <p>Shower mixers fail after 8 to 10 years of daily use. The cartridge inside wears out and the shower stops working or runs cold. A new cartridge from £100 usually fixes it. We carry common cartridges on the van.</p>
+        </div>
+        <div class="job-card">
+          <h3>Combi Boiler Wear</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Childwall's combi boilers were mostly fitted in the 1990s, 2000s and 2010s. They wear out at 12 to 15 years. Heat exchangers scale up. Diverter valves stick. We fix what we can. We replace what we can't.</p>
+        </div>
+        <div class="job-card">
+          <h3>Burst Pipes in Cold Snaps</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>The 1930s lofts in Childwall aren't always well insulated. Cold weeks each winter cause pipe bursts above ceilings. We attend 24/7. We can lag the pipes on the same visit so it doesn't happen again next year.</p>
+        </div>
+        <div class="job-card">
+          <h3>Unvented Cylinder Faults</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>The bigger detached homes on Burns Close, Sulgrave Close and Chelwood Avenue run mains pressure cylinders. When the immersion or thermostat fails, the whole house loses hot water. We're G3 qualified. We carry common spares.</p>
+        </div>
+        <div class="job-card">
+          <h3>Family Bathroom Leaks</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Shower trays that have lost their seal. Bath panels with rotted backing. Toilet pan connectors that have shifted. We see all of these in Childwall family bathrooms. Most are same-visit fixes.</p>
         </div>
       </div>
     </div>
@@ -194,64 +274,68 @@ The 1930s construction period means that many Childwall properties have original
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Childwall Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps that protect your home while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most affluent 1930s and 1950s semi-detached family homes it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Childwall call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Childwall semis it's under the kitchen sink. In some 1930s homes it's near the front door or in the under-stairs cupboard. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the home is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can top it up with the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need proof. We write our own fault report with photos as well, ready for your insurer.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Childwall</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Childwall L16. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L16. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Childwall</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Childwall</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L16 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Childwall</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Childwall</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L16 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Childwall</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Childwall</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L16.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Childwall</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>CP12 for Childwall Landlords</strong><span>CP12 landlord paperwork from £80. Same-day if needed. Batch pricing for landlords with several Hope Park area rentals.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Childwall</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Swaps</strong><span>New radiators from £200 supply and fit. TRV upgrades from £50. Radiator balancing included.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Electric showers from £200 supply and fit. Shower mixer from £300. Cartridge swaps from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Childwall</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year warranty. Free survey across L16.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Childwall</strong><span>Full family bathroom from £4,500 supply and fit. Free design chat. Premium spec available on request.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders</strong><span>Vented and unvented cylinders from £600. G3 qualified. Common for the larger detached homes in Burns Close and Sulgrave Close.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Childwall Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Childwall Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Childwall</h3><p>We know Childwall and the L16 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Childwall is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Childwall property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Affluent 1930s and 1950s semi-detached family homes, high owner-occupation</h3><p>We work in Childwall regularly and understand the specific plumbing and heating challenges of affluent 1930s and 1950s semi-detached family homes, high owner-occupation. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Childwall carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>30 Minute Childwall Response</h3><p>We dispatch from Kirkby. Childwall is a 20 to 25 minute run on a clear road. Faster off-peak.</p></div>
+        <div class="pf-why-item"><h3>Family Home Specialists</h3><p>1930s semis, 1950s semis, modern detached. We know the Childwall housing stock and the faults that come with it.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first.</p></div>
+        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day. A real person picks up. No voicemail. No menu. Safety advice while we're on the way.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Useful Information for Childwall Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Childwall.</p>
+      <p class="pf-sub">External resources for plumbing, heating and water emergencies in Childwall.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.water.org.uk/consumers/top-tips-to-save-water/hard-water/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Water UK on water hardness</a></li><li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Childwall</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Check any gas engineer working at your Childwall home.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 if you smell gas anywhere in Childwall.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water (0345 672 3723).</li>
+          <li><a href="https://www.water.org.uk/consumers/top-tips-to-save-water/hard-water/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Water UK on water hardness</a>. Useful for boiler scale and shower mixer wear.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Health and Safety Executive guidance on gas at home.</li>
+          <li><a href="https://liverpool.gov.uk/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool City Council</a>. Local authority for Childwall and the wider L16 area.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +343,37 @@ The 1930s construction period means that many Childwall properties have original
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Childwall. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Childwall?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Childwall?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Childwall L16. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Childwall?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Childwall fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">DRAINS</span>&nbsp; How often should I have the drains checked in my Childwall property?</summary><div class="pf-faq-body"><p>If your Childwall property has mature garden trees and you have experienced even one drain blockage, we recommend a CCTV drain survey to assess the extent of root intrusion in the clay pipes. Without inspection, a drain cleared today may block again within months as roots continue growing. A CCTV survey identifies how far the roots have penetrated and whether a section of pipe needs replacing. Call 0151 558 0334 for a survey quote.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Childwall?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Childwall?</summary><div class="pf-faq-body"><p>We promise a 30 minute response across Childwall L16. Most calls reach us in 20 to 25 minutes from our Kirkby base. A real person picks up the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">DRAINS</span>&nbsp; Why do drains block so often in Childwall?</summary><div class="pf-faq-body"><p>Tree roots in old clay drain pipes. Childwall has big gardens with mature trees. The clay drain runs are 80 to 90 years old. Roots find their way into the joints. A drain cleared today can block again in months as the roots keep growing. We run a CCTV survey to show where the trouble is. We clear with high-pressure jetting.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">HOMES</span>&nbsp; Do you work on 1930s and 1950s semis in Childwall?</summary><div class="pf-faq-body"><p>Yes. The 1930s and 1950s semis make up most of Childwall. We work on them every week. We know the typical layouts. We know where the stopcock is. We carry common parts on the van for the faults we see again and again in this housing.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RENTALS</span>&nbsp; Do you cover student rentals near Hope University?</summary><div class="pf-faq-body"><p>Yes. Liverpool Hope University's Hope Park campus is nearby. We cover the student and rental homes around it. We do CP12 gas safety paperwork ahead of each academic year. We give written reports for landlord insurance claims as standard.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">SHOWERS</span>&nbsp; Can you do shower valve and cartridge repairs?</summary><div class="pf-faq-body"><p>Yes. Shower mixer cartridges fail after 8 to 10 years of regular use. A new cartridge from £100 usually fixes the shower without replacing the whole valve. We carry common cartridges on the van. Same-visit job in most cases.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All gas work is done by our own Gas Safe engineers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It's against the law to work on gas without it. We provide gas safety paperwork for all gas work in Childwall.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Childwall and Nearby Areas</h2>
-      <p class="pf-sub">We cover Childwall L16 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Childwall L16 and all surrounding south Liverpool. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-allerton" class="area-pill">Allerton</a><a href="/emergency-plumber-west-derby" class="area-pill">West Derby</a><a href="/emergency-plumber-woolton" class="area-pill">Woolton</a><a href="/emergency-plumber-wavertree" class="area-pill">Wavertree</a>
+        <a href="/emergency-plumber-allerton" class="area-pill">Allerton</a>
+        <a href="/emergency-plumber-mossley-hill" class="area-pill">Mossley Hill</a>
+        <a href="/emergency-plumber-woolton" class="area-pill">Woolton</a>
+        <a href="/emergency-plumber-wavertree" class="area-pill">Wavertree</a>
+        <a href="/emergency-plumber-west-derby" class="area-pill">West Derby</a>
+        <a href="/emergency-plumber-huyton" class="area-pill">Huyton</a>
+        <a href="/emergency-plumber-old-swan" class="area-pill">Old Swan</a>
       </div>
     </div>
   </section>
@@ -294,7 +387,7 @@ The 1930s construction period means that many Childwall properties have original
         Available Now in Childwall. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Childwall?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Family home specialists. Our own engineers. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
