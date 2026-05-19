@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Everton | Fastest 30min Response | From £80 | Gas Safe"
-  description="Emergency plumber Everton available 24/7. 30 minute response across L5. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-everton"
+  title="Emergency Plumber Everton | 30min Response | From £80"
+  description="Emergency plumber in Everton L5. 30 minute response across Scotland Road, Great Homer Street, Everton Park and the wider L5. Landlord and HMO specialists. Selective licensing paperwork. Gas Safe. From £80 an hour."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Everton",
+    "alternateName": ["24 Hour Plumber Everton", "Everton Emergency Plumber L5"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Everton available 24/7. 30 minute response across L5. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Everton L5. We cover Scotland Road, Great Homer Street, Everton Park, Newsham Park and the wider L5. 30 minute response. Gas Safe registered. Landlord and HMO specialists. Selective licensing paperwork. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Everton, L5" },
+    "areaServed": [
+      { "@type": "Place", "name": "Everton, L5" },
+      { "@type": "Place", "name": "Vauxhall" },
+      { "@type": "Place", "name": "Scotland Road" },
+      { "@type": "Place", "name": "Everton Park" },
+      { "@type": "Place", "name": "Newsham Park" },
+      { "@type": "Place", "name": "Great Homer Street" },
+      { "@type": "Place", "name": "Bramley-Moore Dock" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Everton", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Everton", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Everton", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Everton", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Everton", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +39,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Everton?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Everton?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Everton L5. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "My new-build Everton property has a plumbing leak. Is it covered by warranty?", "acceptedAnswer": { "@type": "Answer", "text": "New-build properties in England are typically covered by an NHBC warranty for 10 years, which includes structural defects and some plumbing issues in the first two years. However, general plumbing wear and emergency repairs are your responsibility after the first year. Call us on 0151 558 0334 for an immediate assessment   we can advise whether the issue is likely to be a warranty claim or a repair you need to manage directly." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Everton?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Everton?", "acceptedAnswer": { "@type": "Answer", "text": "We promise a 30 minute response across Everton L5. Most calls reach us in 15 to 20 minutes from our Kirkby base. A real person picks up the phone any time of day or night." } },
+      { "@type": "Question", "name": "Do you do CP12 paperwork for Everton selective licensing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Everton is one of 16 Liverpool wards where private rentals need a selective licence from the council. We do CP12 gas safety paperwork from £80. Same-day if needed. Combined boiler service and CP12 from £175. We know what licensing inspectors look for. Batch pricing for landlords with several Everton properties." } },
+      { "@type": "Question", "name": "Do you cover the new Everton stadium area?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The new Everton FC stadium at Bramley-Moore Dock opened for the 2025/26 season. We cover the new homes, hospitality units and businesses around the stadium. Match day commercial work for pubs, food outlets and hotels. Same fixed rates as residential." } },
+      { "@type": "Question", "name": "Do you handle Victorian terrace plumbing in Everton?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Everton has many Victorian terraces, including the Grade II listed area around Newsham Park. Original lead supply pipes, cast iron waste, clay drain runs. We carry replacement parts on the van. We know the typical street layouts and where the stopcocks sit." } },
+      { "@type": "Question", "name": "Do you cover HMO and rental property emergencies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Everton has the highest rental yield in Liverpool at 7.5%, with a strong HMO and buy-to-let market. We cover landlord emergencies 24/7. We provide photos, fault reports and itemised invoices for landlord insurance claims. We work with several Everton property managers." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is done by our own Gas Safe engineers. Check our entry at gassaferegister.co.uk. It's against the law to work on gas without it. We provide CP12 paperwork for all gas work in Everton." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,10 +67,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Everton
+        Available 24/7 in Everton L5
       </div>
-      <h1>Emergency Plumber Everton</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Everton L5. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Everton</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Scotland Road, Great Homer Street, Everton Park, Newsham Park and the new stadium area at Bramley-Moore Dock. 30 minute response. £80 an hour fixed. Gas Safe registered. Landlord and HMO specialists.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
@@ -71,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Landlord Specialists</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +100,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Water flooding through the ceiling from the bathroom above. Ideal were here within 25 minutes on a Sunday morning. Found the cracked pipe behind the shower tray, repaired it and checked the whole bathroom. Highly recommend." Rachel S, Everton</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!" James Alexander</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">EVERTON PROPERTIES WE COVER</span>
+      <h2>One Plumber. Every Type of Everton Home.</h2>
+      <p class="pf-sub">Everton has a wide mix of housing. Old Victorian terraces sit next to new-build estates. Here's what we usually find.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>Victorian Terraces</h3>
+          <p>The backbone of Everton's housing. Streets off Scotland Road, around Great Homer Street and Christian Street. 130 years old. Original lead supply pipes, cast iron waste, clay drain runs. We carry common spares on the van.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Newsham Park Period Homes</h3>
+          <p>The Grade II listed area around Newsham Park has some of Everton's grandest Victorian housing. Bigger plots, original features, often split into flats. We work around heritage detail with care.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>New-Build Estates</h3>
+          <p>Post-2000 rebuilds across L5. Modern plastic push-fit plumbing, new boilers, mains pressure systems. Push-fit joints can fail at the connection if disturbed. We carry the common fittings on the van.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Modern Apartment Blocks</h3>
+          <p>Element the Quarter and the newer blocks around Vauxhall and the city centre edge. Communal hot water risers. Concierge access to plant rooms. We coordinate with building management.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Bramley-Moore Dock Stadium Area</h3>
+          <p>The new Everton FC stadium opened for the 2025/26 season. New homes, hospitality units, hotels and shops are going up nearby. We cover match day commercial emergencies and the residential schemes alongside.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>HMO and Buy-to-Let</h3>
+          <p>L5 has the highest rental yield in Liverpool at 7.5%. A big chunk of stock is HMO or buy-to-let. We cover landlord emergencies 24/7 and do CP12 paperwork for selective licensing inspections.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Everton. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Everton. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -145,48 +202,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="pf-alert" style="margin-top:1.5rem;">
-        <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <strong>Same rates for landlords and commercial</strong>
+        <p>HMO landlords and stadium-area pubs and shops pay the same rates as residential. No premium. The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade typical price for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. We sit at the bottom end. No call-out fee.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">EVERTON LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Everton. Old Stock and New Builds Both Need Reliable Cover.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Everton sits directly above Liverpool city centre on the ridge of Everton Brow, with the famous water tower visible across the city. The area is one of Liverpool's major regeneration zones, with a mix of original Victorian terrace properties and new-build social housing developments built in the last 20 years sitting side by side. This creates an unusual plumbing environment   some properties have original 1880s infrastructure while neighbouring properties have modern plumbing installed under Building Regulations post-2000.
+      <h2>Why Everton Has Its Own Plumbing Reality</h2>
 
-Both property types generate emergency calls. Original Victorian stock in L5 has aging cast iron, lead and clay infrastructure at risk of sudden failure. New-build social housing has modern plumbing but is occupied at high density and subject to intensive use. We attend both property types 24/7, and our engineers know Everton's streets well enough to find the address quickly at any hour. We also carry out <a href="/gas-safety-certificate-liverpool" style="color:var(--orange);font-weight:700;">gas safety inspections</a> and <a href="/boiler-service-liverpool" style="color:var(--orange);font-weight:700;">boiler servicing</a> across L5 for landlords and housing associations.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Everton sits on the ridge above Liverpool city centre. The water tower is the local landmark. The area has changed more than any other part of Liverpool in the last decade. L5 property values are up 75% in five years.</p>
+
+        <p>The new Everton FC stadium at Bramley-Moore Dock opened for the 2025/26 season. That's £5.5 billion of waterfront work around it. Project Jennifer on Great Homer Street brought a new district centre with Sainsbury's, B&M and the Greatie Market. The housing stock is changing too.</p>
+
+        <p>What you find behind any front door in L5 could be 130-year-old Victorian pipework or push-fit plastic from 2015. We work on both every week.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>Everton is also one of 16 Liverpool wards covered by selective licensing. Every private rental needs a council licence. CP12 gas safety paperwork is part of the inspection. We do the paperwork to the standard the council expects.</p>
+
+        <p>The buy-to-let market is the biggest in the city. L5 has the highest yield at 7.5%. That means lots of landlords, lots of HMOs, lots of students and healthcare workers renting near the three universities and Royal Liverpool Hospital. We cover them all at fixed rates.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Everton</h2>
-      <p class="pf-sub">The faults we attend most frequently in Everton L5.</p>
+      <h2>Common Emergency Jobs in Everton</h2>
+      <p class="pf-sub">What we attend most often in L5.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
+
         <div class="job-card">
-          <h3>New-Build Plumbing Failures</h3>
+          <h3>Victorian Pipe Failures</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>New-build social housing in Everton developed post-2000 uses plastic push-fit plumbing that can fail at the joints if installed incorrectly or disturbed during other works. Push-fit joint failures release significant water rapidly   they need immediate attention.</p>
+          <p>Everton's 130-year-old terraces have lead supply pipes and cast iron waste runs still in service. They fail without warning. We carry copper and plastic replacement pipework on the van. Most jobs we fix on the same visit.</p>
         </div>
         <div class="job-card">
-          <h3>Victorian Infrastructure Collapse</h3>
+          <h3>New-Build Push-Fit Joint Leaks</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Original Victorian terraces in Everton have aging infrastructure at risk of sudden failure. Cast iron joints, clay drain sections and lead supply pipes all have finite service lives that most L5 original properties have now exceeded.</p>
+          <p>The new-build estates across L5 use plastic push-fit plumbing. The joints can pop if installed badly or knocked during other work. A failed joint releases water fast. We carry the common push-fit fittings and rework the connection.</p>
         </div>
         <div class="job-card">
-          <h3>Regeneration Property Drain Issues</h3>
+          <h3>HMO Boiler Breakdowns</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Properties adjacent to ongoing regeneration and construction work in Everton can experience drain blockages caused by construction debris entering shared drainage systems. We identify and clear these blockages professionally.</p>
+          <p>An HMO with five or six tenants and one boiler. When it fails everyone loses heat and hot water. We prioritise HMO calls. Written paperwork ready for the landlord's insurance claim.</p>
+        </div>
+        <div class="job-card">
+          <h3>CP12 Selective Licensing Paperwork</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">Same-day available</span></div>
+          <p>Everton selective licensing inspections require valid CP12 gas safety paperwork. We do these from £80 per property. Same-day if needed. Batch pricing for landlords with several L5 rentals.</p>
+        </div>
+        <div class="job-card">
+          <h3>Match Day Commercial</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Pubs, food outlets and hotels around the new Bramley-Moore Dock stadium need fast fixes on match day. A blocked kitchen drain or a urinal out of action loses trade by the hour. We attend at residential rates with no premium.</p>
+        </div>
+        <div class="job-card">
+          <h3>Burst Pipes in Cold Snaps</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>The older terraces have poorly insulated lofts. Cold weeks each winter cause pipe bursts above ceilings. We attend 24/7. We can lag the pipes on the same visit to stop it happening again.</p>
         </div>
       </div>
     </div>
@@ -194,64 +275,68 @@ Both property types generate emergency calls. Original Victorian stock in L5 has
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Everton Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps to protect the home while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most regeneration area with original victorian terraces and new-build social housing it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Everton call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Everton terraces it's under the kitchen sink or in the cellar. In new-build flats it's often in the airing cupboard. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the home is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can top it up with the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need proof. Landlords need this for selective licensing records. We give you our own fault report with photos as well.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Everton</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Everton L5. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L5. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Everton</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Everton</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L5 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Everton</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Everton</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L5 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Everton</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Everton</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L5.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>CP12 for Everton Landlords</strong><span>CP12 paperwork from £80 per property. Same-day if needed. Batch pricing for landlords with several L5 rentals. Selective licensing standard met.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Everton</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Everton</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year maker warranty. ECO4 grant check included.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Swaps</strong><span>New radiators from £200 supply and fit. TRV upgrades from £50. Common upgrade in Everton terraces.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Electric showers from £200 supply and fit. Shower mixer from £300. Common spec for HMO bathroom upgrades.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Everton</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders</strong><span>Vented and unvented cylinders from £600. Common in HMO conversions where simultaneous bathroom use needs higher capacity.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Everton</strong><span>HMO bathroom fits from £4,500. Standard family bathroom from £4,500 supply and fit. Free design chat.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Everton Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Everton Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Everton</h3><p>We know Everton and the L5 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Everton is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Everton property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Regeneration area with original Victorian terraces and new-build social housing</h3><p>We work in Everton regularly and understand the specific plumbing and heating challenges of regeneration area with original victorian terraces and new-build social housing. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Everton carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>15 Minute Everton Response</h3><p>We dispatch from Kirkby. Most Everton calls reach us in 15 to 20 minutes. Faster off-peak. We know L5 well.</p></div>
+        <div class="pf-why-item"><h3>Landlord and HMO Specialists</h3><p>Selective licensing paperwork. CP12 batch work. Written reports for insurance. We work with several Everton property managers.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first.</p></div>
+        <div class="pf-why-item"><h3>Old and New Build Skills</h3><p>Victorian lead pipes and modern push-fit plastic. We work on both every week. We know what each fails with.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Useful Information for Everton Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Everton.</p>
+      <h2>Useful Information for Everton Residents and Landlords</h2>
+      <p class="pf-sub">External resources for plumbing, heating, council and licensing matters.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://liverpool.gov.uk/planning-and-building/regeneration/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool regeneration projects</a></li><li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities emergencies</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Everton</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Check any gas engineer working at your Everton home.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 if you smell gas in Everton.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water (0345 672 3723).</li>
+          <li><a href="https://liverpool.gov.uk/business/licensing/private-rented-housing/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool selective licensing</a>. Council guidance for Everton landlords on the licensing scheme.</li>
+          <li><a href="https://www.gov.uk/apply-home-insulation-grant" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">ECO4 grant scheme</a>. Government grants for boiler replacements and insulation for qualifying households.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Health and Safety Executive guidance on gas at home.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +344,37 @@ Both property types generate emergency calls. Original Victorian stock in L5 has
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Everton. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Everton?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Everton?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Everton L5. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Everton?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Everton fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">NEW BUILD</span>&nbsp; My new-build Everton property has a plumbing leak. Is it covered by warranty?</summary><div class="pf-faq-body"><p>New-build properties in England are typically covered by an NHBC warranty for 10 years, which includes structural defects and some plumbing issues in the first two years. However, general plumbing wear and emergency repairs are your responsibility after the first year. Call us on 0151 558 0334 for an immediate assessment   we can advise whether the issue is likely to be a warranty claim or a repair you need to manage directly.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Everton?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Everton?</summary><div class="pf-faq-body"><p>We promise a 30 minute response across Everton L5. Most calls reach us in 15 to 20 minutes from our Kirkby base. A real person picks up the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">LICENSING</span>&nbsp; Do you do CP12 paperwork for Everton selective licensing?</summary><div class="pf-faq-body"><p>Yes. Everton is one of 16 Liverpool wards where private rentals need a selective licence from the council. We do CP12 gas safety paperwork from £80. Same-day if needed. Combined boiler service and CP12 from £175. We know what licensing inspectors look for. Batch pricing for landlords with several Everton properties.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">STADIUM</span>&nbsp; Do you cover the new Everton stadium area?</summary><div class="pf-faq-body"><p>Yes. The new Everton FC stadium at Bramley-Moore Dock opened for the 2025/26 season. We cover the new homes, hospitality units and businesses around the stadium. Match day commercial work for pubs, food outlets and hotels. Same fixed rates as residential.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">VICTORIAN</span>&nbsp; Do you handle Victorian terrace plumbing in Everton?</summary><div class="pf-faq-body"><p>Yes. Everton has many Victorian terraces, including the Grade II listed area around Newsham Park. Original lead supply pipes, cast iron waste, clay drain runs. We carry replacement parts on the van. We know the typical street layouts and where the stopcocks sit.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">HMO</span>&nbsp; Do you cover HMO and rental property emergencies?</summary><div class="pf-faq-body"><p>Yes. Everton has the highest rental yield in Liverpool at 7.5%, with a strong HMO and buy-to-let market. We cover landlord emergencies 24/7. We provide photos, fault reports and itemised invoices for landlord insurance claims. We work with several Everton property managers.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All gas work is done by our own Gas Safe engineers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It's against the law to work on gas without it.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Everton and Nearby Areas</h2>
-      <p class="pf-sub">We cover Everton L5 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Everton L5 and all surrounding north Liverpool. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-anfield" class="area-pill">Anfield</a><a href="/emergency-plumber-walton" class="area-pill">Kirkdale</a><a href="/emergency-plumber-city-centre" class="area-pill">City Centre</a><a href="/emergency-plumber-norris-green" class="area-pill">Walton</a>
+        <a href="/emergency-plumber-anfield" class="area-pill">Anfield</a>
+        <a href="/emergency-plumber-city-centre" class="area-pill">City Centre</a>
+        <a href="/emergency-plumber-walton" class="area-pill">Walton</a>
+        <a href="/emergency-plumber-norris-green" class="area-pill">Norris Green</a>
+        <a href="/emergency-plumber-bootle" class="area-pill">Bootle</a>
+        <a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a>
+        <a href="/emergency-plumber-toxteth" class="area-pill">Toxteth</a>
       </div>
     </div>
   </section>
@@ -294,7 +388,7 @@ Both property types generate emergency calls. Original Victorian stock in L5 has
         Available Now in Everton. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Everton?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">15 to 20 minute response. £80 fixed. Gas Safe registered. Landlord and HMO specialists. CP12 paperwork for selective licensing. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
