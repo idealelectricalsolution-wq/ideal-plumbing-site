@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Crosby | Fastest 30min Response | From £80 | Gas Safe"
-  description="Emergency plumber Crosby available 24/7. 30 minute response across L23. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-crosby"
+  title="Emergency Plumber Crosby | 30min Response | From £80"
+  description="Emergency plumber in Crosby L23. 30 minute response across Blundellsands, Little Crosby, Waterloo and Crosby Village. Coastal corrosion specialists. Gas Safe. From £80 an hour. Call 0151 558 0334."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Crosby",
+    "alternateName": ["24 Hour Plumber Crosby", "Crosby Emergency Plumber L23", "Blundellsands Plumber"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Crosby available 24/7. 30 minute response across L23. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Crosby L23. We cover Great Crosby, Blundellsands, Little Crosby, Waterloo and Brighton-le-Sands. 30 minute response. Gas Safe registered. Coastal corrosion specialists. No sub-contractors. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Crosby, L23" },
+    "areaServed": [
+      { "@type": "Place", "name": "Crosby, L23" },
+      { "@type": "Place", "name": "Great Crosby" },
+      { "@type": "Place", "name": "Blundellsands" },
+      { "@type": "Place", "name": "Little Crosby" },
+      { "@type": "Place", "name": "Waterloo" },
+      { "@type": "Place", "name": "Brighton-le-Sands" },
+      { "@type": "Place", "name": "Thornton" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Crosby", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Crosby", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Crosby", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Crosby", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Crosby", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +39,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Crosby?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Crosby?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Crosby L23. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "Does being near the sea cause more plumbing problems in Crosby?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Coastal properties in Crosby experience faster corrosion on external pipework, boiler flues and outside tap fittings due to salt air and increased moisture. We check flue integrity and external pipework condition as part of every boiler service at coastal L23 properties. If you notice rust staining on an external flue terminal, call us immediately   a compromised flue is a carbon monoxide risk." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Crosby?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No separate call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Crosby?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Crosby L23. Typical arrival from our Kirkby base is 20 to 25 minutes via the A5036 or M57. A real person answers the phone any time of day or night." } },
+      { "@type": "Question", "name": "Does being near the sea cause more plumbing problems in Crosby?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Coastal properties in Crosby experience faster corrosion on external pipework, boiler flues, condensate pipes and outside tap fittings. Salt air and increased moisture accelerate the rusting process. Properties close to Crosby Beach on Hall Road, Mariners Road and Burbo Bank Road South are worst affected. If you notice rust staining on an external flue terminal, call us straight away. A compromised flue is a carbon monoxide risk." } },
+      { "@type": "Question", "name": "Do you cover Blundellsands seafront properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The large detached homes on Warren Road, St Andrews Road, Anthonys Road and The Serpentine are familiar work. These often have multiple bathrooms, unvented mains pressure cylinders, underfloor heating and premium fixtures. We're G3 qualified for unvented cylinder work and carry common spares for premium brands." } },
+      { "@type": "Question", "name": "Do you work on Crosby's coastal apartment blocks?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Burbo Mansions, Gaywood Court, Fountain Court and the wider apartment stock around the seafront have communal water and heating systems. We coordinate with managing agents where access is needed to risers or pump rooms. Same fixed rates for apartment work." } },
+      { "@type": "Question", "name": "Can you handle period property plumbing in Crosby?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Crosby's Victorian and Edwardian properties date from the 1850s onwards. Original lead pipework and cast iron column radiators are still in service in places. We carry replacement parts and work around original features. The 1850s stone-built cottages in Little Crosby village need particular care which we provide as standard." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All our engineers are Gas Safe registered. Verify our registration at gassaferegister.co.uk. It's illegal to carry out gas work without this qualification. We provide gas safety certificates for all gas work carried out in Crosby." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,10 +67,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Crosby
+        Available 24/7 in Crosby L23
       </div>
-      <h1>Emergency Plumber Crosby</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Crosby L23. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Crosby</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Great Crosby, Blundellsands, Little Crosby, Waterloo and Brighton-le-Sands. 30 minute response across L23. Gas Safe registered. Coastal corrosion specialists. £80 an hour fixed. A real person answers the phone, even at 3am.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
@@ -71,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Coastal Corrosion Experts</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +100,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Boiler failure on the coldest night of the year. Engineer arrived in 28 minutes, diagnosed the fault and had our heating restored before midnight. Exceptional service at a fair and transparent price." Judith R, Blundellsands</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Fantastic service, less than two hours after phoning up to order a new shower they were there installing the lot." John Manley</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">CROSBY PROPERTIES WE COVER</span>
+      <h2>One Plumber. Every Type of Crosby Property.</h2>
+      <p class="pf-sub">Each property type in L23 has its own plumbing personality. Here's what we usually find.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>Blundellsands Seafront Detached</h3>
+          <p>4 to 7 bedroom detached homes. Warren Road, St Andrews Road, Anthonys Road, The Serpentine. Multiple bathrooms, often two or three heating zones, unvented mains pressure cylinders. Some have indoor pools, hot tubs, underfloor heating. We carry G3 qualifications for unvented work.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>1930s Family Semis</h3>
+          <p>The most common Crosby property type. 3 to 4 bedrooms. Solid construction, bay windows, original layouts. Often had boilers retrofitted in awkward locations during 1990s and 2000s refurbishments. We design boiler upgrades that preserve period features.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Victorian and Edwardian Properties</h3>
+          <p>Crosby's oldest streets date from the 1850s onwards. Original lead pipework, cast iron column radiators, period drainage. We carry replacement parts for the most common Victorian failures and know which streets had which original installations.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Modern Gated Developments</h3>
+          <p>Newer builds like Campion View on Blundellsands have premium specifications. Modern boilers, mains pressure systems, often still under warranty. We honour manufacturer warranty conditions and work within them.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Coastal Apartment Blocks</h3>
+          <p>Burbo Mansions, Gaywood Court, Fountain Court. Communal water and heating systems, shared risers, managed by agents. We coordinate with building management to access pump rooms and isolate water supplies to specific flats.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Little Crosby Village Cottages</h3>
+          <p>Stone-built character cottages dating back to the 1840s. Solid walls, original features, often listed. We work around heritage features and provide paperwork suitable for listed building consent applications.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Crosby. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Crosby. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -146,47 +203,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="pf-alert" style="margin-top:1.5rem;">
         <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. Our rates are fixed and published before you call. No separate call-out fee.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">CROSBY LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Crosby and Blundellsands. What L23 Properties Need.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Crosby and Blundellsands represent some of the most affluent residential property in north Merseyside. The area combines large Victorian and Edwardian detached houses along Myers Road West and College Road with substantial 1930s semis across the wider L23 postcode. These properties have large heating systems with multiple radiators, hot water cylinders and in some cases original pipework that has served the property for over 80 years.
+      <h2>Why Coastal Crosby Needs a Specialist</h2>
 
-Crosby's coastal position means external pipework is subject to the additional corrosive effects of coastal air and moisture. Properties close to the seafront along Hall Road and Mariners Road experience faster deterioration of external boiler flues and outside tap fittings than properties further inland. If your Crosby property has a boiler flue mounted on an external wall, an annual <a href="/boiler-service-liverpool" style="color:var(--orange);font-weight:700;">boiler service</a> that checks the flue integrity is particularly important. We also carry out <a href="/radiators-liverpool" style="color:var(--orange);font-weight:700;">radiator replacements</a> for larger Crosby properties where original cast iron column rads have developed leaks at the section joints.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Crosby is one of the most affluent parts of north Merseyside. The L23 average property price sits around £436,000. Blundellsands seafront homes change hands at £1 million to £2 million. The 1930s semis in the wider area average £313,000.</p>
+
+        <p>What makes Crosby different from inland Liverpool is the salt air. Properties on Hall Road, Mariners Road, Burbo Bank Road South and the wider seafront are within a few hundred metres of the Irish Sea. External boiler flues, condensate pipes, outside taps and any exposed copper pipework corrode noticeably faster than inland equivalents.</p>
+
+        <p>A boiler flue that would last 15 years inland might need replacement at 10 in coastal Crosby. A compromised flue is a carbon monoxide risk. We check flue integrity as standard on every coastal property service. If you notice rust streaks below your flue terminal, call us straight away.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>The larger Blundellsands and St Andrews Road detached homes have substantial heating and hot water systems. Five bathrooms. Two or three heating zones. Premium fixtures from Hansgrohe, Grohe and Villeroy & Boch. A diagnostic call-out here needs the right kit and the right experience.</p>
+
+        <p>We work in Crosby every week. We carry G3 qualifications for unvented cylinder work and premium brand spares. We also handle the apartment blocks along the seafront, the period terraces in Crosby Village and the stone-built cottages in Little Crosby. One number for all of it.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Crosby</h2>
-      <p class="pf-sub">The faults we attend most frequently in Crosby L23.</p>
+      <h2>Common Emergency Jobs in Crosby</h2>
+      <p class="pf-sub">What we attend most often in L23.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
-        <div class="job-card">
-          <h3>Large Property Boiler and Cylinder Failures</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Crosby's larger Victorian and Edwardian properties have substantial heating and hot water systems serving many rooms. A boiler failure in a five-bed Blundellsands house leaves the entire system cold. We carry parts for all major boiler brands and resolve most Crosby boiler faults on the first visit.</p>
-        </div>
+
         <div class="job-card">
           <h3>Coastal Flue and External Pipe Corrosion</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Properties close to Crosby beach experience accelerated corrosion on external boiler flues and pipework. A flue that shows signs of rust or structural weakness must be replaced immediately   a failed flue is a carbon monoxide risk. We check and replace flues as part of every boiler service in coastal L23 properties.</p>
+          <p>Properties close to Crosby Beach get the full force of salt air. External boiler flues corrode faster. Outside tap unions seize up. Condensate pipes split. We replace corroded flues to manufacturer spec and re-route condensate pipes to last longer in coastal conditions.</p>
         </div>
         <div class="job-card">
-          <h3>Period Property Drain Blockages</h3>
+          <h3>Large Property Boiler Failures</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Crosby's Victorian and Edwardian properties have original clay drainage systems up to 130 years old. Root intrusion from large garden trees is common. We clear blockages and can carry out CCTV drain surveys to assess the extent of root damage.</p>
+          <p>A boiler failure in a five-bed Blundellsands home leaves a big heating system cold. Long pipe runs, many radiators, multiple zones. We carry parts for all major boiler brands and diagnose properly before swapping anything.</p>
+        </div>
+        <div class="job-card">
+          <h3>Cast Iron Column Radiator Leaks</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Crosby's Victorian and Edwardian properties often still have the original cast iron column radiators. Beautiful, but they develop leaks at the section joints over time. We can repair where possible. We can also replace with modern equivalents that match the period look.</p>
+        </div>
+        <div class="job-card">
+          <h3>Unvented Cylinder Faults</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Mains pressure cylinders feed three or four bathrooms across large Crosby detached homes. When the immersion or thermostat fails, the whole house loses hot water. We're G3 qualified and carry common spares for Megaflo, Telford and Heatrae Sadia.</p>
+        </div>
+        <div class="job-card">
+          <h3>Apartment Block Communal System Faults</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>The seafront apartment blocks have communal hot water and heating. One pump failure affects every flat at once. We coordinate with managing agents to access plant rooms and isolate sections of the system.</p>
+        </div>
+        <div class="job-card">
+          <h3>Period Property Drain Issues</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>130-year-old clay drain runs under large Crosby gardens. Root intrusion from mature trees is common. Ground movement cracks the joints. We clear blockages with high-pressure jetting. CCTV survey on request if it keeps happening.</p>
         </div>
       </div>
     </div>
@@ -194,64 +275,68 @@ Crosby's coastal position means external pipework is subject to the additional c
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Crosby Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps that protect your property while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most affluent suburb with victorian it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Crosby call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Crosby semis it's under the kitchen sink. In Blundellsands detached homes it's often in a utility room or basement. In the seafront apartments it's usually in an airing cupboard. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the property is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can repressurise using the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need evidence. We write our own fault report with photos as well, ready for your insurer. We know what the major home insurers need.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Crosby</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Crosby L23. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L23. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Crosby</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Crosby</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L23 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Crosby</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Crosby</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L23 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Crosby</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Crosby</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L23.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Crosby</strong><span>Annual boiler service from £120. Coastal flue inspection included as standard for seafront properties. Gas Safe engineer. Certificate same day.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Crosby</strong><span>CP12 landlord certificates from £80. Same-day available. Combined service and CP12 from £175. All L23 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Crosby</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements</strong><span>New radiators from £200 supply and fit. Cast iron column radiator restoration and replacement for period Crosby homes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Thermostatic mixer from £300. Walk-in shower areas from £800. Suited to en-suite installations in larger Crosby homes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Crosby</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year warranty. Free survey across L23.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Crosby</strong><span>Design-led bathroom installations from £7,000 supply and fit. Premium spec. Villeroy & Boch, Crosswater, Hansgrohe. Free design consultation.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders Crosby</strong><span>Unvented mains pressure cylinders from £900. G3 qualified. Suited to detached Crosby homes with three or more bathrooms.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Crosby Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Crosby Homeowners Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Crosby</h3><p>We know Crosby and the L23 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Crosby is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Crosby property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Affluent suburb with Victorian, Edwardian and 1930s detached and semi-detached properties</h3><p>We work in Crosby regularly and understand the specific plumbing and heating challenges of affluent suburb with victorian, edwardian and 1930s detached and semi-detached properties. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Crosby carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>30 Minute Response in Crosby</h3><p>We dispatch from Kirkby via the A5036 or M57. Average run to Crosby is 20 to 25 minutes. Faster off-peak.</p></div>
+        <div class="pf-why-item"><h3>Coastal Corrosion Specialists</h3><p>We know how salt air affects flues, condensate pipes and external pipework. Coastal flue checks are standard on every Crosby boiler service.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first. The price we quote is the price you pay.</p></div>
+        <div class="pf-why-item"><h3>Crosby Property Specialists</h3><p>Blundellsands detached, 1930s semis, period terraces, stone cottages, coastal apartments. We work in L23 every week. We know what to expect before opening a wall.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Useful Information for Crosby Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Crosby.</p>
+      <p class="pf-sub">External resources for plumbing, heating and water emergencies in Crosby.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.sefton.gov.uk/leisure-culture/parks-and-open-spaces/crosby-beach/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Crosby beach and Antony Gormley sculptures</a></li><li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Crosby</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Verify any gas engineer working at your Crosby property.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 immediately if you smell gas anywhere in Crosby.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723).</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Official Health and Safety Executive guidance on gas appliances at home.</li>
+          <li><a href="https://www.sefton.gov.uk/leisure-culture/parks-and-open-spaces/crosby-beach/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Sefton Council Crosby Beach information</a>. Local authority page covering Crosby Beach and the Antony Gormley "Another Place" sculptures.</li>
+          <li><a href="https://www.sefton.gov.uk/your-council/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Sefton Council</a>. Local authority for Crosby, Blundellsands and the wider L23 area.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +344,37 @@ Crosby's coastal position means external pipework is subject to the additional c
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Crosby. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Crosby?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Crosby?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Crosby L23. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Crosby?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Crosby fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">COASTAL</span>&nbsp; Does being near the sea cause more plumbing problems in Crosby?</summary><div class="pf-faq-body"><p>Yes. Coastal properties in Crosby experience faster corrosion on external pipework, boiler flues and outside tap fittings due to salt air and increased moisture. We check flue integrity and external pipework condition as part of every boiler service at coastal L23 properties. If you notice rust staining on an external flue terminal, call us immediately   a compromised flue is a carbon monoxide risk.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Crosby?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No separate call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Crosby?</summary><div class="pf-faq-body"><p>30 minute response guaranteed across Crosby L23. We dispatch from Kirkby. Typical arrival is 20 to 25 minutes via the A5036 or M57. A real person answers the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">COASTAL</span>&nbsp; Does being near the sea cause more plumbing problems in Crosby?</summary><div class="pf-faq-body"><p>Yes. Coastal properties in Crosby experience faster corrosion on external pipework, boiler flues, condensate pipes and outside tap fittings. Salt air and increased moisture accelerate the rusting process. Properties close to Crosby Beach on Hall Road, Mariners Road and Burbo Bank Road South are worst affected. If you notice rust staining on an external flue terminal, call us straight away. A compromised flue is a carbon monoxide risk.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">BLUNDELLSANDS</span>&nbsp; Do you cover Blundellsands seafront properties?</summary><div class="pf-faq-body"><p>Yes. The large detached homes on Warren Road, St Andrews Road, Anthonys Road and The Serpentine are familiar work. These often have multiple bathrooms, unvented mains pressure cylinders, underfloor heating and premium fixtures. We're G3 qualified for unvented cylinder work and carry common spares for premium brands.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">APARTMENTS</span>&nbsp; Do you work on Crosby's coastal apartment blocks?</summary><div class="pf-faq-body"><p>Yes. Burbo Mansions, Gaywood Court, Fountain Court and the wider apartment stock around the seafront have communal water and heating systems. We coordinate with managing agents where access is needed to risers or pump rooms. Same fixed rates for apartment work.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">PERIOD</span>&nbsp; Can you handle period property plumbing in Crosby?</summary><div class="pf-faq-body"><p>Yes. Crosby's Victorian and Edwardian properties date from the 1850s onwards. Original lead pipework and cast iron column radiators are still in service in places. We carry replacement parts and work around original features. The 1850s stone-built cottages in Little Crosby village need particular care which we provide as standard.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It's illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Crosby and Nearby Areas</h2>
-      <p class="pf-sub">We cover Crosby L23 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Crosby L23 and all surrounding north Merseyside. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-bootle" class="area-pill">Bootle</a><a href="/emergency-plumber-maghull" class="area-pill">Maghull</a><a href="/emergency-plumber-aintree" class="area-pill">Waterloo</a><a href="/emergency-plumber-formby" class="area-pill">Formby</a>
+        <a href="/emergency-plumber-bootle" class="area-pill">Bootle</a>
+        <a href="/emergency-plumber-maghull" class="area-pill">Maghull</a>
+        <a href="/emergency-plumber-formby" class="area-pill">Formby</a>
+        <a href="/emergency-plumber-kirkby" class="area-pill">Kirkby</a>
+        <a href="/emergency-plumber-aintree" class="area-pill">Aintree</a>
+        <a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a>
+        <a href="/emergency-plumber-litherland" class="area-pill">Litherland</a>
       </div>
     </div>
   </section>
@@ -294,7 +388,7 @@ Crosby's coastal position means external pipework is subject to the additional c
         Available Now in Crosby. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Crosby?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Coastal corrosion specialists. Our own engineers. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
