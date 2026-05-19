@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Aintree | Fastest 30min Response | From £80 | Gas Safe"
-  description="Emergency plumber Aintree available 24/7. 30 minute response across Aintree L10. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-aintree"
+  title="Emergency Plumber Aintree | 30min Response | From £80"
+  description="Emergency plumber in Aintree L9 and L10. 15 to 20 minute response from our Kirkby base. Covers Aintree Lane, Sefton Drive, Ormskirk Road, the racecourse area and Aintree University Hospital surrounds. Sefton Council area. From £80 an hour."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Aintree",
+    "alternateName": ["24 Hour Plumber Aintree", "Aintree Emergency Plumber L9 L10"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Aintree available 24/7. 30 minute response across Aintree L10. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Aintree L9 and L10. We cover Aintree Lane, Sefton Drive, Ormskirk Road, Church Avenue, the racecourse area and the Aintree University Hospital surrounds. 15 to 20 minute response from our Kirkby base. Gas Safe registered. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Aintree, L10" },
+    "areaServed": [
+      { "@type": "Place", "name": "Aintree, L9" },
+      { "@type": "Place", "name": "Aintree, L10" },
+      { "@type": "Place", "name": "Aintree Racecourse" },
+      { "@type": "Place", "name": "Old Roan" },
+      { "@type": "Place", "name": "Ormskirk Road" },
+      { "@type": "Place", "name": "Sefton Drive" },
+      { "@type": "Place", "name": "Aintree University Hospital" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Aintree", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Aintree", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Aintree", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Aintree", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Aintree", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +39,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Aintree?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Aintree?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Aintree L10. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "What is a compression fitting and why do they fail in older Aintree properties?", "acceptedAnswer": { "@type": "Answer", "text": "A compression fitting joins copper pipes using a metal ring called an olive that is compressed by tightening a nut. They are reliable when correctly installed but over decades of thermal expansion and contraction, the olive can deform and the joint begins to weep. In 1970s Aintree properties with original compression fittings, this is a common failure mode. The fix is to cut out the old fitting and install a new one   a straightforward repair that takes less than an hour in most cases." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Aintree?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Aintree?", "acceptedAnswer": { "@type": "Answer", "text": "We're based in Kirkby. Aintree is a 10 to 15 minute run via the A580 East Lancashire Road. Most calls reach us inside 20 minutes from first contact. A real person picks up the phone any time of day or night." } },
+      { "@type": "Question", "name": "Do you work in Sefton or just Liverpool Council areas?", "acceptedAnswer": { "@type": "Answer", "text": "Both. Aintree is in Sefton Borough Council, not Liverpool City Council. Our cover crosses both councils. We work the same fixed rates either side of the boundary. CP12 paperwork meets the standard for Sefton landlords." } },
+      { "@type": "Question", "name": "Do you cover the area around Aintree University Hospital?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The streets around Aintree University Hospital have a strong NHS staff rental base. We cover landlord call-outs and tenant emergencies 24/7. Written reports for landlord insurance claims as standard." } },
+      { "@type": "Question", "name": "What about Grand National week?", "acceptedAnswer": { "@type": "Answer", "text": "Grand National week in April brings thousands of visitors to Aintree. Cold spring nights catch out pipework that wasn't lagged through winter. We attend burst pipe emergencies the same as any other time. Same fixed rates. No race-week premium." } },
+      { "@type": "Question", "name": "Do you work on retirement living apartments?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Aintree has a strong over-55 demographic and a number of retirement living schemes including Sefton House on Church Avenue. We coordinate with site managers where access is needed to shared services. We treat older customers with care and we explain things plainly." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is done by our own Gas Safe engineers. Check our entry at gassaferegister.co.uk. It's against the law to work on gas without it." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,14 +67,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Aintree
+        Available 24/7 in Aintree L9 and L10
       </div>
-      <h1>Emergency Plumber Aintree</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Aintree L10. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Aintree</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Aintree Lane, Sefton Drive, Ormskirk Road, Church Avenue, the racecourse area and the streets around Aintree University Hospital. 15 to 20 minute run from our Kirkby base. £80 an hour fixed. Gas Safe registered.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Guaranteed Response in Aintree</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">15<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Response from our Kirkby base</span>
         <p style="color:rgba(255,255,255,0.85);font-size:0.85rem;margin:0.3rem 0 0;">From <strong style="color:var(--orange);">£80/hour</strong> · 1 hour minimum · Fixed rates</p>
       </div>
 
@@ -71,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ L9/L10 Local Cover</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +100,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Toilet completely blocked and beginning to overflow on a Saturday afternoon. Called Ideal and they arrived within 29 minutes. Cleared the blockage with professional equipment, checked the whole drain run and left everything clean. Brilliant." Linda K, Aintree</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!" James Alexander</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">AINTREE HOMES WE COVER</span>
+      <h2>One Plumber. Every Type of Aintree Home.</h2>
+      <p class="pf-sub">Aintree is 94% semi-detached. Most stock is post-war, with newer pockets and some Victorian streets near the station. Here's what we usually find.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>1950s and 1960s Post-War Semis</h3>
+          <p>The bulk of Aintree stock. Three-bed family semis on streets like Sefton Drive, Aintree Lane and the roads off Ormskirk Road. Original plumbing was copper. Heating systems have been replaced two or three times since. We carry common parts on the van.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>1970s and 1980s Private Estates</h3>
+          <p>Newer pockets across L10. Copper pipework with compression fittings, now 40 to 50 years old. The joints can start to weep as the seals harden. Same-visit fix in most cases.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Victorian Terraces Near the Racecourse</h3>
+          <p>The streets close to Aintree station and the L9 borders have older Victorian terraces. Lead supply pipes, cast iron waste, 130 years of part-upgrades. We work on them every week.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Retirement Living Apartments</h3>
+          <p>Aintree has a strong over-55 demographic. Schemes like Sefton House on Church Avenue. Shared communal services, on-site managers, mains pressure systems. We coordinate access where needed and we treat older customers with care.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Aintree Hospital Area Rentals</h3>
+          <p>The streets around Aintree University Hospital have a strong NHS staff rental base. We cover landlord call-outs and tenant emergencies 24/7. Written reports for insurance claims as standard.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Modern Infill New Builds</h3>
+          <p>The newer plots across L9 and L10. Modern combi boilers, push-fit plumbing, often still under maker warranty. We honour warranty terms when we work.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Aintree. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Aintree. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -108,7 +165,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="pf-price-sub">9am to 5pm</div>
           <div class="pf-price-amount">£80<small>/hr</small></div>
           <ul class="pf-price-list">
-            <li>30 min Aintree response</li>
+            <li>15 min response from Kirkby</li>
             <li>Gas Safe engineer</li>
             <li>1 hour minimum</li>
             <li>Parts at cost</li>
@@ -145,48 +202,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="pf-alert" style="margin-top:1.5rem;">
-        <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <strong>No Grand National week premium</strong>
+        <p>Race week in April. Cold snaps catch out pipework. We attend at the same fixed rates. The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade typical price for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. We sit at the bottom end. No call-out fee.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">AINTREE LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Aintree. Racecourse Town Needs Reliable 24/7 Cover.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Aintree is best known for the Grand National racecourse, but beyond the famous course the area is a substantial residential suburb with a mix of post-war housing built in the 1950s and private developments from the 1970s and 1980s. The L10 postcode covers a large residential area west and south of the racecourse, with properties ranging from 1950s social housing along the main roads to 1970s private semis in the quieter residential streets.
+      <h2>Aintree Sits in Both Sefton and Liverpool</h2>
 
-Aintree's residential housing stock has plumbing characteristics that combine the challenges of both eras it spans. The 1950s stock has ageing copper pipework and original drainage. The 1970s private estates have compression-fitted copper systems now 50 years old. Both are subject to the kind of slow degradation that results in sudden emergency failures with no warning. We attend Aintree emergencies 24/7 and understand that the area has a large family homeowner population that cannot afford extended disruption from heating or water failures. Our <a href="/power-flushing-liverpool" style="color:var(--orange);font-weight:700;">power flushing service</a> restores older Aintree heating systems with cold radiator issues, and we carry out <a href="/gas-safety-certificate-liverpool" style="color:var(--orange);font-weight:700;">gas safety certificates</a> for L10 landlords on the same day as the inspection.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Aintree is split across two postcodes. L10 is the larger residential side, in Sefton Borough Council. L9 covers the streets closer to the racecourse, also mostly Sefton but with some Liverpool City borders.</p>
+
+        <p>The council split matters for landlords. Sefton has its own paperwork standard. Liverpool has selective licensing in 16 wards but those don't reach Aintree. We do CP12 paperwork to the standard each council expects.</p>
+
+        <p>94% of Aintree property sales are semi-detached homes. The average L10 home sits around £195,000. The top end on Aintree Lane reaches £320,000. Most owners are long-term residents.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>The local landmarks define the area. Aintree Racecourse hosts the Grand National every April. Aintree University Hospital is the major NHS site for north Liverpool, with thousands of staff. Old Roan station and Aintree station are on the Northern Line.</p>
+
+        <p>Aintree has a strong over-55 demographic. Schemes like Sefton House on Church Avenue offer retirement living for the local community. We handle the plumbing for those schemes and for the wider family-home base across L9 and L10.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Aintree</h2>
-      <p class="pf-sub">The faults we attend most frequently in Aintree L10.</p>
+      <h2>Common Emergency Jobs in Aintree</h2>
+      <p class="pf-sub">What we attend most often in L9 and L10.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
+
         <div class="job-card">
-          <h3>1970s Compression Joint Failures</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Private estate properties in Aintree from the 1970s have copper pipe runs with compression fittings that are now 50 years old. Compression fittings can begin to weep and then fail suddenly as the olive deforms over decades of thermal expansion. We carry repair materials for all standard pipe sizes.</p>
+          <h3>Compression Joint Weeping</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Compression fittings in 1970s and 1980s Aintree homes are now 40 to 50 years old. The olive inside the joint hardens. The seal weeps and then fails. We cut out the old fitting and put in a new one. Under an hour in most cases.</p>
         </div>
         <div class="job-card">
-          <h3>Heating System Pump and Valve Failures</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Aintree properties with system boilers from the 1980s and 1990s frequently develop pump seal failures and motorised valve failures. These components have a typical service life of 10 to 15 years. We carry replacement pumps and valves for all common system boiler configurations.</p>
+          <h3>System Boiler Pump and Valve Faults</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Older Aintree semis with system boilers and a hot water cylinder. Pumps fail. Three-port valves stick. The cylinder thermostat dies. We carry common spares on the van. Same-visit fix in most cases.</p>
         </div>
         <div class="job-card">
-          <h3>Racecourse Week Burst Pipe Calls</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Grand National week in April brings thousands of visitors to Aintree but also freezing spring nights. Cold snaps in April and May catch out pipe insulation that was not maintained through winter. We respond to Aintree burst pipe and frozen pipe emergencies regardless of the time.</p>
+          <h3>Grand National Week Burst Pipes</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>April brings the Grand National and the last cold spring nights. Pipework that wasn't lagged through winter often bursts in those final cold spells. We attend Aintree burst pipe calls 24/7. We can lag the pipes on the same visit.</p>
+        </div>
+        <div class="job-card">
+          <h3>Hospital Area Rental Emergencies</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>NHS staff rentals near Aintree University Hospital need fast turnarounds. A tenant without hot water before a 12-hour shift is a priority. We attend and provide written reports for landlord and insurance use.</p>
+        </div>
+        <div class="job-card">
+          <h3>Retirement Apartment Calls</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Sefton House and other retirement schemes need clear, gentle service. We coordinate with site managers, explain things plainly, and don't leave a mess. Same fixed rates as any other home.</p>
+        </div>
+        <div class="job-card">
+          <h3>Victorian Terrace Leaks</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>The older terraces near the racecourse and L9 borders have lead supply pipes and cast iron waste runs that fail without warning. We carry copper and plastic replacement pipework. Most jobs we fix on the same visit.</p>
         </div>
       </div>
     </div>
@@ -194,64 +275,66 @@ Aintree's residential housing stock has plumbing characteristics that combine th
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Aintree Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps to protect your home while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most mix of 1950s post-war housing and 1970s private developments it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Aintree call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Aintree semis it's under the kitchen sink. In retirement apartments it's often in the airing cupboard. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the home is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can top it up with the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need proof. We give you our own fault report with photos as well, ready for your insurer.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Aintree</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Aintree L10. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L9 and L10. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Aintree</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Aintree</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L10 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Aintree</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Aintree</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L10 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Aintree</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Aintree</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L10.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Aintree</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Aintree</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year warranty. ECO4 grant check included.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>CP12 for Aintree Landlords</strong><span>CP12 paperwork from £80. Same-day if needed. Combined boiler service and CP12 from £175. Batch pricing for the Aintree University Hospital rental landlords.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Aintree</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Swaps</strong><span>New radiators from £200 supply and fit. TRV upgrades from £50. Common upgrade in Aintree's 1950s and 1970s semis.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Electric showers from £200 supply and fit. Shower mixer from £300. Walk-in shower fits suited to retirement-living refurbs.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Aintree Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Aintree Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Aintree</h3><p>We know Aintree and the L10 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Aintree is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Aintree property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Mix of 1950s post-war housing and 1970s private developments</h3><p>We work in Aintree regularly and understand the specific plumbing and heating challenges of mix of 1950s post-war housing and 1970s private developments. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Aintree carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>15 Minute Response from Kirkby</h3><p>We're based at 29 Park Road, Kirkby. Aintree is a 10 to 15 minute run via the A580. Most calls reach us inside 20 minutes from first contact.</p></div>
+        <div class="pf-why-item"><h3>L9 and L10 Local Cover</h3><p>1950s semis, 1970s estates, Victorian terraces, retirement apartments, hospital-area rentals. We work on every type of Aintree stock at the same fixed rates.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first.</p></div>
+        <div class="pf-why-item"><h3>Sefton and Liverpool Both Covered</h3><p>Aintree crosses two councils. We work either side at the same rates. CP12 paperwork meets the standard each council expects.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Useful Information for Aintree Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Aintree.</p>
+      <p class="pf-sub">External resources for plumbing, heating, council and water emergencies.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.aintree.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Aintree Racecourse</a></li><li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities emergencies</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Aintree</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Check any gas engineer working at your Aintree home.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 if you smell gas anywhere in Aintree.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water (0345 672 3723).</li>
+          <li><a href="https://www.sefton.gov.uk/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Sefton Borough Council</a>. Local council for most of Aintree L9 and L10.</li>
+          <li><a href="https://www.aintree.thejockeyclub.co.uk/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Aintree Racecourse</a>. Grand National and event schedules.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Health and Safety Executive guidance on gas at home.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +342,37 @@ Aintree's residential housing stock has plumbing characteristics that combine th
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Aintree. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Aintree?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Aintree?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Aintree L10. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Aintree?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Aintree fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">COMPRESSION</span>&nbsp; What is a compression fitting and why do they fail in older Aintree properties?</summary><div class="pf-faq-body"><p>A compression fitting joins copper pipes using a metal ring called an olive that is compressed by tightening a nut. They are reliable when correctly installed but over decades of thermal expansion and contraction, the olive can deform and the joint begins to weep. In 1970s Aintree properties with original compression fittings, this is a common failure mode. The fix is to cut out the old fitting and install a new one   a straightforward repair that takes less than an hour in most cases.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Aintree?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Aintree?</summary><div class="pf-faq-body"><p>We're based in Kirkby. Aintree is a 10 to 15 minute run via the A580 East Lancashire Road. Most calls reach us inside 20 minutes from first contact. A real person picks up the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COUNCIL</span>&nbsp; Do you work in Sefton or just Liverpool Council areas?</summary><div class="pf-faq-body"><p>Both. Aintree is in Sefton Borough Council, not Liverpool City Council. Our cover crosses both councils. We work the same fixed rates either side of the boundary. CP12 paperwork meets the standard for Sefton landlords.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">HOSPITAL</span>&nbsp; Do you cover the area around Aintree University Hospital?</summary><div class="pf-faq-body"><p>Yes. The streets around Aintree University Hospital have a strong NHS staff rental base. We cover landlord call-outs and tenant emergencies 24/7. Written reports for landlord insurance claims as standard.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GRAND NATIONAL</span>&nbsp; What about Grand National week?</summary><div class="pf-faq-body"><p>Grand National week in April brings thousands of visitors to Aintree. Cold spring nights catch out pipework that wasn't lagged through winter. We attend burst pipe emergencies the same as any other time. Same fixed rates. No race-week premium.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RETIREMENT</span>&nbsp; Do you work on retirement living apartments?</summary><div class="pf-faq-body"><p>Yes. Aintree has a strong over-55 demographic and a number of retirement living schemes including Sefton House on Church Avenue. We coordinate with site managers where access is needed to shared services. We treat older customers with care and we explain things plainly.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All gas work is done by our own Gas Safe engineers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It's against the law to work on gas without it.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Aintree and Nearby Areas</h2>
-      <p class="pf-sub">We cover Aintree L10 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Aintree L9 and L10, plus all surrounding north Liverpool and south Sefton. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a><a href="/emergency-plumber-norris-green" class="area-pill">Norris Green</a><a href="/emergency-plumber-maghull" class="area-pill">Maghull</a><a href="/emergency-plumber-bootle" class="area-pill">Bootle</a>
+        <a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a>
+        <a href="/emergency-plumber-norris-green" class="area-pill">Norris Green</a>
+        <a href="/emergency-plumber-maghull" class="area-pill">Maghull</a>
+        <a href="/emergency-plumber-bootle" class="area-pill">Bootle</a>
+        <a href="/emergency-plumber-kirkby" class="area-pill">Kirkby</a>
+        <a href="/emergency-plumber-walton" class="area-pill">Walton</a>
+        <a href="/emergency-plumber-crosby" class="area-pill">Crosby</a>
       </div>
     </div>
   </section>
@@ -294,7 +386,7 @@ Aintree's residential housing stock has plumbing characteristics that combine th
         Available Now in Aintree. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Aintree?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">15 minute run from our Kirkby base. £80 fixed. Gas Safe registered. We cover L9 and L10, Sefton and Liverpool. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
