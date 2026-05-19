@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Woolton | Fastest 30min Response | From £80 | Gas Safe"
-  description="Emergency plumber Woolton available 24/7. 30 minute response across L25. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-woolton"
+  title="Emergency Plumber Woolton | 30min Response | From £80"
+  description="Emergency plumber in Woolton L25. 30 minute response. Cover for detached homes, sandstone cottages, listed buildings, conservation area properties and Reynolds Court. Gas Safe. From £80 an hour. Call 0151 558 0334."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Woolton",
+    "alternateName": ["24 Hour Plumber Woolton", "Woolton Village Plumber L25"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Woolton available 24/7. 30 minute response across L25. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Woolton L25. We cover Woolton Village, Quarry Street, Church Road, Beaconsfield Road, Hillside Drive and the wider conservation area. 30 minute response. Gas Safe registered. No sub-contractors. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Woolton, L25" },
+    "areaServed": [
+      { "@type": "Place", "name": "Woolton, L25" },
+      { "@type": "Place", "name": "Woolton Village" },
+      { "@type": "Place", "name": "Woolton Conservation Area" },
+      { "@type": "Place", "name": "Gateacre" },
+      { "@type": "Place", "name": "Calderstones" },
+      { "@type": "Place", "name": "Halewood" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Woolton", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Woolton", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Woolton", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Woolton", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Woolton", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +38,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Woolton?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Woolton?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Woolton L25. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "Can you find a hidden leak in my Woolton property without opening walls?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. We carry thermal imaging equipment that detects temperature differences behind walls and under floors caused by water. This allows us to pinpoint the source of a hidden leak before opening any plasterwork. We always attempt non-invasive leak location first. Call 0151 558 0334 for a same-day assessment." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Woolton?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No separate call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Woolton?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Woolton L25. Typical arrival from our Kirkby base is 25 to 30 minutes via the M62 and M57. A real person answers the phone any time of day or night." } },
+      { "@type": "Question", "name": "Do you work on Woolton's listed buildings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Woolton Conservation Area covers a large part of the village. Many properties on Beaconsfield Road, Quarry Street and Church Road are listed or in the conservation area. We plan installations around original features. For listed buildings we provide paperwork suitable for listed building consent applications." } },
+      { "@type": "Question", "name": "Can you find a hidden leak without opening walls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in most cases. We carry thermal imaging equipment that detects temperature differences behind walls and under floors. This pinpoints the source of a hidden leak before any plasterwork is opened. We always try non-invasive leak location first. Call 0151 558 0334." } },
+      { "@type": "Question", "name": "Do you cover larger detached homes with multi-zone heating?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The detached homes on Hillside Drive, Baroncroft Road and the wider Woolton area often have two or three heating zones, unvented mains pressure cylinders feeding multiple bathrooms, and premium fixtures. We're G3 qualified for unvented work and familiar with Hansgrohe, Grohe, Villeroy & Boch and other premium brands." } },
+      { "@type": "Question", "name": "Do you cover Reynolds Court and other retirement properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Reynolds Court on Vale Road and the wider retirement housing stock in Woolton are familiar work. We coordinate with managing agents where access is needed to communal areas. We explain faults clearly without jargon and confirm pricing up front before any work begins." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is carried out by our own Gas Safe registered engineers. Verify our registration at gassaferegister.co.uk. We provide gas safety certificates for all gas work carried out." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,10 +66,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Woolton
+        Available 24/7 in Woolton L25
       </div>
-      <h1>Emergency Plumber Woolton</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Woolton L25. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Woolton</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Woolton Village, Quarry Street, Church Road, Beaconsfield Road and the wider L25 conservation area. 30 minute response. £80 an hour fixed. Gas Safe registered. Specialist experience with listed buildings, sandstone cottages and large detached homes.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
@@ -71,7 +84,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Listed Building Experience</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +99,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Water coming through the kitchen ceiling on Christmas Eve. Ideal arrived within 25 minutes, found the source immediately   a split pipe in the bathroom above   and repaired it. Saved our Christmas. Cannot recommend highly enough." Patricia C, Woolton Village</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!" James Alexander</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">WOOLTON PROPERTIES WE COVER</span>
+      <h2>One Plumber. Every Type of Woolton Property.</h2>
+      <p class="pf-sub">Each Woolton property type has its own plumbing personality. Here's what we usually find.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>Large Detached Family Homes</h3>
+          <p>4 to 6 bedrooms. Hillside Drive, Baroncroft Road, Quarry Street, Maltese Cross. Multiple bathrooms, often two or three heating zones, unvented mains pressure cylinders. Premium fixtures from Hansgrohe, Grohe and Villeroy & Boch. We carry G3 qualifications for unvented work.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Sandstone Village Cottages</h3>
+          <p>Built from local Woolton sandstone. Solid walls, original features, often Grade II listed. The plumbing has been retrofitted multiple times over 150 years. We work around original cornicing, fireplaces and floorboards.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Period Terraces in Woolton Village</h3>
+          <p>Church Road, Vale Road, Quarry Street. Three-bed mid-terraces with period character. Original lead and cast iron in places. We carry the right replacement parts on the van.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Listed and Conservation Area Properties</h3>
+          <p>Woolton Conservation Area covers much of the village. Beaconsfield Road and Church Road have Grade II listings. We plan work to preserve heritage features and provide paperwork suitable for listed building consent applications where needed.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Reynolds Court and Retirement Properties</h3>
+          <p>The McCarthy & Stone development on Vale Road has 63 apartments across 5 floors. We coordinate with the managing agent where access to communal areas is needed. We explain faults clearly and confirm pricing up front.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Modern Estates and New Builds</h3>
+          <p>Redrow built Maltese Cross in 2021. Simple Life developed Woodbine Road. Modern boilers, mains pressure systems, often still under warranty. We honour manufacturer warranty conditions and work within them.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Woolton. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Woolton. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -146,47 +202,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="pf-alert" style="margin-top:1.5rem;">
         <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. Our rates are fixed and published before you call. No separate call-out fee.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">WOOLTON LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Woolton Village. What L25 Properties Need.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Woolton Village is one of the most historically distinctive residential areas in Liverpool, characterised by sandstone-built Victorian and Edwardian detached properties, large gardens and a genuine village character on Church Road and Woolton Street. Many of these properties have plumbing and heating systems that have been extended or modified several times over their long life   original pipe routes that were practical in 1890 that have since been partially rerouted, extended and adapted without a coherent overall plan.
+      <h2>Why Woolton Needs a Plumber Who Knows L25</h2>
 
-The complexity of the plumbing in many Woolton properties means that identifying the source of a leak quickly requires experience. Water that appears at one point often originates from a different location entirely, routed by hidden pipe runs. We carry thermal imaging equipment for exactly this situation. Woolton's high property values also make the case for rapid response   water damage in a large L25 property can affect decorated ceilings, original wood floors and period features that are expensive to restore. We also provide <a href="/gas-safety-certificate-liverpool" style="color:var(--orange);font-weight:700;">gas safety certificates</a>, <a href="/boiler-service-liverpool" style="color:var(--orange);font-weight:700;">boiler servicing</a> and <a href="/power-flushing-liverpool" style="color:var(--orange);font-weight:700;">power flushing</a> for Woolton properties with older heating systems.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Woolton is Liverpool's most affluent suburb. The L25 average property price sits around £401,000. Beaconsfield Road plots have changed hands at £10,000-plus per square foot. The top end runs £1.5 million to £2.4 million.</p>
+
+        <p>That matters when something leaks. A burst pipe in a detached Quarry Street home can damage original cornicing, period floorboards and high-end finishes within minutes. The cost of restoration is high. Speed and accurate diagnosis save real money.</p>
+
+        <p>Woolton Conservation Area also restricts what you can do externally. New flues, satellite dishes, condensate runs and any visible alterations to listed properties need planning consent. We've worked in the conservation area for years. We plan installations to avoid problems with the council.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>Most Woolton properties are owner-occupied. People here tend to stay. The plumbing has been extended and modified many times across each property's life. Original pipework runs alongside 1970s additions and modern combi boiler retrofits.</p>
+
+        <p>Finding a leak in a 5-bed detached with three bathrooms and a long history of plumbing changes takes experience. Water shows up at one point. It often starts somewhere else entirely. We carry thermal imaging and acoustic leak detection to trace the source before opening any plasterwork.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Woolton</h2>
-      <p class="pf-sub">The faults we attend most frequently in Woolton L25.</p>
+      <h2>Common Emergency Jobs in Woolton</h2>
+      <p class="pf-sub">What we attend most often in L25.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
+
         <div class="job-card">
-          <h3>Multi-Floor Leak Tracing</h3>
+          <h3>Hidden Leaks in Large Detached Homes</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Woolton's large Victorian properties with multiple bathrooms, en suites and original pipe runs present complex leak tracing challenges. Water appearing in one room frequently originates from a different floor or pipe run. We carry thermal imaging equipment to trace leaks without unnecessary opening of walls.</p>
+          <p>Water on the kitchen ceiling. Source could be any of three bathrooms above. We use thermal imaging to find the pipe before we touch the plasterwork. Standard kit on every Woolton call-out.</p>
         </div>
         <div class="job-card">
-          <h3>Complex Heating System Failures</h3>
+          <h3>Multi-Zone Heating Failures</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Large Woolton properties with multiple zones, motorised valves and thermostatic radiator valves have more components that can fail. We diagnose multi-zone heating failures accurately before replacing components. A misdiagnosis in a large system is expensive.</p>
+          <p>Large Woolton homes often have two or three heating zones, multiple motorised valves, separate thermostats. More components means more things that can fail. We diagnose properly before swapping parts. A wrong call on a big system is expensive.</p>
+        </div>
+        <div class="job-card">
+          <h3>Unvented Cylinder Faults</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Mains pressure cylinders feed multiple bathrooms across a detached home. When the immersion or thermostat fails, the whole house loses hot water. We're G3 qualified and carry common spares.</p>
+        </div>
+        <div class="job-card">
+          <h3>Premium Fixture Repairs</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Hansgrohe, Grohe, Villeroy & Boch, Crosswater. The premium brands fitted in Woolton bathrooms have specific cartridge sizes and replacement parts. We carry common cartridges and know where to source the rest fast.</p>
         </div>
         <div class="job-card">
           <h3>Period Property Drain Issues</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Woolton's Victorian drainage systems include long runs of clay pipe under large gardens. Root intrusion and ground movement cracking are both common causes of repeated drain blockages. We carry out drain surveys to identify the cause before recommending repairs.</p>
+          <p>Long clay drain runs under large Woolton gardens. Root intrusion. Ground movement cracking. Both common in older properties. We run a CCTV survey if it keeps blocking. We clear with high-pressure jetting.</p>
+        </div>
+        <div class="job-card">
+          <h3>Boiler Breakdowns in Conservation Area Homes</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Listed and conservation area properties often have boilers in awkward locations. The flue placement was constrained by planning consent. We diagnose and repair without changing the original installation footprint.</p>
         </div>
       </div>
     </div>
@@ -194,64 +274,68 @@ The complexity of the plumbing in many Woolton properties means that identifying
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Woolton Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps that protect your property while we're on the way from Kirkby.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most affluent village with victorian sandstone detached and semi-detached properties it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Woolton call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Woolton detached homes it's in a utility room or basement. In sandstone cottages it's often under the kitchen sink or near the front door. In Reynolds Court apartments it's in the airing cupboard. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the property is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can repressurise using the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need evidence. Woolton properties often have high-value contents and period finishes. We write our own fault report with photos as well, ready for your insurer.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Woolton</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Woolton L25. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L25. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Woolton</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Woolton</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L25 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Woolton</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Woolton</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L25 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Woolton</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Woolton</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L25.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Woolton</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Woolton</strong><span>CP12 landlord certificates from £80. Same-day available. Combined service and CP12 from £175. All L25 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Woolton</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements</strong><span>New radiator supply and fit from £200. TRV upgrades from £50. Radiator balancing for multi-zone systems included.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Thermostatic mixer from £300. Walk-in shower areas from £800. Suited to en-suite installations in larger Woolton homes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Woolton</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year manufacturer warranty. Free survey across L25.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Woolton</strong><span>Design-led bathroom installations from £7,000 supply and fit. Premium spec for Woolton properties. Villeroy & Boch, Crosswater, Hansgrohe. Free design consultation.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders Woolton</strong><span>Unvented mains pressure cylinders from £900. G3 qualified. Suited to detached Woolton homes with three or more bathrooms.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Woolton Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Woolton Homeowners Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Woolton</h3><p>We know Woolton and the L25 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Woolton is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Woolton property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Affluent village with Victorian sandstone detached and semi-detached properties</h3><p>We work in Woolton regularly and understand the specific plumbing and heating challenges of affluent village with victorian sandstone detached and semi-detached properties. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Woolton carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>30 Minute Response in Woolton</h3><p>We dispatch from Kirkby via the M62 and M57. Average run to Woolton is 25 to 30 minutes. Faster off-peak.</p></div>
+        <div class="pf-why-item"><h3>Listed Building and Conservation Area Experience</h3><p>We work in Woolton Conservation Area regularly. We know which alterations need consent and which don't. We document our work for any retrospective consent application.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first. The price we quote is the price you pay.</p></div>
+        <div class="pf-why-item"><h3>Premium Property Specialists</h3><p>Large detached homes, listed buildings, sandstone cottages, premium fixtures. We work in Woolton every week. We know what to expect before opening a wall.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Useful Information for Woolton Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Woolton.</p>
+      <p class="pf-sub">External resources for plumbing, heating, conservation and water emergencies in Woolton.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.nationaltrust.org.uk/visit/wales/beatles-childhood-homes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Mendips, John Lennon's childhood home, Woolton</a></li><li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities emergency</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Woolton</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Verify any gas engineer working at your Woolton property.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 immediately if you smell gas anywhere in Woolton.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723).</li>
+          <li><a href="https://liverpool.gov.uk/planning-and-building-control/conservation-and-heritage/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool City Council conservation and heritage</a>. Information on Woolton Conservation Area and listed building consent.</li>
+          <li><a href="https://historicengland.org.uk/listing/the-list/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Historic England listed building register</a>. Check whether a Woolton property is listed before planning any work.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Official Health and Safety Executive guidance on gas appliances at home.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +343,37 @@ The complexity of the plumbing in many Woolton properties means that identifying
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Woolton. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Woolton?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Woolton?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Woolton L25. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Woolton?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Woolton fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">TRACING</span>&nbsp; Can you find a hidden leak in my Woolton property without opening walls?</summary><div class="pf-faq-body"><p>In most cases, yes. We carry thermal imaging equipment that detects temperature differences behind walls and under floors caused by water. This allows us to pinpoint the source of a hidden leak before opening any plasterwork. We always attempt non-invasive leak location first. Call 0151 558 0334 for a same-day assessment.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Woolton?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No separate call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Woolton?</summary><div class="pf-faq-body"><p>30 minute response guaranteed across Woolton L25. We dispatch from Kirkby. Typical arrival is 25 to 30 minutes via the M62 and M57. A real person answers the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">LISTED</span>&nbsp; Do you work on Woolton's listed buildings?</summary><div class="pf-faq-body"><p>Yes. Woolton Conservation Area covers a large part of the village. Many properties on Beaconsfield Road, Quarry Street and Church Road are listed or in the conservation area. We plan installations around original features. For listed buildings we provide paperwork suitable for listed building consent applications.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LEAKS</span>&nbsp; Can you find a hidden leak without opening walls?</summary><div class="pf-faq-body"><p>Yes, in most cases. We carry thermal imaging equipment that detects temperature differences behind walls and under floors. This pinpoints the source of a hidden leak before any plasterwork is opened. We always try non-invasive leak location first. Call 0151 558 0334 for a same-day assessment.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">DETACHED</span>&nbsp; Do you cover larger detached homes with multi-zone heating?</summary><div class="pf-faq-body"><p>Yes. The detached homes on Hillside Drive, Baroncroft Road and the wider Woolton area often have two or three heating zones, unvented mains pressure cylinders feeding multiple bathrooms, and premium fixtures. We're G3 qualified for unvented work and familiar with Hansgrohe, Grohe, Villeroy & Boch and other premium brands.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">RETIREMENT</span>&nbsp; Do you cover Reynolds Court and other retirement properties?</summary><div class="pf-faq-body"><p>Yes. Reynolds Court on Vale Road and the wider retirement housing stock in Woolton are familiar work. We coordinate with managing agents where access is needed to communal areas. We explain faults clearly without jargon and confirm pricing up front before any work begins.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It's illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Woolton and Nearby Areas</h2>
-      <p class="pf-sub">We cover Woolton L25 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Woolton L25 and all surrounding South Liverpool. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-allerton" class="area-pill">Allerton</a><a href="/emergency-plumber-childwall" class="area-pill">Childwall</a><a href="/emergency-plumber-garston" class="area-pill">Garston</a><a href="/emergency-plumber-huyton" class="area-pill">Huyton</a>
+        <a href="/emergency-plumber-allerton" class="area-pill">Allerton</a>
+        <a href="/emergency-plumber-childwall" class="area-pill">Childwall</a>
+        <a href="/emergency-plumber-garston" class="area-pill">Garston</a>
+        <a href="/emergency-plumber-aigburth" class="area-pill">Aigburth</a>
+        <a href="/emergency-plumber-mossley-hill" class="area-pill">Mossley Hill</a>
+        <a href="/emergency-plumber-huyton" class="area-pill">Huyton</a>
+        <a href="/emergency-plumber-wavertree" class="area-pill">Wavertree</a>
       </div>
     </div>
   </section>
@@ -294,7 +387,7 @@ The complexity of the plumbing in many Woolton properties means that identifying
         Available Now in Woolton. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Woolton?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Listed building experience. Our own engineers. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
