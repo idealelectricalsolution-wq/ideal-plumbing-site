@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Old Swan | Fastest 30min Response | From £80 | Gas Safe"
-  description="Emergency plumber Old Swan available 24/7. 30 minute response across L13. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-old-swan"
+  title="Emergency Plumber Old Swan | 30min Response | From £80"
+  description="Emergency plumber in Old Swan L13. 20 minute run from our Kirkby base. Covers Prescot Road, Derby Road, the Swan, Stoneycroft and the wider L13. Victorian terrace and rental specialists. Gas Safe registered. From £80 an hour."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Old Swan",
+    "alternateName": ["24 Hour Plumber Old Swan", "Old Swan Emergency Plumber L13"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Old Swan available 24/7. 30 minute response across L13. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Old Swan L13. We cover Prescot Road, Derby Road, the Swan roundabout, Stoneycroft, Tuebrook and the wider L13. 20 minute response from our Kirkby base. Gas Safe registered. Victorian terrace and rental specialists. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Old Swan, L13" },
+    "areaServed": [
+      { "@type": "Place", "name": "Old Swan, L13" },
+      { "@type": "Place", "name": "Prescot Road" },
+      { "@type": "Place", "name": "Derby Road" },
+      { "@type": "Place", "name": "The Swan" },
+      { "@type": "Place", "name": "Stoneycroft" },
+      { "@type": "Place", "name": "Tuebrook" },
+      { "@type": "Place", "name": "Clubmoor" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Old Swan", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Old Swan", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Old Swan", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Old Swan", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Old Swan", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +39,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Old Swan?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Old Swan?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Old Swan L13. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "Why does my boiler lock out every winter in Old Swan?", "acceptedAnswer": { "@type": "Answer", "text": "Modern condensing boilers produce a condensate liquid that drains away through a plastic pipe. In Old Swan properties where this pipe runs outside along a back wall, it freezes in cold weather and causes the boiler to lock out with a fault code. The fix is to thaw the pipe with warm water and lag it properly to prevent recurrence. We attend condensate freeze call-outs 24/7 and can lag the external pipe on the same visit to prevent it happening again. Call 0151 558 0334." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Old Swan?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Old Swan?", "acceptedAnswer": { "@type": "Answer", "text": "We're based in Kirkby. Old Swan is a 20 minute run via the M57 and Queens Drive. A real person picks up the phone any time of day or night." } },
+      { "@type": "Question", "name": "Do you cover landlord rentals in Old Swan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Old Swan has one of the highest private rental shares in Liverpool, with 45% of homes rented. We cover landlord call-outs 24/7. CP12 gas safety paperwork from £80. Batch pricing for L13 portfolios. Written reports for insurance claims." } },
+      { "@type": "Question", "name": "Do you work on Victorian terraces?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Old Swan is mostly 1880s and 1900s terraces. Original lead supply pipes, cast iron waste, clay drain runs. Plus decades of part-upgrades. We know the patchwork. We carry replacement parts on the van." } },
+      { "@type": "Question", "name": "Why does my boiler lock out every winter?", "acceptedAnswer": { "@type": "Answer", "text": "Modern condensing boilers drain a condensate liquid through a plastic pipe. In Old Swan terraces this pipe often runs outside along the back wall. It freezes in cold spells and the boiler locks out with a fault code. We thaw the pipe and lag it properly on the same visit. Stops it happening again." } },
+      { "@type": "Question", "name": "Do you cover the streets near Alder Hey?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Alder Hey Hospital is just north of Old Swan. The major extension opens in 2026. NHS staff and student rentals in the surrounding streets are growing. We cover them 24/7." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is done by our own Gas Safe engineers. Check our entry at gassaferegister.co.uk. It's against the law to work on gas without it." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,14 +67,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Old Swan
+        Available 24/7 in Old Swan L13
       </div>
-      <h1>Emergency Plumber Old Swan</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Old Swan L13. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Old Swan</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Prescot Road, Derby Road, the Swan roundabout, Stoneycroft, Tuebrook and the wider L13. 20 minute run from our Kirkby base. £80 an hour fixed. Gas Safe registered. We know Old Swan's Victorian terraces and rental stock.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Guaranteed Response in Old Swan</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">20<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Response from our Kirkby base</span>
         <p style="color:rgba(255,255,255,0.85);font-size:0.85rem;margin:0.3rem 0 0;">From <strong style="color:var(--orange);">£80/hour</strong> · 1 hour minimum · Fixed rates</p>
       </div>
 
@@ -71,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ L13 Rental Specialists</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +100,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Washing machine pipe burst behind the units and was flooding the kitchen. Ideal were here within 29 minutes, isolated the supply, replaced the burst section and checked all the kitchen connections. Brilliant response." Eileen B, Old Swan</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Fantastic service, less than two hours after phoning up to order a new shower and they were on the way with the part to put it in." John Manley</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">OLD SWAN HOMES WE COVER</span>
+      <h2>One Plumber. Every Type of L13 Home.</h2>
+      <p class="pf-sub">Old Swan is mostly Victorian terraces. 45% of homes are private rentals. Lots of young professionals, NHS staff and students. Here's what we usually find.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>1880s and 1900s Victorian Terraces</h3>
+          <p>The bulk of Old Swan housing. Two-up two-down and three-bed bay-fronted terraces off Prescot Road, Derby Road and the side streets. Original lead supply pipes, cast iron waste, clay drain runs. We work on them every week.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>HMO Converted Terraces</h3>
+          <p>Larger Victorian houses split into flats and HMOs. Communal hot water and heating. Multiple bathrooms per building. We coordinate with managing agents and provide written reports for landlord insurance.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Mixed-Era Plumbing Patchwork</h3>
+          <p>The Old Swan reality. Lead, copper, plastic push-fit, 1970s compression fittings all in the same house. Joins between different materials fail at the connection. We figure out what's there before quoting.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>NHS Staff and Student Rentals</h3>
+          <p>Alder Hey Hospital is just north. Liverpool Heart and Chest, Rathbone Hospital are close. Liverpool universities are a short bus ride away. The streets around them have a strong professional rental base. We cover them 24/7.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Inter-War Semis</h3>
+          <p>Pockets of 1920s and 1930s semis among the Victorian stock. Bay windows, three-bed family layouts. Heating systems replaced two or three times. Standard combi or system boiler servicing applies.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Prescot Road Commercial</h3>
+          <p>The shops, cafés, pubs and Tesco/Sainsbury's on Prescot Road. Same fixed rates as residential. We cover commercial drain blockages, leaks and boiler breakdowns for the businesses along the high street.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Old Swan. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Old Swan. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -108,7 +165,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="pf-price-sub">9am to 5pm</div>
           <div class="pf-price-amount">£80<small>/hr</small></div>
           <ul class="pf-price-list">
-            <li>30 min Old Swan response</li>
+            <li>20 min response from Kirkby</li>
             <li>Gas Safe engineer</li>
             <li>1 hour minimum</li>
             <li>Parts at cost</li>
@@ -145,48 +202,74 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="pf-alert" style="margin-top:1.5rem;">
-        <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <strong>Same rates for landlords, tenants and Prescot Road shops</strong>
+        <p>No premium for commercial. Same fixed rates whatever you are. The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade typical price for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. We sit at the bottom end. No call-out fee.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">OLD SWAN LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Old Swan L13. Dense Terrace Housing, Fast Local Cover.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Old Swan is a dense, commercially active Liverpool suburb at the junction of Derby Road and Thomas Lane, surrounded by some of the tightest-packed Victorian terrace housing in east Liverpool. The streets running off the Swan roundabout   Prescot Road, Derby Road and the maze of residential streets behind them   are largely intact Victorian terraces from the 1880s that have been in continuous occupation for over 130 years.
+      <h2>Why L13 Plumbing Is Its Own Thing</h2>
 
-These properties have seen wave after wave of maintenance work of varying quality, meaning plumbing systems in Old Swan are often a patchwork of original Victorian pipework, 1970s compression fittings, 1990s plastic push-fit and modern materials   all in the same property. When a fault develops in this kind of mixed system, accurate diagnosis is essential before starting any work. We carry diagnostic equipment to identify what is original, what has been modified and what has caused the current fault. We also carry out <a href="/power-flushing-liverpool" style="color:var(--orange);font-weight:700;">power flushing</a> for Old Swan heating systems that show the classic signs of sludge build-up, as well as <a href="/gas-safety-certificate-liverpool" style="color:var(--orange);font-weight:700;">gas safety certificates</a> for L13 landlords.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Old Swan is named after the Three Swans pub. The pub served the pack-horse route along Prescot Lane in the 1700s. That route is now Prescot Road, the A57, running straight through the heart of L13.</p>
+
+        <p>The Swan roundabout is the centre. Old Swan library (Victorian black-and-white, opened 1913) sits just off it. St Anne's Church on Prescot Road carries stained glass windows in memory of Ken Dodd, endowed by Lady Dodd in 2022. Britain's first street tramway opened here in 1861. The area has real history.</p>
+
+        <p>The housing tells the same story. Nearly all Victorian terraces from the 1880s and 1900s. Built when the tramway brought workers out from the city centre. The streets running off Prescot Road and Derby Road are mostly intact 130 years on.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>What's changed is the tenure. 45% of L13 homes are now private rentals. Only 47% are owner-occupied. The biggest age group is 20 to 39. Lots of young professionals, NHS staff and students. The rental market is one of the strongest in Liverpool.</p>
+
+        <p>The plumbing reality is the patchwork. Victorian lead pipework meets 1970s compression fittings meets 2010s plastic push-fit. Connections between different materials fail at the join. A boiler from 2022 fitted to a system from 1995. We work it all out before we quote.</p>
+
+        <p>Alder Hey Hospital is just north. The major extension opens in 2026. That's another wave of NHS rental demand in L13. We cover them all at the same fixed rates.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Old Swan</h2>
-      <p class="pf-sub">The faults we attend most frequently in Old Swan L13.</p>
+      <h2>Common Emergency Jobs in Old Swan</h2>
+      <p class="pf-sub">What we attend most often in L13.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
+
         <div class="job-card">
-          <h3>Mixed-Era Pipe System Failures</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Old Swan terraces have plumbing systems modified across multiple decades. Old and new materials connected with incompatible joints fail at the connection point. We identify and repair these correctly rather than applying a temporary fix that will fail again.</p>
+          <h3>Mixed-Material Pipe Join Failures</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">20 min response</span></div>
+          <p>Victorian lead meets 1970s copper meets modern plastic. The connection points fail first. We identify what's there, cut out the failed join and use the right transition fitting. Same-visit fix.</p>
         </div>
         <div class="job-card">
-          <h3>Boiler Breakdowns on Older Systems</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Many Old Swan properties have system or regular boilers feeding a hot water cylinder. These older system types develop faults that a combi-focused plumber may not have experience with. We work on all boiler types across L13.</p>
+          <h3>HMO Boiler Breakdowns</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">20 min response</span></div>
+          <p>A boiler down in a six-tenant HMO means everyone loses heat and hot water at once. We prioritise HMO calls and provide written reports for landlord insurance claims.</p>
         </div>
         <div class="job-card">
-          <h3>Condensate Pipe Freezing in Winter</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Old Swan terraces often have condensate pipes running outside along the back wall before connecting to a drain. In cold spells these freeze and cause modern condensing boilers to lock out. We attend condensate freeze call-outs rapidly in winter across L13.</p>
+          <h3>Condensate Pipe Freezing</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">20 min response</span></div>
+          <p>Modern boilers drain a condensate liquid through a plastic pipe. In Old Swan terraces this pipe often runs outside along the back wall. Cold spells freeze it. The boiler locks out with a fault code. We thaw it and lag it on the same visit.</p>
+        </div>
+        <div class="job-card">
+          <h3>Victorian Lead Pipe Failures</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">20 min response</span></div>
+          <p>Original lead supply pipes from the 1880s are still in service in many Old Swan terraces. After 130 years they fail without warning. We replace with copper or MDPE plastic. Most jobs same-visit.</p>
+        </div>
+        <div class="job-card">
+          <h3>CP12 for L13 Landlords</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">Same-day available</span></div>
+          <p>L13 has one of the highest rental shares in Liverpool. We do CP12 gas safety paperwork from £80. Same-day if needed. Batch rates for landlords with several Old Swan properties.</p>
+        </div>
+        <div class="job-card">
+          <h3>Drain Blockages</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">20 min response</span></div>
+          <p>The 130-year-old clay drain runs are at the end of their life. Lead joint seals fail. Tree roots find their way in. We clear with high-pressure jetting. CCTV survey on request to find the source.</p>
         </div>
       </div>
     </div>
@@ -194,64 +277,66 @@ These properties have seen wave after wave of maintenance work of varying qualit
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Old Swan Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps to protect your home while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most dense victorian terraces surrounding a busy commercial corridor it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Old Swan call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Old Swan terraces it's under the kitchen sink, in the cellar, or near the front door. In HMO conversions it's often in the airing cupboard. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the home is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can top it up with the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need proof. We give you our own fault report with photos as well, ready for your insurer or landlord.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Old Swan</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Old Swan L13. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L13. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Old Swan</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Old Swan</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L13 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Old Swan</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Old Swan</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L13 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Old Swan</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Old Swan</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L13.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>CP12 for Old Swan Landlords</strong><span>CP12 paperwork from £80 per property. Same-day if needed. Batch pricing for the strong L13 landlord market. Combined service and CP12 from £175.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Old Swan</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Old Swan</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year warranty. ECO4 grant check on every quote.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Old Swan</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Common upgrade after Victorian-era sludge build-up.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Swaps</strong><span>New radiators from £200 supply and fit. Period-look replacements for Old Swan's Victorian terraces.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Electric showers from £200 supply and fit. Shower mixer from £300. Cartridge swaps from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Old Swan Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Old Swan Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Old Swan</h3><p>We know Old Swan and the L13 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Old Swan is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Old Swan property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Dense Victorian terraces surrounding a busy commercial corridor</h3><p>We work in Old Swan regularly and understand the specific plumbing and heating challenges of dense victorian terraces surrounding a busy commercial corridor. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Old Swan carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>20 Minute Response from Kirkby</h3><p>Our base at 29 Park Road, Kirkby is a 20 minute run via the M57 and Queens Drive. Most calls reach us inside 25 minutes from first phone call.</p></div>
+        <div class="pf-why-item"><h3>L13 Rental Specialists</h3><p>45% of Old Swan homes are rentals. We work with the landlords, the managing agents and the tenants. CP12 paperwork, written reports, batch pricing.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first.</p></div>
+        <div class="pf-why-item"><h3>Victorian Patchwork Specialists</h3><p>Lead, copper, plastic, compression, push-fit all in the same house. We've worked them all. We know where the joins fail.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Useful Information for Old Swan Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Old Swan.</p>
+      <p class="pf-sub">External resources for plumbing, heating, council and grant matters.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.which.co.uk/reviews/local-plumbers" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Which? advice on finding a good plumber</a></li><li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities emergencies</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Old Swan</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Check any gas engineer working at your Old Swan home.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 if you smell gas anywhere in Old Swan.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water (0345 672 3723).</li>
+          <li><a href="https://liverpool.gov.uk/business/licensing/private-rented-housing/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool selective licensing</a>. Council guidance for Old Swan landlords.</li>
+          <li><a href="https://www.gov.uk/apply-home-insulation-grant" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">ECO4 grant scheme</a>. Government grants for boiler swaps and insulation.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Health and Safety Executive guidance on gas at home.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +344,37 @@ These properties have seen wave after wave of maintenance work of varying qualit
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Old Swan. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Old Swan?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Old Swan?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Old Swan L13. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Old Swan?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Old Swan fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">CONDENSATE</span>&nbsp; Why does my boiler lock out every winter in Old Swan?</summary><div class="pf-faq-body"><p>Modern condensing boilers produce a condensate liquid that drains away through a plastic pipe. In Old Swan properties where this pipe runs outside along a back wall, it freezes in cold weather and causes the boiler to lock out with a fault code. The fix is to thaw the pipe with warm water and lag it properly to prevent recurrence. We attend condensate freeze call-outs 24/7 and can lag the external pipe on the same visit to prevent it happening again. Call 0151 558 0334.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Old Swan?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Old Swan?</summary><div class="pf-faq-body"><p>We're based in Kirkby. Old Swan is a 20 minute run via the M57 and Queens Drive. A real person picks up the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RENTALS</span>&nbsp; Do you cover landlord rentals in Old Swan?</summary><div class="pf-faq-body"><p>Yes. Old Swan has one of the highest private rental shares in Liverpool, with 45% of homes rented. We cover landlord call-outs 24/7. CP12 gas safety paperwork from £80. Batch pricing for L13 portfolios. Written reports for insurance claims.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">VICTORIAN</span>&nbsp; Do you work on Victorian terraces?</summary><div class="pf-faq-body"><p>Yes. Old Swan is mostly 1880s and 1900s terraces. Original lead supply pipes, cast iron waste, clay drain runs. Plus decades of part-upgrades. We know the patchwork. We carry replacement parts on the van.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">CONDENSATE</span>&nbsp; Why does my boiler lock out every winter?</summary><div class="pf-faq-body"><p>Modern condensing boilers drain a condensate liquid through a plastic pipe. In Old Swan terraces this pipe often runs outside along the back wall. It freezes in cold spells and the boiler locks out with a fault code. We thaw the pipe and lag it properly on the same visit. Stops it happening again.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">ALDER HEY</span>&nbsp; Do you cover the streets near Alder Hey?</summary><div class="pf-faq-body"><p>Yes. Alder Hey Hospital is just north of Old Swan. The major extension opens in 2026. NHS staff and student rentals in the surrounding streets are growing. We cover them 24/7.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All gas work is done by our own Gas Safe engineers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It's against the law to work on gas without it.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Old Swan and Nearby Areas</h2>
-      <p class="pf-sub">We cover Old Swan L13 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Old Swan L13 and all surrounding east Liverpool. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-wavertree" class="area-pill">Wavertree</a><a href="/emergency-plumber-west-derby" class="area-pill">West Derby</a><a href="/emergency-plumber-childwall" class="area-pill">Childwall</a><a href="/emergency-plumber-huyton" class="area-pill">Knotty Ash</a>
+        <a href="/emergency-plumber-wavertree" class="area-pill">Wavertree</a>
+        <a href="/emergency-plumber-west-derby" class="area-pill">West Derby</a>
+        <a href="/emergency-plumber-childwall" class="area-pill">Childwall</a>
+        <a href="/emergency-plumber-huyton" class="area-pill">Huyton</a>
+        <a href="/emergency-plumber-norris-green" class="area-pill">Norris Green</a>
+        <a href="/emergency-plumber-anfield" class="area-pill">Anfield</a>
+        <a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a>
       </div>
     </div>
   </section>
@@ -294,7 +388,7 @@ These properties have seen wave after wave of maintenance work of varying qualit
         Available Now in Old Swan. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Old Swan?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">20 minute run from our Kirkby base. £80 fixed. Gas Safe registered. Victorian terrace and rental specialists. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
