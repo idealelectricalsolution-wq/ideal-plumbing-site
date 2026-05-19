@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Norris Green | 30min | From £80"
-  description="Emergency plumber Norris Green available 24/7. 30 minute response across L11. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-norris-green"
+  title="Emergency Plumber Norris Green | 15min Response | From £80"
+  description="Emergency plumber in Norris Green L11. 15 minute response from our Kirkby base via the East Lancs Road. Covers Broadway, Broad Lane, Muirhead Avenue, Norris Green Village and the wider L11. 1930s semis and new builds. From £80 an hour."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Norris Green",
+    "alternateName": ["24 Hour Plumber Norris Green", "Norris Green Emergency Plumber L11"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Norris Green available 24/7. 30 minute response across L11. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Norris Green L11. We cover Broadway, Broad Lane, Muirhead Avenue, Townsend Avenue, Norris Green Village and the wider L11. 15 minute response from our Kirkby base. Gas Safe registered. Estate specialists. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Norris Green, L11" },
+    "areaServed": [
+      { "@type": "Place", "name": "Norris Green, L11" },
+      { "@type": "Place", "name": "Broadway" },
+      { "@type": "Place", "name": "Broad Lane" },
+      { "@type": "Place", "name": "Muirhead Avenue" },
+      { "@type": "Place", "name": "Townsend Avenue" },
+      { "@type": "Place", "name": "Norris Green Village" },
+      { "@type": "Place", "name": "Almonds Green" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Norris Green", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Norris Green", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Norris Green", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Norris Green", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Norris Green", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +39,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Norris Green?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Norris Green?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Norris Green L11. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "Why does my boiler keep losing pressure in my Norris Green home?", "acceptedAnswer": { "@type": "Answer", "text": "Gradual pressure loss   where the system drops from 1.5 bar to below 0.5 bar over days or weeks   indicates a small leak somewhere in the system. Common locations are radiator valve bodies, flexible hose connections at the boiler and old compression fittings on copper pipes. Simply repressurising repeatedly without finding the source masks the real problem. Call us on 0151 558 0334 and we will find and fix the source on the first visit." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Norris Green?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Written quote before work starts. No call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Norris Green?", "acceptedAnswer": { "@type": "Answer", "text": "We're based in Kirkby. Norris Green is a 10 to 15 minute run on the East Lancashire Road. Most calls reach us inside 20 minutes from first contact. A real person picks up the phone any time of day or night." } },
+      { "@type": "Question", "name": "Do you work on the original 1930s estate houses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The original brick-built 1930s semis make up the bulk of Norris Green stock. We work on them every week. Most have had heating systems replaced two or three times since the war. We know the typical layouts and the common fault patterns." } },
+      { "@type": "Question", "name": "Do you cover the new Norris Green Village homes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Norris Green Village rebuild by Countryside Properties and Sigma has put up 829 new homes on the old Boot Estate site since 2011. Modern push-fit plumbing, mains pressure systems, often still under maker warranty. We honour warranty terms when we work." } },
+      { "@type": "Question", "name": "Why does my boiler keep losing pressure?", "acceptedAnswer": { "@type": "Answer", "text": "Slow pressure loss means a small leak. The system drops from 1.5 bar to below 0.5 bar over days or weeks. Common spots are radiator valve bodies, flexible hoses at the boiler and old compression joints. Topping it up again and again hides the real problem. We find the leak and fix it on the first visit." } },
+      { "@type": "Question", "name": "Do you do CP12 paperwork for Norris Green landlords?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. CP12 gas safety certificates from £80 per property. Same-day if needed. Combined boiler service and CP12 from £175. Batch pricing for landlords with several L11 rentals." } },
+      { "@type": "Question", "name": "Are your engineers Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is done by our own Gas Safe engineers. Check our entry at gassaferegister.co.uk. It's against the law to work on gas without it." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -53,14 +67,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="live-dot"></span>
-        Available 24/7 in Norris Green
+        Available 24/7 in Norris Green L11
       </div>
-      <h1>Emergency Plumber Norris Green</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Norris Green L11. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Norris Green</h1>
+      <p class="page-hero-sub">24/7 emergency plumber covering Broadway, Broad Lane, Muirhead Avenue, Townsend Avenue, Norris Green Village and the wider L11. 15 minute run from our Kirkby base. £80 an hour fixed. Gas Safe registered. We work on the 1930s semis and the new-build village homes every week.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Guaranteed Response in Norris Green</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">15<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Response from our Kirkby base</span>
         <p style="color:rgba(255,255,255,0.85);font-size:0.85rem;margin:0.3rem 0 0;">From <strong style="color:var(--orange);">£80/hour</strong> · 1 hour minimum · Fixed rates</p>
       </div>
 
@@ -71,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ L11 Estate Experts</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +100,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Boiler giving fault code F22 and no hot water. Called 0151 558 0334 at 7.30am, engineer arrived by 8.05am, topped up the pressure and reset the boiler. Explained everything clearly and gave me tips to avoid it happening again. Great service." Paul N, Norris Green</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Fantastic service, less than two hours after phoning up to order a new shower and they were on the way with the part to put it in." John Manley</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROPERTY TYPES -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">NORRIS GREEN HOMES WE COVER</span>
+      <h2>One Plumber. Every Type of L11 Home.</h2>
+      <p class="pf-sub">Norris Green has changed a lot over the last 15 years. Old estate housing, right-to-buy, and brand-new village homes all sit side by side. Here's what we find.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>Original 1930s Brick Semis</h3>
+          <p>The bulk of Norris Green is original brick-built 1930s semis. Solid build, 3-bed family layouts. Heating systems have been replaced two or three times since the war. We know the typical pipe runs and stopcock spots.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Right-to-Buy Ex-Council</h3>
+          <p>Lots of Norris Green stock was bought by tenants from the 1980s on. Each home was upgraded at a different time. Mixed pipe materials, mixed boiler ages. We diagnose what's there before we quote any work.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Norris Green Village New Builds</h3>
+          <p>The post-2011 rebuild by Countryside Properties and Sigma put up 829 new homes on the old Boot Estate site. Modern push-fit plumbing, fresh combi boilers, mains pressure systems. Many are still under maker warranty.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Refurbished Social Housing</h3>
+          <p>Liverpool Mutual Homes refurbished 74 homes on Broad Lane in 2012. Other batch refurbs across the estate. New boilers, new bathrooms, modern wiring. We work on them at fixed rates.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Buy-to-Let and Rentals</h3>
+          <p>A growing chunk of L11 is rental stock. Some original 1930s semis, some new-build Sigma PRS homes. We cover landlord emergencies 24/7 and do CP12 paperwork for any size of portfolio.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Border Properties</h3>
+          <p>The streets closer to Croxteth, Clubmoor, West Derby and Fazakerley have a wider mix. Some older pre-1925 stock, some 1950s overspill, some modern infill. We cover all the L11 borders.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Norris Green. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Emergency Plumber Norris Green. Fixed Rates. No Surprises.</h2>
+      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -108,7 +165,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="pf-price-sub">9am to 5pm</div>
           <div class="pf-price-amount">£80<small>/hr</small></div>
           <ul class="pf-price-list">
-            <li>30 min Norris Green response</li>
+            <li>15 min response from Kirkby</li>
             <li>Gas Safe engineer</li>
             <li>1 hour minimum</li>
             <li>Parts at cost</li>
@@ -145,48 +202,74 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="pf-alert" style="margin-top:1.5rem;">
-        <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <strong>Same rates for landlords and tenants</strong>
+        <p>We don't charge tenants more. We don't charge landlords more. The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade typical price for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. We sit at the bottom end. No call-out fee.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <span class="pf-section-label">NORRIS GREEN LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Norris Green L11. Estate Housing Needs Reliable Fast Cover.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Norris Green was built by Liverpool City Council in the 1930s as one of the largest planned housing estates in Europe at the time, designed to rehouse families from overcrowded inner-city Victorian terraces. The estate's distinctive red-brick semi-detached and terraced houses along Queens Drive, Lorenzo Drive and the surrounding streets represent a consistent housing type with similar plumbing characteristics across the postcode.
+      <h2>The L11 Housing Story Most Plumbers Miss</h2>
 
-1930s Norris Green properties typically have heating systems installed in the 1970s or 1980s as the first upgrade from solid fuel or back boilers. These systems are now 40 to 50 years old. Pump failures, motorised valve failures and system boiler faults are common in heating systems of this age, and the issue is usually the system boiler and cylinder combination rather than the individual components that a quick fix addresses. We diagnose the root cause correctly before recommending any work. We also carry out <a href="/power-flushing-liverpool" style="color:var(--orange);font-weight:700;">power flushing</a> for L11 systems with cold radiators, <a href="/radiators-liverpool" style="color:var(--orange);font-weight:700;">radiator replacements</a> and <a href="/gas-safety-certificate-liverpool" style="color:var(--orange);font-weight:700;">gas safety certificates</a> for Norris Green landlords.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Norris Green was built from 1925 as one of Europe's biggest planned council estates. Liverpool City Council bought the land from Lord Derby's estate for £65,000. The plan was to rehouse families from the slum terraces in the inner city.</p>
+
+        <p>The estate boomed. 25,000 people moved in inside three years. The population peaked above 37,000. The art deco library on Broadway opened in the 1930s and still stands today.</p>
+
+        <p>Most of the houses are solid brick semis. Three bedrooms, family layouts, big enough to be a forever home. These are the ones still going strong today. Our regular L11 work is on this stock.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>A smaller chunk of the estate was built with the Boot system. Precast concrete columns with steel rebar inside. The rebar rusted over time. The columns cracked. By the 1980s these homes were unfit to live in.</p>
+
+        <p>The fix took 20 years. 835 Boot homes were demolished between 2000 and 2006. Countryside Properties and Sigma started the rebuild in 2011. Norris Green Village is now 829 new homes on that cleared land. Modern plumbing, modern boilers, mostly still under warranty.</p>
+
+        <p>That mix is the L11 reality. A 1930s semi on one street, a 2018 new build round the corner, a 2012 refurb across the road. We work on all of them at the same fixed rates.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Norris Green</h2>
-      <p class="pf-sub">The faults we attend most frequently in Norris Green L11.</p>
+      <h2>Common Emergency Jobs in Norris Green</h2>
+      <p class="pf-sub">What we attend most often in L11.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
-        <div class="job-card">
-          <h3>System Boiler and Pump Failures</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>1930s Norris Green properties with 1970s-80s system boilers frequently develop pump failures, three-port valve failures and heat exchanger blockages. We carry parts for older system boilers and can usually repair on the first visit or advise on full replacement if uneconomic to repair.</p>
-        </div>
+
         <div class="job-card">
           <h3>Boiler Pressure Loss</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Modern condensing combi boilers installed as replacements in Norris Green properties often develop gradual pressure loss due to small system leaks at older radiator valve bodies. We find and fix the source before recharging the system to the correct operating pressure.</p>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Slow pressure loss is the most common Norris Green call. The system drops from 1.5 bar to below 0.5 bar over days or weeks. Small leak somewhere. We find the source and fix it on the first visit. Topping it up again and again hides the real problem.</p>
         </div>
         <div class="job-card">
-          <h3>1930s Drainage System Blockages</h3>
-          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Norris Green's 1930s drainage infrastructure   clay pipes with lead joints   is now approaching 90 years old. Ground movement and root intrusion cause joint failure and pipe cracking. We clear blockages and carry out CCTV surveys on request.</p>
+          <h3>Old System Boiler Faults</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Many original 1930s semis still run a system boiler and a hot water cylinder. Pumps fail. Three-port valves stick. The cylinder thermostat dies. We carry common spares on the van. Same-visit fix in most cases.</p>
+        </div>
+        <div class="job-card">
+          <h3>New-Build Push-Fit Joint Leaks</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>The Norris Green Village new builds use plastic push-fit plumbing. The joints can pop if installed badly or knocked during other work. A failed joint releases water fast. We carry the common push-fit fittings.</p>
+        </div>
+        <div class="job-card">
+          <h3>1930s Drainage Blockages</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>The original clay drain runs are now 90 years old. Lead joint seals fail. Ground movement cracks pipes. Tree roots find their way in. We clear with high-pressure jetting. CCTV survey on request.</p>
+        </div>
+        <div class="job-card">
+          <h3>Right-to-Buy Mixed Pipework</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>Right-to-buy homes have been upgraded piecemeal over decades. Lead pipe meets copper meets plastic in unexpected places. Joins fail. We work out what's there and fix the failed section properly.</p>
+        </div>
+        <div class="job-card">
+          <h3>Burst Pipes in Cold Snaps</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">15 min response</span></div>
+          <p>The older lofts aren't always well insulated. Cold weeks each winter cause pipe bursts above ceilings. We attend 24/7. We can lag the pipes on the same visit to stop it happening again next year.</p>
         </div>
       </div>
     </div>
@@ -194,64 +277,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Norris Green Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps to protect your home while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most 1930s council estate housing now largely in private ownership it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Norris Green call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock and turn it off</strong><p>For any water leak, the stopcock is your first move. In most Norris Green semis it's under the kitchen sink. In the newer village homes it's often in the airing cupboard or utility area. Turn it clockwise to stop all water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, get out</strong><p>Don't touch any switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the home is safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>No heating? Check the pressure gauge</strong><p>Look at the gauge on the boiler. It should sit between 1 and 1.5 bar. Below 0.5, you can top it up with the filling loop underneath. That fixes about half of all "no heating" calls. If it doesn't, call us.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need proof. We give you our own fault report with photos as well, ready for your insurer or landlord.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Norris Green</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Norris Green L11. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L11. Gas Safe registered. Fixed prices. Free surveys.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Norris Green</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Norris Green</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L11 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Norris Green</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Norris Green</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L11 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Norris Green</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Norris Green</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L11.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Norris Green</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Norris Green</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year warranty. ECO4 grant check included.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>CP12 for Norris Green Landlords</strong><span>CP12 paperwork from £80 per property. Same-day if needed. Batch pricing for landlords with several L11 rentals.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Norris Green</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Swaps</strong><span>New radiators from £200 supply and fit. TRV upgrades from £50. Common upgrade in 1930s Norris Green semis.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs</strong><span>Electric showers from £200 supply and fit. Shower mixer from £300. Cartridge swaps from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Norris Green Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why Norris Green Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Norris Green</h3><p>We know Norris Green and the L11 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Norris Green is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Norris Green property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of 1930s council estate housing now largely in private ownership</h3><p>We work in Norris Green regularly and understand the specific plumbing and heating challenges of 1930s council estate housing now largely in private ownership. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Norris Green carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>15 Minute Response from Kirkby</h3><p>We're based at 29 Park Road, Kirkby. Norris Green is a 10 to 15 minute run on the East Lancashire Road. Most calls reach us inside 20 minutes from first phone call.</p></div>
+        <div class="pf-why-item"><h3>L11 Estate Experts</h3><p>1930s brick semis, right-to-buy homes, Norris Green Village new builds. We work on every type of L11 stock every week.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80 weekdays. £120 weekends. £150 out of hours. 1 hour minimum. Parts at cost. Written quote first.</p></div>
+        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day. A real person picks up. No voicemail. No menu. Safety advice while we're on the way.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Useful Information for Norris Green Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Norris Green.</p>
+      <p class="pf-sub">External resources for plumbing, heating, council and grant matters.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://liverpool.gov.uk/housing/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool City Council housing</a></li><li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.which.co.uk/reviews/boilers" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Which? boiler advice</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Norris Green</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Check any gas engineer working at your Norris Green home.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 if you smell gas anywhere in Norris Green.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water (0345 672 3723).</li>
+          <li><a href="https://www.gov.uk/apply-home-insulation-grant" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">ECO4 grant scheme</a>. Government grants for boiler swaps and insulation for qualifying L11 households.</li>
+          <li><a href="https://liverpool.gov.uk/housing/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool City Council housing</a>. Council guidance for L11 tenants and landlords.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. Health and Safety Executive guidance on gas at home.</li>
         </ul>
       </div>
     </div>
@@ -259,15 +344,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Norris Green. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Norris Green?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Norris Green?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Norris Green L11. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Norris Green?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Norris Green fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">PRESSURE</span>&nbsp; Why does my boiler keep losing pressure in my Norris Green home?</summary><div class="pf-faq-body"><p>Gradual pressure loss   where the system drops from 1.5 bar to below 0.5 bar over days or weeks   indicates a small leak somewhere in the system. Common locations are radiator valve bodies, flexible hose connections at the boiler and old compression fittings on copper pipes. Simply repressurising repeatedly without finding the source masks the real problem. Call us on 0151 558 0334 and we will find and fix the source on the first visit.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Norris Green?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Written quote before work starts. No call-out fee.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Norris Green?</summary><div class="pf-faq-body"><p>We're based in Kirkby. Norris Green is a 10 to 15 minute run on the East Lancashire Road. Most calls reach us inside 20 minutes from first contact. A real person picks up the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">1930s</span>&nbsp; Do you work on the original 1930s estate houses?</summary><div class="pf-faq-body"><p>Yes. The original brick-built 1930s semis make up the bulk of Norris Green stock. We work on them every week. Most have had heating systems replaced two or three times since the war. We know the typical layouts and the common fault patterns.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">VILLAGE</span>&nbsp; Do you cover the new Norris Green Village homes?</summary><div class="pf-faq-body"><p>Yes. The Norris Green Village rebuild by Countryside Properties and Sigma has put up 829 new homes on the old Boot Estate site since 2011. Modern push-fit plumbing, mains pressure systems, often still under maker warranty. We honour warranty terms when we work.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">PRESSURE</span>&nbsp; Why does my boiler keep losing pressure?</summary><div class="pf-faq-body"><p>Slow pressure loss means a small leak. The system drops from 1.5 bar to below 0.5 bar over days or weeks. Common spots are radiator valve bodies, flexible hoses at the boiler and old compression joints. Topping it up again and again hides the real problem. We find the leak and fix it on the first visit.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">LANDLORD</span>&nbsp; Do you do CP12 paperwork for Norris Green landlords?</summary><div class="pf-faq-body"><p>Yes. CP12 gas safety certificates from £80 per property. Same-day if needed. Combined boiler service and CP12 from £175. Batch pricing for landlords with several L11 rentals.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All gas work is done by our own Gas Safe engineers. Check our entry at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It's against the law to work on gas without it.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job has a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
@@ -277,10 +365,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber in Norris Green and Nearby Areas</h2>
-      <p class="pf-sub">We cover Norris Green L11 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Norris Green L11 and all surrounding north Liverpool. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-west-derby" class="area-pill">West Derby</a><a href="/emergency-plumber-kirkby" class="area-pill">Kirkby</a><a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a><a href="/emergency-plumber-aintree" class="area-pill">Croxteth</a>
+        <a href="/emergency-plumber-west-derby" class="area-pill">West Derby</a>
+        <a href="/emergency-plumber-kirkby" class="area-pill">Kirkby</a>
+        <a href="/emergency-plumber-fazakerley" class="area-pill">Fazakerley</a>
+        <a href="/emergency-plumber-walton" class="area-pill">Walton</a>
+        <a href="/emergency-plumber-aintree" class="area-pill">Aintree</a>
+        <a href="/emergency-plumber-anfield" class="area-pill">Anfield</a>
+        <a href="/emergency-plumber-old-swan" class="area-pill">Old Swan</a>
       </div>
     </div>
   </section>
@@ -294,7 +388,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Available Now in Norris Green. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Norris Green?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">15 minute response from our Kirkby base. £80 fixed. Gas Safe registered. We know the 1930s semis and the new village homes. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
