@@ -4,8 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Emergency Plumber Liverpool City Centre | From £80"
-  description="Emergency plumber Liverpool city centre available 24/7. 30 minute response across L1, L2, L3. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/emergency-plumber-city-centre"
+  description="Emergency plumber in Liverpool city centre L1, L2, L3. 30 minute response. Cover for apartments, student accommodation, Airbnbs, hotels, bars and offices. Gas Safe. From £80 an hour. Call 0151 558 0334."
 >
 
   <script type="application/ld+json" slot="head">
@@ -13,14 +12,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Liverpool City Centre",
+    "alternateName": ["24 Hour Plumber Liverpool City Centre", "Commercial Plumber Liverpool City Centre"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber Liverpool city centre available 24/7. 30 minute response across L1, L2, L3. Gas Safe registered. No sub-contractors. Burst pipes, boiler breakdowns, blocked drains. From £80/hr. Call 0151 558 0334.",
+    "description": "Emergency plumber in Liverpool city centre L1, L2 and L3. We cover residential apartments, student accommodation, Airbnb and short lets, restaurants, bars, hotels and offices. 30 minute response. Gas Safe registered. No sub-contractors. From £80 an hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Liverpool City Centre, L1" },
+    "areaServed": [
+      { "@type": "Place", "name": "Liverpool City Centre, L1" },
+      { "@type": "Place", "name": "Liverpool L2" },
+      { "@type": "Place", "name": "Liverpool L3" },
+      { "@type": "Place", "name": "Ropewalks" },
+      { "@type": "Place", "name": "Baltic Triangle" },
+      { "@type": "Place", "name": "Knowledge Quarter" },
+      { "@type": "Place", "name": "Georgian Quarter" },
+      { "@type": "Place", "name": "Waterfront" },
+      { "@type": "Place", "name": "Commercial District" }
+    ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Liverpool City Centre", "price": "80", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Liverpool City Centre", "price": "150", "priceCurrency": "GBP" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Liverpool City Centre", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Weekend Emergency Plumber Liverpool City Centre", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
+      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Liverpool City Centre", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
     ]
   }
   </script>
@@ -30,9 +41,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Liverpool City Centre?", "acceptedAnswer": { "@type": "Answer", "text": "Weekdays 9am to 5pm: £80 per hour with a 1 hour minimum. Weekends 9am to 1pm: £120 per hour. Out of hours nights and holidays: £150 per hour. Parts at cost. Most jobs cost between £80 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Liverpool City Centre?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Liverpool City Centre L1. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "Do you attend commercial plumbing emergencies in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We attend commercial emergencies across L1, L2 and L3 at exactly the same fixed rates as residential   £80/hr weekdays, £120 weekends, £150 out of hours. No commercial premium, no separate call-out fee. We cover restaurants, bars, offices, hotels, salons and all commercial premises. Call 0151 558 0334 at any time." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Same fixed rates for residential and commercial. Written quote before work starts. No separate call-out fee." } },
+      { "@type": "Question", "name": "How quickly can you reach Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across L1, L2 and L3. Out of hours, when traffic clears, typical arrival is 20 to 25 minutes from our Kirkby base. A real person answers the phone 24 hours a day, every day of the year." } },
+      { "@type": "Question", "name": "Do you cover commercial premises in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bars, restaurants, hotels, offices, salons, gyms, shops. Same fixed rates as residential. £80 weekdays, £120 weekends, £150 out of hours. No commercial premium. No separate call-out fee. We work with kitchen managers, hotel duty managers and bar owners to fix faults fast so trading can carry on." } },
+      { "@type": "Question", "name": "Do you cover Airbnb and short-let properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with Airbnb hosts and short-let managers across the city centre. We handle emergencies between guest changeovers and provide written reports for host insurance claims. Same fixed rates. We can usually attend within the 30-minute window even on a turnover day." } },
+      { "@type": "Question", "name": "Do you handle student accommodation in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We cover student blocks across L1 and L3 including Mount Pleasant, Marybone, Bold Street and Renshaw Street. We carry out CP12 gas safety certificates ahead of each academic year in July and August. Multi-room HMOs and shared student houses are familiar work for us." } },
+      { "@type": "Question", "name": "Can you coordinate with building management?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most city centre apartment blocks have a concierge or managing agent. We're used to liaising with building management to access communal risers, isolate floor-level water supplies and turn off booster pumps when needed. Bring us the management contact number if you have it. If you don't, we'll find it." } },
+      { "@type": "Question", "name": "Are you Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All gas work is carried out by our own Gas Safe registered engineers. Verify us at gassaferegister.co.uk. We provide CP12 certificates for residential, HMO and commercial gas work." } },
+      { "@type": "Question", "name": "Do you guarantee your work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge." } }
     ]
   }
   </script>
@@ -55,12 +71,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="live-dot"></span>
         Available 24/7 in Liverpool City Centre
       </div>
-      <h1>Emergency Plumber Liverpool City Centre</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Liverpool City Centre L1. 30 minute response. Gas Safe registered engineers. Burst pipes, boiler breakdowns, blocked drains, no hot water. Fixed rates from £80. Our own engineers. No sub-contractors.</p>
+      <h1>Emergency Plumber in Liverpool City Centre</h1>
+      <p class="page-hero-sub">24/7 emergency plumber across L1, L2 and L3. We cover residential apartments, studios, student accommodation, Airbnb hosts, bars, restaurants, hotels and offices. 30 minute response. £80 an hour fixed. Gas Safe registered. A real person answers the phone, even at 3am.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--orange);line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Guaranteed Response in Liverpool City Centre</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Guaranteed Response Across L1, L2, L3</span>
         <p style="color:rgba(255,255,255,0.85);font-size:0.85rem;margin:0.3rem 0 0;">From <strong style="color:var(--orange);">£80/hour</strong> · 1 hour minimum · Fixed rates</p>
       </div>
 
@@ -71,7 +87,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Sub-Contractors</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Same Rates Commercial</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
       </div>
@@ -86,20 +102,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <div style="color:#f59e0b;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 250 Google Reviews</div>
+          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Burst pipe in the bathroom of my Baltic Triangle apartment at 2am. Engineer arrived in 22 minutes   faster than I expected at that hour. Had the pipe repaired and everything tested before 3am. Fixed rate exactly as quoted. Brilliant." James O, Baltic Triangle</div>
-        <a href="https://www.google.com/search?q=Ideal+Plumbing+Solutions+Liverpool+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all 250 reviews →</a>
+        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!" James Alexander</div>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHO WE COVER -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">WHO WE COVER IN THE CITY CENTRE</span>
+      <h2>One Plumber. Every City Centre Property Type.</h2>
+      <p class="pf-sub">We cover every property type in L1, L2 and L3. Same rates, same response time.</p>
+      <div class="pf-why-grid" style="margin-top:2rem;">
+
+        <div class="pf-why-item">
+          <h3>Apartments and Studios</h3>
+          <p>The Lexington, ROCO, Parliament Square, Bastion Point, X1 properties. Build-to-rent and private apartments across the city centre. We know the common stopcock locations and communal riser layouts. We coordinate with concierges and managing agents.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Student Accommodation</h3>
+          <p>Marybone Student Village, Vista Square, Mount Pleasant blocks, Renshaw Street student lets, HMOs around Bold Street. We do CP12 batch work in July and August before the academic year starts. Same-day attendance during term time.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Airbnb and Short Lets</h3>
+          <p>Burst pipes between guest changeovers are the worst possible timing. We work with city centre Airbnb hosts and short-let managers across Ropewalks, Baltic Triangle and the waterfront. Written reports for host insurance claims included.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Bars, Restaurants and Hotels</h3>
+          <p>Bold Street, Castle Street, Mathew Street, Dale Street. Kitchen drain blockages, urinal failures, ice-machine leaks, beer-line water connections. Same fixed rates as residential. No commercial premium. We work around trading hours where we can.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Offices and Co-Working</h3>
+          <p>Liverpool ONE, Commercial District, Knowledge Quarter. Toilet blockages, kitchenette leaks, water cooler installations gone wrong. We attend before opening hours or out of hours to minimise disruption.</p>
+        </div>
+
+        <div class="pf-why-item">
+          <h3>Georgian Townhouses</h3>
+          <p>Hope Street, Rodney Street, the wider Georgian Quarter. Period properties built around 1800. Original pipework still in service in places. We work around heritage features and provide paperwork for listed building consent where needed.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Emergency Plumber Liverpool City Centre. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price on the invoice.</p>
+      <h2>Liverpool City Centre Plumber Rates. Fixed. Same for Commercial.</h2>
+      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -108,7 +167,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="pf-price-sub">9am to 5pm</div>
           <div class="pf-price-amount">£80<small>/hr</small></div>
           <ul class="pf-price-list">
-            <li>30 min Liverpool City Centre response</li>
+            <li>30 min city centre response</li>
             <li>Gas Safe engineer</li>
             <li>1 hour minimum</li>
             <li>Parts at cost</li>
@@ -145,48 +204,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="pf-alert" style="margin-top:1.5rem;">
-        <strong>Independent price benchmark</strong>
-        <p>The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in the Liverpool area ranges from £80 to £180 per hour. Our rates are fixed, transparent and published before you call.</p>
+        <strong>No commercial premium</strong>
+        <p>Bars, restaurants, hotels and offices in Liverpool city centre pay the same rates as residential customers. The <a href="https://www.checkatrade.com/blog/cost-guides/emergency-plumber-cost/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. Our rates are fixed and published before you call.</p>
       </div>
     </div>
   </section>
 
 
   <!-- LOCAL KNOWLEDGE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <span class="pf-section-label">LIVERPOOL CITY CENTRE LOCAL KNOWLEDGE</span>
-      <h2>Emergency Plumbing in Liverpool City Centre. 24/7 Cover for Apartments, Businesses and Period Properties.</h2>
-      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Liverpool city centre covers one of the most diverse built environments in the North West   Georgian townhouses in Rodney Street, Victorian commercial buildings converted to apartments in the Baltic Triangle, modern high-rise residential towers in the waterfront district and listed warehouse conversions along the docks. Each building type presents different plumbing challenges, and an engineer who understands the configuration of converted commercial space is essential for the city centre.
+      <span class="pf-section-label">CITY CENTRE LOCAL KNOWLEDGE</span>
+      <h2>Why City Centre Plumbing Needs a Specialist</h2>
 
-City centre apartments and converted buildings are served by communal water systems, booster pumps and pressure-reducing valves that general residential plumbers may not be familiar with. A fault in a booster pump serving a multi-storey residential conversion can leave all floors without water pressure simultaneously. We have experience with commercial-residential conversion plumbing across L1, L2 and L3, and carry the equipment to diagnose and resolve faults in these systems. We also attend commercial premises   restaurants, bars, hotels and offices   24/7 at the same fixed rates as residential, without a commercial premium. The <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a> requirement applies equally to commercial gas appliances in Liverpool city centre   we provide <a href="/gas-safety-certificate-liverpool" style="color:var(--orange);font-weight:700;">commercial gas safety inspections</a> alongside residential emergencies.</p>
+      <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
+        <p>Liverpool city centre has some of the most varied plumbing in the country. Modern build-to-rent blocks. Converted Georgian townhouses. Victorian warehouses turned into apartments. Hotels in listed buildings. The pipework runs through every building era at once.</p>
+
+        <p>The big modern blocks like ROCO and the Lexington use communal hot water risers. A single fault can affect 20 flats above and below. The Georgian Quarter still has lead in places. The Ropewalks warehouses have plumbing that's been retrofitted three times in 50 years.</p>
+
+        <p>A plumber who only works on suburban houses gets caught out here. We work in the city centre every week. We know which buildings need a concierge call before we can reach the riser. We know which Airbnb blocks have the stopcock behind a locked utility door.</p>
+      </div>
+
+      <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
+        <p>Commercial premises are their own world. A kitchen drain in a Bold Street restaurant blocks fast under heavy use. A bar in Ropewalks loses trade every minute the urinal's out. A hotel can't have a guest room flooded the night before a check-in.</p>
+
+        <p>We attend commercial emergencies at the same rate as residential. £80 an hour weekdays. No callout fee. No commercial premium. We work around trading hours where we can. We provide invoices that work for landlord, tenant or business insurance claims.</p>
       </div>
     </div>
   </section>
 
 
   <!-- COMMON JOBS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Common Emergency Plumbing Jobs in Liverpool City Centre</h2>
-      <p class="pf-sub">The faults we attend most frequently in Liverpool City Centre L1.</p>
+      <h2>Common Emergency Jobs in Liverpool City Centre</h2>
+      <p class="pf-sub">What we attend most often in L1, L2 and L3.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
-        
+
         <div class="job-card">
-          <h3>Apartment and Conversion Booster Pump Failures</h3>
+          <h3>Booster Pump Failures in Apartment Blocks</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>City centre residential conversions in the Baltic Triangle, the waterfront and around the business district are served by booster pumps that maintain water pressure in multi-storey buildings. A booster pump failure affects all floors simultaneously. We carry pump components and can usually restore pressure on the first visit.</p>
+          <p>High-rise residential blocks use booster pumps to push water up. One pump failure means every flat above the ground floor loses pressure at once. We carry common booster pump parts. Most failures we restore on the first visit.</p>
         </div>
         <div class="job-card">
-          <h3>Hospitality and Restaurant Emergency Drain Blockages</h3>
+          <h3>Kitchen Drain Blockages in Restaurants</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Restaurants, bars and kitchens along Bold Street, Castle Street and the wider city centre produce high volumes of cooking fat and food waste that block commercial drain systems rapidly. We attend commercial drain blockages 24/7 at residential rates with no commercial premium.</p>
+          <p>Bold Street, Castle Street, the waterfront restaurants. Cooking fat builds up in commercial drain runs faster than residential. We use high-pressure jetting. We can attend during quiet trading windows where the kitchen allows.</p>
         </div>
         <div class="job-card">
-          <h3>Georgian and Victorian Conversion Leak Tracing</h3>
+          <h3>Airbnb Burst Pipes Between Guests</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Converted properties in the city centre have plumbing that runs through original Victorian or Georgian building fabric. Locating a leak without damaging original features requires non-invasive thermal imaging equipment, which we carry on all city centre call-outs.</p>
+          <p>Cold snap. Empty flat between guests. Pipe freezes and bursts. Host gets the alert and has six hours before check-in. We attend these calls fast and provide a written report ready for the host's insurance claim.</p>
+        </div>
+        <div class="job-card">
+          <h3>Student HMO Boiler Breakdowns</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>Six tenants. One boiler. When it fails everyone's affected at once. We prioritise student HMO emergencies in term time. We also do batch CP12 certificates in the summer turnover period.</p>
+        </div>
+        <div class="job-card">
+          <h3>Communal Soil Stack Blockages</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>A blocked communal soil stack in a converted warehouse apartment means toilets back up across multiple flats below. We diagnose where the blockage is and clear it. We coordinate with the building's managing agent if access is needed to other flats.</p>
+        </div>
+        <div class="job-card">
+          <h3>Hotel Guest Room Leaks</h3>
+          <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
+          <p>A leak in a guest room means lost revenue every hour the room's out of action. We attend hotel emergencies at any time of day or night. Written report and itemised invoice ready for the property insurance claim.</p>
         </div>
       </div>
     </div>
@@ -194,64 +277,68 @@ City centre apartments and converted buildings are served by communal water syst
 
 
   <!-- WHAT TO DO SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>What To Do Now While You Wait for Our Liverpool City Centre Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <h2>While You Wait For Our Engineer</h2>
+      <p class="pf-sub">Four steps to protect the property while we're on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most city centre apartments it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Liverpool City Centre call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find the stopcock</strong><p>For any water leak, the stopcock is your first move. In city centre apartments it's often under the kitchen sink. In converted warehouses it might be in a utility cupboard near the front door. In Georgian properties it's usually in the basement or under the stairs. Turn it clockwise. That stops the water.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>Call the concierge or managing agent</strong><p>If you're in a modern block, the concierge can isolate water to your flat from the riser cupboard. That helps if you can't find your own stopcock. They can also let us in if you're not on site.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>If you smell gas, get out</strong><p>Don't touch switches. Open windows as you leave. Call <a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then us on 0151 558 0334 once the property's safe.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph the damage</strong><p>Take photos and video before you start cleaning. Insurance claims need evidence. We write our own fault report with photos as well, ready for your insurer. We know what the main short-let, hotel and BTR insurers ask for.</p></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- SERVICES SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Liverpool City Centre</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Liverpool City Centre L1. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across L1, L2 and L3. Same fixed rates for commercial. Gas Safe registered.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Liverpool City Centre</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Liverpool City Centre</strong><span>CP12 landlord certificates from £80. Same-day available. Combined boiler service and CP12 from £175. All L1 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Liverpool City Centre</strong><span>Cold radiators or noisy boiler? Power flush from £350 for systems up to 10 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Liverpool City Centre</strong><span>New radiator supply and fit from £200. TRV valve upgrades from £50. Radiator balancing included. All L1 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Liverpool City Centre</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Walk-in shower areas from £800. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool City Centre</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. 10-year manufacturer warranty. Free survey across L1.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service City Centre</strong><span>Annual boiler service from £120. Gas Safe engineer. Certificate same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>CP12 for Landlords and HMOs</strong><span>CP12 landlord certificates from £80. Same-day available. Batch HMO work in July and August. Commercial CP12 also covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repair</strong><span>Electric showers from £200 supply and fit. Thermostatic mixer from £300. Common spec for student HMO bathrooms.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements</strong><span>New radiators from £200 supply and fit. TRV upgrades from £50. Vertical designer radiators for studio apartments where space is tight.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing</strong><span>Cold radiators or noisy boiler? Power flush from £350. Protects new boiler warranties.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal. 10-year warranty. Free survey.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters</strong><span>Design-led bathroom installations from £7,000 supply and fit. Premium spec. Free consultation. Suited to city centre BTR refurbishments.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders</strong><span>Unvented mains pressure cylinders from £900. G3 qualified. Common requirement for larger student HMOs and converted apartments.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
 
 
   <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Why Liverpool City Centre Homeowners Choose Ideal Plumbing</h2>
+      <h2>Why City Centre Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Liverpool City Centre</h3><p>We know Liverpool City Centre and the L1 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Liverpool City Centre is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer we send to your Liverpool City Centre property is our own directly employed Gas Safe registered staff. We never use sub-contractors or agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>£80/hr weekdays, £120 weekends, £150 out of hours. 1 hour minimum. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of City centre apartments, converted warehouses, commercial premises and Georgian townhouses</h3><p>We work in Liverpool City Centre regularly and understand the specific plumbing and heating challenges of city centre apartments, converted warehouses, commercial premises and georgian townhouses. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Liverpool City Centre carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>30 Minute City Centre Response</h3><p>We dispatch from Kirkby. Direct route into the city. Out of hours, when traffic clears, we're often there in 20 to 25 minutes.</p></div>
+        <div class="pf-why-item"><h3>Same Rates for Commercial</h3><p>Bars, restaurants, hotels, offices, salons. No commercial premium. £80 weekdays, £120 weekends, £150 out of hours. Same as residential.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>Every engineer is our own staff. No sub-contractors. No agency workers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-who-yes"><h3>Block and Building Management Experience</h3><p>We know the city centre's BTR blocks, converted warehouses and Georgian conversions. We coordinate with concierges and managing agents on every call.</p></div>
+        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am on Christmas Day. A real person picks up. No voicemail. No menu. Safety advice while your engineer is on the way.</p></div>
+        <div class="pf-why-item"><h3>Insurance-Ready Documentation</h3><p>Every job comes with a written fault report and photos. Ready for host, landlord, business or property insurance. We know what the main insurers need.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-      <h2>Useful Information for Liverpool City Centre Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Liverpool City Centre.</p>
+      <h2>Useful Information for Liverpool City Centre Residents and Businesses</h2>
+      <p class="pf-sub">External resources for plumbing, heating and water emergencies in the city centre.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.liverpooldailybid.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool BID city centre management</a></li><li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.hse.gov.uk/gas/commercial/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE commercial gas safety</a></li>
-          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Liverpool City Centre</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Gas Safe Register</a>. Verify any gas engineer working at your property.</li>
+          <li><a href="https://cadentgas.com/gas-escapes" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Cadent Gas emergency line</a>. Call 0800 111 999 immediately if you smell gas in Liverpool city centre.</li>
+          <li><a href="https://www.unitedutilities.com/help-and-support/emergencies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">United Utilities water emergencies</a>. Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723).</li>
+          <li><a href="https://www.hse.gov.uk/gas/commercial/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE commercial gas safety</a>. Health and Safety Executive guidance for commercial gas appliances. Relevant for bars, restaurants, hotels and offices.</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">HSE gas safety guidance</a>. HSE guidance on domestic gas appliances.</li>
+          <li><a href="https://liverpool.gov.uk/business/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Liverpool City Council business information</a>. Council resources for city centre business owners.</li>
         </ul>
       </div>
     </div>
@@ -259,28 +346,37 @@ City centre apartments and converted buildings are served by communal water syst
 
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Liverpool City Centre. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Liverpool City Centre?</summary><div class="pf-faq-body"><p>Fixed hourly rates: weekdays 9am to 5pm £80/hr, weekends 9am to 1pm £120/hr, out of hours nights and bank holidays £150/hr. All have a 1 hour minimum. Parts charged at cost. Most jobs cost between £80 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Liverpool City Centre?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Liverpool City Centre L1. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All our engineers are Gas Safe registered. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Liverpool City Centre?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Liverpool City Centre fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">COMMERCIAL</span>&nbsp; Do you attend commercial plumbing emergencies in Liverpool city centre?</summary><div class="pf-faq-body"><p>Yes. We attend commercial emergencies across L1, L2 and L3 at exactly the same fixed rates as residential   £80/hr weekdays, £120 weekends, £150 out of hours. No commercial premium, no separate call-out fee. We cover restaurants, bars, offices, hotels, salons and all commercial premises. Call 0151 558 0334 at any time.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Liverpool city centre?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Same fixed rates for commercial. Written quote before work starts.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Liverpool city centre?</summary><div class="pf-faq-body"><p>30 minute response guaranteed across L1, L2 and L3. Out of hours when traffic clears, typical arrival is 20 to 25 minutes from our Kirkby base. A real person answers the phone any time of day or night.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COMMERCIAL</span>&nbsp; Do you cover commercial premises in the city centre?</summary><div class="pf-faq-body"><p>Yes. Bars, restaurants, hotels, offices, salons, gyms, shops. Same fixed rates as residential. £80 weekdays, £120 weekends, £150 out of hours. No commercial premium. No separate call-out fee. We work with kitchen managers, hotel duty managers and bar owners to fix faults fast so trading can continue.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">AIRBNB</span>&nbsp; Do you cover Airbnb and short-let properties?</summary><div class="pf-faq-body"><p>Yes. We work with Airbnb hosts and short-let managers across the city centre. We handle emergencies between guest changeovers and provide written reports for host insurance claims. Same fixed rates. We can usually attend within the 30-minute window even on a turnover day.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">STUDENTS</span>&nbsp; Do you handle student accommodation in the city centre?</summary><div class="pf-faq-body"><p>Yes. We cover student blocks across L1 and L3. Mount Pleasant, Marybone, Bold Street, Renshaw Street. We carry out CP12 gas safety certificates ahead of each academic year in July and August. Multi-room HMOs and shared student houses are familiar work for us.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">BLOCKS</span>&nbsp; Can you coordinate with building management?</summary><div class="pf-faq-body"><p>Yes. Most city centre apartment blocks have a concierge or managing agent. We're used to liaising with building management to access communal risers, isolate floor-level water supplies and turn off booster pumps when needed. Bring us the management contact number if you have it. If you don't, we'll find it.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. All gas work is carried out by our own Gas Safe registered engineers. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide CP12 certificates for residential, HMO and commercial gas work.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GUARANTEE</span>&nbsp; Do you guarantee your work?</summary><div class="pf-faq-body"><p>Yes. Every job carries a 12-month workmanship guarantee. If something we fixed fails because of our work, we come back. No charge.</p></div></details>
       </div>
     </div>
   </section>
 
 
   <!-- COVERAGE AND NEARBY AREAS -->
-  <section class="pf-section" style="background:#f8fafc;">
+  <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber in Liverpool City Centre and Nearby Areas</h2>
-      <p class="pf-sub">We cover Liverpool City Centre L1 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover the city centre and all surrounding postcodes. Click any area for local cover.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/emergency-plumber-liverpool" class="area-pill">Liverpool Hub</a>
-        <a href="/emergency-plumber-toxteth" class="area-pill">Toxteth</a><a href="/emergency-plumber-anfield" class="area-pill">Anfield</a><a href="/emergency-plumber-everton" class="area-pill">Everton</a><a href="/emergency-plumber-wavertree" class="area-pill">Wavertree</a>
+        <a href="/emergency-plumber-toxteth" class="area-pill">Toxteth</a>
+        <a href="/emergency-plumber-anfield" class="area-pill">Anfield</a>
+        <a href="/emergency-plumber-everton" class="area-pill">Everton</a>
+        <a href="/emergency-plumber-wavertree" class="area-pill">Wavertree</a>
+        <a href="/emergency-plumber-aigburth" class="area-pill">Aigburth</a>
+        <a href="/emergency-plumber-bootle" class="area-pill">Bootle</a>
+        <a href="/emergency-plumber-kirkby" class="area-pill">Kirkby</a>
       </div>
     </div>
   </section>
@@ -294,7 +390,7 @@ City centre apartments and converted buildings are served by communal water syst
         Available Now in Liverpool City Centre. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Liverpool City Centre?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed rates from £80. Gas Safe registered. Our own engineers. No sub-contractors. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. £80 fixed. Commercial and residential same rate. Gas Safe registered. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
