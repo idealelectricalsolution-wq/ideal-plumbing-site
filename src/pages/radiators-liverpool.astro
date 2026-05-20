@@ -3,74 +3,88 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Radiator Installation Liverpool | From £200 | Gas Safe"
-  description="Radiator installation Liverpool from £200 supply and fit. Like-for-like replacement from £80 labour. TRV upgrades, relocation and system balancing. Gas Safe registered. All Liverpool postcodes. Call 0151 558 0334."
+  title="Radiator Installation Liverpool | From £200 | All Brands"
+  description="Radiator installation Liverpool from £200 supply and fit. Like-for-like swap from £80 labour. TRV upgrades, relocation, sizing changes, additional rads and repairs. Stelrad, Quinn, Mira, Reina, Hudson Reed and more. Gas Safe. Call 0151 558 0334."
+  canonical="https://liverpoolemergencyplumber.co.uk/radiators-liverpool"
 >
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Plumber"],
+    "@id": "https://liverpoolemergencyplumber.co.uk/#business",
+    "name": "Liverpool Emergency Plumber",
+    "image": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png",
+    "url": "https://liverpoolemergencyplumber.co.uk/radiators-liverpool",
+    "telephone": "+441515580334",
+    "email": "emergencyplumberliverpool@gmail.com",
+    "priceRange": "££",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "29 Park Road",
+      "addressLocality": "Kirkby",
+      "addressRegion": "Merseyside",
+      "postalCode": "L32 2AL",
+      "addressCountry": "GB"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "53.4844", "longitude": "-2.8964" },
+    "areaServed": [
+      { "@type": "City", "name": "Liverpool" },
+      { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "Warrington" },
+      { "@type": "City", "name": "St Helens" },
+      { "@type": "City", "name": "Bootle" },
+      { "@type": "City", "name": "Crosby" },
+      { "@type": "City", "name": "Formby" },
+      { "@type": "City", "name": "Southport" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "3",
+      "bestRating": "5"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "James Alexander" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Great company, came within 30 mins for emergency burst pipe, couldn't praise them enough!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "John Manley" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Fantastic service, less than two hours after phoning up to order a new shower the job was done. The young man who fitted it was a credit to himself. I would highly recommend this company."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Elaine McHugh" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Excellent service."
+      }
+    ]
+  }
+  </script>
 
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Radiator Installation Liverpool",
-    "serviceType": "Radiator Installation and Repair",
-    "description": "Radiator installation, replacement, relocation, TRV upgrades and system balancing across Liverpool and Merseyside. Supply and fit from £200. Labour only from £80. Gas Safe registered engineers.",
+    "alternateName": ["Radiator Installation Service Liverpool", "Radiator Replacement Liverpool", "Radiator Relocation Liverpool", "Add a Radiator Liverpool", "TRV Installation Liverpool"],
+    "serviceType": "Radiator Installation, Replacement, Relocation and Repair",
+    "description": "Radiator installation, replacement, relocation, sizing changes, additional radiators, TRV upgrades and system balancing across Liverpool and Merseyside. Supply and fit from £200. Labour only from £80. Stelrad, Quinn, Myson, Reina, Hudson Reed, Bisque and Carron brands all fitted. Gas Safe registered heating engineers.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
     "areaServed": [
-      { "@type": "City", "name": "Liverpool" },
-      { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "St Helens" },
-      { "@type": "City", "name": "Bootle" },
-      { "@type": "City", "name": "Crosby" },
-      { "@type": "City", "name": "Formby" },
-      { "@type": "City", "name": "Southport" },
-      { "@type": "City", "name": "Maghull" },
-      { "@type": "City", "name": "Kirkby" },
-      { "@type": "City", "name": "Huyton" },
-      { "@type": "City", "name": "Birkenhead" },
-      { "@type": "City", "name": "Wallasey" },
-      { "@type": "City", "name": "Aigburth" },
-      { "@type": "City", "name": "Allerton" },
-      { "@type": "City", "name": "Woolton" },
-      { "@type": "City", "name": "Wavertree" },
-      { "@type": "City", "name": "West Derby" },
-      { "@type": "City", "name": "Anfield" },
-      { "@type": "City", "name": "Garston" },
-      { "@type": "City", "name": "Toxteth" },
-      { "@type": "City", "name": "Childwall" },
-      { "@type": "City", "name": "Norris Green" },
-      { "@type": "City", "name": "Fazakerley" },
-      { "@type": "City", "name": "Aintree" },
-      { "@type": "City", "name": "Waterloo" },
-      { "@type": "City", "name": "Litherland" }
+      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
+      { "@type": "City", "name": "St Helens" }, { "@type": "City", "name": "Bootle" }
     ],
     "offers": [
-      {
-        "@type": "Offer",
-        "name": "Radiator Supply and Fit Liverpool",
-        "description": "Standard double panel radiator supplied and fitted. Includes fittings, TRV and system balance on completion.",
-        "price": "200",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31"
-      },
-      {
-        "@type": "Offer",
-        "name": "Radiator Replacement Labour Liverpool",
-        "description": "Labour-only like-for-like radiator replacement. You supply the radiator, we fit it to existing valves.",
-        "price": "80",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31"
-      },
-      {
-        "@type": "Offer",
-        "name": "TRV Upgrade Liverpool",
-        "description": "Thermostatic radiator valve upgrade. Fitted per valve. Required on new installations under Boiler Plus regulations.",
-        "price": "50",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31"
-      }
+      { "@type": "Offer", "name": "Radiator Supply and Fit Liverpool", "description": "Standard double panel radiator supplied and fitted. Includes fittings, TRV and system balance on completion.", "price": "200", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+      { "@type": "Offer", "name": "Radiator Replacement Labour Liverpool", "description": "Labour-only like-for-like radiator replacement. You supply the radiator, we fit it to existing valves.", "price": "80", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+      { "@type": "Offer", "name": "TRV Upgrade Liverpool", "description": "Thermostatic radiator valve upgrade. Fitted per valve. Required on new installations under Boiler Plus regulations.", "price": "50", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
+      { "@type": "Offer", "name": "Radiator Relocation Liverpool", "description": "Radiator moved to a new wall position. Includes pipework rerouting, refilling and system balance.", "price": "150", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" }
     ]
   }
   </script>
@@ -80,12 +94,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does radiator installation cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A standard double panel radiator supply and fit costs from £200 in Liverpool. This includes the radiator, all fittings, TRV and a system balance on completion. Labour only for a like-for-like replacement starts from £80 if you supply the radiator yourself. Column and designer radiators cost more due to the higher supply cost. We provide a fixed-price quote before any work begins." } },
-      { "@type": "Question", "name": "How long does radiator installation take in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A like-for-like single radiator replacement takes around 1 to 2 hours. A new radiator addition to an existing system takes 2 to 4 hours including pipe connection and system balancing. Multiple radiators can often be completed in a single day. We confirm the expected duration when you book." } },
-      { "@type": "Question", "name": "What is a thermostatic radiator valve (TRV) and do I need one?", "acceptedAnswer": { "@type": "Answer", "text": "A TRV controls the heat output of an individual radiator, allowing different temperatures in different rooms. Under Boiler Plus regulations, TRVs are required on all new radiator installations. They reduce heating bills by 10 to 15% by preventing rooms from overheating. We fit TRVs from £50 per valve." } },
-      { "@type": "Question", "name": "Do I need a power flush before fitting new radiators?", "acceptedAnswer": { "@type": "Answer", "text": "If your existing system has sludge build-up, fitting new radiators to a contaminated circuit will fill them with sludge quickly. If you have cold spots on existing radiators or a noisy boiler, we recommend a power flush before any new radiators are connected. We advise at the time of the quote whether a flush is needed for your specific system." } },
-      { "@type": "Question", "name": "Can you relocate a radiator in a Liverpool Victorian property?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We drain down the circuit, extend or reroute the pipework to the new wall position and rebalance the system. Relocation costs from £150 per radiator depending on the distance and pipework complexity. In Liverpool's Victorian terraces with solid walls, pipework is usually surface-mounted or run under floorboards. We assess this at the quote visit." } },
-      { "@type": "Question", "name": "Are you Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Liverpool Emergency Plumber is Gas Safe registered. All radiator installations connecting to the heating circuit are carried out by our own directly employed Gas Safe registered engineers. We never use sub-contractors. Verify our registration at gassaferegister.co.uk." } }
+      { "@type": "Question", "name": "How much does radiator installation cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A standard double panel rad, supplied and fitted, costs from £200. This covers the rad, the TRV and a system balance on the day. Labour only for a like-for-like swap starts at £80. TRVs from £50 each. Relocation from £150. Column and designer rads are quoted on request. We give a written fixed-price quote first." } },
+      { "@type": "Question", "name": "How long does radiator installation take in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A like-for-like single radiator swap takes 1 to 2 hours. A new radiator addition with pipework takes 2 to 4 hours. Multiple radiators can often be completed in a single day. A full house TRV upgrade typically takes half a day. We confirm the expected duration when we quote." } },
+      { "@type": "Question", "name": "Can you change a radiator to a bigger or smaller size?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We can swap an undersized rad for a bigger one to warm a cold room. Or fit a smaller rad in a room that gets too hot. We work out the BTU output the room needs first. Then we pick a rad that hits that number. A right-sized rad is more energy efficient. You burn less gas for the same warm room." } },
+      { "@type": "Question", "name": "Can you add an additional radiator to my existing Liverpool heating system?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Adding a rad to your existing system takes 2 to 4 hours. We extend the circuit to the new spot and fit the rad with a TRV. We balance the system after. Most extension, loft conversion and conservatory jobs need at least one extra rad." } },
+      { "@type": "Question", "name": "Can you relocate a radiator in a Liverpool Victorian property?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We drain down the circuit, reroute the pipework to the new position and rebalance the system. Relocation starts from £150 depending on distance and pipework. In Liverpool's older homes with solid walls, pipework is usually run under suspended timber floors or surface-mounted in neat boxing." } },
+      { "@type": "Question", "name": "What is a TRV and do I need one?", "acceptedAnswer": { "@type": "Answer", "text": "A thermostatic radiator valve controls the heat output of an individual radiator, allowing different temperatures in different rooms. Under Boiler Plus regulations, TRVs are required on all new radiator installations. They reduce heating bills by 10 to 15%. We fit TRVs from £50 per valve. One radiator in the house should be left without a TRV to act as a bypass." } },
+      { "@type": "Question", "name": "Do I need a power flush before fitting new radiators?", "acceptedAnswer": { "@type": "Answer", "text": "If your existing radiators have cold spots at the bottom or the system water is brown or black when bled, a power flush is strongly recommended before fitting new radiators. A contaminated circuit will fill new radiators with sludge quickly. We assess the system condition at the quote visit and advise honestly on whether a flush is needed." } },
+      { "@type": "Question", "name": "What radiator brands do you fit?", "acceptedAnswer": { "@type": "Answer", "text": "We fit rads from Stelrad, Quinn, Myson, Reina, Hudson Reed, Bisque and Carron. Standard panel rads, designer rads and period-style rads all in the range. We can supply the rad or fit one you have bought. Tell us your budget and style and we will help you pick." } },
+      { "@type": "Question", "name": "Are you Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Liverpool Emergency Plumber is Gas Safe registered. All radiator work connecting to the heating circuit is done by our own directly employed Gas Safe heating engineers. Verify at gassaferegister.co.uk. We never use sub-contractors." } }
     ]
   }
   </script>
@@ -106,10 +123,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;">
         <span class="badge-dot"></span>
-        Liverpool Radiator Installation Specialists
+        Liverpool Radiator Installation
       </div>
       <h1>Radiator Installation Liverpool</h1>
-      <p class="page-hero-sub">Radiator installation Liverpool from £200 supply and fit. Like-for-like replacement from £80 labour. TRV upgrades, relocation, system balancing and repairs. Gas Safe registered engineers across Liverpool and Merseyside.</p>
+      <p class="page-hero-sub">New rads fitted from £200. Like-for-like swap from £80 labour. TRVs and relocation too. Gas Safe heating engineers.</p>
 
       <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
         <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
@@ -130,7 +147,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
         <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Gas Safe Registered</span>
         <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Fixed-Price Quotes</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> All Radiator Types</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> All Brands Fitted</span>
         <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> 12-Month Guarantee</span>
       </div>
     </div>
@@ -138,7 +155,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <div class="pf">
 
-  <!-- MINI REVIEW TRUST BAR -->
+  <!-- TRUST BAR - REAL REVIEWS ONLY -->
   <section style="background:#1a3a5c;padding:1.25rem 0;">
     <div class="container">
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
@@ -156,7 +173,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Radiator Installation Prices Liverpool</h2>
-      <p class="pf-sub">Fixed prices for radiator installation Liverpool wide. No hidden charges. All work includes system balancing on completion. We provide a written quote before any work begins.</p>
+      <p class="pf-sub">Fixed prices for our radiator service. No hidden charges. Every job comes with a system balance on the day. We give you a written quote first.</p>
 
       <div class="pf-pricing-grid">
 
@@ -167,7 +184,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="pf-price-sub">Radiator, fittings and TRV included</div>
           <div class="pf-price-amount">£200</div>
           <ul class="pf-price-list">
-            <li>Standard double panel radiator supplied</li>
+            <li>Standard double panel rad supplied</li>
             <li>All fittings and pipe connections included</li>
             <li>TRV thermostatic valve fitted</li>
             <li>System drained, fitted and refilled</li>
@@ -181,15 +198,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-price-card">
           <div class="pf-price-tier">LABOUR ONLY</div>
           <div class="pf-price-name">Like-for-Like Replacement</div>
-          <div class="pf-price-sub">You supply the radiator, we fit it</div>
+          <div class="pf-price-sub">You supply the rad, we fit it</div>
           <div class="pf-price-amount">£80</div>
           <ul class="pf-price-list">
-            <li>Old radiator removed and disposed</li>
-            <li>New radiator connected to existing valves</li>
-            <li>System balanced on completion</li>
+            <li>Old rad removed and taken away</li>
+            <li>New rad connected to existing valves</li>
+            <li>System balanced on the day</li>
             <li>Inhibitor checked and topped up</li>
             <li>Same wall position, no new pipework</li>
-            <li>Completed in 1 to 2 hours</li>
+            <li>Done in 1 to 2 hours</li>
           </ul>
           <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Get a Quote</a>
         </div>
@@ -197,15 +214,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-price-card">
           <div class="pf-price-tier">ADDITIONAL SERVICES</div>
           <div class="pf-price-name">Upgrades and Repairs</div>
-          <div class="pf-price-sub">TRVs, relocation, balancing, repairs</div>
+          <div class="pf-price-sub">TRVs, relocation, sizing, balancing, repairs</div>
           <div class="pf-price-amount" style="font-size:1.8rem;line-height:1.2;">From £50</div>
           <ul class="pf-price-list">
             <li>TRV valve upgrade from £50 per valve</li>
             <li>Radiator relocation from £150</li>
+            <li>Sizing change (bigger or smaller) from £150</li>
+            <li>Adding a new rad from £200</li>
             <li>Full system balance from £100</li>
-            <li>Radiator repair or diagnostic from £80</li>
-            <li>Radiator bleed and pressure check from £50</li>
-            <li>Column and designer radiators available</li>
+            <li>Radiator repair or check from £80</li>
+            <li>Column and designer rads available</li>
           </ul>
           <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Get a Quote</a>
         </div>
@@ -214,7 +232,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="pf-alert" style="margin-top:2rem;">
         <strong>Column, designer and period-style radiators available</strong>
-        <p>We supply and fit a full range of radiator styles including standard single and double panel, column radiators, designer flat panel and period-style cast iron effect radiators. Column and designer radiators cost more to supply but are priced on quotation. Call us and we will advise on the best radiator for your room and budget.</p>
+        <p>We supply and fit a full range of radiator styles. Standard single and double panel. Column rads. Designer flat panel. Period-style cast iron effect. Column and designer rads cost more to supply but are priced on quote. Call us and we will help you pick the right rad for your room and budget.</p>
       </div>
     </div>
   </section>
@@ -223,15 +241,123 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Types of Radiator We Supply and Fit in Liverpool</h2>
-      <p class="pf-sub">We supply and fit every type of radiator found in Liverpool homes, from standard panel radiators to period column styles.</p>
+      <p class="pf-sub">We supply and fit every type of radiator found in Liverpool homes. Panel rads. Column rads. Designer rads. Towel rails. Low surface temp rads. All in one firm.</p>
 
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Standard panel radiators</strong><p>Single and double panel radiators are the most common type found across Liverpool. Double convector (type 22) radiators deliver the highest heat output for their size and are our standard recommendation for most Liverpool rooms. Available in all standard lengths and heights.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Column radiators</strong><p>Traditional column radiators are popular in Liverpool's Victorian and Edwardian properties where period aesthetics matter. We supply steel column radiators in two, three and four column configurations, available in heights from 600mm to 1800mm. Correct sizing is critical. We calculate the output needed for the room before recommending a model.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Designer and flat panel radiators</strong><p>Vertical designer radiators are a good solution for rooms where horizontal wall space is limited. We fit designer radiators in all standard sizes and advise on output requirements before supply. Note that designer radiators with low surface area can underperform in larger Liverpool rooms if not correctly sized.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bathroom and towel radiators</strong><p>Heated towel rails and bathroom radiators are available in chrome, white and anthracite finishes. We can connect these to your central heating circuit or install a dual fuel version that works independently from the main heating system. Useful in Liverpool properties where the bathroom is not always heated with the rest of the house.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Underfloor heating coexistence</strong><p>If your Liverpool property has underfloor heating in some rooms and radiators in others, we can extend the radiator circuit into rooms the underfloor system does not reach. This is common in Liverpool extensions and kitchen renovations where underfloor was fitted but the rest of the house uses radiators.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Low surface temperature radiators</strong><p>Low surface temperature (LST) radiators are required in care settings and recommended in rooms used by young children or vulnerable adults. The radiator surface stays below 43 degrees regardless of the water temperature. We supply and fit LST radiators to any Liverpool property where they are required.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Standard panel radiators</strong><p>Single and double panel rads are the most common type across Liverpool. Double convector (type 22) rads give the most heat for their size. We fit these in most Liverpool rooms. They come in all standard lengths and heights.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Column radiators</strong><p>Column rads suit Liverpool's older homes well. They look right with the period style. We fit steel column rads in two, three and four-column versions. Heights run from 600mm to 1800mm. The right size matters. We work out the heat output the room needs before we suggest a model.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Designer and flat panel radiators</strong><p>Vertical designer rads are good for rooms where wall space is tight. We fit designer rads in all standard sizes. We advise on output before we order. Some designer rads with low surface area can under-perform in big Liverpool rooms if not sized right.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bathroom and towel radiators</strong><p>Heated towel rails and bathroom rads come in chrome, white and anthracite. We can wire them to your central heating circuit. Or fit a dual-fuel version that works on its own. Handy for Liverpool homes where the bathroom is not always on with the rest.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Underfloor heating coexistence</strong><p>Got underfloor in some rooms and rads in others? We can run the rad circuit into rooms the underfloor system does not reach. Common in Liverpool extensions and new kitchens.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Low surface temperature radiators</strong><p>Low surface temp (LST) rads are a must in care homes. They are smart for rooms with young kids or older adults too. The rad surface stays below 43 degrees no matter the water temp. We fit LST rads in any Liverpool home where they are needed.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: RADIATOR BRAND TIERS -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">RADIATOR BRAND GUIDE</span>
+      <h2>Radiator Brands We Fit. Standard, Designer and Period.</h2>
+      <p class="pf-sub">We fit rads from every major UK brand. Pick the right one for your budget and your style.</p>
+
+      <div style="margin-top:2rem;">
+        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Standard Panel: Stelrad, Quinn and Myson</h3>
+        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Standard panel rads from Stelrad, Quinn and Myson. Stelrad is the UK's most-fitted rad brand. Their Elite range is the standard pick in most Liverpool homes. Quinn rads have a low water content which means faster heat-up times. Myson rads are made by the Finnish Purmo group. All three have good UK spare parts.</p>
+        <div class="pf-who-grid" style="margin-top:1rem;">
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Stelrad</strong><p>UK heritage brand, founded 1936. The Elite range is the most-fitted panel rad in the UK. Good value, strong build, easy parts.</p></div></div>
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Quinn (formerly Barlo)</strong><p>Low water content means faster heat-up. Lower gas use overall. A good pick for energy efficient homes.</p></div></div>
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Myson / Purmo</strong><p>Made by the Finnish Purmo group. Strong on warranty. The Myson T6 is a popular pick.</p></div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Designer: Reina, Hudson Reed and Bisque</h3>
+        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Designer rads from Reina, Hudson Reed and Bisque. Reina is the UK leader for towel rails and designer rads. Hudson Reed comes with a 10-year warranty on all rads. Bisque does high-end designer pieces. Vertical rads are good for rooms where horizontal wall space is tight.</p>
+        <div class="pf-who-grid" style="margin-top:1rem;">
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Reina Design</strong><p>UK leader in designer rads and towel rails. Modern, sleek styles. The Casina and Diva ranges are popular picks.</p></div></div>
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Hudson Reed</strong><p>Diverse range with a 10-year warranty on every rad. Good mid to high-end pick.</p></div></div>
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bisque</strong><p>High-end UK designer brand. Premium pricing. Best for main rooms in higher-end Liverpool homes.</p></div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Period and Cast Iron Effect: Carron and Stelrad Column</h3>
+        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Period and cast iron effect rads from Carron and the Stelrad Column range. These suit Liverpool's Victorian and Edwardian homes well. They give the same heat output as a panel rad but look right with the period style. Best for living rooms, hallways and main bedrooms in older homes.</p>
+        <div class="pf-who-grid" style="margin-top:1rem;">
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Carron</strong><p>Cast iron-style rads with the look of original Victorian rads. Modern build, period style. Sit well with old fireplaces and coving.</p></div></div>
+          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Stelrad Column range</strong><p>Steel column rads in two, three and four-column versions. Up to 1800mm tall for rooms with high ceilings.</p></div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--navy);border-radius:10px;padding:1.5rem;text-align:center;margin-top:2.5rem;">
+        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Not sure which brand fits your home and budget? Please call us for a free quote today.</p>
+        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: ADDITIONAL RADIATORS -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <span class="pf-section-label">ADDITIONAL RADIATORS</span>
+      <h2>Adding a New Radiator to Your Liverpool System</h2>
+      <p class="pf-sub">Need to add a new rad to your existing system? We do this every week across Liverpool. Most extensions and loft conversions need at least one extra rad.</p>
+
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Common reasons to add a radiator</strong><p>Common reasons to add a rad: a new extension. A loft conversion. A garage conversion. A conservatory. A cold corner of a big room. Or a room with no rad that should have one. We extend the circuit to the new spot and connect a new rad with a TRV.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>What is included in the job</strong><p>Adding one rad takes 2 to 4 hours. We drain the system, run new pipework to the new spot, fit the rad with a TRV and refill. We balance the whole system after. The job is done in one visit with minimal disruption to your home.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Power flush check first</strong><p>If your existing system is clogged, we suggest a power flush first. Without it, the new rad fills up with sludge fast. We check the system at the quote visit and tell you if a flush is needed. A flush plus a new rad in one visit is a better combined price.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Cost from £200 supply and fit</strong><p>A new rad added to your existing system costs from £200 supply and fit. This covers the rad, the TRV, all new pipework to the new spot and the system balance on the day. Multiple new rads can be done in a single visit at a better combined price.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: RADIATOR SIZING -->
+  <section class="pf-section" style="background:#f8fafc;">
+    <div class="container">
+      <span class="pf-section-label">RADIATOR SIZING</span>
+      <h2>Increasing or Decreasing Radiator Size in Liverpool</h2>
+      <p class="pf-sub">Got a room that never warms up? Or one that runs too hot? The rad is often the wrong size for the room. We can swap it for the right one.</p>
+
+      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
+
+        <div class="pf-card pf-card-left-orange">
+          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Undersized Radiator: Room Will Not Warm Up</strong>
+          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">If your rad is too small for the room, the heat output is too low. The room never gets warm even when the boiler is at full tilt. A bigger rad or a double panel swap fixes this. We work out the BTU output the room needs first. Then we pick a rad that hits that number.</p>
+        </div>
+
+        <div class="pf-card pf-card-left-red">
+          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Oversized Radiator: Room Runs Too Hot</strong>
+          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">If your rad is too big for the room, the room gets too hot too fast. The boiler short-cycles and gas use goes up. A smaller rad or a TRV fitted on the current one keeps things in check. A right-sized rad is more energy efficient. You burn less gas for the same warm room.</p>
+        </div>
+
+        <div class="pf-card pf-card-left-orange">
+          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Why We See Wrong-Sized Radiators in Liverpool Homes</strong>
+          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Common reasons we get called for sizing changes: a new room layout. A new extension. A loft conversion. Or just a rad that was wrong from day one. We size each rad based on room size, wall type, window size and floor type. We give you the right output, every time.</p>
+        </div>
+
+      </div>
+
+      <div class="pf-alert" style="margin-top:2rem;">
+        <strong>How rad sizing works</strong>
+        <p>Every room needs a set BTU output to stay warm. The number depends on the room size, the insulation level, the number of windows and what is above and below the room. A rad with too low an output will leave the room cold. A rad with too high an output wastes gas. We work out the correct BTU at the quote visit and pick a rad that hits the number. Sizing changes start at £150 per rad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: RADIATOR RELOCATION -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <span class="pf-section-label">RADIATOR RELOCATION</span>
+      <h2>Radiator Relocation in Liverpool</h2>
+      <p class="pf-sub">Moving a rad to a new wall? We do this for kitchen redesigns, new built-in furniture, decorating jobs and full room layout changes.</p>
+
+      <div class="pf-who-grid" style="margin-top:2rem;">
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>What the job involves</strong><p>We drain the circuit, take the rad off the old wall, reroute the pipework to the new spot, fit the rad and refill. Then we balance the system. Most relocations take 3 to 4 hours and we do them with minimal disruption to the room.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Victorian and Edwardian Liverpool homes</strong><p>In Liverpool's older homes with solid walls, pipes run under suspended timber floors where we can get under. Or in neat boxing on the surface. We plan the route to keep things tidy and to save period features. Relocation starts at £150 per rad.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Will the new spot work?</strong><p>Where can a rad go? It needs to be near the circuit. It needs wall space. It needs to be sized for the room. We assess all of this at the free quote visit. If your chosen spot will not work, we say so and suggest the next best option.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Common reasons for relocation</strong><p>Kitchen redesigns where the rad needs to move for new units. New built-in furniture that blocks the old rad spot. Full room layout changes after decorating. Or a rad in the wrong place from a previous fit. All can be moved.</p></div></div>
       </div>
     </div>
   </section>
@@ -240,19 +366,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Signs Your Liverpool Radiators Need Attention</h2>
-      <p class="pf-sub">These are the most common radiator problems we attend across Liverpool. Most are straightforward to diagnose and resolve.</p>
+      <p class="pf-sub">These are the most common rad problems we attend across Liverpool. Most are quick to diagnose and fix.</p>
 
       <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>Cold at the bottom, warm at the top</strong><p>Sludge and magnetite build-up settles at the bottom of the radiator and blocks heat circulation. Bleeding will not resolve this. A power flush is the correct treatment. If multiple radiators in your Liverpool home have cold bottoms, the whole system needs flushing.</p></div></div>
-        <div class="pf-sign"><div><strong>Cold at the top, warm at the bottom</strong><p>Air in the system rises to the top of the radiator and displaces water. Bleeding with a radiator key resolves this. If the radiator repeatedly needs bleeding, there is air entering the system which needs investigation, usually a failing pump seal or a small leak in the circuit.</p></div></div>
-        <div class="pf-sign"><div><strong>Radiator completely cold</strong><p>A fully cold radiator on an otherwise working system usually indicates a stuck thermostatic valve or a blockage in the radiator itself. We can diagnose this on a visit and often resolve it on the same call without replacing the radiator.</p></div></div>
-        <div class="pf-sign"><div><strong>Radiator leaking at valve or connection</strong><p>A small drip from a valve or pipe connection can usually be stopped by tightening the gland nut or replacing the valve insert. Left unattended, a leaking radiator can cause significant water damage to flooring and ceilings in Liverpool's multi-floor properties.</p></div></div>
-        <div class="pf-sign"><div><strong>Radiator making noise</strong><p>Ticking when the heating comes on is normal thermal expansion. Persistent banging, gurgling or whistling indicates air in the system, sludge circulation or pump problems. We diagnose the cause before recommending any work.</p></div></div>
-        <div class="pf-sign"><div><strong>Radiator visibly corroded or damaged</strong><p>Surface rust on an older radiator accelerates internal corrosion. A radiator with visible through-corrosion or physical damage should be replaced rather than repaired. A corroding radiator also releases iron oxide into the system, accelerating sludge build-up throughout the circuit.</p></div></div>
+        <div class="pf-sign"><div><strong>Cold at the bottom, warm at the top</strong><p>Sludge and magnetite settle at the bottom of the rad and block the heat. Bleeding will not fix it. A power flush is the right step. If more than one rad in your Liverpool home has a cold bottom, the whole system needs a flush.</p></div></div>
+        <div class="pf-sign"><div><strong>Cold at the top, warm at the bottom</strong><p>Air in the system rises to the top of the rad and pushes water down. Bleeding with a rad key fixes this. If the rad keeps needing a bleed, air is getting in. The cause is often a worn pump seal or a small leak in the circuit. Worth a check.</p></div></div>
+        <div class="pf-sign"><div><strong>Radiator completely cold</strong><p>A fully cold rad on a working system often means a stuck TRV. Or a block in the rad itself. We can find this on a visit and often fix it on the same call. No need to swap the whole rad in most cases.</p></div></div>
+        <div class="pf-sign"><div><strong>Radiator leaking at valve or connection</strong><p>A small drip from a valve or pipe can often be fixed by tightening the gland nut. Or swapping the valve insert. If left, a leaking rad can damage the floor and ceiling below. Worse in Liverpool's multi-floor homes.</p></div></div>
+        <div class="pf-sign"><div><strong>Radiator making noise</strong><p>A tick when the heating comes on is normal. The rad is expanding. A bang, gurgle or whistle that keeps going means air in the system. Or sludge moving around. Or pump trouble. We find the cause before we suggest any work.</p></div></div>
+        <div class="pf-sign"><div><strong>Radiator visibly corroded or damaged</strong><p>Surface rust on an old rad speeds up rust inside. A rad with rust through the panel or any physical damage needs a swap, not a fix. A rusting rad also sheds iron oxide into the system, which builds up sludge across the whole circuit.</p></div></div>
       </div>
 
       <div style="background:#f97316;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Not sure what is wrong with your radiator? Call us and we can usually diagnose it over the phone before booking a visit.</p>
+        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Not sure what is wrong with your rad? Call us and we can usually work it out over the phone before booking a visit.</p>
         <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
       </div>
     </div>
@@ -262,23 +388,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Thermostatic Radiator Valves for Liverpool Homes</h2>
-      <p class="pf-sub">A TRV on every radiator is one of the most cost-effective heating improvements available for a Liverpool home. Required on all new installations under Boiler Plus regulations.</p>
+      <p class="pf-sub">A TRV on every rad is one of the most cost-effective heating upgrades you can do in a Liverpool home. The Boiler Plus rules need TRVs on all new installs.</p>
 
       <div style="margin-top:2rem;">
         <div class="pf-pros">
           <h3 style="text-align:center;">Why Every Liverpool Radiator Should Have a TRV</h3>
           <ul class="pf-check-list">
-            <li>Controls heat output room by room. The sitting room runs warmer, the spare bedroom cooler. No heat wasted in rooms that do not need it</li>
-            <li>Reduces heating bills by 10 to 15%. The <a href="https://energysavingtrust.org.uk/advice/thermostats-and-heating-controls/" target="_blank" rel="noopener">Energy Saving Trust</a> estimates TRVs in a typical Liverpool semi can save up to £75 per year on heating bills</li>
-            <li>Required under Boiler Plus regulations on all new radiator installations from 2018</li>
-            <li>Prevents overheating in rooms with solar gain. South-facing Liverpool living rooms stay comfortable without wasting gas</li>
-            <li>Compatible with all modern boilers and smart thermostat systems</li>
-            <li>Fitted from £50 per valve. A full house of TRV upgrades typically costs £150 to £300 and pays for itself within two heating seasons</li>
+            <li>Sets the heat per room. The lounge runs warmer. The spare bedroom cooler. No heat wasted in rooms you do not use</li>
+            <li>Cuts heating bills by 10 to 15%. The <a href="https://energysavingtrust.org.uk/advice/thermostats-and-heating-controls/" target="_blank" rel="noopener">Energy Saving Trust</a> says TRVs in a Liverpool semi can save up to £75 a year</li>
+            <li>A must under Boiler Plus rules on all new rad fits since 2018</li>
+            <li>Stops south-facing Liverpool lounges from getting too hot in the sun</li>
+            <li>Works with all modern boilers and smart thermostats</li>
+            <li>Fitted from £50 per valve. A full house of TRV upgrades runs £150 to £300 and pays back in two winters</li>
           </ul>
         </div>
 
         <div class="pf-info-bar" style="margin-top:2rem;">
-          <p style="font-size:0.88rem;color:var(--text);">Note: one radiator in the house (usually the hallway) should be left without a TRV to act as a bypass. This allows the boiler to circulate water even when all other TRVs are closed. We always advise on this when fitting TRVs across a full property.</p>
+          <p style="font-size:0.88rem;color:var(--text);">Note: one rad in the house (usually the hallway) should be left without a TRV to act as a bypass. This lets the boiler move water even when all other TRVs are shut. We always tell you about this when we fit TRVs across a full house.</p>
         </div>
       </div>
     </div>
@@ -287,19 +413,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- VICTORIAN PROPERTIES -->
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
-      <h2>Radiator Installation in Liverpool's Victorian Properties</h2>
-      <p class="pf-sub">Liverpool's Victorian and Edwardian housing stock presents specific challenges for radiator installation. Our engineers are experienced with every type of Liverpool property.</p>
+      <h2>Radiator Installation in Liverpool's Victorian Homes</h2>
+      <p class="pf-sub">Liverpool's older homes have their own quirks. Our heating engineers know each type well.</p>
 
       <div class="pf-card pf-card-navy" style="margin-top:2rem;">
         <h3>Solid Walls, Suspended Floors and Period Features</h3>
-        <p>Victorian terraces in Aigburth, Allerton, Anfield, Toxteth, Wavertree and across the city have solid brick walls rather than cavity walls. Horizontal pipe runs across solid walls must be either surface-mounted in boxing or run under suspended timber floors where access allows. Both approaches are workable. We assess each room at the quote visit and advise on the neatest route for your specific property.</p>
-        <p>Suspended timber floors in Liverpool's Victorian properties usually allow pipes to be run below without disturbing floor coverings in the rooms above. Where floors are solid concrete, surface-mounted pipework in neat boxing is the standard approach. We plan every pipe route to minimise visual impact on period features including coving, picture rails and original skirting boards.</p>
+        <p>Liverpool's older homes have solid brick walls. No cavity. Horizontal pipe runs across solid walls go in boxing on the surface. Or under suspended timber floors where we can get under. Both work fine. We check each room at the quote visit and pick the neatest route.</p>
+        <p>Suspended timber floors let us run pipes below without lifting carpet. Where floors are solid, we use neat boxing on the wall. We plan every route to keep period features safe. Coving and old skirting all left as they were.</p>
       </div>
 
       <div class="pf-card pf-card-orange" style="margin-top:2rem;">
-        <h3>Choosing the Right Radiator Style for a Period Liverpool Property</h3>
-        <p>Standard double panel radiators work perfectly well in period properties and deliver more heat for their price than column alternatives. If aesthetics are important, column radiators in traditional two or four column configurations complement Victorian interiors well and are available in heights up to 1800mm for rooms with high ceilings.</p>
-        <p>For Liverpool properties with large bay window alcoves, a radiator positioned in the bay is the most effective way to counteract cold air from the window. We size bay radiators correctly for the room rather than fitting whatever fits the alcove. Undersized bay radiators are one of the most common causes of cold front rooms in Liverpool Victorian terraces.</p>
+        <h3>Choosing the Right Radiator Style for a Period Liverpool Home</h3>
+        <p>Standard double panel rads work fine in older homes and give more heat for the price than column ones. If the look matters, column rads in two or four-column versions suit Victorian rooms well. They come in heights up to 1800mm for rooms with high ceilings.</p>
+        <p>For Liverpool homes with big bay windows, a rad in the bay is the best way to fight cold air from the glass. We size the bay rad for the actual room, never just for what fits in the alcove. An undersized bay rad is one of the most common causes of cold front rooms in Liverpool Victorian terraces.</p>
       </div>
     </div>
   </section>
@@ -308,12 +434,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Should You Power Flush Before Fitting New Radiators?</h2>
-      <p class="pf-sub">If your existing system has sludge build-up, fitting new radiators to a contaminated circuit will fill them quickly. Here is how to know if you need a flush first.</p>
+      <p class="pf-sub">If your existing system has sludge build-up, fitting new rads to a clogged circuit will fill them fast. Here is how to know if you need a flush first.</p>
 
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>You need a power flush first if...</strong><p>Multiple existing radiators have cold spots at the bottom. The water that comes out when you bleed radiators is brown or black. Your boiler makes banging or kettling sounds. The system takes a long time to warm up. Any of these indicate sludge in the circuit that will contaminate new radiators immediately.</p></div></div>
-        <div class="pf-who-item" style="border-left:3px solid var(--green);"><span class="pf-who-icon" style="color:var(--green);">✓</span><div><strong>You do not need a flush if...</strong><p>Your existing radiators all heat evenly, the system warms up quickly, and the water from bleeding is clear. In this case new radiators can be connected directly to the circuit with a top-up of inhibitor on completion.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>We advise at the quote visit</strong><p>We assess the condition of your system when we visit to quote for the radiator work. If a power flush is recommended, we will tell you and explain why. We never recommend work that is not necessary. A power flush costs from £350 and can be combined with radiator work at a better overall price.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>You need a power flush first if...</strong><p>More than one of your existing rads has a cold spot at the bottom. The water from bleeding is brown or black. Your boiler bangs or kettles. The system takes ages to warm up. Any of these means sludge in the circuit that will fill new rads fast.</p></div></div>
+        <div class="pf-who-item" style="border-left:3px solid var(--green);"><span class="pf-who-icon" style="color:var(--green);">✓</span><div><strong>You do not need a flush if...</strong><p>Your existing rads all heat well. The system warms up fast. The water from bleeding is clear. In this case new rads can join the circuit straight away. We top up the inhibitor on the day.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>We advise at the quote visit</strong><p>We check the state of your system at the quote visit. If a power flush is needed, we say so and tell you why. We never push work you do not need. A power flush costs from £350 and can join your rad job at a better combined price.</p></div></div>
       </div>
 
       <div style="text-align:center;margin-top:2rem;">
@@ -326,17 +452,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Why Liverpool Homeowners Choose Us for Radiator Installation</h2>
-      <p class="pf-sub">Fixed prices. Our own Gas Safe engineers. System balanced on completion. All Liverpool postcodes covered.</p>
+      <p class="pf-sub">Fixed prices. Our own Gas Safe heating engineers. System balanced on the day. All Liverpool postcodes covered.</p>
       <div class="pf-why-grid">
-        <div class="pf-why-item"><h3>Fixed Price Before We Start</h3><p>We quote the job before any work begins. The price we quote is the price on the invoice. No additions on the day, no surprises after the work is done.</p></div>
-        <div class="pf-why-item"><h3>System Balanced on Completion</h3><p>Every radiator installation includes a system balance on completion. This is often skipped by cheaper operators. Without balancing, newly fitted radiators can starve other radiators of heat and cause uneven temperatures throughout the house.</p></div>
-        <div class="pf-why-item"><h3>Our Own Gas Safe Engineers</h3><p>All radiator work connecting to the heating circuit is carried out by our own directly employed Gas Safe registered engineers. Never a sub-contractor.</p></div>
-        <div class="pf-why-item"><h3>Liverpool Property Specialists</h3><p>Victorian terraces, converted flats, 1960s semis, modern apartments. We have fitted radiators in every type of Liverpool property and understand the specific pipe routing challenges each one presents.</p></div>
-        <div class="pf-why-item"><h3>Inhibitor Included on Every Job</h3><p>Every radiator installation includes an inhibitor top-up on completion. Inhibitor protects your radiators and boiler from internal corrosion. Most single-trade handymen skip this step entirely.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered</h3><p>Gas Safe registered and verifiable at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. Public liability insurance in place. 12-month workmanship guarantee on all work.</p></div>
+        <div class="pf-why-item"><h3>Fixed Price Before We Start</h3><p>We quote the job before any work starts. The price we quote is the price on the invoice. No add-ons on the day. No shocks after.</p></div>
+        <div class="pf-why-item"><h3>System Balanced on Completion</h3><p>Every rad fit comes with a system balance on the day. Cheaper firms often skip this. Without a balance, new rads can starve other rads of heat. The result is uneven warmth across the home.</p></div>
+        <div class="pf-why-item"><h3>Our Own Gas Safe Heating Engineers</h3><p>All rad work that joins the heating circuit is done by our own employed Gas Safe heating engineers. Never a sub.</p></div>
+        <div class="pf-why-item"><h3>Every Type of Liverpool Property</h3><p>Victorian terraces. Split-up flats. 1960s semis. Modern flats. We have fitted rads in every type of Liverpool home. We know the pipe routing each one needs.</p></div>
+        <div class="pf-why-item"><h3>Inhibitor Included on Every Job</h3><p>Every rad fit comes with an inhibitor top-up on the day. Inhibitor stops rust inside your rads and boiler. Most one-trade handymen skip this step.</p></div>
+        <div class="pf-why-item"><h3>Gas Safe Registered and Insured</h3><p>We are on the <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe register</a>. You can check us there. We carry insurance. Every job has a one-year guarantee.</p></div>
       </div>
       <div style="background:var(--navy);border-radius:10px;padding:2rem;text-align:center;margin-top:2rem;">
-        <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;margin-bottom:1.25rem;">Fixed price. System balanced. Gas Safe registered. Liverpool property specialists. 5.0 average on Google.</p>
+        <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;margin-bottom:1.25rem;">Fixed price. System balanced. Gas Safe registered. Every type of Liverpool home. 5.0 average on Google.</p>
         <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
           <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
           <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Get a Fixed-Price Quote</a>
@@ -345,12 +471,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- REVIEWS -->
+  <!-- REVIEWS - REAL 3 ONLY -->
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <div style="text-align:center;margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Liverpool Customers Say</h2>
-        <p class="pf-sub" style="margin:0 0 0.75rem;">Real Google reviews from Liverpool customers</p>
+        <h2 style="margin-bottom:0.1rem;">What Our Customers Say</h2>
+        <p class="pf-sub" style="margin:0 0 0.75rem;">Real Google reviews from Liverpool Emergency Plumber customers</p>
         <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
         <div style="color:#f59e0b;font-size:1rem;">★★★★★</div>
         <div style="font-size:0.75rem;color:var(--muted);">Google · 3 reviews</div>
@@ -368,7 +494,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section style="background:var(--navy);padding:2rem 0;">
     <div class="container" style="text-align:center;">
       <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Need a radiator fitted or repaired in Liverpool?</h3>
-      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Fixed-price quote before we start. System balanced on completion. Gas Safe registered engineers across all Liverpool postcodes.</p>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Fixed-price quote first. System balanced on the day. Gas Safe heating engineers across all Liverpool postcodes.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Get a Quote Online</a>
@@ -377,15 +503,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="pf-section" style="background:#f1f5f9;">
+  <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>How Our Liverpool Radiator Installation Works</h2>
-      <p class="pf-sub">From quote to a fully working radiator. Here is exactly what to expect.</p>
+      <p class="pf-sub">The full flow, quote through to a working rad. Here is what to expect.</p>
       <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Call or book online for a quote</strong><p>Call 0151 558 0334 or book via our contact page. For straightforward like-for-like replacements we can often quote over the phone. For new additions or column radiators we visit the property to assess the pipe route and confirm the correct radiator size for the room.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Written fixed-price quote provided</strong><p>You receive a written fixed-price quote before any work begins. This covers all labour, fittings, the TRV and the system balance on completion. No additions on the day.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>System drained and radiator fitted</strong><p>We drain the relevant section of the circuit, fit the new radiator with a TRV and reconnect the system. For new additions we route the pipe to the new position and connect to the existing circuit. We protect floors and surfaces throughout and clean up fully on completion.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Inhibitor topped up and system balanced</strong><p>The inhibitor concentration is checked and topped up before refilling. Once the system is back on, every radiator is balanced to deliver the correct heat output. This step is critical for even heating throughout the property and is included on every job we do.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Call or book online for a quote</strong><p>Call 0151 558 0334 or book via our contact page. For a like-for-like swap, we can often quote over the phone. For new additions or column rads we visit the home to check the pipe route and size the rad for the room.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Written fixed-price quote</strong><p>You get a written fixed-price quote before any work starts. It covers all labour, the fittings, the TRV and the system balance on the day. No add-ons on the day.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>System drained and rad fitted</strong><p>We drain the relevant section of the circuit. We fit the new rad with a TRV. We reconnect the system. For new adds, we route the pipe to the new spot and connect to the existing circuit. We protect floors and surfaces and work with minimal disruption to your day. We clean up before we leave.</p></div></div>
+        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Inhibitor topped up and system balanced</strong><p>The inhibitor strength is checked and topped up before refilling. Once the system is back on, every rad is balanced for the right heat output. This step is key for even heating across the home. It comes with every job we do.</p></div></div>
       </div>
     </div>
   </section>
@@ -402,14 +528,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Radiator Installation Liverpool. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what Liverpool homeowners ask most before booking.</p>
+      <p class="pf-sub">Straight answers to what Liverpool homeowners ask most before they book.</p>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does radiator installation cost in Liverpool?</summary><div class="pf-faq-body"><p>A standard double panel radiator supply and fit costs from £200, including the radiator, TRV and system balance. Labour only for a like-for-like replacement starts from £80. TRV upgrades from £50 per valve. Radiator relocation from £150. Column and designer radiators are priced on quotation. We provide a written fixed-price quote before any work begins.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TIME</span>&nbsp; How long does radiator installation take?</summary><div class="pf-faq-body"><p>A like-for-like single radiator replacement takes 1 to 2 hours. A new radiator addition including new pipework takes 2 to 4 hours. Multiple radiators can often be completed in a single day. A full house TRV upgrade typically takes half a day. We confirm the expected duration when we provide the quote.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">TRV</span>&nbsp; What is a TRV and do I need one?</summary><div class="pf-faq-body"><p>A thermostatic radiator valve controls the heat output of an individual radiator, allowing different temperatures in different rooms. Under Boiler Plus regulations, TRVs are required on all new radiator installations. They reduce heating bills by 10 to 15%. We fit TRVs from £50 per valve. One radiator in the house should be left without a TRV to act as a bypass. We always advise on this.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">FLUSH</span>&nbsp; Do I need a power flush before fitting new radiators?</summary><div class="pf-faq-body"><p>If your existing radiators have cold spots at the bottom or the system water is brown or black when bled, a power flush is strongly recommended before fitting new radiators. A contaminated circuit will fill new radiators with sludge quickly. We assess the system condition at the quote visit and advise honestly on whether a flush is needed.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">VICTORIAN</span>&nbsp; Can you relocate a radiator in a Liverpool Victorian property?</summary><div class="pf-faq-body"><p>Yes. We drain down the circuit, reroute the pipework to the new position and rebalance the system. Relocation starts from £150 depending on distance and pipework complexity. In Liverpool's Victorian terraces with solid walls, pipework is usually run under suspended timber floors or surface-mounted in neat boxing.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. Liverpool Emergency Plumber is Gas Safe registered. All radiator work connecting to the heating circuit is carried out by our own directly employed Gas Safe registered engineers. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We never use sub-contractors.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does radiator installation cost in Liverpool?</summary><div class="pf-faq-body"><p>A standard double panel rad, supplied and fitted, costs from £200. This covers the rad, the TRV and a system balance on the day. Labour only for a like-for-like swap starts at £80. TRVs from £50 each. Relocation from £150. Column and designer rads are quoted on request. We give a written fixed-price quote first.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TIME</span>&nbsp; How long does radiator installation take?</summary><div class="pf-faq-body"><p>A like-for-like single radiator swap takes 1 to 2 hours. A new radiator addition with pipework takes 2 to 4 hours. Multiple radiators can often be completed in a single day. A full house TRV upgrade typically takes half a day. We confirm the expected duration when we quote.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">SIZING</span>&nbsp; Can you change a radiator to a bigger or smaller size?</summary><div class="pf-faq-body"><p>Yes. We can swap an undersized rad for a bigger one to warm a cold room. Or fit a smaller rad in a room that gets too hot. We work out the BTU output the room needs first. Then we pick a rad that hits that number. A right-sized rad is more energy efficient. You burn less gas for the same warm room.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">ADDING</span>&nbsp; Can you add an additional radiator to my existing system?</summary><div class="pf-faq-body"><p>Yes. Adding a rad to your existing system takes 2 to 4 hours. We extend the circuit to the new spot and fit the rad with a TRV. We balance the system after. Most extension, loft conversion and conservatory jobs need at least one extra rad.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RELOCATION</span>&nbsp; Can you relocate a radiator in a Liverpool Victorian property?</summary><div class="pf-faq-body"><p>Yes. We drain the circuit, reroute the pipework to the new spot and balance the system. Relocation starts from £150. Cost depends on distance. In older Liverpool homes with solid walls, pipes run under timber floors or in neat boxing on the wall.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TRV</span>&nbsp; What is a TRV and do I need one?</summary><div class="pf-faq-body"><p>A TRV sets the heat output of one rad. Different rooms can run at different temps. Under Boiler Plus rules, TRVs are a must on all new rad fits. They cut heating bills by 10 to 15%. We fit TRVs from £50 per valve. One rad in the house should be left without a TRV to act as a bypass.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">FLUSH</span>&nbsp; Do I need a power flush before fitting new radiators?</summary><div class="pf-faq-body"><p>If your rads have cold spots at the bottom, or the water from bleeding is brown or black, a power flush is a must before fitting new rads. A clogged circuit will fill new rads with sludge fast. We check your system at the quote visit and tell you if a flush is needed.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">BRANDS</span>&nbsp; What radiator brands do you fit?</summary><div class="pf-faq-body"><p>We fit rads from Stelrad, Quinn, Myson, Reina, Hudson Reed, Bisque and Carron. Standard panel rads, designer rads and period-style rads all in the range. We can supply the rad or fit one you have bought. Tell us your budget and style and we will help you pick.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. Liverpool Emergency Plumber is on the Gas Safe register. All rad work that joins the heating circuit is done by our own employed Gas Safe heating engineers. You can check us at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We never use sub-contractors.</p></div></details>
       </div>
     </div>
   </section>
@@ -422,19 +551,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="pf-card" style="margin-top:2rem;">
         <h3>Liverpool City and South</h3>
-        <p>Radiator installations across Liverpool city centre, Aigburth, Allerton, Woolton, Garston, Toxteth, Sefton Park and Mossley Hill. South Liverpool's Victorian terraces are our most common radiator job type. Column radiators in period rooms and standard panels in bedrooms and kitchens where aesthetics are less critical.</p>
+        <p>We fit rads across south Liverpool. Older terraces are our most common rad job. Column rads in period rooms. Standard panels in bedrooms and kitchens.</p>
         <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">City Centre L1</span><span class="pf-pill">Aigburth L17</span><span class="pf-pill">Allerton L18</span><span class="pf-pill">Woolton L25</span><span class="pf-pill">Garston L19</span><span class="pf-pill">Toxteth L8</span><span class="pf-pill">Sefton Park L17</span><span class="pf-pill">Mossley Hill L18</span></div>
       </div>
 
       <div class="pf-card" style="margin-top:2rem;">
         <h3>North and East Liverpool</h3>
-        <p>Radiator work across Anfield, Wavertree, West Derby, Bootle, Crosby, Norris Green, Fazakerley and Kirkby. We fit radiators in rental properties, family homes and first-time installations across north Liverpool on a regular basis.</p>
+        <p>We fit rads across north and east Liverpool. Rental homes and family homes every week. First-time installs and full house rad swaps.</p>
         <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Anfield L4</span><span class="pf-pill">Wavertree L15</span><span class="pf-pill">West Derby L12</span><span class="pf-pill">Bootle L20</span><span class="pf-pill">Crosby L23</span><span class="pf-pill">Kirkby L32</span><span class="pf-pill">Norris Green L11</span><span class="pf-pill">Fazakerley L9</span></div>
       </div>
 
       <div class="pf-card" style="margin-top:2rem;">
         <h3>Outskirts and Wider Merseyside</h3>
-        <p>Radiator installations across Formby, Southport, Maghull, Huyton, Wirral, St Helens and Birkenhead. Larger properties in Formby and the Wirral often require column radiators to meet the output requirements of high-ceilinged period rooms.</p>
+        <p>Rad work across Liverpool's outskirts and the wider area. Bigger homes here often need column rads to hit the heat output for big rooms.</p>
         <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Formby L37</span><span class="pf-pill">Southport PR8</span><span class="pf-pill">Maghull L31</span><span class="pf-pill">Wirral CH</span><span class="pf-pill">St Helens WA</span><span class="pf-pill">Birkenhead CH41</span><span class="pf-pill">Heswall CH60</span></div>
       </div>
     </div>
@@ -443,11 +572,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- RELATED SERVICES -->
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
-            <h2>Related Heating Services in Liverpool</h2>
+      <h2>Related Heating Services in Liverpool</h2>
       <p class="pf-sub">All Gas Safe registered. All Liverpool postcodes covered.</p>
       <div class="pf-related">
         <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Liverpool</strong><span>Cold radiators or noisy boiler? Power flush from £350. Protects your boiler and warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/central-heating-installation-liverpool" class="pf-related-link"><div><strong>Central Heating Installation Liverpool</strong><span>Full systems from £3,500. Radiator additions from £200. Free survey. ECO4 grants available.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/central-heating-installation-liverpool" class="pf-related-link"><div><strong>Central Heating Installation Liverpool</strong><span>Full systems from £3,500. Radiator additions from £200. Free survey. ECO4 grants checked.</span></div><span class="pf-related-arrow">&#8594;</span></a>
         <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool</strong><span>New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant and Ideal. Same-day available.</span></div><span class="pf-related-arrow">&#8594;</span></a>
         <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Annual Boiler Service Liverpool</strong><span>£120 fixed price. Benchmark updated. Certificate emailed same day.</span></div><span class="pf-related-arrow">&#8594;</span></a>
         <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Liverpool</strong><span>CP12 from £80. Combined with boiler service for £175. Same-day available.</span></div><span class="pf-related-arrow">&#8594;</span></a>
@@ -460,7 +589,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="final-cta">
     <div class="container" style="text-align:center">
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Liverpool Radiator Installation Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Supply and fit from £200. Labour only from £80. TRVs from £50. Fixed price. System balanced on completion. Gas Safe registered.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Supply and fit from £200. Labour only from £80. TRVs from £50. Relocation from £150. Fixed price. System balanced on the day. Gas Safe registered.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Get a Fixed-Price Quote Online</a>
