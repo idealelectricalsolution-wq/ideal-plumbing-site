@@ -37,7 +37,8 @@ const areaName = (a) => ({ 'city-centre': 'City Centre', 'st-helens': 'St Helens
 const faqs = [
   { q: 'How much does an emergency plumber cost in Liverpool?', a: 'Weekdays 9am to 5pm: £80 per hour. Weekends 9am to 1pm: £120 per hour. Out of hours, nights and bank holidays: £150 per hour. There is a 1 hour minimum and no call-out fee. Parts are charged at cost and you get a written quote before any work begins.' },
   { q: 'Is there a call-out fee?', a: 'No. There is no call-out fee. You pay the hourly rate with a 1 hour minimum, so a weekday emergency starts at £80.' },
-  { q: 'How quickly can you get to me?', a: 'Our 30 minute response is guaranteed across Liverpool L1 to L40. Call 0151 558 0334 and we will tell you when James will arrive.' },
+  { q: 'How quickly can you get to me?', a: 'Our 30 minute response is guaranteed across Liverpool L1 to L40, and our average arrival time is 28 minutes. Call 0151 558 0334 and we will tell you when James will arrive.' },
+  { q: 'Do you cover commercial properties?', a: 'Yes. We cover commercial plumbing emergencies across Liverpool 24/7 at the same rates as homes. No commercial premium.' },
   { q: 'Can you find a leak I cannot see?', a: 'Yes. James traces hidden leaks by lifting floorboards, pressure testing the pipework and, where a leak is under a tiled or laminate floor, cutting a neat inspection hole in the ceiling below. Then he repairs it.' },
   { q: 'Can you give me a leak report for my insurance?', a: 'Yes. We can provide a leak report for your insurer explaining where the leak was and what was repaired.' },
   { q: 'How much is a boiler repair?', a: 'A boiler fault diagnosis is £95. If you prefer, we can work at the hourly rate instead, from £80 per hour on weekdays. James is Gas Safe registered.' },
@@ -173,7 +174,7 @@ const faqSchema = {
           <span class="hp-call-num">{PHONE}</span>
         </a>
         <ul class="hp-promises">
-          <li><strong>30 min</strong> guaranteed response</li>
+          <li><strong>30 min</strong> guaranteed response, 28 min average</li>
           <li><strong>No</strong> call-out fee</li>
           <li><strong>From £80</strong> an hour</li>
           <li><strong>Gas Safe</strong> registered</li>
