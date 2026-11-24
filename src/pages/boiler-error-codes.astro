@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const DETAIL: Record<string,string> = { 'worcester:EA 227': 'worcester-bosch-ea-227', 'vaillant:F28': 'vaillant-f28', 'vaillant:F75': 'vaillant-f75', 'ideal:L2': 'ideal-l2', 'baxi:E133': 'baxi-e133' };
 const TEL = 'tel:01515580334';
 const PHONE = '0151 558 0334';
 
@@ -118,6 +119,7 @@ const crumbs = {
               <h3><span class="ec-tag">{c.code}</span> {c.means}</h3>
               <p><strong>Try:</strong> {c.try}</p>
               <p><strong>Call us if:</strong> {c.call}</p>
+              {DETAIL[`${b.id}:${c.code}`] && <p class="ec-detail"><a href={`/boiler-error-codes/${DETAIL[`${b.id}:${c.code}`]}`}>Full guide to {b.name} {c.code} →</a></p>}
             </article>
           ))}
         </div>
@@ -178,6 +180,7 @@ const crumbs = {
   .ec-code h3, .ec-faq summary { text-align: left; }
   .ec-code h3 { font-size: 1.12rem; font-weight: 800; color: var(--navy); margin: 0 0 0.6rem; line-height: 1.4; }
   .ec-tag { display: inline-block; background: var(--navy); color: #fff; font: 900 1.05rem 'Barlow Condensed', sans-serif; letter-spacing: 0.03em; border-radius: 6px; padding: 0.1rem 0.55rem; margin-right: 0.35rem; }
+  .ec-detail a { color: var(--orange-dark); font-weight: 800; }
   .ec-code p { margin: 0 0 0.45rem; font-size: 1rem; line-height: 1.6; color: #334155; }
   .ec-more { margin: 1.1rem 0 0; font-size: 1rem; }
   .ec-more a { color: var(--orange-dark); font-weight: 800; }

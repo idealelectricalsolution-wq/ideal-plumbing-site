@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  const pages = [
+    {
+      slug: 'worcester-bosch-ea-227',
+      brand: 'Worcester Bosch', code: 'EA 227', short: 'EA',
+      title: 'Worcester Bosch EA 227 Error Code | What It Means and How to Fix It',
+      description: 'Worcester Bosch boiler showing EA or EA 227? It means no flame was detected. What to check yourself, when to call, and Gas Safe repair in Liverpool with no call-out fee. Call 0151 558 0334.',
+      means: 'EA 227 on a Worcester Bosch Greenstar boiler means the boiler tried to light but did not detect a flame. After a few failed attempts it locks out to keep you safe, so you get no heating and no hot water.',
+      causes: [
+        'The gas is off at the meter, or a prepayment meter has run out of credit',
+        'A frozen or blocked condensate pipe, very common in cold snaps',
+        'A worn or dirty ignition electrode, or a damaged ignition lead',
+        'A faulty flame sensing electrode',
+        'A faulty gas valve or main control board (PCB)',
+      ],
+      tryList: [
+        'Check your other gas appliances, such as the hob, work. If they do not, the problem is the gas supply, not the boiler.',
+        'If you have a prepayment meter, check it has credit.',
+        'In freezing weather, find the plastic condensate pipe outside and pour warm water, not boiling, along it.',
+        'Press the reset button once and wait a few minutes.',
+      ],
+      callWhen: 'If EA comes back after one reset, or the gas supply and condensate pipe are fine, the fault is inside the boiler. Only a Gas Safe registered engineer should open the casing.',
+      jamesDoes: 'James checks the gas pressure at the boiler, the ignition and flame sensing electrodes, the condensate trap and pipe, and the gas valve, then repairs the faulty part.',
+      faqs: [
+        { q: 'Why does my Worcester Bosch keep showing EA?', a: 'Repeated EA lockouts usually mean a worn ignition or flame sensing electrode, a condensate blockage, or low gas pressure. A reset will not fix the cause, so call a Gas Safe registered engineer.' },
+        { q: 'Can a frozen condensate pipe cause EA 227?', a: 'Yes. When the condensate pipe freezes, the water backs up and the boiler locks out. Thawing the pipe with warm water and resetting often clears it.' },
+      ],
+    },
+    {
+      slug: 'vaillant-f28',
+      brand: 'Vaillant', code: 'F28', short: 'F28',
+      title: 'Vaillant F28 Error Code | Boiler Failed to Light | Liverpool',
+      description: 'Vaillant ecoTEC showing F28? The boiler failed to light. What to check yourself, when to call, and Gas Safe Vaillant repair in Liverpool with no call-out fee. Call 0151 558 0334.',
+      means: 'F28 on a Vaillant ecoTEC boiler means the boiler failed to light when it tried to start up. After several attempts it locks out, so you have no heating or hot water until it is reset or repaired.',
+      causes: [
+        'No gas reaching the boiler: gas off at the meter or a prepayment meter out of credit',
+        'A frozen or blocked condensate pipe',
+        'A faulty ignition electrode or ignition lead',
+        'A faulty gas valve',
+        'A fault on the main control board (PCB)',
+      ],
+      tryList: [
+        'Check your gas hob or other gas appliances work.',
+        'Check a prepayment meter has credit.',
+        'In cold weather, thaw the plastic condensate pipe outside with warm water, not boiling.',
+        'Press reset once and give the boiler a few minutes.',
+      ],
+      callWhen: 'If F28 shows again after one reset, stop resetting it. The fault is with the ignition, gas valve or electronics and needs a Gas Safe registered engineer.',
+      jamesDoes: 'James tests the gas supply and pressure at the boiler, checks the ignition electrode and lead, the condensate system and the gas valve, and replaces the faulty part.',
+      faqs: [
+        { q: 'What is the difference between Vaillant F28 and F29?', a: 'F28 means the boiler failed to light when starting up. F29 means it lit, but the flame went out while it was running. Both often come back to the gas supply or condensate system.' },
+        { q: 'Can I keep resetting a Vaillant F28?', a: 'Reset it once. If it comes back, leave it and call a Gas Safe registered engineer. Repeated resets will not fix the cause.' },
+      ],
+    },
+    {
+      slug: 'vaillant-f75',
+      brand: 'Vaillant', code: 'F75', short: 'F75',
+      title: 'Vaillant F75 Error Code | Pump or Pressure Sensor Fault | Liverpool',
+      description: 'Vaillant ecoTEC showing F75? The boiler did not detect the pump or a pressure change. What to check, when to call, and Gas Safe Vaillant repair in Liverpool. Call 0151 558 0334.',
+      means: 'F75 on a Vaillant ecoTEC boiler means that when the pump started, the boiler did not detect the change in water pressure it expected. It shuts down to protect itself.',
+      causes: [
+        'Low water pressure in the heating system',
+        'Air trapped in the system or the pump',
+        'A faulty or seized pump',
+        'A faulty water pressure sensor',
+      ],
+      tryList: [
+        'Check the pressure gauge. If it is below 1 bar, top it up to between 1 and 1.5 bar with the filling loop.',
+        'Press reset once.',
+      ],
+      callWhen: 'If the pressure is fine and F75 comes back, the pump or the pressure sensor usually needs replacing. If the pressure keeps dropping, there is a leak somewhere in the system.',
+      jamesDoes: 'James checks the system pressure, bleeds trapped air, tests the pump and the pressure sensor, and replaces whichever has failed. If the pressure keeps dropping, he traces the leak too.',
+      faqs: [
+        { q: 'Is F75 the pump or the pressure sensor?', a: 'It can be either. A Gas Safe registered engineer can test both and tell you which part has failed before fitting anything.' },
+        { q: 'Will topping up the pressure fix F75?', a: 'Sometimes. If the pressure was low, topping it up and resetting can clear it. If the pressure is already correct, the pump or sensor is the likely cause.' },
+      ],
+    },
+    {
+      slug: 'ideal-l2',
+      brand: 'Ideal', code: 'L2', short: 'L2',
+      title: 'Ideal Boiler L2 Error Code | Ignition Lockout | Liverpool',
+      description: 'Ideal Logic or Vogue showing L2? The boiler failed to light after several attempts. What to check, when to call, and Gas Safe Ideal boiler repair in Liverpool. Call 0151 558 0334.',
+      means: 'L2 on an Ideal boiler is an ignition lockout. The boiler tried to light several times, did not detect a flame, and locked out.',
+      causes: [
+        'The gas is off at the meter or a prepayment meter has no credit',
+        'A frozen or blocked condensate pipe, a very common cause on Ideal boilers in winter',
+        'A worn ignition electrode or faulty ignition lead',
+        'A faulty gas valve or control board',
+      ],
+      tryList: [
+        'Check your other gas appliances work and a prepayment meter has credit.',
+        'In freezing weather, pour warm water, not boiling, along the plastic condensate pipe outside.',
+        'Reset the boiler once.',
+      ],
+      callWhen: 'If L2 returns after one reset, call a Gas Safe registered engineer. The ignition, gas valve or condensate system needs checking.',
+      jamesDoes: 'James checks the gas supply and pressure, the condensate trap and pipe, the ignition electrode and the gas valve, and repairs the cause.',
+      faqs: [
+        { q: 'Why does my Ideal boiler keep going to L2?', a: 'Repeated L2 lockouts are usually a condensate blockage, a worn ignition electrode or low gas pressure. A Gas Safe registered engineer can find which.' },
+        { q: 'Is L2 the same as F2 on an Ideal boiler?', a: 'No. L2 means the boiler failed to light at all. F2 means the flame was lost after lighting. The causes overlap, often the gas supply or condensate pipe.' },
+      ],
+    },
+    {
+      slug: 'baxi-e133',
+      brand: 'Baxi', code: 'E133', short: 'E133',
+      title: 'Baxi E133 Error Code | Ignition Failure | Liverpool',
+      description: 'Baxi boiler showing E133? The boiler did not detect a flame. What to check yourself, when to call, and Gas Safe Baxi repair in Liverpool with no call-out fee. Call 0151 558 0334.',
+      means: 'E133 on a Baxi boiler means the boiler tried to light but did not detect a flame, often because gas is not reaching it. It locks out until reset.',
+      causes: [
+        'The gas is off, or a prepayment meter has run out of credit',
+        'A frozen or blocked condensate pipe',
+        'A faulty ignition electrode',
+        'A faulty gas valve or control board',
+      ],
+      tryList: [
+        'Check your hob or other gas appliances work.',
+        'Check a prepayment meter has credit.',
+        'In cold weather, thaw the plastic condensate pipe outside with warm water, not boiling.',
+        'Press reset once.',
+      ],
+      callWhen: 'If E133 comes back after one reset and your gas supply is fine, the fault is inside the boiler and needs a Gas Safe registered engineer.',
+      jamesDoes: 'James checks the gas pressure at the boiler, the condensate system, the ignition electrode and the gas valve, and fixes the cause.',
+      faqs: [
+        { q: 'Is Baxi E133 a gas problem?', a: 'Often, yes. E133 usually means gas is not reaching the burner, either because the supply is off or because of a fault with the gas valve or ignition. If your other gas appliances work, the fault is in the boiler.' },
+        { q: 'Can a frozen pipe cause E133?', a: 'Yes. A frozen condensate pipe can stop a Baxi boiler and show E133. Thawing it with warm water and resetting often clears it.' },
+      ],
+    },
+  ];
+  return pages.map((p) => ({ params: { slug: p.slug }, props: { p, all: pages.map((x) => ({ slug: x.slug, brand: x.brand, code: x.code })) } }));
+}
+
+const { p, all } = Astro.props;
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+const url = `https://liverpoolemergencyplumber.co.uk/boiler-error-codes/${p.slug}`;
+const faqs = [
+  ...p.faqs,
+  { q: `How much does it cost to fix a ${p.brand} ${p.code} fault in Liverpool?`, a: 'There is no call-out fee. Repairs are £80 an hour on weekdays, £120 an hour on weekend mornings and £150 an hour out of hours, with a 1 hour minimum, or £95 for a fault diagnosis.' },
+];
+const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://liverpoolemergencyplumber.co.uk/' },
+  { '@type': 'ListItem', position: 2, name: 'Boiler Error Codes', item: 'https://liverpoolemergencyplumber.co.uk/boiler-error-codes' },
+  { '@type': 'ListItem', position: 3, name: `${p.brand} ${p.code}`, item: url },
+] };
+const others = all.filter((o) => o.slug !== p.slug);
+---
+
+<BaseLayout title={p.title} description={p.description} canonical={url}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(crumbs)} />
+
+  <section class="cp-hero" id="hero">
+    <div class="cp-wrap">
+      <p class="cp-crumb"><a href="/">Home</a> › <a href="/boiler-error-codes">Boiler error codes</a> › {p.brand} {p.code}</p>
+      <p class="cp-kicker">Boiler error code experts in Liverpool</p>
+      <h1>{p.brand} {p.code} error code</h1>
+      <p class="cp-lead">{p.means}</p>
+      <div class="cp-call">
+        <p><strong>Need it fixed?</strong> James is Gas Safe registered and repairs {p.brand} boilers across Liverpool 24/7. No call-out fee. Guaranteed 30 minute response.</p>
+        <a href={TEL} class="cp-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-sec" id="causes">
+    <div class="cp-wrap">
+      <h2>What causes {p.brand} {p.code}?</h2>
+      <ul class="cp-list">{p.causes.map((c) => <li>{c}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="cp-sec cp-tint" id="try-first">
+    <div class="cp-wrap">
+      <h2>What you can safely try first</h2>
+      <ol class="cp-steps">{p.tryList.map((t) => <li>{t}</li>)}</ol>
+      <p class="cp-warn">Never take the boiler casing off. If you smell gas, leave the property and call the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a>.</p>
+    </div>
+  </section>
+
+  <section class="cp-sec" id="when-to-call">
+    <div class="cp-wrap">
+      <h2>When to call an engineer</h2>
+      <p>{p.callWhen}</p>
+      <h2 class="cp-h2b">How James fixes it</h2>
+      <p>{p.jamesDoes}</p>
+      <ul class="cp-ticks">
+        <li>No call-out fee</li>
+        <li>£95 fault diagnosis, or from £80 an hour</li>
+        <li>Guaranteed 30 minute response, 28 minutes on average</li>
+        <li>12-month workmanship guarantee</li>
+      </ul>
+      <a href={TEL} class="cp-btn cp-btn-wide">Call {PHONE}</a>
+    </div>
+  </section>
+
+  <section class="cp-sec cp-tint" id="faq">
+    <div class="cp-wrap">
+      <h2>{p.brand} {p.code} questions</h2>
+      {faqs.map((f) => (<details class="cp-faq"><summary>{f.q}</summary><p>{f.a}</p></details>))}
+    </div>
+  </section>
+
+  <section class="cp-sec" id="more-codes">
+    <div class="cp-wrap">
+      <h2>Other boiler error codes</h2>
+      <ul class="cp-others">
+        {others.map((o) => <li><a href={`/boiler-error-codes/${o.slug}`}>{o.brand} {o.code}</a></li>)}
+        <li><a href="/boiler-error-codes">All boiler error codes →</a></li>
+      </ul>
+      <p class="cp-small">See also <a href="/boiler-repair-liverpool">boiler repair in Liverpool</a> and <a href="/boiler-service-liverpool">boiler servicing</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .cp-wrap { max-width: 820px; margin: 0 auto; padding: 0 1.25rem; }
+  .cp-hero { background: linear-gradient(180deg, #fff 0%, #fff7ed 100%); padding: 2rem 0 2.5rem; text-align: left; }
+  .cp-crumb { font-size: 0.9rem; color: #475569; margin: 0 0 0.75rem; }
+  .cp-crumb a { color: var(--navy-mid); }
+  .cp-kicker { display: inline-block; background: var(--navy); color: #fff; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 999px; padding: 0.35rem 0.85rem; margin: 0 0 0.8rem; }
+  .cp-hero h1 { font: 900 clamp(2.3rem, 8vw, 3.4rem)/1 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.9rem; text-align: left; }
+  .cp-lead { font-size: 1.15rem; line-height: 1.6; color: #1e293b; margin: 0 0 1.25rem; }
+  .cp-call { background: var(--navy); border-radius: 14px; padding: 1.1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .cp-call p { margin: 0; flex: 1 1 260px; line-height: 1.55; color: rgba(255,255,255,0.92); }
+  .cp-call strong { color: #fff; }
+  .cp-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; background: var(--orange); color: #fff; border-radius: 10px; padding: 0.6rem 1.25rem; font: 900 1.3rem 'Barlow Condensed', sans-serif; text-decoration: none; white-space: nowrap; }
+  .cp-btn:hover { background: var(--orange-dark); }
+  .cp-btn-wide { width: 100%; max-width: 420px; font-size: 1.5rem; min-height: 58px; margin-top: 1.25rem; }
+  .cp-sec { padding: 2.5rem 0; text-align: left; }
+  .cp-tint { background: #f1f5f9; }
+  .cp-sec h2 { font: 900 clamp(1.7rem, 5vw, 2.2rem)/1.1 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.75rem; text-align: left; }
+  .cp-h2b { margin-top: 1.75rem !important; }
+  .cp-sec p { font-size: 1.05rem; line-height: 1.65; color: #1e293b; margin: 0 0 1rem; }
+  .cp-list, .cp-steps { margin: 0; padding-left: 1.3rem; }
+  .cp-list li, .cp-steps li { font-size: 1.05rem; line-height: 1.6; margin-bottom: 0.5rem; color: #1e293b; }
+  .cp-warn { background: #fef2f2; border-left: 5px solid var(--red); border-radius: 10px; padding: 1rem 1.2rem; color: #7f1d1d !important; margin-top: 1rem !important; }
+  .cp-warn a { color: #991b1b; font-weight: 800; }
+  .cp-ticks { list-style: none; padding: 0; margin: 0.5rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; }
+  .cp-ticks li { padding-left: 1.5rem; position: relative; color: #1e293b; }
+  .cp-ticks li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 900; }
+  .cp-faq { border-bottom: 1px solid var(--border); }
+  .cp-faq summary { cursor: pointer; padding: 0.95rem 0; font-weight: 800; font-size: 1.05rem; color: var(--navy); text-align: left; }
+  .cp-others { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .cp-others a { display: block; background: #fff; border: 2px solid var(--border); border-radius: 999px; padding: 0.5rem 1rem; font-weight: 800; color: var(--navy); text-decoration: none; }
+  .cp-others a:hover { border-color: var(--orange); }
+  .cp-small a { color: var(--orange-dark); font-weight: 800; }
+  @media (max-width: 600px) { .cp-ticks { grid-template-columns: 1fr; } .cp-call .cp-btn { width: 100%; } }
+</style>
