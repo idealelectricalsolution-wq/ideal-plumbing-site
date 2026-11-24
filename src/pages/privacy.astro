@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy and Cookies | Liverpool Emergency Plumber"
+  description="How Liverpool Emergency Plumber uses your information and cookies. We use Google Analytics to count visits and button clicks. No advertising. Turn analytics off at any time."
+  canonical="https://liverpoolemergencyplumber.co.uk/privacy"
+>
+  <meta name="robots" content="noindex, follow" slot="head" />
+
+  <section class="pv">
+    <div class="pv-wrap">
+      <h1>Privacy and cookies</h1>
+      <p class="pv-lead">This page explains, in plain English, what information this website collects and what we do with it.</p>
+
+      <h2>Who we are</h2>
+      <p>Liverpool Emergency Plumber, 29 Park Road, Kirkby, L32 2AL. Phone <a href="tel:01515580334">0151 558 0334</a>. Email <a href="mailto:emergencyplumberliverpool@gmail.com">emergencyplumberliverpool@gmail.com</a>.</p>
+
+      <h2 id="analytics">Google Analytics</h2>
+      <p>We use Google Analytics to understand how people use this website, so we can make it clearer and easier to use. It tells us things like:</p>
+      <ul>
+        <li>which pages are visited and how far people scroll</li>
+        <li>which buttons are clicked, for example the call button or a problem tile</li>
+        <li>roughly where visitors are (town or city, not your address) and what kind of device they use</li>
+      </ul>
+      <p>Google Analytics sets cookies with names starting <code>_ga</code> to recognise a returning browser. We do not use it to show you adverts, we do not sell the information, and we cannot see who you are from it.</p>
+      <p>Google processes this information for us. You can read <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</p>
+
+      <div class="pv-optout">
+        <p><strong>Turn analytics off.</strong> <span data-analytics-status>Analytics is on.</span> Use this button to stop Google Analytics on this device. Your choice is remembered on this device.</p>
+        <button type="button" class="pv-btn" data-analytics-toggle>Turn off analytics</button>
+      </div>
+
+      <h2>When you call or email us</h2>
+      <p>If you phone or email us, we use your name, number, address and details of the problem to arrange and carry out the job, send you a quote or invoice, and contact you about the work.</p>
+
+      <h2>The booking form</h2>
+      <p>The form on our <a href="/get-started">booking page</a> sends your details to our email through a form service called Web3Forms. We only use them to reply to you and arrange your visit.</p>
+
+      <h2>Your rights</h2>
+      <p>You can ask us what information we hold about you, ask us to correct it, or ask us to delete it. Email <a href="mailto:emergencyplumberliverpool@gmail.com">emergencyplumberliverpool@gmail.com</a> or call <a href="tel:01515580334">0151 558 0334</a>. If you are unhappy with how we handle your information, you can contact the <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">Information Commissioner's Office</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pv { padding: 3rem 0 4rem; text-align: left; }
+  .pv-wrap { max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
+  .pv h1 { font: 900 clamp(2.2rem, 7vw, 3rem) 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.75rem; text-align: left; }
+  .pv h2 { font: 900 1.6rem 'Barlow Condensed', sans-serif; color: var(--navy); margin: 2rem 0 0.5rem; text-align: left; }
+  .pv p, .pv li { font-size: 1.05rem; line-height: 1.7; color: #1e293b; }
+  .pv p { margin: 0 0 1rem; }
+  .pv ul { margin: 0 0 1rem; padding-left: 1.3rem; }
+  .pv a { color: var(--navy-mid); text-decoration: underline; }
+  .pv-lead { font-size: 1.15rem !important; color: #334155 !important; }
+  .pv-optout { background: #f1f5f9; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin: 1.5rem 0; }
+  .pv-btn { background: var(--navy); color: #fff; border: 0; border-radius: 8px; padding: 0.75rem 1.25rem; font: 800 1rem 'Nunito Sans', sans-serif; cursor: pointer; min-height: 48px; }
+  .pv-btn:hover { background: var(--navy-mid); }
+</style>

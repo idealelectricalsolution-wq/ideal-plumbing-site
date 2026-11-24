@@ -9,12 +9,20 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Analytics (GA4) -->
-  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-GVQXN88ME6"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GVQXN88ME6');
+    (function () {
+      var off = false;
+      try { off = localStorage.getItem('analytics-off') === '1'; } catch (e) {}
+      if (off) { window['ga-disable-G-GVQXN88ME6'] = true; return; }
+      var g = document.createElement('script');
+      g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtag/js?id=G-GVQXN88ME6';
+      document.head.appendChild(g);
+      gtag('js', new Date());
+      gtag('config', 'G-GVQXN88ME6');
+    })();
   </script>
 
   <title>{title}</title>
@@ -842,6 +850,7 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
     .ftr-partner a { color: #fdba74; text-decoration: underline; }
     .ftr-legal { margin-top: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); }
     .ftr-legal a { color: rgba(255,255,255,0.75); }
+    .ftr-optout { background: none; border: 0; padding: 0; color: rgba(255,255,255,0.75); font: inherit; text-decoration: underline; cursor: pointer; }
     @media (max-width: 900px) { .ftr-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 560px) { .ftr-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
 
@@ -1074,10 +1083,38 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
       <div class="ftr-partner">
         <strong style="color:#fff;">Electrical problem?</strong> Electrics are handled by our NICEIC partner firm, <a href="https://www.idealelectricalsolutions.co.uk">Ideal Electrical Solutions</a>: <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician">emergency electrician Liverpool</a>, <a href="https://www.idealelectricalsolutions.co.uk/eicr-liverpool">EICR Liverpool</a> and <a href="https://www.idealelectricalsolutions.co.uk/house-rewire-liverpool">house rewires</a>.
       </div>
-      <p class="ftr-legal">&copy; 2026 Liverpool Emergency Plumber · Gas Safe registered · <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Verify at gassaferegister.co.uk</a></p>
+      <p class="ftr-legal">&copy; 2026 Liverpool Emergency Plumber · Gas Safe registered · <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Verify at gassaferegister.co.uk</a> · <a href="/privacy">Privacy and cookies</a> · <button type="button" class="ftr-optout" data-analytics-toggle>Turn off analytics</button></p>
     </div>
   </footer>
 
+
+  <script is:inline>
+  (function () {
+    function isOff() { try { return localStorage.getItem('analytics-off') === '1'; } catch (e) { return false; } }
+    function label() {
+      document.querySelectorAll('[data-analytics-toggle]').forEach(function (b) { b.textContent = isOff() ? 'Turn analytics back on' : 'Turn off analytics'; });
+      document.querySelectorAll('[data-analytics-status]').forEach(function (el) { el.textContent = isOff() ? 'Analytics is turned off on this device.' : 'Analytics is on.'; });
+    }
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-analytics-toggle]');
+      if (!b) return;
+      var turnOff = !isOff();
+      try { turnOff ? localStorage.setItem('analytics-off', '1') : localStorage.removeItem('analytics-off'); } catch (err) {}
+      window['ga-disable-G-GVQXN88ME6'] = turnOff;
+      if (turnOff) {
+        document.cookie.split(';').forEach(function (c) {
+          var n = c.split('=')[0].trim();
+          if (n.indexOf('_ga') === 0) {
+            document.cookie = n + '=; Max-Age=0; path=/';
+            document.cookie = n + '=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+          }
+        });
+      }
+      label();
+    });
+    label();
+  })();
+  </script>
 
   <!-- Analytics: calls, leads and engagement -->
   <script is:inline>

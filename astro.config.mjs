@@ -8,5 +8,5 @@ export default defineConfig({
   build: {
     format: 'file'
   },
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/privacy') })],
 });
