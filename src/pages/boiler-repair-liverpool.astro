@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/boiler-repair-liverpool';
+
+// Prices match the rest of the site (owner to confirm): £80/hr weekdays, £120/hr weekends 9am-1pm,
+// £150/hr out of hours, 1 hour minimum, no call-out fee; booked fault diagnosis £95.
+const faqs = [
+  { tag: 'COST', q: 'How much does a boiler repair cost in Liverpool?', a: 'There is no call-out fee. Weekdays 9am to 5pm are £80 an hour, weekends 9am to 1pm are £120 an hour, and evenings, nights and bank holidays are £150 an hour, with a one hour minimum. A booked boiler fault diagnosis is £95. If a part is needed, you get the price before any work starts.' },
+  { tag: 'EMERGENCY', q: 'Can you repair my boiler today?', a: 'Often, yes. We answer 24 hours a day, 7 days a week. Ring 0151 558 0334, tell us what the boiler is doing and any error code on the display, and we will tell you when James can be with you. Many reviews mention him arriving within 20 to 30 minutes, including on Sundays and bank holidays.' },
+  { tag: 'GAS SAFE', q: 'Who will repair my boiler?', a: 'James, who is Gas Safe registered, does the repair himself. It is illegal for anyone who is not Gas Safe registered to work on a gas boiler. You can check any engineer on the Gas Safe Register before they start.' },
+  { tag: 'PRESSURE', q: 'My boiler pressure keeps dropping. Is that a repair?', a: 'Pressure should sit between 1 and 1.5 bar when the heating is cold. If you top it up and it drops again within days, there is a leak somewhere in the system or a faulty pressure relief valve or expansion vessel. That needs finding and fixing, not topping up every week.' },
+  { tag: 'WINTER', q: 'My boiler stopped in the cold weather. What is wrong?', a: 'The most common cause in a cold snap is a frozen condensate pipe, the small plastic pipe that runs outside from the boiler. The boiler locks out and often shows a fault code. Pouring warm, not boiling, water along the pipe can thaw it, then press reset. If it keeps happening, the pipe needs re-routing or lagging.' },
+  { tag: 'BRANDS', q: 'Which boiler brands do you repair?', a: 'All the common makes in Liverpool homes, including Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm and Viessmann. Combi, system and regular boilers.' },
+  { tag: 'REPAIR OR REPLACE', q: 'Should I repair or replace my boiler?', a: 'If the boiler is under about 10 years old and the fault is a single part, repairing it is usually the better value. If it is older, breaking down every winter, or the part costs a large share of a new boiler, we will tell you honestly and give you a fixed price for both options so you can choose.' },
+  { tag: 'LANDLORDS', q: 'Do you repair boilers for landlords and letting agents?', a: 'Yes. We can meet your tenant at the property, send you photos of the fault and agree the cost with you before we fix it. If the CP12 is due, we can do the gas safety check on the same visit.' },
+];
+
+const faults = [
+  { t: 'No heating or hot water', d: 'Check the thermostat, the timer and that your prepayment gas meter has credit. If all is fine and the boiler shows a fault, ring us.' },
+  { t: 'Low or dropping pressure', d: 'Below 1 bar and the boiler locks out. If topping up does not hold, there is a leak or a failed part to fix.' },
+  { t: 'Error code on the display', d: 'Write the code down and tell us when you ring. It usually points to the fault before James arrives.' },
+  { t: 'Frozen condensate pipe', d: 'The most common winter breakdown. The boiler gurgles, then locks out. See the FAQ below for a safe fix.' },
+  { t: 'Boiler leaking water', d: 'Turn the boiler off, put a tray underneath and keep water away from the electrics. Then call us.' },
+  { t: 'Banging, kettling or whistling', d: 'Usually sludge or scale in the heat exchanger, or a pump problem. Left alone it gets worse.' },
+  { t: 'Radiators cold at the bottom', d: 'Sludge in the system. A repair can get you going, and a power flush clears it for good.' },
+  { t: 'Boiler keeps turning off', d: 'Often a faulty sensor, a blocked flue or a pressure problem. Needs a proper diagnosis.' },
+];
+
+const reviews = [
+  { n: 'Brendan C', t: 'James was amazing and was at my house within 30 mins of calling on a sunday. He has not only fixed my boiler but improved it and taught me how to fix the problem in future. Affordable and easygoing great plumber and gas fitter!' },
+  { n: 'Edward M', t: 'James came out and fixed a leaking pipe and even got my boiler up and running by fixing an air lock. Professional , on time, cleaned up after himself and charged a fair rate.' },
+  { n: 'David H', t: 'Amazing service James was very professional. Fixed my boiler and leaking tap very knowledgeable very fast and polite great company 100% recommended' },
+  { n: 'Roger D', t: 'Wonderful service. Came within 24 hrs and got our hot water back on with an improvised repair. Returned few days later with the part needed to restore everything to normal Charming, calm, methodical. I highly recommend' },
+];
+
+const areas = [
+  ['Anfield','anfield'],['Bootle','bootle'],['Crosby','crosby'],['Huyton','huyton'],['Kirkby','kirkby'],['Garston','garston'],
+  ['Aintree','aintree'],['West Derby','west-derby'],['Old Swan','old-swan'],['Wavertree','wavertree'],['Allerton','allerton'],['Woolton','woolton'],
+  ['Walton','walton'],['Toxteth','toxteth'],['Maghull','maghull'],['Formby','formby'],['Wirral','wirral'],['St Helens','st-helens'],
+];
+
+const schemaFaq = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const schemaService = {
+  '@context': 'https://schema.org', '@type': 'Service',
+  name: 'Boiler Repair Liverpool', serviceType: 'Gas boiler repair', url: URL_,
+  provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
+  areaServed: [{ '@type': 'City', name: 'Liverpool' }, { '@type': 'City', name: 'Wirral' }, { '@type': 'City', name: 'St Helens' }, { '@type': 'City', name: 'Formby' }],
+  offers: [
+    { '@type': 'Offer', name: 'Boiler fault diagnosis', price: '95', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Boiler repair, weekdays 9am to 5pm, per hour, no call-out fee', price: '80', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Emergency boiler repair, evenings, nights and bank holidays, per hour', price: '150', priceCurrency: 'GBP' },
+  ],
+};
+const schemaCrumbs = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://liverpoolemergencyplumber.co.uk' },
+    { '@type': 'ListItem', position: 2, name: 'Boiler Repair Liverpool', item: URL_ },
+  ],
+};
+const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem 1.35rem;';
+---
+
+<BaseLayout
+  title="Boiler Repair Liverpool | Emergency Boiler Engineer 24/7 | No Call-Out Fee"
+  description="Boiler repair in Liverpool by a Gas Safe registered engineer, 24/7. No call-out fee, from £80 an hour or a £95 fault diagnosis. Worcester Bosch, Vaillant, Ideal, Baxi. Call 0151 558 0334."
+  canonical={URL_}
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaFaq)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaCrumbs)} />
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container" style="text-align:center;">
+      <div class="page-hero-badge" style="margin:0 auto 1rem;"><span class="badge-dot"></span>Boiler broken? We answer 24/7</div>
+      <h1>Boiler Repair Liverpool</h1>
+      <p class="page-hero-sub">No heating, no hot water or an error code on the boiler? James, a Gas Safe registered engineer, finds the fault and fixes it, day or night. No call-out fee, and you get the price before any work starts.</p>
+      <div style="display:flex;gap:1rem;max-width:340px;margin:1.25rem auto;">
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">£0</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Call-out fee</div>
+        </div>
+        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">24/7</div>
+          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Including Sundays</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
+        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book a Repair Online</a>
+      </div>
+      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Gas Safe Registered</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> All Major Brands</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Price Agreed First</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> 5.0 on Google</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="pf">
+
+  <!-- QUICK ANSWER -->
+  <section class="pf-section" style="background:#ffffff;padding-bottom:1rem;">
+    <div class="container" style="max-width:760px;">
+      <div style="background:#f1f5f9;border-left:4px solid var(--orange);border-radius:10px;padding:1.1rem 1.35rem;">
+        <p style="margin:0;line-height:1.7;"><strong>Quick answer:</strong> a boiler repair in Liverpool with us has no call-out fee. It costs £80 an hour on weekdays, £120 an hour on weekend mornings and £150 an hour out of hours, with a one hour minimum. A booked fault diagnosis is £95. Many faults, such as low pressure, a frozen condensate pipe or an airlock, are fixed on the first visit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pf-section" style="background:#ffffff;padding-top:1.5rem;">
+    <div class="container">
+      <h2>Boiler Repair Prices in Liverpool</h2>
+      <p class="pf-sub">No call-out fee. A one hour minimum, and you agree the price of any part before it is fitted.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:900px;margin:0 auto;">
+        <div style={card+'border-top:4px solid var(--orange);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--orange);letter-spacing:0.08em;">WEEKDAYS 9AM TO 5PM</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£80<span style="font-size:1rem;"> an hour</span></div></div>
+        <div style={card+'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">WEEKENDS 9AM TO 1PM</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£120<span style="font-size:1rem;"> an hour</span></div></div>
+        <div style={card+'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">EVENINGS, NIGHTS, BANK HOLIDAYS</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£150<span style="font-size:1rem;"> an hour</span></div></div>
+        <div style={card+'border-top:4px solid #16a34a;text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:#16a34a;letter-spacing:0.08em;">BOOKED FAULT DIAGNOSIS</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£95</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON FAULTS -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Common Boiler Faults We Fix</h2>
+      <p class="pf-sub">If your boiler is doing any of these, ring 0151 558 0334 and tell us what you can see.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
+        {faults.map((f) => (
+          <div style={card}><h3 style="font-size:1.02rem;margin:0 0 0.35rem;">{f.t}</h3><p style="margin:0;font-size:0.92rem;line-height:1.6;color:#334155;">{f.d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE YOU CALL -->
+  <section class="pf-section" style="background:#ffffff;">
+    <div class="container" style="max-width:760px;">
+      <h2>Five Checks Before You Call</h2>
+      <p class="pf-sub">These take two minutes and sometimes get the heating back on without a visit.</p>
+      <ol style="line-height:1.75;padding-left:1.25rem;margin:0;">
+        <li><strong>Pressure.</strong> The gauge should read 1 to 1.5 bar when cold. Below 1 and most boilers stop.</li>
+        <li><strong>Gas supply.</strong> Is the hob working? On a prepayment meter, check there is credit.</li>
+        <li><strong>Thermostat and timer.</strong> Turn the thermostat up and check the clock has not reset after a power cut.</li>
+        <li><strong>Condensate pipe.</strong> In freezing weather, check the plastic pipe outside for ice.</li>
+        <li><strong>Reset.</strong> Press reset once. If it locks out again, leave it and ring us with the error code.</li>
+      </ol>
+      <div style="background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #dc2626;border-radius:10px;padding:1rem 1.25rem;margin-top:1.25rem;">
+        <p style="margin:0;line-height:1.65;"><strong>Smell gas?</strong> Do not touch switches. Open windows, turn the gas off at the meter if safe, get everyone out and ring the National Gas Emergency number on <a href="tel:0800111999" style="font-weight:700;">0800 111 999</a>. Once it is made safe, we can repair the boiler.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container" style="max-width:760px;">
+      <h2>How a Boiler Repair Works</h2>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style={card}><strong>1. You ring us, 24/7.</strong> A real person answers. Tell us the make of boiler and any error code.</div>
+        <div style={card}><strong>2. James comes out.</strong> He is Gas Safe registered and does the repair himself.</div>
+        <div style={card}><strong>3. Fault found, price agreed.</strong> He explains what is wrong and what it costs before fixing anything.</div>
+        <div style={card}><strong>4. Fixed and tested.</strong> The boiler is tested and the heating and hot water checked before he leaves. If a part has to be ordered, he makes it safe and comes back to fit it.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="pf-section" style="background:#ffffff;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <h2 style="margin-bottom:0.1rem;">What Customers Say About Our Boiler Repairs</h2>
+        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
+        <div style="color:#f59e0b;font-size:1rem;">★★★★★</div>
+        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
+      </div>
+      <div class="pf-reviews">
+        {reviews.map((r) => (
+          <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>{r.t}</p><div class="pf-review-footer"><div class="pf-review-avatar">{r.n[0]}</div><div><div class="pf-review-name">{r.n}</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+        ))}
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all reviews on Google →</a></div>
+    </div>
+  </section>
+
+  <!-- REPAIR OR REPLACE -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container" style="max-width:760px;">
+      <h2>Repair or Replace Your Boiler?</h2>
+      <p style="line-height:1.75;">Most boilers under about 10 years old are worth repairing. If yours is older, breaks down every winter, or the part would cost a big share of a new one, we will say so honestly and price both options. See <a href="/boiler-installation-liverpool" style="font-weight:700;">new boiler installation in Liverpool</a>. On some benefits you may qualify for a free boiler, explained in our <a href="/blog/eco4-scheme-liverpool-free-boiler" style="font-weight:700;">ECO4 free boiler guide</a>.</p>
+      <p style="line-height:1.75;margin-bottom:0;">A yearly <a href="/boiler-service-liverpool" style="font-weight:700;">boiler service</a> catches most faults before they leave you without heating, and keeps the manufacturer's warranty valid. Radiators cold at the bottom? A <a href="/power-flushing-liverpool" style="font-weight:700;">power flush</a> clears the sludge.</p>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="pf-section" style="background:#ffffff;">
+    <div class="container">
+      <h2>Boiler Repairs Across Liverpool and Merseyside</h2>
+      <p class="pf-sub">Every Liverpool postcode, plus the Wirral, Sefton, Knowsley and St Helens.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:860px;margin:0 auto;">
+        {areas.map(([n, s]) => (
+          <a href={`/emergency-plumber-${s}`} style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:0.4rem 0.9rem;font-size:0.88rem;font-weight:600;color:var(--navy);text-decoration:none;">{n}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pf-section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Boiler Repair Questions</h2>
+      <div class="pf-faq" style="display:flex;flex-direction:column;gap:0.5rem;">
+        {faqs.map((f) => (
+          <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-orange">{f.tag}</span>&nbsp; {f.q}</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>{f.a}</p></div></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="pf-section" style="background:var(--navy);text-align:center;">
+    <div class="container" style="max-width:640px;">
+      <h2 style="color:#ffffff;">Boiler Broken? Ring Us Now.</h2>
+      <p style="color:rgba(255,255,255,0.85);margin-bottom:1.5rem;">24 hours a day, 7 days a week. No call-out fee. Gas Safe registered.</p>
+      <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;">CALL 0151 558 0334</a>
+    </div>
+  </section>
+
+  </div>
+</BaseLayout>
