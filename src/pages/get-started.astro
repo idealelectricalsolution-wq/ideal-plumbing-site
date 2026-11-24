@@ -226,6 +226,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               if (response.ok) {
                 document.getElementById('contact-form').style.display = 'none';
                 document.getElementById('form-success').style.display = 'block';
+                if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form_name: 'get_started', page_path: location.pathname });
               } else {
                 btn.textContent = 'Send Enquiry';
                 btn.disabled = false;

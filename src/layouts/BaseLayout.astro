@@ -1078,5 +1078,86 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
     </div>
   </footer>
 
+
+  <!-- Analytics: calls, leads and engagement -->
+  <script is:inline>
+  (function () {
+    function send(name, params) {
+      if (typeof window.gtag !== 'function') return;
+      params = params || {};
+      params.page_path = location.pathname;
+      window.gtag('event', name, params);
+    }
+    function slug(t) { return (t || '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '').slice(0, 40); }
+    function where(el) {
+      if (el.closest('#hdr-mob')) return 'mobile_menu';
+      if (el.closest('.hdr')) return 'header';
+      if (el.closest('.site-footer')) return 'footer';
+      var sec = el.closest('section');
+      if (!sec) return 'other';
+      if (sec.id) return sec.id;
+      if (sec.classList.contains('hp-hero') || sec.classList.contains('page-hero')) return 'hero';
+      if (sec.classList.contains('hp-final')) return 'final_cta';
+      var h = sec.querySelector('h1, h2');
+      return h ? slug(h.textContent) : 'section';
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var label = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
+      if (href.indexOf('tel:') === 0) {
+        var num = href.replace(/[^0-9]/g, '');
+        if (num === '08001119999') { send('gas_emergency_number_click', { link_location: where(a) }); return; }
+        send('phone_call_click', { link_location: where(a), link_text: label, value: 1, currency: 'GBP' });
+        return;
+      }
+      if (href.indexOf('mailto:') === 0) { send('email_click', { link_location: where(a) }); return; }
+      if (a.classList.contains('hp-tile')) {
+        send('problem_tile_click', { problem: slug(a.querySelector('strong') ? a.querySelector('strong').textContent : label), link_url: href });
+        return;
+      }
+      if (href.indexOf('/get-started') === 0) { send('book_visit_click', { link_location: where(a) }); return; }
+      if (href.indexOf('idealelectricalsolutions.co.uk') !== -1) { send('partner_electrician_click', { link_location: where(a), link_url: href }); return; }
+      if (href.indexOf('google.com/search') !== -1 && /review/i.test(href)) { send('reviews_click', { link_location: where(a) }); return; }
+    }, true);
+
+    document.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      var sum = d.querySelector('summary');
+      send('faq_open', { question: sum ? sum.textContent.replace(/\s+/g, ' ').trim().slice(0, 100) : '' });
+    }, true);
+
+    var menuBtn = document.getElementById('hdr-menu-btn');
+    if (menuBtn) menuBtn.addEventListener('click', function () {
+      setTimeout(function () { if (menuBtn.getAttribute('aria-expanded') === 'true') send('mobile_menu_open', {}); }, 0);
+    });
+
+    var marks = [25, 50, 75], hit = {};
+    function onScroll() {
+      var h = document.documentElement.scrollHeight - innerHeight;
+      if (h <= 0) return;
+      var pct = (scrollY / h) * 100;
+      marks.forEach(function (m) { if (pct >= m && !hit[m]) { hit[m] = 1; send('scroll_depth', { percent_scrolled: m }); } });
+    }
+    addEventListener('scroll', onScroll, { passive: true });
+
+    if ('IntersectionObserver' in window) {
+      var seen = {};
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          var id = en.target.id;
+          if (seen[id]) return;
+          seen[id] = 1;
+          send('section_view', { section: id });
+          io.unobserve(en.target);
+        });
+      }, { threshold: 0.4 });
+      document.querySelectorAll('main section[id]').forEach(function (s) { io.observe(s); });
+    }
+  })();
+  </script>
 </body>
 </html>
