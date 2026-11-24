@@ -131,216 +131,60 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
     .btn-white-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.7); }
 
     /* ========================================
-       NAV
+       HEADER (scrolls with the page, not sticky)
     ======================================== */
-    .site-nav {
-      background: var(--navy);
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      border-bottom: 3px solid var(--orange);
+    .hdr { background: var(--navy); border-bottom: 3px solid var(--orange); position: relative; z-index: 200; }
+    .hdr-inner { max-width: 1180px; margin: 0 auto; padding: 0.7rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
+    .hdr-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.25rem; line-height: 1; color: #fff; text-decoration: none; white-space: nowrap; }
+    .hdr-logo span { color: var(--orange); }
+    .hdr-logo small { display: block; font-family: 'Nunito Sans', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; color: rgba(255,255,255,0.75); margin-top: 0.2rem; }
+    .hdr-links { list-style: none; display: flex; gap: 0.25rem; margin: 0 0 0 auto; padding: 0; }
+    .hdr-links > li { position: relative; }
+    .hdr-links > li > a, .hdr-links > li > button { display: block; background: none; border: 0; cursor: pointer; color: #fff; font: 700 0.95rem 'Nunito Sans', sans-serif; padding: 0.6rem 0.75rem; text-decoration: none; border-radius: 6px; }
+    .hdr-links > li > a:hover, .hdr-links > li > button:hover, .hdr-links > li:focus-within > button { background: rgba(255,255,255,0.1); }
+    .hdr-links > li > button::after { content: ' ▾'; font-size: 0.75em; opacity: 0.8; }
+    .hdr-dd { display: none; position: absolute; top: 100%; left: 0; background: #fff; border-radius: 10px; box-shadow: 0 12px 32px rgba(15,23,42,0.18); padding: 0.75rem; min-width: 290px; }
+    .hdr-dd.wide { min-width: 560px; }
+    .hdr-links > li:hover .hdr-dd, .hdr-links > li:focus-within .hdr-dd { display: block; }
+    .hdr-dd-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 1rem; }
+    .hdr-dd h4 { font: 800 0.72rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0.35rem 0.6rem 0.3rem; }
+    .hdr-dd a { display: block; padding: 0.5rem 0.6rem; border-radius: 6px; color: var(--text-dark); text-decoration: none; font-size: 0.93rem; }
+    .hdr-dd a strong { font-weight: 800; display: block; }
+    .hdr-dd a small { color: var(--muted); font-size: 0.8rem; }
+    .hdr-dd a:hover { background: #fff7ed; }
+    .hdr-dd a:hover strong { color: var(--orange-dark); }
+    .hdr-dd.areas { min-width: 480px; }
+    .hdr-dd.areas .hdr-area-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .hdr-dd.areas .hdr-area-grid a { padding: 0.35rem 0.6rem; font-weight: 700; }
+    .hdr-call { margin-left: 0.5rem; display: inline-flex; flex-direction: column; align-items: center; background: var(--orange); color: #fff; text-decoration: none; border-radius: 8px; padding: 0.45rem 1rem; line-height: 1.1; white-space: nowrap; box-shadow: 0 4px 14px rgba(249,115,22,0.35); }
+    .hdr-call strong { font: 900 1.25rem 'Barlow Condensed', sans-serif; letter-spacing: 0.02em; }
+    .hdr-call small { font-size: 0.7rem; font-weight: 800; opacity: 0.95; }
+    .hdr-call:hover { background: var(--orange-dark); }
+    .hdr-menu-btn { display: none; background: rgba(255,255,255,0.1); color: #fff; border: 0; border-radius: 8px; font: 800 0.9rem 'Nunito Sans', sans-serif; padding: 0.7rem 0.9rem; cursor: pointer; min-height: 48px; }
+    .hdr-mob { display: none; background: #fff; border-top: 1px solid var(--border); padding: 0.5rem 1.25rem 1.25rem; }
+    .hdr-mob.open { display: block; }
+    .hdr-mob h4 { font: 800 0.75rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.25rem; }
+    .hdr-mob a { display: block; padding: 0.75rem 0; border-bottom: 1px solid var(--border); color: var(--text-dark); font-weight: 700; font-size: 1.02rem; text-decoration: none; }
+    .hdr-mob .hdr-mob-areas { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1rem; }
+    .hdr-mob .hdr-mob-areas a { font-size: 0.95rem; padding: 0.55rem 0; }
+    .hdr-mob details summary { list-style: none; cursor: pointer; font: 800 0.75rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.25rem; }
+    .hdr-mob details summary::after { content: ' ▾'; }
+    .hdr-mob-call { margin-top: 1.25rem; display: block; text-align: center; background: var(--orange); color: #fff !important; border: 0 !important; border-radius: 8px; font: 900 1.3rem 'Barlow Condensed', sans-serif !important; padding: 0.9rem !important; }
+    @media (max-width: 980px) {
+      .hdr-links { display: none; }
+      .hdr-menu-btn { display: block; }
+      .hdr-call { margin-left: auto; padding: 0.5rem 0.8rem; }
+      .hdr-call strong { font-size: 1.1rem; }
     }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.6rem 1.25rem;
-      max-width: 1140px;
-      margin: 0 auto;
-      gap: 1rem;
-    }
-    .nav-logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.1rem;
-      color: var(--white);
-      text-decoration: none;
-      line-height: 1;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .nav-logo span { color: var(--orange); }
-    .nav-logo small {
-      display: block;
-      font-size: 0.6rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: 0.1rem;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      flex: 1;
-      justify-content: center;
-    }
-    .nav-links > li { position: relative; }
-    .nav-links > li > a,
-    .nav-links > li > button {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 700;
-      transition: color 0.15s;
-      padding: 0.4rem 0.6rem;
-      border-radius: 4px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      white-space: nowrap;
-    }
-    .nav-links > li > a:hover,
-    .nav-links > li > button:hover { color: var(--orange); }
-    .nav-links > li > a.nav-emergency { color: #fca5a5; }
-    .nav-links > li > a.nav-emergency:hover { color: #f87171; }
-    .nav-dropdown {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--orange);
-      border-radius: var(--radius);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-      min-width: 520px;
-      padding: 1rem;
-      display: none;
-      z-index: 300;
-    }
-    .nav-dropdown-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.25rem;
-    }
-    .nav-dropdown a {
-      display: block;
-      padding: 0.6rem 0.75rem;
-      border-radius: 6px;
-      text-decoration: none;
-      color: var(--navy);
-      font-size: 0.83rem;
-      font-weight: 700;
-      transition: background 0.12s, color 0.12s;
-      text-align: left;
-    }
-    .nav-dropdown a:hover { background: #fff7ed; color: var(--orange); }
-    .nav-dropdown a small { display: block; font-weight: 400; color: var(--muted); font-size: 0.73rem; margin-top: 0.1rem; }
-    .has-dropdown:hover .nav-dropdown,
-    .has-dropdown:focus-within .nav-dropdown { display: block; }
-    .has-dropdown > button::after { content: ' ▾'; font-size: 0.7rem; opacity: 0.7; }
-    .nav-phone { flex-shrink: 0; }
-    .nav-phone a.call {
-      background: var(--orange);
-      color: var(--white);
-      padding: 0.45rem 1rem;
-      border-radius: var(--radius-sm);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1rem;
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      white-space: nowrap;
-    }
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 10px 8px;
-      margin-right: -8px;
-      min-width: 44px;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 26px;
-      height: 3px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: all 0.2s;
-    }
-    .nav-mobile {
-      display: none;
-      flex-direction: column;
-      background: #122840;
-      padding: 0.5rem 1.25rem 1.25rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .nav-mobile.open { display: flex; }
-    .nav-mobile a, .nav-mobile button.nav-mob-toggle {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background: none;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      cursor: pointer;
-      font-family: inherit;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      min-height: 44px;
-    }
-    .nav-mobile a:last-child { border-bottom: none; }
-    .nav-mob-sub {
-      display: none;
-      flex-direction: column;
-      padding-left: 1rem;
-      border-left: 2px solid var(--orange);
-      margin: 0.25rem 0 0.5rem;
-    }
-    .nav-mob-sub.open { display: flex; }
-    .nav-mob-sub a {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.75);
-      padding: 0.65rem 0;
-      border-bottom: none;
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-    }
-    .nav-mob-sub a:hover { color: var(--orange); }
-    .nav-mobile a.nav-mob-emergency { color: #fca5a5; }
-    .nav-mob-cta {
-      margin-top: 0.75rem;
-      background: var(--orange);
-      color: var(--white) !important;
-      border-radius: var(--radius-sm);
-      text-align: center !important;
-      justify-content: center !important;
-      padding: 0.85rem 1rem !important;
-      border-bottom: none !important;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.1rem !important;
-      letter-spacing: 0.03em;
-      min-height: 48px;
-    }
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-      .nav-inner { padding: 0.75rem 1rem; }
-      .nav-logo { font-size: 1rem; }
+    @media (max-width: 560px) {
+      .hdr-inner { padding: 0.6rem 0.75rem; gap: 0.5rem; }
+      .hdr-logo { font-size: 1.05rem; white-space: normal; max-width: 9.5rem; }
+      .hdr-logo small { font-size: 0.66rem; white-space: nowrap; }
+      .hdr-247 { display: none; }
+      .hdr-call { padding: 0.45rem 0.6rem; }
+      .hdr-call strong { font-size: 1.05rem; }
+      .hdr-call small { font-size: 0.62rem; }
+      .hdr-menu-btn { padding: 0.6rem 0.7rem; }
     }
 
     /* ========================================
@@ -981,14 +825,25 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
     /* ========================================
        FOOTER
     ======================================== */
-    .site-footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.7);
-      padding: 2rem 0;
-      font-size: 0.85rem;
-      text-align: center;
-    }
-    .site-footer a { color: var(--orange); text-decoration: none; }
+    .site-footer { background: #10263d; color: rgba(255,255,255,0.8); padding: 3rem 0 1.5rem; font-size: 0.95rem; }
+    .site-footer a { color: #fff; text-decoration: none; }
+    .site-footer a:hover { color: var(--orange); text-decoration: underline; }
+    .ftr-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 2rem; }
+    .site-footer .ftr-grid, .site-footer .ftr-areas { text-align: left; }
+    .ftr-grid h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin: 0 0 0.75rem; }
+    .ftr-grid ul { list-style: none; margin: 0; padding: 0; }
+    .ftr-grid li { margin: 0 0 0.45rem; }
+    .ftr-brand { font: 900 1.35rem 'Barlow Condensed', sans-serif; color: #fff; }
+    .ftr-call { display: inline-block; margin: 0.75rem 0; background: var(--orange); color: #fff !important; font: 900 1.4rem 'Barlow Condensed', sans-serif; padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none !important; }
+    .ftr-areas { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); line-height: 2; }
+    .ftr-areas h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin: 0 0 0.25rem; }
+    .ftr-areas a { margin-right: 1rem; white-space: nowrap; }
+    .ftr-partner { margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(255,255,255,0.06); border-radius: 10px; }
+    .ftr-partner a { color: #fdba74; text-decoration: underline; }
+    .ftr-legal { margin-top: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+    .ftr-legal a { color: rgba(255,255,255,0.75); }
+    @media (max-width: 900px) { .ftr-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .ftr-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
 
     /* ========================================
        RESPONSIVE
@@ -1020,97 +875,206 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="site-nav" id="site-nav">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        Liverpool <span>Emergency Plumber</span>
-        <small>Gas Safe · 24/7</small>
-      </a>
-      <ul class="nav-links">
-        <li><a href="/" class="nav-emergency">Emergency</a></li>
-        <li class="has-dropdown">
-          <button>Services</button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-grid">
-              <a href="/boiler-installation-liverpool">Boiler Installation<small>From £1,800 fully fitted</small></a>
-              <a href="/boiler-repair-liverpool">Boiler Repair<small>24/7 · No call-out fee</small></a>
-              <a href="/leak-detection-liverpool">Leak Detection<small>Find and fix, 24/7</small></a>
-              <a href="/emergency-gas-engineer-liverpool">Emergency Gas Engineer<small>Gas Safe · 24/7</small></a>
-              <a href="/boiler-service-liverpool">Boiler Service<small>£120 fixed price</small></a>
-              <a href="/gas-safety-certificate-liverpool">Gas Safety Certificate<small>CP12 from £80</small></a>
-              <a href="/central-heating-installation-liverpool">Central Heating<small>Full systems from £3,500</small></a>
-              <a href="/power-flushing-liverpool">Power Flushing<small>From £350</small></a>
-              <a href="/radiators-liverpool">Radiators<small>Supply and fit from £200</small></a>
-              <a href="/bathroom-fitters-liverpool">Bathroom Fitters<small>Labour from £2,500</small></a>
-              <a href="/hot-water-cylinders-liverpool">Hot Water Cylinders<small>Vented from £600</small></a>
-              <a href="/showers-liverpool">Shower Installation<small>From £200</small></a>
-              <a href="/get-started">Book a Free Survey<small>All services · All Liverpool postcodes</small></a>
+  <header class="hdr">
+    <div class="hdr-inner">
+      <a href="/" class="hdr-logo">Liverpool <span>Emergency Plumber</span><small>Gas Safe registered<span class="hdr-247"> · Open 24/7</span></small></a>
+      <ul class="hdr-links">
+        <li>
+          <button type="button">Emergencies</button>
+          <div class="hdr-dd">
+              <a href="/"><strong>Emergency Plumber 24/7</strong><small>Guaranteed 30 min response</small></a>
+              <a href="/leak-detection-liverpool"><strong>Leak Detection</strong><small>Leaks found and fixed</small></a>
+              <a href="/boiler-repair-liverpool"><strong>Boiler Repair</strong><small>No heating or hot water</small></a>
+              <a href="/emergency-gas-engineer-liverpool"><strong>Emergency Gas Engineer</strong><small>Gas Safe registered</small></a>
+          </div>
+        </li>
+        <li>
+          <button type="button">Services</button>
+          <div class="hdr-dd wide">
+            <div class="hdr-dd-cols">
+              <div>
+                <h4>Boilers and heating</h4>
+              <a href="/boiler-service-liverpool"><strong>Boiler Service</strong><small>£120 fixed price</small></a>
+              <a href="/boiler-installation-liverpool"><strong>Boiler Installation</strong><small>From £1,800 fitted</small></a>
+              <a href="/gas-safety-certificate-liverpool"><strong>Gas Safety Certificate</strong><small>CP12 from £80</small></a>
+              <a href="/radiators-liverpool"><strong>Radiators</strong><small>Repairs and new radiators</small></a>
+              <a href="/power-flushing-liverpool"><strong>Power Flushing</strong><small>From £350</small></a>
+              <a href="/central-heating-installation-liverpool"><strong>Central Heating</strong><small>Full systems from £3,500</small></a>
+              </div>
+              <div>
+                <h4>Hot water and bathrooms</h4>
+              <a href="/hot-water-cylinders-liverpool"><strong>Hot Water Cylinders</strong><small>Vented from £600</small></a>
+              <a href="/bathroom-fitters-liverpool"><strong>Bathroom Fitting</strong><small>Plumbing and tiling</small></a>
+              <a href="/showers-liverpool"><strong>Showers</strong><small>Fitted from £200</small></a>
+                <h4>Not urgent?</h4>
+              <a href="/get-started"><strong>Book a Visit</strong><small>Pick a time that suits you</small></a>
+              </div>
             </div>
           </div>
         </li>
-        <li><a href="/blog">Learning Centre</a></li>
-        <li><a href="/get-started">Get Started</a></li>
+        <li>
+          <button type="button">Areas</button>
+          <div class="hdr-dd areas">
+            <div class="hdr-area-grid">
+              <a href="/emergency-plumber-aigburth">Aigburth</a>
+              <a href="/emergency-plumber-aintree">Aintree</a>
+              <a href="/emergency-plumber-allerton">Allerton</a>
+              <a href="/emergency-plumber-anfield">Anfield</a>
+              <a href="/emergency-plumber-bootle">Bootle</a>
+              <a href="/emergency-plumber-childwall">Childwall</a>
+              <a href="/emergency-plumber-city-centre">City Centre</a>
+              <a href="/emergency-plumber-crosby">Crosby</a>
+              <a href="/emergency-plumber-everton">Everton</a>
+              <a href="/emergency-plumber-fazakerley">Fazakerley</a>
+              <a href="/emergency-plumber-formby">Formby</a>
+              <a href="/emergency-plumber-garston">Garston</a>
+              <a href="/emergency-plumber-huyton">Huyton</a>
+              <a href="/emergency-plumber-kirkby">Kirkby</a>
+              <a href="/emergency-plumber-maghull">Maghull</a>
+              <a href="/emergency-plumber-mossley-hill">Mossley Hill</a>
+              <a href="/emergency-plumber-norris-green">Norris Green</a>
+              <a href="/emergency-plumber-old-swan">Old Swan</a>
+              <a href="/emergency-plumber-southport">Southport</a>
+              <a href="/emergency-plumber-st-helens">St Helens</a>
+              <a href="/emergency-plumber-toxteth">Toxteth</a>
+              <a href="/emergency-plumber-walton">Walton</a>
+              <a href="/emergency-plumber-wavertree">Wavertree</a>
+              <a href="/emergency-plumber-west-derby">West Derby</a>
+              <a href="/emergency-plumber-wirral">Wirral</a>
+              <a href="/emergency-plumber-woolton">Woolton</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/#prices">Prices</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/blog">Advice</a></li>
       </ul>
-      <div style="display:flex;align-items:center;gap:0.75rem;">
-        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="nav-phone">
-          <a href="tel:0151 558 0334" class="call">Call Now</a>
+      <a href="tel:01515580334" class="hdr-call" aria-label="Call 0151 558 0334"><strong>0151 558 0334</strong><small>Call now, 24/7</small></a>
+      <button class="hdr-menu-btn" id="hdr-menu-btn" type="button" aria-expanded="false" aria-controls="hdr-mob">Menu</button>
+    </div>
+    <nav class="hdr-mob" id="hdr-mob" aria-label="Mobile menu">
+      <h4>Emergencies</h4>
+          <a href="/">Emergency Plumber 24/7</a>
+          <a href="/leak-detection-liverpool">Leak Detection</a>
+          <a href="/boiler-repair-liverpool">Boiler Repair</a>
+          <a href="/emergency-gas-engineer-liverpool">Emergency Gas Engineer</a>
+      <h4>Boilers and heating</h4>
+          <a href="/boiler-service-liverpool">Boiler Service</a>
+          <a href="/boiler-installation-liverpool">Boiler Installation</a>
+          <a href="/gas-safety-certificate-liverpool">Gas Safety Certificate</a>
+          <a href="/radiators-liverpool">Radiators</a>
+          <a href="/power-flushing-liverpool">Power Flushing</a>
+          <a href="/central-heating-installation-liverpool">Central Heating</a>
+      <h4>Hot water and bathrooms</h4>
+          <a href="/hot-water-cylinders-liverpool">Hot Water Cylinders</a>
+          <a href="/bathroom-fitters-liverpool">Bathroom Fitting</a>
+          <a href="/showers-liverpool">Showers</a>
+      <details>
+        <summary>Areas we cover</summary>
+        <div class="hdr-mob-areas">
+          <a href="/emergency-plumber-aigburth">Aigburth</a>
+          <a href="/emergency-plumber-aintree">Aintree</a>
+          <a href="/emergency-plumber-allerton">Allerton</a>
+          <a href="/emergency-plumber-anfield">Anfield</a>
+          <a href="/emergency-plumber-bootle">Bootle</a>
+          <a href="/emergency-plumber-childwall">Childwall</a>
+          <a href="/emergency-plumber-city-centre">City Centre</a>
+          <a href="/emergency-plumber-crosby">Crosby</a>
+          <a href="/emergency-plumber-everton">Everton</a>
+          <a href="/emergency-plumber-fazakerley">Fazakerley</a>
+          <a href="/emergency-plumber-formby">Formby</a>
+          <a href="/emergency-plumber-garston">Garston</a>
+          <a href="/emergency-plumber-huyton">Huyton</a>
+          <a href="/emergency-plumber-kirkby">Kirkby</a>
+          <a href="/emergency-plumber-maghull">Maghull</a>
+          <a href="/emergency-plumber-mossley-hill">Mossley Hill</a>
+          <a href="/emergency-plumber-norris-green">Norris Green</a>
+          <a href="/emergency-plumber-old-swan">Old Swan</a>
+          <a href="/emergency-plumber-southport">Southport</a>
+          <a href="/emergency-plumber-st-helens">St Helens</a>
+          <a href="/emergency-plumber-toxteth">Toxteth</a>
+          <a href="/emergency-plumber-walton">Walton</a>
+          <a href="/emergency-plumber-wavertree">Wavertree</a>
+          <a href="/emergency-plumber-west-derby">West Derby</a>
+          <a href="/emergency-plumber-wirral">Wirral</a>
+          <a href="/emergency-plumber-woolton">Woolton</a>
         </div>
-      </div>
-    </div>
-
-    <!-- MOBILE NAV -->
-    <div class="nav-mobile" id="nav-mobile">
-      <a href="/" class="nav-mob-emergency">Emergency Plumber 24/7</a>
-      <button class="nav-mob-toggle" id="mob-services-toggle">Services <span id="mob-arrow">▾</span></button>
-      <div class="nav-mob-sub" id="mob-services-sub">
-        <a href="/boiler-installation-liverpool">Boiler Installation</a>
-        <a href="/boiler-repair-liverpool">Boiler Repair</a>
-        <a href="/leak-detection-liverpool">Leak Detection</a>
-        <a href="/emergency-gas-engineer-liverpool">Emergency Gas Engineer</a>
-        <a href="/boiler-service-liverpool">Boiler Service</a>
-        <a href="/gas-safety-certificate-liverpool">Gas Safety Certificate</a>
-        <a href="/central-heating-installation-liverpool">Central Heating</a>
-        <a href="/power-flushing-liverpool">Power Flushing</a>
-        <a href="/radiators-liverpool">Radiators</a>
-        <a href="/bathroom-fitters-liverpool">Bathroom Fitters</a>
-        <a href="/hot-water-cylinders-liverpool">Hot Water Cylinders</a>
-        <a href="/showers-liverpool">Shower Installation</a>
-      </div>
-      <a href="/blog">Learning Centre</a>
-      <a href="/get-started">Get Started</a>
-      <a href="tel:0151 558 0334" class="nav-mob-cta">CALL 0151 558 0334</a>
-    </div>
-  </nav>
+      </details>
+      <h4>More</h4>
+      <a href="/#prices">Prices</a>
+      <a href="/#reviews">Reviews</a>
+      <a href="/get-started">Book a Visit</a>
+      <a href="/blog">Advice</a>
+      <a href="tel:01515580334" class="hdr-mob-call">Call 0151 558 0334</a>
+    </nav>
+  </header>
 
   <script>
-    const hamburger = document.getElementById('nav-hamburger');
-    const mobileNav = document.getElementById('nav-mobile');
-    const mobServicesToggle = document.getElementById('mob-services-toggle');
-    const mobServicesSub = document.getElementById('mob-services-sub');
-    const mobArrow = document.getElementById('mob-arrow');
-
-    hamburger.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-    });
-
-    mobServicesToggle.addEventListener('click', () => {
-      mobServicesSub.classList.toggle('open');
-      mobArrow.textContent = mobServicesSub.classList.contains('open') ? '▴' : '▾';
+    const hdrBtn = document.getElementById('hdr-menu-btn');
+    const hdrMob = document.getElementById('hdr-mob');
+    hdrBtn.addEventListener('click', () => {
+      const open = hdrMob.classList.toggle('open');
+      hdrBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      hdrBtn.textContent = open ? 'Close' : 'Menu';
     });
   </script>
 
+  <main id="main">
   <slot />
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>Liverpool Emergency Plumber · 29 Park Road, Kirkby, L32 2AL · <a href="tel:0151 558 0334">0151 558 0334</a> · <a href="mailto:emergencyplumberliverpool@gmail.com">emergencyplumberliverpool@gmail.com</a></p>
-      <p style="margin-top:0.5rem;">Gas Safe Registered · Serving Liverpool, Sefton, Knowsley, Wirral and St Helens</p>
-      <p style="margin-top:0.5rem;font-size:0.78rem;color:rgba(255,255,255,0.4);">&copy; 2026 Liverpool Emergency Plumber. All rights reserved. · <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);">Gas Safe Registered</a> · Verify our registration at gassaferegister.co.uk</p>
+      <div class="ftr-grid">
+        <div>
+          <div class="ftr-brand">Liverpool Emergency Plumber</div>
+          <p style="margin:0.5rem 0 0;">James is Gas Safe registered and does every job himself. Guaranteed 30 minute response across Liverpool. No call-out fee.</p>
+          <a href="tel:01515580334" class="ftr-call">0151 558 0334</a>
+          <p style="margin:0;"><a href="mailto:emergencyplumberliverpool@gmail.com">emergencyplumberliverpool@gmail.com</a><br />29 Park Road, Kirkby, L32 2AL</p>
+        </div>
+        <div>
+          <h3>Emergencies</h3>
+          <ul>
+          <li><a href="/">Emergency Plumber 24/7</a></li>
+          <li><a href="/leak-detection-liverpool">Leak Detection</a></li>
+          <li><a href="/boiler-repair-liverpool">Boiler Repair</a></li>
+          <li><a href="/emergency-gas-engineer-liverpool">Emergency Gas Engineer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+          <li><a href="/boiler-service-liverpool">Boiler Service</a></li>
+          <li><a href="/boiler-installation-liverpool">Boiler Installation</a></li>
+          <li><a href="/gas-safety-certificate-liverpool">Gas Safety Certificate</a></li>
+          <li><a href="/radiators-liverpool">Radiators</a></li>
+          <li><a href="/power-flushing-liverpool">Power Flushing</a></li>
+          <li><a href="/central-heating-installation-liverpool">Central Heating</a></li>
+          <li><a href="/hot-water-cylinders-liverpool">Hot Water Cylinders</a></li>
+          <li><a href="/bathroom-fitters-liverpool">Bathroom Fitting</a></li>
+          <li><a href="/showers-liverpool">Showers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Help and advice</h3>
+          <ul>
+          <li><a href="/#prices">Prices</a></li>
+          <li><a href="/#reviews">Reviews</a></li>
+          <li><a href="/get-started">Book a visit</a></li>
+          <li><a href="/blog">Advice and guides</a></li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Check Gas Safe Register</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ftr-areas">
+        <h3>Areas we cover</h3>
+        <a href="/emergency-plumber-aigburth">Aigburth</a> <a href="/emergency-plumber-aintree">Aintree</a> <a href="/emergency-plumber-allerton">Allerton</a> <a href="/emergency-plumber-anfield">Anfield</a> <a href="/emergency-plumber-bootle">Bootle</a> <a href="/emergency-plumber-childwall">Childwall</a> <a href="/emergency-plumber-city-centre">City Centre</a> <a href="/emergency-plumber-crosby">Crosby</a> <a href="/emergency-plumber-everton">Everton</a> <a href="/emergency-plumber-fazakerley">Fazakerley</a> <a href="/emergency-plumber-formby">Formby</a> <a href="/emergency-plumber-garston">Garston</a> <a href="/emergency-plumber-huyton">Huyton</a> <a href="/emergency-plumber-kirkby">Kirkby</a> <a href="/emergency-plumber-maghull">Maghull</a> <a href="/emergency-plumber-mossley-hill">Mossley Hill</a> <a href="/emergency-plumber-norris-green">Norris Green</a> <a href="/emergency-plumber-old-swan">Old Swan</a> <a href="/emergency-plumber-southport">Southport</a> <a href="/emergency-plumber-st-helens">St Helens</a> <a href="/emergency-plumber-toxteth">Toxteth</a> <a href="/emergency-plumber-walton">Walton</a> <a href="/emergency-plumber-wavertree">Wavertree</a> <a href="/emergency-plumber-west-derby">West Derby</a> <a href="/emergency-plumber-wirral">Wirral</a> <a href="/emergency-plumber-woolton">Woolton</a>
+      </div>
+      <div class="ftr-partner">
+        <strong style="color:#fff;">Electrical problem?</strong> Electrics are handled by our NICEIC partner firm, <a href="https://www.idealelectricalsolutions.co.uk">Ideal Electrical Solutions</a>: <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician">emergency electrician Liverpool</a>, <a href="https://www.idealelectricalsolutions.co.uk/eicr-liverpool">EICR Liverpool</a> and <a href="https://www.idealelectricalsolutions.co.uk/house-rewire-liverpool">house rewires</a>.
+      </div>
+      <p class="ftr-legal">&copy; 2026 Liverpool Emergency Plumber · Gas Safe registered · <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Verify at gassaferegister.co.uk</a></p>
     </div>
   </footer>
 
