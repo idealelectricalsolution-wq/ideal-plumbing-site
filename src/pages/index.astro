@@ -4,13 +4,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const TEL = 'tel:01515580334';
 const PHONE = '0151 558 0334';
 
+const ICONS = {
+  drop: '<path d="M12 2.7s-6.5 7-6.5 11.8a6.5 6.5 0 0 0 13 0C18.5 9.7 12 2.7 12 2.7z"/>',
+  ceiling: '<path d="M3 5h18"/><path d="M8 9.5c0 1.4-1.2 2.6-1.2 3.6a1.2 1.2 0 0 0 2.4 0c0-1-1.2-2.2-1.2-3.6z"/><path d="M16 12c0 1.6-1.5 3-1.5 4.2a1.5 1.5 0 0 0 3 0c0-1.2-1.5-2.6-1.5-4.2z"/><path d="M12 5v3"/>',
+  flame: '<path d="M12 2.5c.5 3.5 5.5 5.5 5.5 11a5.5 5.5 0 0 1-11 0c0-2.6 1.4-4 2.5-5.5.3 2 1.3 3 2.3 3.2C10.8 8 11 5 12 2.5z"/>',
+  thermo: '<path d="M14 14.8V4.5a2 2 0 0 0-4 0v10.3a4 4 0 1 0 4 0z"/><path d="M4 4l16 16"/>',
+  radiator: '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7.5 6v12M12 6v12M16.5 6v12M5 18v2M19 18v2"/>',
+  tap: '<path d="M3 9h9a5 5 0 0 1 5 5v1"/><path d="M8 9V5M5 5h6"/><path d="M17 18.5c0 .8-.6 1.5-1.2 2.5h2.4c-.6-1-1.2-1.7-1.2-2.5z"/>',
+};
 const problems = [
-  { icon: '💧', title: 'Leak or burst pipe', text: 'Water pouring or dripping from a pipe, joint or fitting. Turn off your stopcock, then call.', href: '/leak-detection-liverpool', link: 'Leak detection and repair', urgent: true },
-  { icon: '🏠', title: 'Water through the ceiling', text: 'A wet patch or drip from above. We trace where it is coming from and stop it.', href: '/leak-detection-liverpool', link: 'How we find hidden leaks', urgent: true },
-  { icon: '🔥', title: 'Boiler broken or no heating', text: 'Error code, no pressure, or the boiler will not fire. Gas Safe registered boiler repair.', href: '/boiler-repair-liverpool', link: 'Boiler repair Liverpool', urgent: true },
-  { icon: '🚿', title: 'No hot water', text: 'Cold taps and showers. Usually a boiler or cylinder fault. James finds it and fixes it.', href: '/boiler-repair-liverpool', link: 'Boiler repair Liverpool', urgent: false },
-  { icon: '♨️', title: 'Radiator leaking', text: 'Drips from a valve, pipe or the radiator itself. Fixed before it damages your floor.', href: '/radiators-liverpool', link: 'Radiator repairs', urgent: false },
-  { icon: '🚰', title: 'Sink or tap leaking', text: 'Leaks under the sink, dripping taps and broken fittings, found and fixed.', href: '/leak-detection-liverpool', link: 'Leak repairs', urgent: false },
+  { icon: 'drop', title: 'Leak or burst pipe', text: 'Water pouring or dripping', href: '/leak-detection-liverpool' },
+  { icon: 'ceiling', title: 'Water through ceiling', text: 'Drips or a wet patch above', href: '/leak-detection-liverpool' },
+  { icon: 'flame', title: 'Boiler broken', text: 'Error code, no heating', href: '/boiler-repair-liverpool' },
+  { icon: 'thermo', title: 'No hot water', text: 'Cold taps and showers', href: '/boiler-repair-liverpool' },
+  { icon: 'radiator', title: 'Radiator leaking', text: 'Valve, pipe or radiator', href: '/radiators-liverpool' },
+  { icon: 'tap', title: 'Sink or tap leaking', text: 'Under the sink or dripping', href: '/leak-detection-liverpool' },
 ];
 
 const reviews = [
@@ -195,24 +203,56 @@ const faqSchema = {
   <section class="hp-sec hp-sec-tint" id="emergencies">
     <div class="hp-wrap">
       <h2>What is the problem?</h2>
-      <p class="hp-sub">Pick what is happening, then call. James fixes all of these across Liverpool.</p>
-      <div class="hp-problems">
+      <p class="hp-sub">James fixes all of these across Liverpool. Tap yours to see how, or just call.</p>
+      <div class="hp-tiles">
         {problems.map((p) => (
-          <div class={`hp-problem${p.urgent ? ' is-urgent' : ''}`}>
-            <div class="hp-problem-top">
-              <span class="hp-problem-icon" aria-hidden="true">{p.icon}</span>
-              <h3>{p.title}</h3>
-            </div>
-            <p>{p.text}</p>
-            <div class="hp-problem-actions">
-              <a href={TEL} class="hp-btn hp-btn-orange">Call {PHONE}</a>
-              <a href={p.href} class="hp-more">{p.link} →</a>
-            </div>
-          </div>
+          <a href={p.href} class="hp-tile">
+            <svg class="hp-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={ICONS[p.icon]} />
+            <strong>{p.title}</strong>
+            <span>{p.text}</span>
+          </a>
         ))}
       </div>
+      <a href={TEL} class="hp-call-big hp-call-center">
+        <span class="hp-call-label">Whatever it is, call James</span>
+        <span class="hp-call-num">{PHONE}</span>
+      </a>
       <div class="hp-gas">
         <strong>Smell gas?</strong> Get out, do not use switches, and call the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a> first. Once it is made safe, our <a href="/emergency-gas-engineer-liverpool">emergency gas engineer</a> can repair the fault.
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICES + HOW IT WORKS -->
+  <section class="hp-sec" id="prices">
+    <div class="hp-wrap hp-two hp-two-prices">
+      <div>
+        <h2>Emergency plumber prices in Liverpool</h2>
+        <p class="hp-sub">Fixed hourly rates. No call-out fee. Written quote before any work starts.</p>
+        <table class="hp-prices">
+          <thead><tr><th scope="col">When</th><th scope="col">Per hour</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Weekdays<span>Monday to Friday, 9am to 5pm</span></th><td>£80</td></tr>
+            <tr><th scope="row">Weekends<span>Saturday and Sunday, 9am to 1pm</span></th><td>£120</td></tr>
+            <tr><th scope="row">Out of hours<span>Nights and bank holidays, 24/7</span></th><td>£150</td></tr>
+          </tbody>
+        </table>
+        <p class="hp-price-boiler"><strong>Boiler fault diagnosis: £95.</strong> <a href="/boiler-repair-liverpool">Boiler repair prices →</a></p>
+        <ul class="hp-ticks">
+          <li>1 hour minimum, then 30 minute blocks</li>
+          <li>Parts at cost</li>
+          <li>12-month workmanship guarantee</li>
+          <li>Same rates for businesses</li>
+        </ul>
+      </div>
+      <div class="hp-how">
+        <h3>What happens when you call</h3>
+        <ol class="hp-steps">
+          <li><strong>You call {PHONE}.</strong> Tell us what is happening. We talk you through making it safe, like turning off your water.</li>
+          <li><strong>James comes to you.</strong> Guaranteed within 30 minutes across L1 to L40. Average arrival 28 minutes.</li>
+          <li><strong>It is fixed.</strong> You agree the price first. James repairs it, tests it and cleans up before he leaves.</li>
+        </ol>
+        <a href={TEL} class="hp-btn hp-btn-orange hp-btn-block">Call {PHONE}</a>
       </div>
     </div>
   </section>
@@ -242,32 +282,106 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- PRICES -->
-  <section class="hp-sec hp-sec-tint" id="prices">
-    <div class="hp-wrap hp-narrow">
-      <h2>Emergency plumber prices in Liverpool</h2>
-      <p class="hp-sub">Fixed hourly rates. No call-out fee. You get a written quote before any work starts.</p>
-      <table class="hp-prices">
-        <thead><tr><th scope="col">When</th><th scope="col">Hourly rate</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Weekdays<span>Monday to Friday, 9am to 5pm</span></th><td>£80</td></tr>
-          <tr><th scope="row">Weekends<span>Saturday and Sunday, 9am to 1pm</span></th><td>£120</td></tr>
-          <tr><th scope="row">Out of hours<span>Nights and bank holidays, 24/7</span></th><td>£150</td></tr>
-          <tr><th scope="row">Boiler fault diagnosis<span>Gas Safe registered</span></th><td>£95</td></tr>
-        </tbody>
-      </table>
-      <ul class="hp-ticks">
-        <li>1 hour minimum, then charged in 30 minute blocks</li>
-        <li>Parts at cost</li>
-        <li>12-month workmanship guarantee</li>
-        <li>£2 million public liability insurance</li>
-      </ul>
-      <a href={TEL} class="hp-btn hp-btn-orange hp-btn-wide">Call {PHONE} for a price</a>
+  <!-- WHILE YOU WAIT -->
+  <section class="hp-sec hp-sec-tint" id="while-you-wait">
+    <div class="hp-wrap">
+      <h2>What to do while you wait</h2>
+      <p class="hp-sub">James is on his way. These steps stop the damage getting worse.</p>
+      <div class="hp-wait">
+        <div class="hp-wait-card">
+          <h3>Leak or burst pipe</h3>
+          <ol>
+            <li>Turn off the water at the stopcock. It is usually under the kitchen sink, in a hallway cupboard or under the stairs. Turn it clockwise.</li>
+            <li>Switch off the boiler and any immersion heater.</li>
+            <li>Turn on the cold taps to drain the pipes.</li>
+            <li>Catch drips with buckets and towels. Move valuables away.</li>
+            <li>Take photos of the damage for your insurer.</li>
+          </ol>
+        </div>
+        <div class="hp-wait-card hp-wait-warn">
+          <h3>Water near electrics</h3>
+          <ol>
+            <li>Do not touch switches, sockets or light fittings that are wet.</li>
+            <li>If water is coming through a light fitting, turn off the electricity at the fuse box if it is safe to reach.</li>
+            <li>Do not turn it back on until an electrician has checked it. Our partner <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician">emergency electrician</a> can help.</li>
+          </ol>
+        </div>
+        <div class="hp-wait-card">
+          <h3>Boiler stopped working</h3>
+          <ol>
+            <li>Check the pressure gauge. It should read between 1 and 1.5 bar.</li>
+            <li>If it is below 1 bar, you can top it up with the filling loop if you know how.</li>
+            <li>Note any error code on the display. It helps James bring the right part.</li>
+            <li>Never take the boiler casing off. Only a Gas Safe registered engineer should work inside it.</li>
+          </ol>
+        </div>
+        <div class="hp-wait-card hp-wait-danger">
+          <h3>Smell of gas</h3>
+          <ol>
+            <li>Do not use switches, flames or anything that could spark.</li>
+            <li>Open doors and windows.</li>
+            <li>Turn off the gas at the meter if it is safe to do so.</li>
+            <li>Get everyone outside and call the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a>.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOILER REPAIR + LEAK DETECTION -->
+  <section class="hp-sec" id="boilers-and-leaks">
+    <div class="hp-wrap">
+      <div class="hp-twin">
+        <article class="hp-feature hp-feature-boiler">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/boiler-smart-thermostat-fitted-480.webp 480w, /images/jobs/boiler-smart-thermostat-fitted-960.webp 960w" sizes="(max-width: 900px) 100vw, 540px" />
+            <img src="/images/jobs/boiler-smart-thermostat-fitted-960.jpg" alt="Boiler and controls fitted by James in a Liverpool home" loading="lazy" decoding="async" width="960" height="1280" />
+          </picture>
+          <div class="hp-feature-body">
+            <p class="hp-kicker">Gas Safe registered</p>
+            <h2>Boiler repair in Liverpool</h2>
+            <p>No heating, no hot water, an error code or a boiler that keeps losing pressure. James is Gas Safe registered and repairs boilers across Liverpool 24/7, with the same guaranteed 30 minute response for breakdowns.</p>
+            <ul class="hp-ticks hp-ticks-one">
+              <li><strong>£95</strong> boiler fault diagnosis, or from £80 an hour</li>
+              <li>No call-out fee</li>
+              <li>Pressure, pilot light, pump and PCB faults</li>
+              <li>Boiler beyond repair? New boilers from £1,800 with up to a 10 year warranty</li>
+            </ul>
+            <div class="hp-feature-actions">
+              <a href={TEL} class="hp-btn hp-btn-orange">Call {PHONE}</a>
+              <a href="/boiler-repair-liverpool" class="hp-more">Boiler repair Liverpool →</a>
+            </div>
+            <p class="hp-feature-links">Also: <a href="/boiler-service-liverpool">boiler service £120</a> · <a href="/boiler-installation-liverpool">new boilers</a> · <a href="/gas-safety-certificate-liverpool">gas safety certificates</a></p>
+          </div>
+        </article>
+        <article class="hp-feature">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/water-main-connector-repair-480.webp 480w, /images/jobs/water-main-connector-repair-960.webp 960w" sizes="(max-width: 900px) 100vw, 540px" />
+            <img src="/images/jobs/water-main-connector-repair-960.jpg" alt="Leaking water main connector found and repaired under a bath" loading="lazy" decoding="async" width="960" height="720" />
+          </picture>
+          <div class="hp-feature-body">
+            <p class="hp-kicker">Hidden leaks found</p>
+            <h2>Leak detection in Liverpool</h2>
+            <p>A damp patch on the ceiling, a rising water bill or a boiler that keeps losing pressure can all mean a hidden leak. James traces the pipework, lifts floorboards and pressure tests the system to find it.</p>
+            <ul class="hp-ticks hp-ticks-one">
+              <li>From £80 an hour, no call-out fee</li>
+              <li>Under tiles or laminate? A neat inspection hole in the ceiling below instead of lifting the floor</li>
+              <li>Leaks under sinks, baths, radiators and floors</li>
+              <li>Leak reports for your insurer</li>
+            </ul>
+            <div class="hp-feature-actions">
+              <a href={TEL} class="hp-btn hp-btn-orange">Call {PHONE}</a>
+              <a href="/leak-detection-liverpool" class="hp-more">Leak detection Liverpool →</a>
+            </div>
+            <p class="hp-feature-links">Also: <a href="/radiators-liverpool">radiators</a> · <a href="/hot-water-cylinders-liverpool">hot water cylinders</a> · <a href="/bathroom-fitters-liverpool">bathrooms</a></p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- RECENT JOBS -->
-  <section class="hp-sec" id="jobs">
+  <section class="hp-sec hp-sec-tint" id="jobs">
     <div class="hp-wrap">
       <h2>Recent jobs by James</h2>
       <p class="hp-sub">Real photos from Liverpool homes. No stock images.</p>
@@ -285,49 +399,25 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="hp-sec hp-sec-navy">
-    <div class="hp-wrap">
-      <h2>What happens when you call</h2>
-      <ol class="hp-steps">
-        <li><strong>You call {PHONE}.</strong> Tell us what is happening. We give you safety tips on the phone, like where to turn off your water.</li>
-        <li><strong>James comes to you.</strong> Guaranteed 30 minute response across Liverpool L1 to L40, with the most common parts in the van.</li>
-        <li><strong>It is fixed.</strong> You get a clear price before work starts. James repairs the fault, tests it and cleans up before he leaves.</li>
-      </ol>
-      <a href={TEL} class="hp-btn hp-btn-orange hp-btn-wide">Call {PHONE}</a>
-    </div>
-  </section>
-
-  <!-- WHY US + LEAK DETECTION -->
+  <!-- WHY US -->
   <section class="hp-sec">
     <div class="hp-wrap hp-two">
       <div>
         <h2>Why Liverpool chooses us</h2>
         <ul class="hp-why">
-          <li><strong>One plumber, every job.</strong> James does every job himself. You know exactly who is coming to your home.</li>
+          <li><strong>One plumber, every job.</strong> James does every job himself, sometimes with his labourer. You know exactly who is coming to your home.</li>
           <li><strong>Gas Safe registered.</strong> Boilers, gas cookers and hobs. <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Check the Gas Safe Register</a>.</li>
-          <li><strong>Guaranteed 30 minute response.</strong> Across every Liverpool postcode from L1 to L40.</li>
-          <li><strong>Clear prices.</strong> From £80 an hour, no call-out fee, written quote first.</li>
-          <li><strong>Guaranteed work.</strong> 12 months on workmanship. New boilers come with up to a 10 year warranty.</li>
+          <li><strong>Guaranteed 30 minute response.</strong> Average arrival 28 minutes, across every postcode from L1 to L40.</li>
         </ul>
       </div>
-      <div class="hp-card">
-        <h2>Leak detection in Liverpool</h2>
-        <p>Not every leak is easy to see. A damp patch on the ceiling, a rising water bill or a boiler that keeps losing pressure can all mean a hidden leak.</p>
-        <p>James finds it by tracing the pipework, lifting floorboards and pressure testing. Under tiled or laminate floors he can cut a neat inspection hole in the ceiling below instead of lifting the floor. Then he repairs it, and we can give you a leak report for your insurer.</p>
-        <a href="/leak-detection-liverpool" class="hp-more">More about leak detection →</a>
+      <div>
+        <div class="hp-h2-spacer" aria-hidden="true"></div>
+        <ul class="hp-why">
+          <li><strong>Clear prices.</strong> From £80 an hour, no call-out fee, written quote first.</li>
+          <li><strong>Guaranteed work.</strong> 12 months on workmanship and £2 million public liability insurance.</li>
+          <li><strong>Homes and businesses.</strong> Commercial properties at the same rates as homes.</li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- AREAS -->
-  <section class="hp-sec hp-sec-tint" id="areas">
-    <div class="hp-wrap">
-      <h2>Plumber near me in Liverpool</h2>
-      <p class="hp-sub">We cover all Liverpool postcodes from L1 to L40, plus Formby, Southport, St Helens and the Wirral. Pick your area:</p>
-      <ul class="hp-areas">
-        {areas.map((a) => <li><a href={`/emergency-plumber-${a}`}>{areaName(a)}</a></li>)}
-      </ul>
     </div>
   </section>
 
@@ -343,6 +433,17 @@ const faqSchema = {
           </details>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="hp-sec hp-sec-tint" id="areas">
+    <div class="hp-wrap">
+      <h2>Plumber near me in Liverpool</h2>
+      <p class="hp-sub">We cover all Liverpool postcodes from L1 to L40, plus Formby, Southport, St Helens and the Wirral. Pick your area:</p>
+      <ul class="hp-areas">
+        {areas.map((a) => <li><a href={`/emergency-plumber-${a}`}>{areaName(a)}</a></li>)}
+      </ul>
     </div>
   </section>
 
@@ -494,5 +595,54 @@ const faqSchema = {
     .hp-ticks { grid-template-columns: 1fr; }
     .hp-call-big { max-width: none; }
     .hp-prices td { font-size: 1.7rem; }
+  }
+  /* v2 */
+  .hp-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+  .hp-tile { display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; background: #fff; border: 2px solid var(--border); border-radius: 14px; padding: 1rem; text-decoration: none; color: var(--navy); transition: border-color 0.15s, transform 0.15s; min-height: 118px; }
+  .hp-tile:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .hp-tile-icon { width: 34px; height: 34px; color: var(--orange-dark); margin-bottom: 0.35rem; }
+  .hp-tile strong { font-size: 1.08rem; font-weight: 900; line-height: 1.2; }
+  .hp-tile span { font-size: 0.92rem; color: #475569; line-height: 1.35; }
+  .hp-call-center { margin: 1.5rem auto 0; }
+  .hp-two-prices { grid-template-columns: 1.1fr 0.9fr; }
+  .hp-price-boiler { margin: 1rem 0 0; font-size: 1.05rem; color: #1e293b; }
+  .hp-price-boiler a { color: var(--orange-dark); font-weight: 800; }
+  .hp-how { background: var(--navy); color: #fff; border-radius: 18px; padding: 1.5rem; }
+  .hp-how h3 { font: 900 1.7rem 'Barlow Condensed', sans-serif; color: #fff; margin: 0; }
+  .hp-how .hp-steps { grid-template-columns: 1fr; margin-top: 1rem; }
+  .hp-how .hp-steps li { padding: 1rem; display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 0.8rem; }
+  .hp-how .hp-steps li::before { margin: 0; grid-row: span 2; }
+  .hp-btn-block { display: flex; width: 100%; margin-top: 1rem; font-size: 1.35rem; min-height: 56px; }
+  .hp-wait { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .hp-wait-card { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--navy-mid); border-radius: 12px; padding: 1.25rem 1.25rem 0.5rem; }
+  .hp-wait-warn { border-left-color: var(--amber); }
+  .hp-wait-danger { border-left-color: var(--red); }
+  .hp-wait-card h3, .hp-feature h2 { text-align: left; }
+  .hp-wait-card h3 { font-size: 1.2rem; font-weight: 900; color: var(--navy); margin: 0 0 0.6rem; }
+  .hp-wait-card ol { margin: 0 0 0.75rem; padding-left: 1.3rem; }
+  .hp-wait-card li { margin: 0 0 0.55rem; font-size: 1rem; line-height: 1.55; color: #1e293b; }
+  .hp-wait-card a { color: var(--navy-mid); font-weight: 800; text-decoration: underline; }
+  .hp-twin { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .hp-feature { background: #fff; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 16px rgba(15,23,42,0.06); }
+  .hp-feature-boiler { border-top: 5px solid var(--orange); }
+  .hp-feature img { width: 100%; height: 240px; object-fit: cover; }
+  .hp-feature-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+  .hp-feature-body p { font-size: 1.02rem; line-height: 1.65; color: #1e293b; margin: 0 0 1rem; }
+  .hp-kicker { font-size: 0.8rem !important; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-dark) !important; margin: 0 0 0.3rem !important; }
+  .hp-ticks-one { grid-template-columns: 1fr; margin: 0 0 1.25rem; }
+  .hp-feature-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: auto; }
+  .hp-feature-links { font-size: 0.95rem !important; color: #475569 !important; margin: 1rem 0 0 !important; }
+  .hp-feature-links a { color: var(--navy-mid); font-weight: 700; }
+  .hp-h2-spacer { height: 3.4rem; }
+  @media (max-width: 900px) {
+    .hp-two-prices, .hp-twin, .hp-wait { grid-template-columns: 1fr; }
+    .hp-h2-spacer { display: none; }
+  }
+  @media (max-width: 600px) {
+    .hp-tiles { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .hp-tile { padding: 0.85rem; min-height: 0; }
+    .hp-tile strong { font-size: 1rem; }
+    .hp-feature img { height: 200px; }
+    .hp-review:nth-child(n+4) { display: none; }
   }
 </style>
