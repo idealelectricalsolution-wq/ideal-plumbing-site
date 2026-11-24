@@ -52,6 +52,7 @@ const schemaService = {
   offers: [
     { '@type': 'Offer', name: 'Boiler fault diagnosis', price: '95', priceCurrency: 'GBP' },
     { '@type': 'Offer', name: 'Boiler repair, weekdays 9am to 5pm, per hour, no call-out fee', price: '80', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Boiler repair, weekends 9am to 1pm, per hour, no call-out fee', price: '120', priceCurrency: 'GBP' },
     { '@type': 'Offer', name: 'Emergency boiler repair, evenings, nights and bank holidays, per hour', price: '150', priceCurrency: 'GBP' },
   ],
 };
@@ -125,6 +126,12 @@ const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;pad
         <div style={card+'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">EVENINGS, NIGHTS, BANK HOLIDAYS</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£150<span style="font-size:1rem;"> an hour</span></div></div>
         <div style={card+'border-top:4px solid #16a34a;text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:#16a34a;letter-spacing:0.08em;">BOOKED FAULT DIAGNOSIS</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£95</div></div>
       </div>
+      <ul class="br-trust">
+        <li><strong>30 min</strong>guaranteed response, 28 min average</li>
+        <li><strong>12 months</strong>workmanship guarantee</li>
+        <li><strong>£2 million</strong>public liability insurance</li>
+        <li><strong>One engineer</strong>James does every job himself</li>
+      </ul>
     </div>
   </section>
 
@@ -192,10 +199,20 @@ const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;pad
 
   <!-- REPAIR OR REPLACE -->
   <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container" style="max-width:760px;">
+    <div class="container br-rr">
+      <figure class="br-photo">
+        <picture>
+          <source type="image/webp" srcset="/images/jobs/boiler-smart-thermostat-fitted-480.webp 480w, /images/jobs/boiler-smart-thermostat-fitted-960.webp 960w" sizes="(max-width: 800px) 100vw, 320px" />
+          <img src="/images/jobs/boiler-smart-thermostat-fitted-960.jpg" alt="Boiler and smart thermostat receiver fitted by James in a Liverpool home" loading="lazy" decoding="async" width="960" height="1280" />
+        </picture>
+        <figcaption>A recent job: boiler controls fitted by James.</figcaption>
+      </figure>
+      <div>
       <h2>Repair or Replace Your Boiler?</h2>
-      <p style="line-height:1.75;">Most boilers under about 10 years old are worth repairing. If yours is older, breaks down every winter, or the part would cost a big share of a new one, we will say so honestly and price both options. See <a href="/boiler-installation-liverpool" style="font-weight:700;">new boiler installation in Liverpool</a>. On some benefits you may qualify for a free boiler, explained in our <a href="/blog/eco4-scheme-liverpool-free-boiler" style="font-weight:700;">ECO4 free boiler guide</a>.</p>
+      <p style="line-height:1.75;">Most boilers under about 10 years old are worth repairing. If yours is older, breaks down every winter, or the part would cost a big share of a new one, we will say so honestly and price both options.</p>
+      <p style="line-height:1.75;">If it is time for a new one, James fits <a href="/boiler-installation-liverpool" style="font-weight:700;">new boilers in Liverpool</a> with up to a 10 year manufacturer warranty. Still got an old back boiler behind the fire? James removes it and replaces it with a modern combi boiler.</p>
       <p style="line-height:1.75;margin-bottom:0;">A yearly <a href="/boiler-service-liverpool" style="font-weight:700;">boiler service</a> catches most faults before they leave you without heating, and keeps the manufacturer's warranty valid. Radiators cold at the bottom? A <a href="/power-flushing-liverpool" style="font-weight:700;">power flush</a> clears the sludge.</p>
+      </div>
     </div>
   </section>
 
@@ -235,3 +252,20 @@ const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;pad
 
   </div>
 </BaseLayout>
+
+<style>
+  .br-trust { list-style: none; padding: 0; margin: 1.25rem auto 0; max-width: 900px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+  .br-trust li { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 0.75rem 0.9rem; font-size: 0.92rem; color: #334155; line-height: 1.4; text-align: left; }
+  .br-trust strong { display: block; color: var(--navy); font-size: 1.1rem; }
+  .br-rr { max-width: 960px; display: grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: start; }
+  .br-photo { margin: 0; }
+  .br-rr h2 { text-align: left; }
+  .br-photo img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(15,23,42,0.15); }
+  .br-photo figcaption { font-size: 0.88rem; color: #475569; margin-top: 0.5rem; }
+  @media (max-width: 800px) {
+    .br-trust { grid-template-columns: 1fr 1fr; }
+    .br-rr { grid-template-columns: 1fr; }
+    .br-photo { max-width: none; }
+    .br-photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 35%; }
+  }
+</style>
