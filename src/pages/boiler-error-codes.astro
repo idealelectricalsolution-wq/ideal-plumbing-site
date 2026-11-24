@@ -82,13 +82,14 @@ const crumbs = {
   <section class="ec-hero" id="hero">
     <div class="ec-wrap">
       <p class="ec-crumb"><a href="/">Home</a> › <a href="/boiler-repair-liverpool">Boiler repair</a> › Error codes</p>
+      <p class="ec-kicker">Boiler error code experts in Liverpool</p>
       <h1>Boiler error codes explained</h1>
       <p class="ec-lead">What the code on your boiler means, what you can safely try yourself, and when to call a Gas Safe registered engineer. For Baxi, Ideal, Worcester Bosch, Vaillant and Glow-worm boilers.</p>
       <nav class="ec-jump" aria-label="Jump to brand">
         {brands.map((b) => <a href={`#${b.id}`}>{b.name}</a>)}
       </nav>
       <div class="ec-call">
-        <p><strong>Code keeps coming back?</strong> James repairs boilers across Liverpool 24/7. No call-out fee, guaranteed 30 minute response.</p>
+        <p><strong>Code keeps coming back?</strong> Error codes are our speciality. James repairs boilers across Liverpool 24/7. No call-out fee, guaranteed 30 minute response.</p>
         <a href={TEL} class="ec-btn">Call {PHONE}</a>
       </div>
     </div>
@@ -153,6 +154,7 @@ const crumbs = {
   .ec-crumb { font-size: 0.9rem; color: #475569; margin: 0 0 0.75rem; }
   .ec-crumb a { color: var(--navy-mid); }
   .ec-hero h1 { font: 900 clamp(2.3rem, 8vw, 3.4rem)/1 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.9rem; text-align: left; }
+  .ec-kicker { display: inline-block; background: var(--navy); color: #fff; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 999px; padding: 0.35rem 0.85rem; margin: 0 0 0.8rem; }
   .ec-lead { font-size: 1.15rem; line-height: 1.6; color: #1e293b; margin: 0 0 1.25rem; }
   .ec-jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
   .ec-jump a { background: #fff; border: 2px solid var(--border); border-radius: 999px; padding: 0.5rem 1rem; font-weight: 800; color: var(--navy); text-decoration: none; }
