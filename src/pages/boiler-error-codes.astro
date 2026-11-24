@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const brands = [
+  {
+    id: 'baxi', name: 'Baxi', models: 'Baxi 400, 600 and 800 combi and system boilers',
+    codes: [
+      { code: 'E119', means: 'Water pressure too low.', try: 'Check the pressure gauge. If it is below 1 bar, top it up to between 1 and 1.5 bar with the filling loop, then reset.', call: 'If the pressure keeps dropping, there is a leak somewhere in the system or a faulty pressure relief valve.' },
+      { code: 'E133', means: 'The boiler tried to light but did not detect a flame.', try: 'Check your gas is on at the meter and other gas appliances work, and that a prepayment meter has credit. In freezing weather, check the plastic condensate pipe outside is not frozen. Then reset once.', call: 'If it locks out again, the fault is usually the ignition, the gas valve or a blocked condensate system.' },
+      { code: 'E160', means: 'Fan fault.', try: 'Reset once.', call: 'If it comes back, the fan or its wiring needs checking by a Gas Safe registered engineer.' },
+    ],
+  },
+  {
+    id: 'ideal', name: 'Ideal', models: 'Ideal Logic, Vogue and Independent boilers',
+    codes: [
+      { code: 'F1', means: 'Water pressure too low.', try: 'Top the pressure up to between 1 and 1.5 bar with the filling loop, then reset.', call: 'If you have to keep topping it up, there is a leak or a faulty valve.' },
+      { code: 'F2', means: 'The flame was lost.', try: 'Check the gas supply and, in cold weather, the condensate pipe outside. Then reset once.', call: 'If it keeps happening, the gas pressure, flame sensor or condensate system needs checking.' },
+      { code: 'L2', means: 'Ignition lockout. The boiler failed to light after several tries.', try: 'Check the gas is on and the condensate pipe is not frozen, then reset once.', call: 'Repeated L2 lockouts usually point to the ignition electrode, gas valve or PCB.' },
+    ],
+  },
+  {
+    id: 'worcester', name: 'Worcester Bosch', models: 'Worcester Bosch Greenstar boilers',
+    codes: [
+      { code: 'EA 227', means: 'No flame detected after the boiler tried to light.', try: 'Check the gas supply and the condensate pipe outside, then press reset once.', call: 'If it keeps showing EA, the ignition or flame sensing needs a Gas Safe registered engineer.' },
+      { code: 'CE 207', means: 'Water pressure too low.', try: 'Top the pressure up to between 1 and 1.5 bar using the filling key or loop.', call: 'Pressure that keeps dropping means a leak somewhere in the heating system.' },
+    ],
+  },
+  {
+    id: 'vaillant', name: 'Vaillant', models: 'Vaillant ecoTEC boilers',
+    codes: [
+      { code: 'F22', means: 'Water pressure too low.', try: 'Top the pressure up to between 1 and 1.5 bar, then reset.', call: 'If it drops again, there is a leak or a faulty pressure sensor.' },
+      { code: 'F28', means: 'The boiler failed to light when starting up.', try: 'Check the gas supply and the condensate pipe, then reset once.', call: 'If it keeps happening, the gas valve, ignition or flame sensing needs checking.' },
+      { code: 'F29', means: 'The flame went out while the boiler was running.', try: 'Check the gas supply and the condensate pipe, then reset once.', call: 'Repeated F29 faults need a Gas Safe registered engineer to check the gas supply and combustion.' },
+      { code: 'F75', means: 'The boiler did not detect the pump or a pressure change.', try: 'Check the system pressure is between 1 and 1.5 bar.', call: 'If the pressure is fine and F75 stays, the pump or pressure sensor usually needs replacing.' },
+    ],
+  },
+  {
+    id: 'glow-worm', name: 'Glow-worm', models: 'Glow-worm Energy and Ultimate boilers',
+    codes: [
+      { code: 'F22', means: 'Water pressure too low.', try: 'Top the pressure up to between 1 and 1.5 bar, then reset.', call: 'If it keeps dropping, there is a leak or a faulty valve.' },
+      { code: 'F28', means: 'The boiler failed to light.', try: 'Check the gas supply and the condensate pipe, then reset once.', call: 'If it locks out again, the ignition or gas valve needs checking.' },
+      { code: 'F29', means: 'The flame was lost while running.', try: 'Check the gas supply and, in cold weather, the condensate pipe. Reset once.', call: 'If it keeps happening, it needs a Gas Safe registered engineer.' },
+      { code: 'F75', means: 'Pump or water pressure sensor fault.', try: 'Check the system pressure.', call: 'If the pressure is fine, the pump or sensor usually needs replacing.' },
+    ],
+  },
+];
+
+const faqs = [
+  { q: 'Is it safe to reset my boiler?', a: 'Pressing reset once is safe and is what the manufacturer expects you to try. If the same code comes back, stop resetting it and call a Gas Safe registered engineer. Never take the boiler casing off.' },
+  { q: 'How do I top up my boiler pressure?', a: 'Find the filling loop, usually under the boiler. Open the valves slowly until the gauge reads between 1 and 1.5 bar, then close them. If you are not sure, call us and we will talk you through it.' },
+  { q: 'How do I thaw a frozen condensate pipe?', a: 'Find the plastic pipe that runs from the boiler to a drain outside. Pour warm water, not boiling water, slowly along it, then reset the boiler.' },
+  { q: 'How much does it cost to fix a boiler error code in Liverpool?', a: 'There is no call-out fee. Repairs are £80 an hour on weekdays, £120 an hour on weekend mornings and £150 an hour out of hours, with a 1 hour minimum, or £95 for a booked fault diagnosis. You agree the price before any part is fitted.' },
+  { q: 'Which boiler brands do you repair?', a: 'James repairs Worcester Bosch, Vaillant, Ideal, Baxi, Glow-worm, Potterton and Viessmann boilers across Liverpool, and is Gas Safe registered. This guide covers the codes we see most on the first five.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const crumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://liverpoolemergencyplumber.co.uk/' },
+    { '@type': 'ListItem', position: 2, name: 'Boiler Repair Liverpool', item: 'https://liverpoolemergencyplumber.co.uk/boiler-repair-liverpool' },
+    { '@type': 'ListItem', position: 3, name: 'Boiler Error Codes', item: 'https://liverpoolemergencyplumber.co.uk/boiler-error-codes' },
+  ],
+};
+---
+
+<BaseLayout
+  title="Boiler Error Codes | Baxi, Ideal, Worcester, Vaillant, Glow-worm | Liverpool"
+  description="What your boiler error code means and what you can safely try first. Baxi E119 and E133, Ideal F1 and L2, Worcester EA 227, Vaillant and Glow-worm F22, F28 and F75. Gas Safe boiler repair in Liverpool, no call-out fee. Call 0151 558 0334."
+  canonical="https://liverpoolemergencyplumber.co.uk/boiler-error-codes"
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(crumbs)} />
+
+  <section class="ec-hero" id="hero">
+    <div class="ec-wrap">
+      <p class="ec-crumb"><a href="/">Home</a> › <a href="/boiler-repair-liverpool">Boiler repair</a> › Error codes</p>
+      <h1>Boiler error codes explained</h1>
+      <p class="ec-lead">What the code on your boiler means, what you can safely try yourself, and when to call a Gas Safe registered engineer. For Baxi, Ideal, Worcester Bosch, Vaillant and Glow-worm boilers.</p>
+      <nav class="ec-jump" aria-label="Jump to brand">
+        {brands.map((b) => <a href={`#${b.id}`}>{b.name}</a>)}
+      </nav>
+      <div class="ec-call">
+        <p><strong>Code keeps coming back?</strong> James repairs boilers across Liverpool 24/7. No call-out fee, guaranteed 30 minute response.</p>
+        <a href={TEL} class="ec-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ec-sec ec-tint" id="first-steps">
+    <div class="ec-wrap">
+      <h2>Three things to check first</h2>
+      <ol class="ec-steps">
+        <li><strong>Pressure.</strong> The gauge should read between 1 and 1.5 bar. Most "low pressure" codes clear after a top-up with the filling loop.</li>
+        <li><strong>Gas supply.</strong> Is the gas on at the meter, do your other gas appliances work, and does a prepayment meter have credit?</li>
+        <li><strong>Condensate pipe.</strong> In freezing weather the plastic pipe outside can freeze and stop the boiler. Pour warm water, not boiling, along it.</li>
+      </ol>
+      <p class="ec-warn">Then press reset <strong>once</strong>. If the code comes back, stop and call a Gas Safe registered engineer. Never take the boiler casing off. If you smell gas, leave the property and call the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a>.</p>
+    </div>
+  </section>
+
+  {brands.map((b, i) => (
+    <section class={`ec-sec${i % 2 ? ' ec-tint' : ''}`} id={b.id}>
+      <div class="ec-wrap">
+        <h2>{b.name} boiler error codes</h2>
+        <p class="ec-sub">{b.models}.</p>
+        <div class="ec-codes">
+          {b.codes.map((c) => (
+            <article class="ec-code">
+              <h3><span class="ec-tag">{c.code}</span> {c.means}</h3>
+              <p><strong>Try:</strong> {c.try}</p>
+              <p><strong>Call us if:</strong> {c.call}</p>
+            </article>
+          ))}
+        </div>
+        <p class="ec-more">Still showing {/^[AEIOU]/.test(b.name) ? 'an' : 'a'} {b.name} code? <a href={TEL}>Call {PHONE}</a> or see <a href="/boiler-repair-liverpool">boiler repair in Liverpool</a>.</p>
+      </div>
+    </section>
+  ))}
+
+  <section class="ec-sec ec-tint" id="faq">
+    <div class="ec-wrap">
+      <h2>Boiler error code questions</h2>
+      {faqs.map((f) => (
+        <details class="ec-faq">
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="ec-final" id="final-cta">
+    <div class="ec-wrap">
+      <h2>Boiler still not working?</h2>
+      <p>James is Gas Safe registered and repairs Worcester Bosch, Vaillant, Ideal, Baxi, Glow-worm, Potterton and Viessmann boilers across Liverpool. No call-out fee. £95 fault diagnosis or from £80 an hour.</p>
+      <a href={TEL} class="ec-btn ec-btn-big">Call {PHONE}</a>
+      <p class="ec-small"><a href="/boiler-repair-liverpool">Boiler repair prices</a> · <a href="/boiler-service-liverpool">Boiler service £120</a> · <a href="/boiler-installation-liverpool">New boilers</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .ec-wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+  .ec-hero { background: linear-gradient(180deg, #fff 0%, #fff7ed 100%); padding: 2rem 0 2.5rem; text-align: left; }
+  .ec-crumb { font-size: 0.9rem; color: #475569; margin: 0 0 0.75rem; }
+  .ec-crumb a { color: var(--navy-mid); }
+  .ec-hero h1 { font: 900 clamp(2.3rem, 8vw, 3.4rem)/1 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.9rem; text-align: left; }
+  .ec-lead { font-size: 1.15rem; line-height: 1.6; color: #1e293b; margin: 0 0 1.25rem; }
+  .ec-jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .ec-jump a { background: #fff; border: 2px solid var(--border); border-radius: 999px; padding: 0.5rem 1rem; font-weight: 800; color: var(--navy); text-decoration: none; }
+  .ec-jump a:hover { border-color: var(--orange); }
+  .ec-call { background: var(--navy); color: #fff; border-radius: 14px; padding: 1.1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .ec-call p { margin: 0; flex: 1 1 260px; line-height: 1.55; color: rgba(255,255,255,0.92); }
+  .ec-call strong { color: #fff; }
+  .ec-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; background: var(--orange); color: #fff; border-radius: 10px; padding: 0.6rem 1.25rem; font: 900 1.3rem 'Barlow Condensed', sans-serif; text-decoration: none; white-space: nowrap; }
+  .ec-btn:hover { background: var(--orange-dark); }
+  .ec-btn-big { font-size: 1.6rem; min-height: 60px; width: 100%; max-width: 420px; }
+  .ec-sec { padding: 2.75rem 0; text-align: left; }
+  .ec-tint { background: #f1f5f9; }
+  .ec-sec h2, .ec-final h2 { font: 900 clamp(1.8rem, 5vw, 2.3rem)/1.1 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.5rem; text-align: left; }
+  .ec-sub { color: #475569; font-size: 1.02rem; margin: 0 0 1.25rem; }
+  .ec-steps { margin: 1rem 0; padding-left: 1.3rem; }
+  .ec-steps li { font-size: 1.05rem; line-height: 1.65; margin-bottom: 0.6rem; color: #1e293b; }
+  .ec-warn { background: #fef2f2; border-left: 5px solid var(--red); border-radius: 10px; padding: 1rem 1.2rem; color: #7f1d1d; line-height: 1.6; margin: 1rem 0 0; }
+  .ec-warn a { color: #991b1b; font-weight: 800; }
+  .ec-codes { display: grid; gap: 0.9rem; }
+  .ec-code { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.25rem; }
+  .ec-code h3, .ec-faq summary { text-align: left; }
+  .ec-code h3 { font-size: 1.12rem; font-weight: 800; color: var(--navy); margin: 0 0 0.6rem; line-height: 1.4; }
+  .ec-tag { display: inline-block; background: var(--navy); color: #fff; font: 900 1.05rem 'Barlow Condensed', sans-serif; letter-spacing: 0.03em; border-radius: 6px; padding: 0.1rem 0.55rem; margin-right: 0.35rem; }
+  .ec-code p { margin: 0 0 0.45rem; font-size: 1rem; line-height: 1.6; color: #334155; }
+  .ec-more { margin: 1.1rem 0 0; font-size: 1rem; }
+  .ec-more a { color: var(--orange-dark); font-weight: 800; }
+  .ec-faq { border-bottom: 1px solid var(--border); }
+  .ec-faq summary { cursor: pointer; padding: 0.95rem 0; font-weight: 800; font-size: 1.05rem; color: var(--navy); }
+  .ec-faq p { margin: 0 0 1rem; line-height: 1.65; color: #334155; }
+  .ec-final { background: var(--navy); color: #fff; padding: 3rem 0; text-align: left; }
+  .ec-final h2 { color: #fff; }
+  .ec-final p { color: rgba(255,255,255,0.9); font-size: 1.08rem; line-height: 1.6; margin: 0 0 1.25rem; }
+  .ec-small a { color: #fdba74; }
+  @media (max-width: 600px) { .ec-call .ec-btn { width: 100%; } }
+</style>
