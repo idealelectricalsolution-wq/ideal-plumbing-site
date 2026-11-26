@@ -1,377 +1,256 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/bathroom-fitters-formby';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'cloakroom', tier: 'Small room', name: 'Cloakroom or WC', price: '£2,495', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['New toilet and basin', 'Taps, waste and pipework', 'Tiling or wall panels', 'Old suite taken away'] },
+  { id: 'full', tier: 'Full bathroom', popular: true, name: 'Full bathroom, supplied and fitted', price: '£4,995', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Bath or shower, toilet, basin and taps', 'Strip-out and disposal', 'All plumbing and tiling', 'Usually 5 to 10 working days'] },
+  { id: 'en-suite', tier: 'En-suite', name: 'En-suite shower room', price: '£4,495', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Shower tray, enclosure and valve', 'Toilet and basin', 'Tiling and waterproofing', 'Extractor fan by our partner electricians'] },
+  { id: 'bath-to-shower', tier: 'Most asked for', name: 'Bath to shower conversion', price: '£2,395', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Bath removed and taken away', 'Tray, enclosure and thermostatic valve', 'Shower area tiled or panelled', 'Usually 2 to 3 days'] },
+];
+
+const faqs = [
+  { q: 'How much does a bathroom installation cost in Formby?', a: 'A full bathroom in Formby, supplied and fitted, starts from £4,995 including VAT. An en-suite is from £4,495 and a cloakroom or WC is from £2,495. A bath to shower conversion is from £2,395. If you buy your own suite, a labour-only full refit is from £2,750. You get a fixed written price after a free home visit.' },
+  { q: 'How long does a bathroom installation take in Formby?', a: 'A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days. A large bathroom with big format tiles, or an en-suite with a new cylinder, can take longer. We give you the dates in your quote.' },
+  { q: 'Do you cover all of Formby and L37?', a: 'Yes. We fit bathrooms across Formby Village, Freshfield and Formby Point in L37. We also cover Maghull and Lydiate in L31, Aughton in L39, and Crosby, Waterloo and Litherland. Travel is included in your quote.' },
+  { q: 'Can you add an en-suite with mains pressure in my Formby home?', a: 'Yes. A strong shower in a new en-suite often needs an unvented cylinder, so two showers can run at once. Our engineers are G3 qualified to fit them. We can do the en-suite and the cylinder as one job, with one price. En-suites start from £4,495 and unvented cylinders from £1,450.' },
+  { q: 'Can you fit a new bathroom before I sell?', a: 'Yes. Tell us your listing date at the free visit. We give you a fixed price and plan the work so the room is finished, cleaned and ready for photos.' },
+  { q: 'Do you work on extensions and loft conversions?', a: 'Yes. We work alongside your builder. We do the first fix plumbing during the build, then come back to tile and fit the bathroom once the room is ready.' },
+  { q: 'Do I need a separate tiler or electrician?', a: 'No. Our team does the plumbing and the tiling. Lights, extractor fans and shower circuits are done by our partner firm Ideal Electrical Solutions. We book them into the same plan, so you only deal with us.' },
+  { q: 'Do I need to pay up front?', a: 'Nothing is paid before the visit, and the visit is free. Payment terms are agreed in writing with your quote, before the job is booked in. We do not offer finance.' },
+];
 ---
 
-<BaseLayout
-  title="Bathroom Fitters in Formby | Full Installation | Gas Safe"
-  description="Bathroom fitters Formby from £2,750 labour. New bathroom installation, en suite, wet room and shower room supply and fit. One contractor for plumbing and tiling. Gas Safe registered Free survey L37 and surrounding Sefton postcodes. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/bathroom-fitters-formby"
+<ServiceGuide
+  url={URL_}
+  title="Bathroom Fitters Formby | Full Bathrooms and En-Suites From £4,995"
+  description="Bathroom fitters in Formby. New bathroom installation from £4,995, en-suites from £4,495, bath to shower from £2,395, inc VAT. Plumbing and tiling by our team. All L37 postcodes. Call 0151 558 0334."
+  h1="Bathroom Fitters Formby"
+  badge="Free home visit · Formby L37 and Sefton"
+  intro="New bathrooms fitted across Formby from £4,995, including VAT. Our team, led by James, does the strip-out, the plumbing and the tiling. We fit en-suites, main bathrooms and bathrooms before a sale. You get a fixed written price after a free home visit, and a 12-month guarantee on our work."
+  secondaryCta={{ href: '#prices', label: 'See bathroom prices' }}
+  stats={[['£4,995', 'Full bathroom fitted'], ['£4,495', 'En-suite fitted']]}
+  ticks={['Free Home Visit', 'Plumbing and Tiling', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Bathroom installation prices in Formby"
+  pkLede="Supplied and fitted, including VAT. Your final price is fixed in writing after a free home visit."
+  packages={packages}
+  pkNote="Prices are a guide for a standard room with the toilet and bath or shower staying in the same place. Moving a waste, a larger room, big format tiles or premium fittings will add to the price. Labour-only full refit, with your own suite, from £2,750."
+  factsTitle="Formby bathroom fitting at a glance"
+  facts={[
+    ['Price', 'Full bathroom from £4,995. En-suite from £4,495. Bath to shower from £2,395. All inc VAT.'],
+    ['Time', 'Full bathroom usually 5 to 10 working days. Bath to shower 2 to 3 days.'],
+    ['Who', 'Our team led by James does plumbing and tiling. Electrics by our partner firm.'],
+    ['Quote', 'Free home visit. Fixed price in writing.'],
+    ['Guarantee', '12 months on our work. £2 million public liability insurance.'],
+    ['Area', 'Formby L37, plus Maghull, Lydiate, Aughton, Crosby and Litherland.'],
+  ]}
+  toc={[
+    ['cost', 'How much does a bathroom cost?'],
+    ['included', 'What is included?'],
+    ['selling', 'A new bathroom before you sell'],
+    ['how', 'How long does it take?'],
+    ['en-suite', 'En-suites and extensions'],
+    ['which', 'Which option is right for me?'],
+    ['postcodes', 'Areas we cover'],
+    ['why', 'Our work and guarantee'],
+  ]}
+  reviews={['Jonathon W', 'Stephen D', 'Meghann S']}
+  faqs={faqs}
+  areasTitle="Bathroom fitters near Formby"
+  areasText="We also fit bathrooms across Liverpool, the Wirral and St Helens."
+  areas={[
+    { href: '/bathroom-fitters-liverpool', label: 'Liverpool' },
+    { href: '/bathroom-fitters-wirral', label: 'Wirral' },
+    { href: '/bathroom-fitters-st-helens', label: 'St Helens' },
+  ]}
+  related={[
+    { href: '/hot-water-cylinders-formby', title: 'Hot water cylinders Formby', text: 'Unvented cylinders for new en-suites, from £1,450' },
+    { href: '/radiators-formby', title: 'Radiators Formby', text: 'New radiators and towel rails from £245 fitted' },
+    { href: '/boiler-installation-formby', title: 'Boiler installation Formby', text: 'New boilers from £2,195 with a free survey' },
+    { href: '/emergency-plumber-formby', title: 'Emergency plumber Formby', text: 'No call-out fee. First hour from £120' },
+  ]}
+  finalTitle="Book your free Formby bathroom visit"
+  finalText="Full bathrooms from £4,995 and en-suites from £4,495, including VAT. Fixed price in writing. Plumbing and tiling by our team."
+  serviceName="Bathroom Fitters Formby"
+  serviceType="Bathroom installation"
+  serviceDesc="Full bathroom, en-suite and cloakroom installations and bath to shower conversions across Formby L37 and nearby Sefton. Strip-out, plumbing and tiling by our team, with a fixed written price."
+  areaServed={['Formby', 'Freshfield', 'Formby Point', 'Maghull', 'Lydiate', 'Aughton', 'Crosby', 'Waterloo', 'Litherland']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Bathroom Fitters Formby",
-    "serviceType": "Bathroom Installation and Renovation",
-    "description": "Bathroom fitters across Formby from £2,750 labour. New bathroom installation, en suites, wet rooms and shower rooms. One contractor for plumbing and tiling. Gas Safe registered Free survey L37 and surrounding postcodes.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Formby, L37" },
-    "offers": [
-      { "@type": "Offer", "name": "Full Bathroom Installation Formby Labour", "price": "2500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Full Bathroom Supply and Fit Formby", "price": "4500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "En Suite Installation Formby Labour", "price": "2000", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Wet Room Formby Supply and Fit", "price": "3500", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does bathroom installation cost in Formby?", "acceptedAnswer": { "@type": "Answer", "text": "Labour for a full bathroom renovation in Formby starts from £2,750. Supply and fit of a new bathroom including suite, tiling and all fittings starts from £4,500. The Checkatrade average for L37 bathroom supply and fit is £3,391 to £7,763. En suite labour from £2,000, supply and fit from £3,500. Wet rooms from £3,500 supply and fit. We provide a free written fixed-price quote after a site survey." } },
-      { "@type": "Question", "name": "Will a new bathroom or en suite add value to my Formby property before sale?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A new bathroom in a Formby property can add between £15,000 and £20,000 to the sale value depending on the property type. A new en suite in a Formby 4 or 5 bed property is one of the highest-return home improvements available before listing. We offer free surveys specifically for Formby homeowners considering bathroom renovation before sale." } },
-      { "@type": "Question", "name": "Do you do the plumbing and tiling or do I need a separate contractor?", "acceptedAnswer": { "@type": "Answer", "text": "We handle everything. One team for plumbing, tiling and all fitting. Gas Safe registered Speakman Joinery does bathroom fitting in Formby but is not a Gas Safe registered plumber. Tower Heating does not do full bathroom installations. We are the only Formby area contractor offering Gas Safe plumbing and tiling under one employed team." } },
-      { "@type": "Question", "name": "Are you G3 qualified for unvented cylinder work in Formby en suite installations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our engineers hold G3 qualification for unvented cylinder installation and inspection. Formby's larger 4 and 5 bed properties frequently need an unvented cylinder upgrade alongside a new en suite to deliver mains pressure hot water to multiple bathrooms simultaneously. We design and install the complete system in a single project." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Bathroom Fitters Formby", "item": "https://liverpoolemergencyplumber.co.uk/bathroom-fitters-formby" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        Formby Bathroom Fitters
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a bathroom installation cost in Formby?</h2>
+      <p class="brx-answer">A full new bathroom in Formby starts from £4,995, supplied and fitted, including VAT. An en-suite starts from £4,495.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th><th>Typical time</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Cloakroom or WC</strong></td><td>from £2,495</td><td>A few days</td></tr>
+            <tr><td><strong>Bath to shower conversion</strong></td><td>from £2,395</td><td>2 to 3 days</td></tr>
+            <tr><td><strong>En-suite shower room</strong></td><td>from £4,495</td><td>Set out in your quote</td></tr>
+            <tr><td><strong>Full bathroom, supplied and fitted</strong></td><td>from £4,995</td><td>5 to 10 working days</td></tr>
+            <tr><td><strong>Labour-only full refit (your own suite)</strong></td><td>from £2,750</td><td>5 to 10 working days</td></tr>
+            <tr><td><strong>Unvented cylinder for an en-suite</strong></td><td>from £1,450</td><td>Done with the en-suite</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1 >Bathroom Fitters Formby</h1>
-      <p class="page-hero-sub">New bathroom installation from £2,750 labour. Supply and fit from £4,995. One Gas Safe registered plumber for plumbing and tiling   Gas Safe registered En suites, wet rooms, shower rooms and pre-sale bathroom renovations. Free fixed-price survey across Formby L37 and surrounding Sefton postcodes.</p>
+      <h3>What changes the price in Formby?</h3>
+      <ul class="sg-ticks">
+        <li><strong>Room size.</strong> Bigger Formby bathrooms mean more wall and floor to tile.</li>
+        <li><strong>The tiles and suite you pick.</strong> Big format tiles and premium fittings cost more.</li>
+        <li><strong>Hot water.</strong> A new en-suite may need an unvented cylinder for good pressure.</li>
+        <li><strong>Moving things.</strong> Moving a toilet or waste costs more than keeping it in place.</li>
+      </ul>
+      <p>Only need a new shower? See our <a href="/showers-liverpool">shower installation</a> prices, from £375 fitted.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£2,500</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Labour From</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">FREE</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Site Survey</div>
-        </div>
-      </div>
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in a Formby bathroom installation?</h2>
+      <p class="brx-answer">Everything from the strip-out to the final clean. Your quote lists what is in and what is not.</p>
+      <ul class="sg-ticks">
+        <li><strong>Strip-out and disposal.</strong> The old suite and tiles leave with us. No skip on your drive.</li>
+        <li><strong>All plumbing.</strong> New hot, cold and waste pipes to every fitting.</li>
+        <li><strong>Tiling.</strong> James's team does the tiling, with the wet areas waterproofed first. Big format tiles suit larger rooms.</li>
+        <li><strong>The suite.</strong> Bath or shower, toilet, basin, taps and valves, fitted and sealed.</li>
+        <li><strong>Electrics.</strong> Lights, extractor fans and shower circuits by our partner firm <a href="https://www.idealelectricalsolutions.co.uk">Ideal Electrical Solutions</a>.</li>
+        <li><strong>Making good.</strong> We test every joint, remove grout haze, polish the chrome and clean before we leave.</li>
+      </ul>
+      <p>You can buy your own tiles or suite. If you supply the suite, the labour-only price is from £2,750.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a Free Survey</a>
-      </div>
+  <section class="brx-sec brx-tint" id="selling">
+    <div class="brx-wrap">
+      <h2>Is a new bathroom worth it before selling in Formby?</h2>
+      <p class="brx-answer">Often, yes. A tired bathroom is one of the things buyers notice most. A fresh one can stop it being used to push your price down.</p>
+      <p>Formby has many four and five bedroom detached homes. Buyers at this level expect a modern main bathroom. Many also expect an en-suite off the main bedroom.</p>
+      <p>A dated bathroom gives a buyer, or their surveyor, a reason to offer less. A new one takes that reason away.</p>
+      <h3>How we help if you are selling</h3>
+      <ul class="sg-ticks">
+        <li>Free visit, with honest advice on what is worth doing</li>
+        <li>Fixed written price, so you know the cost before you list</li>
+        <li>Work planned around your listing date</li>
+        <li>Room left clean and ready for photos</li>
+      </ul>
+      <p>Sometimes a bath to shower conversion or a new suite is enough. We will say so if it is.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Plumbing and Tiling</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Fixed Quote</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How long does a bathroom installation take in Formby?</h2>
+      <p class="brx-answer">A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days.</p>
+      <ol class="sg-steps">
+        <li><strong>Free home visit (about 45 minutes).</strong> We measure up and check the pipes and waste. For an en-suite, we check your hot water system too.</li>
+        <li><strong>Fixed written price.</strong> The full spec, written down. What is included is listed, and so is what is not.</li>
+        <li><strong>Day 1: strip-out.</strong> The old bathroom comes out and leaves with us.</li>
+        <li><strong>Days 1 to 3: first fix.</strong> New pipes and waste go in. Our partner electricians do any wiring. If we find rot or a leak, we show you and price it first.</li>
+        <li><strong>Days 3 to 7: walls and floor.</strong> Boarding, waterproofing and tiling, or wall panels.</li>
+        <li><strong>Final days: fit and hand over.</strong> The suite goes in. We test every joint, seal it all and clean the room.</li>
+      </ol>
+      <p>Bigger rooms and lots of tiling take longer. Your quote gives you the dates.</p>
+      <div class="brx-cta">
+        <p><strong>Want a price for your Formby bathroom?</strong> Book a free home visit. No pressure to book.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"James came out promptly after a referral and fitted a bath and new shower system in around half a day. We're very pleased with the outcome! Thanks again!" Meghann S, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
-      </div>
+  <section class="brx-sec brx-tint" id="en-suite">
+    <div class="brx-wrap">
+      <h2>Can you add an en-suite or a bathroom in an extension?</h2>
+      <p class="brx-answer">Yes. En-suites start from £4,495. We also fit bathrooms in new extensions and loft conversions, working with your builder.</p>
+      <h3>En-suites with strong showers</h3>
+      <p>Most people want a mains pressure shower in a new en-suite. An old tank in the loft may not feed two showers at once. An unvented cylinder fixes this, with strong hot water to every bathroom.</p>
+      <p>Our engineers are G3 qualified to fit and test them. We can do the en-suite and the cylinder as one project, with one price. See our <a href="/hot-water-cylinders-formby">hot water cylinders in Formby</a>, from £1,450.</p>
+      <h3>Extensions and loft conversions</h3>
+      <p>Many Formby homes are being extended or renovated. We work alongside your builder or architect.</p>
+      <ul class="sg-ticks">
+        <li><strong>During the build.</strong> We do the first fix plumbing while the walls are open.</li>
+        <li><strong>Once the room is ready.</strong> We come back to tile and fit the bathroom.</li>
+        <li><strong>One price.</strong> All the plumbing and tiling is fixed in writing.</li>
+      </ul>
     </div>
   </section>
 
-
-  <!-- ONE CONTRACTOR DIFFERENTIATOR -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>One Gas Safe Team for Plumbing and Tiling. Gas Safe registered</h2>
-      <p class="pf-sub">Most Formby area bathroom fitters either are not Gas Safe registered plumbers, or they do not do tiling. We handle the complete new bathroom installation, with our Gas Safe registered engineers doing the plumbing, tiling and fitting.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gas Safe registered for all plumbing work</strong><p>Every water connection, waste pipe, bath, shower, toilet and basin plumbed by our Gas Safe registered. Speakman Joinery offers bathroom fitting in Formby but is not a Gas Safe plumber. We are.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full bathroom installation   not just heating</strong><p>Tower Heating covers Formby for boilers and heating but does not carry out full bathroom installations. We handle the complete new bathroom installation   plumbing, tiling, suite fitting and all finishing   under one team.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>No scheduling gaps between trades</strong><p>One Formby team for plumbing, tiling and all fitting. The schedule runs continuously from strip-out to final clean with no gap between trades and no waiting for a separately-booked tiler to become available.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>One invoice. One fixed price.</strong><p>One call throughout the project. One invoice on completion. No pointing between separate contractors when something needs resolving. The price we quote is the price you pay.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>New Bathroom Installation Prices Formby</h2>
-      <p class="pf-sub">Free site survey required to confirm your exact price. Supply and fit prices include suite, tiling and all fittings. Labour-only prices apply when you supply the suite and tiles yourself.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MOST POPULAR</div>
-          <div class="pf-price-tier">FULL BATHROOM</div>
-          <div class="pf-price-name">Complete Bathroom Renovation</div>
-          <div class="pf-price-sub">Full strip out and new installation</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£2,500<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
-          <ul class="pf-price-list">
-            <li>Full strip out of existing bathroom</li>
-            <li>New bath, toilet and basin fitted</li>
-            <li>All plumbing and waste connections</li>
-            <li>Full wall and floor tiling</li>
-            <li>Heated towel rail fitted</li>
-            <li>Ventilation installed</li>
-            <li>Supply and fit from £4,995</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which option is right for me?</h2>
+      <p class="brx-answer">Start with what is wrong with the room now. If only the bath is the problem, a conversion may be all you need.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Bath to shower, from £2,395</h3>
+          <p>Best if you rarely use the bath, or getting in and out is hard. Done in 2 to 3 days.</p>
         </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">EN SUITE</div>
-          <div class="pf-price-name">En Suite Installation</div>
-          <div class="pf-price-sub">New en suite from scratch</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£2,000<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
-          <ul class="pf-price-list">
-            <li>New shower, toilet and basin</li>
-            <li>All plumbing and waste connections</li>
-            <li>Full wall and floor tiling</li>
-            <li>Heated towel rail fitted</li>
-            <li>Ventilation installed</li>
-            <li>Supply and fit from £3,500</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="sg-box">
+          <h3>Full bathroom, from £4,995</h3>
+          <p>Best if the suite, tiles and pipes are all tired. The whole room is new.</p>
         </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">WET ROOM AND SHOWERS</div>
-          <div class="pf-price-name">Wet Room or Shower Installation</div>
-          <div class="pf-price-sub">Wet rooms and shower enclosures</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£400<small style="font-size:1rem;color:var(--muted);"> shower</small></div>
-          <ul class="pf-price-list">
-            <li>Shower enclosure supply and fit from £400</li>
-            <li>Wet room from £3,500 supply and fit</li>
-            <li>Full tanking and waterproofing included</li>
-            <li>Linear drain and tiled floor</li>
-            <li>Walk-in and level access designs</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="sg-box">
+          <h3>En-suite, from £4,495</h3>
+          <p>A shower room off the main bedroom. Popular in larger Formby homes.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Cloakroom or WC, from £2,495</h3>
+          <p>A toilet and basin downstairs. Handy for guests and busy family homes.</p>
         </div>
       </div>
-
-      <div class="pf-alert" style="margin-top:2rem;">
-        <strong>How our prices compare to the Formby market</strong>
-        <p>The Checkatrade average for L37 bathroom supply and fit is £3,391 to £7,763. Our supply and fit of a new bathroom starts from £4,995   below the Checkatrade L37 average   with Gas Safe plumbing and tiling both included in a single quote. No separate contractor costs to add on top.</p>
-      </div>
+      <p style="margin-top:1rem;"><strong>Not sure?</strong> We will tell you honestly at the free visit, even if the cheaper option is the right one.</p>
     </div>
   </section>
 
-
-  <!-- FORMBY UNIQUE SECTION   PRE-SALE VALUE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <span class="pf-section-label">FORMBY PROPERTY VALUE</span>
-      <h2>A New Bathroom Before Sale Adds Real Value to Your Formby Property</h2>
-      <p class="pf-sub">Formby property values are high enough that a well-executed new bathroom or en suite installation adds more than it costs. This is one of the most financially compelling home improvements available to L37 homeowners.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">What a New Bathroom Is Worth in Formby</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0 0 0.6rem;line-height:1.65;">A modern, well-fitted bathroom can add between £15,000 and £20,000 to the sale value of a Formby property at the higher end of the L37 market. On a four or five bedroom Formby detached worth £450,000 to £600,000, a new en suite or upgraded master bathroom represents one of the highest returns of any pre-sale home improvement. Formby estate agents consistently identify bathroom quality as one of the primary factors buyers comment on when making an offer or declining to offer the asking price.</p>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">A tired or dated bathroom is one of the most common reasons Formby buyers negotiate the price down or use a survey to justify a reduced offer. A new bathroom installation removes this objection entirely and often recovers considerably more than the cost of the installation in the final sale price. We offer free surveys specifically for Formby homeowners considering a new bathroom or en suite before listing.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">En Suite Installation in Formby's Larger Properties</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0 0 0.6rem;line-height:1.65;">Formby's 4 and 5 bedroom detached and semi-detached properties are frequently adding en suites to master bedrooms   both as lifestyle improvements and as pre-sale investments. An en suite at mains pressure requires an unvented hot water cylinder to supply multiple bathrooms simultaneously without pressure drop. Our engineers hold G3 qualification, which is the legal requirement for installing and commissioning unvented cylinders. We design and install the complete system   new en suite bathroom installation plus unvented cylinder upgrade   as a single fixed-price project, so the result is full mains pressure in every bathroom throughout the property.</p>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">En suite labour from £2,000. En suite supply and fit from £3,500. Unvented cylinder installation from £1,450 including G3 commissioning certificate. Free survey to assess the full scope across both the en suite and the existing hot water system.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">New Bathroom Installation in Formby Extensions and Renovations</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Many Formby homeowners are extending or renovating their properties, creating new bathroom or en suite spaces as part of a larger project. We work alongside builders and architects on Formby renovation projects, carrying out first fix plumbing during the build phase and returning for second fix and tiling once the fabric of the new space is complete. For supply and fit new bathroom installations in Formby extensions, we provide a fixed price covering all plumbing, tiling and bathroom fitting once the shell is ready. This is the cleanest approach for any Formby renovation project   one team for all the plumbing and tiling work, no separate contractors to coordinate.</p>
-        </div>
-
+  <section class="brx-sec brx-tint" id="postcodes">
+    <div class="brx-wrap">
+      <h2>Do you cover all of Formby and nearby Sefton?</h2>
+      <p class="brx-answer">Yes. We fit bathrooms across Formby L37 and the towns around it.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Area</th><th>Places and postcodes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Formby</strong></td><td>Formby Village L37, Freshfield L37, Formby Point L37</td></tr>
+            <tr><td><strong>Maghull and Lydiate</strong></td><td>Maghull L31, Lydiate L31, Aughton L39</td></tr>
+            <tr><td><strong>Crosby and Litherland</strong></td><td>Crosby L23, Waterloo L22, Litherland L21</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>Crosby and Waterloo have many Victorian and Edwardian homes. We know these well from our Liverpool work. Travel is included in your quote.</p>
     </div>
   </section>
 
-
-  <!-- WHAT IS INCLUDED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>What Is Included in Your Formby Bathroom Installation</h2>
-      <p class="pf-sub">No hidden extras. One price covers everything from strip-out to final clean on every L37 job.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full strip-out and disposal</strong><p>Existing bathroom suite, tiles and waste removed and disposed of. No skip required on your Formby driveway.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All plumbing and waste connections</strong><p>Every water supply connection, waste pipe, bath, shower, toilet and basin plumbed by our Gas Safe registered engineers. Includes hot and cold supply to all fixtures.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full wall and floor tiling</strong><p>All tiling by a tiler you arranges. Surface preparation, adhesive, grout and all tile cuts. Waterproofing applied to all wet areas before tiling begins. Large format tiles available for Formby's larger bathroom spaces.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bathroom suite fitted and sealed</strong><p>Bath, shower, toilet and basin all fitted, sealed and tested. All chrome fittings installed. Silicone applied to all joints. Premium fixtures available within supply and fit service.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Heated towel rail and ventilation</strong><p>Heated towel rail connected to heating circuit or wired as electric. Extractor fan fitted and ducted outside. Correct ventilation is essential in Formby properties for preventing condensation and protecting new tiling.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full clean and 12-month guarantee</strong><p>Bathroom cleaned fully on completion including grout haze removal and chrome polish. 12-month workmanship guarantee. If anything fails as a result of our installation work, we return and resolve it at no cost.</p></div></div>
+  <section class="brx-sec" id="why">
+    <div class="brx-wrap">
+      <h2>Why choose us as your Formby bathroom fitters?</h2>
+      <p class="brx-answer">One team for plumbing and tiling, a fixed price in writing, and a 12-month guarantee on our work.</p>
+      <div class="sg-cols">
+        <figure class="sg-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/bathroom-bath-shower-fitted-480.webp 480w, /images/jobs/bathroom-bath-shower-fitted-960.webp 960w" sizes="(max-width: 700px) 100vw, 400px" />
+            <img src="/images/jobs/bathroom-bath-shower-fitted-960.jpg" alt="New bath and shower fitted by our bathroom team" width="960" height="1280" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>A real job: new bath and shower fitted.</figcaption>
+        </figure>
+        <figure class="sg-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/shower-room-fitted-480.webp 480w, /images/jobs/shower-room-fitted-960.webp 960w" sizes="(max-width: 700px) 100vw, 400px" />
+            <img src="/images/jobs/shower-room-fitted-960.jpg" alt="Shower room fitted by our team" width="960" height="1280" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>A real job: shower room fitted.</figcaption>
+        </figure>
       </div>
+      <ul class="sg-ticks">
+        <li><strong>One team.</strong> Plumbing and tiling by James's team. No gap while you wait for a tiler.</li>
+        <li><strong>G3 qualified.</strong> We can fit the unvented cylinder your en-suite needs.</li>
+        <li><strong>Fixed price in writing.</strong> If we find something behind the old bath, we price it before we touch it.</li>
+        <li><strong>Guaranteed.</strong> 12 months on our work, and £2 million public liability insurance.</li>
+        <li><strong>Tidy.</strong> We clean up and take all the rubbish away with us.</li>
+      </ul>
     </div>
   </section>
-
-
-  <!-- BATHROOM SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Bathroom Services Across Formby L37</h2>
-      <p class="pf-sub">From a full new bathroom installation to an en suite addition before sale. All work done by our Gas Safe registered engineers.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>Full Bathroom Renovations</h3><p>Complete strip-out and new bathroom installation. New suite, new tiling, new waste and supply connections. Labour from £2,750. Supply and fit of a complete new bathroom from £4,995. Below the Checkatrade L37 average for supply and fit, with Gas Safe plumbing and tiling included.</p></div>
-        <div class="pf-why-item"><h3>En Suite Installations</h3><p>Adding a new en suite to a Formby master bedroom   one of the best-return home improvements in L37. We handle stud wall construction, plumbing, tiling and fitting. G3 qualified for unvented cylinder installation. Labour from £2,000. Supply and fit from £3,500.</p></div>
-        <div class="pf-why-item"><h3>Wet Rooms</h3><p>Full wet room installation including full tanking, linear drain, level access tiling and thermostatic controls. We apply full tanking systems, not waterproof paint. Particularly popular in Formby's larger ground-floor bathroom spaces. From £3,500 supply and fit.</p></div>
-        <div class="pf-why-item"><h3>Pre-Sale Bathroom Renovations</h3><p>New bathroom or en suite installation before listing your Formby property. Free survey to assess which works add the most value for your property type. Supply and fit new bathroom from £4,995. En suite supply and fit from £3,500. Free survey for Formby homeowners considering pre-sale renovation.</p></div>
-        <div class="pf-why-item"><h3>Extension and Renovation Bathrooms</h3><p>First and second fix plumbing for Formby extension and renovation projects. We work alongside builders on new bathroom spaces in extensions, loft conversions and whole-house renovations. Fixed price covering all plumbing and tiling once the shell is ready.</p></div>
-        <div class="pf-why-item"><h3>Shower Installations</h3><p>New shower enclosure, tray and screen supply and fit from £400. Power showers, thermostatic mixers and digital shower systems. Bath to shower conversions from £2,395. Mains pressure showers where an unvented cylinder is in place.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Why Formby Homeowners Choose Us for Their New Bathroom</h2>
-      <p class="pf-sub">Gas Safe registered. G3 qualified. Plumbing and tiling included. Fixed price. Gas Safe registered Free survey.</p>
-      <div class="pf-why-grid">
-        <div class="pf-why-item"><h3>Gas Safe Where Others Are Not</h3><p>Speakman Joinery offers bathroom fitting in Formby but is not a Gas Safe registered plumber. Any gas connection for a heated towel rail or bathroom heating requires a Gas Safe engineer. Our team is Gas Safe registered for all plumbing and gas work throughout your new bathroom installation.</p></div>
-        <div class="pf-why-item"><h3>Full Bathroom Fits Where Tower Heating Does Not</h3><p>Tower Heating covers the Formby area for heating and boiler work but does not carry out full bathroom installation or supply and fit new bathrooms. We do. One team for the complete new bathroom installation from survey to final clean.</p></div>
-        <div class="pf-why-item"><h3>G3 Qualified for En Suite Unvented Work</h3><p>Formby's larger properties adding en suites need G3-qualified engineers for unvented cylinder installation. We design and install the complete system   new en suite plus unvented cylinder   in a single fixed-price project. Full mains pressure to every bathroom in the property on completion.</p></div>
-        <div class="pf-why-item"><h3>Pre-Sale Bathroom Value Assessment</h3><p>Free survey specifically for Formby homeowners considering a new bathroom before listing. We advise on which works add most value for your property type, provide a fixed-price quote and typically complete the new bathroom installation before your estate agent first viewing.</p></div>
-        <div class="pf-why-item"><h3>Plumbing and Tiling Included</h3><p>One team. No need to find a separate Formby tiler. No scheduling gap between plumber finishing and tiler starting. The same team who plumb the bathroom tile it. Continuous schedule from strip-out to final clean.</p></div>
-        <div class="pf-why-item"><h3>Free Fixed-Price Survey</h3><p>We visit your Formby property, assess everything and provide a written fixed-price quote. The price we quote is the price on the invoice. No additions discovered after strip-out. No separate charges for work identified during the job.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Formby Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Full bathroom replacement. Amazing service at such short notice, really knowledgeable and flexible regarding our wants and needs. James went above and beyond to make sure everything was the way we wanted it. He did an amazing job with the bathroom and we couldn’t fault anything. The price was very fair and a stressful experience was made to seem so easy and effortless. We would definitely recommend his services and will be using him again in the future.</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">Jonathon W</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came to do some work in my bathroom, he was punctual, polite , and listened to what work I required I'm my bathroom. James done a great job, fair price, and consulted me throughout the job. He was also a good worker, and respectful . James also cleaned up afterwards, and took all the rubbish with him. I would definitely employ James again in the future.</p><div class="pf-review-footer"><div class="pf-review-avatar">S</div><div><div class="pf-review-name">Stephen D</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came out promptly after a referral and fitted a bath and new shower system in around half a day. We're very pleased with the outcome! Thanks again!</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Meghann S</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PROCESS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>How Our Formby Bathroom Installation Works</h2>
-      <p class="pf-sub">From free survey to a fully finished new bathroom. Here is exactly what to expect.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>We visit your Formby property, assess the existing bathroom or proposed new bathroom space, plumbing configuration, waste routing and any specific requirements. For pre-sale renovations, we advise on which works add most value for your property type. For en suites, we assess the hot water system and advise on whether an unvented cylinder is needed.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Written fixed-price quote</strong><p>A written fixed price covering everything from strip-out to final clean. Supply and fit or labour only. En suite quotes include the unvented cylinder assessment. Pre-sale bathroom quotes include the full scope recommended to maximise return on investment.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Strip out and first fix plumbing</strong><p>Existing bathroom fully stripped and disposed of. New supply and waste pipes positioned. Full tanking applied to all wet areas before any tiling begins.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Tiling, suite fitting and second fix</strong><p>Wall and floor tiling completed. Suite fitted and plumbed. All fittings, towel rail and ventilation installed and connected. Large format tiles or premium fixtures selected at survey stage, ready to install.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Full test and clean on completion</strong><p>Every connection tested, all fixtures checked, bathroom cleaned fully. You see the finished new bathroom on the day we complete   ready for estate agent photographs if this is a pre-sale renovation.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Bathroom Fitters Formby. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what Formby homeowners ask most before booking.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does new bathroom installation cost in Formby?</summary><div class="pf-faq-body"><p>Labour for a full new bathroom renovation in Formby starts from £2,750. Supply and fit of a complete new bathroom including suite, tiling and all fittings starts from £4,500. The Checkatrade average for L37 bathroom supply and fit is £3,391 to £7,763. En suite labour from £2,000, supply and fit from £3,500. Wet room supply and fit from £3,500. We provide a free written fixed-price quote after the site survey.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">VALUE</span>&nbsp; Will a new bathroom add value to my Formby property before sale?</summary><div class="pf-faq-body"><p>Yes. A new bathroom in a Formby property typically adds between £15,000 and £20,000 to the sale value on a 4 or 5 bedroom property. An en suite addition to a master bedroom is one of the highest-return pre-sale investments in L37. A tired bathroom is one of the most common reasons Formby buyers reduce their offer. We offer free surveys for Formby homeowners considering a new bathroom or en suite before listing.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">EN SUITE</span>&nbsp; Can you install a new en suite with mains pressure in my Formby property?</summary><div class="pf-faq-body"><p>Yes. We are G3 qualified for unvented cylinder installation, which is the legal requirement for this work. We design and install the complete system   new en suite bathroom installation plus unvented cylinder   in a single fixed-price project. Full mains pressure to all bathrooms in the property on completion. En suite supply and fit from £3,500. Unvented cylinder from £1,450 including G3 commissioning certificate.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TRADES</span>&nbsp; Are you Gas Safe registered? Speakman Joinery quoted me for bathrooms but I was not sure about their plumbing.</summary><div class="pf-faq-body"><p>Yes, we are Gas Safe registered. All plumbing work is carried out by our Gas Safe registered. Our team does the tiling and fitting too. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. Any gas connection in a bathroom   including heated towel rails connected to the heating circuit   requires a Gas Safe registered engineer. We cover the full scope with one team.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">TILING</span>&nbsp; Do you handle tiling or do I need to find a separate Formby tiler?</summary><div class="pf-faq-body"><p>We handle everything. One employed team for plumbing, tiling and all fitting. Gas Safe registered on any Formby bathroom installation. You do not need to find a separate tiler or coordinate between trades. This eliminates the scheduling gaps that cause most bathroom renovations to overrun.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Bathroom Installation Across Formby and Surrounding Sefton</h2>
-      <p class="pf-sub">We fit and renovate bathrooms across Formby L37 and the wider Sefton area.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div class="pf-card"><h3>Formby L37</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">New bathroom installations, en suites and pre-sale bathroom renovations across Formby. Detached and semi-detached properties frequently adding en suites with G3 cylinder work. Supply and fit new bathrooms from £4,995.</p><div class="pf-pills"><span class="pf-pill">Formby Village L37</span><span class="pf-pill">Freshfield L37</span><span class="pf-pill">Formby Point L37</span></div></div>
-        <div class="pf-card"><h3>Maghull and Lydiate</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Full bathroom fitting across Maghull and Lydiate. New bathroom supply and fit from £4,995. Free survey for all L31 properties.</p><div class="pf-pills"><span class="pf-pill">Maghull L31</span><span class="pf-pill">Lydiate L31</span><span class="pf-pill">Aughton L39</span></div></div>
-        <div class="pf-card"><h3>Crosby and Litherland</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Full bathroom renovation and supply and fit across Crosby and Litherland. Victorian and Edwardian properties with bathroom challenges we know well from our Liverpool work.</p><div class="pf-pills"><span class="pf-pill">Crosby L23</span><span class="pf-pill">Litherland L21</span><span class="pf-pill">Waterloo L22</span></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Related Services Across Formby</h2>
-      <p class="pf-sub">All Gas Safe registered. G3 qualified. L37 and surrounding postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/hot-water-cylinders-formby" class="pf-related-link"><div><strong>Hot Water Cylinders Formby</strong><span>Unvented from £1,450. G3 qualified. Full mains pressure for new en suites. L37 and surrounding postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation Formby</strong><span>Electric, mixer and digital showers from £375. Mains pressure showers with unvented cylinder. Walk-in areas from £800.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-formby" class="pf-related-link"><div><strong>Boiler Installation Formby</strong><span>New boiler from £2,195. Worcester Bosch and Vaillant. Free survey. L37 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-formby" class="pf-related-link"><div><strong>Radiators Formby</strong><span>Supply and fit from £245. Heated towel rail connections. Column radiators for larger period rooms. L37 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Free Survey</strong><span>Free no-obligation survey and fixed-price quote. Formby L37 and surrounding Sefton postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Bathroom Fitters Across Merseyside</h2>
-      <p class="pf-sub">New bathroom installation from £2,750 labour. Supply and fit from £4,995. One team for plumbing and tiling. Gas Safe registered</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Liverpool</strong><span>Full bathroom installation from £2,750 labour. Victorian terrace specialists. All Liverpool L postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-wirral" class="pf-related-link"><div><strong>Bathroom Fitters Wirral</strong><span>New bathroom installation from £2,750 labour. Outrigger and en suite specialists. All Wirral CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-st-helens" class="pf-related-link"><div><strong>Bathroom Fitters St Helens</strong><span>New bathroom installation from £2,750 labour. Bathroom relocation and landlord specialists. All WA postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free Formby Bathroom Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">New bathroom installation from £2,750 labour. Supply and fit from £4,995. G3 qualified for en suites. Gas Safe registered. One team for plumbing and tiling. Free fixed-price survey for all Formby L37 properties.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>

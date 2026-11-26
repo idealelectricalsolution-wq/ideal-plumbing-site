@@ -1,375 +1,257 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/bathroom-fitters-st-helens';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'cloakroom', tier: 'Small room', name: 'Cloakroom or WC', price: '£2,495', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['New toilet and basin', 'Taps, waste and pipework', 'Tiling or wall panels', 'Old suite taken away'] },
+  { id: 'full', tier: 'Full bathroom', popular: true, name: 'Full bathroom, supplied and fitted', price: '£4,995', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Bath or shower, toilet, basin and taps', 'Strip-out and disposal', 'All plumbing and tiling', 'Usually 5 to 10 working days'] },
+  { id: 'en-suite', tier: 'En-suite or shower room', name: 'En-suite or shower room', price: '£4,495', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Shower tray, enclosure and valve', 'Toilet and basin', 'Tiling and waterproofing', 'Extractor fan by our partner electricians'] },
+  { id: 'bath-to-shower', tier: 'Most asked for', name: 'Bath to shower conversion', price: '£2,395', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Bath removed and taken away', 'Tray, enclosure and thermostatic valve', 'Shower area tiled or panelled', 'Usually 2 to 3 days'] },
+];
+
+const faqs = [
+  { q: 'How much does a bathroom installation cost in St Helens?', a: 'A full bathroom in St Helens, supplied and fitted, starts from £4,995 including VAT. An en-suite or shower room is from £4,495 and a cloakroom or WC is from £2,495. A bath to shower conversion is from £2,395. If you buy your own suite, a labour-only full refit is from £2,750. You get a fixed written price after a free home visit.' },
+  { q: 'How long does a bathroom installation take in St Helens?', a: 'A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days. Moving a bathroom upstairs takes longer, as there is more pipework. We give you the dates in your quote.' },
+  { q: 'Can you move a downstairs bathroom upstairs in a WA10 terrace?', a: 'Yes. Many WA10 terraces have the bathroom in the old rear extension. Moving it upstairs means a new soil and waste route, new hot and cold pipes, and a new bathroom in the bedroom. We look at both rooms at the free visit and give you one fixed price for the whole job.' },
+  { q: 'Do you cover every St Helens postcode?', a: 'Yes. We cover WA9, WA10, WA11 and WA12, including Parr, Thatto Heath, Eccleston, Haydock, Rainford, Billinge and Newton-le-Willows. We also cover Prescot, Whiston and Rainhill. Travel is included in your quote.' },
+  { q: 'Can you fit a bathroom between tenants?', a: 'Yes. We work with St Helens landlords and book the job into the gap between tenants. A full bathroom usually takes 5 to 10 working days. Tell us your dates at the visit and we plan around them.' },
+  { q: 'Do I need a separate tiler or electrician?', a: 'No. Our team does the plumbing and the tiling. Lights, extractor fans and shower circuits are done by our partner firm Ideal Electrical Solutions. We book them into the same plan, so you only deal with us.' },
+  { q: 'What if you find a problem under the old bath?', a: 'We show you and give you a price before we fix it. Older St Helens terraces often hide corroded cast iron waste pipes or a rotten board. Nothing gets covered up, and you decide.' },
+  { q: 'Do I need to pay up front?', a: 'Nothing is paid before the visit, and the visit is free. Payment terms are agreed in writing with your quote, before the job is booked in. We do not offer finance.' },
+];
 ---
 
-<BaseLayout
-  title="Bathroom Fitters St Helens | Full Installation | Gas Safe"
-  description="Bathroom fitters St Helens from £2,750 labour. New bathroom installation, en suite, wet room and shower room supply and fit. One contractor for plumbing and tiling. Gas Safe registered Free survey all WA postcodes. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/bathroom-fitters-st-helens"
+<ServiceGuide
+  url={URL_}
+  title="Bathroom Fitters St Helens | New Bathrooms From £4,995"
+  description="Bathroom fitters in St Helens. New bathroom installation from £4,995, shower rooms from £4,495, bath to shower from £2,395, inc VAT. Plumbing and tiling by our team. All WA postcodes. Call 0151 558 0334."
+  h1="Bathroom Fitters St Helens"
+  badge="Free home visit · all WA postcodes"
+  intro="New bathrooms fitted across St Helens from £4,995, including VAT. Our team, led by James, does the strip-out, the plumbing and the tiling. We also move downstairs bathrooms upstairs in WA10 terraces. You get a fixed written price after a free home visit, and a 12-month guarantee on our work."
+  secondaryCta={{ href: '#prices', label: 'See bathroom prices' }}
+  stats={[['£4,995', 'Full bathroom fitted'], ['5-10 days', 'Typical full bathroom']]}
+  ticks={['Free Home Visit', 'Plumbing and Tiling', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Bathroom installation prices in St Helens"
+  pkLede="Supplied and fitted, including VAT. Your final price is fixed in writing after a free home visit."
+  packages={packages}
+  pkNote="Prices are a guide for a standard room with the toilet and bath or shower staying in the same place. Moving a bathroom, replacing old cast iron pipes, a larger room or premium tiles will add to the price. Labour-only full refit, with your own suite, from £2,750."
+  factsTitle="St Helens bathroom fitting at a glance"
+  facts={[
+    ['Price', 'Full bathroom from £4,995. Shower room from £4,495. Bath to shower from £2,395. All inc VAT.'],
+    ['Time', 'Full bathroom usually 5 to 10 working days. Bath to shower 2 to 3 days.'],
+    ['Who', 'Our team led by James does plumbing and tiling. Electrics by our partner firm.'],
+    ['Quote', 'Free home visit. Fixed price in writing.'],
+    ['Guarantee', '12 months on our work. £2 million public liability insurance.'],
+    ['Area', 'WA9, WA10, WA11 and WA12, plus Prescot, Whiston and Rainhill.'],
+  ]}
+  toc={[
+    ['cost', 'How much does a bathroom cost?'],
+    ['included', 'What is included?'],
+    ['move', 'Moving a bathroom upstairs'],
+    ['how', 'How long does it take?'],
+    ['terraces', 'Victorian terraces in WA10'],
+    ['which', 'Which option is right for me?'],
+    ['landlords', 'Landlord bathrooms'],
+    ['postcodes', 'Areas we cover'],
+    ['why', 'Our work and guarantee'],
+  ]}
+  reviews={['Meghann S', 'Greg W', 'Joe M', 'Jonathon W']}
+  faqs={faqs}
+  areasTitle="Bathroom fitters near St Helens"
+  areasText="We also fit bathrooms across Liverpool, the Wirral and Formby."
+  areas={[
+    { href: '/bathroom-fitters-liverpool', label: 'Liverpool' },
+    { href: '/bathroom-fitters-wirral', label: 'Wirral' },
+    { href: '/bathroom-fitters-formby', label: 'Formby' },
+  ]}
+  related={[
+    { href: '/hot-water-cylinders-st-helens', title: 'Hot water cylinders St Helens', text: 'Unvented from £1,450. Vented from £750' },
+    { href: '/radiators-st-helens', title: 'Radiators St Helens', text: 'New radiators and towel rails from £245 fitted' },
+    { href: '/boiler-installation-st-helens', title: 'Boiler installation St Helens', text: 'New boilers from £2,195 with a free survey' },
+    { href: '/emergency-plumber-st-helens', title: 'Emergency plumber St Helens', text: 'No call-out fee. First hour from £120' },
+  ]}
+  finalTitle="Book your free St Helens bathroom visit"
+  finalText="Full bathrooms from £4,995 including VAT. Fixed price in writing. Plumbing and tiling by our team, in every WA postcode."
+  serviceName="Bathroom Fitters St Helens"
+  serviceType="Bathroom installation"
+  serviceDesc="Full bathroom, shower room and cloakroom installations, bathroom moves and bath to shower conversions across St Helens, WA9 to WA12. Strip-out, plumbing and tiling by our team, with a fixed written price."
+  areaServed={['St Helens', 'Parr', 'Thatto Heath', 'Fingerpost', 'Eccleston', 'Haydock', 'Newton-le-Willows', 'Rainford', 'Billinge', 'Prescot', 'Whiston', 'Rainhill']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Bathroom Fitters St Helens",
-    "serviceType": "Bathroom Installation and Renovation",
-    "description": "Bathroom fitters across St Helens from £2,750 labour. New bathroom installation, en suites, wet rooms and shower rooms. One contractor for plumbing and tiling. Gas Safe registered Free survey all WA postcodes.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "St Helens, WA9-WA12" },
-    "offers": [
-      { "@type": "Offer", "name": "Full Bathroom Installation St Helens Labour", "price": "2500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Full Bathroom Supply and Fit St Helens", "price": "4500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "En Suite Installation St Helens Labour", "price": "2000", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Wet Room St Helens Supply and Fit", "price": "3500", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does bathroom installation cost in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "Labour for a full bathroom renovation in St Helens starts from £2,750. Supply and fit of a new bathroom including suite, tiling and all fittings starts from £4,500. The Checkatrade average for St Helens bathroom supply and fit is £3,391 to £7,763. En suite labour from £2,000, supply and fit from £3,500. Wet rooms from £3,500 supply and fit. We provide a free written fixed-price quote after a site survey." } },
-      { "@type": "Question", "name": "Can you relocate a bathroom from the ground floor to upstairs in a St Helens terrace?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. This is one of our most common St Helens jobs. Many WA10 terraces have a ground-floor bathroom in the old outside toilet extension at the back of the property. Relocating this upstairs requires new soil stack connections, rerouting hot and cold supplies and a new bathroom installation on the first floor. We assess the full scope at the free survey and provide a fixed price covering both the new upstairs bathroom installation and any necessary ground-floor remedial work." } },
-      { "@type": "Question", "name": "Do you do the plumbing and tiling or do I need a separate tiler?", "acceptedAnswer": { "@type": "Answer", "text": "We handle everything. One team for plumbing, tiling and all fitting. Gas Safe registered You do not need to find a separate St Helens tiler or coordinate separate trades." } },
-      { "@type": "Question", "name": "Are you Gas Safe registered for St Helens bathroom work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Gas Safe registered engineers do the plumbing, tiling and fitting on every St Helens bathroom." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Bathroom Fitters St Helens", "item": "https://liverpoolemergencyplumber.co.uk/bathroom-fitters-st-helens" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        St Helens Bathroom Fitters
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a bathroom installation cost in St Helens?</h2>
+      <p class="brx-answer">A full new bathroom in St Helens starts from £4,995, supplied and fitted, including VAT. A bath to shower conversion starts from £2,395.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th><th>Typical time</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Cloakroom or WC</strong></td><td>from £2,495</td><td>A few days</td></tr>
+            <tr><td><strong>Bath to shower conversion</strong></td><td>from £2,395</td><td>2 to 3 days</td></tr>
+            <tr><td><strong>En-suite or shower room</strong></td><td>from £4,495</td><td>Set out in your quote</td></tr>
+            <tr><td><strong>Full bathroom, supplied and fitted</strong></td><td>from £4,995</td><td>5 to 10 working days</td></tr>
+            <tr><td><strong>Labour-only full refit (your own suite)</strong></td><td>from £2,750</td><td>5 to 10 working days</td></tr>
+            <tr><td><strong>Moving a bathroom upstairs</strong></td><td>Priced at the free visit</td><td>Set out in your quote</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1 >Bathroom Fitters St Helens</h1>
-      <p class="page-hero-sub">New bathroom installation from £2,750 labour. Supply and fit from £4,995. One team for plumbing and tiling   Gas Safe registered En suites, wet rooms, shower rooms and bathroom relocations. Free fixed-price survey across all St Helens WA postcodes.</p>
+      <h3>What changes the price in St Helens?</h3>
+      <ul class="sg-ticks">
+        <li><strong>Moving the room.</strong> A bathroom moved upstairs needs a new waste route and new pipes.</li>
+        <li><strong>Old cast iron.</strong> Corroded waste pipes in older terraces are best replaced.</li>
+        <li><strong>The suite and tiles you pick.</strong> Premium ranges cost more.</li>
+        <li><strong>Room size.</strong> More wall and floor means more tiling.</li>
+      </ul>
+      <p>We spot these at the free visit, so they are in your price from the start. Only need a new shower? See our <a href="/showers-liverpool">shower installation</a> prices, from £375 fitted.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£2,500</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Labour From</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">FREE</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Site Survey</div>
-        </div>
-      </div>
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in a St Helens bathroom installation?</h2>
+      <p class="brx-answer">Everything from the strip-out to the final clean. Your quote lists what is in and what is not.</p>
+      <ul class="sg-ticks">
+        <li><strong>Strip-out and disposal.</strong> The old suite and tiles leave with us. No skip needed.</li>
+        <li><strong>All plumbing.</strong> New hot, cold and waste pipes to every fitting.</li>
+        <li><strong>Tiling.</strong> James's team does the tiling, with the wet areas waterproofed first. Or we fit wall panels if you prefer.</li>
+        <li><strong>The suite.</strong> Bath or shower, toilet, basin, taps and valves, fitted and sealed.</li>
+        <li><strong>Electrics.</strong> Lights, extractor fans and shower circuits by our partner firm <a href="https://www.idealelectricalsolutions.co.uk">Ideal Electrical Solutions</a>.</li>
+        <li><strong>Making good.</strong> We test every joint, seal everything and clean before we leave.</li>
+      </ul>
+      <p>You can buy your own tiles or suite. If you supply the suite, the labour-only price is from £2,750.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a Free Survey</a>
-      </div>
+  <section class="brx-sec brx-tint" id="move">
+    <div class="brx-wrap">
+      <h2>Can you move a downstairs bathroom upstairs in St Helens?</h2>
+      <p class="brx-answer">Yes. We move ground floor bathrooms in WA10 terraces up to a bedroom, and price the whole job as one fixed sum.</p>
+      <p>Many Victorian terraces in WA10 have the bathroom downstairs at the back. It was the old outside toilet and washroom. It was turned into a bathroom when indoor plumbing came in.</p>
+      <p>That made sense then. But it uses up space you could have as a utility, a dining area or a garden room. More and more St Helens owners are moving the bathroom upstairs and taking that space back.</p>
+      <h3>What the job involves</h3>
+      <ul class="sg-ticks">
+        <li>A new soil and waste route for the upstairs room</li>
+        <li>New hot and cold pipes to the new position</li>
+        <li>A full new bathroom, plumbed and tiled</li>
+        <li>Capping off and making good in the old room</li>
+      </ul>
+      <p>We look at both rooms at the free visit. You then get one written price for the whole job, not a run of extras.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Plumbing and Tiling</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Fixed Quote</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> All WA Postcodes</span>
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How long does a bathroom installation take in St Helens?</h2>
+      <p class="brx-answer">A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days.</p>
+      <ol class="sg-steps">
+        <li><strong>Free home visit (about 45 minutes).</strong> We measure up and check the pipes, waste and walls. For a move, we look at both rooms.</li>
+        <li><strong>Fixed written price.</strong> The full spec, written down. What is included is listed, and so is what is not.</li>
+        <li><strong>Day 1: strip-out.</strong> The old bathroom comes out and leaves with us.</li>
+        <li><strong>Days 1 to 3: first fix.</strong> New pipes and waste go in. Our partner electricians do any wiring. If we find rot or a leak, we show you and price it first.</li>
+        <li><strong>Days 3 to 7: walls and floor.</strong> Boarding, waterproofing and tiling, or wall panels.</li>
+        <li><strong>Final days: fit and hand over.</strong> The suite goes in. We test every joint, seal it all and clean the room.</li>
+      </ol>
+      <p>Moving a bathroom, bigger rooms or a lot of tiling take longer. Your quote gives you the dates.</p>
+      <div class="brx-cta">
+        <p><strong>Want a price for your St Helens bathroom?</strong> Book a free home visit. No pressure to book.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Great Job! Thanks James for all your hard work, looks fantastic!" Greg W, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
-      </div>
+  <section class="brx-sec brx-tint" id="terraces">
+    <div class="brx-wrap">
+      <h2>What should I know about bathrooms in WA10 terraces?</h2>
+      <p class="brx-answer">Older St Helens terraces have solid brick walls and old cast iron waste. We plan for both before we start.</p>
+      <ul class="sg-ticks">
+        <li><strong>Solid walls.</strong> We rarely chase pipes into them. We run pipes in neat boxing instead.</li>
+        <li><strong>Odd pipe routes.</strong> Pipes often run where the bathroom was added, not where they should. We plan new routes at the visit.</li>
+        <li><strong>Cast iron waste.</strong> Often corroded. We include replacing it in your fixed price.</li>
+        <li><strong>Condensation.</strong> Solid walls get damp and mouldy without a good fan. Our partner electricians fit one as part of the job.</li>
+      </ul>
+      <p>Back additions and rear extensions each have their own waste routes. We check and price yours at the visit, not after the strip-out.</p>
     </div>
   </section>
 
-
-  <!-- ONE CONTRACTOR DIFFERENTIATOR -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>One Team for Plumbing and Tiling. Gas Safe registered</h2>
-      <p class="pf-sub">Most St Helens bathroom fitters only handle the plumbing. You then find and coordinate a separate tiler. We handle the full new bathroom installation with Gas Safe registered team   no gaps, no disputes, one price.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All plumbing by our Gas Safe registered engineers</strong><p>Every water connection, waste pipe, bath, shower, toilet and basin plumbed by Gas Safe registered. Any gas connections for heated towel rails covered under the same team.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All tiling by our team</strong><p>Floor tiling, wall tiling and waterproofing handled by a tiler you arranges. Gas Safe registered, no day-rate labourers. The same team who plumb the bathroom tiles it.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>No scheduling gaps between trades</strong><p>When you coordinate separate St Helens tradespeople, the plumber finishes and the tiler is not available for another week. With one team, the schedule runs continuously from strip-out to final clean.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>One invoice. One point of contact.</strong><p>One number throughout the project. One invoice on completion. No disputes about who is responsible for what. No showroom visit required, no designer consultation fees, no separate tiler to book.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>New Bathroom Installation Prices St Helens</h2>
-      <p class="pf-sub">Free site survey required to confirm your exact price. Supply and fit prices include suite, tiling and all fittings. Labour-only prices apply when you supply the suite and tiles yourself.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MOST POPULAR</div>
-          <div class="pf-price-tier">FULL BATHROOM</div>
-          <div class="pf-price-name">Complete Bathroom Renovation</div>
-          <div class="pf-price-sub">Full strip out and new installation</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£2,500<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
-          <ul class="pf-price-list">
-            <li>Full strip out of existing bathroom</li>
-            <li>New bath, toilet and basin fitted</li>
-            <li>All plumbing and waste connections</li>
-            <li>Full wall and floor tiling</li>
-            <li>Heated towel rail fitted</li>
-            <li>Ventilation installed</li>
-            <li>Supply and fit from £4,995</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which option is right for me?</h2>
+      <p class="brx-answer">Start with what is wrong with the room now. If only the bath is the problem, a conversion may be all you need.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Bath to shower, from £2,395</h3>
+          <p>Best if you rarely use the bath, or getting in and out is hard. Done in 2 to 3 days.</p>
         </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">EN SUITE</div>
-          <div class="pf-price-name">En Suite Installation</div>
-          <div class="pf-price-sub">New en suite from scratch</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£2,000<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
-          <ul class="pf-price-list">
-            <li>New shower, toilet and basin</li>
-            <li>All plumbing and waste connections</li>
-            <li>Full wall and floor tiling</li>
-            <li>Heated towel rail fitted</li>
-            <li>Ventilation installed</li>
-            <li>Supply and fit from £3,500</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="sg-box">
+          <h3>Full bathroom, from £4,995</h3>
+          <p>Best if the suite, tiles and pipes are all tired. The whole room is new.</p>
         </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">WET ROOM AND SHOWERS</div>
-          <div class="pf-price-name">Wet Room or Shower Installation</div>
-          <div class="pf-price-sub">Wet rooms and shower enclosures</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£400<small style="font-size:1rem;color:var(--muted);"> shower</small></div>
-          <ul class="pf-price-list">
-            <li>Shower enclosure supply and fit from £400</li>
-            <li>Wet room from £3,500 supply and fit</li>
-            <li>Full tanking and waterproofing included</li>
-            <li>Linear drain and tiled floor</li>
-            <li>Walk-in and level access designs</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="sg-box">
+          <h3>Move the bathroom upstairs</h3>
+          <p>Best if the bathroom is in the downstairs extension and you want the space back. Priced at the visit.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Cloakroom or WC, from £2,495</h3>
+          <p>A toilet and basin downstairs. Handy if you move the main bathroom up.</p>
         </div>
       </div>
-
-      <div class="pf-alert" style="margin-top:2rem;">
-        <strong>How our prices compare to the St Helens market</strong>
-        <p>The Checkatrade average for St Helens bathroom supply and fit is £3,391 to £7,763. Our new bathroom supply and fit starts from £4,995   with plumbing and tiling included in a single quote. No showroom visit required, no separate design consultation fees. The price we quote is the price on the invoice.</p>
-      </div>
+      <p style="margin-top:1rem;"><strong>Not sure?</strong> We will tell you honestly at the free visit, even if the cheaper option is the right one.</p>
+      <h3 id="landlords">Are you a St Helens landlord?</h3>
+      <p>We refit bathrooms in rental homes and book the work into the gap between tenants. Many landlords own terraces in WA9 and WA10. Some add a second shower room for a shared house. Others replace a tired suite before the next tenant moves in.</p>
+      <p>Wall panels are often a good pick for rentals. They are quick to fit and have no grout to clean. Tell us your void dates and we will plan around them.</p>
     </div>
   </section>
 
-
-  <!-- ST HELENS UNIQUE SECTION   BATHROOM RELOCATION -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <span class="pf-section-label">ST HELENS LOCAL KNOWLEDGE</span>
-      <h2>Bathroom Relocation and New Bathroom Installation in St Helens Terraces</h2>
-      <p class="pf-sub">WA10 homeowners have a specific bathroom challenge that no other St Helens bathroom fitter addresses directly. We do this job regularly and know exactly what it involves.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">The WA10 Ground-Floor Bathroom Problem</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Many WA10 Victorian terraces have their bathroom in a converted ground-floor extension at the back of the property   the old outside toilet and washroom that was converted into a bathroom when indoor plumbing was added. This was practical at the time but it permanently reduced the ground-floor living space. The extension bathroom typically takes up what should be a utility area, a dining space or a garden room. A significant number of St Helens homeowners are now reversing this layout   moving the bathroom upstairs into a converted bedroom and reclaiming the ground-floor extension as living space. This is one of our most common WA10 jobs and it substantially improves both the function and the value of the property. We carry out the full scope in a single project: new upstairs bathroom installation, soil stack re-routing, hot and cold supply rerouting to the new position, and ground-floor remedial work. One team. One fixed price.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">New Bathroom Installation for St Helens Landlords and HMO Properties</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">The St Helens rental market is large and competitive. Landlords with WA10 and WA9 terraces frequently convert properties into HMOs or multi-let properties, which requires additional shower rooms or bathrooms beyond the original single bathroom. We install new shower rooms within existing bedrooms, convert ground-floor spaces into accessible wet rooms and replace entire bathroom suites during void periods to minimise tenancy gap income loss. We work directly with St Helens landlords on fixed-price supply and fit contracts, scheduling work within tenant changeover periods. New supply and fit bathroom installation from £4,995. New shower room supply and fit from £3,500. We can often complete within a standard void period of five to seven days.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Victorian Terrace Bathroom Challenges in WA10</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">St Helens Victorian terraces typically have solid brick walls, original cast iron soil stacks and supply pipes routed in ways that reflect when the bathroom was added rather than where plumbing would ideally run. Surface-mounted pipe boxing is the standard approach in these properties and we plan all routing at the free survey before any work begins. Corroded original cast iron waste pipes are common in WA10 terraces   we identify these at survey and include replacement in the fixed quote. Properties with back additions, outrigger extensions or ground-floor extensions all have their own waste pipe routing challenges that we assess and price fully at the survey stage, not after strip-out.</p>
-        </div>
-
+  <section class="brx-sec brx-tint" id="postcodes">
+    <div class="brx-wrap">
+      <h2>Do you cover all St Helens WA postcodes?</h2>
+      <p class="brx-answer">Yes. We fit bathrooms across St Helens and the towns around it.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Area</th><th>Places and postcodes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Central St Helens</strong></td><td>St Helens WA10, Fingerpost WA10, Eccleston WA10, Parr WA9, Thatto Heath WA9</td></tr>
+            <tr><td><strong>North and east</strong></td><td>Haydock WA11, Rainford WA11, Billinge WA11, Newton-le-Willows WA12</td></tr>
+            <tr><td><strong>Towards Liverpool</strong></td><td>Prescot L34, Whiston L35, Rainhill L35</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>Travel is included in your quote, wherever you are.</p>
     </div>
   </section>
 
-
-  <!-- WHAT IS INCLUDED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>What Is Included in Your St Helens Bathroom Installation</h2>
-      <p class="pf-sub">No hidden extras. One price covers everything from strip-out to final clean on every St Helens WA postcode job.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full strip-out and disposal</strong><p>Existing bathroom suite, tiles and waste removed and disposed of. No skip required on your driveway.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All plumbing and waste connections</strong><p>Every water supply connection, waste pipe, bath, shower, toilet and basin plumbed by our Gas Safe registered engineers. Includes hot and cold supply to all fixtures.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full wall and floor tiling</strong><p>All tiling by a tiler you arranges. Surface preparation, adhesive, grout and all tile cuts. Waterproofing applied to wet areas before tiling begins.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bathroom suite fitted and sealed</strong><p>Bath, shower, toilet and basin all fitted, sealed and tested. All chrome fittings installed. Silicone applied to all joints to a professional finish.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Heated towel rail and ventilation</strong><p>Heated towel rail connected to heating circuit or wired as electric. Extractor fan fitted and ducted outside. Essential in WA10 terraces with solid walls where condensation and mould are persistent problems without proper ventilation.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full clean and 12-month guarantee</strong><p>Bathroom cleaned fully on completion. Grout haze removed, chrome polished. 12-month workmanship guarantee on all installation work.</p></div></div>
+  <section class="brx-sec" id="why">
+    <div class="brx-wrap">
+      <h2>Why choose us as your St Helens bathroom fitters?</h2>
+      <p class="brx-answer">One team for plumbing and tiling, a fixed price in writing, and a 12-month guarantee on our work.</p>
+      <div class="sg-cols">
+        <figure class="sg-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/bathroom-bath-shower-fitted-480.webp 480w, /images/jobs/bathroom-bath-shower-fitted-960.webp 960w" sizes="(max-width: 700px) 100vw, 400px" />
+            <img src="/images/jobs/bathroom-bath-shower-fitted-960.jpg" alt="New bath and shower fitted by our bathroom team" width="960" height="1280" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>A real job: new bath and shower fitted.</figcaption>
+        </figure>
+        <figure class="sg-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/shower-room-fitted-480.webp 480w, /images/jobs/shower-room-fitted-960.webp 960w" sizes="(max-width: 700px) 100vw, 400px" />
+            <img src="/images/jobs/shower-room-fitted-960.jpg" alt="Shower room fitted by our team" width="960" height="1280" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>A real job: shower room fitted.</figcaption>
+        </figure>
       </div>
+      <ul class="sg-ticks">
+        <li><strong>One team.</strong> Plumbing and tiling by James's team. No gap while you wait for a tiler.</li>
+        <li><strong>Fixed price in writing.</strong> If we find something behind the old bath, we price it before we touch it.</li>
+        <li><strong>We know St Helens homes.</strong> Rear extensions, solid walls and cast iron waste are checked at the visit.</li>
+        <li><strong>Guaranteed.</strong> 12 months on our work, and £2 million public liability insurance.</li>
+        <li><strong>Tidy.</strong> We clean up and take all the rubbish away with us.</li>
+      </ul>
     </div>
   </section>
-
-
-  <!-- BATHROOM SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Bathroom Services Across St Helens</h2>
-      <p class="pf-sub">From a full new bathroom installation to a single shower room. All work done by our team across all St Helens WA postcodes.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>Full Bathroom Renovations</h3><p>Complete strip-out and new bathroom installation. New suite, new tiling, new waste and supply connections. Labour from £2,750. Supply and fit of a complete new bathroom from £4,995. Checkatrade average for St Helens supply and fit is significantly higher.</p></div>
-        <div class="pf-why-item"><h3>Bathroom Relocations</h3><p>Moving a ground-floor bathroom to an upstairs position in a St Helens terrace. New soil stack connections, supply re-routing, new bathroom installation in the new position and ground-floor remedials. One fixed price for the complete job. Free survey to assess full scope.</p></div>
-        <div class="pf-why-item"><h3>En Suite Installations</h3><p>Adding a new en suite to a St Helens property. We handle stud wall construction, plumbing, tiling and fitting. Labour from £2,000. Supply and fit from £3,500. Popular with homeowners adding a master en suite or creating a second bathroom in a larger WA postcode property.</p></div>
-        <div class="pf-why-item"><h3>Wet Rooms</h3><p>Full wet room installation including full tanking, linear drain, level access tiling and thermostatic controls. We apply full tanking systems, not waterproof paint. From £3,500 supply and fit. Popular with St Helens landlords creating accessible bathrooms and with homeowners planning ahead for accessibility.</p></div>
-        <div class="pf-why-item"><h3>Shower Installations</h3><p>New shower enclosure, tray and screen supply and fit from £400. Power showers, thermostatic mixers and digital shower systems. Bath to shower conversions from £2,395. Popular for St Helens void period bathroom upgrades.</p></div>
-        <div class="pf-why-item"><h3>Landlord and HMO Bathrooms</h3><p>New shower room supply and fit from £3,500. New bathroom supply and fit from £4,995. We work within St Helens void periods and tenant changeover schedules. One team for plumbing and tiling with Gas Safe registered causing delays.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Why St Helens Homeowners Choose Us for Their New Bathroom</h2>
-      <p class="pf-sub">One team. No showroom overheads. Plumbing and tiling included. Fixed price. St Helens property knowledge. All WA postcodes covered.</p>
-      <div class="pf-why-grid">
-        <div class="pf-why-item"><h3>No Showroom Overhead in Our Prices</h3><p>Bartons of Duke Street and Bubbles and Dreams both operate from showrooms in St Helens   that overhead is included in their prices. We have no showroom to maintain, which is reflected in more competitive pricing. Our supply and fit new bathrooms start from £4,995 with plumbing and tiling included.</p></div>
-        <div class="pf-why-item"><h3>Plumbing and Tiling Included</h3><p>You do not need to find a separate St Helens tiler. Our employed team handles plumbing, tiling and all fitting. No scheduling gaps between separate trades. One continuous project from strip-out to final clean.</p></div>
-        <div class="pf-why-item"><h3>Bathroom Relocation Specialists</h3><p>Moving a ground-floor WA10 bathroom upstairs is a job that requires both plumbing expertise and construction knowledge. Our team has done this repeatedly in St Helens terraces and prices it as a single fixed-cost project, not a series of separate surprises.</p></div>
-        <div class="pf-why-item"><h3>Free Fixed-Price Survey</h3><p>We visit your St Helens property, assess everything and provide a written fixed-price quote. The price we quote is the price on the invoice. No additions discovered after strip-out. No separate charges for work identified during the job.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>All plumbing carried out by our Gas Safe registered. Our team does the tiling and fitting too. Verify our registration at gassaferegister.co.uk.</p></div>
-        <div class="pf-why-item"><h3>Landlord Void Period Scheduling</h3><p>We schedule St Helens landlord bathroom jobs within tenant changeover periods to minimise void days. New supply and fit bathroom in five to seven days. One team, no waiting for separate trades to become available.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What St Helens Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came out promptly after a referral and fitted a bath and new shower system in around half a day. We're very pleased with the outcome! Thanks again!</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Meghann S</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Great Job! Thanks James for all your hard work, looks fantastic!</p><div class="pf-review-footer"><div class="pf-review-avatar">G</div><div><div class="pf-review-name">Greg W</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Top service, would highley recommend excellent finsih to the work that was compelted, informed constantly through out the job</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">Joe M</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PROCESS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>How Our St Helens Bathroom Installation Works</h2>
-      <p class="pf-sub">From free survey to a fully finished new bathroom. Here is exactly what to expect.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>We visit your St Helens property, assess the existing bathroom or proposed new bathroom position, plumbing configuration, waste routing and wall construction. For bathroom relocations, we survey both the existing position and the new location and price the complete scope including all remedial work.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Written fixed-price quote</strong><p>A written fixed price covering everything from strip-out to final clean. No additions after strip-out. Supply and fit or labour only. Bathroom relocation jobs quoted as a single whole-project price.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Strip out and first fix plumbing</strong><p>Existing bathroom fully stripped and disposed of. New supply and waste pipes positioned. Full tanking applied to all wet areas before any tiling begins.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Tiling, suite fitting and second fix</strong><p>Wall and floor tiling completed. Suite fitted and plumbed. All fittings, towel rail and ventilation installed and connected.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Full test and clean on completion</strong><p>Every connection tested, all fixtures checked, bathroom cleaned fully including grout haze removal. You see the finished new bathroom on the day we complete.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Bathroom Fitters St Helens. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what St Helens homeowners ask most before booking.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does new bathroom installation cost in St Helens?</summary><div class="pf-faq-body"><p>Labour for a full new bathroom renovation in St Helens starts from £2,750. Supply and fit of a complete new bathroom including suite, tiling and all fittings starts from £4,500. The Checkatrade average for St Helens bathroom supply and fit is £3,391 to £7,763. En suite labour from £2,000, supply and fit from £3,500. Wet room supply and fit from £3,500. We provide a free written fixed-price quote after the site survey.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RELOCATION</span>&nbsp; Can you move a ground-floor bathroom upstairs in a WA10 terrace?</summary><div class="pf-faq-body"><p>Yes. This is one of our most common St Helens jobs. Moving a bathroom from a ground-floor extension position to an upstairs bedroom position requires new soil stack connections, rerouting of hot and cold supply pipes and a new bathroom installation in the new location. We survey the full scope of both positions and price the complete job as a single fixed price. No separate charges for the soil stack work, remedial work on the old ground-floor position or the new installation. One price, one team.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">TRADES</span>&nbsp; Do you do the plumbing and tiling or do I need a separate tiler?</summary><div class="pf-faq-body"><p>We handle everything with Gas Safe registered team. Plumbing, tiling and all fitting. Gas Safe registered on any St Helens bathroom installation. You do not need to find a separate tiler or coordinate between separate trades.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LANDLORD</span>&nbsp; Can you fit a new bathroom during a void period at my St Helens rental?</summary><div class="pf-faq-body"><p>Yes. We schedule St Helens landlord bathroom jobs specifically around tenant changeover periods. A new supply and fit bathroom installation typically takes five to seven days. One team for plumbing and tiling means no waiting for a separate tiler to become available. New bathroom supply and fit from £4,995. New shower room supply and fit from £3,500.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered for St Helens bathroom work?</summary><div class="pf-faq-body"><p>Yes. All plumbing work carried out by our Gas Safe registered. Our team does the tiling and fitting too. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Bathroom Installation Across St Helens</h2>
-      <p class="pf-sub">We fit and renovate bathrooms across all St Helens WA postcodes.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div class="pf-card"><h3>Central St Helens</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Victorian terraces with ground-floor bathroom relocation demand. WA10 bathroom installations and relocations. Landlord and HMO bathroom supply and fit.</p><div class="pf-pills"><span class="pf-pill">St Helens WA10</span><span class="pf-pill">Parr WA9</span><span class="pf-pill">Thatto Heath WA9</span><span class="pf-pill">Fingerpost WA10</span></div></div>
-        <div class="pf-card"><h3>North and West St Helens</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">New bathroom installations and supply and fit across WA11. Rainford and Billinge properties with more diverse housing stock.</p><div class="pf-pills"><span class="pf-pill">Haydock WA11</span><span class="pf-pill">Newton-le-Willows WA12</span><span class="pf-pill">Rainford WA11</span><span class="pf-pill">Billinge WA11</span></div></div>
-        <div class="pf-card"><h3>Wider St Helens Area</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Full bathroom fitting across Prescot, Whiston, Rainhill and surrounding WA postcodes.</p><div class="pf-pills"><span class="pf-pill">Prescot L34</span><span class="pf-pill">Whiston L35</span><span class="pf-pill">Rainhill L35</span><span class="pf-pill">Eccleston WA10</span></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Related Services Across St Helens</h2>
-      <p class="pf-sub">All Gas Safe registered. All WA postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/hot-water-cylinders-st-helens" class="pf-related-link"><div><strong>Hot Water Cylinders St Helens</strong><span>Unvented from £1,450. G3 qualified. Vented from £750. All WA postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation St Helens</strong><span>Electric, mixer and digital showers from £375. Bath to shower conversions from £2,395.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-st-helens" class="pf-related-link"><div><strong>Boiler Installation St Helens</strong><span>New boiler from £2,195. Free survey.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-st-helens" class="pf-related-link"><div><strong>Radiators St Helens</strong><span>Supply and fit from £245. Heated towel rail connections. All WA postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Free Survey</strong><span>Free no-obligation survey and fixed-price quote. All St Helens WA postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Bathroom Fitters Across Merseyside</h2>
-      <p class="pf-sub">New bathroom installation from £2,750 labour. Supply and fit from £4,995. One team for plumbing and tiling. Gas Safe registered</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Liverpool</strong><span>Full bathroom installation from £2,750 labour. Victorian terrace specialists. All Liverpool L postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-wirral" class="pf-related-link"><div><strong>Bathroom Fitters Wirral</strong><span>New bathroom installation from £2,750 labour. Outrigger bathroom and en suite specialists. All CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-formby" class="pf-related-link"><div><strong>Bathroom Fitters Formby</strong><span>New bathroom installation from £2,750 labour. En suite and wet room specialists for L37 properties.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free St Helens Bathroom Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">New bathroom installation from £2,750 labour. Supply and fit from £4,995. Bathroom relocations. Landlord void period scheduling. One team for plumbing and tiling. Free fixed-price survey.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>

@@ -1,375 +1,251 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/bathroom-fitters-wirral';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'cloakroom', tier: 'Small room', name: 'Cloakroom or WC', price: '£2,495', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['New toilet and basin', 'Taps, waste and pipework', 'Tiling or wall panels', 'Old suite taken away'] },
+  { id: 'full', tier: 'Full bathroom', popular: true, name: 'Full bathroom, supplied and fitted', price: '£4,995', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Bath or shower, toilet, basin and taps', 'Strip-out and disposal', 'All plumbing and tiling', 'Usually 5 to 10 working days'] },
+  { id: 'en-suite', tier: 'En-suite', name: 'En-suite shower room', price: '£4,495', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Shower tray, enclosure and valve', 'Toilet and basin', 'Tiling and waterproofing', 'Extractor fan by our partner electricians'] },
+  { id: 'bath-to-shower', tier: 'Most asked for', name: 'Bath to shower conversion', price: '£2,395', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Bath removed and taken away', 'Tray, enclosure and thermostatic valve', 'Shower area tiled or panelled', 'Usually 2 to 3 days'] },
+];
+
+const faqs = [
+  { q: 'How much does a bathroom installation cost on the Wirral?', a: 'A full bathroom on the Wirral, supplied and fitted, starts from £4,995 including VAT. An en-suite is from £4,495 and a cloakroom or WC is from £2,495. A bath to shower conversion is from £2,395. If you buy your own suite, a labour-only full refit is from £2,750. You get a fixed written price after a free home visit.' },
+  { q: 'How long does a bathroom installation take on the Wirral?', a: 'A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days. A bathroom in a Victorian outrigger can take a little longer if the old waste pipes need replacing. We give you the dates in your quote.' },
+  { q: 'Do you cover every Wirral CH postcode?', a: 'Yes. We fit bathrooms across CH41 to CH49 and CH60 to CH64. That takes in Birkenhead, Wallasey, Moreton, Hoylake, West Kirby, Heswall, Bebington, Bromborough and Neston. Travel is included in your quote.' },
+  { q: 'Can you fit a new bathroom in a Victorian outrigger?', a: 'Yes. Many terraces in Birkenhead, Wallasey, Hoylake and Rock Ferry have the bathroom in the rear outrigger. These rooms often have long waste runs, old cast iron pipes and joists that need checking. We look at all of this at the free visit and price it before we start.' },
+  { q: 'Will a new en-suite affect my water pressure?', a: 'It can. Two showers running at once can be weak on an old tank system. In larger homes in Heswall, Pensby and Bromborough, an unvented cylinder often fixes this. Our engineers are G3 qualified, so we can fit the cylinder and the en-suite as one job. Unvented cylinders start from £1,450.' },
+  { q: 'Do I need a separate tiler or electrician?', a: 'No. Our team does the plumbing and the tiling. Lights, extractor fans and shower circuits are done by our partner firm Ideal Electrical Solutions. We book them into the same plan, so you only deal with us.' },
+  { q: 'What if you find a problem under the old bath?', a: 'We show you and give you a price before we fix it. Old Wirral homes often hide a rotten board, a weeping waste or a corroded cast iron pipe. Nothing gets covered up, and you decide.' },
+  { q: 'Do I need to pay up front?', a: 'Nothing is paid before the visit, and the visit is free. Payment terms are agreed in writing with your quote, before the job is booked in. We do not offer finance.' },
+];
 ---
 
-<BaseLayout
-  title="Bathroom Fitters in Wirral | Full Installation | Gas Safe"
-  description="Bathroom fitters Wirral from £2,750 labour. New bathroom installation, en suite, wet room and shower room supply and fit. One contractor for plumbing and tiling   Gas Safe registered Free survey all CH postcodes. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/bathroom-fitters-wirral"
+<ServiceGuide
+  url={URL_}
+  title="Bathroom Fitters Wirral | Plumbing and Tiling From £4,995"
+  description="Bathroom fitters on the Wirral. New bathroom installation from £4,995, en-suites from £4,495, bath to shower from £2,395, inc VAT. Plumbing and tiling by our team. All CH postcodes. Call 0151 558 0334."
+  h1="Bathroom Fitters Wirral"
+  badge="Free home visit · all CH postcodes"
+  intro="New bathrooms fitted across the Wirral from £4,995, including VAT. Our team, led by James, does the strip-out, the plumbing and the tiling. We know the Wirral's outrigger terraces and period homes well. You get a fixed written price after a free home visit, and a 12-month guarantee on our work."
+  secondaryCta={{ href: '#prices', label: 'See bathroom prices' }}
+  stats={[['£4,995', 'Full bathroom fitted'], ['CH41-CH64', 'Whole peninsula covered']]}
+  ticks={['Free Home Visit', 'Plumbing and Tiling', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Bathroom installation prices on the Wirral"
+  pkLede="Supplied and fitted, including VAT. Your final price is fixed in writing after a free home visit."
+  packages={packages}
+  pkNote="Prices are a guide for a standard room with the toilet and bath or shower staying in the same place. Moving a waste, replacing old cast iron pipes, a larger room or premium tiles will add to the price. Labour-only full refit, with your own suite, from £2,750."
+  factsTitle="Wirral bathroom fitting at a glance"
+  facts={[
+    ['Price', 'Full bathroom from £4,995. En-suite from £4,495. Bath to shower from £2,395. All inc VAT.'],
+    ['Time', 'Full bathroom usually 5 to 10 working days. Bath to shower 2 to 3 days.'],
+    ['Who', 'Our team led by James does plumbing and tiling. Electrics by our partner firm.'],
+    ['Quote', 'Free home visit. Fixed price in writing.'],
+    ['Guarantee', '12 months on our work. £2 million public liability insurance.'],
+    ['Area', 'Every Wirral postcode, CH41 to CH49 and CH60 to CH64.'],
+  ]}
+  toc={[
+    ['cost', 'How much does a bathroom cost?'],
+    ['included', 'What is included?'],
+    ['homes', 'Outriggers and period homes'],
+    ['how', 'How long does it take?'],
+    ['en-suite', 'South Wirral en-suites'],
+    ['which', 'Which option is right for me?'],
+    ['postcodes', 'Areas we cover'],
+    ['why', 'Our work and guarantee'],
+  ]}
+  reviews={['Stephen D', 'Meghann S', 'Greg W', 'Joe M']}
+  faqs={faqs}
+  areasTitle="Bathroom fitters near the Wirral"
+  areasText="We also fit bathrooms across Liverpool, St Helens and Formby."
+  areas={[
+    { href: '/bathroom-fitters-liverpool', label: 'Liverpool' },
+    { href: '/bathroom-fitters-st-helens', label: 'St Helens' },
+    { href: '/bathroom-fitters-formby', label: 'Formby' },
+  ]}
+  related={[
+    { href: '/hot-water-cylinders-wirral', title: 'Hot water cylinders Wirral', text: 'Unvented cylinders for strong showers, from £1,450' },
+    { href: '/radiators-wirral', title: 'Radiators Wirral', text: 'New radiators and towel rails from £245 fitted' },
+    { href: '/boiler-installation-wirral', title: 'Boiler installation Wirral', text: 'New boilers from £2,195 with a free survey' },
+    { href: '/emergency-plumber-wirral', title: 'Emergency plumber Wirral', text: 'No call-out fee. First hour from £120' },
+  ]}
+  finalTitle="Book your free Wirral bathroom visit"
+  finalText="Full bathrooms from £4,995 including VAT. Fixed price in writing. Plumbing and tiling by our team, in every CH postcode."
+  serviceName="Bathroom Fitters Wirral"
+  serviceType="Bathroom installation"
+  serviceDesc="Full bathroom, en-suite and cloakroom installations and bath to shower conversions across the Wirral, CH41 to CH64. Strip-out, plumbing and tiling by our team, with a fixed written price."
+  areaServed={['Wirral', 'Birkenhead', 'Wallasey', 'New Brighton', 'Rock Ferry', 'Prenton', 'Moreton', 'Hoylake', 'West Kirby', 'Heswall', 'Pensby', 'Bebington', 'Bromborough', 'Neston']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Bathroom Fitters Wirral",
-    "serviceType": "Bathroom Installation and Renovation",
-    "description": "Bathroom fitters across the Wirral from £2,750 labour. New bathroom installation, en suites, wet rooms and shower rooms. One contractor for plumbing and tiling. Gas Safe registered Free survey all CH postcodes.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Wirral, CH41-CH64" },
-    "offers": [
-      { "@type": "Offer", "name": "Full Bathroom Installation Wirral Labour", "price": "2500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Full Bathroom Supply and Fit Wirral", "price": "4500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "En Suite Installation Wirral Labour", "price": "2000", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Wet Room Wirral Supply and Fit", "price": "3500", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does bathroom installation cost on the Wirral?", "acceptedAnswer": { "@type": "Answer", "text": "Labour for a full bathroom renovation on the Wirral starts from £2,750. Supply and fit of a new bathroom including suite, tiling and all fittings starts from £4,500. The Checkatrade average for Wirral bathroom supply and fit is £3,659 to £8,030. En suite labour from £2,000, supply and fit from £3,500. Wet rooms from £3,500 supply and fit. We provide a free written fixed-price quote after a site survey." } },
-      { "@type": "Question", "name": "Do you handle plumbing and tiling or do I need to find a separate tiler?", "acceptedAnswer": { "@type": "Answer", "text": "We handle everything. One team for plumbing, tiling and all fitting. Gas Safe registered You do not need to coordinate separate tradespeople. This eliminates the scheduling gaps between trades that cause most Wirral bathroom renovations to overrun." } },
-      { "@type": "Question", "name": "Can you install a new bathroom in a Wirral Victorian outrigger extension?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Victorian terraces in Birkenhead, Wallasey and Hoylake frequently have bathrooms added in outrigger extensions at the back of the property. These have longer waste pipe runs to the soil stack, potential joist reinforcement requirements and sometimes corroded original cast iron waste pipes. We assess all of this at the free survey and include any necessary remedial work in the quote before any work begins." } },
-      { "@type": "Question", "name": "Are you Gas Safe registered for Wirral bathroom work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Gas Safe registered engineers do the plumbing, tiling and fitting on every Wirral bathroom." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Bathroom Fitters Wirral", "item": "https://liverpoolemergencyplumber.co.uk/bathroom-fitters-wirral" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        Wirral Bathroom Fitters
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a bathroom installation cost on the Wirral?</h2>
+      <p class="brx-answer">A full new bathroom on the Wirral starts from £4,995, supplied and fitted, including VAT. A bath to shower conversion starts from £2,395.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th><th>Typical time</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Cloakroom or WC</strong></td><td>from £2,495</td><td>A few days</td></tr>
+            <tr><td><strong>Bath to shower conversion</strong></td><td>from £2,395</td><td>2 to 3 days</td></tr>
+            <tr><td><strong>En-suite shower room</strong></td><td>from £4,495</td><td>Set out in your quote</td></tr>
+            <tr><td><strong>Full bathroom, supplied and fitted</strong></td><td>from £4,995</td><td>5 to 10 working days</td></tr>
+            <tr><td><strong>Labour-only full refit (your own suite)</strong></td><td>from £2,750</td><td>5 to 10 working days</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1 >Bathroom Fitters Wirral</h1>
-      <p class="page-hero-sub">New bathroom installation from £2,750 labour. Supply and fit from £4,995. One team for plumbing and tiling   Gas Safe registered En suites, wet rooms, shower rooms and accessible bathrooms. Free fixed-price survey across all Wirral CH postcodes.</p>
+      <h3>What changes the price on the Wirral?</h3>
+      <ul class="sg-ticks">
+        <li><strong>Old pipes.</strong> Outrigger bathrooms often have corroded cast iron waste pipes. These are best replaced, not reused.</li>
+        <li><strong>Moving things.</strong> Moving a toilet or waste costs more than keeping it in place.</li>
+        <li><strong>The suite and tiles you pick.</strong> A freestanding bath or premium tiles cost more.</li>
+        <li><strong>Room size.</strong> More wall and floor means more tiling.</li>
+      </ul>
+      <p>We spot these at the free visit, so they are in your price from the start. Only need a new shower? See our <a href="/showers-liverpool">shower installation</a> prices, from £375 fitted.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£2,500</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Labour From</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">FREE</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Site Survey</div>
-        </div>
-      </div>
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in a Wirral bathroom installation?</h2>
+      <p class="brx-answer">Everything from the strip-out to the final clean. Your quote lists what is in and what is not.</p>
+      <ul class="sg-ticks">
+        <li><strong>Strip-out and disposal.</strong> The old suite and tiles leave with us. No skip on your drive.</li>
+        <li><strong>All plumbing.</strong> New supply and waste pipes, run and clipped properly.</li>
+        <li><strong>Tiling.</strong> James's team does the tiling, with the wet areas waterproofed first. Or we fit wall panels if you prefer.</li>
+        <li><strong>The suite.</strong> Bath or shower, toilet, basin, taps and valves, fitted and sealed.</li>
+        <li><strong>Electrics.</strong> Lights, extractor fans and shower circuits by our partner firm <a href="https://www.idealelectricalsolutions.co.uk">Ideal Electrical Solutions</a>.</li>
+        <li><strong>Making good.</strong> We test every joint, seal everything and clean before we leave.</li>
+      </ul>
+      <p>You can buy your own tiles or suite. If you supply the suite, the labour-only price is from £2,750.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a Free Survey</a>
-      </div>
+  <section class="brx-sec brx-tint" id="homes">
+    <div class="brx-wrap">
+      <h2>Can you fit bathrooms in Wirral outriggers and period homes?</h2>
+      <p class="brx-answer">Yes. Outrigger terraces and period houses are some of the most common homes we work in on the Wirral.</p>
+      <h3>Outrigger bathrooms in Birkenhead, Wallasey and Rock Ferry</h3>
+      <p>Many Victorian terraces in Birkenhead, Wallasey, Hoylake and Rock Ferry have the bathroom at the back. It is often the old outside toilet and washroom, or a single storey add-on.</p>
+      <p>These rooms bring three common problems:</p>
+      <ul class="sg-ticks">
+        <li><strong>Long waste runs.</strong> The pipe to the soil stack is long, so it needs the right fall.</li>
+        <li><strong>Old cast iron pipes.</strong> They are often corroded and need replacing.</li>
+        <li><strong>Joists.</strong> Swapping a shower for a full bath means checking the floor can take the weight.</li>
+      </ul>
+      <p>We check all three at the free visit. They go into your fixed price, not a surprise bill after the strip-out.</p>
+      <h3>Period houses in West Kirby, Hoylake and Heswall</h3>
+      <p>Older houses here often have solid outside walls and little space under the floor. We rarely chase pipes into solid walls. Instead we run them under timber floors or in neat boxing. We show you the pipe routes before we start.</p>
+      <p>Want a period look? Freestanding baths, column basins and traditional taps all suit these homes. We can supply them at a range of prices.</p>
+      <p>Solid walls also mean more condensation. A good extractor fan matters. Our partner electricians fit it as part of the same job.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Plumbing and Tiling</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Fixed Quote</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> All CH Postcodes</span>
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How long does a bathroom installation take on the Wirral?</h2>
+      <p class="brx-answer">A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days.</p>
+      <ol class="sg-steps">
+        <li><strong>Free home visit (about 45 minutes).</strong> We measure up and check the pipes, waste and walls. In an outrigger, we check the joists and cast iron too.</li>
+        <li><strong>Fixed written price.</strong> The full spec, written down. What is included is listed, and so is what is not.</li>
+        <li><strong>Day 1: strip-out.</strong> The old bathroom comes out and leaves with us.</li>
+        <li><strong>Days 1 to 3: first fix.</strong> New pipes and waste go in. Our partner electricians do any wiring. If we find rot or a leak, we show you and price it first.</li>
+        <li><strong>Days 3 to 7: walls and floor.</strong> Boarding, waterproofing and tiling, or wall panels.</li>
+        <li><strong>Final days: fit and hand over.</strong> The suite goes in. We test every joint, seal it all and clean the room.</li>
+      </ol>
+      <p>Bigger rooms, a lot of tiling or a new layout take longer. Your quote gives you the dates.</p>
+      <div class="brx-cta">
+        <p><strong>Want a price for your Wirral bathroom?</strong> Book a free home visit. No pressure to book.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Top service, would highley recommend excellent finsih to the work that was compelted, informed constantly through out the job" Joe M, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
-      </div>
+  <section class="brx-sec brx-tint" id="en-suite">
+    <div class="brx-wrap">
+      <h2>Can you add an en-suite in south Wirral?</h2>
+      <p class="brx-answer">Yes. En-suites start from £4,495. In bigger homes we often fit an unvented cylinder at the same time, so every shower has strong pressure.</p>
+      <p>Lots of detached and semi-detached homes in Heswall, Pensby and Bromborough are adding an en-suite to the main bedroom. Most people want a strong mains pressure shower.</p>
+      <p>The catch is hot water. An old tank in the loft may not feed two showers at once. An unvented cylinder gives mains pressure hot water to every bathroom. Our engineers are G3 qualified to fit and test them.</p>
+      <p>We can do the en-suite and the cylinder as one project, with one price. See our <a href="/hot-water-cylinders-wirral">hot water cylinders on the Wirral</a>, from £1,450.</p>
     </div>
   </section>
 
-
-  <!-- ONE CONTRACTOR DIFFERENTIATOR -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>One Team for Plumbing and Tiling. Gas Safe registered</h2>
-      <p class="pf-sub">Most Wirral bathroom fitters only handle the plumbing. You then coordinate a separate tiler. We handle the full new bathroom installation with Gas Safe registered team   no gaps, no disputes, one price.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All plumbing by our Gas Safe registered engineers</strong><p>Every water connection, waste pipe, bath, shower, toilet and basin fitted by Gas Safe registered. Any gas connections for heated towel rails covered under the same team.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All tiling by our team</strong><p>Floor tiling, wall tiling and waterproofing handled by a tiler you arranges. Gas Safe registered, no day-rate labourers. The same team who plumb the bathroom tiles it.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>No scheduling gaps between trades</strong><p>When you coordinate separate tradespeople, the plumber finishes and the tiler is unavailable for a week. With one Wirral team, the schedule runs continuously from strip-out to final clean.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>One invoice. One point of contact.</strong><p>One call throughout the project. One invoice on completion. No disputes about who is responsible for what. No pointing between trades when something needs resolving.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>New Bathroom Installation Prices Wirral</h2>
-      <p class="pf-sub">Free site survey required to confirm your exact price. Supply and fit prices include suite, tiling and all fittings. Labour-only prices apply when you supply the suite and tiles yourself.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MOST POPULAR</div>
-          <div class="pf-price-tier">FULL BATHROOM</div>
-          <div class="pf-price-name">Complete Bathroom Renovation</div>
-          <div class="pf-price-sub">Full strip out and new installation</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£2,500<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
-          <ul class="pf-price-list">
-            <li>Full strip out of existing bathroom</li>
-            <li>New bath, toilet and basin fitted</li>
-            <li>All plumbing and waste connections</li>
-            <li>Full wall and floor tiling</li>
-            <li>Heated towel rail fitted</li>
-            <li>New ventilation installed</li>
-            <li>Supply and fit from £4,995</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which option is right for me?</h2>
+      <p class="brx-answer">Start with what is wrong with the room now. If only the bath is the problem, a conversion may be all you need.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Bath to shower, from £2,395</h3>
+          <p>Best if you rarely use the bath, or getting in and out is hard. A low level tray makes the step much smaller.</p>
         </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">EN SUITE</div>
-          <div class="pf-price-name">En Suite Installation</div>
-          <div class="pf-price-sub">New en suite from scratch</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£2,000<small style="font-size:1rem;color:var(--muted);"> labour</small></div>
-          <ul class="pf-price-list">
-            <li>New shower, toilet and basin</li>
-            <li>All plumbing and waste connections</li>
-            <li>Full wall and floor tiling</li>
-            <li>Heated towel rail fitted</li>
-            <li>Ventilation installed</li>
-            <li>Supply and fit from £3,500</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="sg-box">
+          <h3>Full bathroom, from £4,995</h3>
+          <p>Best if the suite, tiles and pipes are all tired. Common in outriggers with old cast iron waste.</p>
         </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">WET ROOM AND SHOWERS</div>
-          <div class="pf-price-name">Wet Room or Shower Installation</div>
-          <div class="pf-price-sub">Wet rooms and shower enclosures</div>
-          <div class="pf-price-amount" style="font-size:2.5rem;">£400<small style="font-size:1rem;color:var(--muted);"> shower</small></div>
-          <ul class="pf-price-list">
-            <li>Shower enclosure supply and fit from £400</li>
-            <li>Wet room from £3,500 supply and fit</li>
-            <li>Full tanking and waterproofing included</li>
-            <li>Linear drain and tiled floor</li>
-            <li>Walk-in and level access designs</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="sg-box">
+          <h3>En-suite, from £4,495</h3>
+          <p>A shower room off a bedroom. Popular in larger south Wirral homes.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Cloakroom or WC, from £2,495</h3>
+          <p>A toilet and basin downstairs or under the stairs. Small room, small budget.</p>
         </div>
       </div>
-
-      <div class="pf-alert" style="margin-top:2rem;">
-        <strong>How our prices compare to the Wirral market</strong>
-        <p>The Checkatrade average for Wirral bathroom supply and fit is £3,659 to £8,030. Our new bathroom supply and fit starts from £4,995   competitive for the Wirral market, with no showroom overheads factored in, and plumbing and tiling both included in the single quote with no separate charges to add on top.</p>
-      </div>
+      <p style="margin-top:1rem;"><strong>Not sure?</strong> We will tell you honestly at the free visit, even if the cheaper option is the right one.</p>
     </div>
   </section>
 
-
-  <!-- WIRRAL UNIQUE SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <span class="pf-section-label">WIRRAL LOCAL KNOWLEDGE</span>
-      <h2>Bathroom Installation in Wirral's Victorian and Period Properties</h2>
-      <p class="pf-sub">Wirral's Victorian terraces and period houses present specific bathroom challenges that catch out inexperienced fitters. Our engineers have been working in Wirral's diverse housing stock for decades and know what to expect before we start.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">The Wirral Outrigger Bathroom Problem</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Victorian terraces in Birkenhead, Wallasey, Hoylake and Rock Ferry frequently have bathrooms added in outrigger extensions at the back of the property. These were typically converted from the original outside toilet and washroom, or added as a separate single-storey extension to the rear of the terrace. Bathrooms in outrigger positions have longer waste pipe runs to connect to the soil stack, which can require fall calculations and sometimes air admittance valves. Floor joists in these positions may need assessment for bath support loads, particularly when replacing a shower with a full-size bath. Original cast iron waste pipes in these extensions are frequently corroded and need replacing rather than reusing. An experienced fitter identifies all of this at the free survey and includes it in the fixed-price quote before any work begins. A less experienced fitter discovers it after strip-out and charges extra.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">South Wirral En Suites and G3 Qualification</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Larger detached and semi-detached properties in Heswall, Pensby and Bromborough are increasingly adding en suites to master bedrooms. When the en suite includes a shower at full mains pressure   as most south Wirral homeowners want   the property typically needs an unvented cylinder to deliver mains pressure hot water to multiple bathrooms simultaneously. Our engineers hold G3 qualification for unvented cylinder installation and inspection, which is a legal requirement for this work. We design, install and certify the complete system   new en suite plus unvented cylinder   in a single project. This is the correct approach for a multi-bathroom south Wirral property, and it eliminates the poor pressure problem that the previous cylinder system was causing in the other bathrooms.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">New Bathroom Installation in Wirral Period Houses</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Period houses in West Kirby, Hoylake and Heswall often have bathrooms in positions with solid external walls, limited underfloor void access and original features to preserve. Supply pipes in these properties are usually surface-mounted in neat boxing or run under suspended timber floors rather than chased into solid walls. We plan every pipe route at the free survey and present the routing options before work begins. For period Wirral properties where aesthetics matter, we select fixtures that complement the property character   freestanding baths, column basins and traditional chrome fittings are all available at varying price points within the supply and fit service.</p>
-        </div>
-
+  <section class="brx-sec brx-tint" id="postcodes">
+    <div class="brx-wrap">
+      <h2>Do you cover all Wirral CH postcodes?</h2>
+      <p class="brx-answer">Yes. We fit bathrooms right across the peninsula, from Birkenhead to West Kirby and down to Neston.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Area</th><th>Postcodes</th><th>Typical homes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Birkenhead and east Wirral</strong></td><td>Birkenhead CH41, Rock Ferry CH42, Prenton CH43, Wallasey CH44, New Brighton CH45</td><td>Victorian and Edwardian terraces, often with outrigger bathrooms</td></tr>
+            <tr><td><strong>West and north Wirral</strong></td><td>Moreton CH46, Hoylake CH47, West Kirby CH48</td><td>Period houses with solid walls and high ceilings</td></tr>
+            <tr><td><strong>South Wirral</strong></td><td>Heswall CH60, Pensby CH61, Bromborough CH62, Bebington CH63, Neston CH64</td><td>Larger detached and semi-detached homes adding en-suites</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>Travel is included in your quote, wherever you are on the Wirral.</p>
     </div>
   </section>
 
-
-  <!-- WHAT IS INCLUDED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>What Is Included in Your Wirral Bathroom Installation</h2>
-      <p class="pf-sub">No hidden extras. One price covers everything from strip-out to final clean on every Wirral CH postcode job.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full strip-out and disposal</strong><p>Existing bathroom suite, tiles and waste removed and disposed of. No skip required on your Wirral driveway.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All plumbing and waste connections</strong><p>Every water supply connection, waste pipe, bath, shower, toilet and basin plumbed by our Gas Safe registered engineers.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full wall and floor tiling</strong><p>All tiling by a tiler you arranges. Surface preparation, adhesive, grout and all tile cuts. Waterproofing applied to wet areas before any tiling begins.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bathroom suite fitted and sealed</strong><p>Bath, shower, toilet and basin all fitted, sealed and tested. All chrome fittings and accessories installed. Silicone applied to all joints.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Heated towel rail and ventilation</strong><p>Heated towel rail connected to heating circuit or wired as electric. Extractor fan fitted and ducted outside. Correct ventilation is particularly important in Wirral Victorian properties with solid walls where condensation is a persistent problem.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full clean and 12-month guarantee</strong><p>Bathroom cleaned fully on completion. Grout haze removed, chrome polished. 12-month workmanship guarantee on all installation work.</p></div></div>
+  <section class="brx-sec" id="why">
+    <div class="brx-wrap">
+      <h2>Why choose us as your Wirral bathroom fitters?</h2>
+      <p class="brx-answer">One team for plumbing and tiling, a fixed price in writing, and a 12-month guarantee on our work.</p>
+      <div class="sg-cols">
+        <figure class="sg-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/bathroom-bath-shower-fitted-480.webp 480w, /images/jobs/bathroom-bath-shower-fitted-960.webp 960w" sizes="(max-width: 700px) 100vw, 400px" />
+            <img src="/images/jobs/bathroom-bath-shower-fitted-960.jpg" alt="New bath and shower fitted by our bathroom team" width="960" height="1280" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>A real job: new bath and shower fitted.</figcaption>
+        </figure>
+        <figure class="sg-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/jobs/shower-room-fitted-480.webp 480w, /images/jobs/shower-room-fitted-960.webp 960w" sizes="(max-width: 700px) 100vw, 400px" />
+            <img src="/images/jobs/shower-room-fitted-960.jpg" alt="Shower room fitted by our team" width="960" height="1280" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>A real job: shower room fitted.</figcaption>
+        </figure>
       </div>
+      <ul class="sg-ticks">
+        <li><strong>One team.</strong> Plumbing and tiling by James's team. No waiting a week for a tiler to turn up.</li>
+        <li><strong>Fixed price in writing.</strong> If we find something behind the old bath, we price it before we touch it.</li>
+        <li><strong>We know Wirral homes.</strong> Outriggers, cast iron waste and solid walls are checked at the visit.</li>
+        <li><strong>Guaranteed.</strong> 12 months on our work, and £2 million public liability insurance.</li>
+        <li><strong>Tidy.</strong> We clean up and take all the rubbish away with us.</li>
+      </ul>
     </div>
   </section>
-
-
-  <!-- BATHROOM SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Bathroom Services Across the Wirral</h2>
-      <p class="pf-sub">From a full new bathroom installation to a single shower room. All work done by our team across all Wirral CH postcodes.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>Full Bathroom Renovations</h3><p>Complete strip-out and new bathroom installation. New suite, new tiling, new waste and supply connections. Labour from £2,750. Supply and fit from £4,995. The Checkatrade average for Wirral is significantly higher. We compete by having no showroom overheads.</p></div>
-        <div class="pf-why-item"><h3>En Suite Installations</h3><p>Adding an en suite to a master bedroom in your Wirral property. We handle all stud wall work, plumbing, tiling and fitting. G3 qualified for unvented cylinder installation where mains pressure hot water is required. Labour from £2,000. Supply and fit from £3,500.</p></div>
-        <div class="pf-why-item"><h3>Wet Rooms</h3><p>Full wet room installation including full tanking, linear drain, level access tiling and thermostatic controls. We apply full tanking systems, not waterproof paint. Particularly popular in south Wirral larger properties. From £3,500 supply and fit.</p></div>
-        <div class="pf-why-item"><h3>Shower Installations</h3><p>New shower enclosure, tray and screen supply and fit from £400. Power showers, thermostatic mixers and digital shower systems. Bath to shower conversions from £2,395 supply and fit.</p></div>
-        <div class="pf-why-item"><h3>Accessible Bathrooms</h3><p>Level access showers, grab rails, fold-down shower seats and walk-in baths for Wirral homeowners requiring accessible bathroom solutions. All installations designed around the specific requirements of the occupant and property.</p></div>
-        <div class="pf-why-item"><h3>Individual Fixture Replacements</h3><p>Replacing a single bath, toilet or basin in a Wirral property without a full renovation. Labour from £150 per fixture. Useful for Wirral landlords and rental property refurbishments.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Why Wirral Homeowners Choose Us for Their New Bathroom</h2>
-      <p class="pf-sub">One team. No showroom overhead. Plumbing and tiling included. Fixed price. Wirral property knowledge. All CH postcodes covered.</p>
-      <div class="pf-why-grid">
-        <div class="pf-why-item"><h3>No Showroom Overhead in Our Prices</h3><p>Wirral Bathrooms has a showroom in Newton that has to be paid for through customer prices. We have no showroom to maintain, which is reflected in our pricing. The same quality of installation at a more competitive price across all Wirral CH postcodes.</p></div>
-        <div class="pf-why-item"><h3>Plumbing and Tiling Included</h3><p>You do not need to find a separate Wirral tiler. Our team handles everything. This eliminates the scheduling gaps and disputes between separate trades that cause most bathroom renovations to overrun and over-cost.</p></div>
-        <div class="pf-why-item"><h3>Wirral Property Knowledge</h3><p>Victorian outrigger extensions, period house pipe routing, south Wirral en suites with unvented cylinders. We know what to expect in every Wirral property type before we start. Problems identified at survey, not discovered during the job.</p></div>
-        <div class="pf-why-item"><h3>Free Fixed-Price Survey</h3><p>We visit your Wirral property, assess everything and provide a written fixed-price quote. The price we quote is the price on the invoice. No additions after strip-out, no surprises from hidden problems.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>All plumbing carried out by Gas Safe registered. All tiling by our team. Verify at gassaferegister.co.uk.</p></div>
-        <div class="pf-why-item"><h3>G3 Qualified for Unvented Cylinders</h3><p>Our engineers hold G3 qualification for unvented cylinder installation and inspection. If your south Wirral en suite requires mains pressure hot water throughout the property, we design and install the complete system.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Wirral Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came to do some work in my bathroom, he was punctual, polite , and listened to what work I required I'm my bathroom. James done a great job, fair price, and consulted me throughout the job. He was also a good worker, and respectful . James also cleaned up afterwards, and took all the rubbish with him. I would definitely employ James again in the future.</p><div class="pf-review-footer"><div class="pf-review-avatar">S</div><div><div class="pf-review-name">Stephen D</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came out promptly after a referral and fitted a bath and new shower system in around half a day. We're very pleased with the outcome! Thanks again!</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Meghann S</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Great Job! Thanks James for all your hard work, looks fantastic!</p><div class="pf-review-footer"><div class="pf-review-avatar">G</div><div><div class="pf-review-name">Greg W</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PROCESS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>How Our Wirral Bathroom Installation Works</h2>
-      <p class="pf-sub">From free survey to a fully finished new bathroom. Here is exactly what to expect.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>We visit your Wirral property, assess the existing bathroom, plumbing configuration, waste routing, wall construction and any property-specific challenges. We identify everything   including outrigger pipe runs, joist conditions and unvented cylinder requirements   before quoting, not during the job.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Written fixed-price quote</strong><p>A written fixed-price quote covering everything from strip-out to final clean. Supply and fit or labour only. No additions after strip-out regardless of what we find.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Strip out and first fix plumbing</strong><p>Existing bathroom fully stripped and disposed of. New supply and waste pipes positioned. Full tanking applied to all wet areas before any tiling begins.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Tiling, suite fitting and second fix</strong><p>Wall and floor tiling completed. Suite fitted and plumbed. All fittings, towel rail and ventilation installed and connected.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Full test and clean on completion</strong><p>Every connection tested, all fixtures checked, bathroom cleaned fully. You see the finished new bathroom on the day we complete, not after cleaning up after us.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Bathroom Fitters Wirral. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what Wirral homeowners ask most before booking.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does new bathroom installation cost on the Wirral?</summary><div class="pf-faq-body"><p>Labour for a full new bathroom renovation on the Wirral starts from £2,750. Supply and fit of a complete new bathroom including suite, tiling and all fittings starts from £4,500. The Checkatrade average for Wirral bathroom supply and fit is £3,659 to £8,030. En suite labour from £2,000, supply and fit from £3,500. Wet room supply and fit from £3,500. We provide a free written fixed-price quote after the site survey.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TRADES</span>&nbsp; Do you do the plumbing and tiling or just the plumbing?</summary><div class="pf-faq-body"><p>We handle everything. One employed team for plumbing, tiling and all fitting. Gas Safe registered on any Wirral bathroom installation. You do not need to find a separate tiler or coordinate separate trades. This eliminates the scheduling gaps and cost disputes that cause most Wirral bathroom renovations to overrun.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">VICTORIAN</span>&nbsp; Can you install a new bathroom in a Wirral Victorian outrigger extension?</summary><div class="pf-faq-body"><p>Yes. Wirral Victorian terraces with bathrooms in outrigger extensions are one of our most common installation types. We assess waste pipe routing, floor joist condition and any corroded cast iron waste pipes at the free survey. Everything identified is included in the fixed-price quote before work begins, not discovered and charged extra after strip-out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">EN SUITE</span>&nbsp; Can you install an en suite in my south Wirral property?</summary><div class="pf-faq-body"><p>Yes. En suite installations including G3-qualified unvented cylinder work for mains pressure hot water are one of our specialisms in south Wirral. If adding an en suite means your existing cylinder needs upgrading to deliver adequate pressure to multiple bathrooms, we design and install the complete solution in a single project.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered for Wirral bathroom work?</summary><div class="pf-faq-body"><p>Yes. All plumbing work carried out by our Gas Safe registered. Our team does the tiling and fitting too. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Bathroom Installation Across the Wirral Peninsula</h2>
-      <p class="pf-sub">We fit and renovate bathrooms across all Wirral CH postcodes.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div class="pf-card"><h3>Birkenhead and Central Wirral</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Victorian and Edwardian terraces with outrigger bathrooms. Outrigger waste pipe and joist expertise. New bathroom installation specialists.</p><div class="pf-pills"><span class="pf-pill">Birkenhead CH41</span><span class="pf-pill">Rock Ferry CH42</span><span class="pf-pill">Prenton CH43</span><span class="pf-pill">Wallasey CH44</span><span class="pf-pill">New Brighton CH45</span></div></div>
-        <div class="pf-card"><h3>West and North Wirral</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Period houses with solid walls and high ceilings. Traditional style bathrooms and shower rooms.</p><div class="pf-pills"><span class="pf-pill">Moreton CH46</span><span class="pf-pill">Hoylake CH47</span><span class="pf-pill">West Kirby CH48</span></div></div>
-        <div class="pf-card"><h3>South Wirral</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Larger detached properties. En suite installations with G3 unvented cylinder qualification. Wet room specialists.</p><div class="pf-pills"><span class="pf-pill">Heswall CH60</span><span class="pf-pill">Pensby CH61</span><span class="pf-pill">Bebington CH63</span><span class="pf-pill">Bromborough CH62</span><span class="pf-pill">Neston CH64</span></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Related Services Across the Wirral</h2>
-      <p class="pf-sub">All Gas Safe registered. G3 qualified. All CH postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/hot-water-cylinders-wirral" class="pf-related-link"><div><strong>Hot Water Cylinders Wirral</strong><span>Unvented from £1,450. G3 qualified. Full mains pressure for en suites. All CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation Wirral</strong><span>Electric, mixer and digital showers from £375. Bath to shower conversions from £2,395.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-wirral" class="pf-related-link"><div><strong>Boiler Installation Wirral</strong><span>New boiler from £2,195. Free survey. All CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-wirral" class="pf-related-link"><div><strong>Radiators Wirral</strong><span>Supply and fit from £245. Heated towel rail connections. All CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Free Survey</strong><span>Free no-obligation survey and fixed-price quote. All Wirral CH postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Bathroom Fitters Across Merseyside</h2>
-      <p class="pf-sub">New bathroom installation from £2,750 labour. Supply and fit from £4,995. One team for plumbing and tiling. Gas Safe registered</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Liverpool</strong><span>Full bathroom installation from £2,750 labour. Victorian terrace specialists. All Liverpool L postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-st-helens" class="pf-related-link"><div><strong>Bathroom Fitters St Helens</strong><span>New bathroom installation from £2,750 labour. Supply and fit from £4,995. WA10, WA11 and WA12.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-formby" class="pf-related-link"><div><strong>Bathroom Fitters Formby</strong><span>New bathroom installation from £2,750 labour. En suite and wet room specialists for L37 properties.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free Wirral Bathroom Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">New bathroom installation from £2,750 labour. Supply and fit from £4,995. One team for plumbing and tiling. Gas Safe registered Free fixed-price survey. All Wirral CH postcodes.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>
