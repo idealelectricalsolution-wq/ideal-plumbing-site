@@ -1,330 +1,213 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-st-helens';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'vented', tier: 'Loft tank systems', name: 'Vented cylinder replaced', price: '£750', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Like-for-like swap on a loft tank system', 'Immersion heater fitted', 'Old cylinder taken away', 'Usually done in one day'] },
+  { id: 'unvented-150', tier: 'Mains pressure', popular: true, name: 'Unvented cylinder, 150 litres', price: '£1,450', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 1 to 2 people, one bathroom', 'Fitted by a G3 qualified engineer', 'All safety valves fitted and tested', 'Notified as Building Regulations require'] },
+  { id: 'unvented-210', tier: 'Family homes', name: 'Unvented cylinder, 210 litres', price: '£1,695', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 3 to 4 people', 'One bathroom, or a bath and en-suite shower', 'Expansion vessel and discharge pipe', 'Old cylinder taken away'] },
+  { id: 'unvented-250', tier: 'Bigger homes', name: 'Unvented cylinder, 250 to 300 litres', price: '£1,995', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 4 or more people', 'Two bathrooms used at once', 'Mains pressure at every tap', 'Free survey to confirm the size'] },
+];
+
+const faqs = [
+  { q: 'How much does a hot water cylinder cost in St Helens?', a: 'A vented cylinder replaced starts from £750 including VAT. An unvented cylinder starts from £1,450 for 150 litres, £1,695 for 210 litres and £1,995 for 250 to 300 litres. Changing from vented to unvented starts from £1,895. You get a fixed written price after a free survey.' },
+  { q: 'Do you cover all St Helens WA postcodes?', a: 'Yes. We cover WA9 to WA12, including St Helens town centre, Eccleston, Thatto Heath, Sutton, Haydock, Rainford, Billinge and Newton-le-Willows. The price is the same everywhere, with no call-out fee.' },
+  { q: 'My immersion heater keeps failing. Should I replace it or the cylinder?', a: 'If the cylinder is sound and under about 15 years old, a new immersion heater is usually the right call. It is £175 on a vented cylinder. If the cylinder is over 20 years old, or the immersion has failed more than once, a new cylinder from £750 is often better value. We tell you honestly on the visit.' },
+  { q: 'Can you replace an immersion heater the same day?', a: 'Often, yes, when we have a free slot. Call 0151 558 0334 to check. Most immersion heater swaps are done in one visit.' },
+  { q: 'We are moving our bathroom upstairs. Do we need a new cylinder?', a: 'Not always. It depends on how high the loft tank sits above the new shower. If the pressure will be too weak, an unvented cylinder gives mains pressure upstairs. We check this at the free survey.' },
+  { q: 'Are your engineers G3 qualified?', a: 'Yes. All our engineers are G3 qualified to fit and service unvented cylinders. The work is notified as the Building Regulations require, and you get the paperwork to keep.' },
+  { q: 'How long does a cylinder swap take?', a: 'Most swaps are done in one day. A change from vented to unvented, or a tight airing cupboard, can take a little longer. We tell you at the survey.' },
+  { q: 'Does an unvented cylinder need a yearly service?', a: 'Yes. Makers ask for a yearly service to keep the warranty valid. It also checks the safety valves still work. Our unvented cylinder service is £120 including VAT.' },
+  { q: 'Are you Gas Safe registered?', a: 'Yes. Gas work is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
+];
 ---
 
-<BaseLayout
-  title="Hot Water Cylinders St Helens | From £750 | G3 Qualified"
-  description="Hot water cylinder installation St Helens from £750. Vented and unvented cylinders. Immersion heater replacement from £175. G3 qualified engineers. Free survey all WA postcodes. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-st-helens"
+<ServiceGuide
+  url={URL_}
+  title="Hot Water Cylinders St Helens | Vented & Unvented From £750"
+  description="Hot water cylinders St Helens: vented from £750, unvented from £1,450, immersion heaters from £175 inc VAT. G3 qualified engineers, free survey, all WA postcodes. Call 0151 558 0334."
+  h1="Hot Water Cylinders St Helens"
+  badge="Vented, unvented and immersion heaters · All WA postcodes"
+  intro="New hot water cylinders and immersion heaters fitted across St Helens. Vented from £750, unvented from £1,450, and immersion heaters from £175, all including VAT. All our engineers are G3 qualified."
+  stats={[['£750', 'Vented, from'], ['£175', 'Immersion heater']]}
+  ticks={['G3 Qualified Engineers', 'Gas Safe Registered', 'Free Survey', 'All WA Postcodes']}
+  pkTitle="Hot water cylinder prices in St Helens"
+  pkLede="Priced by size, supplied and fitted, including VAT. Same price in every WA postcode."
+  packages={packages}
+  pkNote="Prices are a guide for a straight swap in the same place. Your final fixed price comes after a free survey. A new immersion heater is £175 (vented) or £275 (unvented)."
+  factsTitle="St Helens hot water cylinders at a glance"
+  facts={[
+    ['Price', 'Vented from £750. Unvented from £1,450 (150 litres) to £1,995 (250 to 300 litres).'],
+    ['Immersion heater', '£175 on a vented cylinder, £275 on an unvented cylinder.'],
+    ['Time', 'Most swaps are done in one day.'],
+    ['Who', 'G3 qualified engineers, part of our team led by James.'],
+    ['Survey', 'Free. We give you an honest repair or replace answer.'],
+    ['Area', 'Every St Helens WA postcode, WA9 to WA12.'],
+  ]}
+  toc={[
+    ['cost', 'How much does a cylinder cost?'],
+    ['terraces', 'Old cylinders in WA10 terraces'],
+    ['immersion', 'Immersion heater or new cylinder?'],
+    ['bathroom', 'Moving your bathroom upstairs'],
+    ['types', 'Vented or unvented?'],
+    ['how', 'How does it work?'],
+  ]}
+  reviews={['Ellie J', 'Mark L', 'Edward M', 'David H']}
+  faqs={faqs}
+  areasTitle="Hot water cylinders in other areas"
+  areasText="The same prices apply across Liverpool, the Wirral and Formby."
+  areas={[
+    { href: '/hot-water-cylinders-liverpool', label: 'Liverpool' },
+    { href: '/hot-water-cylinders-wirral', label: 'Wirral' },
+    { href: '/hot-water-cylinders-formby', label: 'Formby' },
+  ]}
+  related={[
+    { href: '/boiler-installation-st-helens', title: 'Boiler installation St Helens', text: 'New combi boilers from £2,195 fully fitted' },
+    { href: '/bathroom-fitters-st-helens', title: 'Bathroom fitters St Helens', text: 'New bathrooms from £4,995, fitted and tiled' },
+    { href: '/boiler-service-st-helens', title: 'Boiler service St Helens', text: '£95 fixed price, inc VAT' },
+    { href: '/showers-liverpool', title: 'Showers', text: 'Mixer, electric and power showers fitted' },
+  ]}
+  finalTitle="Book your free St Helens cylinder survey"
+  finalText="Vented from £750. Unvented from £1,450. Immersion heaters from £175. G3 qualified engineers and a fixed written price."
+  serviceName="Hot Water Cylinders St Helens"
+  serviceType="Hot water cylinder installation"
+  serviceDesc="Vented and unvented hot water cylinders supplied and fitted across St Helens, WA9 to WA12, by G3 qualified engineers. Immersion heater replacement, cylinder upgrades for bathroom moves and unvented cylinder servicing."
+  areaServed={['St Helens', 'Eccleston', 'Parr', 'Sutton', 'Thatto Heath', 'Clock Face', 'Haydock', 'Rainford', 'Billinge', 'Newton-le-Willows', 'Earlestown']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Hot Water Cylinders St Helens",
-    "serviceType": "Hot Water Cylinder Installation and Replacement",
-    "description": "Hot water cylinder installation and replacement across St Helens from £600. Vented and unvented cylinders. Immersion heater replacement. G3 qualified engineers. Free survey all WA postcodes.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "St Helens, WA9-WA12" },
-    "offers": [
-      { "@type": "Offer", "name": "Vented Hot Water Cylinder St Helens", "price": "600", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Unvented Hot Water Cylinder St Helens", "price": "900", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Immersion Heater Replacement St Helens", "price": "150", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does a hot water cylinder cost in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "A vented indirect hot water cylinder supply and fit in St Helens starts from £600. An unvented cylinder starts from £1,450. Immersion heater replacement from £175. We provide a free fixed-price quote after a site visit." } },
-      { "@type": "Question", "name": "My WA10 terrace has an old immersion heater that keeps failing. Should I replace just the element or the whole cylinder?", "acceptedAnswer": { "@type": "Answer", "text": "If the cylinder itself is in good condition and under 15 years old, immersion heater element replacement from £175 is usually the right call. If the cylinder is over 20 years old or has a history of problems, full replacement from £600 is typically more economical in the long run. We assess on the visit and give you an honest recommendation before quoting any work." } },
-      { "@type": "Question", "name": "Are you G3 qualified for unvented cylinder installation in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unvented hot water cylinder installation must be carried out by a G3 qualified engineer under Building Regulations Part G. Our engineers hold the required G3 qualification. All unvented installations are notified to Building Control on completion and you receive a commissioning certificate." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Hot Water Cylinders St Helens", "item": "https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-st-helens" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        St Helens Hot Water Cylinder Specialists
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a hot water cylinder cost in St Helens?</h2>
+      <p class="brx-answer">A vented cylinder replaced starts from £750. An unvented cylinder starts from £1,450, and the price goes up with the size. All prices include VAT.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td>Vented cylinder replaced</td><td>from £750</td></tr>
+            <tr><td>Unvented cylinder, 150 litres</td><td>from £1,450</td></tr>
+            <tr><td>Unvented cylinder, 210 litres</td><td>from £1,695</td></tr>
+            <tr><td>Unvented cylinder, 250 to 300 litres</td><td>from £1,995</td></tr>
+            <tr><td>Change from vented to unvented</td><td>from £1,895</td></tr>
+            <tr><td>Immersion heater, vented cylinder</td><td>£175</td></tr>
+            <tr><td>Immersion heater, unvented cylinder</td><td>£275</td></tr>
+            <tr><td>Unvented cylinder yearly service</td><td>£120</td></tr>
+            <tr><td>Repairs and fault finding</td><td>£120 first hour (weekdays 9am to 4pm)</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1 >Hot Water Cylinders St Helens</h1>
-      <p class="page-hero-sub">Hot water cylinder supply and fit from £750. Vented and unvented cylinders. Immersion heater replacement from £175. G3 qualified engineers. Free survey across all St Helens WA postcodes.</p>
+      <h3>What is in the price?</h3>
+      <ul class="sg-ticks">
+        <li>The new cylinder, supplied and fitted</li>
+        <li>All pipe connections, valves and fittings</li>
+        <li>Safety valves, expansion vessel and discharge pipe on unvented cylinders</li>
+        <li>Testing and setting up before we leave</li>
+        <li>Old cylinder drained, removed and taken away</li>
+        <li>Building Regulations paperwork for unvented cylinders</li>
+        <li>12-month workmanship guarantee</li>
+      </ul>
+      <p>Repairs out of hours are £150 for the first hour in the evening, at night and at weekends, and £180 on bank holidays. There is no call-out fee. If a job needs more time, we tell you the price before we carry on.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£600</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Vented From</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£900</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Unvented From</div>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a Free Survey</a>
-      </div>
-
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> G3 Qualified Engineers</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Fixed-Price Survey</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> All WA Postcodes</span>
+  <section class="brx-sec" id="terraces">
+    <div class="brx-wrap">
+      <h2>Is the old cylinder in my St Helens terrace due for replacing?</h2>
+      <p class="brx-answer">If it went in during the 1970s or 1980s, it is well past its expected life. Most cylinders last 15 to 25 years, so plan a swap before it fails.</p>
+      <p>Most Victorian terraces in WA10 still have vented copper cylinders. Many were fitted when central heating first went in, 40 to 50 years ago. Plenty still work. But the risk of a sudden split goes up every year.</p>
+      <p>When an old cylinder fails, the water goes fast. In a terrace, the airing cupboard is often above the kitchen. A leak can soak a ceiling and the units below before you see it.</p>
+      <p>A planned swap from £750 costs far less than that damage. At the free survey, we check the age and state of your cylinder. We tell you honestly if it needs doing now or can wait.</p>
+      <div class="brx-cta">
+        <p><strong>Cylinder leaking or no hot water today?</strong> Call and we will tell you what we can do. We cover every WA postcode with no call-out fee.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company" John Manley, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Hot Water Cylinder Prices St Helens</h2>
-      <p class="pf-sub">Fixed prices. Free site survey to confirm exact specification and price. All installations include cylinder, fittings and commissioning across all WA postcodes.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card">
-          <div class="pf-price-tier">VENTED CYLINDER</div>
-          <div class="pf-price-name">Indirect Vented Cylinder</div>
-          <div class="pf-price-sub">Fed from cold water tank in loft</div>
-          <div class="pf-price-amount">£600</div>
-          <ul class="pf-price-list">
-            <li>New cylinder supplied and fitted</li>
-            <li>All pipe connections made</li>
-            <li>Immersion heater fitted and wired</li>
-            <li>Thermostat set and tested</li>
-            <li>Old cylinder removed and disposed</li>
-            <li>12-month workmanship guarantee</li>
+  <section class="brx-sec brx-tint" id="immersion">
+    <div class="brx-wrap">
+      <h2>Do I need a new immersion heater or a new cylinder?</h2>
+      <p class="brx-answer">If the cylinder is sound, a new immersion heater from £175 brings your hot water back. If the cylinder is old or the immersion keeps failing, a new cylinder is better value.</p>
+      <p>A failed immersion heater is one of the most common calls we get from St Helens. Water in parts of St Helens is harder than in Liverpool. Scale builds up on the element, so it takes longer to heat, then stops.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>A new immersion heater is right if</h3>
+          <ul class="sg-ticks">
+            <li>The cylinder is under about 15 years old</li>
+            <li>There is no sign of leaks or rust</li>
+            <li>This is the first time the immersion has failed</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
         </div>
-
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MAINS PRESSURE HOT WATER</div>
-          <div class="pf-price-tier">UNVENTED CYLINDER</div>
-          <div class="pf-price-name">Mains Pressure System</div>
-          <div class="pf-price-sub">G3 qualified installation required by law</div>
-          <div class="pf-price-amount">£900</div>
-          <ul class="pf-price-list">
-            <li>New unvented cylinder supplied and fitted</li>
-            <li>All safety devices installed and tested</li>
-            <li>Expansion vessel and pressure relief fitted</li>
-            <li>Building Regulations notification included</li>
-            <li>Old cylinder removed and disposed</li>
-            <li>12-month workmanship guarantee</li>
+        <div class="sg-box">
+          <h3>A new cylinder is right if</h3>
+          <ul class="sg-ticks">
+            <li>The cylinder is over 20 years old</li>
+            <li>The immersion has failed before</li>
+            <li>The tank is leaking, rusty or you often run out</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
-        </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">IMMERSION HEATER</div>
-          <div class="pf-price-name">Immersion Heater Replacement</div>
-          <div class="pf-price-sub">Electric backup or primary heating</div>
-          <div class="pf-price-amount">£150</div>
-          <ul class="pf-price-list">
-            <li>Old immersion heater removed</li>
-            <li>New element supplied and fitted</li>
-            <li>Thermostat replaced if required</li>
-            <li>Electrical connections checked</li>
-            <li>System tested on completion</li>
-            <li>Same-day available across St Helens</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Now</a>
         </div>
       </div>
+      <p style="margin-top:1rem;">An immersion heater is £175 on a vented cylinder and £275 on an unvented one. Both are often done the same day. We will not sell you a cylinder you do not need.</p>
+      <h3>Other signs to look out for</h3>
+      <ul class="sg-ticks">
+        <li>Hot water takes much longer to heat than it used to</li>
+        <li>Banging or kettling noises from the cylinder</li>
+        <li>A drip from a valve or fitting, which can often be fixed</li>
+        <li>Weak hot water, but strong cold water</li>
+      </ul>
     </div>
   </section>
 
-
-  <!-- ST HELENS UNIQUE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <span class="pf-section-label">ST HELENS LOCAL KNOWLEDGE</span>
-      <h2>Hot Water Cylinders in St Helens Properties</h2>
-      <p class="pf-sub">WA10 Victorian terraces have a specific hot water system profile that drives the most common cylinder work in St Helens. Here is what we see most frequently.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">WA10 Terrace Cylinders Reaching End of Life</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0 0 0.5rem;line-height:1.65;">The majority of WA10 Victorian terraces still have vented copper cylinders that were installed in the 1970s or 1980s during the original central heating upgrades. These cylinders are now 40 to 50 years old   significantly beyond their typical 15 to 25 year working life. Many are still functioning, but they are at high risk of imminent failure. A cylinder that fails suddenly in a St Helens terrace can cause significant water damage before it is discovered, particularly in the airing cupboard or on a floor above kitchen units.</p>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Proactive replacement of a WA10 cylinder over 25 years old from £750 is considerably cheaper than a water damage emergency claim. We assess the condition and age of your existing cylinder at the free survey and give you an honest assessment of whether immediate or planned replacement is recommended.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Immersion Heater Failure in WA10 Properties</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Immersion heater element failure is one of the most common calls we receive from WA10 homeowners. Old cylinders with original immersion heaters are subject to limescale build-up on the element, particularly in St Helens where water hardness accelerates this process. The result is an element that either fails completely or takes far longer than normal to heat the cylinder. Immersion heater element replacement from £175   typically completed within the same visit. We confirm whether the cylinder itself is in good enough condition to justify the element replacement, or whether full cylinder replacement is the more economical long-term solution.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Hot Water System Assessment for Bathroom Relocations</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">When WA10 homeowners relocate their bathroom from the ground floor to upstairs, the hot water system often needs assessment at the same time. Moving the bathroom changes the height difference between the cylinder and the new bathroom position, which can affect pressure on a gravity-fed vented system. In some cases the existing cylinder is well positioned to serve the new bathroom location. In others, an upgrade to an unvented cylinder   which delivers mains pressure regardless of position   is the better solution. We include hot water system assessment in the free survey for all St Helens bathroom relocation projects.</p>
-        </div>
-
-      </div>
+  <section class="brx-sec" id="bathroom">
+    <div class="brx-wrap">
+      <h2>Do I need a new cylinder if I move my bathroom upstairs?</h2>
+      <p class="brx-answer">Not always. It depends on how high your loft tank is above the new shower. If the pressure will be too weak, an unvented cylinder solves it.</p>
+      <p>Many WA10 terraces once had the bathroom downstairs at the back. Lots of owners now move it upstairs. That changes how your hot water works.</p>
+      <p>On a vented system, the pressure comes from the height of the loft tank above the tap. An upstairs shower sits much closer to the tank. So the flow can be weak.</p>
+      <p>An unvented cylinder runs at mains pressure, wherever the bathroom is. It suits a strong thermostatic shower upstairs. We test your mains pressure and flow before we suggest it.</p>
+      <p>We check the hot water as part of every bathroom survey. Our <a href="/bathroom-fitters-st-helens">bathroom fitters in St Helens</a> can do the move and the cylinder under one fixed price.</p>
     </div>
   </section>
 
-
-  <!-- VENTED VS UNVENTED -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Vented vs Unvented Cylinders. Which Does Your St Helens Property Need?</h2>
-      <p class="pf-sub">The right cylinder depends on your property type, renovation plans and hot water demand. We advise at the free survey.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Vented cylinder. The WA10 standard replacement.</strong><p>Fed from a cold water tank in the loft. Low pressure but simple to maintain. The most common replacement in WA10 terraces where the loft tank is intact and mains pressure is not required. Supply and fit from £600.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Unvented cylinder. Mains pressure throughout the property.</strong><p>Fed directly from the mains, delivering hot water at mains pressure to every outlet. No loft tank required. The right choice for St Helens properties wanting better shower performance or adding additional bathrooms. G3 qualified installation required by law. Supply and fit from £900.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Immersion heater replacement. Often the quickest fix.</strong><p>When the cylinder itself is in good condition but the element has failed, replacement from £150 restores hot water without replacing the full cylinder. We assess which is the right call on the visit.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Indirect cylinder. The St Helens system boiler standard.</strong><p>Heated by the central heating boiler via a heat exchanger coil. The most common type in St Helens homes with system or regular boilers. Available in both vented and unvented configurations depending on the property and pressure requirements.</p></div></div>
+  <section class="brx-sec brx-tint" id="types">
+    <div class="brx-wrap">
+      <h2>Vented or unvented: which suits my St Helens home?</h2>
+      <p class="brx-answer">If your loft tank is sound and you are happy with your shower, a vented swap is the cheapest fix. For stronger showers or an extra bathroom, go unvented.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th></th><th>Vented cylinder</th><th>Unvented cylinder</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Fed by</strong></td><td>A cold water tank in the loft</td><td>The mains water supply</td></tr>
+            <tr><td><strong>Pressure</strong></td><td>Low, from gravity</td><td>Mains pressure</td></tr>
+            <tr><td><strong>Best for</strong></td><td>WA10 terraces with the loft tank in place</td><td>Upstairs bathrooms and extra bathrooms</td></tr>
+            <tr><td><strong>Who can fit it</strong></td><td>A qualified plumber</td><td>A G3 qualified engineer only</td></tr>
+            <tr><td><strong>Yearly service</strong></td><td>Not usually needed</td><td>Yes, to keep the warranty</td></tr>
+            <tr><td><strong>Price with us</strong></td><td>from £750</td><td>from £1,450</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>Most St Helens homes with a system or regular boiler have an indirect cylinder. The boiler heats it through a coil, with an immersion heater as a backup. We fit vented and unvented versions.</p>
+      <p>Only have one bathroom? A combi boiler may suit you better, with no tank at all. See our <a href="/boiler-installation-st-helens">boiler installation prices in St Helens</a>, from £2,195.</p>
     </div>
   </section>
 
-
-  <!-- G3 QUALIFICATION -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>G3 Qualified Unvented Cylinder Installation in St Helens</h2>
-      <p class="pf-sub">Unvented hot water cylinder installation is a legally regulated activity. It cannot be carried out by any general plumber without the specific G3 qualification.</p>
-
-      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
-        <h3>Why G3 Qualification Matters in St Helens</h3>
-        <p>Under Building Regulations Part G, the installation of an unvented hot water cylinder must be carried out by a competent person holding the G3 qualification or notified to Building Control. An unvented cylinder operates at mains pressure with water temperatures up to 65 degrees. Without correctly installed safety devices   including a temperature and pressure relief valve, expansion vessel and tundish   the cylinder can become a serious safety risk.</p>
-        <p>The main St Helens competitor for unvented cylinder work is Redorr Heating and Cooling, based in Warrington. They carry out G3 installations across the St Helens and Haydock area. Our engineers are also G3 qualified. We are locally based and serve all WA postcodes. Every unvented installation is notified to Building Control on completion and you receive a commissioning certificate. Never allow any St Helens plumber to install an unvented cylinder without first confirming their G3 qualification.</p>
-      </div>
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How does a cylinder installation work?</h2>
+      <p class="brx-answer">We survey for free, give you a fixed written price, then fit the new cylinder. Most swaps are done in one day.</p>
+      <ol class="sg-steps">
+        <li><strong>Free survey.</strong> We check your cylinder, your boiler and how much hot water you use. For unvented, we test your mains pressure and flow.</li>
+        <li><strong>Fixed written price.</strong> It covers the cylinder, the fittings, the safety parts and the paperwork.</li>
+        <li><strong>Fitting day.</strong> We protect your floors, drain the old cylinder and take it out. Then we fit and connect the new one.</li>
+        <li><strong>Testing.</strong> We fill the system, check for leaks and test every safety valve. We show you the controls.</li>
+        <li><strong>Paperwork.</strong> Unvented work is notified as the Building Regulations require. You get the certificate and warranty details.</li>
+      </ol>
+      <h3>Why G3 matters</h3>
+      <p>An unvented cylinder holds hot water under mains pressure. Its safety valves must work every time. That is why only a qualified engineer can fit one. All our engineers are G3 qualified. Always ask for proof of G3 before anyone fits an unvented cylinder in your home.</p>
     </div>
   </section>
-
-
-  <!-- SIGNS YOU NEED A NEW CYLINDER -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Signs Your St Helens Hot Water Cylinder Needs Replacing</h2>
-      <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>Running out of hot water more frequently</strong><p>The cylinder is undersized for current demand or the immersion element is partially failing. A larger replacement cylinder or an upgrade to an unvented system resolves this permanently.</p></div></div>
-        <div class="pf-sign"><div><strong>Cylinder is leaking</strong><p>A leaking cylinder must be replaced. A drip from a valve or fitting can sometimes be resolved without replacing the cylinder itself. We diagnose which on the visit before quoting any work.</p></div></div>
-        <div class="pf-sign"><div><strong>Hot water takes more than 45 minutes to reheat</strong><p>A failing immersion element, corroded heat exchanger coil or faulty thermostat. We diagnose the cause and assess whether element replacement or full cylinder replacement is the right call.</p></div></div>
-        <div class="pf-sign"><div><strong>Cylinder is over 20 years old</strong><p>WA10 cylinders from the 1970s and 1980s are significantly past their working life. At increasing risk of failure. Proactive replacement from £600 is considerably cheaper than emergency water damage repair.</p></div></div>
-        <div class="pf-sign"><div><strong>Poor hot water pressure throughout the property</strong><p>A vented system cannot deliver mains-pressure hot water. Upgrading to an unvented cylinder from £1,450 resolves this problem across all St Helens WA postcodes.</p></div></div>
-        <div class="pf-sign"><div><strong>Banging or kettling from the cylinder or pipework</strong><p>Limescale on the immersion element or heat exchanger, or air in the system. Common in WA10 properties where water hardness accelerates limescale build-up. Often resolved with element replacement.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Why St Helens Homeowners Choose Us for Hot Water Cylinders</h2>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>G3 and Gas Safe Qualified</h3><p>Both vented and unvented cylinder installations by our own qualified engineers. All unvented installations notified to Building Control on completion with certificate issued.</p></div>
-        <div class="pf-why-item"><h3>Locally Based</h3><p>We serve all WA postcodes and are local to St Helens   not a Warrington company covering the area. Same-day immersion heater replacements available across all St Helens postcodes.</p></div>
-        <div class="pf-why-item"><h3>Free Fixed-Price Survey</h3><p>We visit your St Helens property, assess your system and provide a written fixed-price quote. No surprises on the invoice. Same price for every WA postcode.</p></div>
-        <div class="pf-why-item"><h3>Honest Assessment First</h3><p>We tell you whether element replacement or full cylinder replacement is the right approach before quoting any work. No upselling. No replacing what does not need replacing.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What St Helens Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">John Manley</div><div class="pf-review-loc">Shower Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came out and fixed a leaking pipe and even got my boiler up and running by fixing an air lock. Professional , on time, cleaned up after himself and charged a fair rate.</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Edward M</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James was very professional, and his standard of work excellent. Would recommend in a heart beat. Thanks for the great work, and sound advice.</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Mark L</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Hot Water Cylinders St Helens. Your Questions Answered</h2>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does a hot water cylinder cost in St Helens?</summary><div class="pf-faq-body"><p>A vented indirect cylinder supply and fit starts from £750. An unvented cylinder starts from £1,450. Immersion heater replacement from £175. Prices depend on cylinder capacity, type and access. Free fixed-price quote after a site visit on all St Helens WA postcodes.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">IMMERSION</span>&nbsp; My WA10 terrace immersion heater keeps failing. Should I replace the element or the cylinder?</summary><div class="pf-faq-body"><p>If the cylinder is in good condition and under 15 years old, element replacement from £150 is usually the right call. If the cylinder is over 20 years old or has had multiple element failures, full cylinder replacement from £750 is typically more economical. WA10 cylinders from the 1970s-80s are particularly prone to repeated element failures due to limescale build-up on old heat exchanger surfaces. We assess on the visit and give you an honest recommendation before quoting.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">G3</span>&nbsp; Are you G3 qualified for unvented cylinder installation in St Helens?</summary><div class="pf-faq-body"><p>Yes. All our engineers who install unvented cylinders hold the G3 qualification as required under Building Regulations Part G. Every unvented installation in St Helens is notified to Building Control on completion and you receive a commissioning certificate. We are locally based and serve all WA postcodes.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered for St Helens cylinder work?</summary><div class="pf-faq-body"><p>Yes. Liverpool Emergency Plumber is Gas Safe registered. All cylinder installations carried out by Gas Safe registered. All gas work is done by a Gas Safe registered plumber. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Related Services Across St Helens</h2>
-      <p class="pf-sub">All Gas Safe registered. G3 qualified. All WA postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation St Helens</strong><span>Electric from £375. A new unvented cylinder enables mains pressure thermostatic showers in WA properties.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-st-helens" class="pf-related-link"><div><strong>Bathroom Fitters St Helens</strong><span>New bathroom installation from £2,750 labour. Bathroom relocation specialists. All WA postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-st-helens" class="pf-related-link"><div><strong>Boiler Installation St Helens</strong><span>New boiler from £2,195. Free survey.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Free Survey</strong><span>Free fixed-price survey. Vented and unvented cylinders. All St Helens WA postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Hot Water Cylinders Across Merseyside</h2>
-      <p class="pf-sub">Vented from £750. Unvented from £1,450. G3 qualified. Gas Safe registered. All postcodes covered.</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders Liverpool</strong><span>Vented from £750. Unvented from £1,450. G3 qualified. All Liverpool L postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/hot-water-cylinders-wirral" class="pf-related-link"><div><strong>Hot Water Cylinders Wirral</strong><span>Vented from £750. Unvented from £1,450. Loft conversion specialists. All CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/hot-water-cylinders-formby" class="pf-related-link"><div><strong>Hot Water Cylinders Formby</strong><span>Vented from £750. Unvented from £1,450. G3 qualified. L37 and surrounding postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free St Helens Cylinder Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Vented from £750. Unvented from £1,450. Immersion heater from £175. G3 qualified. Gas Safe registered. Free survey. All St Helens WA postcodes.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>

@@ -1,335 +1,215 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-formby';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'vented', tier: 'Loft tank systems', name: 'Vented cylinder replaced', price: '£750', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Like-for-like swap on a loft tank system', 'Immersion heater fitted', 'Old cylinder taken away', 'Usually done in one day'] },
+  { id: 'unvented-150', tier: 'Smaller homes', name: 'Unvented cylinder, 150 litres', price: '£1,450', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 1 to 2 people, one bathroom', 'Fitted by a G3 qualified engineer', 'All safety valves fitted and tested', 'Notified as Building Regulations require'] },
+  { id: 'unvented-210', tier: 'Family homes', name: 'Unvented cylinder, 210 litres', price: '£1,695', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 3 to 4 people', 'A bathroom and an en-suite', 'Expansion vessel and discharge pipe', 'Old cylinder taken away'] },
+  { id: 'unvented-250', tier: 'Most chosen in Formby', popular: true, name: 'Unvented cylinder, 250 to 300 litres', price: '£1,995', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 4 and 5 bedroom homes', 'Two or three bathrooms used at once', 'Mains pressure at every tap', 'Free survey to confirm the size'] },
+];
+
+const faqs = [
+  { q: 'How much does a hot water cylinder cost in Formby?', a: 'A vented cylinder replaced starts from £750 including VAT. An unvented cylinder starts from £1,450 for 150 litres, £1,695 for 210 litres and £1,995 for 250 to 300 litres. Changing from vented to unvented starts from £1,895. You get a fixed written price after a free survey.' },
+  { q: 'Do you cover all of L37?', a: 'Yes. We cover Formby and Freshfield in L37, plus Hightown, Ainsdale, Crosby, Maghull and Lydiate. The price is the same, with no call-out fee.' },
+  { q: 'We have three bathrooms and weak hot water. What is the fix?', a: 'This is almost always a vented, loft tank system. Every tap shares the same low pressure. An unvented cylinder gives mains pressure to every bathroom at once. For a 4 or 5 bedroom Formby home, we usually suggest 250 to 300 litres, from £1,995.' },
+  { q: 'My loft conversion means the cold water tank must go. Do I need a new cylinder?', a: 'Yes, if that tank feeds a vented cylinder. Without it, the old cylinder cannot work. The usual answer is an unvented cylinder fed from the mains. A change from vented to unvented starts from £1,895. We agree dates with your builder.' },
+  { q: 'Will my cylinder cope with a new en-suite?', a: 'If it is vented, adding another bathroom often shows up the low pressure. We check the hot water at every bathroom survey and tell you if an upgrade is needed. The en-suite and cylinder can go on one fixed price.' },
+  { q: 'Are your engineers G3 qualified?', a: 'Yes. All our engineers are G3 qualified to fit and service unvented cylinders. The work is notified as the Building Regulations require, and you get the paperwork to keep. Makers need this paperwork for the warranty.' },
+  { q: 'How long does a cylinder swap take?', a: 'Most swaps are done in one day. A change from vented to unvented can take a little longer. We tell you at the survey.' },
+  { q: 'How much is a new immersion heater in Formby?', a: 'An immersion heater on a vented cylinder is £175 including VAT. On an unvented cylinder it is £275. Both are supplied and fitted, and are often done the same day.' },
+  { q: 'Does an unvented cylinder need a yearly service?', a: 'Yes. Makers ask for a yearly service to keep the warranty valid. It also checks the safety valves still work. Our unvented cylinder service is £120 including VAT.' },
+  { q: 'Are you Gas Safe registered?', a: 'Yes. Gas work is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
+];
 ---
 
-<BaseLayout
-  title="Hot Water Cylinders Formby | From £750 | G3 Qualified"
-  description="Hot water cylinder installation Formby from £750. Vented and unvented cylinders. Immersion heater replacement from £175. G3 qualified engineers. Free survey L37 and surrounding Sefton postcodes. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-formby"
+<ServiceGuide
+  url={URL_}
+  title="Hot Water Cylinders Formby | Unvented for Big Homes From £750"
+  description="Hot water cylinders Formby L37: vented from £750, unvented from £1,450 inc VAT. Mains pressure for multi-bathroom homes, loft conversions and en-suites. G3 qualified, free survey. Call 0151 558 0334."
+  h1="Hot Water Cylinders Formby"
+  badge="Vented and unvented · Formby and Freshfield L37"
+  intro="New hot water cylinders fitted across Formby. Vented from £750 and unvented from £1,450, including VAT. Mains pressure for homes with two or three bathrooms. All our engineers are G3 qualified, and the survey is free."
+  stats={[['£750', 'Vented, from'], ['£1,450', 'Unvented, from']]}
+  ticks={['G3 Qualified Engineers', 'Gas Safe Registered', 'Free Survey', 'L37 Postcodes']}
+  pkTitle="Hot water cylinder prices in Formby"
+  pkLede="Priced by size, supplied and fitted, including VAT. No call-out fee."
+  packages={packages}
+  pkNote="Prices are a guide for a straight swap in the same place. Your final fixed price comes after a free survey. Changing from vented to unvented starts from £1,895 (see the table below)."
+  factsTitle="Formby hot water cylinders at a glance"
+  facts={[
+    ['Price', 'Vented from £750. Unvented from £1,450 (150 litres) to £1,995 (250 to 300 litres).'],
+    ['Bigger homes', '4 and 5 bedroom homes usually need 250 to 300 litres, from £1,995.'],
+    ['Time', 'Most swaps are done in one day.'],
+    ['Who', 'G3 qualified engineers, part of our team led by James.'],
+    ['Survey', 'Free. We size the cylinder and test your water pressure first.'],
+    ['Area', 'Formby and Freshfield L37, plus Hightown, Ainsdale, Crosby and Maghull.'],
+  ]}
+  toc={[
+    ['cost', 'How much does a cylinder cost?'],
+    ['pressure', 'Weak hot water with several bathrooms'],
+    ['size', 'What size do I need?'],
+    ['loft', 'Loft conversions'],
+    ['ensuite', 'Adding an en-suite'],
+    ['signs', 'Repair or replace?'],
+    ['how', 'How does it work?'],
+  ]}
+  reviews={['Ellie J', 'Roger D', 'Peter H', 'Brendan C']}
+  faqs={faqs}
+  areasTitle="Hot water cylinders in other areas"
+  areasText="The same prices apply across Liverpool, the Wirral and St Helens."
+  areas={[
+    { href: '/hot-water-cylinders-liverpool', label: 'Liverpool' },
+    { href: '/hot-water-cylinders-wirral', label: 'Wirral' },
+    { href: '/hot-water-cylinders-st-helens', label: 'St Helens' },
+  ]}
+  related={[
+    { href: '/boiler-installation-formby', title: 'Boiler installation Formby', text: 'New combi boilers from £2,195 fully fitted' },
+    { href: '/bathroom-fitters-formby', title: 'Bathroom fitters Formby', text: 'En-suites from £4,495, bathrooms from £4,995' },
+    { href: '/boiler-service-formby', title: 'Boiler service Formby', text: '£95 fixed price, inc VAT' },
+    { href: '/showers-liverpool', title: 'Showers', text: 'Mixer, electric and power showers fitted' },
+  ]}
+  finalTitle="Book your free Formby cylinder survey"
+  finalText="Vented from £750. Unvented from £1,450. G3 qualified engineers, the right size first time, and a fixed written price."
+  serviceName="Hot Water Cylinders Formby"
+  serviceType="Hot water cylinder installation"
+  serviceDesc="Vented and unvented hot water cylinders supplied and fitted in Formby and Freshfield L37 by G3 qualified engineers. Mains pressure upgrades for multi-bathroom homes, loft conversion tank removals, en-suite upgrades and immersion heaters."
+  areaServed={['Formby', 'Freshfield', 'Hightown', 'Ainsdale', 'Crosby', 'Maghull', 'Lydiate']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Hot Water Cylinders Formby",
-    "serviceType": "Hot Water Cylinder Installation and Replacement",
-    "description": "Hot water cylinder installation and replacement across Formby from £600. Vented and unvented cylinders. Immersion heater replacement. G3 qualified engineers. Free survey L37 and surrounding Sefton postcodes.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "Formby, L37" },
-    "offers": [
-      { "@type": "Offer", "name": "Vented Hot Water Cylinder Formby", "price": "600", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Unvented Hot Water Cylinder Formby", "price": "900", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Immersion Heater Replacement Formby", "price": "150", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does a hot water cylinder cost in Formby?", "acceptedAnswer": { "@type": "Answer", "text": "A vented indirect hot water cylinder supply and fit in Formby starts from £750. An unvented cylinder starts from £1,450. Immersion heater replacement from £175. We provide a free fixed-price quote after a site visit." } },
-      { "@type": "Question", "name": "My Formby property has multiple bathrooms with poor hot water pressure. What is the solution?", "acceptedAnswer": { "@type": "Answer", "text": "Multiple bathrooms with poor hot water pressure is almost always caused by a vented gravity-fed hot water system that cannot supply adequate pressure to all outlets simultaneously. The solution is an unvented hot water cylinder, which is fed directly from the mains supply and delivers hot water at mains pressure to every bathroom simultaneously. This is a G3 regulated installation. Our engineers are G3 qualified and serve all Formby L37 postcodes." } },
-      { "@type": "Question", "name": "Are you G3 qualified for unvented cylinder installation in Formby?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unvented hot water cylinder installation must be carried out by a G3 qualified engineer under Building Regulations Part G. Our engineers hold the required G3 qualification. All unvented installations are notified to Building Control on completion and you receive a commissioning certificate." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Hot Water Cylinders Formby", "item": "https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-formby" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        Formby Hot Water Cylinder Specialists
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a hot water cylinder cost in Formby?</h2>
+      <p class="brx-answer">A vented cylinder replaced starts from £750. An unvented cylinder starts from £1,450, and the price goes up with the size. All prices include VAT.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td>Vented cylinder replaced</td><td>from £750</td></tr>
+            <tr><td>Unvented cylinder, 150 litres</td><td>from £1,450</td></tr>
+            <tr><td>Unvented cylinder, 210 litres</td><td>from £1,695</td></tr>
+            <tr><td>Unvented cylinder, 250 to 300 litres</td><td>from £1,995</td></tr>
+            <tr><td>Change from vented to unvented</td><td>from £1,895</td></tr>
+            <tr><td>Immersion heater, vented cylinder</td><td>£175</td></tr>
+            <tr><td>Immersion heater, unvented cylinder</td><td>£275</td></tr>
+            <tr><td>Unvented cylinder yearly service</td><td>£120</td></tr>
+            <tr><td>Repairs and fault finding</td><td>£120 first hour (weekdays 9am to 4pm)</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1 >Hot Water Cylinders Formby</h1>
-      <p class="page-hero-sub">Hot water cylinder supply and fit from £750. Vented and unvented cylinders. Immersion heater replacement from £175. G3 qualified engineers. Free survey across Formby L37 and surrounding Sefton postcodes.</p>
+      <h3>What is in the price?</h3>
+      <ul class="sg-ticks">
+        <li>The new cylinder, supplied and fitted</li>
+        <li>All pipe connections, valves and fittings</li>
+        <li>Safety valves, expansion vessel and discharge pipe on unvented cylinders</li>
+        <li>Testing and setting up before we leave</li>
+        <li>Old cylinder drained, removed and taken away</li>
+        <li>Building Regulations paperwork for unvented cylinders</li>
+        <li>12-month workmanship guarantee</li>
+      </ul>
+      <p>Repairs out of hours are £150 for the first hour in the evening, at night and at weekends, and £180 on bank holidays. There is no call-out fee. If a job needs more time, we tell you the price before we carry on.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£600</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Vented From</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£900</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Unvented From</div>
-        </div>
+  <section class="brx-sec" id="pressure">
+    <div class="brx-wrap">
+      <h2>Why is my hot water weak when two bathrooms are in use?</h2>
+      <p class="brx-answer">It is almost always a vented, loft tank system. Every tap shares the same low pressure. An unvented cylinder gives mains pressure to every bathroom at once.</p>
+      <p>Many Formby homes have 4 or 5 bedrooms and two or three bathrooms. Yet lots still run on the old loft tank system. That is where the trouble starts.</p>
+      <p>On a vented system, the pressure comes from the height of the loft tank above the tap. It is low to begin with. Then every open tap takes a share. Run a shower, a bath and the kitchen tap together, and they all slow down.</p>
+      <p>An unvented cylinder is fed straight from the mains. Each bathroom gets mains pressure, even when others are in use. No loft tank is needed for the hot water.</p>
+      <h3>Before we fit one, we check</h3>
+      <ul class="sg-ticks">
+        <li>Your mains water pressure and flow, since the cylinder can only give what the mains gives it</li>
+        <li>Where the discharge pipe can run safely outside</li>
+        <li>That your boiler can heat the cylinder, such as a system or regular boiler</li>
+      </ul>
+      <p>If your supply is too weak, we tell you straight away. You will not pay for a cylinder that cannot do its job.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="size">
+    <div class="brx-wrap">
+      <h2>What size hot water cylinder does a Formby home need?</h2>
+      <p class="brx-answer">For a typical 4 bedroom Formby home with two bathrooms, 250 to 300 litres is usually right. Smaller homes may only need 210 litres.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Size</th><th>Good for</th><th>Unvented price</th></tr></thead>
+          <tbody>
+            <tr><td><strong>150 litres</strong></td><td>1 to 2 people, one bathroom</td><td>from £1,450</td></tr>
+            <tr><td><strong>210 litres</strong></td><td>3 to 4 people, a bathroom and a small en-suite</td><td>from £1,695</td></tr>
+            <tr><td><strong>250 to 300 litres</strong></td><td>4 or more people, two or three bathrooms</td><td>from £1,995</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>This is a guide. Baths use far more hot water than showers. A big bath or a rain shower can push you up a size. Too small and you run out. Too big and you heat water you never use.</p>
+      <p>We count your bathrooms and ask how your family uses hot water. Then we pick the size before any work starts. You get the right cylinder first time.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a Free Survey</a>
-      </div>
-
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> G3 Qualified Engineers</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Fixed-Price Survey</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> L37 Postcodes</span>
+  <section class="brx-sec" id="loft">
+    <div class="brx-wrap">
+      <h2>Do I need a new cylinder for a Formby loft conversion or en-suite?</h2>
+      <p class="brx-answer">If the loft tank feeds your hot water, yes. Once the tank goes, the old vented cylinder cannot work. An unvented cylinder fixes this.</p>
+      <p>Loft conversions are popular in Formby. Most need the cold water tank taken out, to free up headroom and floor space. A change from vented to unvented starts from £1,895, including VAT.</p>
+      <p>This is G3 work, so a general plumber cannot do it. We agree dates with your loft builder so the cylinder goes in at the right stage. When it is done, the work is notified as the Building Regulations require.</p>
+      <h3 id="ensuite">Will my hot water cope with a new en-suite?</h3>
+      <p>On a vented system, adding another bathroom often shows up the low pressure. We check this at every bathroom survey and tell you if you need an upgrade.</p>
+      <p>A new en-suite off the main bedroom is a common Formby project. If you already have two bathrooms, a third can be one too many for a loft tank system.</p>
+      <p>Our <a href="/bathroom-fitters-formby">bathroom fitters in Formby</a> can fit the en-suite and the new cylinder together. You get one team, one fixed price and no second firm to manage.</p>
+      <div class="brx-cta">
+        <p><strong>Planning an en-suite or loft conversion?</strong> Call to book a free survey. We will size the cylinder and price it all in writing.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"I had a hot water cylinder fitted by James, he was very polite and extremely professional, highly recommend" Ellie J, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Hot Water Cylinder Prices Formby</h2>
-      <p class="pf-sub">Fixed prices. Free site survey to confirm exact specification and price. All installations include cylinder, fittings and commissioning across all L37 and surrounding postcodes.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card">
-          <div class="pf-price-tier">VENTED CYLINDER</div>
-          <div class="pf-price-name">Indirect Vented Cylinder</div>
-          <div class="pf-price-sub">Fed from cold water tank in loft</div>
-          <div class="pf-price-amount">£600</div>
-          <ul class="pf-price-list">
-            <li>New cylinder supplied and fitted</li>
-            <li>All pipe connections made</li>
-            <li>Immersion heater fitted and wired</li>
-            <li>Thermostat set and tested</li>
-            <li>Old cylinder removed and disposed</li>
-            <li>12-month workmanship guarantee</li>
+  <section class="brx-sec brx-tint" id="signs">
+    <div class="brx-wrap">
+      <h2>Does my cylinder need repairing or replacing?</h2>
+      <p class="brx-answer">Many faults can be fixed, such as a failed immersion heater or a faulty valve. If the tank itself is leaking, it needs replacing.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Often a repair</h3>
+          <ul class="sg-ticks">
+            <li>No hot water from the immersion heater</li>
+            <li>Drip from a valve or fitting</li>
+            <li>Banging or kettling from scale</li>
+            <li>Slow to heat, from a faulty thermostat</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
         </div>
-
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MAINS PRESSURE HOT WATER</div>
-          <div class="pf-price-tier">UNVENTED CYLINDER</div>
-          <div class="pf-price-name">Mains Pressure System</div>
-          <div class="pf-price-sub">G3 qualified installation required by law</div>
-          <div class="pf-price-amount">£900</div>
-          <ul class="pf-price-list">
-            <li>New unvented cylinder supplied and fitted</li>
-            <li>All safety devices installed and tested</li>
-            <li>Expansion vessel and pressure relief fitted</li>
-            <li>Building Regulations notification included</li>
-            <li>Old cylinder removed and disposed</li>
-            <li>12-month workmanship guarantee</li>
+        <div class="sg-box">
+          <h3>Usually a new cylinder</h3>
+          <ul class="sg-ticks">
+            <li>The tank itself is leaking or rusty</li>
+            <li>You run out when two bathrooms are used</li>
+            <li>Weak hot water across the house</li>
+            <li>The cylinder is 20 years old or more</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
-        </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">IMMERSION HEATER</div>
-          <div class="pf-price-name">Immersion Heater Replacement</div>
-          <div class="pf-price-sub">Electric backup or primary heating</div>
-          <div class="pf-price-amount">£150</div>
-          <ul class="pf-price-list">
-            <li>Old immersion heater removed</li>
-            <li>New element supplied and fitted</li>
-            <li>Thermostat replaced if required</li>
-            <li>Electrical connections checked</li>
-            <li>System tested on completion</li>
-            <li>Same-day available across Formby</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Now</a>
         </div>
       </div>
+      <p style="margin-top:1rem;">Most cylinders last 15 to 25 years. A planned swap from £750 costs far less than a burst. We find the cause first and tell you honestly if a repair will do.</p>
     </div>
   </section>
 
-
-  <!-- FORMBY UNIQUE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <span class="pf-section-label">FORMBY LOCAL KNOWLEDGE</span>
-      <h2>Hot Water Cylinders and Formby Property Needs</h2>
-      <p class="pf-sub">Formby's larger properties have specific hot water demands that older vented systems cannot meet. Here is what drives most L37 cylinder work.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Formby Multi-Bathroom Properties and Unvented Cylinders</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0 0 0.5rem;line-height:1.65;">Larger 4 and 5 bedroom Formby properties with two or three bathrooms frequently experience hot water pressure problems when multiple outlets are used simultaneously. The root cause is almost always a vented gravity-fed cylinder system, which delivers pressure based on the height difference between the loft tank and the outlet   and that pressure is shared across every outlet drawing hot water at the same time.</p>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">An unvented cylinder is fed directly from the mains and delivers hot water at mains pressure to every outlet simultaneously. Running a shower, a bath and the hot kitchen tap at the same time is not a problem with a properly sized unvented system. For a typical 4 bedroom Formby property, a 200 to 250 litre unvented cylinder is usually the right specification. We size the cylinder correctly at the free survey based on the property's bathroom count and hot water demand.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Formby Loft Conversions and Cold Water Tank Removal</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Formby is an active area for loft conversions, and many of these projects require the cold water storage tank to be removed from the loft space to maximise usable headroom and floor area. If the home has a vented hot water system fed from this loft tank, removing the tank requires converting the system to an unvented cylinder. This is a G3 regulated installation   it cannot be carried out by a general plumber without the specific qualification. Our engineers are G3 qualified. We co-ordinate with your loft conversion contractor to ensure the cylinder work is timed correctly within the project, and we issue the G3 commissioning certificate and notify Building Control on completion. Unvented cylinder supply and fit from £1,450.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">En Suite Additions in Formby Properties</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">When adding an en suite to a Formby master bedroom, the hot water system needs to be capable of supplying the new bathroom at adequate pressure alongside all existing bathrooms. If the existing system is vented, adding a third bathroom often exposes the pressure limitations of the gravity-fed system. We assess the hot water system capacity at the free survey for every Formby bathroom installation and advise whether the existing cylinder is adequate or whether an unvented upgrade is the right move. En suite installation and unvented cylinder upgrade can be combined in a single fixed-price project for maximum convenience.</p>
-        </div>
-
-      </div>
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How does a cylinder installation work?</h2>
+      <p class="brx-answer">We survey for free, give you a fixed written price, then fit the new cylinder. Most swaps are done in one day.</p>
+      <ol class="sg-steps">
+        <li><strong>Free survey.</strong> We check your space, your boiler and your bathrooms. For unvented, we test your mains pressure and flow.</li>
+        <li><strong>Fixed written price.</strong> It covers the cylinder, the fittings, the safety parts and the paperwork.</li>
+        <li><strong>Fitting day.</strong> We protect your floors, drain the old cylinder and take it out. Then we fit and connect the new one.</li>
+        <li><strong>Testing.</strong> We fill the system, check for leaks and test every safety valve. We show you the controls.</li>
+        <li><strong>Paperwork.</strong> Unvented work is notified as the Building Regulations require. You get the certificate and warranty details.</li>
+      </ol>
+      <h3>Why G3 matters</h3>
+      <p>An unvented cylinder holds hot water under mains pressure. Its safety valves must work every time. That is why only a qualified engineer can fit one. Makers also need proof of a qualified install for the warranty. All our engineers are G3 qualified.</p>
     </div>
   </section>
-
-
-  <!-- VENTED VS UNVENTED -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Vented vs Unvented Cylinders. Which Does Your Formby Property Need?</h2>
-      <p class="pf-sub">The right cylinder for your Formby home depends on the number of bathrooms, renovation plans and current pressure. We advise at the free survey.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Vented cylinder. For simpler Formby properties.</strong><p>Fed from a cold water storage tank in the loft. Low pressure. Suitable for Formby properties with one bathroom where mains pressure performance is not required and the loft tank system is intact. Supply and fit from £600.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Unvented cylinder. The Formby multi-bathroom standard.</strong><p>Fed directly from the mains, delivering hot water at mains pressure simultaneously to every bathroom in the property. The right choice for Formby 4 and 5 bedroom properties, loft conversion projects and any property adding an en suite. G3 qualified installation required by law. Supply and fit from £900.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Immersion heater replacement. Quick restoration of hot water.</strong><p>When the cylinder is in good condition but the element has failed. Element replacement from £150 typically restores hot water on the same visit. We confirm whether the cylinder is in adequate condition to justify the element replacement or whether full replacement is the more economical approach.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Indirect cylinder. Heated by boiler with immersion backup.</strong><p>The most common type in Formby homes with system or regular boilers. Heated via a heat exchanger coil from the central heating boiler. Available in both vented and unvented configurations depending on the property's pressure requirements.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- G3 QUALIFICATION -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>G3 Qualified Unvented Cylinder Installation in Formby</h2>
-      <p class="pf-sub">Unvented hot water cylinder installation is a legally regulated activity that cannot be carried out without the specific G3 qualification.</p>
-
-      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
-        <h3>Why G3 Qualification Matters in Formby</h3>
-        <p>Under Building Regulations Part G, the installation of an unvented hot water cylinder must be carried out by a competent person holding the G3 qualification or notified to Building Control. An unvented cylinder operates at mains pressure with water temperatures up to 65 degrees. Without correctly installed and tested safety devices   including a temperature and pressure relief valve, expansion vessel and tundish   the cylinder can become a serious safety risk.</p>
-        <p>All our engineers who install unvented cylinders in Formby hold the G3 qualification. Every unvented installation is notified to Building Control on completion and you receive a commissioning certificate. The G3 commissioning certificate is also required by most cylinder manufacturers to validate the product warranty. A cylinder installed without G3 certification may have a voided warranty. Do not allow any Formby-area plumber to install an unvented cylinder without first confirming their G3 qualification at gassaferegister.co.uk.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SIGNS YOU NEED A NEW CYLINDER -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Signs Your Formby Hot Water Cylinder Needs Replacing</h2>
-      <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>Running out of hot water when multiple bathrooms are used</strong><p>The cylinder is undersized for Formby's larger properties with multiple bathrooms. An unvented cylinder properly sized for the property eliminates this problem permanently.</p></div></div>
-        <div class="pf-sign"><div><strong>Cylinder is leaking</strong><p>A leaking cylinder must be replaced. A drip from a valve or fitting can sometimes be resolved without replacing the cylinder. We diagnose on the visit before quoting any work.</p></div></div>
-        <div class="pf-sign"><div><strong>Hot water takes more than 45 minutes to reheat</strong><p>Failing immersion element, corroded heat exchanger coil or faulty thermostat. We diagnose the cause and give you an honest assessment before recommending repair or replacement.</p></div></div>
-        <div class="pf-sign"><div><strong>Cylinder is over 20 years old</strong><p>Most hot water cylinders have a working life of 15 to 25 years. A Formby cylinder over 20 years old is at increasing risk of failure. Proactive replacement from £600 is considerably cheaper than emergency water damage repair.</p></div></div>
-        <div class="pf-sign"><div><strong>Poor pressure throughout a multi-bathroom property</strong><p>A vented gravity-fed system cannot deliver mains-pressure hot water simultaneously to multiple bathrooms. Upgrading to an unvented cylinder from £1,450 resolves this permanently.</p></div></div>
-        <div class="pf-sign"><div><strong>Banging or kettling from the cylinder or pipework</strong><p>Limescale build-up on the immersion element or heat exchanger, or air in the system. Often resolved with element replacement. We assess on the visit before recommending what is needed.</p></div></div>
-      </div>
-
-      <div style="background:#c2410c;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Not sure whether your Formby cylinder needs repair or replacement? We diagnose on the visit before recommending any work.</p>
-        <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Why Formby Homeowners Choose Us for Hot Water Cylinders</h2>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>G3 and Gas Safe Qualified</h3><p>Both vented and unvented cylinder installations by our own G3 qualified engineers. All unvented installations notified to Building Control on completion. G3 commissioning certificate issued on the day.</p></div>
-        <div class="pf-why-item"><h3>Correct Cylinder Sizing</h3><p>We size the cylinder correctly for your Formby property's bathroom count and hot water demand at the free survey. The right size cylinder specified before any work begins, not discovered to be inadequate after installation.</p></div>
-        <div class="pf-why-item"><h3>Combined Projects Available</h3><p>Unvented cylinder upgrade combined with en suite bathroom installation or loft conversion tank removal in a single fixed-price project. One team, one invoice, no separate contractor to co-ordinate.</p></div>
-        <div class="pf-why-item"><h3>Free Fixed-Price Survey</h3><p>We visit your Formby property, assess your system and provide a written fixed-price quote. No surprises on the invoice. L37 and all surrounding Sefton postcodes covered.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Formby Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>I had a hot water cylinder fitted by James, he was very polite and extremely professional, highly recommend</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Ellie J</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Wonderful service. Came within 24 hrs and got our hot water back on with an improvised repair. Returned few days later with the part needed to restore everything to normal Charming, calm, methodical. I highly recommend</p><div class="pf-review-footer"><div class="pf-review-avatar">R</div><div><div class="pf-review-name">Roger D</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came out and fixed a leaking pipe and even got my boiler up and running by fixing an air lock. Professional , on time, cleaned up after himself and charged a fair rate.</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Edward M</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Hot Water Cylinders Formby. Your Questions Answered</h2>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does a hot water cylinder cost in Formby?</summary><div class="pf-faq-body"><p>A vented indirect cylinder supply and fit starts from £750. An unvented cylinder starts from £1,450. Immersion heater replacement from £175. Prices depend on cylinder capacity, type and access. Free fixed-price quote after a site visit. L37 and surrounding postcodes covered.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">PRESSURE</span>&nbsp; My Formby property has multiple bathrooms with poor hot water pressure. What is the solution?</summary><div class="pf-faq-body"><p>Multiple bathrooms with poor simultaneous pressure is almost always caused by a vented gravity-fed system. The solution is an unvented cylinder from £900, which delivers hot water at mains pressure to every bathroom simultaneously. We size the cylinder correctly for your property at the free survey and include all safety devices, Building Regulations notification and G3 commissioning certificate.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">LOFT</span>&nbsp; My Formby loft conversion requires removing the cold water tank. Do I need a new cylinder?</summary><div class="pf-faq-body"><p>Yes, if your current hot water system is vented and fed from the loft tank. Removing the tank means the existing vented cylinder can no longer work as designed. It must be converted to an unvented cylinder from £1,450. This is a G3 regulated installation. We co-ordinate with loft conversion builders and ensure the cylinder work is timed correctly within the project. G3 commissioning certificate issued on completion.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered for Formby cylinder work?</summary><div class="pf-faq-body"><p>Yes. Liverpool Emergency Plumber is Gas Safe registered. All cylinder installations carried out by Gas Safe registered. G3 qualified for all unvented installations. All gas work is done by a Gas Safe registered plumber. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Related Services Across Formby</h2>
-      <p class="pf-sub">All Gas Safe registered. G3 qualified. L37 and surrounding postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation Formby</strong><span>Electric from £375. Thermostatic from £300. A new unvented cylinder enables mains pressure thermostatic showers throughout your Formby property.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-formby" class="pf-related-link"><div><strong>Bathroom Fitters Formby</strong><span>New bathroom installation from £2,750 labour. En suite and pre-sale specialists. L37 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-formby" class="pf-related-link"><div><strong>Boiler Installation Formby</strong><span>New boiler from £2,195. Free survey. L37 and surrounding postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Free Survey</strong><span>Free fixed-price survey. Vented and unvented cylinders. Formby L37 and surrounding postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Hot Water Cylinders Across Merseyside</h2>
-      <p class="pf-sub">Vented from £750. Unvented from £1,450. G3 qualified. Gas Safe registered. All postcodes covered.</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders Liverpool</strong><span>Vented from £750. Unvented from £1,450. G3 qualified. All Liverpool L postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/hot-water-cylinders-wirral" class="pf-related-link"><div><strong>Hot Water Cylinders Wirral</strong><span>Vented from £750. Unvented from £1,450. Loft conversion specialists. All CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/hot-water-cylinders-st-helens" class="pf-related-link"><div><strong>Hot Water Cylinders St Helens</strong><span>Vented from £750. Unvented from £1,450. WA10 terrace specialists. All WA postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free Formby Cylinder Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Vented from £750. Unvented from £1,450. Immersion heater from £175. G3 qualified. Gas Safe registered. Free survey. Formby L37 and surrounding postcodes.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>

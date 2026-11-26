@@ -1,394 +1,218 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/central-heating-installation-st-helens';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'two-bed', tier: 'Flats and small homes', name: '2-bed home', price: '£4,495', from: true, unit: 'full system, inc VAT',
+    points: ['New A-rated combi boiler', 'New radiators with TRVs', 'All new pipework', 'Smart or programmable controls', 'Magnetic filter and inhibitor'] },
+  { id: 'three-bed', tier: 'Family homes', popular: true, name: '3-bed home', price: '£5,295', from: true, unit: 'full system, inc VAT',
+    points: ['New A-rated combi boiler', 'Back boiler and fire removed if you have one', 'New radiators with TRVs', 'All new pipework', 'Smart or programmable controls', 'System cleaned to BS 7593'] },
+  { id: 'four-bed', tier: 'Bigger homes', name: '4-bed home', price: '£6,295', from: true, unit: 'full system, inc VAT',
+    points: ['Boiler sized for a bigger home', 'New radiators with TRVs', 'All new pipework', 'Smart or programmable controls', 'Benchmark and gas safety checks'] },
+  { id: 'combi-conversion', tier: 'Tank to combi', name: 'Combi conversion', price: '£2,890', from: true, unit: 'fitted, inc VAT',
+    points: ['Cylinder system changed to a combi', 'Hot water cylinder and loft tanks removed', 'Keeps your radiators if they are sound', 'Usually 1 to 2 days'] },
+];
+
+const faqs = [
+  { q: 'How much does central heating installation cost in St Helens?', a: 'A full new system starts from £4,495 for a 2-bed home, £5,295 for a 3-bed and £6,295 for a 4-bed, including VAT. A combi conversion starts from £2,890. You get a fixed written price after a free survey.' },
+  { q: 'Do you replace back boilers in St Helens?', a: 'Yes. It is one of our most common St Helens jobs. We remove the back boiler and the gas fire in front of it, fit a new combi in a better spot, and run new pipes. A full back boiler job with new radiators usually takes 4 to 5 days.' },
+  { q: 'Can you service my back boiler instead?', a: 'No. We do not service back boilers. They are old, hard to get parts for and well below modern efficiency. We remove them and fit a modern combi instead.' },
+  { q: 'How much does a back boiler replacement cost?', a: 'It depends on the radiators and pipes you have. If they are sound, we may only need to swap the boiler. If they are old, a full system from £4,495 is often better value. We price it at the free survey.' },
+  { q: 'Do you cover all WA postcodes in St Helens?', a: 'Yes. We cover WA9, WA10, WA11 and WA12, including Thatto Heath, Parr, Eccleston, Sutton, Haydock, Rainford and Newton-le-Willows. We also cover Billinge WN5 and Golborne WA3.' },
+  { q: 'Do you fit central heating for landlords in Newton-le-Willows?', a: 'Yes. We fit systems in rented homes across WA12 and can work with your tenant or agent. Rented homes need a gas safety certificate every year, from £75 with us.' },
+  { q: 'How long does central heating installation take?', a: 'A small home takes 2 to 3 days. A back boiler job or a 3-bed system takes 4 to 5 days. A big 4 or 5-bed home can take 5 to 7 days. We agree the dates at the survey.' },
+  { q: 'What warranty do I get?', a: 'The boiler comes with a maker\'s warranty of 7 to 12 years, depending on the model. We register it for you. Our own work has a 12-month workmanship guarantee.' },
+  { q: 'Do you offer finance?', a: 'No, we do not offer finance. You get a fixed written price, so you know the full cost before we start.' },
+  { q: 'Are you Gas Safe registered?', a: 'Yes. All gas work is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
+];
 ---
 
-<BaseLayout
-  title="Central Heating Installation St Helens | £4,495+"
-  description="Central heating installation St Helens from £4,495. Back boiler replacement specialists. Free fixed-price survey. A trusted team of engineers, led by James. Gas Safe registered. WA10, WA11 and WA12. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/central-heating-installation-st-helens"
+<ServiceGuide
+  url={URL_}
+  title="Central Heating Installation St Helens | Back Boilers Replaced, From £4,495"
+  description="Central heating installation in St Helens from £4,495 inc VAT. Back boilers removed and replaced with a new combi. New radiators, pipework and controls. Free survey across WA9 to WA12. Call 0151 558 0334."
+  h1="Central Heating Installation St Helens"
+  badge="Back boilers replaced · free survey · fixed price"
+  intro="A complete new central heating system from £4,495 including VAT. Still on a back boiler? We take it out and fit a modern combi. Our Gas Safe registered engineers survey for free and give you a fixed written price."
+  stats={[['£4,495', '2-bed system, from'], ['4 to 5 days', 'Back boiler job']]}
+  ticks={['Gas Safe Registered', 'Free Survey', 'Back Boilers Replaced', '5.0 on Google']}
+  pkTitle="Central heating installation prices in St Helens"
+  pkLede="Full systems priced by home size, including VAT. No call-out fee."
+  packages={packages}
+  pkNote="Every full system includes the boiler, radiators and TRVs, pipework, controls, magnetic filter, system clean and inhibitor to BS 7593, Benchmark, gas safety checks, making good and taking the old system away. Your final fixed price comes after a free survey."
+  factsTitle="St Helens central heating at a glance"
+  facts={[
+    ['Price', '2-bed from £4,495. 3-bed from £5,295. 4-bed from £6,295. Combi conversion from £2,890.'],
+    ['Back boilers', 'Removed and replaced with a combi. Priced at the free survey.'],
+    ['Time', '2 to 3 days for a small home. 4 to 5 days for a back boiler job.'],
+    ['Warranty', '7 to 12 years on the boiler from the maker, plus our 12-month workmanship guarantee.'],
+    ['Who', 'Gas Safe registered engineers, part of our team led by James.'],
+    ['Area', 'WA9, WA10, WA11 and WA12, plus Billinge and Golborne.'],
+  ]}
+  toc={[
+    ['cost', 'How much does it cost?'],
+    ['back-boilers', 'Back boiler replacement'],
+    ['options', 'Which option is right for me?'],
+    ['included', 'What is included?'],
+    ['time', 'How long does it take?'],
+    ['paperwork', 'Warranty, paperwork and landlords'],
+  ]}
+  reviews={['Brendan C', 'Mark L', 'Roger D']}
+  faqs={faqs}
+  areasTitle="Central heating in other areas"
+  areasText="We also fit central heating across Liverpool, the Wirral and Formby."
+  areas={[
+    { href: '/central-heating-installation-liverpool', label: 'Liverpool' },
+    { href: '/central-heating-installation-wirral', label: 'Wirral' },
+    { href: '/central-heating-installation-formby', label: 'Formby' },
+  ]}
+  related={[
+    { href: '/boiler-installation-st-helens', title: 'Boiler installation St Helens', text: 'New combi boilers from £2,195 fitted' },
+    { href: '/radiators-st-helens', title: 'Radiators St Helens', text: 'New radiators supplied and fitted from £245' },
+    { href: '/power-flushing-st-helens', title: 'Power flushing St Helens', text: 'From £395 for up to 6 radiators' },
+    { href: '/boiler-service-st-helens', title: 'Boiler service St Helens', text: '£95 fixed price, keeps your warranty valid' },
+    { href: '/gas-safety-certificate-st-helens', title: 'Gas safety certificate St Helens', text: 'Landlord CP12 from £75' },
+    { href: '/emergency-plumber-st-helens', title: 'Emergency plumber St Helens', text: 'From £120 for the first hour, no call-out fee' },
+  ]}
+  finalTitle="Book your free St Helens central heating survey"
+  finalText="Full systems from £4,495 including VAT. Back boilers replaced. Free survey and a fixed written price across WA9 to WA12."
+  serviceName="Central Heating Installation St Helens"
+  serviceType="Central heating installation"
+  serviceDesc="Full central heating systems installed across St Helens by Gas Safe registered engineers. Back boilers removed and replaced with a combi. New boiler, radiators, pipework and controls. Free survey and fixed written price."
+  areaServed={['St Helens', 'Eccleston', 'Parr', 'Sutton', 'Thatto Heath', 'Clock Face', 'Haydock', 'Rainford', 'Billinge', 'Newton-le-Willows', 'Earlestown', 'Golborne']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Central Heating Installation St Helens",
-    "serviceType": "Central Heating Installation and Upgrade",
-    "description": "Full central heating installation in St Helens from £4,495. Back boiler replacement specialists. Gas Safe registered. Free fixed-price survey. WA10, WA11 and WA12.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "St Helens, WA9-WA12" },
-    "offers": [
-      { "@type": "Offer", "name": "Full Central Heating Installation St Helens", "price": "3500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Central Heating System Upgrade St Helens", "price": "1500", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Radiator Addition St Helens", "price": "200", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does central heating installation cost in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "A full central heating installation in St Helens starts from £4,495. System upgrades start from £1,500. A single radiator addition costs from £245. All prices are confirmed in a written fixed-price quote after the free site survey." } },
-      { "@type": "Question", "name": "Do you replace back boilers in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Back boiler replacement is one of our specialisms in St Helens, where back boilers remain more common than almost anywhere in Merseyside. A back boiler replacement involves removing the old back boiler and fire, finding an appropriate location for a new combi or system boiler, running new pipework and commissioning the full system." } },
-      { "@type": "Question", "name": "Are you Gas Safe registered for St Helens central heating installation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All central heating installations in St Helens are carried out by Gas Safe registered. Verify at gassaferegister.co.uk. All gas work is done by a Gas Safe registered plumber." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Central Heating Installation St Helens", "item": "https://liverpoolemergencyplumber.co.uk/central-heating-installation-st-helens" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        St Helens Central Heating Specialists
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does central heating installation cost in St Helens?</h2>
+      <p class="brx-answer">A full new system starts from £4,495 for a 2-bed home, £5,295 for a 3-bed and £6,295 for a 4-bed, including VAT. A combi conversion starts from £2,890.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Home</th><th>Typical radiators</th><th>Price, inc VAT</th><th>Typical time</th></tr></thead>
+          <tbody>
+            <tr><td><strong>2-bed flat or house</strong></td><td>Up to 6</td><td>from £4,495</td><td>2 to 3 days</td></tr>
+            <tr><td><strong>3-bed terrace or semi</strong></td><td>7 to 10</td><td>from £5,295</td><td>4 to 5 days</td></tr>
+            <tr><td><strong>4-bed house</strong></td><td>11 or more</td><td>from £6,295</td><td>5 to 7 days</td></tr>
+            <tr><td><strong>Combi conversion</strong></td><td>Keeps your radiators</td><td>from £2,890</td><td>1 to 2 days</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1 >Central Heating Installation St Helens</h1>
-      <p class="page-hero-sub">Full central heating systems from £4,495. Back boiler replacement specialists. Free fixed-price survey across WA10, WA11 and WA12.</p>
+      <p>The price depends on the number of radiators, the pipe runs and the boiler you choose. A back boiler adds work, as the fire comes out and the boiler moves. That is why we visit first. The survey is free, and the price is fixed and in writing.</p>
+      <p>Need just one more radiator? See our <a href="/radiators-st-helens">St Helens radiator prices</a>, from £245 supplied and fitted.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£3,500</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Full System</div>
+  <section class="brx-sec" id="back-boilers">
+    <div class="brx-wrap">
+      <h2>Do you replace back boilers in St Helens?</h2>
+      <p class="brx-answer">Yes. Back boilers are still common in older St Helens homes, and replacing them is one of our most common jobs here. We remove the old one and fit a modern combi.</p>
+      <p>A back boiler sits behind a gas fire in the chimney breast. Many terraces in WA10 and WA9 still have one. They are old, parts are hard to find, and they waste gas. We do not service them. We replace them.</p>
+      <h3>What does a back boiler replacement involve?</h3>
+      <ul class="sg-ticks">
+        <li><strong>Fire and back boiler out.</strong> We remove them together and cap the old gas supply.</li>
+        <li><strong>Opening made good.</strong> The chimney breast opening is left safe and tidy.</li>
+        <li><strong>New boiler position.</strong> In most WA10 terraces it goes in the kitchen or a downstairs cupboard.</li>
+        <li><strong>New gas pipe and pipework.</strong> Old back boiler pipes rarely reach the best radiator spots.</li>
+        <li><strong>New radiators</strong> where the old ones are worn or in the wrong place.</li>
+        <li><strong>Clean, fill and balance.</strong> Old pipes often hold sludge, so we clean the system well.</li>
+      </ul>
+      <p>It is a bigger job than a boiler swap. With new radiators it usually takes 4 to 5 days. We plan it all at the free survey.</p>
+      <div class="brx-cta">
+        <p><strong>Still on a back boiler?</strong> Book a free survey for a fixed written price.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="options">
+    <div class="brx-wrap">
+      <h2>Which option is right for my St Helens home?</h2>
+      <p class="brx-answer">It depends on what you have now. Not every home needs a whole new system. We tell you honestly at the survey.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>A full new system</h3>
+          <p>Best if you have a back boiler with old pipes, no central heating, or only electric heaters. From £4,495.</p>
         </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">FREE</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Site Survey</div>
+        <div class="sg-box">
+          <h3>A combi conversion</h3>
+          <p>Best if you have a hot water cylinder and loft tanks. We fit a combi and keep sound radiators. From £2,890.</p>
         </div>
       </div>
-
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a Free Survey</a>
-      </div>
-
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Fixed-Price Survey</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> No Call-Out Fee</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Back Boiler Replacement</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="pf">
-
-  <!-- TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
+      <div class="sg-cols" style="margin-top:1rem;">
+        <div class="sg-box">
+          <h3>A new boiler only</h3>
+          <p>Best if your radiators and pipes work well. See <a href="/boiler-installation-st-helens">boiler installation in St Helens</a> from £2,195.</p>
         </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:540px;">"James was amazing and was at my house within 30 mins of calling on a sunday. He has not only fixed my boiler but improved it and taught me how to fix the problem in future. Affordable and easygoing great plumber and gas fitter!" Brendan C, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2 >Central Heating Installation Prices St Helens</h2>
-      <p class="pf-sub">Free site survey required to confirm your exact price. All prices include installation, controls, Gas Safe certificate and 12-month workmanship guarantee.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MOST COMMON IN ST HELENS</div>
-          <div class="pf-price-tier">FULL SYSTEM</div>
-          <div class="pf-price-name">New Central Heating Installation</div>
-          <div class="pf-price-sub">Including back boiler replacement</div>
-          <div class="pf-price-amount">£3,500</div>
-          <ul class="pf-price-list">
-            <li>New A-rated combi or system boiler</li>
-            <li>Back boiler and fire removal where applicable</li>
-            <li>Full radiator set designed for your property</li>
-            <li>All pipework routed and fitted</li>
-            <li>Smart thermostat and controls</li>
-            <li>Magnetic system filter fitted</li>
-            <li>Gas Safe certificate issued</li>
-            <li>12-month workmanship guarantee</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
-        </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">SYSTEM UPGRADE</div>
-          <div class="pf-price-name">Heating System Upgrade</div>
-          <div class="pf-price-sub">Upgrading or extending an existing system</div>
-          <div class="pf-price-amount">£1,500</div>
-          <ul class="pf-price-list">
-            <li>New boiler where required</li>
-            <li>Additional radiators and pipework</li>
-            <li>System flush before new components fitted</li>
-            <li>New controls and smart thermostat</li>
-            <li>Magnetic filter fitted</li>
-            <li>Gas Safe certificate issued</li>
-            <li>12-month workmanship guarantee</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
-        </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">RADIATOR ADDITION</div>
-          <div class="pf-price-name">Single Radiator Supply and Fit</div>
-          <div class="pf-price-sub">Adding radiators to an existing system</div>
-          <div class="pf-price-amount">£200</div>
-          <ul class="pf-price-list">
-            <li>Radiator supplied and fitted</li>
-            <li>TRV thermostatic valve fitted</li>
-            <li>Pipework connected to existing circuit</li>
-            <li>System balanced after fitting</li>
-            <li>Minimal disruption to existing decoration</li>
-            <li>Inhibitor topped up</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="sg-box">
+          <h3>An upgrade</h3>
+          <p>Best if some rooms are cold. An extra radiator or a <a href="/power-flushing-st-helens">power flush</a> may be all you need.</p>
         </div>
       </div>
+      <h3>Signs your home needs new central heating</h3>
+      <ul class="sg-ticks">
+        <li><strong>You still have a back boiler</strong></li>
+        <li><strong>Rooms stay cold</strong> with the heating on</li>
+        <li><strong>Cold spots</strong> on radiators that bleeding does not fix</li>
+        <li><strong>High bills</strong> for little heat</li>
+        <li><strong>A poor EPC rating</strong> of D or lower</li>
+      </ul>
     </div>
   </section>
 
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in a new central heating system?</h2>
+      <p class="brx-answer">Everything you need for a working system. There are no hidden extras.</p>
+      <ul class="sg-ticks">
+        <li><strong>New A-rated boiler</strong> from Baxi, Worcester Bosch or Vaillant, sized for your home</li>
+        <li><strong>Back boiler and fire removal</strong> where you have one</li>
+        <li><strong>New radiators</strong>, each sized for its room, with TRVs</li>
+        <li><strong>All new pipework</strong>, routed to keep it out of sight where we can</li>
+        <li><strong>Smart or programmable controls</strong>, set up and shown to you</li>
+        <li><strong>Magnetic filter, system clean and inhibitor</strong> to BS 7593</li>
+        <li><strong>Balancing</strong>, so every room heats evenly</li>
+        <li><strong>Gas safety checks and Benchmark</strong> filled in on the day</li>
+        <li><strong>12-month workmanship guarantee</strong> on all our work</li>
+      </ul>
+      <p>Want a smart thermostat that needs new wiring? Our partner firm <a href="https://www.idealelectricalsolutions.co.uk" target="_blank" rel="noopener">Ideal Electrical Solutions</a> does the electrical work.</p>
+    </div>
+  </section>
 
-  <!-- BACK BOILER, UNIQUE SECTION -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <span class="pf-section-label">ST HELENS BACK BOILERS</span>
-      <h2 >Back Boiler Replacement in St Helens</h2>
-      <p class="pf-sub">Back boilers are still common in older St Helens homes. Here is what replacing one involves.</p>
+  <section class="brx-sec brx-tint" id="time">
+    <div class="brx-wrap">
+      <h2>How long does central heating installation take in St Helens?</h2>
+      <p class="brx-answer">A small home takes 2 to 3 days. A back boiler job or a 3-bed system takes 4 to 5 days. Bigger homes in Haydock or Newton-le-Willows can take 5 to 7 days.</p>
+      <ol class="sg-steps">
+        <li><strong>Free survey.</strong> We check the layout, the existing system, the walls and the best boiler spot. You get a fixed written price.</li>
+        <li><strong>Day 1: strip out.</strong> We cover floors, drain down and remove the fire and back boiler.</li>
+        <li><strong>Days 2 and 3: pipes and radiators.</strong> We run new pipes and hang the new radiators.</li>
+        <li><strong>Day 4: boiler.</strong> Our Gas Safe registered engineers fit the boiler, flue, gas pipe and controls.</li>
+        <li><strong>Day 5: clean, test, hand over.</strong> We clean the system, add inhibitor, fit the filter and balance each radiator. We show you the controls.</li>
+      </ol>
+    </div>
+  </section>
 
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">What Back Boiler Replacement in St Helens Actually Involves</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">A back boiler replacement is not a straightforward boiler swap. The back boiler and the gas fire in front of it are removed as a unit. The chimney breast opening is made good. A new boiler location is identified, which for most WA10 terraces is typically the kitchen or a ground floor cupboard. New gas pipework is run to the new location. New radiators are specified and fitted throughout the property, because the back boiler's pipework rarely runs to the optimal radiator positions. The full system is then commissioned and balanced. This is a larger job than a standard combi swap and takes typically 4 to 5 days. We plan every element at the free survey and provide a written fixed-price quote before any work begins.</p>
-        </div>
-
+  <section class="brx-sec" id="paperwork">
+    <div class="brx-wrap">
+      <h2>What paperwork and warranty do I get?</h2>
+      <p class="brx-answer">You get the maker's boiler warranty, our 12-month workmanship guarantee, the Benchmark checklist and a Building Regulations certificate.</p>
+      <p>We register the boiler warranty for you and email your documents the same day. The new boiler is notified to Building Control through the Gas Safe Register. Your certificate comes by post.</p>
+      <p>Keep the warranty valid with a yearly <a href="/boiler-service-st-helens">boiler service</a>, £95 with us.</p>
+      <h3>Landlords in St Helens</h3>
+      <p>Newton-le-Willows and Earlestown have a growing number of rented homes. We fit central heating for landlords and can work with your tenant or agent. Rented homes need a <a href="/gas-safety-certificate-st-helens">gas safety certificate</a> every 12 months, from £75.</p>
+      <h3>Which parts of St Helens do you cover?</h3>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Area</th><th>Places and postcodes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>St Helens town</strong></td><td>Town centre, Eccleston and Parr WA10. Sutton, Thatto Heath and Clock Face WA9.</td></tr>
+            <tr><td><strong>Haydock and Rainford</strong></td><td>Haydock and Rainford WA11. Billinge WN5.</td></tr>
+            <tr><td><strong>Newton-le-Willows</strong></td><td>Newton-le-Willows and Earlestown WA12. Golborne WA3.</td></tr>
+          </tbody>
+        </table>
       </div>
+      <div class="brx-danger"><p><strong>Smell gas?</strong> Call the National Gas Emergency line on 0800 111 999 first. Then call us.</p></div>
     </div>
   </section>
-
-
-  <!-- PRICING ALERT -->
-  <section style="background:#15803d;padding:1.75rem 0;">
-    <div class="container" style="text-align:center;">
-      <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Still on a back boiler? Book a free survey for a written fixed-price quote.</p>
-      <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
-    </div>
-  </section>
-
-
-  <!-- SIGNS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2 >Signs Your St Helens Home Needs a Central Heating Upgrade</h2>
-      <p class="pf-sub">These are the most common situations reported by St Helens homeowners before calling us.</p>
-      <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>You still have a back boiler</strong><p>Back boilers are inefficient, difficult to service correctly and no longer produced. Book a free survey and you get a written fixed-price quote before you commit to anything.</p></div></div>
-        <div class="pf-sign"><div><strong>No central heating in your property</strong><p>If your St Helens property has electric heaters and no gas central heating, we can fit a full gas central heating system. That includes the boiler, pipework, radiators and controls.</p></div></div>
-        <div class="pf-sign"><div><strong>Rooms always cold despite heating on</strong><p>Missing radiators, an undersized back boiler or a poorly balanced system means the heating can never keep up. A free survey identifies whether a radiator addition or a full system upgrade is the right solution.</p></div></div>
-        <div class="pf-sign"><div><strong>EPC rating of D, E, F or G</strong><p>A poor EPC rating often points to an old or inefficient heating system. A new central heating installation is the single most impactful EPC improvement available.</p></div></div>
-        <div class="pf-sign"><div><strong>Heating bills very high with poor results</strong><p>Back boilers run at efficiencies well below modern condensing boilers. Replacing a back boiler with an A-rated combi typically reduces gas consumption by 20 to 40%, with higher savings for older, less efficient units.</p></div></div>
-        <div class="pf-sign"><div><strong>Cold spots on radiators that bleeding does not fix</strong><p>Persistent cold spots on multiple radiators in a back boiler system indicate magnetite build-up in the system pipework. A power flush before any new components are connected is essential in these cases.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHAT IS INCLUDED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2 >What Is Included in Your St Helens Central Heating Installation</h2>
-      <p class="pf-sub">No hidden extras. Everything in the price confirmed at your free survey.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>New A-rated boiler correctly sized for your property</strong><p>Worcester Bosch, Vaillant, Ideal or Baxi. Correctly sized based on the number of radiators and hot water demand. All A-rated condensing models compliant with Boiler Plus regulations.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Back boiler and fire removal where applicable</strong><p>The existing back boiler and gas fire removed as a unit. The chimney breast opening made good. All redundant pipework removed or capped. New boiler positioned in the optimal location for the property.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full radiator set designed for each room</strong><p>We calculate the correct radiator output for every room based on size, insulation and heat loss. Every room gets the right amount of heat.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>All pipework routed and fitted</strong><p>New pipe routes planned to minimise disruption to existing decoration. We work neatly and clean up fully at the end of every working day throughout the installation.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Smart thermostat and heating controls</strong><p>New smart thermostat and programmer installed and set up. Smart controls such as Nest or Hive available on request. Required under Boiler Plus regulations for all new installations.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Magnetic system filter and inhibitor</strong><p>Magnetic filter fitted and system dosed with inhibitor to BS 7593 standard. This protects the new boiler and is a warranty condition for all major manufacturers.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full commissioning and system balance</strong><p>Every radiator balanced individually. System pressure set and a full heating and hot water cycle run before we leave. Your new system works correctly from day one.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gas Safe certificate and Benchmark certificate</strong><p>Both issued on the day of completion. The Gas Safe certificate is a legal requirement. The Benchmark certificate validates and registers the boiler manufacturer warranty.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>12-month workmanship guarantee</strong><p>All St Helens installations carry a 12-month workmanship guarantee. If anything fails as a result of our installation work, we return and resolve it at no cost.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- HOW LONG -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2 >How Long Does Central Heating Installation Take in St Helens?</h2>
-      <p class="pf-sub">Realistic timelines based on our WA10, WA11 and WA12 installations.</p>
-      <div class="pf-durations" style="margin-top:2rem;">
-        <div class="pf-duration-card">
-          <div class="pf-duration-time">2-3<br><span style="font-size:0.9rem;">days</span></div>
-          <div><strong>Small property or straightforward upgrade. Up to 6 radiators.</strong><p>Modern combi boiler swap with new radiators in a smaller WA10 or WA12 property. Straightforward pipe access and no back boiler removal required.</p></div>
-        </div>
-        <div class="pf-duration-card">
-          <div class="pf-duration-time">4-5<br><span style="font-size:0.9rem;">days</span></div>
-          <div><strong>Back boiler replacement. Full system. 7 to 10 radiators.</strong><p>The most common St Helens installation. Removing the back boiler and fire, positioning the new boiler, running new pipework and fitting a full set of radiators. Typical for WA10 and WA9 Victorian terraces.</p></div>
-        </div>
-        <div class="pf-duration-card">
-          <div class="pf-duration-time">5-7<br><span style="font-size:0.9rem;">days</span></div>
-          <div><strong>Larger property. 11 or more radiators.</strong><p>4 and 5-bed properties in Haydock, Newton-le-Willows and larger WA11 and WA12 properties. More radiators, longer pipe runs. System boiler may be appropriate.</p></div>
-        </div>
-        <div class="pf-duration-card">
-          <div class="pf-duration-time">0.5<br><span style="font-size:0.9rem;">day</span></div>
-          <div><strong>Single radiator addition to existing system.</strong><p>Adding one radiator to a working central heating system. Pipe connection, balancing and inhibitor top-up included. We can often attend within 2 to 3 days across WA10, WA11 and WA12.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2 >Why St Helens Homeowners Choose Us for Central Heating</h2>
-      <p class="pf-sub">Gas Safe registered. Free survey. Fixed price. Back boiler replacement specialists. WA10, WA11 and WA12 covered.</p>
-      <div class="pf-why-grid">
-        <div class="pf-why-item"><h3>Back Boiler Replacement Specialists</h3><p>Back boiler removal and full system replacement is one of our most common jobs in St Helens. We understand the specific challenges of WA10 terrace layouts, chimney breast access and optimal new boiler positioning for these properties.</p></div>
-        <div class="pf-why-item"><h3>No Call-Out Fee</h3><p>There is no call-out fee. Call 0151 558 0334 to book your free survey.</p></div>
-        <div class="pf-why-item"><h3>Free Survey and Fixed Price</h3><p>We visit your St Helens property, assess everything and provide a written fixed-price quote before any work begins. No surprises on invoice day regardless of what we find during installation.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>Every installation carried out by our Gas Safe registered engineers. The same professional throughout the full installation, not a different face each day.</p></div>
-        <div class="pf-why-item"><h3>Boiler Plus Compliant</h3><p>All installations meet Boiler Plus regulations and current Building Regulations. A compliant installation protects your investment and your legal position as a St Helens homeowner or landlord.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered</h3><p>Verified Google reviews with a 5.0 average. Gas Safe registered and verifiable at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What St Helens Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Responded very quickly to my unexpected radiator pipe leak and fixed the issue. Very knowledgeable and reassuring - he did a very tidy job and cleaned up well. Would recommend.</p><div class="pf-review-footer"><div class="pf-review-avatar">A</div><div><div class="pf-review-name">Amanda</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">John Manley</div><div class="pf-review-loc">Shower Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James was very professional, and his standard of work excellent. Would recommend in a heart beat. Thanks for the great work, and sound advice.</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Mark L</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- MID CTA -->
-  <section style="background:var(--navy);padding:2rem 0;">
-    <div class="container">
-      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Ready to book your free St Helens central heating survey?</h3>
-      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Free fixed-price survey across WA10, WA11 and WA12. Gas Safe registered. No obligation to proceed.</p>
-      <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-    </div>
-  </section>
-
-
-  <!-- PROCESS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2 >How Our St Helens Central Heating Installation Works</h2>
-      <p class="pf-sub">From free survey to a fully working heating system.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>Our Gas Safe engineer visits your St Helens property and assesses the layout, existing system, wall construction and boiler location.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Written fixed-price quote issued</strong><p>We provide a written fixed-price quote confirming the full cost, the work scope and the timeline. No obligation to proceed.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Installation carried out</strong><p>Our Gas Safe registered engineers carry out the full installation. Back boiler and fire removed where applicable. New boiler positioned in the optimal location. New pipework run throughout. Floors and surfaces protected. Clean-up at the end of every working day.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>System flushed, inhibitor dosed and filter fitted</strong><p>The completed system flushed, inhibitor dosed to BS 7593 standard and magnetic filter fitted. Essential for back boiler replacement jobs where old pipework often contains sludge and magnetite.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Full commissioning, balancing and demonstration</strong><p>Every radiator balanced. System pressure set. Full heating and hot water cycle run. Controls demonstrated before we leave.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">6</div><div><strong>Gas Safe certificate and warranty registered</strong><p>Gas Safe certificate and Benchmark certificate issued on the day of completion. Boiler warranty registered with the manufacturer on your behalf. All documentation emailed the same day.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2 >Central Heating Installation St Helens. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what St Helens homeowners and landlords ask most before booking.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does central heating installation cost in St Helens?</summary><div class="pf-faq-body"><p>A full central heating installation in St Helens starts from £4,495. System upgrades start from £1,500. A single radiator addition costs from £245. All prices confirmed in a written fixed-price quote after the site visit.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">BACK BOILER</span>&nbsp; Do you replace back boilers in St Helens?</summary><div class="pf-faq-body"><p>Yes. Back boiler replacement is one of our most common jobs in St Helens. We remove the back boiler and gas fire, make good the chimney breast opening, position the new boiler in the optimal location for the property, run new pipework and fit a full set of new radiators. Most back boiler replacement jobs take 4 to 5 days.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered for St Helens central heating installation?</summary><div class="pf-faq-body"><p>Yes. All central heating installations in St Helens are carried out by Gas Safe registered. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. All gas work is done by a Gas Safe registered plumber.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2 >Central Heating Installation Across St Helens and Surrounding Areas</h2>
-      <p class="pf-sub">We carry out central heating installations across all St Helens WA postcodes. Free survey available throughout.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div class="pf-card"><h3>St Helens Town and Central</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Highest concentration of back boiler properties. Back boiler replacement specialists.</p><div class="pf-pills"><span class="pf-pill">Town Centre WA10</span><span class="pf-pill">Eccleston WA10</span><span class="pf-pill">Parr WA10</span><span class="pf-pill">Sutton WA9</span><span class="pf-pill">Thatto Heath WA9</span><span class="pf-pill">Clock Face WA9</span></div></div>
-        <div class="pf-card"><h3>Haydock and Rainford</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Mixed housing era. Upgrades, radiator additions and full system replacements available. Free survey throughout.</p><div class="pf-pills"><span class="pf-pill">Haydock WA11</span><span class="pf-pill">Rainford WA11</span><span class="pf-pill">Billinge WN5</span></div></div>
-        <div class="pf-card"><h3>Newton-le-Willows and Earlestown</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Growing buy-to-let market. Landlord central heating upgrades available.</p><div class="pf-pills"><span class="pf-pill">Newton-le-Willows WA12</span><span class="pf-pill">Earlestown WA12</span><span class="pf-pill">Golborne WA3</span></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2 >Related Heating Services in St Helens</h2>
-      <p class="pf-sub">All Gas Safe registered. All St Helens WA postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/boiler-installation-st-helens" class="pf-related-link"><div><strong>Boiler Installation St Helens</strong><span>New boiler from £2,195. Back boiler replacement specialists. WA10, WA11 and WA12.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-st-helens" class="pf-related-link"><div><strong>Power Flushing St Helens</strong><span>Cold radiators or noisy boiler? Power flush from £395. Essential before connecting new components to existing system.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-service-st-helens" class="pf-related-link"><div><strong>Annual Boiler Service St Helens</strong><span>£95 fixed price. Certificate emailed same day.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-st-helens" class="pf-related-link"><div><strong>Gas Safety Certificate St Helens</strong><span>CP12 from £75. Boilers, gas cookers and hobs covered in one visit. Same-day available. WA10, WA11 and WA12.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/emergency-plumber-st-helens" class="pf-related-link"><div><strong>Emergency Plumber St Helens</strong><span>Boiler broken down? 30 min response 24/7. From £120. No call-out fee. WA10, WA11, WA12.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Free Survey</strong><span>Free no-obligation survey. All St Helens postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2 >Central Heating Installation Across Merseyside</h2>
-      <p class="pf-sub">Full central heating systems from £4,495. Free fixed-price survey. Gas Safe registered engineers in every location.</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/central-heating-installation-liverpool" class="pf-related-link"><div><strong>Central Heating Installation Liverpool</strong><span>Full systems from £4,495. Victorian and period property specialists. All Liverpool L postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/central-heating-installation-wirral" class="pf-related-link"><div><strong>Central Heating Installation Wirral</strong><span>Full systems from £4,495. System design matched to your Wirral property type. All CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/central-heating-installation-formby" class="pf-related-link"><div><strong>Central Heating Installation Formby</strong><span>Full systems from £4,495. Multi-zone and underfloor heating specialists for larger Formby homes. Free survey L37.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free St Helens Central Heating Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Full systems from £4,495. Back boiler replacement specialists. Free fixed-price survey. Gas Safe registered. WA10, WA11 and WA12 covered.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>
