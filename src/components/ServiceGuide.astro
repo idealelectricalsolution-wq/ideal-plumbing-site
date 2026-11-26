@@ -1,0 +1,177 @@
+---
+// One shared layout for every service guide page.
+// Order: hero -> prices/packages -> at a glance + contents -> page sections (slot) -> reviews -> areas -> FAQ -> related -> final call.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { REVIEWS } from '../data/reviews';
+import '../styles/guide.css';
+
+export interface Pkg {
+  id: string; tier: string; name: string; price: string; from?: boolean; unit?: string;
+  popular?: boolean; img?: string; imgAlt?: string; desc?: string;
+  specs?: [string, string][]; points?: string[];
+}
+interface Props {
+  url: string; title: string; description: string; h1: string; badge: string; intro: string;
+  stats?: [string, string][]; ticks?: string[];
+  secondaryCta?: { href: string; label: string };
+  pkTitle?: string; pkLede?: string; packages?: Pkg[]; pkNote?: string;
+  factsTitle: string; facts: [string, string][]; toc: [string, string][];
+  reviewTitle?: string; reviews?: string[];
+  faqs: { q: string; a: string }[];
+  areasTitle?: string; areasText?: string; areas?: { href: string; label: string }[];
+  related?: { href: string; title: string; text: string }[];
+  finalTitle: string; finalText: string;
+  serviceName: string; serviceType: string; serviceDesc: string;
+  areaServed?: string[]; updated?: string; dateModified?: string;
+  noPackagesOffers?: { name: string; price: string }[];
+}
+const p = Astro.props;
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+const updated = p.updated || '27 November 2026';
+const dateModified = p.dateModified || '2026-11-27';
+const pk = p.packages || [];
+const nCls = pk.length === 2 ? 'sg-n2' : pk.length === 3 ? 'sg-n3' : pk.length === 4 ? 'sg-n4' : '';
+const revs = (p.reviews || []).filter((n) => REVIEWS[n]).map((n) => ({ n, t: REVIEWS[n] }));
+const toc = [...p.toc];
+if (revs.length) toc.push(['reviews', 'Reviews']);
+toc.push(['faq', 'More questions']);
+
+const offers = (p.noPackagesOffers || pk.map((x) => ({ name: `${x.name}${x.unit ? ' (' + x.unit + ')' : ''}`, price: x.price.replace(/[^0-9.]/g, '') })))
+  .map((o) => ({ '@type': 'Offer', name: o.name, price: o.price, priceCurrency: 'GBP', url: p.url + '#prices' }));
+const schemaService = {
+  '@context': 'https://schema.org', '@type': 'Service', name: p.serviceName, serviceType: p.serviceType, url: p.url,
+  description: p.serviceDesc, provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
+  areaServed: (p.areaServed || ['Liverpool', 'Wirral', 'St Helens', 'Formby']).map((n) => ({ '@type': 'City', name: n })),
+  ...(offers.length ? { offers } : {}),
+};
+const schemaFaq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: p.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+const schemaPage = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': p.url + '#webpage', url: p.url, name: p.h1, dateModified, inLanguage: 'en-GB', about: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' } };
+const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://liverpoolemergencyplumber.co.uk' },
+  { '@type': 'ListItem', position: 2, name: p.h1, item: p.url },
+] };
+---
+
+<BaseLayout title={p.title} description={p.description} canonical={p.url}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaFaq)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaPage)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaCrumbs)} />
+
+  <section class="page-hero" id="hero">
+    <div class="container">
+      <div class="page-hero-badge" style="margin:0 auto 1rem;"><span class="badge-dot"></span>{p.badge}</div>
+      <h1>{p.h1}</h1>
+      <p class="page-hero-sub">{p.intro}</p>
+      {p.stats && p.stats.length > 0 && (
+        <div class="sg-hero-stats">
+          {p.stats.map(([n, l]) => <div class="br-stat"><div class="br-stat-n">{n}</div><div class="br-stat-l">{l}</div></div>)}
+        </div>
+      )}
+      <div class="sg-hero-ctas">
+        <a href={TEL} class="btn btn-orange btn-lg btn-full" style="color:#ffffff;">CALL {PHONE}</a>
+        <a href={(p.secondaryCta && p.secondaryCta.href) || (pk.length ? '#prices' : '/get-started')} class="btn btn-lg btn-full sg-btn-navy">{(p.secondaryCta && p.secondaryCta.label) || (pk.length ? 'See our prices' : 'Book online')}</a>
+      </div>
+      <div class="sg-hero-ticks">
+        {(p.ticks || ['Gas Safe Registered', 'Fixed Prices', 'No Call-Out Fee', '5.0 on Google']).map((t) => <span class="br-tick"><span>✓</span> {t}</span>)}
+      </div>
+    </div>
+  </section>
+
+  {pk.length > 0 && (
+    <section class="sg-pk-sec" id="prices">
+      <div class="sg-pk-wrap">
+        <h2>{p.pkTitle || 'Our prices'}</h2>
+        {p.pkLede && <p class="sg-pk-lede">{p.pkLede}</p>}
+        <div class={`sg-pk-grid ${nCls}`}>
+          {pk.map((x, i) => (
+            <article class={`sg-pk${x.popular ? ' sg-pk-pop' : ''}`} id={x.id}>
+              {x.popular ? <p class="sg-pk-badge">Most popular</p> : <p class="sg-pk-tier">{x.tier}</p>}
+              {x.img && (
+                <picture>
+                  <source type="image/webp" srcset={`/images/${x.img}-400.webp 400w, /images/${x.img}-800.webp 800w`} sizes="(max-width: 640px) 60vw, 220px" />
+                  <img src={`/images/${x.img}-400.jpg`} alt={x.imgAlt || x.name} width="400" height="400" loading={i < 2 ? 'eager' : 'lazy'} decoding="async" />
+                </picture>
+              )}
+              <h3>{x.name}</h3>
+              <p class="sg-pk-price">{x.from && <small style="font-size:1.1rem;">from </small>}{x.price}<span class="sg-pk-unit">{x.unit || 'fully fitted, inc VAT'}</span></p>
+              {x.desc && <p class="sg-pk-desc">{x.desc}</p>}
+              {x.specs && x.specs.length > 0 && (
+                <dl class="sg-pk-specs">{x.specs.map(([d, v]) => <div><dt>{d}</dt><dd>{v}</dd></div>)}</dl>
+              )}
+              {x.points && <ul class="sg-pk-points">{x.points.map((t) => <li>{t}</li>)}</ul>}
+              <a href={TEL} class="sg-pk-btn">Call {PHONE}</a>
+              <a href="/get-started" class="sg-pk-link">Book online</a>
+            </article>
+          ))}
+        </div>
+        {p.pkNote && <p class="sg-pk-note">{p.pkNote}</p>}
+      </div>
+    </section>
+  )}
+
+  <div class="brx">
+    <section class="brx-sec" id="key-facts">
+      <div class="brx-wrap">
+        <div class="brx-facts">
+          <h2 class="brx-facts-h">{p.factsTitle}</h2>
+          <dl>{p.facts.map(([d, v]) => <div><dt>{d}</dt><dd>{v}</dd></div>)}</dl>
+        </div>
+        <nav class="brx-toc" aria-label="On this page">
+          <p class="brx-toc-h">On this page</p>
+          <ol>{toc.map(([id, t]) => <li><a href={`#${id}`}>{t}</a></li>)}</ol>
+        </nav>
+        <p class="brx-updated">Updated {updated}</p>
+      </div>
+    </section>
+
+    <slot />
+
+    {revs.length > 0 && (
+      <section class="brx-sec brx-tint" id="reviews">
+        <div class="brx-wrap">
+          <h2>{p.reviewTitle || 'What do customers say?'}</h2>
+          <p class="brx-rating"><strong>5.0</strong> <span aria-hidden="true">★★★★★</span> from 53 Google reviews</p>
+          <div class="brx-reviews">
+            {revs.map((r) => <figure class="brx-review"><blockquote>“{r.t}”</blockquote><figcaption>{r.n} · Google review</figcaption></figure>)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {p.areas && p.areas.length > 0 && (
+      <section class="brx-sec" id="areas">
+        <div class="brx-wrap">
+          <h2>{p.areasTitle || 'Which areas do you cover?'}</h2>
+          {p.areasText && <p>{p.areasText}</p>}
+          <ul class="sg-areas">{p.areas.map((a) => <li><a href={a.href}>{a.label}</a></li>)}</ul>
+        </div>
+      </section>
+    )}
+
+    <section class={`brx-sec${p.areas && p.areas.length ? ' brx-tint' : ''}`} id="faq">
+      <div class="brx-wrap">
+        <h2>More questions</h2>
+        {p.faqs.map((f) => <details class="brx-faq"><summary>{f.q}</summary><p>{f.a}</p></details>)}
+      </div>
+    </section>
+
+    {p.related && p.related.length > 0 && (
+      <section class="brx-sec" id="related">
+        <div class="brx-wrap">
+          <h2>Related services</h2>
+          <div class="sg-related">{p.related.map((r) => <a href={r.href}><strong>{r.title}</strong><span>{r.text}</span></a>)}</div>
+        </div>
+      </section>
+    )}
+
+    <section class="brx-final" id="final-cta">
+      <div class="brx-wrap">
+        <h2>{p.finalTitle}</h2>
+        <p>{p.finalText}</p>
+        <a href={TEL} class="brx-btn brx-btn-big">Call {PHONE}</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
