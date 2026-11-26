@@ -1,212 +1,249 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
+import ServiceGuide from '../components/ServiceGuide.astro';
 const URL_ = 'https://liverpoolemergencyplumber.co.uk/emergency-gas-engineer-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
 
-// Scope (owner, Nov 2026): James is Gas Safe registered for boilers and gas cookers/hobs, and regularly
+// Scope (owner, Nov 2026): Gas Safe registered for boilers and gas cookers/hobs, and regularly
 // disconnects and caps gas fires. Comes out 24/7 after a leak is made safe, but often cheaper/better to wait until next day (parts).
-// Do NOT claim gas fire servicing, meters or other appliances. Prices match the rest of the site.
+// Do NOT claim gas fire servicing, meters or other appliances. No fixed parts price list. Prices match the rest of the site.
+const packages = [
+  { id: 'weekday', tier: 'Weekdays', name: 'Monday to Friday, 9am to 4pm', price: '£120', unit: 'first hour, inc VAT',
+    points: ['No call-out fee', 'Finding the fault is included', 'Cheapest time for most jobs'] },
+  { id: 'evening', tier: 'Out of hours', popular: true, name: 'Evenings, nights and weekends', price: '£150', unit: 'first hour, inc VAT',
+    points: ['No call-out fee', '24 hours, including Sundays', 'Typically with you within 30 minutes'] },
+  { id: 'bank', tier: 'Bank holidays', name: 'Bank holidays', price: '£180', unit: 'first hour, inc VAT',
+    points: ['No call-out fee', 'Christmas Day and Boxing Day included', 'Same price day or night'] },
+];
+
 const faqs = [
-  { tag: 'GAS LEAK', q: 'I can smell gas. Who do I call first?', a: 'Call the National Gas Emergency Service on 0800 111 999 first. It is free and open 24 hours. They will make the leak safe, which often means capping the supply. Once that is done, ring us on 0151 558 0334 to find the fault, repair it and get your gas back on.' },
-  { tag: 'CAPPED', q: 'My gas has been capped. Can you reconnect it?', a: 'Yes. When the gas has been capped because of a leak or an unsafe appliance, we find the cause, repair it, test the installation for tightness and turn the gas back on once it is safe. We can only reconnect when the fault has been put right.' },
-  { tag: 'TONIGHT OR TOMORROW', q: 'Should I get it fixed tonight or wait until the morning?', a: 'We can come out 24/7. But once the gas has been capped and the house is safe, it is often cheaper and better to wait until the next day. The first hour on a weekday is £120 instead of £150 at night, and the parts suppliers are open, so the right part can be fitted first time. When you ring, we will tell you honestly which makes more sense.' },
-  { tag: 'COST', q: 'How much does an emergency gas engineer cost in Liverpool?', a: 'There is no call-out fee. It is £120 for the first hour on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. Any extra time is priced before we carry on. You agree the price of any parts before they are fitted.' },
-  { tag: 'APPLIANCES', q: 'Which gas appliances do you work on?', a: 'Gas boilers, gas cookers and gas hobs, and the gas pipework that supplies them. We also disconnect and safely cap gas fires, for example when an old back boiler and fire are taken out.' },
-  { tag: 'GAS SAFE', q: 'Are you Gas Safe registered?', a: 'Yes. All gas work is done by Gas Safe registered engineers. Anyone working on gas must be on the Gas Safe Register by law. You can check an engineer on the register before they start.' },
-  { tag: 'CO ALARM', q: 'My carbon monoxide alarm has gone off. What should I do?', a: 'Turn off your gas appliances if you can, open doors and windows, get everyone outside into fresh air and call the National Gas Emergency Service on 0800 111 999. If anyone has a headache, dizziness or sickness, get medical help. Once it is safe, we can check the boiler, cooker or hob for the cause.' },
-  { tag: 'COOKER', q: 'Can you fit or disconnect a gas cooker or hob?', a: 'Yes. We connect new gas cookers and hobs, disconnect old ones and test them for safety. Fitting a gas cooker or hob must be done by a Gas Safe registered engineer.' },
+  { q: 'I can smell gas. Who do I call first?', a: 'Call the National Gas Emergency Service on 0800 111 999 first. It is free and open 24 hours. They will make the leak safe, which often means capping the supply. Once that is done, ring us on 0151 558 0334 to find the fault, repair it and get your gas back on.' },
+  { q: 'How much does an emergency gas engineer cost in Liverpool?', a: 'There is no call-out fee. It is £120 for the first hour on weekdays 9am to 4pm, £150 on evenings, nights and weekends, and £180 on bank holidays. Any extra time is priced before we carry on. You agree the price of any parts before they are fitted.' },
+  { q: 'Is there a call-out fee?', a: 'No. You only pay for the time we spend, starting with the first hour. Finding the fault is part of that hour.' },
+  { q: 'How fast can you get here?', a: 'We come out the same day, 24 hours a day. We are typically with you within 30 minutes. Call 0151 558 0334 and we will give you a time.' },
+  { q: 'My gas has been capped. Can you reconnect it?', a: 'Yes. When the gas has been capped because of a leak or an unsafe appliance, we find the cause, repair it, test the installation for leaks and turn the gas back on once it is safe. We can only reconnect when the fault has been put right.' },
+  { q: 'Should I get it fixed tonight or wait until the morning?', a: 'We can come out 24/7. But once the gas has been capped and the house is safe, it is often cheaper and better to wait until the next day. The first hour on a weekday is £120 instead of £150 at night, and parts suppliers are open, so the right part can be fitted first time. When you ring, we will tell you honestly which makes more sense.' },
+  { q: 'My gas meter is faulty. Can you fix it?', a: 'No. The gas meter belongs to your energy supplier, so a fault with the meter is for them. A leak at the meter or on the pipe into the house is for the National Gas Emergency Service on 0800 111 999. We look after the pipework after the meter and the appliances.' },
+  { q: 'I have no gas at all. Is it a leak?', a: 'Not always. Check the yellow lever by the meter is on, in line with the pipe. If you have a prepayment meter, check it has credit. If neighbours have no gas either, it is likely a supply fault, so call 0800 111 999. If only one appliance has no gas, call us.' },
+  { q: 'My carbon monoxide alarm has gone off. What should I do?', a: 'Turn off your gas appliances if you can, open doors and windows, get everyone outside into fresh air and call the National Gas Emergency Service on 0800 111 999. If anyone has a headache, dizziness or sickness, get medical help. Once it is safe, we can check the boiler, cooker or hob for the cause.' },
+  { q: 'Which gas appliances do you work on?', a: 'Gas boilers, gas cookers and gas hobs, and the gas pipework that supplies them. We do not service or repair gas fires, but we disconnect and safely cap them, for example when an old back boiler and fire are taken out.' },
+  { q: 'Can you fit or disconnect a gas cooker or hob?', a: 'Yes. We connect new gas cookers and hobs, disconnect old ones and test them for safety. Fitting a gas cooker or hob must be done by a Gas Safe registered engineer.' },
+  { q: 'I am a landlord and my tenant smells gas. What do I do?', a: 'Tell your tenant to call 0800 111 999 straight away. Once it is made safe, call us. We can deal with your tenant directly, repair the fault and send you the paperwork. An appliance marked unsafe must not be used until it is fixed.' },
+  { q: 'Are you Gas Safe registered?', a: 'Yes. All gas work is done by our Gas Safe registered engineers. Anyone working on gas must be on the Gas Safe Register by law. You can check an engineer on the register before they start.' },
 ];
-
-const jobs = [
-  { t: 'Gas leak repair and reconnection', d: 'After the gas emergency service has capped the supply, we find the leak, repair it, test it and get you back on gas.', href: '' },
-  { t: 'Boiler breakdowns', d: 'No heating, no hot water, error codes and lockouts on all the main makes.', href: '/boiler-repair-liverpool' },
-  { t: 'Gas cookers and hobs', d: 'New cookers and hobs connected, old ones disconnected, and faults made safe.', href: '' },
-  { t: 'Gas fires disconnected and capped', d: 'Old gas fires and back boilers safely disconnected and capped off, often when a new combi is fitted.', href: '/boiler-installation-liverpool' },
-  { t: 'Landlord gas safety certificates', d: 'CP12 gas safety checks for rented homes.', href: '/gas-safety-certificate-liverpool' },
-  { t: 'Annual boiler service', d: 'Catches most faults before they leave you without heating.', href: '/boiler-service-liverpool' },
-];
-
-const reviews = [
-  { n: 'Brendan C', t: 'James was amazing and was at my house within 30 mins of calling on a sunday. He has not only fixed my boiler but improved it and taught me how to fix the problem in future. Affordable and easygoing great plumber and gas fitter!' },
-  { n: 'Edward M', t: 'James came out and fixed a leaking pipe and even got my boiler up and running by fixing an air lock. Professional , on time, cleaned up after himself and charged a fair rate.' },
-  { n: 'Peter H', t: 'Quick response, clear communication and the plumber was clearly fully trained and knowledgeable. Very good service' },
-];
-
-const areas = [
-  ['City Centre','city-centre'],['Anfield','anfield'],['Everton','everton'],['Walton','walton'],['Bootle','bootle'],['Crosby','crosby'],
-  ['Huyton','huyton'],['Kirkby','kirkby'],['West Derby','west-derby'],['Old Swan','old-swan'],['Wavertree','wavertree'],['Allerton','allerton'],
-  ['Garston','garston'],['Woolton','woolton'],['Toxteth','toxteth'],['Aintree','aintree'],['Maghull','maghull'],['Formby','formby'],['Wirral','wirral'],['St Helens','st-helens'],
-];
-
-const schemaFaq = {
-  '@context': 'https://schema.org', '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-};
-const schemaService = {
-  '@context': 'https://schema.org', '@type': 'Service',
-  name: 'Emergency Gas Engineer Liverpool', serviceType: 'Emergency gas repairs: boilers, gas cookers and hobs, gas leak repair and reconnection', url: URL_,
-  provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
-  areaServed: [{ '@type': 'City', name: 'Liverpool' }, { '@type': 'City', name: 'Wirral' }, { '@type': 'City', name: 'St Helens' }, { '@type': 'City', name: 'Formby' }],
-  offers: [
-    { '@type': 'Offer', name: 'Emergency gas engineer, first hour, weekdays 9am to 4pm, no call-out fee', price: '120', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Emergency gas engineer, first hour, weekday evenings, nights and weekends', price: '150', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Emergency gas engineer, first hour, bank holidays', price: '180', priceCurrency: 'GBP' },
-  ],
-};
-const schemaCrumbs = {
-  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://liverpoolemergencyplumber.co.uk' },
-    { '@type': 'ListItem', position: 2, name: 'Emergency Gas Engineer Liverpool', item: URL_ },
-  ],
-};
-const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem 1.35rem;';
 ---
 
-<BaseLayout
-  title="Emergency Gas Engineer Liverpool | 24/7 Gas Safe | No Call-Out Fee"
-  description="Emergency gas engineer in Liverpool, 24/7. Gas Safe registered. Boilers, gas cookers and hobs, gas leaks repaired and gas reconnected. No call-out fee, from £120 for the first hour. Call 0151 558 0334."
-  canonical={URL_}
+<ServiceGuide
+  url={URL_}
+  title="Emergency Gas Engineer Liverpool | 24/7 From £120 | No Call-Out Fee"
+  description="Emergency gas engineer in Liverpool, 24/7. Gas Safe registered. Gas leaks repaired and gas reconnected, boilers, cookers and hobs. No call-out fee, from £120 for the first hour inc VAT. Call 0151 558 0334."
+  h1="Emergency Gas Engineer Liverpool"
+  badge="Gas Safe registered · 24/7"
+  intro="Smell gas? Leave the house and call the National Gas Emergency number 0800 111 999 first. Once it is made safe, call us. Our Gas Safe registered engineers come out 24/7 to find the fault, repair it and get your gas back on. No call-out fee."
+  stats={[['£120', 'First hour, inc VAT'], ['24/7', 'Including Sundays']]}
+  ticks={['Gas Safe Registered', 'No Call-Out Fee', '24/7, Including Sundays', '5.0 on Google']}
+  pkTitle="Emergency gas engineer prices"
+  pkLede="One price for the first hour, including VAT. No call-out fee."
+  packages={packages}
+  pkNote="Most gas faults are found in the first hour. Any extra time is priced before we carry on. You agree the price of any parts before they are fitted."
+  factsTitle="Emergency gas help at a glance"
+  facts={[
+    ['Gas leak', 'Call 0800 111 999 first. Then call us to repair it.'],
+    ['Price', '£120 first hour weekdays, £150 nights and weekends, £180 bank holidays.'],
+    ['Call-out', 'No call-out fee.'],
+    ['When', '24/7, same day. Typically within 30 minutes.'],
+    ['Covers', 'Gas boilers, cookers, hobs and the pipework after the meter.'],
+    ['Who', 'Gas Safe registered engineers, part of our team led by James.'],
+  ]}
+  toc={[
+    ['smell-gas', 'What do I do if I smell gas?'],
+    ['who', 'Who does what in a gas emergency?'],
+    ['arrival', 'What happens when you arrive?'],
+    ['faults', 'Which gas faults do you fix?'],
+    ['no-gas', 'No gas or a gas leak?'],
+    ['co', 'Carbon monoxide alarm going off'],
+    ['landlords', 'Landlords after a gas fault'],
+  ]}
+  reviews={['Brendan C', 'Edward M', 'Roger D', 'Peter H']}
+  faqs={faqs}
+  areasTitle="Emergency gas engineer near you"
+  areasText="Every Liverpool postcode, plus the Wirral, Sefton, Knowsley and St Helens. 24 hours a day."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-anfield', label: 'Anfield' },
+    { href: '/emergency-plumber-everton', label: 'Everton' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-bootle', label: 'Bootle' },
+    { href: '/emergency-plumber-crosby', label: 'Crosby' },
+    { href: '/emergency-plumber-huyton', label: 'Huyton' },
+    { href: '/emergency-plumber-kirkby', label: 'Kirkby' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-old-swan', label: 'Old Swan' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-garston', label: 'Garston' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-toxteth', label: 'Toxteth' },
+    { href: '/emergency-plumber-aintree', label: 'Aintree' },
+    { href: '/emergency-plumber-maghull', label: 'Maghull' },
+    { href: '/emergency-plumber-formby', label: 'Formby' },
+    { href: '/emergency-plumber-wirral', label: 'Wirral' },
+    { href: '/emergency-plumber-st-helens', label: 'St Helens' },
+  ]}
+  related={[
+    { href: '/boiler-repair-liverpool', title: 'Boiler repair', text: 'No heating or hot water, from £120 first hour' },
+    { href: '/gas-safety-certificate-liverpool', title: 'Gas safety certificate', text: 'Landlord CP12 £75, emailed the same day' },
+    { href: '/boiler-service-liverpool', title: 'Boiler service', text: '£95, catches faults before they happen' },
+    { href: '/boiler-installation-liverpool', title: 'New boiler', text: 'Fixed-price combi packages from £2,195' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Water leaks found and fixed' },
+    { href: '/blog/carbon-monoxide-safety-liverpool', title: 'Carbon monoxide guide', text: 'Warning signs and what to do' },
+  ]}
+  finalTitle="Gas made safe? Ring us to fix it."
+  finalText="24 hours a day, 7 days a week. Gas Safe registered. No call-out fee."
+  serviceName="Emergency Gas Engineer Liverpool"
+  serviceType="Emergency gas repairs: boilers, gas cookers and hobs, gas leak repair and reconnection"
+  serviceDesc="24/7 emergency gas engineers across Liverpool and Merseyside. Gas Safe registered. Gas leaks repaired and gas reconnected after capping, boiler breakdowns, gas cookers and hobs. No call-out fee."
 >
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaFaq)} />
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaCrumbs)} />
+  <section class="brx-sec brx-tint" id="smell-gas">
+    <div class="brx-wrap">
+      <h2>What do I do if I smell gas?</h2>
+      <div class="brx-danger"><p><strong>Smell gas right now?</strong> Call the National Gas Emergency Service first on <a href="tel:0800111999">0800 111 999</a>. It is free, 24 hours. Then ring us to repair the fault.</p></div>
+      <p class="brx-answer">Get everyone out and call 0800 111 999. Do not call us first. The gas emergency service makes the leak safe, and we repair it after.</p>
+      <ol class="sg-steps">
+        <li><strong>No flames or sparks.</strong> Do not smoke, light matches or use light switches, doorbells or plugs.</li>
+        <li><strong>Open doors and windows</strong> to let the gas out.</li>
+        <li><strong>Turn the gas off at the meter</strong> if you can. Move the lever so it sits across the pipe.</li>
+        <li><strong>Get everyone outside</strong>, then call 0800 111 999 from outside the house.</li>
+        <li><strong>Call us</strong> on {PHONE} once it is safe. We find the leak, fix it and turn your gas back on.</li>
+      </ol>
+    </div>
+  </section>
 
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;"><span class="badge-dot"></span>Gas Safe registered · 24/7</div>
-      <h1>Emergency Gas Engineer Liverpool</h1>
-      <p class="page-hero-sub">Boiler broken down, gas capped off after a leak, or a cooker or hob that is not safe? Our Gas Safe registered engineers come out 24/7 to find the fault, fix it and get your gas back on. No call-out fee.</p>
-      <div style="background:#fef2f2;border:2px solid #b91c1c;border-radius:10px;padding:0.9rem 1.1rem;max-width:480px;margin:1.25rem auto;text-align:left;">
-        <p style="margin:0;font-size:0.95rem;color:#7f1d1d;line-height:1.55;"><strong>Smell gas right now?</strong> Call the National Gas Emergency Service first on <a href="tel:0800111999" style="font-weight:800;color:#b91c1c;">0800 111 999</a>. Do not use switches or flames, open windows, turn the gas off at the meter if you can and get everyone out. Once it is made safe, ring us to repair it.</p>
+  <section class="brx-sec" id="who">
+    <div class="brx-wrap">
+      <h2>Who does what in a gas emergency?</h2>
+      <p class="brx-answer">The National Gas Emergency Service makes a leak safe. We are the Gas Safe engineers who then repair it and get your gas back on.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Problem</th><th>Who to call</th></tr></thead>
+          <tbody>
+            <tr><td><strong>You smell gas</strong></td><td>National Gas Emergency Service, 0800 111 999, first</td></tr>
+            <tr><td><strong>Gas capped and needs repair</strong></td><td>Us, {PHONE}</td></tr>
+            <tr><td><strong>Boiler, cooker or hob fault</strong></td><td>Us</td></tr>
+            <tr><td><strong>Gas pipe inside the house</strong></td><td>Us, after the leak is made safe</td></tr>
+            <tr><td><strong>Faulty gas meter or prepayment meter</strong></td><td>Your energy supplier</td></tr>
+            <tr><td><strong>No gas in the whole street</strong></td><td>0800 111 999</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book Online</a>
-      </div>
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> No Call-Out Fee</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> 24/7, Including Sundays</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> 5.0 on Google</span>
+      <p>The gas emergency service does not usually repair the fault. They will often cap the supply to an appliance or the whole home. That is where we come in.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="arrival">
+    <div class="brx-wrap">
+      <h2>What happens when the engineer arrives?</h2>
+      <p class="brx-answer">We find the fault, tell you the price to fix it, and only turn the gas back on once it is safe.</p>
+      <ol class="sg-steps">
+        <li><strong>We listen.</strong> You tell us what happened. We read any warning notice the gas emergency service left.</li>
+        <li><strong>We test.</strong> We test the gas pipework for leaks and check each gas appliance.</li>
+        <li><strong>We find the fault.</strong> Most faults are found in the first hour.</li>
+        <li><strong>You get a price.</strong> We tell you the cost of the repair and any parts. Nothing is done until you agree.</li>
+        <li><strong>We fix it or make it safe.</strong> If a part is needed and the shops are shut, we cap off just the faulty appliance. The rest of your gas can stay on.</li>
+        <li><strong>Gas back on.</strong> We test again, relight your appliances and check they burn safely.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Gas capped or boiler down?</strong> Call now. No call-out fee, 24 hours a day.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- QUICK ANSWER -->
-  <section class="pf-section" style="background:#ffffff;padding-bottom:1rem;">
-    <div class="container" style="max-width:760px;">
-      <div style="background:#f1f5f9;border-left:4px solid var(--orange);border-radius:10px;padding:1.1rem 1.35rem;">
-        <p style="margin:0;line-height:1.7;"><strong>Quick answer:</strong> for a gas leak, call the National Gas Emergency Service on 0800 111 999 first. They make it safe. Then ring us on 0151 558 0334: our Gas Safe registered engineers repair the fault and turn your gas back on. No call-out fee: £120 for the first hour on weekdays, £150 on evenings, nights and weekends, £180 on bank holidays.</p>
+  <section class="brx-sec" id="faults">
+    <div class="brx-wrap">
+      <h2>Which gas faults do you fix?</h2>
+      <p class="brx-answer">We work on gas boilers, gas cookers and hobs, and the gas pipework that feeds them. We come the same day, not next week.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Gas leaks and pipework</h3>
+          <ul class="sg-ticks">
+            <li>Gas leaks found and repaired after capping</li>
+            <li>Gas tested and turned back on</li>
+            <li>Damaged gas pipes repaired</li>
+            <li>Faulty appliances capped off safely</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>Boilers</h3>
+          <ul class="sg-ticks">
+            <li>Boiler lockouts and error codes</li>
+            <li>Boiler will not light (ignition faults)</li>
+            <li>Low boiler pressure</li>
+            <li>No heating or no hot water</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>Cookers and hobs</h3>
+          <ul class="sg-ticks">
+            <li>No gas to the hob</li>
+            <li>Burners that will not light</li>
+            <li>Cookers and hobs connected or disconnected</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>Gas fires and back boilers</h3>
+          <ul class="sg-ticks">
+            <li>Old gas fires disconnected and capped</li>
+            <li>Back boilers taken out and a new combi fitted</li>
+          </ul>
+        </div>
       </div>
+      <p style="margin-top:1rem;">For a boiler that has stopped working, see <a href="/boiler-repair-liverpool">boiler repair</a>. Old back boiler? See <a href="/boiler-installation-liverpool">boiler installation</a>. We do not repair gas meters, and we do not service gas fires.</p>
     </div>
   </section>
 
-  <!-- WHO DOES WHAT -->
-  <section class="pf-section" style="background:#ffffff;padding-top:1.5rem;">
-    <div class="container" style="max-width:860px;">
-      <h2>Gas Emergency: Who to Call</h2>
-      <p class="pf-sub">Two different services, and it helps to know which does what.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;">
-        <div style={card + 'border-top:4px solid #b91c1c;'}><div style="font-size:0.72rem;font-weight:800;color:#b91c1c;letter-spacing:0.08em;">FIRST: NATIONAL GAS EMERGENCY SERVICE</div><h3 style="margin:0.35rem 0;font-size:1.1rem;">0800 111 999</h3><p style="margin:0;line-height:1.6;color:#334155;">Free, 24 hours. They come out to make a leak safe, which often means capping the supply to an appliance or the whole property. They do not usually repair the fault.</p></div>
-        <div style={card + 'border-top:4px solid var(--orange);'}><div style="font-size:0.72rem;font-weight:800;color:#c2410c;letter-spacing:0.08em;">THEN: US</div><h3 style="margin:0.35rem 0;font-size:1.1rem;">0151 558 0334</h3><p style="margin:0;line-height:1.6;color:#334155;">We find the cause, repair the boiler, cooker, hob or pipework, test the installation and turn your gas back on once it is safe. We can come out at night, but once the gas is capped and safe, waiting until the next day is often cheaper and parts are easier to get. We will tell you honestly which is better.</p></div>
-      </div>
+  <section class="brx-sec brx-tint" id="no-gas">
+    <div class="brx-wrap">
+      <h2>No gas supply or a gas leak?</h2>
+      <p class="brx-answer">A leak smells of gas. No gas at all is often a meter or supply problem, not a leak. Check these first.</p>
+      <ul class="sg-ticks">
+        <li><strong>Smell of gas:</strong> treat it as a leak. Get out and call 0800 111 999.</li>
+        <li><strong>Lever at the meter:</strong> check it is on. It should sit in line with the pipe.</li>
+        <li><strong>Prepayment meter:</strong> check it has credit. A meter fault is for your energy supplier.</li>
+        <li><strong>Neighbours off too:</strong> it is likely a supply fault. Call 0800 111 999.</li>
+        <li><strong>Only one appliance:</strong> if the boiler works but the hob does not, the fault is in the hob or its pipe. Call us.</li>
+      </ul>
+      <p>Water leak instead? See <a href="/leak-detection-liverpool">leak detection</a>. Electrical fault? Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician">Ideal Electrical Solutions is a 24/7 emergency electrician</a>.</p>
     </div>
   </section>
 
-  <!-- JOBS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Gas Jobs We Cover</h2>
-      <p class="pf-sub">Gas boilers, gas cookers and hobs, and the pipework that feeds them.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
-        {jobs.map((j) => (
-          <div style={card + 'border-left:4px solid var(--orange);'}>
-            <h3 style="font-size:1.02rem;margin:0 0 0.35rem;">{j.href ? <a href={j.href} style="color:inherit;">{j.t}</a> : j.t}</h3>
-            <p style="margin:0;font-size:0.92rem;line-height:1.6;color:#334155;">{j.d}</p>
-          </div>
-        ))}
-      </div>
+  <section class="brx-sec" id="co">
+    <div class="brx-wrap">
+      <h2>What if my carbon monoxide alarm goes off?</h2>
+      <p class="brx-answer">Treat it as an emergency. Turn off gas appliances, open windows, get outside and call 0800 111 999.</p>
+      <div class="brx-danger"><p><strong>Feel unwell?</strong> Headaches, dizziness or sickness can be signs of carbon monoxide. Get into fresh air and get medical help.</p></div>
+      <p>Carbon monoxide has no smell. Watch for these signs of a faulty gas appliance:</p>
+      <ul class="sg-ticks">
+        <li>A lazy yellow or orange flame, not a crisp blue one.</li>
+        <li>Black marks or soot around the boiler or cooker.</li>
+        <li>A pilot light that keeps going out.</li>
+        <li>More condensation on windows than usual.</li>
+      </ul>
+      <p>Once it is safe, we check the boiler, cooker or hob for the cause. Every home with a gas appliance should have a working carbon monoxide alarm. Read our <a href="/blog/carbon-monoxide-safety-liverpool">carbon monoxide safety guide</a>.</p>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Emergency Gas Engineer Prices</h2>
-      <p class="pf-sub">No call-out fee. One fixed price for the first hour, and you agree the price of any parts or extra time first.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:760px;margin:0 auto;">
-        <div style={card + 'border-top:4px solid var(--orange);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:#c2410c;letter-spacing:0.08em;">WEEKDAYS 9AM TO 4PM</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£120<span style="font-size:1rem;"> first hour</span></div></div>
-        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">EVENINGS, NIGHTS, WEEKENDS</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£150<span style="font-size:1rem;"> first hour</span></div></div>
-        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">BANK HOLIDAYS</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£180<span style="font-size:1rem;"> first hour</span></div></div>
-      </div>
+  <section class="brx-sec brx-tint" id="landlords">
+    <div class="brx-wrap">
+      <h2>What must landlords do after a gas fault?</h2>
+      <p class="brx-answer">Get the fault repaired by a Gas Safe registered engineer before the appliance is used again, and keep the paperwork.</p>
+      <ul class="sg-ticks">
+        <li>An appliance marked unsafe must not be used until it is fixed.</li>
+        <li>Your tenant should have safe heating and hot water back as soon as you can.</li>
+        <li>Keep a record of the fault and the repair.</li>
+        <li>You still need a gas safety check every 12 months.</li>
+      </ul>
+      <p>We can arrange access with your tenant and send the paperwork to you. If the yearly check is due, we can do the <a href="/gas-safety-certificate-liverpool">gas safety certificate</a> on the same visit for £75.</p>
     </div>
   </section>
-
-  <!-- CO SAFETY -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container" style="max-width:760px;">
-      <h2>Carbon Monoxide: Know the Signs</h2>
-      <p style="line-height:1.75;">Carbon monoxide has no smell. Signs of a faulty gas appliance include a lazy yellow or orange flame instead of a crisp blue one, black marks or soot around the boiler or cooker, a pilot light that keeps going out, and more condensation than usual on windows. Headaches, dizziness or sickness that ease when you leave the house are a warning sign.</p>
-      <p style="line-height:1.75;margin-bottom:0;">If your CO alarm goes off, turn appliances off if you can, open windows, get outside and call 0800 111 999. Every home with a gas appliance should have a working carbon monoxide alarm.</p>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        {reviews.map((r) => (
-          <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>{r.t}</p><div class="pf-review-footer"><div class="pf-review-avatar">{r.n[0]}</div><div><div class="pf-review-name">{r.n}</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        ))}
-      </div>
-      <div style="text-align:center;margin-top:1.5rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all reviews on Google →</a></div>
-    </div>
-  </section>
-
-  <!-- AREAS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Emergency Gas Engineer Near You</h2>
-      <p class="pf-sub">Every Liverpool postcode, plus the Wirral, Sefton, Knowsley and St Helens. 24 hours a day.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:860px;margin:0 auto;">
-        {areas.map(([n, s]) => (
-          <a href={`/emergency-plumber-${s}`} style="background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.4rem 0.9rem;font-size:0.88rem;font-weight:600;color:var(--navy);text-decoration:none;">{n}</a>
-        ))}
-      </div>
-      <p style="text-align:center;margin:1.25rem auto 0;max-width:640px;line-height:1.7;">Water leak instead? See <a href="/leak-detection-liverpool" style="font-weight:700;">leak detection</a>. Electrical fault? Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician" style="font-weight:700;">Ideal Electrical Solutions is a 24/7 emergency electrician</a>.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Emergency Gas Questions</h2>
-      <div class="pf-faq" style="display:flex;flex-direction:column;gap:0.5rem;">
-        {faqs.map((f) => (
-          <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-orange">{f.tag}</span>&nbsp; {f.q}</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>{f.a}</p></div></details>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="pf-section" style="background:var(--navy);text-align:center;">
-    <div class="container" style="max-width:640px;">
-      <h2 style="color:#ffffff;">Gas Made Safe? Ring Us to Fix It.</h2>
-      <p style="color:rgba(255,255,255,0.85);margin-bottom:1.5rem;">24 hours a day, 7 days a week. Gas Safe registered. No call-out fee.</p>
-      <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;">CALL 0151 558 0334</a>
-    </div>
-  </section>
-
-  </div>
-</BaseLayout>
+</ServiceGuide>
