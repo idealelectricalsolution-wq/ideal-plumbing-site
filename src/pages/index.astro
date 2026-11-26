@@ -398,14 +398,15 @@ const faqSchema = {
   <!-- RECENT JOBS -->
   <section class="hp-sec" id="small-jobs">
     <div class="hp-wrap">
-      <h2>Small jobs, fixed prices</h2>
-      <p class="hp-sub">Not an emergency? We do the small jobs too, at a fixed price including VAT.</p>
+      <h2>Plumbers in Liverpool for everyday jobs</h2>
+      <p class="hp-sub">Not an emergency? Our Liverpool plumbers do the everyday jobs too. Small jobs have a fixed price, including VAT.</p>
       <div class="hp-small">
         {smallJobs.map((j) => (
           <a href={j.href} class="hp-small-item"><span>{j.title}</span><strong>{j.price}</strong></a>
         ))}
       </div>
       <p class="hp-small-more"><a href="/small-plumbing-jobs-liverpool">See all small job prices →</a></p>
+      <p class="hp-small-text">Looking for a local plumber in Liverpool for something bigger? We also do <a href="/boiler-service-liverpool">boiler servicing for £120</a>, <a href="/boiler-installation-liverpool">new boilers from £2,195</a>, <a href="/gas-safety-certificate-liverpool">gas safety certificates from £100</a>, <a href="/showers-liverpool">showers</a>, <a href="/radiators-liverpool">radiators</a> and <a href="/bathroom-fitters-liverpool">full bathrooms</a>. One team, led by James, for every plumbing and heating job in your home.</p>
     </div>
   </section>
 
@@ -431,7 +432,7 @@ const faqSchema = {
   <section class="hp-sec" id="why-us">
     <div class="hp-wrap hp-two">
       <div>
-        <h2>Why Liverpool chooses us</h2>
+        <h2>Why choose our Liverpool plumbers?</h2>
         <ul class="hp-why">
           <li><strong>A trusted local team.</strong> Highly trained plumbing and heating engineers, led by James. Many of our Google reviews mention him by name.</li>
           <li><strong>Gas Safe registered.</strong> Boilers, gas cookers and hobs. <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Check the Gas Safe Register</a>.</li>
@@ -669,6 +670,8 @@ const faqSchema = {
   .hp-small-item strong { font: 900 1.6rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #c2410c; white-space: nowrap; }
   .hp-small-more { margin: 1rem 0 0; font-weight: 800; }
   .hp-small-more a { color: #c2410c; }
+  .hp-small-text { margin: 1rem 0 0; font-size: 1.02rem; line-height: 1.6; color: #1e293b; }
+  .hp-small-text a { color: var(--navy-mid); font-weight: 800; }
   @media (max-width: 900px) {
     .hp-two-prices, .hp-twin, .hp-wait { grid-template-columns: 1fr; }
     .hp-tiles { grid-template-columns: repeat(2, 1fr); }
