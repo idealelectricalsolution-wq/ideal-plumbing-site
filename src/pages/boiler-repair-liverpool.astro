@@ -401,8 +401,8 @@ const schemaCrumbs = {
       </ul>
 
       {brands.map((b) => (
-        <div class="brx-brand" id={b.id} data-brand>
-          <h3 class="brx-brand-h">{b.name} boiler error codes</h3>
+        <details class="brx-brand" id={b.id} data-brand data-mcollapse open>
+          <summary class="brx-brand-sum"><h3 class="brx-brand-h">{b.name} boiler error codes</h3><span class="brx-chev" aria-hidden="true"></span></summary>
           <p class="brx-small">{b.models}</p>
           <div class="brx-codes">
             {b.codes.map((c) => (
@@ -417,7 +417,7 @@ const schemaCrumbs = {
               </article>
             ))}
           </div>
-        </div>
+        </details>
       ))}
       <p id="code-finder-none" class="brx-none" hidden>We have not listed that code here, but our engineers will know it. Ring <a href={TEL}>{PHONE}</a> and read it to us.</p>
 
@@ -438,11 +438,11 @@ const schemaCrumbs = {
       <p class="brx-answer">Most boiler breakdowns come down to one failed part. Here is what each part does and the signs that it has failed.</p>
       <div class="brx-parts">
         {parts.map((x) => (
-          <div class="brx-part">
-            <h3>{x.p}</h3>
+          <details class="brx-part" data-mcollapse open>
+            <summary class="brx-part-sum"><h3>{x.p}</h3><span class="brx-chev" aria-hidden="true"></span></summary>
             <p><span class="brx-label-inline">What it does:</span> {x.does}</p>
             <p><span class="brx-label-inline">Signs it has failed:</span> {x.signs}</p>
-          </div>
+          </details>
         ))}
       </div>
     </div>
@@ -595,6 +595,11 @@ const schemaCrumbs = {
 </BaseLayout>
 
 <script>
+  // Phones: long reference lists start closed (tap to open). Desktop and no-JS: all open.
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    const keep = decodeURIComponent(location.hash.slice(1));
+    document.querySelectorAll<HTMLDetailsElement>('details[data-mcollapse]').forEach((d) => { if (!keep || d.id !== keep) d.open = false; });
+  }
   const openTarget = () => {
     const id = decodeURIComponent(location.hash.slice(1));
     const el = id && document.getElementById(id);
@@ -617,7 +622,7 @@ const schemaCrumbs = {
         const hit = !q || hay.includes(q) || hay.includes(qs);
         c.hidden = !hit; if (hit) shown++;
       });
-      brandsEls.forEach((b) => { b.hidden = !!q && !b.querySelector('.brx-code:not([hidden])'); });
+      brandsEls.forEach((b) => { const hit = !!b.querySelector('.brx-code:not([hidden])'); b.hidden = !!q && !hit; if (q && hit) (b as HTMLDetailsElement).open = true; });
       if (status) status.textContent = q ? (shown ? `${shown} matching code${shown > 1 ? 's' : ''}` : '') : '';
       if (none) none.hidden = !(q && shown === 0);
     };
@@ -630,6 +635,19 @@ const schemaCrumbs = {
 </script>
 
 <style>
+  .brx-brand-sum, .brx-part-sum { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .brx-brand-sum::-webkit-details-marker, .brx-part-sum::-webkit-details-marker { display: none; }
+  .brx-part-sum h3 { margin: 0; }
+  .brx-brand-sum h3 { margin: 0 !important; }
+  details.brx-brand[open] > .brx-brand-sum, details.brx-part[open] > .brx-part-sum { margin-bottom: 0.5rem; }
+  details.brx-brand[open] .brx-chev::before, details.brx-part[open] .brx-chev::before { transform: rotate(-135deg); top: 11px; }
+  @media (max-width: 600px) {
+    :global(main#main > .brx) { display: flex; flex-direction: column; }
+    :global(main#main > .brx > #prices) { order: -1; }
+    details.brx-brand { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 0.6rem; }
+    details.brx-brand .brx-brand-h { font-size: 1.3rem !important; }
+    .brx-part { padding: 0.85rem 1rem; }
+  }
   .br-stat { flex: 1; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 0.75rem 1rem; text-align: center; }
   .br-stat-n { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 2.1rem; font-weight: 900; color: #c2410c; line-height: 1; }
   .br-stat-l { font-size: 0.78rem; color: var(--navy); font-weight: 700; margin-top: 0.2rem; }

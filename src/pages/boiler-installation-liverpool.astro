@@ -182,6 +182,7 @@ const schemaCrumbs = {
     <div class="bi-pk-wrap">
       <h2>Choose your new boiler</h2>
       <p class="bi-pk-lede">Five fixed-price combi packages. Every price is fully fitted and includes a smart thermostat, magnetic filter, system clean, carbon monoxide alarm and removal of your old boiler.</p>
+      <p class="bi-swipe" aria-hidden="true">Swipe to see all 5 boilers →</p>
       <div class="bi-pk-grid">
         {packages.map((p, i) => (
           <article class={`bi-pk${p.popular ? ' bi-pk-pop' : ''}`} id={p.id}>
@@ -222,16 +223,26 @@ const schemaCrumbs = {
         <p><strong>Two bathrooms or lots of hot water?</strong> <a href="#pk-premium">Premium, Vaillant ecoTEC plus</a></p>
         <p><strong>Boiler on show in the kitchen?</strong> <a href="#pk-flagship">Flagship, Worcester Bosch 8000+ Style</a></p>
       </div>
-      <h3>Baxi 600 or Baxi 800: is the extra £300 worth it?</h3>
-      <p>They are the same boiler. The Baxi 800 adds a magnetic filter in the box and 3 more years of manufacturer cover: 10 years instead of 7. If you are staying in the house, it is worth it. Spread over the warranty, it works out cheaper per year of cover. If you are a landlord or expect to move within 5 years, the Baxi 600 is the sensible buy.</p>
-      <h3>Baxi 800 or Worcester Bosch 4000: why pay £200 more?</h3>
-      <p>Both give about the same hot water and up to 10 years of cover. The Worcester is the brand homeowners rate highest: it was the only five-star brand in the 2025 Which? owner survey, with 92% satisfied against Baxi's 83%. It is also quiet, and turns down to a tenth of its power, so on mild days it ticks over gently instead of switching on and off. The Baxi keeps the price down and has a stainless steel heat exchanger.</p>
-      <h3>Worcester Bosch 4000 or Vaillant ecoTEC plus: do you need the extra hot water?</h3>
-      <p>The Vaillant 832 gives about 13 litres of hot water a minute, against about 12.3 from the 30kW Worcester. That helps if two showers or a bath and a tap run at once. With one bathroom used at a time, you would not notice the difference, so the Worcester is better value.</p>
-      <h3>Vaillant or Worcester Bosch 8000+ Style: what does the flagship add?</h3>
-      <p>Looks, extra features and the longest cover. The 8000+ Style is gloss black with a colour touchscreen. It can be fitted to top up its own pressure, and it carries up to 12 years of cover. If the boiler lives in a cupboard, the Vaillant gives you the performance for £300 less.</p>
-      <h3>Is it worth paying more at all?</h3>
-      <p>If you are staying 10 years or more, usually yes, up to the Worcester Bosch 4000. Longer cover protects you from the most expensive repairs, and big brands keep parts easy to get. Above that, you are paying for hot water and design, which is worth it in bigger or busier homes. One limit: a bigger combi only gives more hot water if your mains can supply it. Many older Liverpool terraces have limited flow, so we test it at the survey before recommending a size.</p>
+      <details class="bi-qa" data-mcollapse open>
+        <summary><h3>Baxi 600 or Baxi 800: is the extra £300 worth it?</h3><span class="brx-chev" aria-hidden="true"></span></summary>
+        <p>They are the same boiler. The Baxi 800 adds a magnetic filter in the box and 3 more years of manufacturer cover: 10 years instead of 7. If you are staying in the house, it is worth it. Spread over the warranty, it works out cheaper per year of cover. If you are a landlord or expect to move within 5 years, the Baxi 600 is the sensible buy.</p>
+      </details>
+      <details class="bi-qa" data-mcollapse open>
+        <summary><h3>Baxi 800 or Worcester Bosch 4000: why pay £200 more?</h3><span class="brx-chev" aria-hidden="true"></span></summary>
+        <p>Both give about the same hot water and up to 10 years of cover. The Worcester is the brand homeowners rate highest: it was the only five-star brand in the 2025 Which? owner survey, with 92% satisfied against Baxi's 83%. It is also quiet, and turns down to a tenth of its power, so on mild days it ticks over gently instead of switching on and off. The Baxi keeps the price down and has a stainless steel heat exchanger.</p>
+      </details>
+      <details class="bi-qa" data-mcollapse open>
+        <summary><h3>Worcester Bosch 4000 or Vaillant ecoTEC plus: do you need the extra hot water?</h3><span class="brx-chev" aria-hidden="true"></span></summary>
+        <p>The Vaillant 832 gives about 13 litres of hot water a minute, against about 12.3 from the 30kW Worcester. That helps if two showers or a bath and a tap run at once. With one bathroom used at a time, you would not notice the difference, so the Worcester is better value.</p>
+      </details>
+      <details class="bi-qa" data-mcollapse open>
+        <summary><h3>Vaillant or Worcester Bosch 8000+ Style: what does the flagship add?</h3><span class="brx-chev" aria-hidden="true"></span></summary>
+        <p>Looks, extra features and the longest cover. The 8000+ Style is gloss black with a colour touchscreen. It can be fitted to top up its own pressure, and it carries up to 12 years of cover. If the boiler lives in a cupboard, the Vaillant gives you the performance for £300 less.</p>
+      </details>
+      <details class="bi-qa" data-mcollapse open>
+        <summary><h3>Is it worth paying more at all?</h3><span class="brx-chev" aria-hidden="true"></span></summary>
+        <p>If you are staying 10 years or more, usually yes, up to the Worcester Bosch 4000. Longer cover protects you from the most expensive repairs, and big brands keep parts easy to get. Above that, you are paying for hot water and design, which is worth it in bigger or busier homes. One limit: a bigger combi only gives more hot water if your mains can supply it. Many older Liverpool terraces have limited flow, so we test it at the survey before recommending a size.</p>
+      </details>
     </div>
   </section>
 
@@ -508,6 +519,13 @@ const schemaCrumbs = {
   </div>
 </BaseLayout>
 
+<script>
+  // Phones: comparison answers start closed (tap to open). Desktop and no-JS: all open.
+  if (window.matchMedia('(max-width: 639px)').matches) {
+    document.querySelectorAll<HTMLDetailsElement>('details[data-mcollapse]').forEach((d) => { d.open = false; });
+  }
+</script>
+
 <style>
   .bi-stats { display: flex; gap: 1rem; max-width: 340px; margin: 1.25rem 0; }
   .bi-ctas { display: flex; flex-direction: column; gap: 0.6rem; max-width: 340px; margin: 0 0 1.25rem; }
@@ -561,6 +579,23 @@ const schemaCrumbs = {
   .bi-pk-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
   @media (min-width: 640px) { .bi-pk-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 1100px) { .bi-pk-grid { grid-template-columns: repeat(5, 1fr); gap: 0.85rem; } }
+  .bi-swipe { display: none; }
+  .bi-qa > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .bi-qa > summary::-webkit-details-marker { display: none; }
+  .bi-qa > summary h3 { margin: 1.25rem 0 0.5rem; }
+  .bi-qa[open] .brx-chev::before { transform: rotate(-135deg); top: 11px; }
+  @media (max-width: 639px) {
+    .bi-qa { border-bottom: 1px solid var(--border); }
+    .bi-qa > summary h3 { margin: 0; padding: 0.85rem 0; font-size: 1.05rem; }
+  }
+  @media (max-width: 639px) {
+    .bi-swipe { display: block; font-weight: 800; color: #c2410c; font-size: 0.95rem; margin: 0 0 0.6rem; }
+    .bi-pk-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0.75rem; margin: 0 -1rem; padding: 0.9rem 1rem 1rem; scroll-padding: 0 1rem; -webkit-overflow-scrolling: touch; }
+    .bi-pk { flex: 0 0 84%; scroll-snap-align: start; }
+    .bi-pk img { max-width: 120px; }
+    :global(#replace .brx-parts) { grid-template-columns: 1fr; gap: 0.6rem; }
+    :global(#replace .brx-part) { padding: 0.85rem 1rem; }
+  }
   .bi-pk { position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid #cbd5e1; border-radius: 14px; padding: 1.1rem 1rem 1rem; }
   .bi-pk-pop { padding-top: 1.6rem; border: 3px solid #c2410c; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.12); }
   .bi-pk-badge { position: absolute; top: -0.8rem; left: 1rem; margin: 0; background: #c2410c; color: #fff; font-weight: 800; font-size: 0.8rem; letter-spacing: 0.03em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 999px; }
