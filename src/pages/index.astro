@@ -469,7 +469,7 @@ const faqSchema = {
   <section class="hp-sec hp-sec-tint" id="areas">
     <div class="hp-wrap">
       <h2>Plumber near me in Liverpool</h2>
-      <p class="hp-sub">We cover all Liverpool postcodes from L1 to L40, plus Formby, Southport, St Helens and the Wirral. Pick your area:</p>
+      <p class="hp-sub">We cover all Liverpool postcodes from L1 to L40, plus the rest of Merseyside. Our base is in Kirkby, so we are also your <a href="/emergency-plumber-kirkby">local plumber in Kirkby</a>. Further out, see our <a href="/emergency-plumber-wirral">emergency plumber Wirral</a>, <a href="/emergency-plumber-st-helens">emergency plumber St Helens</a>, <a href="/emergency-plumber-southport">plumbers in Southport</a>, <a href="/emergency-plumber-crosby">plumbers in Crosby</a> and <a href="/emergency-plumber-formby">plumbers in Formby</a> pages. Or pick your area:</p>
       <ul class="hp-areas">
         {areas.map((a) => <li><a href={`/emergency-plumber-${a}`}>{areaName(a)}</a></li>)}
       </ul>
@@ -670,6 +670,7 @@ const faqSchema = {
   .hp-small-item strong { font: 900 1.6rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #c2410c; white-space: nowrap; }
   .hp-small-more { margin: 1rem 0 0; font-weight: 800; }
   .hp-small-more a { color: #c2410c; }
+  .hp-sub a { color: var(--navy-mid); font-weight: 700; }
   .hp-small-text { margin: 1rem 0 0; font-size: 1.02rem; line-height: 1.6; color: #1e293b; }
   .hp-small-text a { color: var(--navy-mid); font-weight: 800; }
   @media (max-width: 900px) {
