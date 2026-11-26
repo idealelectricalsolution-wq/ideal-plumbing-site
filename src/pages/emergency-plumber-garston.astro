@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CallStrip from '../components/CallStrip.astro';
+import ReviewStrip from '../components/ReviewStrip.astro';
 ---
 
 <BaseLayout
@@ -65,7 +67,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="tel:01515580334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;border:2px solid var(--navy);">BOOK ONLINE</a>
       </div>
 
@@ -113,7 +115,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>No call-out fee</li>
             <li>Parts at cost</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Call Now</a>
+          <a href="tel:01515580334" class="btn btn-navy btn-full">Call Now</a>
         </div>
         <div class="pf-price-card">
           <div class="pf-price-tier">OUT OF HOURS</div>
@@ -126,7 +128,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>No call-out fee</li>
             <li>Parts at cost</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Call Now</a>
+          <a href="tel:01515580334" class="btn btn-navy btn-full">Call Now</a>
         </div>
         <div class="pf-price-card pf-price-card-featured">
           <div class="pf-price-badge">24/7</div>
@@ -140,7 +142,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Gas Safe engineer</li>
             <li>No call-out fee</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Call Now. We Answer.</a>
+          <a href="tel:01515580334" class="btn btn-orange btn-full" style="color:#ffffff;">Call Now. We Answer.</a>
         </div>
       </div>
     </div>
@@ -183,6 +185,8 @@ Many 1950s and 1960s homes in Garston still have their first copper pipes and he
     </div>
   </section>
 
+  <CallStrip title="Got one of these right now?" text="Call us. A real person answers 24/7, and there is no call-out fee." book={false} />
+
 
   <!-- WHAT TO DO SECTION -->
   <section class="pf-section" style="background:#f1f5f9;">
@@ -197,6 +201,8 @@ Many 1950s and 1960s homes in Garston still have their first copper pipes and he
       </div>
     </div>
   </section>
+
+  <CallStrip title="Water still coming through?" text="Turn off the stopcock and call us now. We answer 24/7." book={false} />
 
 
   <!-- SERVICES SECTION -->
@@ -233,6 +239,9 @@ Many 1950s and 1960s homes in Garston still have their first copper pipes and he
       </div>
     </div>
   </section>
+
+  <ReviewStrip names={['James G', 'Amanda', 'David H']} title="What do our customers say?" />
+  <CallStrip title="Need a plumber in Garston?" text="Emergency or everyday job, call us. Guaranteed 30 minute response across Liverpool, and no call-out fee." />
 
 
   <!-- AUTHORITY LINKS / USEFUL INFORMATION -->
@@ -300,7 +309,7 @@ Many 1950s and 1960s homes in Garston still have their first copper pipes and he
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Garston?</h2>
       <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed prices from £120. A trusted team of Gas Safe registered engineers, led by James. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="tel:01515580334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
       </div>
       <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;">Gas leak? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>

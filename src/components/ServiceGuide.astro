@@ -3,6 +3,7 @@
 // Order: hero -> prices/packages -> at a glance + contents -> page sections (slot) -> reviews -> areas -> FAQ -> related -> final call.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { REVIEWS } from '../data/reviews';
+import CallStrip from './CallStrip.astro';
 import '../styles/guide.css';
 
 export interface Pkg {
@@ -139,6 +140,8 @@ const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
         </div>
       </section>
     )}
+
+    <CallStrip title="Talk to a real person" text="Call for a price, advice or to book. We answer 24/7, and there is no call-out fee." />
 
     {p.areas && p.areas.length > 0 && (
       <section class="brx-sec" id="areas">

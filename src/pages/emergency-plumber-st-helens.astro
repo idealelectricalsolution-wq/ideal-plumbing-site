@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CallStrip from '../components/CallStrip.astro';
 ---
 
 <BaseLayout
@@ -100,7 +101,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="tel:01515580334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;border:2px solid var(--navy);">BOOK A SLOT ONLINE</a>
       </div>
 
@@ -141,7 +142,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Boiler leaking gas or carbon monoxide alarm</li>
             <li>No water to entire property</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-red btn-full" style="margin-top:1rem;color:#ffffff;">Call 0151 558 0334 Now</a>
+          <a href="tel:01515580334" class="btn btn-red btn-full" style="margin-top:1rem;color:#ffffff;">Call 0151 558 0334 Now</a>
         </div>
         <div class="emerg-level emerg-level--urgent">
           <div class="level-header">
@@ -156,7 +157,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Water tank overflow</li>
             <li>Radiator leak</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full" style="margin-top:1rem;">Call for Advice</a>
+          <a href="tel:01515580334" class="btn btn-navy btn-full" style="margin-top:1rem;">Call for Advice</a>
         </div>
         <div class="emerg-level emerg-level--routine">
           <div class="level-header">
@@ -174,7 +175,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a href="/get-started" class="btn btn-navy btn-full" style="margin-top:1rem;opacity:0.8;">Book Appointment</a>
         </div>
       </div>
-      <p style="text-align:center;margin-top:1.5rem;font-size:0.95rem;color:var(--muted);">Not sure? Call us and we will tell you straight. <a href="tel:0151 558 0334" style="color:#c2410c;font-weight:700;">0151 558 0334</a></p>
+      <p style="text-align:center;margin-top:1.5rem;font-size:0.95rem;color:var(--muted);">Not sure? Call us and we will tell you straight. <a href="tel:01515580334" style="color:#c2410c;font-weight:700;">0151 558 0334</a></p>
     </div>
   </section>
 
@@ -197,7 +198,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Parts at cost only</li>
             <li>No call-out fee</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Call Now</a>
+          <a href="tel:01515580334" class="btn btn-navy btn-full">Call Now</a>
         </div>
 
         <div class="pf-price-card">
@@ -211,7 +212,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Parts at cost only</li>
             <li>No call-out fee</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Call Now</a>
+          <a href="tel:01515580334" class="btn btn-navy btn-full">Call Now</a>
         </div>
 
         <div class="pf-price-card pf-price-card-featured">
@@ -226,7 +227,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Gas Safe engineer</li>
             <li>No call-out fee</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Call Now. We Answer.</a>
+          <a href="tel:01515580334" class="btn btn-orange btn-full" style="color:#ffffff;">Call Now. We Answer.</a>
         </div>
       </div>
 
@@ -289,6 +290,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <CallStrip title="Need a plumber in St Helens?" text="Emergency or everyday job, call us. We answer 24/7, and there is no call-out fee." />
 
 
   <!-- COMMON JOBS -->
@@ -376,7 +379,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Problem Solved. First Visit.</strong><p>We fix it using parts from the van. Most St Helens emergency jobs are sorted on the first visit. We test everything and clean up before leaving.</p></div></div>
       </div>
       <div style="text-align:center;margin-top:2rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;box-shadow:0 4px 14px rgba(249,115,22,0.4);">CALL 0151 558 0334</a>
+        <a href="tel:01515580334" class="btn btn-orange btn-lg" style="color:#ffffff;box-shadow:0 4px 14px rgba(249,115,22,0.4);">CALL 0151 558 0334</a>
       </div>
     </div>
   </section>
@@ -422,7 +425,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section style="background:#c2410c;padding:2rem 0;">
     <div class="container" style="text-align:center;">
       <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">24 hour plumber St Helens. Fixed prices from £120. 30 minute response. Gas Safe registered.</p>
-      <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);font-size:1.15rem;">CALL 0151 558 0334</a>
+      <a href="tel:01515580334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);font-size:1.15rem;">CALL 0151 558 0334</a>
     </div>
   </section>
 
@@ -510,7 +513,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2rem;font-weight:900;color:var(--navy);line-height:1;margin-bottom:0.5rem;">24/7</div>
           <strong style="color:var(--navy);display:block;font-size:1rem;margin-bottom:0.5rem;">Tenant Emergency Cover Across St Helens</strong>
           <p style="font-size:0.9rem;color:var(--muted);margin-bottom:1rem;">Burst pipe, leak or boiler failure at your St Helens rental. Your tenants call us directly. We attend, fix and send you a full report. Works with all St Helens letting agents.</p>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full" style="font-size:0.95rem;">Discuss Landlord Cover</a>
+          <a href="tel:01515580334" class="btn btn-navy btn-full" style="font-size:0.95rem;">Discuss Landlord Cover</a>
         </div>
       </div>
     </div>
@@ -551,6 +554,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- FAQ -->
+  <CallStrip title="Still not sure?" text="Ring and tell us what is happening. We will tell you the likely fix and the price." />
+
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Emergency Plumber St Helens. Common Questions</h2>
@@ -622,7 +627,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in St Helens?</h2>
       <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed prices from £120. Gas Safe registered. A trusted team of engineers, led by James. Covering WA10, WA11, WA12 and all surrounding areas.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="tel:01515580334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Slot Online</a>
       </div>
       <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;">Gas leak? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>

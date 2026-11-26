@@ -1,0 +1,32 @@
+---
+// Real Google reviews, word for word, from src/data/reviews.ts. In-flow, not sticky.
+import { REVIEWS } from '../data/reviews';
+interface Props { names: string[]; title?: string }
+const { names, title = 'What do customers say?' } = Astro.props;
+const revs = names.filter((n) => REVIEWS[n]).map((n) => ({ n, t: REVIEWS[n] }));
+---
+{revs.length > 0 && (
+  <section class="rs" aria-label="Customer reviews">
+    <div class="rs-in">
+      <h2>{title}</h2>
+      <p class="rs-rating"><strong>5.0</strong> <span aria-hidden="true">★★★★★</span> from 53 Google reviews</p>
+      <div class="rs-grid">
+        {revs.map((r) => <figure class="rs-card"><blockquote>“{r.t}”</blockquote><figcaption>{r.n} · Google review</figcaption></figure>)}
+      </div>
+      <a class="rs-more" href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener">Read all our Google reviews</a>
+    </div>
+  </section>
+)}
+<style>
+  .rs { background: #f8fafc; padding: 2.25rem 16px; }
+  .rs-in { max-width: 1000px; margin: 0 auto; }
+  .rs h2 { margin: 0 0 0.4rem; }
+  .rs-rating { margin: 0 0 1rem; font-size: 1.1rem; color: #1e293b; }
+  .rs-rating strong { font-size: 1.5rem; color: #1a3a5c; }
+  .rs-rating span { color: #b45309; letter-spacing: 0.05em; }
+  .rs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem; }
+  .rs-card { margin: 0; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.15rem; }
+  .rs-card blockquote { margin: 0 0 0.6rem; font-size: 1rem; line-height: 1.6; color: #1e293b; }
+  .rs-card figcaption { font-weight: 800; color: #1a3a5c; font-size: 0.92rem; }
+  .rs-more { display: inline-block; margin-top: 1rem; font-weight: 700; color: #1a3a5c; text-underline-offset: 3px; }
+</style>

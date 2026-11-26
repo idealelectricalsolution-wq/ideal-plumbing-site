@@ -1,0 +1,25 @@
+---
+// In-flow call prompt between sections. Not sticky. Keeps a call button within a few screens on long pages.
+interface Props { title?: string; text?: string; book?: boolean; inline?: boolean }
+const { title = 'Need a plumber now?', text = 'A real person answers 24/7. No call-out fee.', book = true, inline = false } = Astro.props;
+---
+<aside class:list={['cs', { 'cs-inline': inline }]} aria-label="Call us">
+  <div class="cs-in">
+    <p class="cs-t"><strong>{title}</strong> <span>{text}</span></p>
+    <div class="cs-acts">
+      <a class="cs-btn" href="tel:01515580334">Call 0151 558 0334</a>
+      {book && <a class="cs-book" href="/get-started">Not urgent? Book online</a>}
+    </div>
+  </div>
+</aside>
+<style>
+  .cs { padding: 0 16px; margin: 1.75rem auto; max-width: 860px; }
+  .cs-inline { padding: 0; margin: 1.75rem 0; }
+  .cs-in { background: #1a3a5c; border-radius: 14px; padding: 1.1rem 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.25rem; }
+  .cs-t { flex: 1 1 260px; margin: 0; color: rgba(255,255,255,0.9); font-size: 1.02rem; line-height: 1.5; text-align: left; }
+  .cs-t strong { color: #fff; font-size: 1.12rem; display: block; }
+  .cs-acts { flex: 1 1 260px; display: flex; flex-direction: column; align-items: stretch; gap: 0.45rem; }
+  .cs-btn { display: flex; align-items: center; justify-content: center; min-height: 54px; background: #c2410c; color: #fff !important; border-radius: 10px; font: 900 1.35rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; letter-spacing: 0.02em; text-decoration: none; text-transform: uppercase; }
+  .cs-btn:hover { background: #9a3412; }
+  .cs-book { color: #fff !important; text-align: center; font-size: 0.92rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; padding: 0.3rem; }
+</style>

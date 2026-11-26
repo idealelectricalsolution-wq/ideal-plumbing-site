@@ -76,6 +76,7 @@ const faqSchema = {
   '@type': 'FAQPage',
   mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
+import CallStrip from '../components/CallStrip.astro';
 ---
 
 <BaseLayout
@@ -449,6 +450,8 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <CallStrip title="Need a plumber today?" text="Emergency or everyday job, call us. Guaranteed 30 minute response across Liverpool, and no call-out fee." />
 
   <!-- FAQ -->
   <section class="hp-sec" id="faq">
