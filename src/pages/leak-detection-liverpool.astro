@@ -1,213 +1,308 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
+import ServiceGuide from '../components/ServiceGuide.astro';
 const URL_ = 'https://liverpoolemergencyplumber.co.uk/leak-detection-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
 
-// Method (owner, Nov 2026): James finds leaks by checking pipework and lifting floorboards, tracing by eye.
-// Owner confirmed: pressure testing, cutting into ceilings below laminate/tiled floors, insurance leak reports. No thermal/acoustic kit claimed.
-// Prices match the rest of the site: first hour £120 weekdays 9am-4pm, £150 evenings/nights/weekends, £180 bank holidays, no call-out fee.
+// Methods (owner, Nov 2026): visual checks of pipework, pressure testing, lifting floorboards,
+// small openings in the ceiling below laminate/tiled floors, insurance leak reports.
+// No thermal, acoustic or tracer gas kit is claimed. Do not add any.
+// Prices: first hour £120 weekdays 9am-4pm, £150 evenings/nights/weekends, £180 bank holidays, no call-out fee.
+
+const packages = [
+  { id: 'weekday', tier: 'Weekdays 9am to 4pm', name: 'Leak finding and repair', price: '£120', unit: 'first hour, inc VAT',
+    points: ['No call-out fee', 'Finding the leak comes first', 'Extra time priced before we carry on'] },
+  { id: 'out-of-hours', tier: 'Evenings, nights and weekends', popular: true, name: 'Emergency leak call-out', price: '£150', unit: 'first hour, inc VAT',
+    points: ['No call-out fee', 'We answer 24/7, Sundays too', 'Water isolated first to stop the damage'] },
+  { id: 'bank-holiday', tier: 'Bank holidays', name: 'Bank holiday leak call-out', price: '£180', unit: 'first hour, inc VAT',
+    points: ['No call-out fee', 'Same team, same careful work', 'Parts priced before they are fitted'] },
+];
+
 const faqs = [
-  { tag: 'COST', q: 'How much does it cost to find a leak in Liverpool?', a: 'There is no call-out fee. It is £120 for the first hour on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. Any extra time is priced before we carry on. Most leaks are found and fixed on the same visit. If a part or more work is needed, you get the price first.' },
-  { tag: 'METHOD', q: 'How do you find a hidden leak?', a: 'The practical way. Our engineers check the pipework, joints, valves and appliances you can see first, as most leaks start there. He can pressure test the pipework to confirm whether a section is leaking. Then he lifts floorboards along the pipe run and follows the water back to the source. Where the floor above is laminate or a tiled bathroom, it is often cheaper to cut a small opening in the ceiling below instead. He agrees with you what needs opening up before he starts.' },
-  { tag: 'INSURANCE', q: 'Do you provide leak reports for insurance claims?', a: 'Yes. We can write a leak report for your insurer, covering what caused the leak, where it was and what was repaired, so you have the evidence for your claim.' },
-  { tag: 'CEILING', q: 'Water is coming through my ceiling. What do I do?', a: 'Turn the water off at the stopcock, usually under the kitchen sink. If water is near a light fitting, do not use that light and switch it off at the fuse box if you can do so safely. Put a bucket under the drip, then ring us on 0151 558 0334. Most ceiling leaks come from a bath, shower, toilet or pipe joint in the room above.' },
-  { tag: 'METER', q: 'How can I tell if I have a hidden leak?', a: 'Turn off every tap and appliance that uses water, then look at your water meter. If the numbers are still moving, water is escaping somewhere. Other signs are a damp patch that keeps growing, a musty smell, boiler pressure that keeps dropping, or a water bill that has gone up for no reason.' },
-  { tag: 'FLOORS', q: 'Can you find a leak under a concrete floor?', a: 'Leaks under solid concrete floors or deep inside walls are harder to reach than leaks under floorboards. We will look at the pipe runs and tell you honestly what we can find and what it would take. Where a leak needs specialist detection equipment, we will tell you so before you spend money.' },
-  { tag: 'AWAY', q: 'I am not at the property. Can you still help?', a: 'Yes. Landlords and owners often are not there when a leak starts. We can arrange access, and we can send you photos of what caused the leak and the repair, as several of our Google reviews mention.' },
-  { tag: 'EMERGENCY', q: 'Do you come out at night and at weekends?', a: 'Yes. We answer 24 hours a day, 7 days a week, including bank holidays. Reviews mention James arriving within 20 to 30 minutes for leaks, including on Sundays.' },
+  { q: 'How much does it cost to find a leak in Liverpool?', a: 'There is no call-out fee. The first hour is £120 on weekdays 9am to 4pm, £150 on evenings, nights and weekends, and £180 on bank holidays. All prices include VAT. Any extra time or parts are priced before we carry on.' },
+  { q: 'How do you find a hidden leak?', a: 'We check the pipework, joints, valves and appliances you can see first, as most leaks start there. We can pressure test the pipework to confirm whether a section is leaking. Then we lift floorboards along the pipe run and follow the water back to the source. Under laminate or a tiled bathroom, a small opening in the ceiling below is often cheaper. We agree with you what needs opening up before we start.' },
+  { q: 'Do you provide leak reports for insurance claims?', a: 'Yes. We can write a leak report for your insurer. It covers what caused the leak, where it was and what we repaired, so you have the evidence for your claim.' },
+  { q: 'Water is coming through my ceiling. What do I do?', a: 'Turn the water off at the stopcock, usually under the kitchen sink. If water is near a light fitting, do not use that light. Switch it off at the fuse box if you can do so safely. Put a bucket under the drip, then ring us on 0151 558 0334. Most ceiling leaks come from a bath, shower, toilet or pipe joint in the room above.' },
+  { q: 'How can I tell if I have a hidden leak?', a: 'Turn off every tap and appliance that uses water, then look at your water meter. If the numbers still move, water is escaping somewhere. Other signs are a damp patch that keeps growing, a musty smell, boiler pressure that keeps dropping, or a water bill that has gone up for no reason.' },
+  { q: 'Can you find a leak under a concrete floor?', a: 'Leaks under solid concrete floors or deep inside walls are harder to reach than leaks under floorboards. We look at the pipe runs and tell you honestly what we can find and what it would take. If a leak needs specialist detection equipment, we tell you before you spend money.' },
+  { q: 'Will you have to damage my floor or ceiling?', a: 'Sometimes a board has to come up or a small hole has to be cut. We keep it as small as we can, in the right place, and agree it with you first. Floorboards go back down after the repair.' },
+  { q: 'Is the leak my responsibility or United Utilities?', a: 'Usually, the pipe from your property boundary into the house is yours. The pipe from the water main up to the boundary is usually United Utilities. Shared supplies can be different. If the leak is outside your boundary, call United Utilities.' },
+  { q: 'Can you fix the leak on the same visit?', a: 'Most of the time, yes. Most leaks come from a joint, valve, waste pipe, flexi pipe or appliance. If a part or a bigger job is needed, you get the price first.' },
+  { q: 'I am not at the property. Can you still help?', a: 'Yes. Landlords and owners often are not there when a leak starts. We can arrange access, and we can send you photos of what caused the leak and the repair, as several of our Google reviews mention.' },
+  { q: 'Do you come out at night and at weekends?', a: 'Yes. We answer 24 hours a day, 7 days a week, including bank holidays. We are typically with you within 30 minutes. Reviews mention us arriving within 20 minutes for leaks.' },
+  { q: 'My boiler pressure keeps dropping. Is that a leak?', a: 'Often, yes. Water is escaping from the heating system, perhaps at a radiator valve, a joint or a pipe under the floor. We find it the same way. See our boiler repair page if the fault turns out to be inside the boiler.' },
+  { q: 'Can water from a leak affect my electrics?', a: 'Yes. Keep away from wet lights and sockets. If water has reached them, our partner firm Ideal Electrical Solutions, a 24/7 emergency electrician, can make the electrics safe.' },
 ];
-
-const signs = [
-  { t: 'Water through the ceiling', d: 'Usually a bath, shower, toilet or pipe joint in the room above. Turn the water off at the stopcock first.' },
-  { t: 'Damp patch that keeps growing', d: 'On a wall, floor or ceiling. A slow leak from a joint or a corroded pipe behind it.' },
-  { t: 'Boiler pressure keeps dropping', d: 'Water is escaping from the heating system: a radiator valve, a joint or a pipe under the floor.' },
-  { t: 'Water meter moving with taps off', d: 'The clearest sign of a hidden leak on the water supply.' },
-  { t: 'Wet floor by the sink, toilet or bath', d: 'Often a split waste pipe, a worn seal or a corroded flexi pipe hidden behind a panel.' },
-  { t: 'Sound of running water', d: 'When nothing is turned on. Often a pipe under the floor or a toilet cistern.' },
-];
-
-const reviews = [
-  { n: 'Sara R', t: 'James came out within twenty minutes and checked for the source of a leak in our kitchen, he was very thorough, dealt with the immediate problem and gave us good advice on what to do next. All in all he was extremely pleasant and helpful and really put our minds at rest about the cause of the leak, and we were really happy with the service that we got.' },
-  { n: 'Tonia K', t: 'Called them in a panic as our bathroom sink pipe was gushing water. James arrived within 20 minutes, isolated and dealt with the problem. By this time, part of the ceiling had collapsed and he cleaned that up for us too. He took photos of what caused the issue (we were not at the property at the time) and it was a corroded flexi pipe as well as before and after photos so we could see what had been done. Fantastic service. Wouldn\'t hesitate to use again.' },
-  { n: 'James G', t: 'Very impressed, attended same day diagnosed the issue. Gave options of how to fix the problem we had which was a leak in an old pipe under the flooring. Come back a day later and it was all sorted. Would highly recommend, this is from someone who has used a number of different trades over the past 12 months during a renovation.' },
-  { n: 'Frank B', t: 'James and Ben arrived as quickly as they could and got the bottom of the issue I was having with a leaky pipe and dripping ceiling in no time. Everything was professionally assessed and skilfully sorted in just over an hour. Really friendly and obviously talented plumbers, very impressed and definitely recommended.' },
-  { n: 'Chris C', t: 'A team to trust. I’m not from Liverpool but own a rental property there. When I needed some water ingress investigation it helped so much to feel well supported when there is water coming from your ceiling! The costs are clear, very reasonable and James who was the plumber they sent was everything you need in a difficulty time. Michel who took my late evening call was also very helpful and reassuring… If 6 stars existed they would have them from me. Chris' },
-];
-
-const areas = [
-  ['West Derby','west-derby'],['Old Swan','old-swan'],['Huyton','huyton'],['Woolton','woolton'],['Wavertree','wavertree'],['Allerton','allerton'],
-  ['Childwall','childwall'],['Anfield','anfield'],['Walton','walton'],['Bootle','bootle'],['Crosby','crosby'],['Kirkby','kirkby'],
-  ['Aintree','aintree'],['Garston','garston'],['Toxteth','toxteth'],['Maghull','maghull'],['Formby','formby'],['Wirral','wirral'],['St Helens','st-helens'],
-];
-
-const schemaFaq = {
-  '@context': 'https://schema.org', '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-};
-const schemaService = {
-  '@context': 'https://schema.org', '@type': 'Service',
-  name: 'Leak Detection and Repair Liverpool', serviceType: 'Water leak finding, pressure testing, repair and insurance leak reports', url: URL_,
-  provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
-  areaServed: [{ '@type': 'City', name: 'Liverpool' }, { '@type': 'City', name: 'Wirral' }, { '@type': 'City', name: 'St Helens' }, { '@type': 'City', name: 'Formby' }],
-  offers: [
-    { '@type': 'Offer', name: 'Leak finding and repair, first hour, weekdays 9am to 4pm, no call-out fee', price: '120', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Emergency leak repair, first hour, weekday evenings, nights and weekends', price: '150', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Emergency leak repair, first hour, bank holidays', price: '180', priceCurrency: 'GBP' },
-  ],
-};
-const schemaCrumbs = {
-  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://liverpoolemergencyplumber.co.uk' },
-    { '@type': 'ListItem', position: 2, name: 'Leak Detection Liverpool', item: URL_ },
-  ],
-};
-const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem 1.35rem;';
 ---
 
-<BaseLayout
-  title="Leak Detection Liverpool | Find & Fix Water Leaks 24/7 | No Call-Out Fee"
-  description="Water leak in Liverpool? We find and fix leaks through ceilings, under floors and behind walls, 24/7. Pressure testing and insurance leak reports. No call-out fee, from £120 for the first hour. Call 0151 558 0334."
-  canonical={URL_}
+<ServiceGuide
+  url={URL_}
+  title="Leak Detection Liverpool | Find & Fix Leaks 24/7 From £120 | No Call-Out Fee"
+  description="Water leak in Liverpool? We find and fix leaks through ceilings, under floors and behind walls, 24/7. Pressure testing and insurance leak reports. No call-out fee, from £120 for the first hour inc VAT. Call 0151 558 0334."
+  h1="Leak Detection Liverpool"
+  badge="Water leak? We answer 24/7"
+  intro="Water through the ceiling, a damp patch that keeps spreading, or pressure that keeps dropping? We find where the water is coming from and fix it, day or night. No call-out fee, from £120 for the first hour, and you get the price before any extra work."
+  stats={[['£120', 'First hour, inc VAT'], ['30 min', 'Typical response']]}
+  ticks={['No Call-Out Fee', '24/7, Including Sundays', 'Insurance Leak Reports', '5.0 on Google']}
+  pkTitle="How much does leak detection cost?"
+  pkLede="One price for the first hour, including VAT. No call-out fee."
+  packages={packages}
+  pkNote="Any time after the first hour is priced before we carry on. Parts and bigger repairs are priced first too. You never get a bill you did not agree to."
+  factsTitle="Leak detection at a glance"
+  facts={[
+    ['Price', 'First hour £120 weekdays 9am to 4pm, £150 evenings, nights and weekends, £180 bank holidays. Inc VAT.'],
+    ['Call-out', 'No call-out fee, day or night.'],
+    ['Methods', 'Visual checks, pressure testing, lifting floorboards, small ceiling openings.'],
+    ['Repair', 'Most leaks found and fixed on the same visit.'],
+    ['Insurance', 'Written leak report for your claim.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['leaking-now', 'What do I do if it is leaking now?'],
+    ['cost', 'What do I pay?'],
+    ['methods', 'How do you find a hidden leak?'],
+    ['damage', 'Will you damage my home?'],
+    ['how', 'How does a visit work?'],
+    ['signs', 'Do I have a hidden leak?'],
+    ['source', 'Where is my leak coming from?'],
+    ['whose', 'Is it my leak or United Utilities?'],
+    ['insurance', 'Insurance leak reports'],
+    ['jobs', 'Leaks we have found'],
+  ]}
+  reviewTitle="What do customers say about our leak work?"
+  reviews={['Sara R', 'Tonia K', 'James G', 'Frank B', 'Chris C']}
+  faqs={faqs}
+  areasTitle="Where do you do leak detection?"
+  areasText="Every Liverpool postcode, plus the Wirral, Sefton, Knowsley and St Helens."
+  areas={[
+    { href: '/emergency-plumber-wirral', label: 'Wirral' },
+    { href: '/emergency-plumber-st-helens', label: 'St Helens' },
+    { href: '/emergency-plumber-formby', label: 'Formby' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-old-swan', label: 'Old Swan' },
+    { href: '/emergency-plumber-huyton', label: 'Huyton' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-childwall', label: 'Childwall' },
+    { href: '/emergency-plumber-anfield', label: 'Anfield' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-bootle', label: 'Bootle' },
+    { href: '/emergency-plumber-crosby', label: 'Crosby' },
+    { href: '/emergency-plumber-kirkby', label: 'Kirkby' },
+    { href: '/emergency-plumber-aintree', label: 'Aintree' },
+    { href: '/emergency-plumber-garston', label: 'Garston' },
+    { href: '/emergency-plumber-toxteth', label: 'Toxteth' },
+    { href: '/emergency-plumber-maghull', label: 'Maghull' },
+  ]}
+  related={[
+    { href: '/', title: '24/7 emergency plumber', text: 'Burst pipes and floods, no call-out fee' },
+    { href: '/boiler-repair-liverpool', title: 'Boiler repair', text: 'Pressure dropping? From £120 for the first hour' },
+    { href: '/radiators-liverpool', title: 'Radiator repairs', text: 'Leaking valves fixed, new radiators fitted' },
+    { href: 'https://www.idealelectricalsolutions.co.uk/emergency-electrician', title: 'Emergency electrician', text: 'Our partner firm Ideal Electrical Solutions, 24/7' },
+  ]}
+  finalTitle="Got a leak? Ring us now."
+  finalText="24 hours a day, 7 days a week. No call-out fee. From £120 for the first hour, and the price agreed before any extra work."
+  serviceName="Leak Detection Liverpool"
+  serviceType="Water leak finding, pressure testing, repair and insurance leak reports"
+  serviceDesc="Water leak detection and repair across Liverpool and Merseyside, 24/7. Visual checks, pressure testing, lifting floorboards and small ceiling openings. Insurance leak reports. No call-out fee."
 >
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaFaq)} />
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaCrumbs)} />
+  <section class="brx-sec brx-tint" id="leaking-now">
+    <div class="brx-wrap">
+      <h2>What should I do if water is leaking now?</h2>
+      <p class="brx-answer">Turn the water off at the stopcock, keep away from wet electrics, then ring us on {PHONE}. These steps limit the damage while we are on the way.</p>
+      <div class="brx-danger"><p><strong>Water near lights or sockets?</strong> Do not touch them. Do not use a wet light. Switch the power off at the fuse box only if you can reach it safely and stay dry.</p></div>
+      <ol class="sg-steps">
+        <li><strong>Turn off the stopcock.</strong> It is usually under the kitchen sink. Turn it clockwise until it stops.</li>
+        <li><strong>Open the cold taps.</strong> This drains the water left in the pipes, so less comes through.</li>
+        <li><strong>Catch the drips.</strong> Put a bucket or bowl under the leak. Move rugs, electrics and anything precious.</li>
+        <li><strong>Ceiling bulging?</strong> Keep out from under it. A sagging ceiling can come down.</li>
+        <li><strong>Call us.</strong> We answer 24/7 and are typically with you within 30 minutes.</li>
+      </ol>
+      <p>Cannot find the stopcock, or it will not turn? Tell us when you call. We can talk you through it.</p>
+    </div>
+  </section>
 
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;"><span class="badge-dot"></span>Water leak? We answer 24/7</div>
-      <h1>Leak Detection Liverpool</h1>
-      <p class="page-hero-sub">Water through the ceiling, a damp patch that keeps spreading or pressure that keeps dropping? We find where the water is coming from and fix it, day or night. No call-out fee, and you get the price before any work starts.</p>
-      <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:0.8rem 1rem;max-width:460px;margin:1.25rem auto;">
-        <p style="margin:0;font-size:0.92rem;color:#7f1d1d;"><strong>Leaking now?</strong> Turn the water off at the stopcock (usually under the kitchen sink), keep away from wet lights and sockets, then ring us.</p>
+  <section class="brx-sec" id="cost">
+    <div class="brx-wrap">
+      <h2>What do I pay for leak detection in Liverpool?</h2>
+      <p class="brx-answer">You pay for the first hour, with no call-out fee. That is £120 on weekdays 9am to 4pm, £150 on evenings, nights and weekends, and £180 on bank holidays, all including VAT.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>When</th><th>First hour</th><th>Call-out fee</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Weekdays 9am to 4pm</strong></td><td>£120</td><td>None</td></tr>
+            <tr><td><strong>Evenings, nights and weekends</strong></td><td>£150</td><td>None</td></tr>
+            <tr><td><strong>Bank holidays</strong></td><td>£180</td><td>None</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book Online</a>
+      <p>If we need longer than the first hour, we tell you and price it before we carry on. The same goes for parts.</p>
+      <h3>What is included</h3>
+      <ul class="sg-ticks">
+        <li>Stopping the water first, so the damage stops spreading</li>
+        <li>Checking the pipes, joints, valves and appliances you can see</li>
+        <li>A pressure test where it helps to narrow things down</li>
+        <li>Opening up only what we agree with you</li>
+        <li>Fixing the leak and testing the repair</li>
+        <li>A 12-month workmanship guarantee on our repair</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="methods">
+    <div class="brx-wrap">
+      <h2>How do you find a hidden leak?</h2>
+      <p class="brx-answer">The practical way. We check what can be seen, pressure test the pipes, then open up the right spot and follow the water back to its source.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Visual checks</h3>
+          <p>We check joints, valves, waste pipes, flexi pipes, toilets, baths, showers and radiators. Most leaks start here, so this often finds it fast.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Pressure testing</h3>
+          <p>We test the pipework under pressure. If the pressure falls, there is a leak. It also helps us narrow down which section it is in.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Lifting floorboards</h3>
+          <p>We lift boards along the pipe run and trace the water back to the source. The boards go back down after the repair.</p>
+        </div>
+        <div class="sg-box">
+          <h3>A small ceiling opening</h3>
+          <p>Under laminate or a tiled bathroom floor, a small hole in the ceiling below is often cheaper than ripping up the floor.</p>
+        </div>
       </div>
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> No Call-Out Fee</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> 24/7, Including Sundays</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Insurance Leak Reports</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> 5.0 on Google</span>
+      <p style="margin-top:1rem;">No guesswork and no smashing walls on a hunch. We follow the water.</p>
+      <div class="brx-note"><p><strong>Leak under concrete or deep in a wall?</strong> These are harder to reach than leaks under boards. We tell you honestly what we can find. If a leak needs specialist detection equipment, we say so before you spend money.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="damage">
+    <div class="brx-wrap">
+      <h2>Will you need to damage my floors or walls?</h2>
+      <p class="brx-answer">Sometimes a little, but never without asking. We agree what needs opening up before we start, and we keep it as small as we can.</p>
+      <p>Floorboards lift out and go back down. Laminate and tiles are harder. They can crack or will not go back the same. That is why we often go in from the ceiling below. A small, neat hole in a ceiling is cheaper to make good than a new bathroom floor.</p>
+      <p>We always pick the spot with you. You know what each choice will mean before anything is cut.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How does a leak detection visit work?</h2>
+      <p class="brx-answer">Most visits take one to two hours from arrival to a fixed leak. Here is what happens.</p>
+      <ol class="sg-steps">
+        <li><strong>You call us.</strong> Tell us what you can see. We give you the first-hour price there and then. Typically we are with you within 30 minutes.</li>
+        <li><strong>Stop the water.</strong> If it is still leaking, we isolate the supply first.</li>
+        <li><strong>Check what can be seen.</strong> Joints, valves, waste pipes, flexi pipes, toilets, baths, showers and radiators.</li>
+        <li><strong>Pressure test.</strong> Where it helps, we test the pipework to confirm the leak and narrow down the section.</li>
+        <li><strong>Open up the right spot.</strong> We lift floorboards or cut a small ceiling opening, as agreed with you, and trace the water to its source.</li>
+        <li><strong>Fix it and show you.</strong> We repair the leak and test it. If you are not there, we send photos of the cause and the repair.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Leaking right now?</strong> Turn off the stopcock and ring us. We answer 24/7.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
+  <section class="brx-sec" id="signs">
+    <div class="brx-wrap">
+      <h2>How do I know if I have a hidden leak?</h2>
+      <p class="brx-answer">Do the meter test. Turn off every tap and appliance that uses water, then look at your water meter. If the numbers still move, water is escaping somewhere.</p>
+      <h3>Other signs of a leak</h3>
+      <ul class="sg-ticks">
+        <li><strong>Water through the ceiling.</strong> Usually a bath, shower, toilet or pipe joint in the room above.</li>
+        <li><strong>A damp patch that keeps growing.</strong> On a wall, floor or ceiling. Often a slow leak from a joint or a corroded pipe.</li>
+        <li><strong>Boiler pressure keeps dropping.</strong> Water is escaping from the heating system.</li>
+        <li><strong>A wet floor by the sink, toilet or bath.</strong> Often a split waste pipe, a worn seal or a corroded flexi pipe behind a panel.</li>
+        <li><strong>The sound of running water.</strong> When nothing is on. Often a pipe under the floor or a toilet cistern.</li>
+        <li><strong>A musty smell.</strong> Damp that you cannot see yet.</li>
+        <li><strong>A water bill that has jumped.</strong> With no change in how you use water.</li>
+      </ul>
+      <p>The sooner a leak is found, the less damage it does. Even a slow drip can rot boards and stain ceilings over time.</p>
+    </div>
+  </section>
 
-  <!-- QUICK ANSWER -->
-  <section class="pf-section" style="background:#ffffff;padding-bottom:1rem;">
-    <div class="container" style="max-width:760px;">
-      <div style="background:#f1f5f9;border-left:4px solid var(--orange);border-radius:10px;padding:1.1rem 1.35rem;">
-        <p style="margin:0;line-height:1.7;"><strong>Quick answer:</strong> finding and fixing a water leak in Liverpool with us has no call-out fee. It costs £120 for the first hour on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. Most leaks come from a joint, valve, waste pipe or appliance and are fixed on the same visit. We can also write a leak report for your insurance claim.</p>
+  <section class="brx-sec brx-tint" id="source">
+    <div class="brx-wrap">
+      <h2>Where is my leak coming from?</h2>
+      <p class="brx-answer">Where you see the water gives a good clue. This table shows the usual causes we find in Liverpool homes.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table sg-cmp">
+          <thead><tr><th>What you see</th><th>Likely cause</th><th>What to do</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Drip or stain on a ceiling</strong></td><td>Bath, shower, toilet or pipe joint in the room above</td><td>Stopcock off, then call us</td></tr>
+            <tr><td><strong>Boiler pressure dropping</strong></td><td>Radiator valve, joint or heating pipe under the floor</td><td>Call us. See <a href="/boiler-repair-liverpool">boiler repair</a> if it is the boiler</td></tr>
+            <tr><td><strong>Water under the sink</strong></td><td>Flexi pipe, tap connection or waste pipe</td><td>Turn off the small valve on the pipe, then call us</td></tr>
+            <tr><td><strong>Puddle by a radiator</strong></td><td>Valve, joint or a corroded radiator</td><td>See <a href="/radiators-liverpool">radiator repairs</a></td></tr>
+            <tr><td><strong>Meter moving, nothing wet</strong></td><td>Hidden pipe, toilet cistern or the supply pipe outside</td><td>Call us to trace it</td></tr>
+            <tr><td><strong>Burst pipe or flood</strong></td><td>Split or frozen pipe</td><td>Stopcock off. See our <a href="/">24/7 emergency plumber</a> page</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>Cold snap? Read our <a href="/blog/frozen-pipes-liverpool-winter-guide">frozen pipes guide</a> to stop pipes splitting in the first place.</p>
+      <div class="brx-note"><p><strong>Water reached your lights or sockets?</strong> Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician">Ideal Electrical Solutions, a 24/7 emergency electrician</a>, can make the electrics safe.</p></div>
     </div>
   </section>
 
-  <!-- SIGNS -->
-  <section class="pf-section" style="background:#ffffff;padding-top:1.5rem;">
-    <div class="container">
-      <h2>Signs You Have a Water Leak</h2>
-      <p class="pf-sub">If you see any of these, the sooner the leak is found the less damage it does.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
-        {signs.map((f) => (
-          <div style={card + 'border-left:4px solid var(--orange);'}><h3 style="font-size:1.02rem;margin:0 0 0.35rem;">{f.t}</h3><p style="margin:0;font-size:0.92rem;line-height:1.6;color:#334155;">{f.d}</p></div>
-        ))}
+  <section class="brx-sec" id="whose">
+    <div class="brx-wrap">
+      <h2>Is the leak on my side or United Utilities' side?</h2>
+      <p class="brx-answer">Usually, the pipe from your property boundary into the house is yours. The pipe from the water main up to your boundary is usually United Utilities'.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Where the leak is</th><th>Usually whose job?</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Inside your home</strong></td><td>Yours. We can find and fix it.</td></tr>
+            <tr><td><strong>Supply pipe from your boundary to the house</strong></td><td>Usually yours, as the owner.</td></tr>
+            <tr><td><strong>Pipe in the street, up to your boundary</strong></td><td>Usually United Utilities. Call them.</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>Shared supplies, flats and terraces can be different. If you are not sure, call us first. We can tell you which side of the line the leak looks to be on.</p>
+      <p>If you rent, tell your landlord or letting agent straight away. They are usually responsible for repairs to the pipes.</p>
     </div>
   </section>
 
-  <!-- HOW WE FIND IT -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container" style="max-width:760px;">
-      <h2>How We Find a Leak</h2>
-      <p class="pf-sub">No guesswork and no smashing walls on a hunch. We follow the water.</p>
-      <div style="display:flex;flex-direction:column;gap:0.75rem;">
-        <div style={card}><strong>1. Stop the water.</strong> If it is still leaking, we isolate the supply first to stop the damage spreading.</div>
-        <div style={card}><strong>2. Check what can be seen.</strong> Joints, valves, waste pipes, flexi pipes, toilets, baths, showers and radiators. Most leaks start here.</div>
-        <div style={card}><strong>3. Pressure test.</strong> Testing the pipework under pressure confirms whether there is a leak and helps narrow down which section it is in.</div>
-        <div style={card}><strong>4. Open up the right spot.</strong> He lifts floorboards along the pipe and traces the water back to its source. Where the floor above is laminate or a tiled bathroom, cutting a small opening in the ceiling below is often cheaper than ripping up the floor. He agrees with you what needs opening up first.</div>
-        <div style={card}><strong>5. Fix it and show you.</strong> The leak is repaired and tested. If you are not at the property, he can send photos of the cause and the repair. Need it for an insurance claim? We can write you a leak report.</div>
+  <section class="brx-sec brx-tint" id="insurance">
+    <div class="brx-wrap">
+      <h2>Can you write a leak report for my insurance claim?</h2>
+      <p class="brx-answer">Yes. We can write a leak report for your insurer. It covers what caused the leak, where it was and what we repaired.</p>
+      <p>Many home insurance policies cover the cost of finding a hidden leak. This is often called "trace and access" cover. Check your policy, or ask your insurer, before you book if you can.</p>
+      <h3>Tips for a smoother claim</h3>
+      <ul class="sg-ticks">
+        <li>Take photos of the damage before anything is moved.</li>
+        <li>Tell your insurer as soon as you can.</li>
+        <li>Keep our invoice and the leak report together.</li>
+        <li>Ask us for photos of the cause and the repair. We are happy to send them.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="jobs">
+    <div class="brx-wrap">
+      <h2>What leaks have you found for Liverpool customers?</h2>
+      <p class="brx-answer">All sorts, from gushing sink pipes to slow leaks under the floor. These examples come from real Google reviews.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Gushing bathroom sink pipe</h3>
+          <p>Tonia K was not at home. Part of the ceiling had already come down. We isolated the water, fixed the leak and cleaned up. The cause was a corroded flexi pipe. We sent photos of the cause, plus before and after shots.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Old pipe under the floor</h3>
+          <p>James G had a leak in an old pipe under the flooring. We came the same day and found it. We gave options to fix it, came back the next day, and it was sorted.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Leaky pipe, dripping ceiling</h3>
+          <p>Frank B had a leaky pipe and a dripping ceiling. We found the cause and fixed it in just over an hour.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Rental with water from the ceiling</h3>
+          <p>Chris C owns a rental in Liverpool but lives elsewhere. He rang late in the evening about water coming through a ceiling. He says the costs were clear and very reasonable.</p>
+        </div>
       </div>
-      <p style="margin:1.25rem 0 0;line-height:1.7;">Leaks under solid concrete floors or deep inside walls are harder to reach. We will tell you honestly what we can find, and if a leak needs specialist detection equipment, we will say so before you spend money.</p>
+      <p style="margin-top:1rem;">Sara R had a kitchen leak. We were there within twenty minutes, dealt with it and gave advice on what to do next. <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener">See all our reviews on Google</a>.</p>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Leak Repair Prices in Liverpool</h2>
-      <p class="pf-sub">No call-out fee. One fixed price for the first hour, and you agree the price of any parts or extra work first.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:760px;margin:0 auto;">
-        <div style={card + 'border-top:4px solid var(--orange);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:#c2410c;letter-spacing:0.08em;">WEEKDAYS 9AM TO 4PM</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£120<span style="font-size:1rem;"> first hour</span></div></div>
-        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">EVENINGS, NIGHTS, WEEKENDS</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£150<span style="font-size:1rem;"> first hour</span></div></div>
-        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">BANK HOLIDAYS</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£180<span style="font-size:1rem;"> first hour</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">Leaks We Have Found and Fixed</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        {reviews.map((r) => (
-          <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>{r.t}</p><div class="pf-review-footer"><div class="pf-review-avatar">{r.n[0].toUpperCase()}</div><div><div class="pf-review-name">{r.n}</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        ))}
-      </div>
-      <div style="text-align:center;margin-top:1.5rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all reviews on Google →</a></div>
-    </div>
-  </section>
-
-  <!-- RELATED -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container" style="max-width:760px;">
-      <h2>Leak From the Heating or the Boiler?</h2>
-      <p style="line-height:1.75;margin-bottom:0;">If your boiler pressure keeps dropping, the leak is in the heating system. See <a href="/boiler-repair-liverpool" style="font-weight:700;">boiler repair in Liverpool</a> or <a href="/radiators-liverpool" style="font-weight:700;">radiator repairs and replacement</a>. For a burst pipe or flood right now, see our <a href="/" style="font-weight:700;">24/7 emergency plumber</a> page. If water has reached your lights or sockets, our partner firm <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician" style="font-weight:700;">Ideal Electrical Solutions, a 24/7 emergency electrician</a>, can make the electrics safe.</p>
-    </div>
-  </section>
-
-  <!-- AREAS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Leak Detection Across Liverpool and Merseyside</h2>
-      <p class="pf-sub">Every Liverpool postcode, plus the Wirral, Sefton, Knowsley and St Helens.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:860px;margin:0 auto;">
-        {areas.map(([n, s]) => (
-          <a href={`/emergency-plumber-${s}`} style="background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.4rem 0.9rem;font-size:0.88rem;font-weight:600;color:var(--navy);text-decoration:none;">{n}</a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Leak Detection Questions</h2>
-      <div class="pf-faq" style="display:flex;flex-direction:column;gap:0.5rem;">
-        {faqs.map((f) => (
-          <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-orange">{f.tag}</span>&nbsp; {f.q}</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>{f.a}</p></div></details>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="pf-section" style="background:var(--navy);text-align:center;">
-    <div class="container" style="max-width:640px;">
-      <h2 style="color:#ffffff;">Got a Leak? Ring Us Now.</h2>
-      <p style="color:rgba(255,255,255,0.85);margin-bottom:1.5rem;">24 hours a day, 7 days a week. No call-out fee. The price agreed before any work.</p>
-      <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;">CALL 0151 558 0334</a>
-    </div>
-  </section>
-
-  </div>
-</BaseLayout>
+</ServiceGuide>
