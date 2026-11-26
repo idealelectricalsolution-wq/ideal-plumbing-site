@@ -8,7 +8,7 @@ const packages = [
   { id: 'cloakroom', tier: 'Small room', name: 'Cloakroom or WC', price: '£2,495', from: true, unit: 'supplied and fitted, inc VAT',
     points: ['New toilet and basin', 'Taps, waste and pipework', 'Tiling or wall panels', 'Old suite taken away'] },
   { id: 'full', tier: 'Full bathroom', popular: true, name: 'Full bathroom, supplied and fitted', price: '£4,995', from: true, unit: 'supplied and fitted, inc VAT',
-    points: ['Bath or shower, toilet, basin and taps', 'Strip-out and disposal', 'All plumbing and tiling', 'Usually 5 to 10 working days'] },
+    points: ['Bath or shower, toilet, basin and taps', 'Strip-out and disposal', 'All plumbing and tiling', 'Usually 5 to 7 working days'] },
   { id: 'en-suite', tier: 'En-suite or shower room', name: 'En-suite or shower room', price: '£4,495', from: true, unit: 'supplied and fitted, inc VAT',
     points: ['Shower tray, enclosure and valve', 'Toilet and basin', 'Tiling and waterproofing', 'Extractor fan by our partner electricians'] },
   { id: 'bath-to-shower', tier: 'Most asked for', name: 'Bath to shower conversion', price: '£2,395', from: true, unit: 'supplied and fitted, inc VAT',
@@ -17,10 +17,10 @@ const packages = [
 
 const faqs = [
   { q: 'How much does a bathroom installation cost in St Helens?', a: 'A full bathroom in St Helens, supplied and fitted, starts from £4,995 including VAT. An en-suite or shower room is from £4,495 and a cloakroom or WC is from £2,495. A bath to shower conversion is from £2,395. If you buy your own suite, a labour-only full refit is from £2,750. You get a fixed written price after a free home visit.' },
-  { q: 'How long does a bathroom installation take in St Helens?', a: 'A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days. Moving a bathroom upstairs takes longer, as there is more pipework. We give you the dates in your quote.' },
+  { q: 'How long does a bathroom installation take in St Helens?', a: 'A full bathroom usually takes 5 to 7 working days. A bath to shower conversion takes 2 to 3 days. Moving a bathroom upstairs takes longer, as there is more pipework. We give you the dates in your quote.' },
   { q: 'Can you move a downstairs bathroom upstairs in a WA10 terrace?', a: 'Yes. Many WA10 terraces have the bathroom in the old rear extension. Moving it upstairs means a new soil and waste route, new hot and cold pipes, and a new bathroom in the bedroom. We look at both rooms at the free visit and give you one fixed price for the whole job.' },
   { q: 'Do you cover every St Helens postcode?', a: 'Yes. We cover WA9, WA10, WA11 and WA12, including Parr, Thatto Heath, Eccleston, Haydock, Rainford, Billinge and Newton-le-Willows. We also cover Prescot, Whiston and Rainhill. Travel is included in your quote.' },
-  { q: 'Can you fit a bathroom between tenants?', a: 'Yes. We work with St Helens landlords and book the job into the gap between tenants. A full bathroom usually takes 5 to 10 working days. Tell us your dates at the visit and we plan around them.' },
+  { q: 'Can you fit a bathroom between tenants?', a: 'Yes. We work with St Helens landlords and book the job into the gap between tenants. A full bathroom usually takes 5 to 7 working days. Tell us your dates at the visit and we plan around them.' },
   { q: 'Do I need a separate tiler or electrician?', a: 'No. Our team does the plumbing and the tiling. Lights, extractor fans and shower circuits are done by our partner firm Ideal Electrical Solutions. We book them into the same plan, so you only deal with us.' },
   { q: 'What if you find a problem under the old bath?', a: 'We show you and give you a price before we fix it. Older St Helens terraces often hide corroded cast iron waste pipes or a rotten board. Nothing gets covered up, and you decide.' },
   { q: 'Do I need to pay up front?', a: 'Nothing is paid before the visit, and the visit is free. Payment terms are agreed in writing with your quote, before the job is booked in. We do not offer finance.' },
@@ -35,7 +35,7 @@ const faqs = [
   badge="Free home visit · all WA postcodes"
   intro="New bathrooms fitted across St Helens from £4,995, including VAT. Our team, led by James, does the strip-out, the plumbing and the tiling. We also move downstairs bathrooms upstairs in WA10 terraces. You get a fixed written price after a free home visit, and a 12-month guarantee on our work."
   secondaryCta={{ href: '#prices', label: 'See bathroom prices' }}
-  stats={[['£4,995', 'Full bathroom fitted'], ['5-10 days', 'Typical full bathroom']]}
+  stats={[['£4,995', 'Full bathroom fitted'], ['5-7 days', 'Typical full bathroom']]}
   ticks={['Free Home Visit', 'Plumbing and Tiling', '12-Month Guarantee', '5.0 on Google']}
   pkTitle="Bathroom installation prices in St Helens"
   pkLede="Supplied and fitted, including VAT. Your final price is fixed in writing after a free home visit."
@@ -44,7 +44,7 @@ const faqs = [
   factsTitle="St Helens bathroom fitting at a glance"
   facts={[
     ['Price', 'Full bathroom from £4,995. Shower room from £4,495. Bath to shower from £2,395. All inc VAT.'],
-    ['Time', 'Full bathroom usually 5 to 10 working days. Bath to shower 2 to 3 days.'],
+    ['Time', 'Full bathroom usually 5 to 7 working days. Bath to shower 2 to 3 days.'],
     ['Who', 'Our team led by James does plumbing and tiling. Electrics by our partner firm.'],
     ['Quote', 'Free home visit. Fixed price in writing.'],
     ['Guarantee', '12 months on our work. £2 million public liability insurance.'],
@@ -94,8 +94,8 @@ const faqs = [
             <tr><td><strong>Cloakroom or WC</strong></td><td>from £2,495</td><td>A few days</td></tr>
             <tr><td><strong>Bath to shower conversion</strong></td><td>from £2,395</td><td>2 to 3 days</td></tr>
             <tr><td><strong>En-suite or shower room</strong></td><td>from £4,495</td><td>Set out in your quote</td></tr>
-            <tr><td><strong>Full bathroom, supplied and fitted</strong></td><td>from £4,995</td><td>5 to 10 working days</td></tr>
-            <tr><td><strong>Labour-only full refit (your own suite)</strong></td><td>from £2,750</td><td>5 to 10 working days</td></tr>
+            <tr><td><strong>Full bathroom, supplied and fitted</strong></td><td>from £4,995</td><td>5 to 7 working days</td></tr>
+            <tr><td><strong>Labour-only full refit (your own suite)</strong></td><td>from £2,750</td><td>5 to 7 working days</td></tr>
             <tr><td><strong>Moving a bathroom upstairs</strong></td><td>Priced at the free visit</td><td>Set out in your quote</td></tr>
           </tbody>
         </table>
@@ -147,13 +147,13 @@ const faqs = [
   <section class="brx-sec" id="how">
     <div class="brx-wrap">
       <h2>How long does a bathroom installation take in St Helens?</h2>
-      <p class="brx-answer">A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days.</p>
+      <p class="brx-answer">A full bathroom usually takes 5 to 7 working days. A bath to shower conversion takes 2 to 3 days.</p>
       <ol class="sg-steps">
         <li><strong>Free home visit (about 45 minutes).</strong> We measure up and check the pipes, waste and walls. For a move, we look at both rooms.</li>
         <li><strong>Fixed written price.</strong> The full spec, written down. What is included is listed, and so is what is not.</li>
         <li><strong>Day 1: strip-out.</strong> The old bathroom comes out and leaves with us.</li>
         <li><strong>Days 1 to 3: first fix.</strong> New pipes and waste go in. Our partner electricians do any wiring. If we find rot or a leak, we show you and price it first.</li>
-        <li><strong>Days 3 to 7: walls and floor.</strong> Boarding, waterproofing and tiling, or wall panels.</li>
+        <li><strong>Days 3 to 5: walls and floor.</strong> Boarding, waterproofing and tiling, or wall panels.</li>
         <li><strong>Final days: fit and hand over.</strong> The suite goes in. We test every joint, seal it all and clean the room.</li>
       </ol>
       <p>Moving a bathroom, bigger rooms or a lot of tiling take longer. Your quote gives you the dates.</p>

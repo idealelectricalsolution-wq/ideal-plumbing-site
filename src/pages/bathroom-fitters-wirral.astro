@@ -8,7 +8,7 @@ const packages = [
   { id: 'cloakroom', tier: 'Small room', name: 'Cloakroom or WC', price: '£2,495', from: true, unit: 'supplied and fitted, inc VAT',
     points: ['New toilet and basin', 'Taps, waste and pipework', 'Tiling or wall panels', 'Old suite taken away'] },
   { id: 'full', tier: 'Full bathroom', popular: true, name: 'Full bathroom, supplied and fitted', price: '£4,995', from: true, unit: 'supplied and fitted, inc VAT',
-    points: ['Bath or shower, toilet, basin and taps', 'Strip-out and disposal', 'All plumbing and tiling', 'Usually 5 to 10 working days'] },
+    points: ['Bath or shower, toilet, basin and taps', 'Strip-out and disposal', 'All plumbing and tiling', 'Usually 5 to 7 working days'] },
   { id: 'en-suite', tier: 'En-suite', name: 'En-suite shower room', price: '£4,495', from: true, unit: 'supplied and fitted, inc VAT',
     points: ['Shower tray, enclosure and valve', 'Toilet and basin', 'Tiling and waterproofing', 'Extractor fan by our partner electricians'] },
   { id: 'bath-to-shower', tier: 'Most asked for', name: 'Bath to shower conversion', price: '£2,395', from: true, unit: 'supplied and fitted, inc VAT',
@@ -17,7 +17,7 @@ const packages = [
 
 const faqs = [
   { q: 'How much does a bathroom installation cost on the Wirral?', a: 'A full bathroom on the Wirral, supplied and fitted, starts from £4,995 including VAT. An en-suite is from £4,495 and a cloakroom or WC is from £2,495. A bath to shower conversion is from £2,395. If you buy your own suite, a labour-only full refit is from £2,750. You get a fixed written price after a free home visit.' },
-  { q: 'How long does a bathroom installation take on the Wirral?', a: 'A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days. A bathroom in a Victorian outrigger can take a little longer if the old waste pipes need replacing. We give you the dates in your quote.' },
+  { q: 'How long does a bathroom installation take on the Wirral?', a: 'A full bathroom usually takes 5 to 7 working days. A bath to shower conversion takes 2 to 3 days. A bathroom in a Victorian outrigger can take a little longer if the old waste pipes need replacing. We give you the dates in your quote.' },
   { q: 'Do you cover every Wirral CH postcode?', a: 'Yes. We fit bathrooms across CH41 to CH49 and CH60 to CH64. That takes in Birkenhead, Wallasey, Moreton, Hoylake, West Kirby, Heswall, Bebington, Bromborough and Neston. Travel is included in your quote.' },
   { q: 'Can you fit a new bathroom in a Victorian outrigger?', a: 'Yes. Many terraces in Birkenhead, Wallasey, Hoylake and Rock Ferry have the bathroom in the rear outrigger. These rooms often have long waste runs, old cast iron pipes and joists that need checking. We look at all of this at the free visit and price it before we start.' },
   { q: 'Will a new en-suite affect my water pressure?', a: 'It can. Two showers running at once can be weak on an old tank system. In larger homes in Heswall, Pensby and Bromborough, an unvented cylinder often fixes this. Our engineers are G3 qualified, so we can fit the cylinder and the en-suite as one job. Unvented cylinders start from £1,450.' },
@@ -44,7 +44,7 @@ const faqs = [
   factsTitle="Wirral bathroom fitting at a glance"
   facts={[
     ['Price', 'Full bathroom from £4,995. En-suite from £4,495. Bath to shower from £2,395. All inc VAT.'],
-    ['Time', 'Full bathroom usually 5 to 10 working days. Bath to shower 2 to 3 days.'],
+    ['Time', 'Full bathroom usually 5 to 7 working days. Bath to shower 2 to 3 days.'],
     ['Who', 'Our team led by James does plumbing and tiling. Electrics by our partner firm.'],
     ['Quote', 'Free home visit. Fixed price in writing.'],
     ['Guarantee', '12 months on our work. £2 million public liability insurance.'],
@@ -93,8 +93,8 @@ const faqs = [
             <tr><td><strong>Cloakroom or WC</strong></td><td>from £2,495</td><td>A few days</td></tr>
             <tr><td><strong>Bath to shower conversion</strong></td><td>from £2,395</td><td>2 to 3 days</td></tr>
             <tr><td><strong>En-suite shower room</strong></td><td>from £4,495</td><td>Set out in your quote</td></tr>
-            <tr><td><strong>Full bathroom, supplied and fitted</strong></td><td>from £4,995</td><td>5 to 10 working days</td></tr>
-            <tr><td><strong>Labour-only full refit (your own suite)</strong></td><td>from £2,750</td><td>5 to 10 working days</td></tr>
+            <tr><td><strong>Full bathroom, supplied and fitted</strong></td><td>from £4,995</td><td>5 to 7 working days</td></tr>
+            <tr><td><strong>Labour-only full refit (your own suite)</strong></td><td>from £2,750</td><td>5 to 7 working days</td></tr>
           </tbody>
         </table>
       </div>
@@ -148,13 +148,13 @@ const faqs = [
   <section class="brx-sec" id="how">
     <div class="brx-wrap">
       <h2>How long does a bathroom installation take on the Wirral?</h2>
-      <p class="brx-answer">A full bathroom usually takes 5 to 10 working days. A bath to shower conversion takes 2 to 3 days.</p>
+      <p class="brx-answer">A full bathroom usually takes 5 to 7 working days. A bath to shower conversion takes 2 to 3 days.</p>
       <ol class="sg-steps">
         <li><strong>Free home visit (about 45 minutes).</strong> We measure up and check the pipes, waste and walls. In an outrigger, we check the joists and cast iron too.</li>
         <li><strong>Fixed written price.</strong> The full spec, written down. What is included is listed, and so is what is not.</li>
         <li><strong>Day 1: strip-out.</strong> The old bathroom comes out and leaves with us.</li>
         <li><strong>Days 1 to 3: first fix.</strong> New pipes and waste go in. Our partner electricians do any wiring. If we find rot or a leak, we show you and price it first.</li>
-        <li><strong>Days 3 to 7: walls and floor.</strong> Boarding, waterproofing and tiling, or wall panels.</li>
+        <li><strong>Days 3 to 5: walls and floor.</strong> Boarding, waterproofing and tiling, or wall panels.</li>
         <li><strong>Final days: fit and hand over.</strong> The suite goes in. We test every joint, seal it all and clean the room.</li>
       </ol>
       <p>Bigger rooms, a lot of tiling or a new layout take longer. Your quote gives you the dates.</p>
