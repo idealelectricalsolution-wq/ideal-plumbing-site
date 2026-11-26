@@ -2,29 +2,177 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const URL_ = 'https://liverpoolemergencyplumber.co.uk/boiler-repair-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+const UPDATED = '26 November 2026';
 
-// Prices match the rest of the site (owner to confirm): £80/hr weekdays, £120/hr weekends 9am-1pm,
-// £150/hr out of hours, 1 hour minimum, no call-out fee; booked fault diagnosis £95.
-const faqs = [
-  { tag: 'COST', q: 'How much does a boiler repair cost in Liverpool?', a: 'There is no call-out fee. Weekdays 9am to 5pm are £80 an hour, weekends 9am to 1pm are £120 an hour, and evenings, nights and bank holidays are £150 an hour, with a one hour minimum. A booked boiler fault diagnosis is £95. If a part is needed, you get the price before any work starts.' },
-  { tag: 'EMERGENCY', q: 'Can you repair my boiler today?', a: 'Often, yes. We answer 24 hours a day, 7 days a week. Ring 0151 558 0334, tell us what the boiler is doing and any error code on the display, and we will tell you when James can be with you. Many reviews mention him arriving within 20 to 30 minutes, including on Sundays and bank holidays.' },
-  { tag: 'GAS SAFE', q: 'Who will repair my boiler?', a: 'James, who is Gas Safe registered, does the repair himself. It is illegal for anyone who is not Gas Safe registered to work on a gas boiler. You can check any engineer on the Gas Safe Register before they start.' },
-  { tag: 'PRESSURE', q: 'My boiler pressure keeps dropping. Is that a repair?', a: 'Pressure should sit between 1 and 1.5 bar when the heating is cold. If you top it up and it drops again within days, there is a leak somewhere in the system or a faulty pressure relief valve or expansion vessel. That needs finding and fixing, not topping up every week.' },
-  { tag: 'WINTER', q: 'My boiler stopped in the cold weather. What is wrong?', a: 'The most common cause in a cold snap is a frozen condensate pipe, the small plastic pipe that runs outside from the boiler. The boiler locks out and often shows a fault code. Pouring warm, not boiling, water along the pipe can thaw it, then press reset. If it keeps happening, the pipe needs re-routing or lagging.' },
-  { tag: 'BRANDS', q: 'Which boiler brands do you repair?', a: 'All the common makes in Liverpool homes, including Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm and Viessmann. Combi, system and regular boilers.' },
-  { tag: 'REPAIR OR REPLACE', q: 'Should I repair or replace my boiler?', a: 'If the boiler is under about 10 years old and the fault is a single part, repairing it is usually the better value. If it is older, breaking down every winter, or the part costs a large share of a new boiler, we will tell you honestly and give you a fixed price for both options so you can choose.' },
-  { tag: 'LANDLORDS', q: 'Do you repair boilers for landlords and letting agents?', a: 'Yes. We can meet your tenant at the property, send you photos of the fault and agree the cost with you before we fix it. If the CP12 is due, we can do the gas safety check on the same visit.' },
+// ---------- Common problems ----------
+const problems = [
+  {
+    id: 'no-heating-no-hot-water', q: 'Why do I have no heating and no hot water?', t: 'No heating and no hot water',
+    sign: 'The boiler is silent, shows a fault light or an error code, and nothing is warm.',
+    causes: ['Low water pressure (below 1 bar)', 'No gas reaching the boiler: gas off, or a prepayment meter out of credit', 'A frozen condensate pipe in cold weather', 'A failed ignition electrode, fan, gas valve or circuit board (PCB)', 'No power: a tripped fuse spur or a power cut'],
+    tryIt: 'Check the pressure gauge, check your hob works, check the fused switch next to the boiler is on, and in freezing weather check the condensate pipe outside. Then press reset once.',
+    call: 'If the boiler locks out again, or shows the same error code, the fault is inside the boiler.',
+  },
+  {
+    id: 'hot-water-no-heating', q: 'Why do I have hot water but no heating?', t: 'Hot water but no heating',
+    sign: 'The taps run hot but the radiators stay cold.',
+    causes: ['The thermostat or timer is set wrong, or lost its settings after a power cut', 'A diverter valve stuck in the hot water position (combi boilers)', 'A failed zone valve or motorised valve (system and regular boilers)', 'A faulty pump, or air locked in the system'],
+    tryIt: 'Turn the room thermostat up a few degrees above room temperature and check the timer is calling for heating. Check smart thermostat batteries and app.',
+    call: 'If the thermostat is calling for heat and the radiators stay cold, a valve or the pump has usually failed.',
+  },
+  {
+    id: 'heating-no-hot-water', q: 'Why does my heating work but I have no hot water?', t: 'Heating works but no hot water',
+    sign: 'The radiators heat up but the taps run cold or only lukewarm.',
+    causes: ['A diverter valve stuck in the heating position (combi boilers)', 'A faulty flow sensor that does not notice the tap is on', 'A blocked plate heat exchanger from limescale', 'On a cylinder system: the hot water timer, cylinder thermostat or immersion'],
+    tryIt: 'Check the hot water setting on the boiler or programmer is on. On a combi, try a different tap and open it fully.',
+    call: 'If the boiler does not fire up when a hot tap is turned on, the diverter valve or flow sensor usually needs replacing.',
+  },
+  {
+    id: 'losing-pressure', q: 'Why does my boiler keep losing pressure?', t: 'Boiler losing pressure',
+    sign: 'You top the pressure up to 1 to 1.5 bar and within days it has dropped again.',
+    causes: ['A leak on a radiator valve, pipe joint or inside the boiler', 'A faulty pressure relief valve letting water out through the pipe outside', 'A flat expansion vessel', 'Recently bled radiators (a one-off drop is normal)'],
+    tryIt: 'Top it up once with the filling loop, then close both valves fully. Look under radiators and along visible pipes for damp, and check the copper pipe outside for dripping.',
+    call: 'If you are topping up more than once a month, there is a leak or a failed part. Topping up every week only hides it.',
+  },
+  {
+    id: 'pressure-too-high', q: 'Why is my boiler pressure too high?', t: 'Boiler pressure too high',
+    sign: 'The gauge reads over 2.5 bar, often climbing when the heating is on, and water may drip from the pipe outside.',
+    causes: ['The filling loop has been left slightly open', 'A flat expansion vessel', 'A filling loop valve that lets water through when closed'],
+    tryIt: 'Check both filling loop valves are fully closed. Bleeding a radiator lets some water out and lowers the pressure.',
+    call: 'If the pressure keeps rising with the loop closed, the expansion vessel or filling valve needs attention.',
+  },
+  {
+    id: 'boiler-leaking', q: 'Why is my boiler leaking water?', t: 'Boiler leaking water',
+    sign: 'Water under the boiler, dripping from the casing, or a damp patch on the ceiling below.',
+    causes: ['A failed pressure relief valve', 'A perished seal on the pump, diverter valve or heat exchanger', 'A loose or corroded pipe joint', 'A leaking condensate trap or pipe'],
+    tryIt: 'Turn the boiler off, put a tray or towels underneath and keep water away from plugs and the electrics. If it is pouring, turn the water off at the stopcock.',
+    call: 'Call straight away. Never open the casing to look for the leak yourself.',
+  },
+  {
+    id: 'boiler-noises', q: 'Why is my boiler banging, kettling or gurgling?', t: 'Banging, kettling, gurgling or whistling',
+    sign: 'The boiler sounds like a kettle boiling, bangs when it fires up, or gurgles.',
+    causes: ['Kettling: limescale or sludge in the heat exchanger making the water boil', 'Gurgling: air in the system, low pressure or a partly frozen condensate pipe', 'Banging: a failing pump, sludge or pipes moving as they heat', 'Whistling: a restricted flow from sludge or a sticking valve'],
+    tryIt: 'Check the pressure and bleed any radiators that are cold at the top.',
+    call: 'Kettling and banging get worse over time and strain the heat exchanger, the most expensive part to replace.',
+  },
+  {
+    id: 'keeps-turning-off', q: 'Why does my boiler keep turning off?', t: 'Boiler keeps turning off',
+    sign: 'The boiler fires up, runs for a few minutes, then cuts out or locks out.',
+    causes: ['Low pressure or poor water flow from sludge', 'A faulty temperature sensor (thermistor)', 'A blocked flue or condensate system', 'A thermostat in the wrong place, such as next to a radiator'],
+    tryIt: 'Check the pressure and that the condensate pipe outside is clear.',
+    call: 'Cutting out over and over needs a proper diagnosis. It wastes gas and wears the boiler.',
+  },
+  {
+    id: 'frozen-condensate', q: 'Has my boiler condensate pipe frozen?', t: 'Frozen condensate pipe',
+    sign: 'In a cold snap the boiler gurgles, then locks out and shows a fault code. This is the most common winter breakdown in Liverpool.',
+    causes: ['The plastic condensate pipe runs outside and freezes, so the water backs up into the boiler'],
+    tryIt: 'Find the plastic pipe running from the boiler to a drain outside. Pour warm water, not boiling water, slowly along it, especially at bends and the open end. Then reset the boiler.',
+    call: 'If it freezes every winter, the pipe needs re-routing, upsizing or lagging so it does not happen again.',
+  },
+  {
+    id: 'cold-radiators', q: 'Why are my radiators cold at the top or bottom?', t: 'Radiators cold at the top or bottom',
+    sign: 'Some radiators are warm in places but cold in others.',
+    causes: ['Cold at the top: air trapped in the radiator', 'Cold at the bottom or in the middle: sludge (black iron oxide) settled in the radiator', 'Some radiators cold: the system needs balancing'],
+    tryIt: 'Bleed radiators that are cold at the top with a radiator key, then check the boiler pressure and top it up.',
+    call: 'Radiators cold at the bottom need the sludge cleaning out, often with a power flush and a magnetic filter.',
+  },
+  {
+    id: 'pilot-light', q: 'Why does my pilot light keep going out?', t: 'Pilot light keeps going out',
+    sign: 'Older boilers and back boilers with a pilot light that will not stay lit.',
+    causes: ['A faulty thermocouple', 'A dirty pilot jet', 'A draught or a flue problem'],
+    tryIt: 'Relight it once following the instructions on the boiler.',
+    call: 'If it keeps going out, it needs a Gas Safe registered engineer. On a very old boiler it may be time to replace it.',
+  },
+  {
+    id: 'lukewarm-water', q: 'Why is my hot water lukewarm or going hot and cold?', t: 'Hot water lukewarm or going hot and cold',
+    sign: 'The shower runs hot, then cold, then hot again.',
+    causes: ['Low water pressure or flow into the house', 'A faulty diverter valve or flow sensor', 'Limescale in the plate heat exchanger', 'A faulty thermostatic shower valve rather than the boiler'],
+    tryIt: 'Check whether every hot tap does it or only the shower. If only the shower, the shower valve is the likely cause.',
+    call: 'If all the taps do it, the boiler needs checking.',
+  },
 ];
 
-const faults = [
-  { t: 'No heating or hot water', d: 'Check the thermostat, the timer and that your prepayment gas meter has credit. If all is fine and the boiler shows a fault, ring us.' },
-  { t: 'Low or dropping pressure', d: 'Below 1 bar and the boiler locks out. If topping up does not hold, there is a leak or a failed part to fix.' },
-  { t: 'Error code on the display', d: 'Error codes are our speciality. Write the code down and tell us when you ring, and James will usually know the likely fault before he arrives. See what common codes mean in our boiler error codes guide.' },
-  { t: 'Frozen condensate pipe', d: 'The most common winter breakdown. The boiler gurgles, then locks out. See the FAQ below for a safe fix.' },
-  { t: 'Boiler leaking water', d: 'Turn the boiler off, put a tray underneath and keep water away from the electrics. Then call us.' },
-  { t: 'Banging, kettling or whistling', d: 'Usually sludge or scale in the heat exchanger, or a pump problem. Left alone it gets worse.' },
-  { t: 'Radiators cold at the bottom', d: 'Sludge in the system. A repair can get you going, and a power flush clears it for good.' },
-  { t: 'Boiler keeps turning off', d: 'Often a faulty sensor, a blocked flue or a pressure problem. Needs a proper diagnosis.' },
+// ---------- Error codes ----------
+const brands = [
+  {
+    id: 'baxi', name: 'Baxi', models: 'Baxi 400, 600 and 800 combi and system boilers. Many Potterton boilers use the same codes.',
+    codes: [
+      { code: 'E119', means: 'Water pressure too low', try: 'Check the pressure gauge. If it is below 1 bar, top it up to between 1 and 1.5 bar with the filling loop, then reset.', call: 'If the pressure keeps dropping, there is a leak somewhere in the system or a faulty pressure relief valve.' },
+      { code: 'E133', means: 'The boiler did not detect a flame', try: 'Check your gas is on and other gas appliances work, and that a prepayment meter has credit. In freezing weather, check the condensate pipe outside is not frozen. Then reset once.', call: 'If it locks out again and your gas supply is fine, the fault is usually the ignition electrode, the gas valve or a blocked condensate system.', causes: ['Gas off, or a prepayment meter out of credit', 'A frozen or blocked condensate pipe', 'A faulty ignition electrode', 'A faulty gas valve or control board'] },
+      { code: 'E160', means: 'Fan fault', try: 'Reset once.', call: 'If it comes back, the fan or its wiring needs checking by a Gas Safe registered engineer.' },
+    ],
+  },
+  {
+    id: 'ideal', name: 'Ideal', models: 'Ideal Logic, Vogue and Independent boilers.',
+    codes: [
+      { code: 'F1', means: 'Water pressure too low', try: 'Top the pressure up to between 1 and 1.5 bar with the filling loop, then reset.', call: 'If you have to keep topping it up, there is a leak or a faulty valve.' },
+      { code: 'F2', means: 'The flame was lost after lighting', try: 'Check the gas supply and, in cold weather, the condensate pipe outside. Then reset once.', call: 'If it keeps happening, the gas pressure, flame sensor or condensate system needs checking.' },
+      { code: 'L2', means: 'Ignition lockout: the boiler failed to light after several tries', try: 'Check the gas is on and the condensate pipe is not frozen, then reset once.', call: 'Repeated L2 lockouts usually point to the condensate system, the ignition electrode, the gas valve or the PCB.', causes: ['Gas off, or a prepayment meter with no credit', 'A frozen or blocked condensate pipe, very common on Ideal boilers in winter', 'A worn ignition electrode or faulty ignition lead', 'A faulty gas valve or control board'] },
+    ],
+  },
+  {
+    id: 'worcester', name: 'Worcester Bosch', models: 'Worcester Bosch Greenstar boilers.',
+    codes: [
+      { code: 'EA 227', means: 'No flame detected after the boiler tried to light', try: 'Check your hob works, check a prepayment meter has credit and, in freezing weather, thaw the condensate pipe outside. Then press reset once.', call: 'If EA comes back after one reset, the ignition or flame sensing needs a Gas Safe registered engineer.', causes: ['Gas off at the meter, or a prepayment meter out of credit', 'A frozen or blocked condensate pipe', 'A worn or dirty ignition electrode, or a damaged ignition lead', 'A faulty flame sensing electrode', 'A faulty gas valve or control board (PCB)'] },
+      { code: 'CE 207', means: 'Water pressure too low', try: 'Top the pressure up to between 1 and 1.5 bar using the filling key or loop.', call: 'Pressure that keeps dropping means a leak somewhere in the heating system.' },
+    ],
+  },
+  {
+    id: 'vaillant', name: 'Vaillant', models: 'Vaillant ecoTEC boilers.',
+    codes: [
+      { code: 'F22', means: 'Water pressure too low', try: 'Top the pressure up to between 1 and 1.5 bar, then reset.', call: 'If it drops again, there is a leak or a faulty pressure sensor.' },
+      { code: 'F28', means: 'The boiler failed to light when starting up', try: 'Check your hob works and a prepayment meter has credit, thaw the condensate pipe in cold weather, then reset once.', call: 'If F28 shows again after one reset, stop resetting it. The ignition, gas valve or electronics need a Gas Safe registered engineer.', causes: ['No gas reaching the boiler', 'A frozen or blocked condensate pipe', 'A faulty ignition electrode or ignition lead', 'A faulty gas valve', 'A fault on the control board (PCB)'] },
+      { code: 'F29', means: 'The flame went out while the boiler was running', try: 'Check the gas supply and the condensate pipe, then reset once.', call: 'Repeated F29 faults need a Gas Safe registered engineer to check the gas supply and combustion.' },
+      { code: 'F75', means: 'The boiler did not detect the pump or a pressure change', try: 'Check the pressure. If it is below 1 bar, top it up to between 1 and 1.5 bar and reset once.', call: 'If the pressure is fine and F75 stays, the pump or the pressure sensor usually needs replacing. An engineer can test both before fitting anything.', causes: ['Low water pressure in the heating system', 'Air trapped in the system or the pump', 'A faulty or seized pump', 'A faulty water pressure sensor'] },
+    ],
+  },
+  {
+    id: 'glow-worm', name: 'Glow-worm', models: 'Glow-worm Energy and Ultimate boilers. Glow-worm is made by the same group as Vaillant, so many codes match.',
+    codes: [
+      { code: 'F22', means: 'Water pressure too low', try: 'Top the pressure up to between 1 and 1.5 bar, then reset.', call: 'If it keeps dropping, there is a leak or a faulty valve.' },
+      { code: 'F28', means: 'The boiler failed to light', try: 'Check the gas supply and the condensate pipe, then reset once.', call: 'If it locks out again, the ignition or gas valve needs checking.' },
+      { code: 'F29', means: 'The flame was lost while running', try: 'Check the gas supply and, in cold weather, the condensate pipe. Reset once.', call: 'If it keeps happening, it needs a Gas Safe registered engineer.' },
+      { code: 'F75', means: 'Pump or water pressure sensor fault', try: 'Check the system pressure.', call: 'If the pressure is fine, the pump or sensor usually needs replacing.' },
+    ],
+  },
+];
+const codeCount = brands.reduce((n, b) => n + b.codes.length, 0);
+
+// ---------- Parts ----------
+const parts = [
+  { p: 'Diverter valve', does: 'Switches hot water between the radiators and the taps on a combi boiler.', signs: 'Hot water but no heating, heating but no hot water, or radiators warming when only a tap is on.' },
+  { p: 'Printed circuit board (PCB)', does: 'The boiler’s brain. Controls ignition, the fan, the pump and safety checks.', signs: 'No display, random lockouts, or several different faults at once.' },
+  { p: 'Ignition and flame sensing electrodes', does: 'Make the spark that lights the gas, then confirm the flame is there.', signs: 'Ignition lockouts such as Worcester EA 227, Vaillant F28, Ideal L2 and Baxi E133.' },
+  { p: 'Gas valve', does: 'Opens to let gas into the burner when the boiler fires.', signs: 'The boiler sparks but will not light, with the gas supply fine.' },
+  { p: 'Fan', does: 'Pushes flue gases out and pulls fresh air in.', signs: 'A loud hum or rattle, or fan fault codes such as Baxi E160.' },
+  { p: 'Pump', does: 'Moves hot water around the radiators.', signs: 'Radiators cold with the boiler firing, banging, overheating, Vaillant F75.' },
+  { p: 'Pressure relief valve', does: 'Lets water out safely if the pressure gets too high.', signs: 'Pressure dropping and the copper pipe outside dripping.' },
+  { p: 'Expansion vessel', does: 'Absorbs the water as it expands when it heats up.', signs: 'Pressure rising high when the heating is on, then dropping when it cools.' },
+  { p: 'Pressure sensor', does: 'Tells the boiler the water pressure.', signs: 'Low pressure codes while the gauge reads correctly.' },
+  { p: 'Plate heat exchanger', does: 'Heats your tap water on a combi boiler.', signs: 'Hot water lukewarm or going hot and cold, worse in hard water areas.' },
+  { p: 'Main heat exchanger', does: 'Transfers heat from the burner to the water.', signs: 'Kettling, leaks inside the casing. Often a sign to replace an older boiler.' },
+  { p: 'Condensate trap and pipe', does: 'Drain the acidic water a condensing boiler makes.', signs: 'Gurgling, lockouts in cold weather, water around the boiler.' },
+];
+
+// ---------- FAQs ----------
+const faqs = [
+  { q: 'How much does a boiler repair cost in Liverpool?', a: 'There is no call-out fee. Weekdays 9am to 5pm are £80 an hour, weekends 9am to 1pm are £120 an hour, and evenings, nights and bank holidays are £150 an hour, with a one hour minimum. A booked boiler fault diagnosis is £95. If a part is needed, you get the price before any work starts.' },
+  { q: 'Who will repair my boiler?', a: 'One of our Gas Safe registered heating engineers. Our team is led by James. It is illegal for anyone who is not Gas Safe registered to work on a gas boiler. You can check any engineer on the Gas Safe Register before they start.' },
+  { q: 'What does the error code on my boiler mean?', a: `Each brand uses its own codes. Low pressure codes include Baxi E119, Ideal F1, Worcester Bosch CE 207 and Vaillant F22. Ignition lockouts include Baxi E133, Ideal L2, Worcester Bosch EA 227 and Vaillant F28. This page explains ${codeCount} common codes. If yours is not listed, read it to us over the phone. Error codes are our speciality.` },
+  { q: 'Is it safe to reset my boiler?', a: 'Pressing reset once is safe and is what the manufacturer expects you to try. If the same code comes back, stop resetting it and call a Gas Safe registered engineer. Never take the boiler casing off.' },
+  { q: 'Why does my boiler keep losing pressure?', a: 'Pressure should sit between 1 and 1.5 bar when the heating is cold. If you top it up and it drops again within days, there is a leak somewhere in the system or a faulty pressure relief valve or expansion vessel. That needs finding and fixing, not topping up every week.' },
+  { q: 'How do I top up my boiler pressure?', a: 'Find the filling loop, usually under the boiler. Open the valves slowly until the gauge reads between 1 and 1.5 bar, then close both fully. If you are not sure, call us and we will talk you through it.' },
+  { q: 'My boiler stopped in the cold weather. What is wrong?', a: 'The most common cause in a cold snap is a frozen condensate pipe, the plastic pipe that runs outside from the boiler. Pour warm, not boiling, water along the pipe to thaw it, then press reset. If it freezes every winter, the pipe needs re-routing or lagging.' },
+  { q: 'Why do I have hot water but no heating?', a: 'First check the thermostat and timer, especially after a power cut. On a combi boiler, a stuck diverter valve is the most common cause. On a system or regular boiler, a failed zone valve or pump is likely.' },
+  { q: 'Why is my boiler making a banging or kettling noise?', a: 'Kettling is usually limescale or sludge in the heat exchanger making the water boil. Banging can be the pump, sludge or air in the system. Both get worse if left and put strain on the heat exchanger.' },
+  { q: 'Which boiler brands do you repair?', a: 'All the common makes in Liverpool homes, including Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm and Viessmann. Combi, system and regular boilers.' },
+  { q: 'Should I repair or replace my boiler?', a: 'If the boiler is under about 10 years old and the fault is a single part, repairing it is usually the better value. If it is older, breaking down every winter, or the part costs a large share of a new boiler, we will tell you honestly and price both options so you can choose.' },
+  { q: 'My boiler is still under warranty. Should I call you?', a: 'Check your warranty paperwork first. Most manufacturer warranties expect you to call the manufacturer for a repair, and some need a yearly service to stay valid. If your warranty has run out, or you need help sooner, ring us.' },
+  { q: 'Is a broken boiler an emergency?', a: 'If you smell gas, ring the National Gas Emergency line on 0800 111 999 first. A boiler leaking water, or no heating for elderly people, babies or anyone unwell in cold weather, is urgent. Ring us 24/7 on 0151 558 0334.' },
+  { q: 'Do you repair boilers for landlords and letting agents?', a: 'Yes. We can meet your tenant at the property, send you photos of the fault and agree the cost with you before we fix it. If the CP12 is due, we can do the gas safety check on the same visit.' },
+  { q: 'Do you repair boilers in commercial properties?', a: 'Yes, at the same rates as homes.' },
 ];
 
 const reviews = [
@@ -40,6 +188,22 @@ const areas = [
   ['Walton','walton'],['Toxteth','toxteth'],['Maghull','maghull'],['Formby','formby'],['Wirral','wirral'],['St Helens','st-helens'],
 ];
 
+const toc = [
+  ['today', 'Can we fix your boiler today?'],
+  ['prices', 'How much does it cost?'],
+  ['checks', 'What to check before you call'],
+  ['problems', 'What is wrong with my boiler?'],
+  ['error-codes', 'What does my error code mean?'],
+  ['parts', 'Which part has failed?'],
+  ['boiler-types', 'Combi, system and regular boilers'],
+  ['how-it-works', 'What happens when you call'],
+  ['reviews', 'Customer reviews'],
+  ['repair-or-replace', 'Repair or replace?'],
+  ['safety', 'Is my boiler safe?'],
+  ['prevent', 'How to stop breakdowns'],
+  ['faq', 'More questions'],
+];
+
 const schemaFaq = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
   mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
@@ -47,6 +211,7 @@ const schemaFaq = {
 const schemaService = {
   '@context': 'https://schema.org', '@type': 'Service',
   name: 'Boiler Repair Liverpool', serviceType: 'Gas boiler repair', url: URL_,
+  description: 'Gas Safe registered boiler repair across Liverpool and Merseyside, 24/7. Fault finding, error code diagnosis and repairs on Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm and Viessmann boilers. No call-out fee.',
   provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
   areaServed: [{ '@type': 'City', name: 'Liverpool' }, { '@type': 'City', name: 'Wirral' }, { '@type': 'City', name: 'St Helens' }, { '@type': 'City', name: 'Formby' }],
   offers: [
@@ -56,6 +221,12 @@ const schemaService = {
     { '@type': 'Offer', name: 'Emergency boiler repair, evenings, nights and bank holidays, per hour', price: '150', priceCurrency: 'GBP' },
   ],
 };
+const schemaPage = {
+  '@context': 'https://schema.org', '@type': 'WebPage', '@id': URL_ + '#webpage', url: URL_,
+  name: 'Boiler Repair Liverpool: prices, common problems and error codes explained',
+  dateModified: '2026-11-26', inLanguage: 'en-GB',
+  about: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
+};
 const schemaCrumbs = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: [
@@ -63,209 +234,532 @@ const schemaCrumbs = {
     { '@type': 'ListItem', position: 2, name: 'Boiler Repair Liverpool', item: URL_ },
   ],
 };
-const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem 1.35rem;';
 ---
 
 <BaseLayout
   title="Boiler Repair Liverpool | Emergency Boiler Engineer 24/7 | No Call-Out Fee"
-  description="Boiler repair in Liverpool by a Gas Safe registered engineer, 24/7. No call-out fee, from £80 an hour or a £95 fault diagnosis. Worcester Bosch, Vaillant, Ideal, Baxi. Call 0151 558 0334."
+  description="Boiler repair in Liverpool by a Gas Safe registered engineer, 24/7. No call-out fee, from £80 an hour or a £95 fault diagnosis. Common faults and error codes explained. Call 0151 558 0334."
   canonical={URL_}
 >
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaFaq)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaPage)} />
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaCrumbs)} />
 
   <!-- HERO -->
-  <section class="page-hero">
+  <section class="page-hero" id="hero">
     <div class="container" style="text-align:center;">
       <div class="page-hero-badge" style="margin:0 auto 1rem;"><span class="badge-dot"></span>Boiler error code experts · 24/7</div>
       <h1>Boiler Repair Liverpool</h1>
-      <p class="page-hero-sub">No heating, no hot water or an error code on the boiler? James, a Gas Safe registered engineer, finds the fault and fixes it, day or night. No call-out fee, and you get the price before any work starts.</p>
+      <p class="page-hero-sub">No heating, no hot water or an error code on the boiler? Our team of Gas Safe registered engineers, led by James, finds the fault and fixes it, day or night. No call-out fee, and you get the price before any work starts.</p>
       <div style="display:flex;gap:1rem;max-width:340px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">£0</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Call-out fee</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">24/7</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Including Sundays</div>
-        </div>
+        <div class="br-stat"><div class="br-stat-n">£0</div><div class="br-stat-l">Call-out fee</div></div>
+        <div class="br-stat"><div class="br-stat-n">30 min</div><div class="br-stat-l">Guaranteed response</div></div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
+        <a href={TEL} class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL {PHONE}</a>
         <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book a Repair Online</a>
       </div>
       <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> All Major Brands</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> Price Agreed First</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">✓</span> 5.0 on Google</span>
+        <span class="br-tick"><span>✓</span> Gas Safe Registered</span>
+        <span class="br-tick"><span>✓</span> All Major Brands</span>
+        <span class="br-tick"><span>✓</span> Price Agreed First</span>
+        <span class="br-tick"><span>✓</span> 5.0 on Google</span>
       </div>
     </div>
   </section>
 
-  <div class="pf">
+  <div class="brx">
 
-  <!-- QUICK ANSWER -->
-  <section class="pf-section" style="background:#ffffff;padding-bottom:1rem;">
-    <div class="container" style="max-width:760px;">
-      <div style="background:#f1f5f9;border-left:4px solid var(--orange);border-radius:10px;padding:1.1rem 1.35rem;">
-        <p style="margin:0;line-height:1.7;"><strong>Quick answer:</strong> a boiler repair in Liverpool with us has no call-out fee. It costs £80 an hour on weekdays, £120 an hour on weekend mornings and £150 an hour out of hours, with a one hour minimum. A booked fault diagnosis is £95. Many faults, such as low pressure, a frozen condensate pipe or an airlock, are fixed on the first visit.</p>
+  <!-- KEY FACTS + CONTENTS -->
+  <section class="brx-sec" id="key-facts">
+    <div class="brx-wrap">
+      <div class="brx-facts">
+        <h2 class="brx-facts-h">Boiler repair in Liverpool at a glance</h2>
+        <dl>
+          <div><dt>Who</dt><dd>A trusted team of Gas Safe registered heating engineers, led by James.</dd></div>
+          <div><dt>Price</dt><dd>No call-out fee. £80 an hour on weekdays, £120 on weekend mornings, £150 out of hours. £95 fault diagnosis.</dd></div>
+          <div><dt>Response</dt><dd>Guaranteed within 30 minutes, 24/7. Average arrival 28 minutes.</dd></div>
+          <div><dt>Brands</dt><dd>Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm, Viessmann. Combi, system and regular boilers.</dd></div>
+          <div><dt>Guarantee</dt><dd>12 months on workmanship. £2 million public liability insurance.</dd></div>
+          <div><dt>Area</dt><dd>All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.</dd></div>
+        </dl>
+      </div>
+
+      <nav class="brx-toc" aria-label="On this page">
+        <p class="brx-toc-h">On this page</p>
+        <ol>
+          {toc.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+        </ol>
+      </nav>
+      <p class="brx-updated">Updated {UPDATED}</p>
+    </div>
+  </section>
+
+  <!-- TODAY -->
+  <section class="brx-sec brx-tint" id="today">
+    <div class="brx-wrap">
+      <h2>Can we fix your boiler today?</h2>
+      <p class="brx-answer"><strong>Yes, we can.</strong> We answer 24 hours a day, 7 days a week, including weekends and bank holidays. We guarantee a response within 30 minutes, and our engineers arrive in 28 minutes on average.</p>
+      <p>Many faults are fixed on the first visit, such as low pressure, a frozen condensate pipe, an airlock or a failed ignition electrode. If a part has to be ordered, the engineer makes the boiler safe and comes back to fit it.</p>
+      <p>To help the engineer come prepared, tell us when you ring:</p>
+      <ul class="brx-list">
+        <li>The make of boiler, for example Worcester Bosch, Vaillant, Ideal or Baxi</li>
+        <li>Any error code on the display, written exactly as it shows</li>
+        <li>What it is doing: no heating, no hot water, leaking, noisy or losing pressure</li>
+      </ul>
+      <div class="brx-cta">
+        <p><strong>Boiler down right now?</strong> A real person answers, day or night.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#ffffff;padding-top:1.5rem;">
-    <div class="container">
-      <h2>Boiler Repair Prices in Liverpool</h2>
-      <p class="pf-sub">No call-out fee. A one hour minimum, and you agree the price of any part before it is fitted.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:900px;margin:0 auto;">
-        <div style={card+'border-top:4px solid var(--orange);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--orange);letter-spacing:0.08em;">WEEKDAYS 9AM TO 5PM</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£80<span style="font-size:1rem;"> an hour</span></div></div>
-        <div style={card+'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">WEEKENDS 9AM TO 1PM</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£120<span style="font-size:1rem;"> an hour</span></div></div>
-        <div style={card+'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">EVENINGS, NIGHTS, BANK HOLIDAYS</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£150<span style="font-size:1rem;"> an hour</span></div></div>
-        <div style={card+'border-top:4px solid #16a34a;text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:#16a34a;letter-spacing:0.08em;">BOOKED FAULT DIAGNOSIS</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£95</div></div>
+  <!-- PRICES -->
+  <section class="brx-sec" id="prices">
+    <div class="brx-wrap">
+      <h2>How much does boiler repair cost in Liverpool?</h2>
+      <p class="brx-answer">A boiler repair with us has <strong>no call-out fee</strong>. You pay by the hour, with a one hour minimum, or £95 for a booked fault diagnosis. Parts are extra, and you agree the price of any part before it is fitted.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th scope="col">When</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><td>Weekdays, 9am to 5pm</td><td><strong>£80</strong> an hour</td></tr>
+            <tr><td>Weekends, 9am to 1pm</td><td><strong>£120</strong> an hour</td></tr>
+            <tr><td>Evenings, nights and bank holidays</td><td><strong>£150</strong> an hour</td></tr>
+            <tr><td>Booked boiler fault diagnosis</td><td><strong>£95</strong></td></tr>
+            <tr><td>Call-out fee</td><td><strong>£0</strong></td></tr>
+          </tbody>
+        </table>
       </div>
       <ul class="br-trust">
         <li><strong>30 min</strong>guaranteed response, 28 min average</li>
         <li><strong>12 months</strong>workmanship guarantee</li>
         <li><strong>£2 million</strong>public liability insurance</li>
-        <li><strong>One engineer</strong>James does every job himself</li>
+        <li><strong>Trusted team</strong>highly trained engineers, led by James</li>
       </ul>
+      <p>Many faults, such as low pressure, a frozen condensate pipe or an airlock, are fixed on the first visit. If a part has to be ordered, the engineer makes the boiler safe and comes back to fit it.</p>
     </div>
   </section>
 
-  <!-- COMMON FAULTS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Common Boiler Faults We Fix</h2>
-      <p class="pf-sub">If your boiler is doing any of these, ring 0151 558 0334 and tell us what you can see.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
-        {faults.map((f) => (
-          <div style={card}><h3 style="font-size:1.02rem;margin:0 0 0.35rem;">{f.t}</h3><p style="margin:0;font-size:0.92rem;line-height:1.6;color:#334155;">{f.d}</p></div>
+  <!-- CHECKS -->
+  <section class="brx-sec brx-tint" id="checks">
+    <div class="brx-wrap">
+      <h2>Boiler not working? What should you check before you call?</h2>
+      <p class="brx-answer">These take a few minutes and sometimes get the heating back on without a visit.</p>
+      <ol class="brx-checks">
+        <li><strong>Pressure.</strong> The gauge should read 1 to 1.5 bar when the heating is cold. Below 1 bar, most boilers stop.</li>
+        <li><strong>Gas supply.</strong> Does the hob light? On a prepayment meter, check there is credit.</li>
+        <li><strong>Power.</strong> Check the fused switch next to the boiler is on and the display is lit. Check your fuse box for a tripped switch.</li>
+        <li><strong>Thermostat and timer.</strong> Turn the thermostat up and check the clock has not reset after a power cut. Check smart thermostat batteries.</li>
+        <li><strong>Condensate pipe.</strong> In freezing weather, check the plastic pipe outside for ice.</li>
+        <li><strong>Reset once.</strong> Press reset one time. If it locks out again, leave it and ring us with the error code.</li>
+      </ol>
+      <div class="brx-danger">
+        <p><strong>Smell gas?</strong> Do not touch light switches. Open windows, turn the gas off at the meter if it is safe to, get everyone out and ring the National Gas Emergency number on <a href="tel:08001119999">0800 111 999</a>. Once it is made safe, we can repair the boiler.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS -->
+  <section class="brx-sec" id="problems">
+    <div class="brx-wrap">
+      <h2>What is wrong with my boiler?</h2>
+      <p class="brx-answer">Tap what your boiler is doing. Each one explains the likely causes, what is safe to try yourself, and when you need an engineer.</p>
+      {problems.map((p) => (
+        <details class="brx-card" id={p.id}>
+          <summary><h3>{p.q}</h3><span class="brx-chev" aria-hidden="true"></span></summary>
+          <p class="brx-sign">{p.sign}</p>
+          <p class="brx-label">Likely causes</p>
+          <ul class="brx-list">{p.causes.map((c) => <li>{c}</li>)}</ul>
+          <p class="brx-label">What you can try</p>
+          <p>{p.tryIt}</p>
+          <p class="brx-call"><strong>Call us if:</strong> {p.call}</p>
+        </details>
+      ))}
+      <div class="brx-cta">
+        <p><strong>Not sure what is wrong?</strong> Ring and describe what the boiler is doing. We will usually know the likely fault before the engineer arrives.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERROR CODES -->
+  <section class="brx-sec brx-tint" id="error-codes">
+    <div class="brx-wrap">
+      <p class="brx-kicker">Boiler error code experts</p>
+      <h2>What does my boiler error code mean?</h2>
+      <p class="brx-answer">A boiler error code tells you why the boiler has stopped. The most common are <strong>low pressure</strong> (Baxi E119, Ideal F1, Worcester Bosch CE 207, Vaillant F22) and <strong>ignition lockouts</strong> (Baxi E133, Ideal L2, Worcester Bosch EA 227, Vaillant F28). Below are {codeCount} codes we see most often in Liverpool, with what each means, what you can safely try, and when to call.</p>
+
+      <div class="brx-finder">
+        <label for="code-finder">Type your error code</label>
+        <input id="code-finder" type="search" inputmode="text" autocomplete="off" placeholder="For example F28, EA 227 or L2" />
+        <p id="code-finder-status" class="brx-finder-status" aria-live="polite"></p>
+      </div>
+
+      <ul class="brx-jump brx-brands">
+        {brands.map((b) => <li><a href={`#${b.id}`}>{b.name}</a></li>)}
+      </ul>
+
+      {brands.map((b) => (
+        <div class="brx-brand" id={b.id} data-brand>
+          <h3 class="brx-brand-h">{b.name} boiler error codes</h3>
+          <p class="brx-small">{b.models}</p>
+          <div class="brx-codes">
+            {b.codes.map((c) => (
+              <article class="brx-code" data-code={`${b.name} ${c.code} ${c.code.replace(/\s/g, '')}`.toLowerCase()}>
+                <h4><span class="brx-tag">{c.code}</span> {b.name} {c.code}: {c.means.charAt(0).toLowerCase() + c.means.slice(1)}</h4>
+                {c.causes && (<>
+                  <p class="brx-label">Common causes</p>
+                  <ul class="brx-list">{c.causes.map((x) => <li>{x}</li>)}</ul>
+                </>)}
+                <p><strong>Try:</strong> {c.try}</p>
+                <p><strong>Call us if:</strong> {c.call}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+      <p id="code-finder-none" class="brx-none" hidden>We have not listed that code here, but our engineers will know it. Ring <a href={TEL}>{PHONE}</a> and read it to us.</p>
+
+      <div class="brx-note">
+        <p><strong>Potterton, Viessmann or another make?</strong> We repair those too. Write the code down exactly as it shows, including any letters, and read it to us when you ring.</p>
+      </div>
+      <div class="brx-cta">
+        <p><strong>Code keeps coming back?</strong> Error codes are our speciality. Tell us the code and we will usually know the fault before the engineer arrives.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTS -->
+  <section class="brx-sec" id="parts">
+    <div class="brx-wrap">
+      <h2>Which boiler part has failed?</h2>
+      <p class="brx-answer">Most boiler breakdowns come down to one failed part. Here is what each part does and the signs that it has failed.</p>
+      <div class="brx-parts">
+        {parts.map((x) => (
+          <div class="brx-part">
+            <h3>{x.p}</h3>
+            <p><span class="brx-label-inline">What it does:</span> {x.does}</p>
+            <p><span class="brx-label-inline">Signs it has failed:</span> {x.signs}</p>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- BEFORE YOU CALL -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container" style="max-width:760px;">
-      <h2>Five Checks Before You Call</h2>
-      <p class="pf-sub">These take two minutes and sometimes get the heating back on without a visit.</p>
-      <ol style="line-height:1.75;padding-left:1.25rem;margin:0;">
-        <li><strong>Pressure.</strong> The gauge should read 1 to 1.5 bar when cold. Below 1 and most boilers stop.</li>
-        <li><strong>Gas supply.</strong> Is the hob working? On a prepayment meter, check there is credit.</li>
-        <li><strong>Thermostat and timer.</strong> Turn the thermostat up and check the clock has not reset after a power cut.</li>
-        <li><strong>Condensate pipe.</strong> In freezing weather, check the plastic pipe outside for ice.</li>
-        <li><strong>Reset.</strong> Press reset once. If it locks out again, leave it and ring us with the error code. Our <a href="/boiler-error-codes" style="font-weight:700;">boiler error codes guide</a> explains the common Baxi, Ideal, Worcester Bosch, Vaillant and Glow-worm codes.</li>
-      </ol>
-      <div style="background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #dc2626;border-radius:10px;padding:1rem 1.25rem;margin-top:1.25rem;">
-        <p style="margin:0;line-height:1.65;"><strong>Smell gas?</strong> Do not touch switches. Open windows, turn the gas off at the meter if safe, get everyone out and ring the National Gas Emergency number on <a href="tel:0800111999" style="font-weight:700;">0800 111 999</a>. Once it is made safe, we can repair the boiler.</p>
+  <!-- BOILER TYPES -->
+  <section class="brx-sec brx-tint" id="boiler-types">
+    <div class="brx-wrap">
+      <h2>Do you repair combi, system and regular boilers?</h2>
+      <p class="brx-answer">Our engineers repair all three types. Knowing which you have helps us narrow down the fault when you ring.</p>
+      <div class="brx-types">
+        <div><h3>Combi boiler</h3><p>No hot water tank. Heats water straight from the mains when you turn a tap on. Most common in Liverpool homes. Typical faults: diverter valve, plate heat exchanger, pressure.</p></div>
+        <div><h3>System boiler</h3><p>Has a hot water cylinder, usually in an airing cupboard, but no tank in the loft. Typical faults: zone valves, pump, cylinder thermostat, pressure.</p></div>
+        <div><h3>Regular boiler</h3><p>Also called a heat-only or conventional boiler. Has a cylinder and tanks in the loft. Typical faults: pump, zone valves, programmer, the feed and expansion tank.</p></div>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container" style="max-width:760px;">
-      <h2>How a Boiler Repair Works</h2>
-      <div style="display:flex;flex-direction:column;gap:0.75rem;">
-        <div style={card}><strong>1. You ring us, 24/7.</strong> A real person answers. Tell us the make of boiler and any error code.</div>
-        <div style={card}><strong>2. James comes out.</strong> He is Gas Safe registered and does the repair himself.</div>
-        <div style={card}><strong>3. Fault found, price agreed.</strong> He explains what is wrong and what it costs before fixing anything.</div>
-        <div style={card}><strong>4. Fixed and tested.</strong> The boiler is tested and the heating and hot water checked before he leaves. If a part has to be ordered, he makes it safe and comes back to fit it.</div>
-      </div>
+  <section class="brx-sec" id="how-it-works">
+    <div class="brx-wrap">
+      <h2>What happens when you call us?</h2>
+      <ol class="brx-steps">
+        <li><strong>You ring us, 24/7.</strong> A real person answers. Tell us the make of boiler and any error code.</li>
+        <li><strong>An engineer comes out.</strong> A guaranteed 30 minute response. Every boiler repair is done by a Gas Safe registered engineer.</li>
+        <li><strong>Fault found, price agreed.</strong> The engineer explains what is wrong and what it costs before fixing anything.</li>
+        <li><strong>Fixed and tested.</strong> The boiler is tested and the heating and hot water checked before the engineer leaves. If a part has to be ordered, they make it safe and comes back to fit it.</li>
+      </ol>
     </div>
   </section>
 
   <!-- REVIEWS -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Customers Say About Our Boiler Repairs</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#f59e0b;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
+  <section class="brx-sec brx-tint" id="reviews">
+    <div class="brx-wrap">
+      <h2>What do customers say about our boiler repairs?</h2>
+      <p class="brx-rating"><strong>5.0</strong> <span aria-hidden="true">★★★★★</span> from 53 Google reviews</p>
+      <div class="brx-reviews">
         {reviews.map((r) => (
-          <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>{r.t}</p><div class="pf-review-footer"><div class="pf-review-avatar">{r.n[0]}</div><div><div class="pf-review-name">{r.n}</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
+          <figure class="brx-review"><blockquote>“{r.t}”</blockquote><figcaption>{r.n} · Google review</figcaption></figure>
         ))}
       </div>
-      <div style="text-align:center;margin-top:1.5rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See all reviews on Google →</a></div>
+      <p><a class="brx-link" href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener">See all reviews on Google →</a></p>
     </div>
   </section>
 
   <!-- REPAIR OR REPLACE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container br-rr">
+  <section class="brx-sec" id="repair-or-replace">
+    <div class="brx-wrap br-rr">
       <figure class="br-photo">
         <picture>
-          <source type="image/webp" srcset="/images/jobs/boiler-smart-thermostat-fitted-480.webp 480w, /images/jobs/boiler-smart-thermostat-fitted-960.webp 960w" sizes="(max-width: 800px) 100vw, 320px" />
-          <img src="/images/jobs/boiler-smart-thermostat-fitted-960.jpg" alt="Boiler and smart thermostat receiver fitted by James in a Liverpool home" loading="lazy" decoding="async" width="960" height="1280" />
+          <source type="image/webp" srcset="/images/jobs/boiler-smart-thermostat-fitted-480.webp 480w, /images/jobs/boiler-smart-thermostat-fitted-960.webp 960w" sizes="(max-width: 800px) 100vw, 300px" />
+          <img src="/images/jobs/boiler-smart-thermostat-fitted-960.jpg" alt="Boiler and smart thermostat receiver fitted by our team in a Liverpool home" loading="lazy" decoding="async" width="960" height="1280" />
         </picture>
-        <figcaption>A recent job: boiler controls fitted by James.</figcaption>
+        <figcaption>A recent job: boiler controls fitted by our team.</figcaption>
       </figure>
       <div>
-      <h2>Repair or Replace Your Boiler?</h2>
-      <p style="line-height:1.75;">Most boilers under about 10 years old are worth repairing. If yours is older, breaks down every winter, or the part would cost a big share of a new one, we will say so honestly and price both options.</p>
-      <p style="line-height:1.75;">If it is time for a new one, James fits <a href="/boiler-installation-liverpool" style="font-weight:700;">new boilers in Liverpool</a> with up to a 10 year manufacturer warranty. Still got an old back boiler behind the fire? James removes it and replaces it with a modern combi boiler.</p>
-      <p style="line-height:1.75;margin-bottom:0;">A yearly <a href="/boiler-service-liverpool" style="font-weight:700;">boiler service</a> catches most faults before they leave you without heating, and keeps the manufacturer's warranty valid. Radiators cold at the bottom? A <a href="/power-flushing-liverpool" style="font-weight:700;">power flush</a> clears the sludge.</p>
+        <h2>Should you repair or replace your boiler?</h2>
+        <p class="brx-answer">Most boilers under about 10 years old are worth repairing. If yours is older, breaks down every winter, or the part would cost a big share of a new one, we will say so honestly and price both options.</p>
+        <p class="brx-label">Signs it may be time to replace</p>
+        <ul class="brx-list">
+          <li>The boiler is over 15 years old</li>
+          <li>It has broken down more than once this winter</li>
+          <li>The main heat exchanger has failed or is leaking</li>
+          <li>Parts are no longer made for it</li>
+          <li>It is an old back boiler behind the fire</li>
+        </ul>
+        <p>If it is time for a new one, we fit <a class="brx-link" href="/boiler-installation-liverpool">new boilers in Liverpool</a> with up to a 10 year manufacturer warranty. Still got an old back boiler? We remove it and replace it with a modern combi boiler.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="brx-sec brx-tint" id="safety">
+    <div class="brx-wrap">
+      <h2>Is my boiler safe? Gas leaks and carbon monoxide</h2>
+      <p class="brx-answer">A faulty boiler can leak carbon monoxide, a gas you cannot see or smell. Only a Gas Safe registered engineer should ever open a gas boiler.</p>
+      <div class="brx-two">
+        <div>
+          <p class="brx-label">Warning signs on the boiler</p>
+          <ul class="brx-list">
+            <li>A lazy yellow or orange flame instead of a crisp blue one</li>
+            <li>Black soot or brown staining on or around the boiler</li>
+            <li>A pilot light that keeps going out</li>
+            <li>More condensation than usual on windows near it</li>
+          </ul>
+        </div>
+        <div>
+          <p class="brx-label">Carbon monoxide symptoms</p>
+          <ul class="brx-list">
+            <li>Headaches, dizziness or feeling sick</li>
+            <li>Tiredness, breathlessness or confusion</li>
+            <li>Symptoms that ease when you leave the house</li>
+          </ul>
+        </div>
+      </div>
+      <div class="brx-danger">
+        <p><strong>If you suspect carbon monoxide or smell gas:</strong> open windows, turn the boiler off, get everyone out and ring the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a>. If anyone feels unwell, get medical help.</p>
+      </div>
+      <p>Fit an audible carbon monoxide alarm in every room with a gas appliance, and test it monthly. Before anyone works on your boiler, check they are on the Gas Safe Register and ask to see their Gas Safe ID card. Landlords need a <a class="brx-link" href="/gas-safety-certificate-liverpool">gas safety certificate (CP12)</a> every year.</p>
+    </div>
+  </section>
+
+  <!-- PREVENT -->
+  <section class="brx-sec" id="prevent">
+    <div class="brx-wrap">
+      <h2>How can you stop your boiler breaking down?</h2>
+      <p class="brx-answer">Most winter breakdowns can be avoided with a few simple habits.</p>
+      <ol class="brx-checks">
+        <li><strong>Get it serviced every year.</strong> A <a class="brx-link" href="/boiler-service-liverpool">boiler service</a> catches worn parts early and keeps most manufacturer warranties valid.</li>
+        <li><strong>Check the pressure once a month.</strong> 1 to 1.5 bar when cold.</li>
+        <li><strong>Run the heating for 15 minutes a month in summer.</strong> It stops the pump and valves seizing.</li>
+        <li><strong>Lag the condensate pipe.</strong> Insulating the outside pipe stops it freezing.</li>
+        <li><strong>Bleed radiators every autumn.</strong> Air in the system makes the boiler work harder.</li>
+        <li><strong>Fit a magnetic filter.</strong> It catches sludge before it reaches the boiler. Radiators already cold at the bottom may need a <a class="brx-link" href="/power-flushing-liverpool">power flush</a>.</li>
+      </ol>
     </div>
   </section>
 
   <!-- AREAS -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Boiler Repairs Across Liverpool and Merseyside</h2>
-      <p class="pf-sub">Every Liverpool postcode, plus the Wirral, Sefton, Knowsley and St Helens.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:860px;margin:0 auto;">
-        {areas.map(([n, s]) => (
-          <a href={`/emergency-plumber-${s}`} style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:0.4rem 0.9rem;font-size:0.88rem;font-weight:600;color:var(--navy);text-decoration:none;">{n}</a>
-        ))}
-      </div>
+  <section class="brx-sec brx-tint" id="areas">
+    <div class="brx-wrap">
+      <h2>Which areas do you cover for boiler repairs?</h2>
+      <p>Every Liverpool postcode, plus the Wirral, Sefton, Knowsley and St Helens.</p>
+      <ul class="brx-jump">
+        {areas.map(([n, s]) => <li><a href={`/emergency-plumber-${s}`}>{n}</a></li>)}
+      </ul>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Repair Questions</h2>
-      <div class="pf-faq" style="display:flex;flex-direction:column;gap:0.5rem;">
-        {faqs.map((f) => (
-          <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-orange">{f.tag}</span>&nbsp; {f.q}</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>{f.a}</p></div></details>
-        ))}
-      </div>
+  <section class="brx-sec" id="faq">
+    <div class="brx-wrap">
+      <h2>More boiler repair questions</h2>
+      {faqs.map((f) => (
+        <details class="brx-faq"><summary>{f.q}</summary><p>{f.a}</p></details>
+      ))}
     </div>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="pf-section" style="background:var(--navy);text-align:center;">
-    <div class="container" style="max-width:640px;">
-      <h2 style="color:#ffffff;">Boiler Broken? Ring Us Now.</h2>
-      <p style="color:rgba(255,255,255,0.85);margin-bottom:1.5rem;">24 hours a day, 7 days a week. No call-out fee. Gas Safe registered.</p>
-      <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;">CALL 0151 558 0334</a>
+  <section class="brx-final" id="final-cta">
+    <div class="brx-wrap">
+      <h2>Boiler broken? Ring us now.</h2>
+      <p>24 hours a day, 7 days a week. No call-out fee. Gas Safe registered. Guaranteed 30 minute response.</p>
+      <a href={TEL} class="brx-btn brx-btn-big">Call {PHONE}</a>
     </div>
   </section>
 
   </div>
 </BaseLayout>
 
+<script>
+  const openTarget = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const el = id && document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') { (el as HTMLDetailsElement).open = true; el.scrollIntoView({ block: 'start' }); }
+  };
+  window.addEventListener('hashchange', openTarget);
+  openTarget();
+  const input = document.getElementById('code-finder') as HTMLInputElement | null;
+  if (input) {
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('.brx-code'));
+    const brandsEls = Array.from(document.querySelectorAll<HTMLElement>('[data-brand]'));
+    const status = document.getElementById('code-finder-status');
+    const none = document.getElementById('code-finder-none');
+    const run = () => {
+      const q = input.value.toLowerCase().replace(/\s+/g, ' ').trim();
+      const qs = q.replace(/\s/g, '');
+      let shown = 0;
+      cards.forEach((c) => {
+        const hay = c.dataset.code || '';
+        const hit = !q || hay.includes(q) || hay.includes(qs);
+        c.hidden = !hit; if (hit) shown++;
+      });
+      brandsEls.forEach((b) => { b.hidden = !!q && !b.querySelector('.brx-code:not([hidden])'); });
+      if (status) status.textContent = q ? (shown ? `${shown} matching code${shown > 1 ? 's' : ''}` : '') : '';
+      if (none) none.hidden = !(q && shown === 0);
+    };
+    input.addEventListener('input', run);
+    input.addEventListener('change', () => {
+      const v = input.value.trim();
+      if (v && typeof (window as any).gtag === 'function') (window as any).gtag('event', 'error_code_search', { search_term: v.slice(0, 20), page_path: location.pathname });
+    });
+  }
+</script>
+
 <style>
-  .br-trust { list-style: none; padding: 0; margin: 1.25rem auto 0; max-width: 900px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
-  .br-trust li { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 0.75rem 0.9rem; font-size: 0.92rem; color: #334155; line-height: 1.4; text-align: left; }
+  .br-stat { flex: 1; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 0.75rem 1rem; text-align: center; }
+  .br-stat-n { font-family: 'Barlow Condensed', sans-serif; font-size: 2.1rem; font-weight: 900; color: var(--orange-dark); line-height: 1; }
+  .br-stat-l { font-size: 0.78rem; color: var(--navy); font-weight: 700; margin-top: 0.2rem; }
+  .br-tick { font-size: 0.85rem; font-weight: 700; color: var(--navy); }
+  .br-tick span { color: #16a34a; }
+
+  .brx { text-align: left; }
+  .brx-wrap { max-width: 820px; margin: 0 auto; padding: 0 1.25rem; }
+  .brx-sec { padding: 2.75rem 0; background: #fff; }
+  .brx-tint { background: #f1f5f9; }
+  .brx h2 { font: 900 clamp(1.8rem, 5.5vw, 2.4rem)/1.1 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.85rem; text-align: left; }
+  .brx h3 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin: 0 0 0.5rem; line-height: 1.3; text-align: left; }
+  .brx p, .brx li { font-size: 1.05rem; line-height: 1.65; color: #1e293b; }
+  .brx p { margin: 0 0 0.9rem; }
+  .brx-answer { font-size: 1.12rem !important; color: #0f172a !important; }
+  .brx-link, .brx p a { color: #c2410c; font-weight: 800; }
+  .brx-small { font-size: 0.95rem !important; color: #475569 !important; }
+  .brx-label { font-size: 0.8rem !important; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: #c2410c !important; margin: 0.9rem 0 0.35rem !important; }
+  .brx-label-inline { font-weight: 800; color: var(--navy); }
+  .brx-kicker { display: inline-block; background: var(--navy); color: #fff !important; font-weight: 800; font-size: 0.82rem !important; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 999px; padding: 0.35rem 0.85rem; margin: 0 0 0.8rem !important; }
+  .brx-list { margin: 0 0 0.75rem; padding-left: 1.25rem; }
+  .brx-list li { margin-bottom: 0.3rem; }
+
+  .brx-facts { background: #fff7ed; border: 2px solid #fed7aa; border-radius: 16px; padding: 1.35rem 1.4rem; }
+  .brx-facts-h { font-size: clamp(1.5rem, 4.5vw, 1.9rem) !important; }
+  .brx-facts dl { margin: 0; display: grid; gap: 0.6rem; }
+  .brx-facts dl div { display: grid; grid-template-columns: 96px 1fr; gap: 0.75rem; }
+  .brx-facts dt { font-weight: 900; color: var(--navy); }
+  .brx-facts dd { margin: 0; line-height: 1.55; color: #1e293b; }
+  .brx-toc { margin-top: 1.5rem; border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1.35rem; }
+  .brx-toc-h { font-weight: 900; color: var(--navy); margin: 0 0 0.5rem !important; }
+  .brx-toc ol { margin: 0; padding-left: 1.3rem; columns: 2; column-gap: 2rem; }
+  .brx-toc li { break-inside: avoid; margin-bottom: 0.3rem; }
+  .brx-toc a { color: var(--navy-mid); font-weight: 700; }
+  .brx-updated { font-size: 0.88rem !important; color: #64748b !important; margin: 0.75rem 0 0 !important; }
+
+  .brx-table-wrap { overflow-x: auto; margin: 0 0 1.25rem; }
+  .brx-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(15,23,42,0.08); }
+  .brx-table th { background: var(--navy); color: #fff; text-align: left; padding: 0.75rem 1rem; font-size: 0.9rem; }
+  .brx-table td { padding: 0.8rem 1rem; border-top: 1px solid var(--border); font-size: 1.05rem; }
+  .brx-table td strong { color: var(--navy); font-size: 1.2rem; }
+
+  .br-trust { list-style: none; padding: 0; margin: 0 0 1.25rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+  .br-trust li { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 0.75rem 0.9rem; font-size: 0.92rem; color: #334155; line-height: 1.4; }
   .br-trust strong { display: block; color: var(--navy); font-size: 1.1rem; }
+
+  .brx-checks, .brx-steps { margin: 0 0 1rem; padding-left: 1.4rem; }
+  .brx-checks li, .brx-steps li { margin-bottom: 0.6rem; }
+  .brx-danger { background: #fef2f2; border-left: 5px solid #dc2626; border-radius: 10px; padding: 1rem 1.2rem; margin: 1rem 0; }
+  .brx-danger p { margin: 0 !important; color: #7f1d1d !important; }
+  .brx-danger a { color: #991b1b !important; }
+  .brx-note { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--navy); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.25rem 0; }
+  .brx-note p { margin: 0 !important; }
+
+  .brx-jump { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .brx-jump a { display: block; background: #fff; border: 2px solid var(--border); border-radius: 999px; padding: 0.45rem 0.95rem; font-weight: 700; font-size: 0.95rem; color: var(--navy); text-decoration: none; }
+  .brx-jump a:hover { border-color: var(--orange); }
+  .brx-tint .brx-jump a { background: #fff; }
+  .brx-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 0 1.35rem; margin-bottom: 0.65rem; scroll-margin-top: 1rem; box-shadow: 0 1px 2px rgba(15,23,42,0.05); }
+  .brx-card[open] { padding-bottom: 1.2rem; border-color: #fdba74; }
+  .brx-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.05rem 0; }
+  .brx-card summary::-webkit-details-marker { display: none; }
+  .brx-card summary h3 { margin: 0; font-size: 1.1rem; }
+  .brx-chev { flex: 0 0 28px; height: 28px; border-radius: 50%; background: #fff7ed; position: relative; }
+  .brx-chev::before { content: ''; position: absolute; left: 10px; top: 8px; width: 7px; height: 7px; border-right: 2.5px solid var(--orange-dark); border-bottom: 2.5px solid var(--orange-dark); transform: rotate(45deg); transition: transform .15s; }
+  .brx-card[open] .brx-chev::before { transform: rotate(-135deg); top: 11px; }
+  .brx-sign { color: #334155 !important; font-style: italic; }
+  .brx-call { background: #f8fafc; border-radius: 8px; padding: 0.7rem 0.9rem; margin: 0.5rem 0 0 !important; }
+
+  .brx-cta { background: var(--navy); border-radius: 14px; padding: 1.15rem 1.3rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .brx-cta p { margin: 0 !important; flex: 1 1 260px; color: rgba(255,255,255,0.92) !important; }
+  .brx-cta strong { color: #fff; }
+  .brx-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; background: #ea580c; color: #fff !important; border-radius: 10px; padding: 0.6rem 1.25rem; font: 900 1.3rem 'Barlow Condensed', sans-serif; text-decoration: none; white-space: nowrap; }
+  .brx-btn:hover { background: #c2410c; }
+
+  .brx-finder { background: #fff7ed; border: 2px solid #fed7aa; border-radius: 14px; padding: 1rem 1.2rem; margin: 0.5rem 0 1.25rem; }
+  .brx-finder label { display: block; font-weight: 900; color: var(--navy); margin-bottom: 0.4rem; }
+  .brx-finder input { width: 100%; box-sizing: border-box; font-size: 1.15rem; padding: 0.75rem 0.9rem; border: 2px solid var(--border); border-radius: 10px; }
+  .brx-finder input:focus { outline: 3px solid var(--orange); border-color: var(--orange); }
+  .brx-finder-status { margin: 0.4rem 0 0 !important; font-size: 0.92rem !important; color: #475569 !important; min-height: 1.2em; }
+  .brx-brand { margin-bottom: 2rem; scroll-margin-top: 1rem; }
+  .brx-brand-h { font: 900 1.6rem/1.15 'Barlow Condensed', sans-serif !important; margin-bottom: 0.2rem !important; }
+  .brx-codes { display: grid; gap: 0.85rem; }
+  .brx-code { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--orange); border-radius: 12px; padding: 1rem 1.2rem; }
+  .brx-code h4 { font-size: 1.08rem; font-weight: 800; color: var(--navy); margin: 0 0 0.5rem; line-height: 1.4; text-align: left; }
+  .brx-code p { margin: 0 0 0.45rem; }
+  .brx-tag { display: inline-block; background: var(--navy); color: #fff; border-radius: 6px; padding: 0.1rem 0.5rem; margin-right: 0.3rem; font-family: ui-monospace, monospace; font-size: 0.95rem; }
+  .brx-none { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+
+  .brx-parts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+  .brx-part { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem; }
+  .brx-part h3 { font-size: 1.08rem; }
+  .brx-part p { font-size: 0.98rem; margin: 0 0 0.4rem; }
+  .brx-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; }
+  .brx-types > div { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.1rem; }
+  .brx-types p { font-size: 0.98rem; margin: 0; }
+  .brx-two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+  .brx-rating { font-size: 1.15rem !important; }
+  .brx-rating strong { font-size: 1.6rem; color: var(--navy); }
+  .brx-rating span { color: #f59e0b; }
+  .brx-reviews { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 1rem; }
+  .brx-review { margin: 0; background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem; }
+  .brx-review blockquote { margin: 0 0 0.6rem; font-size: 1rem; line-height: 1.6; color: #1e293b; }
+  .brx-review figcaption { font-weight: 800; color: var(--navy); font-size: 0.92rem; }
+
   .br-rr { max-width: 960px; display: grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: start; }
   .br-photo { margin: 0; }
-  .br-rr h2 { text-align: left; }
   .br-photo img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(15,23,42,0.15); }
   .br-photo figcaption { font-size: 0.88rem; color: #475569; margin-top: 0.5rem; }
+
+  .brx-faq { background: #fff; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.5rem; }
+  .brx-faq summary { cursor: pointer; padding: 1rem 1.2rem; font-weight: 800; color: var(--navy); font-size: 1.05rem; text-align: left; }
+  .brx-faq p { padding: 0 1.2rem 1rem; margin: 0 !important; }
+
+  .brx-final { background: var(--navy); padding: 3rem 0; text-align: center; }
+  .brx-final h2 { color: #fff !important; text-align: center !important; }
+  .brx-final p { color: rgba(255,255,255,0.88) !important; }
+  .brx-btn-big { font-size: 1.6rem; min-height: 60px; width: 100%; max-width: 420px; }
+
   @media (max-width: 800px) {
     .br-trust { grid-template-columns: 1fr 1fr; }
     .br-rr { grid-template-columns: 1fr; }
-    .br-photo { max-width: none; }
     .br-photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 35%; }
+  }
+  @media (max-width: 640px) {
+    .brx-toc ol { columns: 1; }
+    .brx-parts, .brx-types, .brx-two, .brx-reviews { grid-template-columns: 1fr; }
+    .brx-facts dl div { grid-template-columns: 1fr; gap: 0.1rem; }
+    .brx-cta .brx-btn { width: 100%; }
   }
 </style>
