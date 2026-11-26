@@ -1,0 +1,237 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/radiator-valve-replacement-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'trv', tier: 'Single valve', name: 'TRV supplied and fitted', price: '£65', unit: 'per radiator, inc VAT',
+    points: ['New thermostatic valve and matching lockshield where needed', 'Drain down or freezing kit as needed', 'Refilled, bled and leak checked'] },
+  { id: 'six-trvs', tier: 'Whole house', popular: true, name: 'Up to 6 TRVs supplied and fitted', price: '£295', unit: 'up to 6 radiators, inc VAT',
+    points: ['Save £95 on six valves', 'One drain down for the whole job', 'Usually done in half a day'] },
+  { id: 'leak', tier: 'Repair', name: 'Leaking radiator valve repair', price: '£120', unit: 'first hour, weekdays 9am–4pm, inc VAT',
+    points: ['No call-out fee', 'Most valve leaks fixed in the first hour', '£150 evenings and weekends, £180 bank holidays'] },
+  { id: 'smart', tier: 'Smart heating', name: 'Fit your own smart radiator valves', price: '£65', unit: 'per radiator, inc VAT',
+    points: ['Tado, Hive, Drayton Wiser, Netatmo, Danfoss and others', 'Fitted, paired and tested', 'Old manual valve heads taken off'] },
+];
+
+const faqs = [
+  { q: 'How much does radiator valve replacement cost in Liverpool?', a: 'With us, a thermostatic radiator valve (TRV) supplied and fitted is £65 including VAT. Up to six TRVs are £295. A manual valve pair swap is also £65 per radiator. A leaking valve repair is charged at our first-hour rate of £120 on weekdays, with no call-out fee.' },
+  { q: 'Do you have to drain the system to change a radiator valve?', a: 'Sometimes. On a sealed combi system we can often drain just enough water to get below the valve. On some jobs we use a freezing kit to freeze the pipe instead. For several valves at once, one full drain down is often quickest.' },
+  { q: 'How long does it take to fit a TRV?', a: 'Most single TRVs take 30 minutes to an hour, including the refill and bleed. Six valves usually take about half a day.' },
+  { q: 'What is the difference between a TRV and a lockshield valve?', a: 'The TRV is the one you turn. It senses the room and shuts off the hot water when the room is warm enough. The lockshield sits on the other end, under a plain cap. It is set once to balance the heat, then left alone.' },
+  { q: 'Why does one radiator not have a TRV?', a: 'Water needs somewhere to go when every TRV has closed. So one radiator is usually left without a TRV, often in the hall. Your room thermostat is often in the same space. If your system has an automatic bypass valve, this matters less.' },
+  { q: 'My radiator is cold but the others are hot. Is the TRV stuck?', a: 'Often, yes. TRV pins stick after summer. Take the head off, and gently push the pin in and out a few times. If it will not move, or the radiator is still cold, call us. It may need bleeding, balancing or a new valve.' },
+  { q: 'Why is my radiator valve leaking?', a: 'The most common causes are a worn gland around the spindle, a loose nut on the pipe joint, or a worn valve tail. Some leaks just need tightening or a new seal. Others need a new valve. We find the cause and give you the price before we fit parts.' },
+  { q: 'What should I do if a radiator valve is leaking now?', a: 'Put a bowl and towels under it. Close both valves on that radiator by turning them clockwise. If the leak will not stop, turn off the water at the stopcock and call 0151 558 0334.' },
+  { q: 'Do TRVs save money?', a: 'They can help cut wasted heating. You can keep spare rooms cooler and heat the rooms you use. They work best with a room thermostat and a timer or smart thermostat.' },
+  { q: 'Can you fit smart radiator valves I bought?', a: 'Yes. Fitting your own smart radiator valves is £65 per radiator. We fit Tado, Hive, Drayton Wiser, Netatmo, Danfoss and most other brands. Most smart heads screw onto a standard TRV body, sometimes with an adaptor that comes in the box.' },
+  { q: 'Will a smart valve fit my old radiator valve?', a: 'Many will, with the right adaptor. If your valve is very old, worn or not compatible, we fit a new TRV body first. We tell you the price before we start.' },
+  { q: 'Do I need to change both valves on a radiator?', a: 'Not always. If the lockshield is sound, we may keep it. Our £65 TRV price includes a matching lockshield where one is needed, so you are not caught out.' },
+  { q: 'Will a new valve fix noisy or cold radiators?', a: 'It depends on the cause. A stuck or faulty valve, yes. But cold patches at the bottom usually mean sludge, which a power flush clears. Banging or gurgling often means air or low pressure. We check before we change anything.' },
+  { q: 'Do you cover my area?', a: 'Yes. We cover all of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens. Call 0151 558 0334 to check the next free slot.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Radiator Valve Replacement Liverpool | TRVs £65 Fitted"
+  description="Radiator valve replacement in Liverpool. TRVs supplied and fitted £65 each, or up to 6 for £295 inc VAT. Leaking valve repairs, smart radiator valves fitted £65. Call 0151 558 0334."
+  h1="Radiator Valve Replacement Liverpool"
+  badge="TRVs £65 fitted · no call-out fee"
+  intro="New thermostatic radiator valves (TRVs) supplied and fitted for £65 each, or up to six for £295, including VAT. We also fix leaking radiator valves and fit smart radiator valves. You get a fixed price before we start."
+  stats={[['£65', 'TRV supplied and fitted, inc VAT'], ['£295', 'Up to 6 TRVs, inc VAT']]}
+  ticks={['Fixed Prices', 'No Call-Out Fee', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Radiator valve prices"
+  pkLede="Fixed prices, including VAT. No call-out fee and no hidden extras."
+  packages={packages}
+  pkNote="Manual (wheelhead) valve pair swap: £65 per radiator. Leaking valve repairs: first hour £120 weekdays 9am to 4pm, £150 evenings, nights and weekends, £180 bank holidays. Extra time is priced before we carry on."
+  factsTitle="Radiator valves at a glance"
+  facts={[
+    ['Price', 'TRV supplied and fitted £65. Up to 6 TRVs £295. Manual valve pair £65 per radiator.'],
+    ['Leaks', 'First hour £120 on weekdays 9am to 4pm. No call-out fee.'],
+    ['Smart valves', 'Fit your own for £65 per radiator. Tado, Hive, Drayton Wiser, Netatmo, Danfoss and more.'],
+    ['Time', '30 to 60 minutes for one valve. About half a day for six.'],
+    ['Guarantee', '12-month workmanship guarantee. £2 million public liability insurance.'],
+    ['Area', 'All of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['cost', 'How much does it cost?'],
+    ['types', 'TRV, lockshield or manual valve?'],
+    ['bypass', 'Why one radiator has no TRV'],
+    ['stuck', 'Stuck TRV pins'],
+    ['leaks', 'Leaking radiator valves'],
+    ['how', 'How we fit new valves'],
+    ['smart', 'Smart radiator valves'],
+    ['which', 'Which option is right?'],
+  ]}
+  reviews={['Amanda', 'Roger D', 'David H', 'Edward M']}
+  faqs={faqs}
+  areasTitle="Where do you replace radiator valves?"
+  areasText="We cover all of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-childwall', label: 'Childwall' },
+  ]}
+  related={[
+    { href: '/radiators-liverpool', title: 'Radiators', text: 'New radiators from £245 supplied and fitted' },
+    { href: '/power-flushing-liverpool', title: 'Power flushing', text: 'Cold at the bottom? Clear the sludge' },
+    { href: '/smart-thermostat-installation-liverpool', title: 'Smart thermostats', text: 'Fit your own for £120, any brand' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Hidden leaks found without the mess' },
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Many small jobs fit in our first hour' },
+  ]}
+  finalTitle="Book your radiator valve replacement"
+  finalText="TRVs £65 each, or up to six for £295, including VAT. Fixed price before we start. No call-out fee."
+  serviceName="Radiator Valve Replacement Liverpool"
+  serviceType="Radiator valve replacement and TRV fitting"
+  serviceDesc="Thermostatic radiator valves (TRVs) supplied and fitted, manual and lockshield valves replaced, leaking radiator valves repaired and smart radiator valves fitted across Liverpool and Merseyside."
+>
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does radiator valve replacement cost in Liverpool?</h2>
+      <p class="brx-answer">A TRV supplied and fitted costs £65 including VAT. Up to six TRVs cost £295.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>TRV supplied and fitted</strong></td><td>£65 each</td><td>Matching lockshield included where needed</td></tr>
+            <tr><td><strong>Up to 6 TRVs supplied and fitted</strong></td><td>£295</td><td>One visit, one drain down</td></tr>
+            <tr><td><strong>Manual (wheelhead) valve pair swap</strong></td><td>£65 per radiator</td><td>Simple on/off valves, like for like</td></tr>
+            <tr><td><strong>Fit your own smart radiator valves</strong></td><td>£65 per radiator</td><td>Fitted, paired and tested</td></tr>
+            <tr><td><strong>Leaking valve repair</strong></td><td>First hour £120</td><td>£150 evenings and weekends, £180 bank holidays</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>What is included</h3>
+      <ul class="sg-ticks">
+        <li>A new quality thermostatic valve, fitted to your radiator.</li>
+        <li>A matching lockshield valve where one is needed.</li>
+        <li>Draining down, or a freezing kit on the pipe, as the job needs.</li>
+        <li>The system refilled, bled and pressure checked.</li>
+        <li>A leak check on every joint before we leave.</li>
+        <li>Our 12-month workmanship guarantee.</li>
+      </ul>
+      <p>There is no call-out fee. If something else needs fixing, we tell you the price before we do it.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="types">
+    <div class="brx-wrap">
+      <h2>What is the difference between a TRV, a lockshield and a manual valve?</h2>
+      <p class="brx-answer">Most radiators have two valves. One controls the heat. The other, the lockshield, balances the flow and is set once.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>TRV (thermostatic radiator valve)</h3>
+          <p>The head has numbers, often from * to 5. It senses the air in the room. When the room is warm enough, it shuts off the hot water. Turn it down in spare rooms and up in the rooms you use.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Lockshield valve</h3>
+          <p>It sits on the other end, under a plain plastic cap. It is not for daily use. Engineers set it to balance the system, so every radiator heats up evenly.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Manual (wheelhead) valve</h3>
+          <p>A simple on/off valve with no numbers. It does not sense the room. The radiator is either on or off. Many older Liverpool homes still have them.</p>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">Swapping manual valves for TRVs gives you room-by-room control. It can help cut wasted heating, especially in larger terraces and semis where some rooms are rarely used.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="bypass">
+    <div class="brx-wrap">
+      <h2>Why is one radiator usually left without a TRV?</h2>
+      <p class="brx-answer">Water needs a path when every TRV has shut. So one radiator, often in the hall, is usually left without a TRV.</p>
+      <p>Picture a warm day. Every TRV in the house closes. The pump is still running, but the water has nowhere to go. That can make the system noisy, and it can strain the boiler.</p>
+      <p>Many modern systems have an automatic bypass valve, which solves this. But a radiator with no TRV is still common. It is often in the hall, where the room thermostat lives.</p>
+      <div class="brx-note"><p><strong>Keep the thermostat and TRV apart.</strong> A TRV in the same room as your thermostat can fight it. The TRV shuts first, the room stays cool, and the boiler keeps firing. We will tell you which radiator to leave as it is.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="stuck">
+    <div class="brx-wrap">
+      <h2>Why is my TRV stuck, and can I fix it?</h2>
+      <p class="brx-answer">TRV pins often stick after the summer, when the heating has been off. You can often free one yourself in a few minutes.</p>
+      <ol class="sg-steps">
+        <li><strong>Turn the head to 5.</strong> Then unscrew the head or pop off its clip.</li>
+        <li><strong>Find the pin.</strong> It is a small metal pin sticking out of the valve body.</li>
+        <li><strong>Press it gently.</strong> Push it in and let it spring back a few times. Do not force it.</li>
+        <li><strong>Refit the head.</strong> Wait a few minutes and feel the radiator.</li>
+      </ol>
+      <p>If the pin will not move, or the radiator stays cold, call us. The valve may be worn out. The radiator may also need bleeding or balancing. A new TRV is £65 fitted.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="leaks">
+    <div class="brx-wrap">
+      <h2>What causes a leaking radiator valve?</h2>
+      <p class="brx-answer">Most leaks come from a worn spindle seal, a loose nut or a worn valve tail. We charge our first-hour rate of £120 on weekdays, and most are fixed in that hour.</p>
+      <ul class="brx-list">
+        <li><strong>Drip from under the cap or head.</strong> Usually a worn gland seal around the spindle. Often a quick fix.</li>
+        <li><strong>Drip from the nut on the pipe.</strong> Often a loose nut or a worn olive.</li>
+        <li><strong>Drip where the valve meets the radiator.</strong> Usually the valve tail. We reseal or replace it.</li>
+        <li><strong>Green or white crust on the valve.</strong> A slow weep that has dried. Get it fixed before it gets worse.</li>
+      </ul>
+      <div class="brx-danger"><p><strong>Radiator valve leaking now?</strong> Put a bowl and towels under it. Close both valves on that radiator, turning them clockwise. If it will not stop, turn off the water at the stopcock and call {PHONE}.</p></div>
+      <p>Is the water coming from somewhere you cannot see, like under the floor? Our <a href="/leak-detection-liverpool">leak detection</a> service finds it. We lift boards and pressure test, and we can write a report for your insurer.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How do you replace a radiator valve?</h2>
+      <p class="brx-answer">One valve takes 30 minutes to an hour. Six valves usually take about half a day.</p>
+      <ol class="sg-steps">
+        <li><strong>Check (5 minutes).</strong> We look at the valves, pipes and system. We confirm the price before we start.</li>
+        <li><strong>Protect and isolate (10 minutes).</strong> Dust sheets down. We drain down or use a freezing kit on the pipe.</li>
+        <li><strong>Swap the valve (15 to 30 minutes).</strong> Old valve off. New TRV and lockshield on, with new seals.</li>
+        <li><strong>Refill and bleed (10 minutes).</strong> We refill, bleed the air out and reset the pressure.</li>
+        <li><strong>Test (5 minutes).</strong> Heating on, every joint checked for leaks. We show you how to set the TRV.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Want new TRVs fitted this week?</strong> Call for a fixed price. £65 each, or up to six for £295.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="smart">
+    <div class="brx-wrap">
+      <h2>Can you fit smart radiator valves?</h2>
+      <p class="brx-answer">Yes. If you buy your own smart radiator valves, we fit them for £65 per radiator. We pair them and test them before we leave.</p>
+      <p>We fit Tado, Hive, Drayton Wiser, Netatmo, Danfoss and most other brands. Most smart heads screw onto a standard TRV body. Some need an adaptor, which usually comes in the box.</p>
+      <p>If your valve body is very old, worn or will not take the head, we fit a new TRV body first. We tell you the price before we start.</p>
+      <p>Smart valves work best with a smart thermostat from the same brand. Our <a href="/smart-thermostat-installation-liverpool">smart thermostat installation</a> page covers that. Fitting your own smart thermostat is £120.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which option is right for me?</h2>
+      <p class="brx-answer">It depends on what is wrong and what you want. Here is our honest advice.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Your situation</th><th>Best option</th><th>Price inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td>One valve is stuck, broken or worn</td><td>Single TRV</td><td>£65</td></tr>
+            <tr><td>Old manual valves all round the house</td><td>Up to 6 TRVs</td><td>£295</td></tr>
+            <tr><td>You want simple on/off valves, like for like</td><td>Manual valve pair swap</td><td>£65 per radiator</td></tr>
+            <tr><td>Water dripping from a valve</td><td>Leaking valve repair</td><td>First hour £120</td></tr>
+            <tr><td>You want to control each room from your phone</td><td>Fit your own smart valves</td><td>£65 per radiator</td></tr>
+            <tr><td>Radiators cold at the bottom</td><td><a href="/power-flushing-liverpool">Power flush</a>, not new valves</td><td>Priced before we start</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Need a new radiator too? See our <a href="/radiators-liverpool">radiators page</a>. A standard double panel radiator, supplied and fitted with a new TRV, is from £245.</p>
+      <p>Got other small jobs? Our first hour is £120 on weekdays, and many small jobs fit in it. Make a list and we will price it before we start. See <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a>, such as <a href="/tap-replacement-liverpool">tap replacement</a> and <a href="/toilet-repair-liverpool">toilet repairs</a>.</p>
+      <h3>Who does the work?</h3>
+      <p>Our heating engineers are part of our team led by James. Work on the heating circuit is done by our Gas Safe registered engineers. We carry £2 million public liability insurance and give a 12-month workmanship guarantee.</p>
+      <div class="brx-note"><p><strong>Fitting a dual-fuel towel rail?</strong> The electric element needs a safe electrical supply. Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/">Ideal Electrical Solutions</a> can fit it.</p></div>
+    </div>
+  </section>
+</ServiceGuide>

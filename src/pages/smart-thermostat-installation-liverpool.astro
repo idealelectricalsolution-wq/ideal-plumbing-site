@@ -1,0 +1,215 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/smart-thermostat-installation-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'fit-own', tier: 'You buy it', name: 'Fit your own smart thermostat', price: '£120', unit: 'fitted, inc VAT',
+    points: ['Any brand: Hive, Nest, Tado, Wiser and more', 'Boiler compatibility checked first', 'Receiver wired, old controls taken off', 'App set up and shown to you'] },
+  { id: 'supplied', tier: 'We supply it', popular: true, name: 'Smart thermostat supplied and fitted', price: '£249', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Exact price for your brand before we start', 'We help you pick the right one', 'Fitted, tested and set up on the app', '12-month workmanship guarantee'] },
+  { id: 'with-service', tier: 'Best value', name: 'Fitted with a boiler service', price: '£210', unit: 'one visit, inc VAT',
+    points: ['£120 boiler service + £90 to fit your thermostat', 'Boiler checked before the new controls go on', 'Service record emailed the same day', 'You supply the thermostat'] },
+];
+
+const faqs = [
+  { q: 'How much does smart thermostat installation cost in Liverpool?', a: 'With us it is £120 including VAT to fit a thermostat you have bought. Supplied and fitted starts from £249, and we give you the exact price for your brand first. Fitted on the same visit as a boiler service, it is £210 for both.' },
+  { q: 'Which smart thermostat brands do you fit?', a: 'All of them. Our engineers fit Hive, Google Nest, Tado, Drayton Wiser, Honeywell Home (T6 and evohome), Netatmo, Danfoss, Worcester Bosch EasyControl, Vaillant controls, Baxi uSense, Ideal Halo, Salus and others.' },
+  { q: 'Do you fit Hive?', a: 'Yes. We fit Hive thermostats for heating only, or with hot water control if you have a cylinder. It is £120 to fit one you have bought, or from £249 supplied and fitted.' },
+  { q: 'Do you fit Google Nest thermostats?', a: 'Yes. We fit the Nest thermostat and wire its Heat Link receiver to your boiler. We check first whether your boiler can use OpenTherm, so the Nest can control the boiler more finely.' },
+  { q: 'Do you fit Tado?', a: 'Yes. We fit Tado smart thermostats and Tado smart radiator thermostats. Smart radiator valves are £65 per radiator to fit if you supply them.' },
+  { q: 'Will a smart thermostat work with my boiler?', a: 'Almost every working gas boiler can take a smart thermostat. Some brands work better with some boilers. We check your boiler and wiring before we fit anything, and tell you if a different model would suit you better.' },
+  { q: 'Can I fit a smart thermostat myself?', a: 'Some are sold as DIY. But most need mains wiring at the boiler or the old programmer. If you are not sure, it is safer to have it fitted. A wrong connection can stop your heating or damage the boiler controls.' },
+  { q: 'How long does it take to fit?', a: 'Most installs take 1 to 2 hours. That includes taking off the old controls, wiring the receiver, testing, and setting up the app with you.' },
+  { q: 'Can it control my hot water too?', a: 'If you have a hot water cylinder, yes, with the right model. On a combi boiler, hot water is made on demand, so the thermostat mainly controls the heating.' },
+  { q: 'Will a smart thermostat save me money?', a: 'It can help cut wasted heating. You can turn the heating down when you are out, and heat the house only when you need it. How much you save depends on your home and how you use it.' },
+  { q: 'Does a new boiler come with a smart thermostat?', a: 'Yes. Every combi boiler package on our boiler installation page includes a smart thermostat, fitted and set up for you.' },
+  { q: 'Can you fit smart radiator valves?', a: 'Yes. Smart radiator valves let you set a different temperature in each room. We fit your own for £65 per radiator. A standard TRV supplied and fitted is also £65, or up to 6 for £295.' },
+  { q: 'Do I need Wi-Fi?', a: 'For the app and remote control, yes. Most smart thermostats keep running your heating schedule if the Wi-Fi drops. Put the hub near your router if the brand uses one.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Smart Thermostat Installation Liverpool | Any Brand, From £120"
+  description="Smart thermostat installation in Liverpool from £120 inc VAT. Hive, Nest, Tado, Drayton Wiser, Honeywell and every other brand fitted. Supplied and fitted from £249. Call 0151 558 0334."
+  h1="Smart Thermostat Installation Liverpool"
+  badge="Hive · Nest · Tado · Wiser · any brand"
+  intro="We fit every brand of smart thermostat and smart heating control. Bring your own and we fit it for £120 including VAT, or we can supply and fit one from £249. We check your boiler first, wire it properly and set up the app with you."
+  stats={[['£120', 'Fit your own, inc VAT'], ['Any brand', 'Fitted and set up']]}
+  ticks={['Every Brand Fitted', 'Fixed Prices', 'No Call-Out Fee', '5.0 on Google']}
+  pkTitle="Smart thermostat installation prices"
+  pkLede="Fixed prices, including VAT. No call-out fee. You can buy the thermostat yourself or let us supply it."
+  packages={packages}
+  pkNote="Smart radiator valves: £65 per radiator to fit your own. Extra wiring, a new cable run or a faulty boiler part is priced before we do it."
+  factsTitle="Smart thermostat fitting at a glance"
+  facts={[
+    ['Price', '£120 to fit your own. Supplied and fitted from £249. With a boiler service: £210.'],
+    ['Brands', 'Any brand: Hive, Nest, Tado, Drayton Wiser, Honeywell, Netatmo, Danfoss, Worcester, Vaillant, Baxi, Ideal, Salus and more.'],
+    ['Time', 'Usually 1 to 2 hours, including app set-up.'],
+    ['Includes', 'Compatibility check, receiver wired, old controls taken off, full test.'],
+    ['Guarantee', '12-month workmanship guarantee. £2 million public liability insurance.'],
+    ['Area', 'All of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['brands', 'Which brands do you fit?'],
+    ['included', 'What is included?'],
+    ['how', 'How does it work?'],
+    ['which', 'Which option is right for me?'],
+    ['boiler', 'Will it work with my boiler?'],
+    ['radiators', 'Smart radiator valves'],
+  ]}
+  reviews={['Brendan C', 'David H', 'Edward M', 'Roger D']}
+  faqs={faqs}
+  areasTitle="Where do you fit smart thermostats?"
+  areasText="We cover all of Liverpool, the Wirral, Sefton, Knowsley and St Helens."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-childwall', label: 'Childwall' },
+    { href: '/emergency-plumber-mossley-hill', label: 'Mossley Hill' },
+  ]}
+  related={[
+    { href: '/boiler-service-liverpool', title: 'Boiler service', text: '£120 fixed price, or £210 with a smart thermostat fitted' },
+    { href: '/boiler-installation-liverpool', title: 'Boiler installation', text: 'Every new combi includes a smart thermostat' },
+    { href: '/radiator-valve-replacement-liverpool', title: 'Radiator valves', text: 'TRVs £65 each, smart valves fitted £65 per radiator' },
+    { href: '/radiators-liverpool', title: 'Radiators', text: 'Radiator swaps supplied and fitted from £245' },
+    { href: '/boiler-repair-liverpool', title: 'Boiler repair', text: 'From £120 for the first hour, no call-out fee' },
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Taps, toilets, radiators and more, fixed prices' },
+  ]}
+  finalTitle="Book your smart thermostat installation"
+  finalText="£120 to fit your own, any brand. Supplied and fitted from £249. Call and we will check your boiler first."
+  serviceName="Smart Thermostat Installation Liverpool"
+  serviceType="Smart thermostat and smart heating controls installation"
+  serviceDesc="Smart thermostat and smart heating controls installation across Liverpool and Merseyside. Every brand fitted, including Hive, Google Nest, Tado, Drayton Wiser and Honeywell Home. Boiler compatibility checked, receiver wired and app set up."
+>
+  <section class="brx-sec brx-tint" id="brands">
+    <div class="brx-wrap">
+      <h2>Which smart thermostat brands do you fit?</h2>
+      <p class="brx-answer">Every brand. Our engineers fit any smart thermostat or smart heating control, whether you buy it or we supply it.</p>
+      <p>Not sure which one to buy? The table gives a quick guide. Call us with your boiler make and we will tell you what suits it.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Brand</th><th>What it suits</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Hive</strong></td><td>Most homes and most boilers</td><td>Simple app. Versions for heating only, or heating and hot water.</td></tr>
+            <tr><td><strong>Google Nest</strong></td><td>People who want the thermostat to learn their routine</td><td>Uses a Heat Link receiver at the boiler. Can use OpenTherm on boilers that support it.</td></tr>
+            <tr><td><strong>Tado</strong></td><td>Room-by-room control</td><td>Pairs with Tado smart radiator thermostats.</td></tr>
+            <tr><td><strong>Drayton Wiser</strong></td><td>Multi-room control, including homes with a cylinder</td><td>Hub-based. Works with Wiser smart radiator thermostats.</td></tr>
+            <tr><td><strong>Honeywell Home (T6, evohome)</strong></td><td>T6 for one zone. Evohome for larger, zoned homes</td><td>Evohome can control each room separately.</td></tr>
+            <tr><td><strong>Netatmo</strong></td><td>A simple, stylish thermostat</td><td>Smart radiator valves are also available.</td></tr>
+            <tr><td><strong>Danfoss</strong></td><td>Room-by-room control</td><td>Known for radiator valves and smart radiator thermostats.</td></tr>
+            <tr><td><strong>Worcester Bosch EasyControl</strong></td><td>Worcester Bosch boilers</td><td>Made by the boiler maker for its own boilers.</td></tr>
+            <tr><td><strong>Vaillant (vSMART, sensoHOME, myVAILLANT)</strong></td><td>Vaillant boilers</td><td>Made by the boiler maker for its own boilers.</td></tr>
+            <tr><td><strong>Baxi uSense</strong></td><td>Baxi boilers</td><td>Made by the boiler maker for its own boilers.</td></tr>
+            <tr><td><strong>Ideal Halo</strong></td><td>Ideal boilers</td><td>Made by the boiler maker for its own boilers.</td></tr>
+            <tr><td><strong>Salus and others</strong></td><td>Lower budgets</td><td>Wired and wireless options. Ask us about any brand.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="brx-note"><p><strong>Already bought one?</strong> That is fine. We fit your own smart thermostat for £120, whatever the brand.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in smart thermostat installation?</h2>
+      <p class="brx-answer">Everything needed to get it working: a boiler check, proper wiring, removal of your old controls and app set-up.</p>
+      <ul class="sg-ticks">
+        <li>We check your boiler works with the thermostat, including OpenTherm or the boiler maker's own connection.</li>
+        <li>We take off your old programmer or room thermostat.</li>
+        <li>We wire the receiver to the boiler, or to your wiring centre on a system with a cylinder.</li>
+        <li>We fit the thermostat in a good spot, away from radiators and direct sun.</li>
+        <li>We test the heating, and the hot water if your model controls it.</li>
+        <li>We set up the app on your phone and show you how to use it.</li>
+        <li>Your old controls taken away, and a 12-month workmanship guarantee.</li>
+      </ul>
+      <p>Prices include VAT. There is no call-out fee. If we find extra work, such as a new cable run, we tell you the price before we carry on.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How does it work?</h2>
+      <ol class="sg-steps">
+        <li><strong>Call us.</strong> Tell us your boiler make and the thermostat you want, or ask us to help you choose. We give you a fixed price.</li>
+        <li><strong>We check the boiler.</strong> On the day, we check the boiler and wiring before anything is changed.</li>
+        <li><strong>Old controls off.</strong> We take off the old programmer or thermostat and make the wiring safe.</li>
+        <li><strong>New controls on.</strong> We wire the receiver, fit the thermostat and connect it to your Wi-Fi.</li>
+        <li><strong>Test and hand over.</strong> We test it all, set your schedule and show you the app. Most jobs take 1 to 2 hours.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Got a smart thermostat sitting in its box?</strong> We fit any brand for £120.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which option is right for me?</h2>
+      <p class="brx-answer">If you already have a thermostat, pick fit your own. If not, let us supply it. If your boiler is due a service, do both in one visit.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Fit your own: £120</h3>
+          <p>Best if you have bought one, or spotted a good deal. You choose the brand. We check it suits your boiler and fit it.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Supplied and fitted: from £249</h3>
+          <p>Best if you want one less job. We help you choose, bring the right model and give you the exact price first.</p>
+        </div>
+      </div>
+      <div class="sg-cols" style="margin-top:1rem;">
+        <div class="sg-box">
+          <h3>With a boiler service: £210</h3>
+          <p>Best if the boiler has not been serviced this year. We service it for £120 and fit your thermostat for £90 more. See our <a href="/boiler-service-liverpool">boiler service</a> page.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Getting a new boiler?</h3>
+          <p>Then you do not need to buy one. Every combi package on our <a href="/boiler-installation-liverpool">boiler installation</a> page includes a smart thermostat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="boiler">
+    <div class="brx-wrap">
+      <h2>Will a smart thermostat work with my boiler?</h2>
+      <p class="brx-answer">Almost certainly. Nearly every working gas boiler can take a smart thermostat. The question is which one works best with it.</p>
+      <figure class="sg-photo" style="max-width:360px;">
+        <picture>
+          <source type="image/webp" srcset="/images/jobs/boiler-smart-thermostat-fitted-480.webp 480w, /images/jobs/boiler-smart-thermostat-fitted-960.webp 960w" sizes="(max-width: 800px) 100vw, 360px" />
+          <img src="/images/jobs/boiler-smart-thermostat-fitted-960.jpg" alt="Boiler and smart thermostat receiver fitted by our team in a Liverpool home" loading="lazy" decoding="async" width="960" height="1280" />
+        </picture>
+        <figcaption>A boiler and smart thermostat receiver fitted by our team in Liverpool.</figcaption>
+      </figure>
+      <h3>Combi boilers</h3>
+      <p>A combi heats water when you turn on a tap. So the thermostat controls the heating. A heating-only model is usually all you need.</p>
+      <h3>System and regular boilers</h3>
+      <p>These have a hot water cylinder. Pick a model that controls the hot water too. We wire it into your wiring centre and zone valves.</p>
+      <h3>OpenTherm and boiler brand controls</h3>
+      <p>Some thermostats just switch the boiler on and off. Others talk to it, using OpenTherm or the boiler maker's own system. That lets the boiler run lower and steadier. We check what your boiler supports and tell you before you buy.</p>
+      <div class="brx-note"><p><strong>Heating playing up already?</strong> A new thermostat will not fix a faulty boiler. If the boiler has a fault, book a <a href="/boiler-repair-liverpool">boiler repair</a> first. It is from £120 for the first hour, with no call-out fee.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="radiators">
+    <div class="brx-wrap">
+      <h2>Can you fit smart radiator valves?</h2>
+      <p class="brx-answer">Yes. We fit smart radiator valves from any brand for £65 per radiator, if you supply them.</p>
+      <p>Smart radiator valves let you set each room on its own. Keep the spare room cool and the living room warm. They work with the matching smart thermostat from Tado, Hive, Drayton Wiser, Netatmo, Danfoss and others.</p>
+      <ul class="sg-ticks">
+        <li>Smart radiator valves fitted (you supply): £65 per radiator</li>
+        <li>Standard TRV supplied and fitted: £65 each, or up to 6 for £295</li>
+        <li>Radiator swap supplied and fitted: from £245</li>
+      </ul>
+      <p>See <a href="/radiator-valve-replacement-liverpool">radiator valve replacement</a> and <a href="/radiators-liverpool">radiators</a> for more. Got a few jobs to do? Our <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a> page shows how to fit them into one visit.</p>
+      <div class="brx-note"><p><strong>Need an electrician too?</strong> If you want a new socket or spur for a hub, our partner firm <a href="https://www.idealelectricalsolutions.co.uk/">Ideal Electrical Solutions</a> can help.</p></div>
+    </div>
+  </section>
+</ServiceGuide>
