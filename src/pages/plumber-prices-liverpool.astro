@@ -1,0 +1,238 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/plumber-prices-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'weekday', tier: 'Weekdays 9am to 4pm', popular: true, name: 'First hour, weekdays', price: '£120', unit: 'first hour, inc VAT',
+    points: ['No call-out fee', 'Includes finding the fault', 'Most small repairs done inside the hour'] },
+  { id: 'evening', tier: 'Evenings, nights, weekends', name: 'First hour, out of hours', price: '£150', unit: 'first hour, inc VAT',
+    points: ['Weekdays after 4pm and before 9am', 'All day Saturday and Sunday', 'No call-out fee'] },
+  { id: 'bank-holiday', tier: 'Bank holidays', name: 'First hour, bank holidays', price: '£180', unit: 'first hour, inc VAT',
+    points: ['Every bank holiday, day or night', 'No call-out fee', 'A real person answers'] },
+];
+
+const faqs = [
+  { q: 'How much does a plumber cost per hour in Liverpool?', a: 'With us, the first hour is £120 on weekdays from 9am to 4pm, £150 in the evenings, at night and at weekends, and £180 on bank holidays. All prices include VAT. If a job needs more time, we tell you the price before we carry on.' },
+  { q: 'How much does an emergency plumber cost in Liverpool?', a: 'The same rates. There is no extra emergency charge and no call-out fee. You pay £120 for the first hour on weekdays, £150 out of hours and £180 on bank holidays. Parts are priced before we fit them.' },
+  { q: 'Do you charge a call-out fee?', a: 'No. There is no call-out fee on any job, day or night. You only pay for the work.' },
+  { q: 'Are your prices including VAT?', a: 'Yes. Every price on this page includes VAT. The price you see is the price you pay.' },
+  { q: 'Is a cheap plumber worth it?', a: 'Look at the full price, not the hourly rate. A low hourly rate can come with a call-out fee, a high charge for parts or extra time. We publish our prices, charge no call-out fee and tell you the price before any extra work.' },
+  { q: 'Do you charge more at weekends?', a: 'Yes, a little. The first hour is £150 at weekends and in the evenings, against £120 on weekdays from 9am to 4pm. Bank holidays are £180.' },
+  { q: 'Do you charge for travel or parking?', a: 'No. There is no call-out fee and no travel charge anywhere we cover.' },
+  { q: 'Do you give free quotes?', a: 'Yes, for fitting work such as new boilers, bathrooms and central heating. We visit, look at the job and give you a fixed price in writing. Repairs are charged by time, because the fault is not known until we find it.' },
+  { q: 'How much does a boiler repair cost?', a: 'Boiler repairs use the same hourly rates. The first hour is £120 on weekdays and includes finding the fault. If a part is needed, we tell you the price first.' },
+  { q: 'How much is a new boiler in Liverpool?', a: 'Our combi boiler packages run from £2,195 for a Baxi 600 to £3,295 for a Worcester Bosch Greenstar 8000+ Style, fully fitted, including VAT.' },
+  { q: 'Do you unblock drains?', a: 'No. We do not do blocked drains. Drain specialists do that job.' },
+  { q: 'Do you guarantee your work?', a: 'Yes. Every job has our 12-month workmanship guarantee. We also carry £2 million public liability insurance.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Plumber Prices Liverpool | Full Price List, No Call-Out Fee"
+  description="Plumber prices in Liverpool, all including VAT. First hour £120 weekdays, no call-out fee. Taps from £110, boiler service £120, new boilers from £2,195. Call 0151 558 0334."
+  h1="Plumber Prices in Liverpool"
+  badge="Every price, inc VAT · no call-out fee"
+  intro="How much does a plumber cost in Liverpool? Here is our full price list. Every price includes VAT, and there is no call-out fee. Repairs start at £120 for the first hour on weekdays. Fitting jobs have a fixed price, agreed before we start."
+  stats={[['£120', 'First hour, weekdays'], ['£0', 'Call-out fee']]}
+  ticks={['Prices Inc VAT', 'No Call-Out Fee', 'Gas Safe Registered', '5.0 on Google']}
+  pkTitle="How much does a plumber cost per hour?"
+  pkLede="Repairs, leaks and breakdowns are charged by time. These are our first-hour prices, including VAT."
+  packages={packages}
+  pkNote="The first hour includes finding the fault. If a job needs more time, we tell you the price before we carry on. Parts are priced before we fit them."
+  factsTitle="Our prices at a glance"
+  facts={[
+    ['Repairs', 'First hour £120 weekdays 9am to 4pm. £150 evenings, nights and weekends. £180 bank holidays.'],
+    ['Call-out fee', 'None, on any job, day or night.'],
+    ['Small jobs', 'Tap swap £110. Outside tap £145. Gas hob £120. Sink swap £225.'],
+    ['Boilers', 'Service £120. New combi boiler from £2,195 fully fitted.'],
+    ['Landlords', 'Gas safety certificate £100. With a boiler service £199.'],
+    ['VAT', 'Included in every price.'],
+  ]}
+  toc={[
+    ['small', 'Small jobs'],
+    ['boilers', 'Boilers'],
+    ['gas', 'Gas safety and gas appliances'],
+    ['heating', 'Radiators and heating'],
+    ['showers', 'Showers and bathrooms'],
+    ['cylinders', 'Hot water cylinders'],
+    ['fair', 'How we keep prices fair'],
+  ]}
+  reviews={['Brendan C', 'Edward M', 'Chris C', 'David H']}
+  reviewTitle="What do customers say about our prices?"
+  faqs={faqs}
+  areasTitle="Are prices the same in every area?"
+  areasText="Yes. We charge the same prices across all of Liverpool, the Wirral, Sefton, Knowsley and St Helens. No travel charge and no call-out fee."
+  areas={[
+    { href: '/emergency-plumber-kirkby', label: 'Kirkby' },
+    { href: '/emergency-plumber-wirral', label: 'Wirral' },
+    { href: '/emergency-plumber-st-helens', label: 'St Helens' },
+    { href: '/emergency-plumber-crosby', label: 'Crosby' },
+    { href: '/emergency-plumber-southport', label: 'Southport' },
+    { href: '/emergency-plumber-formby', label: 'Formby' },
+    { href: '/emergency-plumber-huyton', label: 'Huyton' },
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+  ]}
+  related={[
+    { href: '/', title: 'Emergency plumber Liverpool', text: '24/7, first hour from £120' },
+    { href: '/boiler-repair-liverpool', title: 'Boiler repair', text: 'First hour from £120, no call-out fee' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Find and fix leaks, from £120' },
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Fixed prices from £110' },
+    { href: '/boiler-installation-liverpool', title: 'New boilers', text: 'From £2,195 fully fitted' },
+    { href: '/gas-safety-certificate-liverpool', title: 'Gas safety certificates', text: 'From £100' },
+  ]}
+  finalTitle="Want a price for your job?"
+  finalText="Call us and tell us what needs doing. We will tell you the price before we start. No call-out fee."
+  serviceName="Plumber Prices Liverpool"
+  serviceType="Plumbing and heating"
+  serviceDesc="Plumbing and heating prices in Liverpool, all including VAT. Repairs from £120 for the first hour with no call-out fee, fixed-price small jobs, boiler servicing, new boilers and gas safety certificates."
+  noPackagesOffers={[
+    { name: 'Plumber first hour, weekdays 9am to 4pm', price: '120' },
+    { name: 'Plumber first hour, evenings, nights and weekends', price: '150' },
+    { name: 'Plumber first hour, bank holidays', price: '180' },
+    { name: 'Boiler service', price: '120' },
+    { name: 'Landlord gas safety certificate (CP12)', price: '100' },
+  ]}
+>
+  <section class="brx-sec brx-tint" id="small">
+    <div class="brx-wrap">
+      <h2>How much do small plumbing jobs cost?</h2>
+      <p class="brx-answer">Most small jobs cost between £65 and £250, with a fixed price including VAT.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="/tap-replacement-liverpool">Tap swapped</a></strong></td><td>£110</td><td>You supply the tap. Second tap same visit: £50</td></tr>
+            <tr><td><strong><a href="/outside-tap-installation-liverpool">Outside tap fitted</a></strong></td><td>£145</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/kitchen-sink-replacement-liverpool">Kitchen sink swapped</a></strong></td><td>£225</td><td>Like for like, fit only</td></tr>
+            <tr><td><strong><a href="/toilet-repair-liverpool">Toilet repair</a></strong></td><td>First hour £120</td><td>Weekdays 9am to 4pm</td></tr>
+            <tr><td><strong><a href="/toilet-repair-liverpool">New toilet</a></strong></td><td>From £250</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/radiator-valve-replacement-liverpool">Radiator valve (TRV)</a></strong></td><td>£65 each</td><td>Up to 6 for £295</td></tr>
+            <tr><td><strong><a href="/smart-thermostat-installation-liverpool">Smart thermostat</a></strong></td><td>£120</td><td>You supply it. Supplied and fitted from £249</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Got a list of small jobs? Many fit inside our first hour. See <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a>.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="boilers">
+    <div class="brx-wrap">
+      <h2>How much do boiler repairs, services and new boilers cost?</h2>
+      <p class="brx-answer">A boiler repair starts at £120 for the first hour. A boiler service is £120. A new combi boiler is from £2,195 fully fitted.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="/boiler-repair-liverpool">Boiler repair</a></strong></td><td>First hour £120</td><td>Includes finding the fault. Parts priced first</td></tr>
+            <tr><td><strong><a href="/boiler-service-liverpool">Boiler service</a></strong></td><td>£120</td><td>Keeps your warranty valid</td></tr>
+            <tr><td><strong><a href="/boiler-installation-liverpool">Baxi 600 combi</a></strong></td><td>£2,195</td><td>Fully fitted</td></tr>
+            <tr><td><strong><a href="/boiler-installation-liverpool">Baxi 800 combi</a></strong></td><td>£2,495</td><td>Fully fitted</td></tr>
+            <tr><td><strong><a href="/boiler-installation-liverpool">Worcester Bosch 4000 combi</a></strong></td><td>£2,695</td><td>Fully fitted</td></tr>
+            <tr><td><strong><a href="/boiler-installation-liverpool">Vaillant ecoTEC plus combi</a></strong></td><td>£2,995</td><td>Fully fitted</td></tr>
+            <tr><td><strong><a href="/boiler-installation-liverpool">Worcester Bosch 8000+ Style</a></strong></td><td>£3,295</td><td>Fully fitted</td></tr>
+            <tr><td><strong><a href="/power-flushing-liverpool">Power flush</a></strong></td><td>From £395</td><td>Up to 6 radiators</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Not sure if your boiler is worth fixing? We will tell you honestly. If it is under 10 years old and the fault is a common part, a repair usually makes sense.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="gas">
+    <div class="brx-wrap">
+      <h2>How much do gas safety certificates and gas jobs cost?</h2>
+      <p class="brx-answer">A landlord gas safety certificate is £100. With a boiler service on the same visit, it is £199.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="/gas-safety-certificate-liverpool">Gas safety certificate (CP12)</a></strong></td><td>£100</td><td>Up to 2 appliances. £20 each extra</td></tr>
+            <tr><td><strong><a href="/gas-safety-certificate-liverpool">CP12 + boiler service</a></strong></td><td>£199</td><td>One visit</td></tr>
+            <tr><td><strong><a href="/gas-safety-certificate-liverpool">3 or more properties</a></strong></td><td>£80 each</td><td>For landlords and agents</td></tr>
+            <tr><td><strong><a href="/gas-hob-installation-liverpool">Gas hob or cooker connected</a></strong></td><td>£120</td><td>Existing gas point</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>All gas work is done by our Gas Safe registered engineers. Smell gas? Call the National Gas Emergency line on 0800 111 999 first.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="heating">
+    <div class="brx-wrap">
+      <h2>How much do radiators and central heating cost?</h2>
+      <p class="brx-answer">A new radiator is from £245 supplied and fitted. A full central heating system starts from £4,495 for a 2-bed home.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="/radiators-liverpool">Radiator supplied and fitted</a></strong></td><td>From £245</td><td>Same spot, new valve</td></tr>
+            <tr><td><strong><a href="/radiators-liverpool">Fit your own radiator</a></strong></td><td>From £95</td><td>Same spot</td></tr>
+            <tr><td><strong><a href="/radiators-liverpool">Move a radiator</a></strong></td><td>From £225</td><td>New pipework</td></tr>
+            <tr><td><strong><a href="/central-heating-installation-liverpool">Central heating, 2-bed</a></strong></td><td>From £4,495</td><td>Boiler, radiators and pipework</td></tr>
+            <tr><td><strong><a href="/central-heating-installation-liverpool">Central heating, 3-bed</a></strong></td><td>From £5,295</td><td>Boiler, radiators and pipework</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="showers">
+    <div class="brx-wrap">
+      <h2>How much do showers and bathrooms cost?</h2>
+      <p class="brx-answer">An electric shower swap is from £375 supplied and fitted. A full bathroom is from £4,995.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="/showers-liverpool">Shower, fit only</a></strong></td><td>From £195</td><td>You supply the shower</td></tr>
+            <tr><td><strong><a href="/showers-liverpool">Electric shower swap</a></strong></td><td>From £375</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/showers-liverpool">Thermostatic bar mixer</a></strong></td><td>From £395</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/bathroom-fitters-liverpool">Cloakroom or WC</a></strong></td><td>From £2,495</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/bathroom-fitters-liverpool">Full bathroom</a></strong></td><td>From £4,995</td><td>Supplied and fitted</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="cylinders">
+    <div class="brx-wrap">
+      <h2>How much do hot water cylinders cost?</h2>
+      <p class="brx-answer">A vented cylinder replacement is from £750. An unvented cylinder is from £1,450.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="/hot-water-cylinders-liverpool">Vented cylinder replaced</a></strong></td><td>From £750</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/hot-water-cylinders-liverpool">Unvented cylinder, 150 litres</a></strong></td><td>From £1,450</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/hot-water-cylinders-liverpool">Immersion heater</a></strong></td><td>From £175</td><td>Vented cylinder</td></tr>
+            <tr><td><strong><a href="/hot-water-cylinders-liverpool">Unvented cylinder service</a></strong></td><td>£120</td><td>Yearly</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="fair">
+    <div class="brx-wrap">
+      <h2>How do we keep our prices fair?</h2>
+      <p class="brx-answer">We publish our prices, charge no call-out fee, and tell you the price before any extra work.</p>
+      <ul class="sg-ticks">
+        <li>Every price includes VAT</li>
+        <li>No call-out fee and no travel charge</li>
+        <li>The first hour includes finding the fault</li>
+        <li>Parts priced before we fit them</li>
+        <li>Extra time priced before we carry on</li>
+        <li>Fixed written prices for fitting work</li>
+        <li>12-month workmanship guarantee on every job</li>
+      </ul>
+      <div class="brx-cta">
+        <p><strong>Water leaking or no heating?</strong> Call now. We guarantee a 30 minute response across Liverpool.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+</ServiceGuide>
