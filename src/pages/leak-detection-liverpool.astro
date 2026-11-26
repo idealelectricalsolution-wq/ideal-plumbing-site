@@ -5,9 +5,9 @@ const URL_ = 'https://liverpoolemergencyplumber.co.uk/leak-detection-liverpool';
 
 // Method (owner, Nov 2026): James finds leaks by checking pipework and lifting floorboards, tracing by eye.
 // Owner confirmed: pressure testing, cutting into ceilings below laminate/tiled floors, insurance leak reports. No thermal/acoustic kit claimed.
-// Prices match the rest of the site: £80/hr weekdays, £120/hr weekends 9am-1pm, £150/hr out of hours, 1 hour minimum, no call-out fee.
+// Prices match the rest of the site: first hour £120 weekdays 9am-4pm, £150 evenings/nights/weekends, £180 bank holidays, no call-out fee.
 const faqs = [
-  { tag: 'COST', q: 'How much does it cost to find a leak in Liverpool?', a: 'There is no call-out fee. Weekdays 9am to 5pm are £80 an hour, weekends 9am to 1pm are £120 an hour, and evenings, nights and bank holidays are £150 an hour, with a one hour minimum. Most leaks are found and fixed on the same visit. If a part or more work is needed, you get the price first.' },
+  { tag: 'COST', q: 'How much does it cost to find a leak in Liverpool?', a: 'There is no call-out fee. It is £120 for the first hour on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. Any extra time is priced before we carry on. Most leaks are found and fixed on the same visit. If a part or more work is needed, you get the price first.' },
   { tag: 'METHOD', q: 'How do you find a hidden leak?', a: 'The practical way. Our engineers check the pipework, joints, valves and appliances you can see first, as most leaks start there. He can pressure test the pipework to confirm whether a section is leaking. Then he lifts floorboards along the pipe run and follows the water back to the source. Where the floor above is laminate or a tiled bathroom, it is often cheaper to cut a small opening in the ceiling below instead. He agrees with you what needs opening up before he starts.' },
   { tag: 'INSURANCE', q: 'Do you provide leak reports for insurance claims?', a: 'Yes. We can write a leak report for your insurer, covering what caused the leak, where it was and what was repaired, so you have the evidence for your claim.' },
   { tag: 'CEILING', q: 'Water is coming through my ceiling. What do I do?', a: 'Turn the water off at the stopcock, usually under the kitchen sink. If water is near a light fitting, do not use that light and switch it off at the fuse box if you can do so safely. Put a bucket under the drip, then ring us on 0151 558 0334. Most ceiling leaks come from a bath, shower, toilet or pipe joint in the room above.' },
@@ -50,8 +50,9 @@ const schemaService = {
   provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
   areaServed: [{ '@type': 'City', name: 'Liverpool' }, { '@type': 'City', name: 'Wirral' }, { '@type': 'City', name: 'St Helens' }, { '@type': 'City', name: 'Formby' }],
   offers: [
-    { '@type': 'Offer', name: 'Leak finding and repair, weekdays 9am to 5pm, per hour, no call-out fee', price: '80', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Emergency leak repair, evenings, nights and bank holidays, per hour', price: '150', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Leak finding and repair, first hour, weekdays 9am to 4pm, no call-out fee', price: '120', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Emergency leak repair, first hour, weekday evenings, nights and weekends', price: '150', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Emergency leak repair, first hour, bank holidays', price: '180', priceCurrency: 'GBP' },
   ],
 };
 const schemaCrumbs = {
@@ -66,7 +67,7 @@ const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;pad
 
 <BaseLayout
   title="Leak Detection Liverpool | Find & Fix Water Leaks 24/7 | No Call-Out Fee"
-  description="Water leak in Liverpool? We find and fix leaks through ceilings, under floors and behind walls, 24/7. Pressure testing and insurance leak reports. No call-out fee, from £80 an hour. Call 0151 558 0334."
+  description="Water leak in Liverpool? We find and fix leaks through ceilings, under floors and behind walls, 24/7. Pressure testing and insurance leak reports. No call-out fee, from £120 for the first hour. Call 0151 558 0334."
   canonical={URL_}
 >
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
@@ -101,7 +102,7 @@ const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;pad
   <section class="pf-section" style="background:#ffffff;padding-bottom:1rem;">
     <div class="container" style="max-width:760px;">
       <div style="background:#f1f5f9;border-left:4px solid var(--orange);border-radius:10px;padding:1.1rem 1.35rem;">
-        <p style="margin:0;line-height:1.7;"><strong>Quick answer:</strong> finding and fixing a water leak in Liverpool with us has no call-out fee. It costs £80 an hour on weekdays, £120 an hour on weekend mornings and £150 an hour out of hours, with a one hour minimum. Most leaks come from a joint, valve, waste pipe or appliance and are fixed on the same visit. We can also write a leak report for your insurance claim.</p>
+        <p style="margin:0;line-height:1.7;"><strong>Quick answer:</strong> finding and fixing a water leak in Liverpool with us has no call-out fee. It costs £120 for the first hour on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. Most leaks come from a joint, valve, waste pipe or appliance and are fixed on the same visit. We can also write a leak report for your insurance claim.</p>
       </div>
     </div>
   </section>
@@ -139,11 +140,11 @@ const card = 'background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;pad
   <section class="pf-section" style="background:#ffffff;">
     <div class="container">
       <h2>Leak Repair Prices in Liverpool</h2>
-      <p class="pf-sub">No call-out fee. A one hour minimum, and you agree the price of any parts or extra work first.</p>
+      <p class="pf-sub">No call-out fee. One fixed price for the first hour, and you agree the price of any parts or extra work first.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:760px;margin:0 auto;">
-        <div style={card + 'border-top:4px solid var(--orange);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:#c2410c;letter-spacing:0.08em;">WEEKDAYS 9AM TO 5PM</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£80<span style="font-size:1rem;"> an hour</span></div></div>
-        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">WEEKENDS 9AM TO 1PM</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£120<span style="font-size:1rem;"> an hour</span></div></div>
-        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">EVENINGS, NIGHTS, BANK HOLIDAYS</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£150<span style="font-size:1rem;"> an hour</span></div></div>
+        <div style={card + 'border-top:4px solid var(--orange);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:#c2410c;letter-spacing:0.08em;">WEEKDAYS 9AM TO 4PM</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£120<span style="font-size:1rem;"> first hour</span></div></div>
+        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">EVENINGS, NIGHTS, WEEKENDS</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£150<span style="font-size:1rem;"> first hour</span></div></div>
+        <div style={card + 'border-top:4px solid var(--navy);text-align:center;'}><div style="font-size:0.72rem;font-weight:800;color:var(--navy);letter-spacing:0.08em;">BANK HOLIDAYS</div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy);line-height:1.1;">£180<span style="font-size:1rem;"> first hour</span></div></div>
       </div>
     </div>
   </section>

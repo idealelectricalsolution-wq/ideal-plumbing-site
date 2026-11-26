@@ -43,13 +43,13 @@ const areas = ['aigburth','aintree','allerton','anfield','bootle','childwall','c
 const areaName = (a) => ({ 'city-centre': 'City Centre', 'st-helens': 'St Helens', 'mossley-hill': 'Mossley Hill', 'norris-green': 'Norris Green', 'old-swan': 'Old Swan', 'west-derby': 'West Derby' }[a] ?? a[0].toUpperCase() + a.slice(1));
 
 const faqs = [
-  { q: 'How much does an emergency plumber cost in Liverpool?', a: 'Weekdays 9am to 5pm: £80 per hour. Weekends 9am to 1pm: £120 per hour. Out of hours, nights and bank holidays: £150 per hour. There is a 1 hour minimum and no call-out fee. Parts are charged at cost and you get a written quote before any work begins.' },
-  { q: 'Is there a call-out fee?', a: 'No. There is no call-out fee. You pay the hourly rate with a 1 hour minimum, so a weekday emergency starts at £80.' },
+  { q: 'How much does an emergency plumber cost in Liverpool?', a: 'Weekdays 9am to 4pm: £120 for the first hour. Weekday evenings, nights and weekends: £150 for the first hour. Bank holidays: £180 for the first hour. There is no call-out fee. The first hour includes finding the fault, and most jobs are fixed within it. Any extra time or parts are priced before we carry on.' },
+  { q: 'Is there a call-out fee?', a: 'No. There is no call-out fee. You pay for the first hour of the engineer\'s time, which includes finding the fault: £120 on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. Nothing is added for coming out.' },
   { q: 'How quickly can you get to me?', a: 'Our 30 minute response is guaranteed across Liverpool L1 to L40, and our average arrival time is 28 minutes. Call 0151 558 0334 and we will tell you when an engineer will arrive.' },
   { q: 'Do you cover commercial properties?', a: 'Yes. We cover commercial plumbing emergencies across Liverpool 24/7 at the same rates as homes. No commercial premium.' },
   { q: 'Can you find a leak I cannot see?', a: 'Yes. We trace hidden leaks by lifting floorboards, pressure testing the pipework and, where a leak is under a tiled or laminate floor, cutting a neat inspection hole in the ceiling below. Then we repair it.' },
   { q: 'Can you give me a leak report for my insurance?', a: 'Yes. We can provide a leak report for your insurer explaining where the leak was and what was repaired.' },
-  { q: 'How much is a boiler repair?', a: 'A boiler fault diagnosis is £95. If you prefer, we can work at the hourly rate instead, from £80 per hour on weekdays. Gas work is done by Gas Safe registered engineers.' },
+  { q: 'How much is a boiler repair?', a: 'A boiler repair is £120 for the first hour on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. The first hour includes diagnosis, and faults that do not need a part are usually fixed within it. No call-out fee. Gas work is done by Gas Safe registered engineers.' },
   { q: 'Are you Gas Safe registered?', a: 'Yes. Gas work is done by Gas Safe registered engineers. You can check the register at gassaferegister.co.uk. It is illegal for anyone who is not Gas Safe registered to work on gas appliances.' },
   { q: 'Who will come to my home?', a: 'One of our highly trained plumbing and heating engineers. Our team is led by James, and gas work is always done by a Gas Safe registered engineer. All our work is insured and guaranteed for 12 months.' },
   { q: 'Is your work guaranteed?', a: 'Yes. All our work carries a 12-month workmanship guarantee, and we hold £2 million public liability insurance.' },
@@ -65,8 +65,8 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title="Emergency Plumber Liverpool | Fastest 30min Response | From £80"
-  description="Emergency plumber Liverpool available 24/7. 30 minute response across L1 to L40. Gas Safe registered. A trusted team of engineers, led by James. Burst pipes, boiler breakdowns, no hot water, gas leaks. From £80/hour minimum. Call 0151 558 0334."
+  title="Emergency Plumber Liverpool | Fastest 30min Response | From £120"
+  description="Emergency plumber Liverpool available 24/7. 30 minute response across L1 to L40. Gas Safe registered. A trusted team of engineers, led by James. Burst pipes, boiler breakdowns, no hot water, gas leaks. From £120 for the first hour. Call 0151 558 0334."
   canonical="https://liverpoolemergencyplumber.co.uk"
 >
   <script type="application/ld+json" slot="head">
@@ -78,7 +78,7 @@ const faqSchema = {
     "url": "https://liverpoolemergencyplumber.co.uk",
     "telephone": "+441515580334",
     "email": "emergencyplumberliverpool@gmail.com",
-    "priceRange": "From £80/hour",
+    "priceRange": "From £120",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "29 Park Road",
@@ -151,7 +151,7 @@ const faqSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Emergency Plumber Liverpool",
-    "description": "24/7 emergency plumber and 24 hour plumber across Liverpool L1 to L40. A trusted team of Gas Safe registered plumbing and heating engineers, led by James, offering full emergency plumbing services. 30 minute response. Fixed hourly rates from £80 with 1 hour minimum. Burst pipes, water coming through ceiling, no hot water, boiler breakdown, gas leaks, frozen pipes. Gas Safe registered.",
+    "description": "24/7 emergency plumber and 24 hour plumber across Liverpool L1 to L40. A trusted team of Gas Safe registered plumbing and heating engineers, led by James, offering full emergency plumbing services. 30 minute response. Fixed prices from £120 for the first hour. Burst pipes, water coming through ceiling, no hot water, boiler breakdown, gas leaks, frozen pipes. Gas Safe registered.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
     "areaServed": { "@type": "Place", "name": "Liverpool, L1-L40" },
     "hoursAvailable": {
@@ -161,9 +161,9 @@ const faqSchema = {
       "closes": "23:59"
     },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Liverpool", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
-      { "@type": "Offer", "name": "Weekend Emergency Plumber Liverpool", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Liverpool", "price": "150", "priceCurrency": "GBP", "description": "Nights and bank holidays, 24/7" }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Liverpool", "price": "120", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 4pm. Price for the first hour. No call-out fee." },
+      { "@type": "Offer", "name": "Evening and Weekend Emergency Plumber Liverpool", "price": "150", "priceCurrency": "GBP", "description": "Weekdays after 4pm, nights and weekends. Price for the first hour. No call-out fee." },
+      { "@type": "Offer", "name": "Bank Holiday Emergency Plumber Liverpool", "price": "180", "priceCurrency": "GBP", "description": "Bank holidays. Price for the first hour. No call-out fee." }
     ]
   }
   </script>
@@ -184,7 +184,7 @@ const faqSchema = {
         <ul class="hp-promises">
           <li><strong>30 min</strong> guaranteed response, 28 min average</li>
           <li><strong>No</strong> call-out fee</li>
-          <li><strong>From £80</strong> an hour</li>
+          <li><strong>From £120</strong> for the first hour</li>
           <li><strong>Gas Safe</strong> registered</li>
         </ul>
         <a class="hp-stars" href="#reviews"><span aria-hidden="true">★★★★★</span> <strong>5.0</strong> from 53 Google reviews</a>
@@ -228,18 +228,18 @@ const faqSchema = {
     <div class="hp-wrap hp-two hp-two-prices">
       <div>
         <h2>Emergency plumber prices in Liverpool</h2>
-        <p class="hp-sub">Fixed hourly rates. No call-out fee. Written quote before any work starts.</p>
+        <p class="hp-sub">One fixed price for the first hour, including finding the fault. No call-out fee.</p>
         <table class="hp-prices">
-          <thead><tr><th scope="col">When</th><th scope="col">Per hour</th></tr></thead>
+          <thead><tr><th scope="col">When</th><th scope="col">First hour</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Weekdays<span>Monday to Friday, 9am to 5pm</span></th><td>£80</td></tr>
-            <tr><th scope="row">Weekends<span>Saturday and Sunday, 9am to 1pm</span></th><td>£120</td></tr>
-            <tr><th scope="row">Out of hours<span>Nights and bank holidays, 24/7</span></th><td>£150</td></tr>
+            <tr><th scope="row">Weekdays<span>Monday to Friday, 9am to 4pm</span></th><td>£120</td></tr>
+            <tr><th scope="row">Evenings and weekends<span>Weekdays after 4pm, nights, Saturday and Sunday</span></th><td>£150</td></tr>
+            <tr><th scope="row">Bank holidays<span>24 hours</span></th><td>£180</td></tr>
           </tbody>
         </table>
-        <p class="hp-price-boiler"><strong>Boiler fault diagnosis: £95.</strong> <a href="/boiler-repair-liverpool">Boiler repair prices →</a></p>
+        <p class="hp-price-boiler"><strong>Boiler repairs are the same price.</strong> <a href="/boiler-repair-liverpool">Boiler repair →</a></p>
         <ul class="hp-ticks">
-          <li>1 hour minimum, then 30 minute blocks</li>
+          <li>Extra time priced before we carry on</li>
           <li>Parts at cost</li>
           <li>12-month workmanship guarantee</li>
           <li>Same rates for businesses</li>
@@ -342,7 +342,7 @@ const faqSchema = {
             <h2>Boiler repair in Liverpool</h2>
             <p>No heating, no hot water, an error code or a boiler that keeps losing pressure. Our Gas Safe registered engineers repair boilers across Liverpool 24/7, with the same guaranteed 30 minute response for breakdowns.</p>
             <ul class="hp-ticks hp-ticks-one">
-              <li><strong>£95</strong> boiler fault diagnosis, or from £80 an hour</li>
+              <li><strong>From £120</strong> for the first hour, including diagnosis</li>
               <li>No call-out fee</li>
               <li>Pressure, pilot light, pump and PCB faults</li>
               <li>Boiler beyond repair? New boilers from £2,195 with up to a 12-year warranty</li>
@@ -364,7 +364,7 @@ const faqSchema = {
             <h2>Leak detection in Liverpool</h2>
             <p>A damp patch on the ceiling, a rising water bill or a boiler that keeps losing pressure can all mean a hidden leak. We trace the pipework, lift floorboards and pressure test the system to find it.</p>
             <ul class="hp-ticks hp-ticks-one">
-              <li>From £80 an hour, no call-out fee</li>
+              <li>From £120 for the first hour, no call-out fee</li>
               <li>Under tiles or laminate? A neat inspection hole in the ceiling below instead of lifting the floor</li>
               <li>Leaks under sinks, baths, radiators and floors</li>
               <li>Leak reports for your insurer</li>
@@ -413,7 +413,7 @@ const faqSchema = {
       <div>
         <div class="hp-h2-spacer" aria-hidden="true"></div>
         <ul class="hp-why">
-          <li><strong>Clear prices.</strong> From £80 an hour, no call-out fee, written quote first.</li>
+          <li><strong>Clear prices.</strong> From £120 for the first hour, no call-out fee, written quote first.</li>
           <li><strong>Guaranteed work.</strong> 12 months on workmanship and £2 million public liability insurance.</li>
           <li><strong>Homes and businesses.</strong> Commercial properties at the same rates as homes.</li>
         </ul>
@@ -451,7 +451,7 @@ const faqSchema = {
   <section class="hp-final" id="final-cta">
     <div class="hp-wrap hp-narrow">
       <h2>Leak, burst pipe or boiler down?</h2>
-      <p>Call now. A guaranteed 30 minute response across Liverpool, from £80 an hour with no call-out fee.</p>
+      <p>Call now. A guaranteed 30 minute response across Liverpool, from £120 for the first hour with no call-out fee.</p>
       <a href={TEL} class="hp-call-big hp-call-light">
         <span class="hp-call-label">Call us now</span>
         <span class="hp-call-num">{PHONE}</span>

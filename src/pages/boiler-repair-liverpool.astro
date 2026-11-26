@@ -158,7 +158,7 @@ const parts = [
 
 // ---------- FAQs ----------
 const faqs = [
-  { q: 'How much does a boiler repair cost in Liverpool?', a: 'There is no call-out fee. Weekdays 9am to 5pm are £80 an hour, weekends 9am to 1pm are £120 an hour, and evenings, nights and bank holidays are £150 an hour, with a one hour minimum. A booked boiler fault diagnosis is £95. If a part is needed, you get the price before any work starts.' },
+  { q: 'How much does a boiler repair cost in Liverpool?', a: 'A boiler repair is £120 for the first hour on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, and £180 on bank holidays. The first hour includes finding the fault, and there is no call-out fee on top. Most faults that do not need a part are fixed within that first hour. If a part is needed or the job will take longer, you get the price before we carry on.' },
   { q: 'Who will repair my boiler?', a: 'One of our Gas Safe registered heating engineers. Our team is led by James. It is illegal for anyone who is not Gas Safe registered to work on a gas boiler. You can check any engineer on the Gas Safe Register before they start.' },
   { q: 'What does the error code on my boiler mean?', a: `Each brand uses its own codes. Low pressure codes include Baxi E119, Ideal F1, Worcester Bosch CE 207 and Vaillant F22. Ignition lockouts include Baxi E133, Ideal L2, Worcester Bosch EA 227 and Vaillant F28. This page explains ${codeCount} common codes. If yours is not listed, read it to us over the phone. Error codes are our speciality.` },
   { q: 'Is it safe to reset my boiler?', a: 'Pressing reset once is safe and is what the manufacturer expects you to try. If the same code comes back, stop resetting it and call a Gas Safe registered engineer. Never take the boiler casing off.' },
@@ -215,10 +215,9 @@ const schemaService = {
   provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
   areaServed: [{ '@type': 'City', name: 'Liverpool' }, { '@type': 'City', name: 'Wirral' }, { '@type': 'City', name: 'St Helens' }, { '@type': 'City', name: 'Formby' }],
   offers: [
-    { '@type': 'Offer', name: 'Boiler fault diagnosis', price: '95', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Boiler repair, weekdays 9am to 5pm, per hour, no call-out fee', price: '80', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Boiler repair, weekends 9am to 1pm, per hour, no call-out fee', price: '120', priceCurrency: 'GBP' },
-    { '@type': 'Offer', name: 'Emergency boiler repair, evenings, nights and bank holidays, per hour', price: '150', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Boiler repair, first hour including diagnosis, weekdays 9am to 4pm, no call-out fee', price: '120', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Boiler repair, first hour including diagnosis, weekday evenings, nights and weekends', price: '150', priceCurrency: 'GBP' },
+    { '@type': 'Offer', name: 'Boiler repair, first hour including diagnosis, bank holidays', price: '180', priceCurrency: 'GBP' },
   ],
 };
 const schemaPage = {
@@ -238,7 +237,7 @@ const schemaCrumbs = {
 
 <BaseLayout
   title="Boiler Repair Liverpool | Emergency Boiler Engineer 24/7 | No Call-Out Fee"
-  description="Boiler repair in Liverpool by a Gas Safe registered engineer, 24/7. No call-out fee, from £80 an hour or a £95 fault diagnosis. Common faults and error codes explained. Call 0151 558 0334."
+  description="Boiler repair in Liverpool by a Gas Safe registered engineer, 24/7. From £120 for the first hour, including diagnosis. No call-out fee. Common faults and error codes explained. Call 0151 558 0334."
   canonical={URL_}
 >
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
@@ -278,7 +277,7 @@ const schemaCrumbs = {
         <h2 class="brx-facts-h">Boiler repair in Liverpool at a glance</h2>
         <dl>
           <div><dt>Who</dt><dd>A trusted team of Gas Safe registered heating engineers, led by James.</dd></div>
-          <div><dt>Price</dt><dd>No call-out fee. £80 an hour on weekdays, £120 on weekend mornings, £150 out of hours. £95 fault diagnosis.</dd></div>
+          <div><dt>Price</dt><dd>First hour, including diagnosis: £120 weekdays 9am to 4pm, £150 evenings, nights and weekends, £180 bank holidays. No call-out fee.</dd></div>
           <div><dt>Response</dt><dd>Guaranteed within 30 minutes, 24/7. Average arrival 28 minutes.</dd></div>
           <div><dt>Brands</dt><dd>Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm, Viessmann. Combi, system and regular boilers.</dd></div>
           <div><dt>Guarantee</dt><dd>12 months on workmanship. £2 million public liability insurance.</dd></div>
@@ -319,16 +318,16 @@ const schemaCrumbs = {
   <section class="brx-sec" id="prices">
     <div class="brx-wrap">
       <h2>How much does boiler repair cost in Liverpool?</h2>
-      <p class="brx-answer">A boiler repair with us has <strong>no call-out fee</strong>. You pay by the hour, with a one hour minimum, or £95 for a booked fault diagnosis. Parts are extra, and you agree the price of any part before it is fitted.</p>
+      <p class="brx-answer">A boiler repair with us is <strong>£120 for the first hour on weekdays</strong>, and that includes finding the fault. Evenings, nights and weekends are £150, and bank holidays £180. There is <strong>no call-out fee</strong> on top. Most faults that do not need a part are fixed within that first hour.</p>
       <div class="brx-table-wrap">
         <table class="brx-table">
-          <thead><tr><th scope="col">When</th><th scope="col">Price</th></tr></thead>
+          <thead><tr><th scope="col">What you pay</th><th scope="col">Price</th></tr></thead>
           <tbody>
-            <tr><td>Weekdays, 9am to 5pm</td><td><strong>£80</strong> an hour</td></tr>
-            <tr><td>Weekends, 9am to 1pm</td><td><strong>£120</strong> an hour</td></tr>
-            <tr><td>Evenings, nights and bank holidays</td><td><strong>£150</strong> an hour</td></tr>
-            <tr><td>Booked boiler fault diagnosis</td><td><strong>£95</strong></td></tr>
+            <tr><td>First hour, weekdays 9am to 4pm, including finding the fault</td><td><strong>£120</strong></td></tr>
+            <tr><td>First hour, weekday evenings, nights and weekends</td><td><strong>£150</strong></td></tr>
+            <tr><td>First hour, bank holidays</td><td><strong>£180</strong></td></tr>
             <tr><td>Call-out fee</td><td><strong>£0</strong></td></tr>
+            <tr><td>Parts, or a job that needs longer</td><td><strong>Priced before we carry on</strong></td></tr>
           </tbody>
         </table>
       </div>

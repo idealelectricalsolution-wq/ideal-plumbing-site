@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Emergency Plumber Liverpool City Centre | From £80"
-  description="Emergency plumber in Liverpool city centre L1, L2, L3. 30 minute response. Cover for apartments, student accommodation, Airbnbs, hotels, bars and offices. Gas Safe. From £80 an hour. Call 0151 558 0334."
+  title="Emergency Plumber Liverpool City Centre | From £120"
+  description="Emergency plumber in Liverpool city centre L1, L2, L3. 30 minute response. Cover for apartments, student accommodation, Airbnbs, hotels, bars and offices. Gas Safe. From £120 for the first hour. Call 0151 558 0334."
 >
 
   <script type="application/ld+json" slot="head">
@@ -14,7 +14,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "name": "Emergency Plumber Liverpool City Centre",
     "alternateName": ["24 Hour Plumber Liverpool City Centre", "Commercial Plumber Liverpool City Centre"],
     "serviceType": "Emergency Plumbing",
-    "description": "Emergency plumber in Liverpool city centre L1, L2 and L3. We cover residential apartments, student accommodation, Airbnb and short lets, restaurants, bars, hotels and offices. 30 minute response. Gas Safe registered. Gas Safe registered From £80 an hour.",
+    "description": "Emergency plumber in Liverpool city centre L1, L2 and L3. We cover residential apartments, student accommodation, Airbnb and short lets, restaurants, bars, hotels and offices. 30 minute response. Gas Safe registered. Gas Safe registered From £120 for the first hour.",
     "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
     "areaServed": [
       { "@type": "Place", "name": "Liverpool City Centre, L1" },
@@ -29,9 +29,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     ],
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Liverpool City Centre", "price": "80", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 5pm. 1 hour minimum charge." },
-      { "@type": "Offer", "name": "Weekend Emergency Plumber Liverpool City Centre", "price": "120", "priceCurrency": "GBP", "description": "Saturday and Sunday 9am to 1pm. 1 hour minimum charge." },
-      { "@type": "Offer", "name": "Out of Hours Emergency Plumber Liverpool City Centre", "price": "150", "priceCurrency": "GBP", "description": "Nights, bank holidays and out of hours. 24/7 availability." }
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Liverpool City Centre", "price": "120", "priceCurrency": "GBP", "description": "Monday to Friday 9am to 4pm. Price for the first hour. No call-out fee." },
+      { "@type": "Offer", "name": "Evening and Weekend Emergency Plumber Liverpool City Centre", "price": "150", "priceCurrency": "GBP", "description": "Weekdays after 4pm, nights and weekends. Price for the first hour. No call-out fee." },
+      { "@type": "Offer", "name": "Bank Holiday Emergency Plumber Liverpool City Centre", "price": "180", "priceCurrency": "GBP", "description": "Bank holidays. Price for the first hour. No call-out fee." }
     ]
   }
   </script>
@@ -41,9 +41,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350. Same fixed rates for residential and commercial. Written quote before work starts. No separate call-out fee." } },
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "£120 for the first hour on weekdays 9am to 4pm. £150 for the first hour on weekday evenings, nights and weekends. £180 for the first hour on bank holidays. Extra time is priced before we carry on. Parts at cost. Most jobs cost £120 to £350. Same fixed rates for residential and commercial. Written quote before work starts. No separate call-out fee." } },
       { "@type": "Question", "name": "How quickly can you reach Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across L1, L2 and L3. Out of hours, when traffic clears, typical arrival is 20 to 25 minutes from our Kirkby base. A real person answers the phone 24 hours a day, every day of the year." } },
-      { "@type": "Question", "name": "Do you cover commercial premises in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bars, restaurants, hotels, offices, salons, gyms, shops. Same fixed rates as residential. £80 weekdays, £120 weekends, £150 out of hours. No commercial premium. No separate call-out fee. We work with kitchen managers, hotel duty managers and bar owners to fix faults fast so trading can carry on." } },
+      { "@type": "Question", "name": "Do you cover commercial premises in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bars, restaurants, hotels, offices, salons, gyms, shops. Same fixed rates as residential. £120 weekdays, £150 evenings and weekends, £180 bank holidays, for the first hour. No commercial premium. No separate call-out fee. We work with kitchen managers, hotel duty managers and bar owners to fix faults fast so trading can carry on." } },
       { "@type": "Question", "name": "Do you cover Airbnb and short-let properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with Airbnb hosts and short-let managers across the city centre. We handle emergencies between guest changeovers and provide written reports for host insurance claims. Same fixed rates. We can usually attend within the 30-minute window even on a turnover day." } },
       { "@type": "Question", "name": "Do you handle student accommodation in Liverpool city centre?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We cover student blocks across L1 and L3 including Mount Pleasant, Marybone, Bold Street and Renshaw Street. We carry out CP12 gas safety certificates ahead of each academic year in July and August. Multi-room HMOs and shared student houses are familiar work for us." } },
       { "@type": "Question", "name": "Can you coordinate with building management?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most city centre apartment blocks have a concierge or managing agent. We're used to liaising with building management to access communal risers, isolate floor-level water supplies and turn off booster pumps when needed. Bring us the management contact number if you have it. If you don't, we'll find it." } },
@@ -72,12 +72,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Available 24/7 in Liverpool City Centre
       </div>
       <h1>Emergency Plumber in Liverpool City Centre</h1>
-      <p class="page-hero-sub">24/7 emergency plumber across L1, L2 and L3. We cover residential apartments, studios, student accommodation, Airbnb hosts, bars, restaurants, hotels and offices. 30 minute response. £80 an hour fixed. Gas Safe registered. A real person answers the phone, even at 3am.</p>
+      <p class="page-hero-sub">24/7 emergency plumber across L1, L2 and L3. We cover residential apartments, studios, student accommodation, Airbnb hosts, bars, restaurants, hotels and offices. 30 minute response. From £120 for the first hour. Gas Safe registered. A real person answers the phone, even at 3am.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
         <span style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:3rem;font-weight:900;color:#fb923c;line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
         <span style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:1rem;font-weight:900;color:#ffffff;line-height:1.2;">Guaranteed Response Across L1, L2, L3</span>
-        <p style="color:rgba(255,255,255,0.85);font-size:0.85rem;margin:0.3rem 0 0;">From <strong style="color:#fb923c;">£80/hour</strong> · 1 hour minimum · Fixed rates</p>
+        <p style="color:rgba(255,255,255,0.85);font-size:0.85rem;margin:0.3rem 0 0;">From <strong style="color:#fb923c;">£120</strong> for the first hour · No call-out fee</p>
       </div>
 
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.5rem;">
@@ -89,7 +89,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Same Rates Commercial</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Rates from £80</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Prices from £120</span>
       </div>
     </div>
   </section>
@@ -158,46 +158,46 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>Liverpool City Centre Plumber Rates. Fixed. Same for Commercial.</h2>
-      <p class="pf-sub">Written quote before work starts. 1 hour minimum on every call-out. Parts at cost. The price we quote is the price you pay.</p>
+      <p class="pf-sub">Written quote before work starts. Extra time is priced before we carry on. Parts at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
           <div class="pf-price-tier">WEEKDAY</div>
           <div class="pf-price-name">Monday to Friday</div>
-          <div class="pf-price-sub">9am to 5pm</div>
-          <div class="pf-price-amount">£80<small>/hr</small></div>
+          <div class="pf-price-sub">9am to 4pm</div>
+          <div class="pf-price-amount">£120<small> first hour</small></div>
           <ul class="pf-price-list">
             <li>30 min city centre response</li>
             <li>Gas Safe engineer</li>
-            <li>1 hour minimum</li>
+            <li>No call-out fee</li>
             <li>Parts at cost</li>
           </ul>
           <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Call Now</a>
         </div>
         <div class="pf-price-card">
-          <div class="pf-price-tier">WEEKEND</div>
-          <div class="pf-price-name">Saturday to Sunday</div>
-          <div class="pf-price-sub">9am to 1pm</div>
-          <div class="pf-price-amount">£120<small>/hr</small></div>
+          <div class="pf-price-tier">OUT OF HOURS</div>
+          <div class="pf-price-name">Evenings and weekends</div>
+          <div class="pf-price-sub">Weekdays after 4pm, nights and all weekend</div>
+          <div class="pf-price-amount">£150<small> first hour</small></div>
           <ul class="pf-price-list">
             <li>Same fast service</li>
             <li>Gas Safe engineer</li>
-            <li>1 hour minimum</li>
+            <li>No call-out fee</li>
             <li>Parts at cost</li>
           </ul>
           <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Call Now</a>
         </div>
         <div class="pf-price-card pf-price-card-featured">
           <div class="pf-price-badge">24/7</div>
-          <div class="pf-price-tier">OUT OF HOURS</div>
-          <div class="pf-price-name">Nights and Holidays</div>
+          <div class="pf-price-tier">BANK HOLIDAYS</div>
+          <div class="pf-price-name">Every bank holiday</div>
           <div class="pf-price-sub">Always available</div>
-          <div class="pf-price-amount">£150<small>/hr</small></div>
+          <div class="pf-price-amount">£180<small> first hour</small></div>
           <ul class="pf-price-list">
             <li>Real person answers now</li>
             <li>Priority response</li>
             <li>Gas Safe engineer</li>
-            <li>1 hour minimum</li>
+            <li>No call-out fee</li>
           </ul>
           <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Call Now. We Answer.</a>
         </div>
@@ -205,7 +205,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="pf-alert" style="margin-top:1.5rem;">
         <strong>No commercial premium</strong>
-        <p>Bars, restaurants, hotels and offices in Liverpool city centre pay the same rates as residential customers. The <a href="https://www.checkatrade.com/blog/cost-guides/plumber-call-out-fee/" target="_blank" rel="noopener">Checkatrade average for emergency plumber call-outs</a> in Liverpool runs £80 to £180 an hour. Our rates are fixed and published before you call.</p>
+        <p>Bars, restaurants, hotels and offices in Liverpool city centre pay the same rates as residential customers. Our prices are fixed and published before you call.</p>
       </div>
     </div>
   </section>
@@ -228,7 +228,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="pf-card pf-card-left-orange" style="margin-top:1rem;">
         <p>Commercial premises are their own world. A leak under a Bold Street restaurant kitchen can shut service. A bar in Ropewalks loses trade every minute the urinal's out. A hotel can't have a guest room flooded the night before a check-in.</p>
 
-        <p>We attend commercial emergencies at the same rate as residential. £80 an hour weekdays. No callout fee. No commercial premium. We work around trading hours where we can. We provide invoices that work for landlord, tenant or business insurance claims.</p>
+        <p>We attend commercial emergencies at the same rate as residential. £120 for the first hour on weekdays. No callout fee. No commercial premium. We work around trading hours where we can. We provide invoices that work for landlord, tenant or business insurance claims.</p>
       </div>
     </div>
   </section>
@@ -312,7 +312,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2>Why City Centre Customers Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
         <div class="pf-why-item"><h3>30 Minute City Centre Response</h3><p>We dispatch from Kirkby. Direct route into the city. Out of hours, when traffic clears, we're often there in 20 to 25 minutes.</p></div>
-        <div class="pf-why-item"><h3>Same Rates for Commercial</h3><p>Bars, restaurants, hotels, offices, salons. No commercial premium. £80 weekdays, £120 weekends, £150 out of hours. Same as residential.</p></div>
+        <div class="pf-why-item"><h3>Same Rates for Commercial</h3><p>Bars, restaurants, hotels, offices, salons. No commercial premium. £120 weekdays, £150 evenings and weekends, £180 bank holidays, for the first hour. Same as residential.</p></div>
         <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>Every engineer is Gas Safe registered. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
         <div class="pf-why-item"><h3>Block and Building Management Experience</h3><p>We know the city centre's BTR blocks, converted warehouses and Georgian conversions. We coordinate with concierges and managing agents on every call.</p></div>
         <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am. A real person picks up. No voicemail. No menu. Safety advice while your engineer is on the way.</p></div>
@@ -356,9 +356,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>Emergency Plumber Liverpool City Centre. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Liverpool city centre?</summary><div class="pf-faq-body"><p>£80 an hour weekdays 9am to 5pm. £120 an hour weekends 9am to 1pm. £150 an hour out of hours, nights and bank holidays. 1 hour minimum on every call-out. Parts at cost. Most jobs cost £80 to £350 total. Same fixed rates for commercial. Written quote before work starts.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Liverpool city centre?</summary><div class="pf-faq-body"><p>£120 for the first hour on weekdays 9am to 4pm. £150 for the first hour on weekday evenings, nights and weekends. £180 for the first hour on bank holidays. Extra time is priced before we carry on. Parts at cost. Most jobs cost £120 to £350 total. Same fixed rates for commercial. Written quote before work starts.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Liverpool city centre?</summary><div class="pf-faq-body"><p>30 minute response guaranteed across L1, L2 and L3. Out of hours when traffic clears, typical arrival is 20 to 25 minutes from our Kirkby base. A real person answers the phone any time of day or night.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COMMERCIAL</span>&nbsp; Do you cover commercial premises in the city centre?</summary><div class="pf-faq-body"><p>Yes. Bars, restaurants, hotels, offices, salons, gyms, shops. Same fixed rates as residential. £80 weekdays, £120 weekends, £150 out of hours. No commercial premium. No separate call-out fee. We work with kitchen managers, hotel duty managers and bar owners to fix faults fast so trading can continue.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COMMERCIAL</span>&nbsp; Do you cover commercial premises in the city centre?</summary><div class="pf-faq-body"><p>Yes. Bars, restaurants, hotels, offices, salons, gyms, shops. Same fixed rates as residential. £120 weekdays, £150 evenings and weekends, £180 bank holidays, for the first hour. No commercial premium. No separate call-out fee. We work with kitchen managers, hotel duty managers and bar owners to fix faults fast so trading can continue.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">AIRBNB</span>&nbsp; Do you cover Airbnb and short-let properties?</summary><div class="pf-faq-body"><p>Yes. We work with Airbnb hosts and short-let managers across the city centre. We handle emergencies between guest changeovers and provide written reports for host insurance claims. Same fixed rates. We can usually attend within the 30-minute window even on a turnover day.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">STUDENTS</span>&nbsp; Do you handle student accommodation in the city centre?</summary><div class="pf-faq-body"><p>Yes. We cover student blocks across L1 and L3. Mount Pleasant, Marybone, Bold Street, Renshaw Street. We carry out CP12 gas safety certificates ahead of each academic year in July and August. Multi-room HMOs and shared student houses are familiar work for us.</p></div></details>
         <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">BLOCKS</span>&nbsp; Can you coordinate with building management?</summary><div class="pf-faq-body"><p>Yes. Most city centre apartment blocks have a concierge or managing agent. We're used to liaising with building management to access communal risers, isolate floor-level water supplies and turn off booster pumps when needed. Bring us the management contact number if you have it. If you don't, we'll find it.</p></div></details>
@@ -396,7 +396,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Available Now in Liverpool City Centre. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Liverpool City Centre?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. £80 fixed. Commercial and residential same rate. Gas Safe registered. 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. From £120. Commercial and residential same rate. Gas Safe registered. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
