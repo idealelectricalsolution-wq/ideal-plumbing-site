@@ -1,462 +1,278 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/showers-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'electric', tier: 'Electric shower', name: 'Electric shower replaced', price: '£375', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['New electric shower unit', 'Fitted on your existing circuit', 'Old shower taken away', 'Usually done in 2 to 4 hours'] },
+  { id: 'bar-mixer', tier: 'Mixer shower', popular: true, name: 'Thermostatic bar mixer shower', price: '£395', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Holds the heat when a tap runs', 'Anti-scald protection', 'Riser rail, hose and head', 'Suits combi and unvented systems'] },
+  { id: 'concealed', tier: 'Neat finish', name: 'Concealed thermostatic shower', price: '£695', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Valve and pipes hidden in the wall', 'Fixed head, rail or both', 'Clean, modern look', 'Walls made good after'] },
+  { id: 'power', tier: 'Low pressure fix', name: 'Power shower', price: '£650', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Built-in pump boosts the flow', 'For gravity systems with a hot water tank', 'Not for combi boilers', 'Old shower taken away'] },
+];
+
+const faqs = [
+  { q: 'How much does shower installation cost in Liverpool?', a: 'With us, an electric shower supplied and fitted is from £375. A thermostatic bar mixer is from £395. A power shower is from £650 and a concealed thermostatic shower is from £695. A digital shower is from £850. If you have bought your own shower, fitting is from £195. All prices include VAT.' },
+  { q: 'How long does it take to fit a new shower?', a: 'Swapping an electric shower for a new one takes 2 to 4 hours. A bar mixer is often done in half a day. Concealed showers take longer, because the pipes go into the wall. A bath to shower conversion takes 2 to 3 days.' },
+  { q: 'Will you fit a shower I have bought?', a: 'Yes. Fitting your own shower is from £195. Before you buy, tell us what boiler or hot water tank you have. We will check the shower will work with it.' },
+  { q: 'Do you take the old shower away?', a: 'Yes. We remove the old shower and take it with us. It is included in the price.' },
+  { q: 'What shower is best with a combi boiler?', a: 'A thermostatic mixer, concealed or bar style, is the usual choice. A combi gives mains pressure hot water, so a mixer works well. An electric shower also works. Do not fit a power shower to a combi.' },
+  { q: 'Can I have a power shower with a combi boiler?', a: 'No. A power shower has a pump inside. It must only be fed from a cold water tank and a hot water cylinder, known as a gravity system. Pumping straight from the mains is not allowed under the water rules.' },
+  { q: 'Do I need an electrician for an electric shower?', a: 'For a like-for-like swap on a suitable circuit, no. We do that. If you need a new circuit, or a bigger shower than the cable can take, an electrician must do it. Our partner firm Ideal Electrical Solutions does this, and we book the work together.' },
+  { q: 'What size electric shower do I need?', a: 'Most electric showers are 7.5kW to 10.8kW. A higher number gives a stronger flow in winter. But the cable and fuse must suit the shower. We check your circuit first. If it needs an upgrade, our partner electricians quote for it.' },
+  { q: 'Why is my shower pressure so low?', a: 'The most common cause is limescale in the shower head. Other causes are a gravity system with a low tank, a failing pump or a kinked hose. If every tap is weak, the problem is the water supply, not the shower. We find the cause before we suggest anything.' },
+  { q: 'Do you repair showers?', a: 'Yes. Shower repairs are charged by time. The first hour is £120 on weekdays from 9am to 4pm, £150 in the evenings, at night and at weekends, and £180 on bank holidays. There is no call-out fee. If a new shower is the better buy, we will say so.' },
+  { q: 'What shower brands do you fit?', a: 'We fit all the main brands, including Mira, Triton, Aqualisa, Bristan, Grohe, Hansgrohe, Vado and Crosswater. We can supply one for you, or fit one you have bought.' },
+  { q: 'Can you replace my bath with a shower?', a: 'Yes. A bath to shower conversion is from £2,395 including VAT. It takes 2 to 3 days. See our bathroom fitters page for what is included.' },
+  { q: 'Is the work guaranteed?', a: 'Yes. Our work comes with a 12-month workmanship guarantee. The shower itself also has the maker\'s own warranty. We hold £2 million public liability insurance.' },
+];
 ---
 
-<BaseLayout
-  title="Shower Installation Liverpool | From £200 | All Brands"
-  description="Shower installation Liverpool from £200 supply and fit. Electric, mixer, thermostatic, power, digital and walk-in showers. Rainfall and dual-head systems. Budget, mid and premium brands. Electrics by our NICEIC partner firm. Free quotes. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/showers-liverpool"
+<ServiceGuide
+  url={URL_}
+  title="Shower Installation Liverpool | Showers Fitted From £375"
+  description="Shower installation in Liverpool. Electric showers from £375, thermostatic mixers from £395, power showers from £650, fully fitted inc VAT. Fixed prices, no call-out fee. Call 0151 558 0334."
+  h1="Shower Installation Liverpool"
+  badge="Showers Liverpool · fixed prices"
+  intro="New showers fitted across Liverpool from £375, including VAT. We fit electric, mixer, power and digital showers. We check your water system first, so the shower you pick works well. Most swaps are done in a few hours, and we take the old one away."
+  stats={[['£375', 'Electric shower fitted'], ['2-4 hrs', 'Most shower swaps']]}
+  ticks={['Fixed Written Price', 'Old Shower Taken Away', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Shower installation prices"
+  pkLede="Supplied and fitted, including VAT. No call-out fee. You get a fixed price before we start."
+  packages={packages}
+  pkNote="Prices are for a like-for-like position on your existing pipes or circuit. Moving a shower, a new electric shower circuit or extra tiling is priced first. Fitting a shower you have bought is from £195."
+  factsTitle="Showers at a glance"
+  facts={[
+    ['Price', 'Electric from £375. Mixer from £395. Power from £650. Digital from £850. All inc VAT.'],
+    ['Time', 'A shower swap takes 2 to 4 hours. Bath to shower: 2 to 3 days.'],
+    ['Combi?', 'Mixer or electric. Never a power shower.'],
+    ['Electrics', 'New shower circuits by our partner firm Ideal Electrical Solutions.'],
+    ['Guarantee', '12 months on our work, plus the maker\'s warranty.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['types', 'Which type of shower is right for me?'],
+    ['water', 'Which shower suits my water system?'],
+    ['electric', 'Electric showers and the electrics'],
+    ['included', 'What is included?'],
+    ['how', 'How does it work?'],
+    ['more-prices', 'Other shower prices'],
+    ['repair', 'Repair or replace?'],
+    ['brands', 'Which brands do you fit?'],
+  ]}
+  reviews={['Meghann S', 'Joe M', 'Stephen D', 'Greg W']}
+  faqs={faqs}
+  areasTitle="Where do you fit showers?"
+  areasText="Every Liverpool postcode from L1 to L38, plus the Wirral, St Helens, Formby and the rest of Sefton and Knowsley."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-crosby', label: 'Crosby' },
+    { href: '/emergency-plumber-kirkby', label: 'Kirkby' },
+    { href: '/emergency-plumber-wirral', label: 'Wirral' },
+    { href: '/emergency-plumber-st-helens', label: 'St Helens' },
+    { href: '/emergency-plumber-formby', label: 'Formby' },
+  ]}
+  related={[
+    { href: '/bathroom-fitters-liverpool', title: 'Bathroom fitters', text: 'Full bathrooms from £4,995, bath to shower from £2,395' },
+    { href: '/hot-water-cylinders-liverpool', title: 'Hot water cylinders', text: 'Unvented cylinders for strong mains-pressure showers' },
+    { href: '/boiler-installation-liverpool', title: 'Boiler installation', text: 'New combi boilers from £2,195 fully fitted' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Leaks from showers and trays found and fixed' },
+  ]}
+  finalTitle="Book your new shower"
+  finalText="Electric showers from £375 fitted, including VAT. Fixed price first. We take the old one away."
+  serviceName="Shower Installation Liverpool"
+  serviceType="Shower installation and replacement"
+  serviceDesc="Electric, thermostatic mixer, concealed, power and digital showers supplied and fitted across Liverpool and Merseyside. Fixed prices including VAT."
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Plumber"],
-    "@id": "https://liverpoolemergencyplumber.co.uk/#business",
-    "name": "Liverpool Emergency Plumber",
-    "image": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png",
-    "url": "https://liverpoolemergencyplumber.co.uk/showers-liverpool",
-    "telephone": "+441515580334",
-    "email": "emergencyplumberliverpool@gmail.com",
-    "priceRange": "££",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "29 Park Road",
-      "addressLocality": "Kirkby",
-      "addressRegion": "Merseyside",
-      "postalCode": "L32 2AL",
-      "addressCountry": "GB"
-    },
-    "geo": { "@type": "GeoCoordinates", "latitude": "53.4844", "longitude": "-2.8964" },
-    "areaServed": [
-      { "@type": "City", "name": "Liverpool" },
-      { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "Warrington" },
-      { "@type": "City", "name": "St Helens" },
-      { "@type": "City", "name": "Bootle" },
-      { "@type": "City", "name": "Crosby" },
-      { "@type": "City", "name": "Formby" },
-      { "@type": "City", "name": "Southport" }
-    ],
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "James Alexander" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Great company, came within 30 mins for emergency burst pipe, couldn’t praise them enough !!"
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "John Manley" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company"
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Elaine McHugh" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Excellent service."
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Shower Installation Liverpool",
-    "alternateName": ["Shower Installation Service Liverpool", "Electric Shower Installation Liverpool", "Walk-In Shower Installation Liverpool", "Rainfall Shower Installation Liverpool", "Bathroom Fitting Liverpool"],
-    "serviceType": "Shower Installation and Repair",
-    "description": "Shower installation across Liverpool from £200 supply and fit. Electric, mixer, thermostatic, power, digital and walk-in showers. Rainfall heads and dual-head systems. Budget, mid and premium brands including Triton, Bristan, Mira, Aqualisa, Hansgrohe, Grohe, Crosswater and Vado. Electrics by our partner firm Ideal Electrical Solutions, NICEIC approved. Gas Safe registered for all plumbing connections.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": [
-      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "Warrington" }, { "@type": "City", "name": "St Helens" }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "itemListElement": [
-        { "@type": "Offer", "name": "Electric Shower Installation Liverpool", "price": "200", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Hot Cold Mixer Shower Installation Liverpool", "price": "200", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Thermostatic Mixer Shower Installation Liverpool", "price": "300", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Power Shower Installation Liverpool", "price": "350", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Dual Head Shower System Liverpool", "price": "400", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Rainfall Shower System Liverpool", "price": "450", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Digital Shower Installation Liverpool", "price": "500", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Walk-In Shower Area Liverpool", "price": "800", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-        { "@type": "Offer", "name": "Thermostatic Shower Valve Replacement Liverpool", "price": "150", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" }
-      ]
-    }
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does shower installation cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "Electric showers from £200 supply and fit. Hot-cold mixer from £200. Thermostatic mixer from £300. Power shower from £350. Digital shower from £500. Walk-in shower areas from £800. Rainfall head systems from £450. Dual-head systems from £400. We give a free written quote before any work starts." } },
-      { "@type": "Question", "name": "What is the best type of shower for a Liverpool home?", "acceptedAnswer": { "@type": "Answer", "text": "It comes down to your water supply. Electric showers work on any system. They are the most common pick in Liverpool. Thermostatic mixers are best for homes with good pressure or an unvented cylinder. Power showers boost low pressure but need a hot water cylinder. Digital showers give the best control. We advise at the free quote visit." } },
-      { "@type": "Question", "name": "What shower brands do you install in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "We fit Triton, Bristan, Mira, Aqualisa, Hansgrohe, Grohe, Crosswater and Vado. Budget, mid-tier and premium ranges. We can supply the shower or fit one you have bought. Tell us your budget and what matters to you. We help you pick the right brand for your home." } },
-      { "@type": "Question", "name": "Can you install a dual head shower system?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A dual outlet system gives you both an overhead shower head and a handheld one. Switch between them or use both at the same time. We fit dual outlet systems from £400 supply and fit. Hansgrohe, Grohe and Crosswater all have strong dual outlet ranges." } },
-      { "@type": "Question", "name": "Can you install a rainfall shower head?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A rainfall head is a large overhead shower head, often 200mm to 400mm across. The flow falls down like rain. It works best with mains-pressure water or a power shower system. We supply and fit from £450. Hansgrohe Raindance and Grohe Rainshower are the top picks here." } },
-      { "@type": "Question", "name": "Can you install a shower over a bath?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Electric shower over bath from £200 supply and fit. Thermostatic bar valve over bath from £250. Bath screens from £150 supply and fit. A shower over bath is a practical and cost-effective fix for smaller Liverpool homes or rental properties." } },
-      { "@type": "Question", "name": "How long does shower installation take?", "acceptedAnswer": { "@type": "Answer", "text": "A like-for-like electric shower swap takes 2 to 3 hours. A new thermostatic mixer fit takes 2 to 4 hours. A shower tray and enclosure takes 1 day. A full walk-in tiled shower area takes 2 to 3 days. We tell you the time at the quote stage." } },
-      { "@type": "Question", "name": "Who does the electrics for an electric shower?", "acceptedAnswer": { "@type": "Answer", "text": "Our partner firm, NICEIC approved Ideal Electrical Solutions (idealelectricalsolutions.co.uk). One call books both. The plumbing and the wiring get done on the same visit. This means we can fit electric showers, change shower circuits and upgrade the cable for high-kW units all in one visit." } },
-      { "@type": "Question", "name": "Are you Gas Safe registered for shower plumbing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We are Gas Safe registered. Our team does all the plumbing work. You can verify us at gassaferegister.co.uk. All gas work is done by a Gas Safe registered plumber." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Shower Installation Liverpool", "item": "https://liverpoolemergencyplumber.co.uk/showers-liverpool" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        Liverpool Shower Installation
+  <section class="brx-sec brx-tint" id="types">
+    <div class="brx-wrap">
+      <h2>Which type of shower is right for me?</h2>
+      <p class="brx-answer">It depends on your hot water. An electric shower works in almost any home. A mixer needs good hot water pressure, and a power shower only suits a gravity system.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Shower</th><th>How it works</th><th>Best with</th><th>Fitted from</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Electric</strong></td><td>Heats cold mains water as it runs</td><td>Any system. Works when the boiler is off.</td><td>£375</td></tr>
+            <tr><td><strong>Bar mixer</strong></td><td>Mixes hot and cold, holds the set heat</td><td>Combi or unvented cylinder</td><td>£395</td></tr>
+            <tr><td><strong>Concealed mixer</strong></td><td>As a bar mixer, with the valve in the wall</td><td>Combi or unvented cylinder</td><td>£695</td></tr>
+            <tr><td><strong>Power shower</strong></td><td>Mixer with a pump inside</td><td>Gravity system only (tank in the loft)</td><td>£650</td></tr>
+            <tr><td><strong>Digital</strong></td><td>Set the exact heat on a pad or app</td><td>Most systems. Pumped models for gravity.</td><td>£850</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1>Shower Installation Liverpool</h1>
-      <p class="page-hero-sub">We fit electric, mixer, power and digital showers from £200. Walk-in areas from £800. Rainfall and dual-head systems too. Free quotes. Gas Safe.</p>
+      <h3>Quick guide</h3>
+      <ul class="sg-ticks">
+        <li><strong>Want the lowest cost?</strong> An electric shower.</li>
+        <li><strong>Have a combi boiler?</strong> A thermostatic mixer gives the best flow.</li>
+        <li><strong>Weak flow and a tank in the loft?</strong> A power shower.</li>
+        <li><strong>Doing up the whole bathroom?</strong> A concealed or digital shower looks neatest.</li>
+        <li><strong>Young children or older people at home?</strong> Pick a thermostatic shower. It guards against scalding.</li>
+      </ul>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£200</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Electric From</div>
+  <section class="brx-sec" id="water">
+    <div class="brx-wrap">
+      <h2>Which shower suits my water system?</h2>
+      <p class="brx-answer">Look at how your home heats water. A shower that is wrong for your system will dribble, however good it is. We check this before we quote.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Combi boiler</h3>
+          <p>No tank in the loft and no hot water cylinder. Hot water comes at mains pressure.</p>
+          <p><strong>Fit:</strong> a thermostatic mixer or an electric shower.</p>
         </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£800</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Walk-In From</div>
+        <div class="sg-box">
+          <h3>Unvented cylinder</h3>
+          <p>A sealed cylinder, often with no loft tank. It gives strong mains-pressure hot water.</p>
+          <p><strong>Fit:</strong> any mixer, concealed or digital shower.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Gravity system</h3>
+          <p>A cold water tank in the loft feeds a hot water cylinder. Pressure is often low.</p>
+          <p><strong>Fit:</strong> a power shower, a pumped digital shower, or an electric shower.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Not sure?</h3>
+          <p>Send us a photo of your boiler and airing cupboard. Or call and we will talk you through it.</p>
+          <p><a href={TEL}>Call {PHONE}</a></p>
         </div>
       </div>
+      <div class="brx-note" style="margin-top:1rem;"><p><strong>Power showers and combis do not mix.</strong> A power shower must only be fed from a tank and cylinder. It must never be connected to a combi boiler or the mains. If you want a stronger shower on a gravity system, a power shower or an <a href="/hot-water-cylinders-liverpool">unvented cylinder</a> is the answer.</p></div>
+    </div>
+  </section>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Get a Quote Today</a>
-      </div>
+  <section class="brx-sec brx-tint" id="electric">
+    <div class="brx-wrap">
+      <h2>Do I need an electrician for an electric shower?</h2>
+      <p class="brx-answer">Not for a like-for-like swap. If your shower needs a new circuit, our partner firm Ideal Electrical Solutions does the electrics.</p>
+      <h3>Swapping an old electric shower</h3>
+      <p>Most jobs are a straight swap. We check the cable, fuse and isolator suit the new shower. Then we fit it, test it and take the old one away. It usually takes 2 to 4 hours.</p>
+      <h3>When you need an electrician</h3>
+      <ul class="sg-ticks">
+        <li>There has never been an electric shower in that spot.</li>
+        <li>You want a bigger kW shower than the cable can take.</li>
+        <li>The old circuit is not safe or is too small.</li>
+      </ul>
+      <p>A new shower circuit is notifiable electrical work, so it must be done by a registered electrician. Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/showers">Ideal Electrical Solutions fits new electric shower circuits</a>. We book both trades together, so you only make one call.</p>
+    </div>
+  </section>
 
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> NICEIC Electrician Partner</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Quotes</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> All Brands Fitted</span>
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in a shower installation?</h2>
+      <p class="brx-answer">The shower, the fitting, testing and taking the old one away. You get a fixed written price before we start.</p>
+      <ul class="sg-ticks">
+        <li>A new shower from a main brand, or fitting of one you have bought</li>
+        <li>Removal of the old shower</li>
+        <li>Hot and cold pipework connected, or the cold feed on an electric shower</li>
+        <li>Riser rail, hose and head, or a fixed head on a concealed shower</li>
+        <li>Seals checked around the tray or bath</li>
+        <li>Full test for leaks, flow and temperature</li>
+        <li>We show you how to use it and leave the instructions</li>
+        <li>12-month workmanship guarantee, plus the maker's warranty</li>
+      </ul>
+      <p>Not included: new tiling, moving the shower to a new wall, or a new electrical circuit. If you need any of these, we price them first.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How does a shower installation work?</h2>
+      <ol class="sg-steps">
+        <li><strong>Call or send photos.</strong> Tell us what you have now and what you want. We can often price a swap from photos.</li>
+        <li><strong>Fixed price.</strong> For bigger jobs we visit for free. You get a written price before any work.</li>
+        <li><strong>Fitting day.</strong> We turn off the water, protect the floor and take the old shower off.</li>
+        <li><strong>The new shower goes in.</strong> A swap takes 2 to 4 hours. A concealed shower takes longer, as the pipes go into the wall.</li>
+        <li><strong>Test and hand over.</strong> We check for leaks, set the heat and show you how it works. The old shower leaves with us.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Want a price for a new shower?</strong> Call and we will give you a fixed price.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- TRUST BAR - REAL REVIEWS ONLY -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:540px;">"Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company" John Manley, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+  <section class="brx-sec" id="more-prices">
+    <div class="brx-wrap">
+      <h2>How much do other shower jobs cost?</h2>
+      <p class="brx-answer">Fitting your own shower is from £195. A digital shower is from £850, and a bath to shower conversion is from £2,395. All prices include VAT.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td>Electric shower replaced, supplied and fitted</td><td>from £375</td></tr>
+            <tr><td>Thermostatic bar mixer, supplied and fitted</td><td>from £395</td></tr>
+            <tr><td>Power shower, supplied and fitted</td><td>from £650</td></tr>
+            <tr><td>Concealed thermostatic shower, supplied and fitted</td><td>from £695</td></tr>
+            <tr><td>Digital shower, supplied and fitted</td><td>from £850</td></tr>
+            <tr><td>Fit a shower you have bought</td><td>from £195</td></tr>
+            <tr><td><a href="/bathroom-fitters-liverpool">Bath to shower conversion</a></td><td>from £2,395</td></tr>
+            <tr><td>Shower repairs</td><td>£120 first hour (weekdays 9am–4pm), £150 evenings, nights and weekends, £180 bank holidays</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p>There is no call-out fee. If a repair runs past the first hour, we price the extra time before we carry on.</p>
+      <p>Want a walk-in shower or a full new bathroom? See our <a href="/bathroom-fitters-liverpool">bathroom fitters in Liverpool</a>. Our team does the plumbing and the tiling.</p>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Shower Installation Prices Liverpool</h2>
-      <p class="pf-sub">Fixed prices. Free quotes. We write up the quote first. Every install comes with setup and testing on the day.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card">
-          <div class="pf-price-tier">ELECTRIC SHOWER</div>
-          <div class="pf-price-name">Electric Shower Supply and Fit</div>
-          <div class="pf-price-sub">Works on any water supply</div>
-          <div class="pf-price-amount">£200</div>
-          <ul class="pf-price-list">
-            <li>Electric shower unit supplied and fitted</li>
-            <li>Cold supply pipework connected</li>
-            <li>Power cable run by our Part P electrician</li>
-            <li>Shower head and hose included</li>
-            <li>Tested and set up on the day</li>
-            <li>Over-bath option available</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Get a Quote</a>
+  <section class="brx-sec brx-tint" id="repair">
+    <div class="brx-wrap">
+      <h2>Should I repair or replace my shower?</h2>
+      <p class="brx-answer">Many faults can be fixed without a new shower. We look first and give you an honest answer before any work.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Hot then cold when a tap runs</h3>
+          <p>The thermostatic cartridge is often worn. A new cartridge usually fixes it.</p>
         </div>
-
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MOST POPULAR</div>
-          <div class="pf-price-tier">THERMOSTATIC MIXER</div>
-          <div class="pf-price-name">Thermostatic Bar Valve Shower</div>
-          <div class="pf-price-sub">Holds set temperature. Anti-scald built in.</div>
-          <div class="pf-price-amount">£300</div>
-          <ul class="pf-price-list">
-            <li>Thermostatic bar valve supplied and fitted</li>
-            <li>Hot and cold supply connected</li>
-            <li>Fixed head or riser rail included</li>
-            <li>Anti-scald protection built in</li>
-            <li>Works with combi or cylinder system</li>
-            <li>Concealed or exposed valve options</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Get a Quote</a>
+        <div class="sg-box">
+          <h3>Weak flow</h3>
+          <p>Limescale in the head is the usual cause. If every tap is weak, it is the supply, not the shower.</p>
         </div>
+        <div class="sg-box">
+          <h3>Electric shower trips the power</h3>
+          <p>Often a failed heater inside or water in the unit. It usually needs a new shower. Stop using it until it is checked.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Leaking valve or tray</h3>
+          <p>A valve leak can often be fixed with a new seal or cartridge. A cracked tray must be replaced. Leaks can damage the ceiling below.</p>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">Electric showers often last 5 to 10 years. If yours is over 10 years old and has a fault, a new one is often better value. If water is coming through a ceiling, see our <a href="/leak-detection-liverpool">leak detection</a> page.</p>
+    </div>
+  </section>
 
-        <div class="pf-price-card">
-          <div class="pf-price-tier">WALK-IN AND DIGITAL</div>
-          <div class="pf-price-name">Walk-In Shower and Digital Systems</div>
-          <div class="pf-price-sub">Enclosures, trays and digital controls</div>
-          <div class="pf-price-amount">£400</div>
-          <ul class="pf-price-list">
-            <li>Shower tray and enclosure from £400</li>
-            <li>Walk-in area without tray from £800</li>
-            <li>Digital shower system from £500</li>
-            <li>Power shower from £350 supply and fit</li>
-            <li>Rainfall head system from £450</li>
-            <li>Dual-head system from £400</li>
-            <li>Thermostatic valve swap from £150</li>
-            <li>All tiling included if needed</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Get a Quote</a>
+  <section class="brx-sec" id="brands">
+    <div class="brx-wrap">
+      <h2>Which shower brands do you fit?</h2>
+      <p class="brx-answer">We fit all the main brands. We can supply one for you, or fit one you have bought.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Good value</h3>
+          <p>Triton and Bristan. Reliable, easy to get parts for, and good for rentals and second bathrooms.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Mid range</h3>
+          <p>Mira and Aqualisa. The choice for most family homes. Electric, mixer and digital models.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Premium</h3>
+          <p>Grohe, Hansgrohe, Vado and Crosswater. Brass bodies and the best finish. Rainfall and twin-head options.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Rainfall and twin heads</h3>
+          <p>A large overhead head, often with a handset too. They work best on mains pressure or a pumped supply. We price them after a quick look.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- SHOWER TYPES -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Types of Shower We Install Across Liverpool</h2>
-      <p class="pf-sub">We fit every type of shower in Liverpool homes. Here is how each one works and what suits your home best.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Electric showers. Works on any water supply.</strong><p>An electric shower heats cold water as it runs. It uses its own heating part inside. No need for hot water from your boiler. It works even when the boiler is broken. The top pick for Liverpool homes with low water pressure or a gravity-fed system. We fit 7.5kW, 9.5kW and 10.8kW units. We suggest 9.5kW or higher for a strong flow.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Hot and cold mixer showers. The basic mixer option.</strong><p>A basic hot and cold mixer takes hot and cold water and mixes them at the valve. No thermostat inside. It needs both hot and cold supplies. The temperature can dip when someone runs another tap. Cheaper than a thermostatic mixer. Supply and fit from £200.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Thermostatic mixer showers. The safest pick for families.</strong><p>A thermostatic bar valve mixes hot and cold water to your set temperature. It holds that temperature even when someone runs a tap in the kitchen. The anti-scald feature makes these showers the safest pick for kids and older people. We supply and fit from £300. Valve, head and riser rail all in.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Power showers. Boost low pressure systems.</strong><p>A power shower has its own pump inside to boost water pressure. Best for homes with a gravity-fed system where the pressure is too low. You need a hot water cylinder for this. It will not work with a combi boiler. Very common in older Liverpool homes with gravity-fed systems. Supply and fit from £350.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Dual head systems. Overhead and handheld in one.</strong><p>A dual outlet system gives you both an overhead shower head and a handheld shower from one valve. Switch between the two with a diverter. Or use both at once. Great for rinsing hair, washing kids or cleaning the shower tray. Supply and fit from £400 including the valve and both heads.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Rainfall heads. The full-body flow.</strong><p>A rainfall head is a large overhead shower head. The water falls straight down like rain. Most rainfall heads are 200mm to 400mm across. They give a soft, full-body flow at the right pressure. Best with mains-pressure water or a power shower system. Supply and fit from £450 including the valve.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Digital showers. The precise tech option.</strong><p>A digital shower lets you set the temperature to the exact degree. You control it from a pad on the wall or from a phone app. Wired or wireless. Common in bigger Liverpool homes and en suites. Supply and fit from £500 for the valve and controller.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Walk-in showers. No tray, level access.</strong><p>A walk-in shower uses a linear drain and a level tiled floor. No shower tray. The walls and floor have to be fully tanked before tiling. We do the full job, start to finish. Tanking. Tiling. The shower valve. Walk-in areas without a tray from £800 supply and fit. Tiling is included.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Shower over bath. Best for small homes.</strong><p>A shower over the bath with a folding screen is the best fix for small Liverpool homes or rentals. Space stays tight. We fit an electric shower over the bath from £200. Or a thermostatic bar valve over the bath from £250. Bath screens from £150 supply and fit.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEW: SHOWER BRAND TIERS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <span class="pf-section-label">SHOWER BRAND GUIDE</span>
-      <h2>Shower Brands We Fit. Budget, Mid and Premium.</h2>
-      <p class="pf-sub">We fit showers across every price tier. Pick the right brand for your budget and your home. Here is what we fit most often in Liverpool homes.</p>
-
-      <!-- BUDGET TIER -->
-      <div style="margin-top:2rem;">
-        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Budget Tier: Triton and Bristan</h3>
-        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Budget shower brands give you a solid, reliable shower at the lowest price. Best for rental homes, holiday lets and second bathrooms. Triton and Bristan lead the budget tier in the UK. Both have strong parts back-up. Both have been on the market for many years. Spare parts stay easy to get.</p>
-        <div class="pf-who-grid" style="margin-top:1rem;">
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Triton</strong><p>UK heritage brand. Electric showers from £80 unit cost. Easy to fit. Top picks are the Exe, T80 and T90SR. Spare parts are sold in every UK plumbing shop.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bristan</strong><p>UK brand, founded in 1977. Top picks are the Frenzy, Smile and Glee ranges. Bar mixers, electric showers and bath fillers all in one range.</p></div></div>
-        </div>
-      </div>
-
-      <!-- MID TIER -->
-      <div style="margin-top:2.5rem;">
-        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Mid Tier: Mira and Aqualisa</h3>
-        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Mid-tier brands give you better build, longer life and stronger flow than budget kit. Most family homes in Liverpool sit in this tier. Mira and Aqualisa are the two UK leaders here. Both run their own parts networks. Both have been making showers for decades.</p>
-        <div class="pf-who-grid" style="margin-top:1rem;">
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Mira</strong><p>UK brand from Gloucestershire. The most-fitted shower in the UK. Sport Max, Elite and Vie are the top picks. Electric, mixer and digital all in the range. Strong limescale defence.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Aqualisa</strong><p>UK brand. They made the first digital shower for UK homes. Quartz and Visage Q are the top picks. Many models have wireless control.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Bristan concealed mixer range</strong><p>Neat looks. Lower price than the German brands. A good fit for mid-tier bathroom suites.</p></div></div>
-        </div>
-      </div>
-
-      <!-- PREMIUM TIER -->
-      <div style="margin-top:2.5rem;">
-        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Premium Tier: Hansgrohe, Grohe, Crosswater and Vado</h3>
-        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Premium brands give you the best looks, the best flow and the longest life. Best for new bathroom fits and main bathrooms in higher-end homes. Hansgrohe and Grohe are the German leaders. Crosswater and Vado lead from the UK side. All have brass bodies, ceramic cartridges and warranties of five years or more.</p>
-        <div class="pf-who-grid" style="margin-top:1rem;">
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Hansgrohe</strong><p>German brand. A world leader in shower design. Ecostat and Raindance Select are the top picks. Both have rainfall heads and dual-head options.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Grohe</strong><p>German brand from 1936. The most-fitted premium shower in UK hotels. The Grohtherm 1000 and the Rainshower are the top picks. SmartControl push-button is a Grohe-only feature.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Crosswater</strong><p>UK premium brand. The Mike Pro and Union ranges lead. Strong on dual-outlet systems.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Vado</strong><p>UK premium brand. Origins and Velo are the top picks. Modern looks. Good value at the premium end.</p></div></div>
-        </div>
-      </div>
-
-      <div style="background:var(--navy);border-radius:10px;padding:1.5rem;text-align:center;margin-top:2.5rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Not sure which brand fits your home and budget? Please contact us for a free quote today and we will help you pick.</p>
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SIGNS YOU NEED A NEW SHOWER -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Signs Your Liverpool Shower Needs Replacing or Repairing</h2>
-      <p class="pf-sub">Most shower problems can be fixed without a full swap. We check before we suggest any work.</p>
-
-      <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>Temperature jumps when taps run elsewhere</strong><p>Shower goes scalding hot or freezing cold when someone runs a tap in the kitchen? The thermostatic valve cartridge is worn. A new cartridge from £100 sorts this. No need to swap the whole shower.</p></div></div>
-        <div class="pf-sign"><div><strong>Poor water pressure from the shower head</strong><p>Limescale build-up in the head is the most common cause. A new shower head from £30 often fixes it. If the pressure is poor at every tap, the issue is the water supply or pump, not the shower.</p></div></div>
-        <div class="pf-sign"><div><strong>Electric shower trips the circuit breaker</strong><p>An electric shower that trips the RCD has a failed heating part or water inside the unit. The shower has to be swapped. The heating parts cannot be fixed. We carry common units in the van and can often fit a new one on the same visit.</p></div></div>
-        <div class="pf-sign"><div><strong>Shower valve leaking from body or cartridge</strong><p>A leak from the body or cartridge of the valve can often be fixed with a new cartridge or O-ring seal. We find the source of the leak first. Then we tell you if a fix or a swap is the right call.</p></div></div>
-        <div class="pf-sign"><div><strong>Shower tray cracked or leaking</strong><p>A cracked shower tray has to go. It cannot be fixed for the long term. A leaking tray can damage the floor below. This is a real risk in Liverpool's old terraced homes with timber joists. We swap shower trays from £200 labour.</p></div></div>
-        <div class="pf-sign"><div><strong>Shower over 10 years old with faults</strong><p>Electric showers tend to last 5 to 10 years. A unit over 10 years old with faults is often cheaper to swap than fix. Spare parts get harder to find after 8 to 10 years.</p></div></div>
-      </div>
-
-      <div style="background:#c2410c;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Not sure if your shower needs a fix or a swap? We check on the visit and give you an honest answer before quoting any work.</p>
-        <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Why Liverpool Homeowners Choose Us for Shower Installation</h2>
-      <p class="pf-sub">Electrics by our NICEIC partner firm. All brands fitted. Free quotes. Fixed prices.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>Plumbing and Electrics, One Booking</h3><p>Every shower job needs plumbing and electrical work. Most firms send out a plumber and book in a separate sparky. The electrics are done by our NICEIC approved partner firm <a href="https://www.idealelectricalsolutions.co.uk" target="_blank" rel="noopener">Ideal Electrical Solutions</a>. One call books the wiring and the plumbing together. No chasing a second trade.</p></div>
-        <div class="pf-why-item"><h3>Any Type of Shower</h3><p>Any kind of shower in any home. Electric. Mixer. Thermo. Power. Digital. Walk-in. One firm for the lot.</p></div>
-        <div class="pf-why-item"><h3>Plumbing and Tiling, One Person</h3><p>Our team does the plumbing and the tiling. No need to book a tiler for a walk-in shower. Start to finish, one firm.</p></div>
-        <div class="pf-why-item"><h3>Fixed Price Before We Start</h3><p>Written fixed-price quote before any work starts. No add-ons on the day. No shocks on the invoice. Free quotes for every job.</p></div>
-        <div class="pf-why-item"><h3>Years of Experience</h3><p>Our engineers have years of experience fitting showers in every type of Liverpool home. From new build flats to old terraces with low water pressure. Each job gets the right method.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Plumber, NICEIC Electrician</h3><p>All plumbing work is done by our Gas Safe registered engineers. All electrics by our Part P NICEIC sparky. Verify our Gas Safe number at gassaferegister.co.uk.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Our Shower Installation Service. Start to Finish.</h2>
-      <p class="pf-sub">Here is what to expect from our shower installation service. Start to finish, in one visit for most jobs.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free quote visit</strong><p>We come to your Liverpool home for a free quote visit. We look at your water supply, the bathroom layout and what you want. We give you a written fixed-price quote on the day.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Prep the area</strong><p>On the day of the fit, we shut off the water and the power to the bathroom. We protect the floor and the work area. We strip out the old shower or get the new spot ready.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Plumbing and electrical in parallel</strong><p>The plumber runs the hot and cold pipework to the new valve. The Part P electrician runs the power cable to electric showers. Both trades work in parallel. The day moves fast.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Fit and seal</strong><p>The valve, the head, the riser rail and the screen all go in. The trays and enclosures get set level. Silicone is applied. We always test for leaks before we close anything up.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Test, set up and hand over</strong><p>Water back on. Power back on. We run the shower at full flow and check the temperature. We balance the hot and cold. We hand you the user guide. You get a one-month follow-up call.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BATHROOM ADJACENT - weaves bathroom designers, bathroom fitting, bathroom suite, bathroom refurbishments -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Shower Fitting as Part of a Bathroom Refurbishment</h2>
-      <p class="pf-sub">Looking at a new shower as part of a full bathroom refresh? We do that too.</p>
-      <div class="pf-card" style="margin-top:2rem;">
-        <p>We are bathroom fitters as well as shower fitters. A new shower is often part of a wider bathroom fit. Or a full bathroom suite swap. Or a bathroom refurbishment for a tired old space. Our bathroom designers can help you plan the layout from scratch. New tiles, new bath, new toilet, new vanity and a new shower in one go. We do the full fit, start to finish.</p>
-        <p style="margin-top:1rem;"><a href="/bathroom-fitters-liverpool" style="color:#c2410c;font-weight:700;">See our full bathroom fitting service →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS - REAL 3 ONLY -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Liverpool Customers Say</h2>
-        <p class="pf-sub" style="margin:0 0 0.75rem;">Real Google reviews from Liverpool Emergency Plumber customers</p>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Great company, came within 30 mins for emergency burst pipe, couldn’t praise them enough !!</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">James Alexander</div><div class="pf-review-loc">Burst Pipe Emergency</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">John Manley</div><div class="pf-review-loc">Shower Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Excellent service.</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Elaine McHugh</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See our Google reviews →</a></div>
-    </div>
-  </section>
-
-  <!-- MID CTA -->
-  <section style="background:var(--navy);padding:2rem 0;">
-    <div class="container">
-      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Got a shower job to plan?</h3>
-      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">We give free quotes and fixed prices. Please contact us for a quote today.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Get a Quote Today</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Shower Installation Liverpool. Your Questions Answered.</h2>
-      <p class="pf-sub">Straight answers to what Liverpool homeowners ask most before they book.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does shower installation cost in Liverpool?</summary><div class="pf-faq-body"><p>Electric showers from £200 supply and fit. Hot-cold mixer from £200. Thermostatic mixer from £300. Power shower from £350. Digital shower from £500. Walk-in shower areas from £800. Rainfall head systems from £450. Dual-head systems from £400. We give a free written quote before any work starts.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TYPES</span>&nbsp; What is the best type of shower for a Liverpool home?</summary><div class="pf-faq-body"><p>It comes down to your water supply. Electric showers work on any system. They are the most common pick in Liverpool. Thermo mixers are best for homes with good pressure. Power showers boost low pressure. Digital showers give the best control. We advise at the free quote visit.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">BRANDS</span>&nbsp; What shower brands do you fit?</summary><div class="pf-faq-body"><p>We fit Triton, Bristan, Mira, Aqualisa, Hansgrohe, Grohe, Crosswater and Vado. Budget, mid-tier and premium ranges. We can supply the shower or fit one you have bought. Tell us your budget and what matters to you. We help you pick the right brand for your home.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">DUAL HEAD</span>&nbsp; Can you fit a dual head shower system?</summary><div class="pf-faq-body"><p>Yes. A dual outlet system gives you both an overhead shower head and a handheld one. Switch between them or use both at the same time. We fit dual outlet systems from £400 supply and fit. Hansgrohe, Grohe and Crosswater all have strong dual outlet ranges.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">RAINFALL</span>&nbsp; Can you fit a rainfall shower head?</summary><div class="pf-faq-body"><p>Yes. A rainfall head is a large overhead shower head, often 200mm to 400mm across. The flow falls down like rain. It works best with mains-pressure water or a power shower system. We supply and fit from £450. Hansgrohe Raindance and Grohe Rainshower are the top picks here.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">BATH</span>&nbsp; Can you fit a shower over a bath?</summary><div class="pf-faq-body"><p>Yes. Electric shower over bath from £200 supply and fit. Thermostatic bar valve over bath from £250. Bath screens from £150 supply and fit. A shower over bath is a good fix for smaller Liverpool homes or rentals where space is tight.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">TIME</span>&nbsp; How long does shower installation take?</summary><div class="pf-faq-body"><p>A like-for-like electric shower swap takes 2 to 3 hours. A new thermostatic mixer fit takes 2 to 4 hours. A shower tray and enclosure takes 1 day. A full walk-in tiled shower area takes 2 to 3 days. We tell you the time at the quote stage.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">ELECTRICIAN</span>&nbsp; Who does the electrics for an electric shower?</summary><div class="pf-faq-body"><p>Our partner firm, NICEIC approved <a href="https://www.idealelectricalsolutions.co.uk" target="_blank" rel="noopener">Ideal Electrical Solutions</a>. One call books both. The plumbing and the wiring get done on the same visit. This means we can fit electric showers, change shower circuits and upgrade the cable for high-kW units all in one visit.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. We are Gas Safe registered. Our team does all the plumbing work. You can verify us at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We never use subs.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Shower Installation Across Liverpool and Merseyside</h2>
-      <p class="pf-sub" >We fit showers across the whole of Liverpool. Plus the wider area.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div class="pf-card"><h3>Central Liverpool</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">We cover central Liverpool. New build flats and split-up homes. Most need an electric shower or a thermo mixer.</p><div class="pf-pills"><span class="pf-pill">City Centre L1</span><span class="pf-pill">L2</span><span class="pf-pill">L3</span><span class="pf-pill">L8</span></div></div>
-        <div class="pf-card"><h3>South Liverpool</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">We cover south Liverpool. Lots of older homes here. Power showers are a common pick.</p><div class="pf-pills"><span class="pf-pill">Aigburth L17</span><span class="pf-pill">Allerton L18</span><span class="pf-pill">Woolton L25</span><span class="pf-pill">Garston L19</span><span class="pf-pill">Sefton Park L17</span><span class="pf-pill">Mossley Hill L18</span></div></div>
-        <div class="pf-card"><h3>North and East Liverpool</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">We cover north Liverpool. The mix is older terraces and post-war homes.</p><div class="pf-pills"><span class="pf-pill">Anfield L4</span><span class="pf-pill">Wavertree L15</span><span class="pf-pill">West Derby L12</span><span class="pf-pill">Bootle L20</span><span class="pf-pill">Crosby L23</span><span class="pf-pill">Kirkby L32</span></div></div>
-        <div class="pf-card"><h3>Wider Merseyside</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">We cover the wider area too. Bigger homes here often want a top-end shower.</p><div class="pf-pills"><span class="pf-pill">Formby L37</span><span class="pf-pill">Southport PR8</span><span class="pf-pill">Wirral CH</span><span class="pf-pill">St Helens WA</span><span class="pf-pill">Birkenhead CH41</span><span class="pf-pill">Heswall CH60</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RELATED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Related Services in Liverpool</h2>
-      <p class="pf-sub">All Gas Safe registered. All Liverpool postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Liverpool</strong><span>Full bathroom installations and bathroom refurbishments. Bathroom suites, tiling and plumbing all in one firm. Bathroom designers on the team.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/hot-water-cylinders-liverpool" class="pf-related-link"><div><strong>Hot Water Cylinders Liverpool</strong><span>Vented from £600. Unvented mains pressure from £900. G3 qualified engineers. Top of the list for thermostatic and digital shower upgrades.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool</strong><span>New boiler from £2,195 fully fitted. Worcester Bosch, Vaillant and Ideal. Same-day available.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/central-heating-installation-liverpool" class="pf-related-link"><div><strong>Central Heating Installation Liverpool</strong><span>Full systems from £3,500. Radiator additions from £200. Free survey.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Installation Liverpool</strong><span>New radiators from £200 supply and fit. TRV upgrades from £50. System balancing included.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Online</strong><span>Free no-obligation quote. All Liverpool postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Liverpool Shower Installation Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Electric from £200. Thermostatic from £300. Walk-in from £800. Free quotes. Fixed prices. Gas Safe. Electrics by our NICEIC partner firm.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Get a Quote Today</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>
