@@ -220,10 +220,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .pfx h2 {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.85rem; font-weight: 800; line-height: 1.08;
+      font-size: clamp(1.9rem, 6vw, 2.4rem); font-weight: 800; line-height: 1.08;
       color: var(--navy); margin: 0 0 0.5rem; letter-spacing: -0.01em;
     }
-    .pfx-lede { font-size: 1rem; line-height: 1.6; color: var(--muted); margin: 0 0 1.25rem; }
+    .pfx-sec--mist .pfx-eyebrow, .pfx-sec--paper .pfx-eyebrow { color: #c2410c; }
+    .pfx h2, .pfx h3, .pfx-eyebrow, .pfx-lede { text-align: left; }
+    .pfx-lede { font-size: 1.06rem; line-height: 1.65; color: var(--muted); margin: 0 0 1.25rem; }
 
     /* ---- SIGNATURE: sludge-to-clear bar ---- */
     .pfx-water {
@@ -297,7 +299,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .rc-inc { list-style: none; padding: 0; margin: 0 0 1rem; }
     .rc-inc li {
-      font-size: 0.9rem; color: #27364a; line-height: 1.45;
+      font-size: 0.98rem; color: #27364a; line-height: 1.45;
       padding: 0.42rem 0 0.42rem 1.55rem; position: relative;
       border-bottom: 1px solid #f1f5f9;
     }
@@ -318,7 +320,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .rc #r1:checked ~ .rc-tabs label[for="r1"] .n,
     .rc #r2:checked ~ .rc-tabs label[for="r2"] .n,
     .rc #r3:checked ~ .rc-tabs label[for="r3"] .n,
-    .rc #r4:checked ~ .rc-tabs label[for="r4"] .n { color: var(--orange); }
+    .rc #r4:checked ~ .rc-tabs label[for="r4"] .n { color: #c2410c; }
     .rc #r1:checked ~ .rc-body .rc-panel[data-r="1"],
     .rc #r2:checked ~ .rc-body .rc-panel[data-r="2"],
     .rc #r3:checked ~ .rc-body .rc-panel[data-r="3"],
@@ -330,9 +332,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .rc-cta {
       display: flex; align-items: center; justify-content: center;
       width: 100%; box-sizing: border-box; min-height: 52px;
-      background: var(--orange); color: #fff; text-decoration: none;
+      background: #c2410c; color: #fff; text-decoration: none;
       font-weight: 800; font-size: 1.05rem; border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(249,115,22,0.32);
+      box-shadow: 0 4px 14px rgba(194,65,12,0.3);
     }
     .rc-foot { font-size: 0.82rem; color: var(--muted); text-align: center; margin: 0.7rem 0 0; }
 
@@ -342,8 +344,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       border-left: 3px solid var(--orange);
       border-radius: 0 12px 12px 0; padding: 1rem 1.15rem; margin-top: 1.25rem;
     }
-    .pfx-note strong { display: block; color: var(--navy); margin-bottom: 0.35rem; font-size: 1rem; }
-    .pfx-note p { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.6; color: #33475f; }
+    .pfx-note strong { display: block; color: var(--navy); margin-bottom: 0.35rem; font-size: 1.08rem; }
+    .pfx-note p { margin: 0 0 0.6rem; font-size: 1rem; line-height: 1.65; color: #33475f; }
     .pfx-note p:last-child { margin-bottom: 0; }
     .pfx-sec--ink .pfx-note {
       background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14);
@@ -353,7 +355,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .pfx-sec--ink .pfx-note p { color: rgba(255,255,255,0.78); }
 
     /* ---- COMPARISON TABLE: stacks under 560px ---- */
-    .ct { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--paper);
+    .ct { width: 100%; border-collapse: collapse; font-size: 0.97rem; background: var(--paper);
       border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 1.25rem; }
     .ct th, .ct td { padding: 0.7rem 0.85rem; text-align: left;
       border-bottom: 1px solid #eef2f7; vertical-align: top; }
@@ -385,8 +387,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; }
     .vd-no  { background: #fee2e2; color: #b91c1c; }
     .vd-yes { background: #dcfce7; color: #15803d; }
-    .vd-row strong { display: block; color: var(--navy); font-size: 0.98rem; margin-bottom: 0.15rem; }
-    .vd-row p { margin: 0; font-size: 0.9rem; line-height: 1.55; color: #4b5c72; }
+    .vd-row strong { display: block; color: var(--navy); font-size: 1.05rem; margin-bottom: 0.15rem; }
+    .vd-row p { margin: 0; font-size: 1rem; line-height: 1.6; color: #4b5c72; }
 
     /* ---- PROCESS: numbered because it IS a sequence ---- */
     .pr { margin-top: 1.25rem; counter-reset: pr; }
@@ -401,8 +403,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       font-size: 1rem; display: flex; align-items: center; justify-content: center;
       position: relative; z-index: 1;
     }
-    .pr-step strong { display: block; color: var(--navy); font-size: 1rem; margin-bottom: 0.15rem; }
-    .pr-step p { margin: 0; font-size: 0.92rem; line-height: 1.55; color: #4b5c72; }
+    .pr-step strong { display: block; color: var(--navy); font-size: 1.05rem; margin-bottom: 0.15rem; }
+    .pr-step p { margin: 0; font-size: 1rem; line-height: 1.6; color: #4b5c72; }
 
     /* ---- CREDENTIAL STRIP ---- */
     .cr { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 1.25rem; }
@@ -418,7 +420,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .fq details { border-bottom: 1px solid var(--line); }
     .fq details:last-child { border-bottom: none; }
     .fq summary { cursor: pointer; padding: 0.95rem 1.1rem; font-weight: 700;
-      color: var(--navy); font-size: 0.95rem; list-style: none;
+      color: var(--navy); font-size: 1rem; list-style: none;
       display: flex; justify-content: space-between; gap: 0.75rem; align-items: center;
       min-height: 44px; box-sizing: border-box; }
     .fq summary::-webkit-details-marker { display: none; }
@@ -426,14 +428,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       color: var(--orange); line-height: 1; flex: 0 0 auto; }
     .fq details[open] summary::after { content: "\2212"; }
     .fq-body { padding: 0 1.1rem 1.05rem; }
-    .fq-body p { margin: 0; font-size: 0.92rem; line-height: 1.62; color: #445a73; }
+    .fq-body p { margin: 0; font-size: 1rem; line-height: 1.65; color: #445a73; }
 
     /* ---- AREA PILLS ---- */
     .ar { margin-top: 1.25rem; }
     .ar-grp { margin-bottom: 1.25rem; }
-    .ar-grp h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem;
+    .ar-grp h3 a { color: inherit; text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 3px; }
+    .ar-grp h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem;
       font-weight: 800; color: var(--navy); margin: 0 0 0.15rem; }
-    .ar-grp p { margin: 0 0 0.6rem; font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
+    .ar-grp p { margin: 0 0 0.6rem; font-size: 1rem; color: var(--muted); line-height: 1.55; }
     .ar-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; }
     .ar-pills span { font-size: 0.78rem; font-weight: 700; color: var(--navy);
       background: var(--paper); border: 1px solid var(--line);
@@ -463,7 +466,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="pfx-water" style="margin-bottom:1rem;"></div>
 
       <p style="color:rgba(255,255,255,0.78);font-size:1.02rem;line-height:1.6;margin:0 0 1.25rem;">Black water to clear water, in a day. Fixed price from <strong style="color:#fff;">£350 including VAT</strong>, worked out by how many radiators you have and agreed before we start.</p>
-      <p style="color:rgba(255,255,255,0.62);font-size:0.92rem;line-height:1.6;margin:0 0 1.25rem;">Searching for a powerflush near me in Liverpool? We cover every Liverpool postcode plus Crosby, Formby, Bootle, Wallasey, Birkenhead, Bromborough, Greasby and St Helens. Central heating power flush, radiator flush and microbore powerflush all done by our engineers.</p>
+      <p style="color:rgba(255,255,255,0.62);font-size:0.92rem;line-height:1.6;margin:0 0 1.25rem;">We cover every Liverpool postcode plus Crosby, Formby, Bootle, the Wirral and St Helens. Full system flushes, single radiator flushes and microbore systems, all done by our engineers.</p>
 
       <div style="display:flex;flex-direction:column;gap:0.55rem;margin-bottom:1.25rem;">
         <a href="tel:0151 558 0334" class="rc-cta" style="font-size:1.1rem;">Call 0151 558 0334</a>
@@ -487,16 +490,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="#prices">Prices</a>
         <a href="#what">What is it?</a>
         <a href="#signs">Signs</a>
-        <a href="#nearme">Near me</a>
+        <a href="#honest">Do I need one?</a>
+        <a href="#process">What happens</a>
+        <a href="#chemicals">Chemicals</a>
         <a href="#microbore">Microbore</a>
         <a href="#filter">Magnetic filter</a>
-        <a href="#chemicals">Chemicals</a>
-        <a href="#process">What happens</a>
         <a href="#new-boiler">New boiler</a>
         <a href="#compare">Power vs chemical</a>
         <a href="#last">How long it lasts</a>
-        <a href="#honest">Do I need one?</a>
         <a href="#hiring">Choosing an engineer</a>
+        <a href="#nearme">Near me</a>
         <a href="#faq">FAQs</a>
       </nav>
     </div>
@@ -508,7 +511,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="pfx-eyebrow">Fixed pricing</div>
       <h2>How much does a power flush cost in Liverpool?</h2>
       <p class="pfx-lede">A power flush in Liverpool costs £350 for up to 6 radiators, £495 for 7 to 10 radiators and £650 for 11 to 15 radiators. All prices include VAT. Tap your radiator count below.</p>
-      <p class="pfx-lede">Whether you search powerflush Liverpool, powerflushing Liverpool, power-flush Liverpool or central heating power flush Liverpool, it is the same job at the same fixed price. If you have been searching power flush cost near me and getting vague answers, this is the whole price list.</p>
+      <p class="pfx-lede">This is our whole price list. No call-out charge, no hidden extras, and the price is agreed on the phone before we come out.</p>
 
       <div class="rc">
         <input type="radio" name="rcount" id="r1">
@@ -609,8 +612,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="pfx-note">
         <strong>Not sure how many you have?</strong>
         <p>Count every radiator in the house including the bathroom towel rail. A 3 bed Liverpool terrace usually has 8 to 10. A 4 bed detached usually has 10 to 12. If you land between two packages, we quote the lower one.</p>
-        <p>One cold radiator and the rest of the system fine? That is £80, not a full system job. A radiator flush Liverpool customers often ask about is exactly this, and a radiator power flush Liverpool wide on one or two rads is frequently all you need. We will say so rather than selling you a full flush.</p>
-        <p>If you are looking up flush radiator cost or power flush radiator Liverpool prices, £80 per radiator is ours and it includes taking the radiator off, flushing it outside, refitting and balancing.</p>
+        <p>One cold radiator and the rest of the system fine? That is £80 per radiator, not a full system job. It includes taking the radiator off, flushing it outside, refitting it and balancing it. We will say so rather than selling you a full flush.</p>
       </div>
 
       <div class="pfx-note">
@@ -665,48 +667,99 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ================= NEAR ME / AREAS ================= -->
-  <section class="pfx pfx-sec pfx-sec--paper" id="nearme">
+  <!-- ================= HONEST ================= -->
+  <section class="pfx pfx-sec pfx-sec--paper" id="honest">
     <div class="container">
-      <div class="pfx-eyebrow">Same price everywhere we go</div>
-      <h2>Where can I get a powerflush near me in Liverpool?</h2>
-      <div class="pfx-water pfx-water--sm"></div>
-      <p class="pfx-lede">We cover every Liverpool postcode and the wider Merseyside area. Travel sits inside the quoted price, so the same job costs the same wherever you are.</p>
-      <p class="pfx-lede">People search power flush central heating near me, power flush central heating system near me, power flush radiators near me and power flushing radiators near me, and they all mean the same thing. If you are in Merseyside, the answer is yes and the price is on this page.</p>
+      <div class="pfx-eyebrow">When we will tell you not to bother</div>
+      <h2>Is a power flush always the right fix?</h2>
+      <p class="pfx-lede">No. It fixes sludge. It does not fix broken parts, leaks, or a system at the end of its life.</p>
 
-      <div class="ar">
-        <div class="ar-grp">
-          <h3>Powerflush Liverpool and central heating power flush Liverpool</h3>
-          <p>Older terraces across the city often have systems altered several times over the years. Every alteration is somewhere corrosion can start. A central heating power flush Liverpool homeowners book in winter is usually a cold radiator that never recovered. Powerflushing Liverpool terraces is most of what our heating engineers do from October onwards, and a power-flush Liverpool wide costs the same wherever you are in the city.</p>
-          <div class="ar-pills"><span>City Centre L1</span><span>Toxteth L8</span><span>Anfield L4</span><span>Wavertree L15</span><span>Childwall L16</span><span>Woolton L25</span><span>Allerton L18</span><span>West Derby L12</span><span>Garston L19</span><span>Norris Green L11</span></div>
-        </div>
-        <div class="ar-grp">
-          <h3>Power flush Formby, Crosby and Bootle</h3>
-          <p>Plenty of eighties and nineties housing north of the city, which is where microbore turns up most often. A power flush Formby booking, a power flush Crosby booking or a power flush Bootle booking is the same fixed price as anywhere else we cover. No travel charge for Sefton.</p>
-          <div class="ar-pills"><span>Crosby L23</span><span>Formby L37</span><span>Bootle L20</span><span>Maghull L31</span><span>Lydiate L31</span><span>Southport PR8</span><span>Kirkby L32</span><span>Aintree L10</span></div>
-        </div>
-        <div class="ar-grp">
-          <h3>Power flush Wallasey, Birkenhead and St Helens</h3>
-          <p>We cross the water regularly. A power flush Wallasey job, a power flush Birkenhead job, a power flush Bromborough job or a power flush Greasby job is priced the same way, by radiator count. Power flushing Wallasey and the wider Wirral is a normal week for us. Same for a power flush St Helens booking and Widnes.</p>
-          <div class="ar-pills"><span>Wallasey CH44</span><span>Birkenhead CH41</span><span>Bromborough CH62</span><span>Greasby CH49</span><span>Bebington CH63</span><span>Heswall CH60</span><span>St Helens WA10</span><span>Widnes WA8</span></div>
-        </div>
+      <div class="vd">
+        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Your boiler has a broken part</strong><p>A stuck diverter valve, failed pump or dead PCB will not be fixed by a flush. If your symptoms point at a part, we say so and price the repair instead.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>The system is losing pressure</strong><p>That is a leak. A flush will not seal it and can make it worse. The leak needs finding first.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>The boiler is past saving</strong><p>Over 15 years old and badly corroded, spending on a flush can be throwing good money after bad. Sometimes replacement is the honest answer.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Radiators are corroded through</strong><p>A flush moves water at speed. A radiator already rotten can spring a pin hole. It was going to fail anyway, but you should know before we start, not after.</p></div></div>
       </div>
 
       <div class="pfx-note">
-        <strong>Not sure if we reach you?</strong>
-        <p>If you are searching power flush near me and you are anywhere in Merseyside, ring and ask. We will tell you straight whether we cover it rather than taking the booking and cancelling later.</p>
+        <strong>What a flush will not do</strong>
+        <p>It will not remove every last trace of sludge. Nothing does. It will not turn a failing system into a new one. What it does is clear the blockage, get the radiators heating properly and buy the system years it would not otherwise have had. If anyone promises more than that, be careful.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="pfx pfx-sec pfx-sec--mist" id="process">
+    <div class="container">
+      <div class="pfx-eyebrow">Seven stages</div>
+      <h2>What happens during a power flush?</h2>
+      <div class="pfx-water pfx-water--sm"></div>
+      <p class="pfx-lede">From arriving to handing the system back. Most of a day for a standard Liverpool semi.</p>
+
+      <div class="pr">
+        <div class="pr-step"><div class="pr-num">1</div><div><strong>System check</strong><p>The engineer looks at the boiler, pipework and radiators, then bleeds one radiator to see the water. Black water means heavy sludge, and that changes which chemical goes in.</p></div></div>
+        <div class="pr-step"><div class="pr-num">2</div><div><strong>Machine connected</strong><p>The Kamco CF90 Quantum2 goes on, usually at the pump head or across a radiator tail. It is tank mounted, so it comes in on a trolley rather than through the house in pieces.</p></div></div>
+        <div class="pr-step"><div class="pr-num">3</div><div><strong>Cleaner added</strong><p>Fernox F3 for a standard clean. Sentinel X400 where the sludge is heavy. This is where a lot of the result is decided.</p></div></div>
+        <div class="pr-step"><div class="pr-num">4</div><div><strong>Every radiator flushed</strong><p>Each one isolated and flushed on its own, with the flow reversed to shift settled sludge. Stubborn radiators get agitated. This is the slow part, and the part cheap quotes skip.</p></div></div>
+        <div class="pr-step"><div class="pr-num">5</div><div><strong>Whole system flushed</strong><p>The system runs until the water comes back clear. Not nearly clear. Clear.</p></div></div>
+        <div class="pr-step"><div class="pr-num">6</div><div><strong>Inhibitor added</strong><p>A full dose to BS 7593. Without it the system starts silting up within months and the flush was money wasted.</p></div></div>
+        <div class="pr-step"><div class="pr-num">7</div><div><strong>Balanced and reported</strong><p>Radiators balanced so they heat evenly, then a written report for your boiler warranty.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHO ================= -->
+  <section class="pfx pfx-sec pfx-sec--ink">
+    <div class="container">
+      <div class="pfx-eyebrow">Trained, experienced engineers</div>
+      <h2 style="color:#fff;">Who carries out the power flush?</h2>
+      <p class="pfx-lede">Our power flushes are done by Gas Safe registered engineers using a Kamco CF90 Quantum2 power flush pump.</p>
+
+      <div class="cr" style="grid-template-columns:1fr;">
+        <div class="cr-item"><div class="k">An experienced engineer, not whoever is free</div><div class="v">A power flush means someone in your house for most of a day. It should be someone who has done hundreds of them.</div></div>
+        <div class="cr-item"><div class="k">Kamco kit</div><div class="v">Kamco set the standard for power flush equipment. The CF90 Quantum2 is a tank mounted pump built for this job.</div></div>
+        <div class="cr-item"><div class="k">Gas Safe registered</div><div class="v">Check any engineer before you let them near your boiler. Ours is current and verifiable on the Gas Safe Register.</div></div>
+        <div class="cr-item"><div class="k">We stay until it is done</div><div class="v">The price is fixed by radiator count, not by the hour. If your system takes two hours longer than expected, that is our problem and not your bill.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHEMICALS ================= -->
+  <section class="pfx pfx-sec pfx-sec--paper" id="chemicals">
+    <div class="container">
+      <div class="pfx-eyebrow">Decided on the day, not in advance</div>
+      <h2>Which cleaning chemical do you use in a power flush?</h2>
+      <div class="pfx-water pfx-water--sm"></div>
+      <p class="pfx-lede">Fernox F3 on standard cleans and Sentinel X400 on heavily sludged systems. We choose after we see the water, not before.</p>
+      <p class="pfx-lede">Power flushes vary far more than the price suggests. The chemical is where most of that difference sits, and almost nobody tells you which one they are putting in your system.</p>
+
+      <table class="ct">
+        <thead><tr><th scope="col">Comparison</th><th scope="col">Sentinel X400</th><th scope="col">Fernox F3</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">What it is for</th><td data-label="Sentinel X400">Heavy sludge and years of corrosion</td><td data-label="Fernox F3">Standard cleans and most flushes</td></tr>
+          <tr><th scope="row">How it works</th><td data-label="Sentinel X400">A restorer. Breaks down dense iron oxide over time</td><td data-label="Fernox F3">A fast universal cleaner. Works during the flush</td></tr>
+          <tr><th scope="row">Time it needs</th><td data-label="Sentinel X400">Can circulate for up to 3 to 4 weeks</td><td data-label="Fernox F3"><span class="ct-win">Usually done inside an hour</span></td></tr>
+          <tr><th scope="row">Finished same day</th><td data-label="Sentinel X400">Not always. Bad systems may need a return visit</td><td data-label="Fernox F3"><span class="ct-win">Yes</span></td></tr>
+          <tr><th scope="row">When we pick it</th><td data-label="Sentinel X400">Black water, blocked rads, years of neglect</td><td data-label="Fernox F3">Cold spots, mild to moderate sludge</td></tr>
+        </tbody>
+      </table>
+
+      <div class="pfx-note">
+        <strong>Why this matters to you</strong>
+        <p>Most firms use one chemical for every job because it is simpler. If your system is badly sludged, a fast cleaner will not shift it and you have paid for a flush that did not fix the problem.</p>
+        <p>If we open your system and find heavy sludge, we will say that X400 needs time to work. That can mean dosing the system and coming back. It is slower, and it is the only way to actually clear it.</p>
       </div>
     </div>
   </section>
 
   <!-- ================= MICROBORE ================= -->
-  <section class="pfx pfx-sec pfx-sec--paper" id="microbore">
+  <section class="pfx pfx-sec pfx-sec--mist" id="microbore">
     <div class="container">
       <div class="pfx-eyebrow">The one most firms turn down</div>
       <h2>Do you flush microbore central heating systems?</h2>
       <div class="pfx-water pfx-water--sm"></div>
       <p class="pfx-lede">Yes. A microbore powerflush is a different job to a standard one. Microbore pipework is 8mm to 10mm across and blocks far more easily. It needs high flow pumps, double dosed cleaner and flow reversal to clear properly.</p>
-      <p class="pfx-lede">Microbore powerflush Liverpool is one of the few searches where people are looking for a specialist rather than the cheapest quote, and they are right to. Plenty of engineers turn these systems down.</p>
+      <p class="pfx-lede">This is a job for a specialist rather than the cheapest quote. Plenty of engineers turn these systems down.</p>
 
       <table class="ct">
         <thead><tr><th scope="col">Comparison</th><th scope="col">Microbore</th><th scope="col">Standard</th></tr></thead>
@@ -735,7 +788,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ================= MAGNETIC FILTER ================= -->
-  <section class="pfx pfx-sec pfx-sec--mist" id="filter">
+  <section class="pfx pfx-sec pfx-sec--paper" id="filter">
     <div class="container">
       <div class="pfx-eyebrow">Optional, £195 fitted</div>
       <h2>Do I need a magnetic filter after a power flush?</h2>
@@ -751,70 +804,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <strong>Fitted on the day, or not at all</strong>
         <p>Fitting one during the flush costs £195. Fitting one later as its own visit costs more, because it means a trip out and a system drain down on its own. If you are going to have one, have it done on the day.</p>
         <p>Some boiler warranties now require a filter to stay valid. Worth checking yours before you decide.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CHEMICALS ================= -->
-  <section class="pfx pfx-sec pfx-sec--paper" id="chemicals">
-    <div class="container">
-      <div class="pfx-eyebrow">Decided on the day, not in advance</div>
-      <h2>Which cleaning chemical do you use in a power flush?</h2>
-      <div class="pfx-water pfx-water--sm"></div>
-      <p class="pfx-lede">Fernox F3 on standard cleans and Sentinel X400 on heavily sludged systems. We choose after we see the water, not before.</p>
-      <p class="pfx-lede">Central heating cleaning services vary far more than the price suggests. The chemical is where most of that difference sits, and almost nobody tells you which one they are putting in your system.</p>
-
-      <table class="ct">
-        <thead><tr><th scope="col">Comparison</th><th scope="col">Sentinel X400</th><th scope="col">Fernox F3</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">What it is for</th><td data-label="Sentinel X400">Heavy sludge and years of corrosion</td><td data-label="Fernox F3">Standard cleans and most flushes</td></tr>
-          <tr><th scope="row">How it works</th><td data-label="Sentinel X400">A restorer. Breaks down dense iron oxide over time</td><td data-label="Fernox F3">A fast universal cleaner. Works during the flush</td></tr>
-          <tr><th scope="row">Time it needs</th><td data-label="Sentinel X400">Can circulate for up to 3 to 4 weeks</td><td data-label="Fernox F3"><span class="ct-win">Usually done inside an hour</span></td></tr>
-          <tr><th scope="row">Finished same day</th><td data-label="Sentinel X400">Not always. Bad systems may need a return visit</td><td data-label="Fernox F3"><span class="ct-win">Yes</span></td></tr>
-          <tr><th scope="row">When we pick it</th><td data-label="Sentinel X400">Black water, blocked rads, years of neglect</td><td data-label="Fernox F3">Cold spots, mild to moderate sludge</td></tr>
-        </tbody>
-      </table>
-
-      <div class="pfx-note">
-        <strong>Why this matters to you</strong>
-        <p>Most firms use one chemical for every job because it is simpler. If your system is badly sludged, a fast cleaner will not shift it and you have paid for a flush that did not fix the problem.</p>
-        <p>If we open your system and find heavy sludge, we will say that X400 needs time to work. That can mean dosing the system and coming back. It is slower, and it is the only way to actually clear it.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= WHO ================= -->
-  <section class="pfx pfx-sec pfx-sec--ink">
-    <div class="container">
-      <div class="pfx-eyebrow">Trained, experienced engineers</div>
-      <h2 style="color:#fff;">Who carries out the power flush?</h2>
-      <p class="pfx-lede">Our power flushes are done by Gas Safe registered engineers using a Kamco CF90 Quantum2 power flush pump.</p>
-
-      <div class="cr" style="grid-template-columns:1fr;">
-        <div class="cr-item"><div class="k">An experienced engineer, not whoever is free</div><div class="v">A power flush means someone in your house for most of a day. It should be someone who has done hundreds of them.</div></div>
-        <div class="cr-item"><div class="k">Kamco kit</div><div class="v">Kamco set the standard for power flush equipment. The CF90 Quantum2 is a tank mounted pump built for this job.</div></div>
-        <div class="cr-item"><div class="k">Gas Safe registered</div><div class="v">Check any engineer before you let them near your boiler. Ours is current and verifiable on the Gas Safe Register.</div></div>
-        <div class="cr-item"><div class="k">We stay until it is done</div><div class="v">The price is fixed by radiator count, not by the hour. If your system takes two hours longer than expected, that is our problem and not your bill.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PROCESS ================= -->
-  <section class="pfx pfx-sec pfx-sec--paper" id="process">
-    <div class="container">
-      <div class="pfx-eyebrow">Seven stages</div>
-      <h2>What happens during a power flush?</h2>
-      <div class="pfx-water pfx-water--sm"></div>
-      <p class="pfx-lede">From arriving to handing the system back. Most of a day for a standard Liverpool semi. This is what a proper central heating power flush involves, start to finish.</p>
-
-      <div class="pr">
-        <div class="pr-step"><div class="pr-num">1</div><div><strong>System check</strong><p>The engineer looks at the boiler, pipework and radiators, then bleeds one radiator to see the water. Black water means heavy sludge, and that changes which chemical goes in.</p></div></div>
-        <div class="pr-step"><div class="pr-num">2</div><div><strong>Machine connected</strong><p>The Kamco CF90 Quantum2 goes on, usually at the pump head or across a radiator tail. It is tank mounted, so it comes in on a trolley rather than through the house in pieces.</p></div></div>
-        <div class="pr-step"><div class="pr-num">3</div><div><strong>Cleaner added</strong><p>Fernox F3 for a standard clean. Sentinel X400 where the sludge is heavy. This is where a lot of the result is decided.</p></div></div>
-        <div class="pr-step"><div class="pr-num">4</div><div><strong>Every radiator flushed</strong><p>Each one isolated and flushed on its own, with the flow reversed to shift settled sludge. Stubborn radiators get agitated. This is the slow part, and the part cheap quotes skip.</p></div></div>
-        <div class="pr-step"><div class="pr-num">5</div><div><strong>Whole system flushed</strong><p>The system runs until the water comes back clear. Not nearly clear. Clear.</p></div></div>
-        <div class="pr-step"><div class="pr-num">6</div><div><strong>Inhibitor added</strong><p>A full dose to BS 7593. Without it the system starts silting up within months and the flush was money wasted.</p></div></div>
-        <div class="pr-step"><div class="pr-num">7</div><div><strong>Balanced and reported</strong><p>Radiators balanced so they heat evenly, then a written report for your boiler warranty.</p></div></div>
       </div>
     </div>
   </section>
@@ -877,27 +866,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ================= HONEST ================= -->
-  <section class="pfx pfx-sec pfx-sec--mist" id="honest">
-    <div class="container">
-      <div class="pfx-eyebrow">When we will tell you not to bother</div>
-      <h2>Is a power flush always the right fix?</h2>
-      <p class="pfx-lede">No. It fixes sludge. It does not fix broken parts, leaks, or a system at the end of its life.</p>
-
-      <div class="vd">
-        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Your boiler has a broken part</strong><p>A stuck diverter valve, failed pump or dead PCB will not be fixed by a flush. If your symptoms point at a part, we say so and price the repair instead.</p></div></div>
-        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>The system is losing pressure</strong><p>That is a leak. A flush will not seal it and can make it worse. The leak needs finding first.</p></div></div>
-        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>The boiler is past saving</strong><p>Over 15 years old and badly corroded, spending on a flush can be throwing good money after bad. Sometimes replacement is the honest answer.</p></div></div>
-        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Radiators are corroded through</strong><p>A flush moves water at speed. A radiator already rotten can spring a pin hole. It was going to fail anyway, but you should know before we start, not after.</p></div></div>
-      </div>
-
-      <div class="pfx-note">
-        <strong>What a flush will not do</strong>
-        <p>It will not remove every last trace of sludge. Nothing does. It will not turn a failing system into a new one. What it does is clear the blockage, get the radiators heating properly and buy the system years it would not otherwise have had. If anyone promises more than that, be careful.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= HIRING ================= -->
   <section class="pfx pfx-sec pfx-sec--paper" id="hiring">
     <div class="container">
@@ -935,6 +903,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- ================= NEAR ME / AREAS ================= -->
+  <section class="pfx pfx-sec pfx-sec--mist" id="nearme">
+    <div class="container">
+      <div class="pfx-eyebrow">Same price everywhere we go</div>
+      <h2>Do you cover my area?</h2>
+      <div class="pfx-water pfx-water--sm"></div>
+      <p class="pfx-lede">We cover every Liverpool postcode and the wider Merseyside area. Travel sits inside the quoted price, so the same job costs the same wherever you are.</p>
+
+      <div class="ar">
+        <div class="ar-grp">
+          <h3>Liverpool city</h3>
+          <p>Older terraces across the city often have systems that have been altered several times over the years, and every alteration is somewhere corrosion can start. Most of the flushes we do in winter start with a radiator that went cold and never recovered.</p>
+          <div class="ar-pills"><span>City Centre L1</span><span>Toxteth L8</span><span>Anfield L4</span><span>Wavertree L15</span><span>Childwall L16</span><span>Woolton L25</span><span>Allerton L18</span><span>West Derby L12</span><span>Garston L19</span><span>Norris Green L11</span></div>
+        </div>
+        <div class="ar-grp">
+          <h3><a href="/power-flushing-formby">Formby</a>, Crosby and Bootle</h3>
+          <p>There is plenty of eighties and nineties housing north of the city, which is where microbore turns up most often. Same fixed prices as anywhere else we cover, with no travel charge.</p>
+          <div class="ar-pills"><span>Crosby L23</span><span>Formby L37</span><span>Bootle L20</span><span>Maghull L31</span><span>Lydiate L31</span><span>Southport PR8</span><span>Kirkby L32</span><span>Aintree L10</span></div>
+        </div>
+        <div class="ar-grp">
+          <h3>The <a href="/power-flushing-wirral">Wirral</a> and <a href="/power-flushing-st-helens">St Helens</a></h3>
+          <p>We work across the water every week, from Wallasey and Birkenhead to Bromborough and Heswall, and east to St Helens and Widnes. Priced the same way, by radiator count.</p>
+          <div class="ar-pills"><span>Wallasey CH44</span><span>Birkenhead CH41</span><span>Bromborough CH62</span><span>Greasby CH49</span><span>Bebington CH63</span><span>Heswall CH60</span><span>St Helens WA10</span><span>Widnes WA8</span></div>
+        </div>
+      </div>
+
+      <div class="pfx-note">
+        <strong>Not sure if we reach you?</strong>
+        <p>If you are anywhere in Merseyside, ring and ask. We will tell you straight whether we cover you, rather than taking the booking and cancelling later.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= FAQ ================= -->
   <section class="pfx pfx-sec pfx-sec--paper" id="faq">
     <div class="container">
@@ -963,7 +964,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 
   <!-- ================= RELATED ================= -->
-  <section class="pfx pfx-sec pfx-sec--paper">
+  <section class="pfx pfx-sec pfx-sec--mist">
     <div class="container">
       <div class="pfx-eyebrow">Also in Liverpool</div>
       <h2>What else do you do?</h2>
@@ -987,7 +988,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="tel:0151 558 0334" class="rc-cta" style="font-size:1.15rem;">Call 0151 558 0334</a>
         <a href="/get-started" style="display:flex;align-items:center;justify-content:center;min-height:48px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.22);color:#fff;text-decoration:none;font-weight:700;border-radius:10px;">Book online</a>
       </div>
-      <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;margin:1.25rem 0 0;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin:1.25rem 0 0;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
     </div>
   </section>
 
