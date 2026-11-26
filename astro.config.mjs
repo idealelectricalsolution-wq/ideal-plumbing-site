@@ -9,7 +9,9 @@ export default defineConfig({
   site: 'https://liverpoolemergencyplumber.co.uk',
   trailingSlash: 'never',
   build: {
-    format: 'file'
+    format: 'file',
+    // Inline CSS so the first paint is not blocked by a stylesheet request (most visits are one page).
+    inlineStylesheets: 'always',
   },
   integrations: [sitemap({
     filter: (page) => !page.includes('/privacy') && !page.includes('/404'),
