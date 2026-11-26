@@ -28,8 +28,8 @@ interface Props {
 const p = Astro.props;
 const TEL = 'tel:01515580334';
 const PHONE = '0151 558 0334';
-const updated = p.updated || '27 November 2026';
-const dateModified = p.dateModified || '2026-11-27';
+const updated = p.updated || '26 November 2026';
+const dateModified = p.dateModified || '2026-11-26';
 const pk = p.packages || [];
 const nCls = pk.length === 2 ? 'sg-n2' : pk.length === 3 ? 'sg-n3' : pk.length === 4 ? 'sg-n4' : '';
 const revs = (p.reviews || []).filter((n) => REVIEWS[n]).map((n) => ({ n, t: REVIEWS[n] }));
