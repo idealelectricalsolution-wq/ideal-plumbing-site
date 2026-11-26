@@ -19,7 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "areaServed": { "@type": "Place", "name": "Allerton, L18" },
     "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
     "offers": [
-      { "@type": "Offer", "name": "Weekday Emergency Plumber Allerton", "price": "80", "priceCurrency": "GBP" },
+      { "@type": "Offer", "name": "Weekday Emergency Plumber Allerton", "price": "120", "priceCurrency": "GBP" },
       { "@type": "Offer", "name": "Out of Hours Emergency Plumber Allerton", "price": "150", "priceCurrency": "GBP" }
     ]
   }
@@ -30,9 +30,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much does an emergency plumber cost in Allerton?", "acceptedAnswer": { "@type": "Answer", "text": "£120 for the first hour on weekdays 9am to 4pm. £150 for the first hour on weekday evenings, nights and weekends. £180 for the first hour on bank holidays. Parts at cost. Most jobs cost between £120 and £350 total." } },
-      { "@type": "Question", "name": "How quickly can you reach Allerton?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Allerton L18. Our average arrival time is under 30 minutes. A real person answers 24 hours a day, 7 days a week." } },
-      { "@type": "Question", "name": "What should I do if I smell gas in my Allerton home?", "acceptedAnswer": { "@type": "Answer", "text": "Turn off the gas supply at the meter immediately, open all windows and doors, do not operate any electrical switches and get everyone out of the property. Call Cadent Gas on 0800 111 999   this is the national gas emergency line available 24/7. Once the engineer has made the property safe, call us on 0151 558 0334 for a full gas system inspection and any necessary repairs." } }
+      { "@type": "Question", "name": "How much does an emergency plumber cost in Allerton?", "acceptedAnswer": { "@type": "Answer", "text": "The first hour is £120 on weekdays, 9am to 4pm. It is £150 on weekday evenings, nights and weekends. It is £180 on bank holidays. There is no call-out fee. Parts are at cost. If the job needs more time, we price it before we carry on. You get a written price before we start." } },
+      { "@type": "Question", "name": "How quickly can you reach Allerton?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee a 30 minute response across Allerton L18. A real person answers the phone 24 hours a day, 7 days a week. There is no voicemail. We send an engineer as soon as you call." } },
+      { "@type": "Question", "name": "What should I do if I smell gas in my Allerton home?", "acceptedAnswer": { "@type": "Answer", "text": "Turn off the gas at the meter straight away. Open all the doors and windows. Do not use any electrical switches. Get everyone out of the house. Call Cadent Gas on 0800 111 999. This is the national gas emergency line and it is open 24/7. Once their engineer has made it safe, call us on 0151 558 0334. We will check the whole gas system and do any repairs." } }
     ]
   }
   </script>
@@ -56,7 +56,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Available 24/7 in Allerton
       </div>
       <h1>Emergency Plumber Allerton</h1>
-      <p class="page-hero-sub">24/7 emergency plumber in Allerton L18. 30 minute response. Gas Safe registered. Burst pipes, leaks, boiler breakdowns, no hot water. Fixed prices from £120. A trusted team of engineers, led by James. Gas Safe registered</p>
+      <p class="page-hero-sub">24/7 emergency plumber in Allerton L18. 30 minute response. We fix burst pipes, leaks, boiler breakdowns and no hot water. Fixed prices from £120. A trusted team of Gas Safe registered engineers, led by James.</p>
 
       <div style="background:var(--navy);border-radius:var(--radius);padding:1rem 1.5rem;max-width:320px;margin:1.25rem auto;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
         <span style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:3rem;font-weight:900;color:#fb923c;line-height:1;">30<small style="font-size:1.4rem;color:#ffffff;">min</small></span>
@@ -71,7 +71,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe registered</span>
+        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Call-Out Fee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
         <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Prices from £120</span>
       </div>
@@ -99,7 +99,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber Allerton. Fixed Rates. No Hidden Charges.</h2>
-      <p class="pf-sub">Written quote before any work begins. Extra time is priced before we carry on. Parts at cost. The price we quote is the price on the invoice.</p>
+      <p class="pf-sub">You get a written price before we start. We price any extra time before we carry on. Parts are at cost. The price we quote is the price you pay.</p>
 
       <div class="pf-pricing-grid">
         <div class="pf-price-card">
@@ -153,9 +153,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <span class="pf-section-label">ALLERTON LOCAL KNOWLEDGE</span>
       <h2>Emergency Plumbing in Allerton. What L18 Properties Need.</h2>
       <div class="pf-card pf-card-left-orange" style="margin-top:1.5rem;">
-        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Allerton covers a diverse residential mix from Victorian semis in the streets around Allerton Road to substantial 1930s detached properties and newer developments further south. The L18 postcode is one of the most consistently affluent in Liverpool, with high owner-occupation and a significant number of family homes with multiple bathrooms and modern kitchen extensions.
+        <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;margin:0;">Allerton has a wide mix of homes. There are Victorian semis in the streets around Allerton Road. There are large 1930s detached houses, and newer estates further south. L18 is one of the most well-off postcodes in Liverpool. Most homes are owner-occupied. Many are family homes with more than one bathroom and a kitchen extension.
 
-Properties in Allerton with kitchen or bathroom extensions frequently have plumbing that was installed at extension time to a reasonable standard but without reference to the existing system's capacity. Undersized pipe runs, inadequate pressure and water hammer are common in extended L18 properties where the extension plumbing was not designed as part of a whole-system approach. We assess the full system before recommending remedial work. We also provide <a href="/showers-liverpool" style="color:#c2410c;font-weight:700;">shower installations</a> and <a href="/radiators-liverpool" style="color:#c2410c;font-weight:700;">radiator upgrades</a> for Allerton homeowners improving their properties, alongside emergency call-outs 24/7 across L18.</p>
+Extensions often cause plumbing problems in Allerton. The new pipes were usually fitted to a fair standard. But no one checked if the old system could cope. So we see pipes that are too small, low pressure and water hammer (banging pipes). We check the whole system before we suggest any work. We also do <a href="/showers-liverpool" style="color:#c2410c;font-weight:700;">shower installations</a> and <a href="/radiators-liverpool" style="color:#c2410c;font-weight:700;">radiator upgrades</a> for Allerton homes. And we cover emergency call-outs 24/7 across L18.</p>
       </div>
     </div>
   </section>
@@ -165,23 +165,23 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Common Emergency Plumbing Jobs in Allerton</h2>
-      <p class="pf-sub">The faults we attend most frequently in Allerton L18.</p>
+      <p class="pf-sub">The faults we fix most often in Allerton L18.</p>
       <div class="jobs-grid" style="margin-top:2rem;">
         
         <div class="job-card">
           <h3>Extension Plumbing Failures</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Allerton properties with kitchen and bathroom extensions often have plumbing installed at extension time that was not integrated with the original system. Pressure issues, pipe sizing errors and inadequate waste falls cause persistent problems in extended L18 properties.</p>
+          <p>Many Allerton homes have a kitchen or bathroom extension. The plumbing in it was often not joined up well with the old system. This leads to low pressure, pipes that are the wrong size and slow waste pipes. The problems keep coming back until the system is put right.</p>
         </div>
         <div class="job-card">
           <h3>Modern Boiler Faults in Upgraded Homes</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Many Allerton properties have had combi boilers installed in the last 10 to 15 years during renovation. While newer than Victorian properties, these systems still develop faults   scale build-up in hard water areas, pressure loss and PCB failures. We carry spares for all major brands.</p>
+          <p>Many Allerton homes had a combi boiler fitted in the last 10 to 15 years. Newer boilers still break down. Common faults are pressure loss and circuit board (PCB) failures. We carry common spares for the main brands.</p>
         </div>
         <div class="job-card">
           <h3>Shower System and Pressure Problems</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
-          <p>Allerton homeowners frequently upgrade to thermostatic and digital showers in refurbished bathrooms. Pressure problems that develop after installation are usually caused by a system mismatch between the shower specification and the available water pressure. We diagnose and correct these correctly.</p>
+          <p>Many Allerton homes now have thermostatic or digital showers. Pressure problems after fitting usually mean the shower does not suit the water pressure in the house. We find the cause and put it right.</p>
         </div>
       </div>
     </div>
@@ -192,12 +192,12 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
   <section class="pf-section" style="background:#f1f5f9;">
     <div class="container">
       <h2>What To Do Now While You Wait for Our Allerton Engineer</h2>
-      <p class="pf-sub">These steps protect your property while our engineer is on the way.</p>
+      <p class="pf-sub">Do these things while our engineer is on the way.</p>
       <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any water leak, the stopcock is your most important control. In most affluent mix of victorian semis it is under the kitchen sink or in a hallway cupboard. Turn it clockwise to stop all water. This limits damage while we travel to you.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open windows and doors. Call <a href="https://cadentgas.com/emergencies" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">Cadent Gas on 0800 111 999</a> first. Then call us on 0151 558 0334 once the property is made safe. Our first visit to make a gas escape safe is free.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If your boiler shows an error code or has cut out, check the pressure gauge. It should read between 1 and 1.5 bar. Below 0.5 bar you can repressurise using the filling loop beneath the boiler. If this does not resolve the fault, call us on 0151 558 0334.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of any water damage, leaks or flooding before cleaning up. This documentation supports insurance claims. We also provide our own written report and photographic evidence for your insurer as standard on every Allerton call-out.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">1</span><div><strong>Find your stopcock and turn it off</strong><p>For any leak, turn off the stopcock first. In most Allerton homes, it is under the kitchen sink or in a hall cupboard. Turn it clockwise to stop the water. This limits the damage while we travel to you.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">2</span><div><strong>If you smell gas, leave immediately</strong><p>Do not touch any switches. Open the windows and doors. Call <a href="https://cadentgas.com/emergencies" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">Cadent Gas on 0800 111 999</a> first. Once they have made it safe, call us on 0151 558 0334.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">3</span><div><strong>For no heating, check boiler pressure</strong><p>If the boiler shows an error code or has cut out, check the pressure gauge. It should read 1 to 1.5 bar. If it is below 1 bar, top it up with the filling loop under the boiler. Still not working? Call us on 0151 558 0334.</p></div></div>
+        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">4</span><div><strong>Photograph all visible damage</strong><p>Take photos and video of the damage before you clean up. Your insurer will want to see them. We can also write a leak report with photos for your insurer.</p></div></div>
       </div>
     </div>
   </section>
@@ -207,14 +207,14 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Other Plumbing and Heating Services in Allerton</h2>
-      <p class="pf-sub">Not an emergency? We cover all plumbing and heating work across Allerton L18. Gas Safe registered. Fixed prices. Free surveys where applicable.</p>
+      <p class="pf-sub">Not an emergency? We do all plumbing and heating work across Allerton L18. Fixed prices. Free survey visits for new installs.</p>
       <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Allerton</strong><span>Annual boiler service from £95. Gas Safe engineer. Certificate same day. Keeps your warranty valid and your boiler efficient.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Allerton</strong><span>CP12 landlord certificates from £75. Same-day available. Combined boiler service and CP12 from £150. All L18 postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Allerton</strong><span>Cold radiators or noisy boiler? Power flush from £395 for systems up to 6 radiators. Restores heat output and protects your new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Allerton</strong><span>New radiator supply and fit from £245. TRV valve upgrades from £65. Radiator balancing included. All L18 postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Allerton</strong><span>Electric showers from £375 supply and fit. Thermostatic mixer from £395. Bath to shower conversions from £2,395. Valve repairs from £100.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Allerton</strong><span>New boiler from £2,195 fully fitted. Worcester Bosch, Vaillant and Ideal. Up to 12-year warranty. Free survey across L18.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Allerton</strong><span>Yearly boiler service for £95. Gas Safe engineer. Certificate emailed the same day. Keeps your warranty valid.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/gas-safety-certificate-liverpool" class="pf-related-link"><div><strong>Gas Safety Certificate Allerton</strong><span>Landlord CP12 certificates from £75. Same-day visits available. Boiler service and CP12 together for £150. We cover all of L18.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Allerton</strong><span>Cold radiators or a noisy boiler? A power flush for up to 6 radiators is £395. It brings the heat back and helps protect a new boiler warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/radiators-liverpool" class="pf-related-link"><div><strong>Radiator Repairs and Replacements Allerton</strong><span>New radiators supplied and fitted from £245. Thermostatic valves (TRVs) £65 each. Balancing included. We cover all of L18.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation and Repairs Allerton</strong><span>Electric showers supplied and fitted from £375. Thermostatic mixers from £395. Bath to shower conversions from £2,395. Repairs at our hourly rates.</span></div><span class="pf-related-arrow">&#8594;</span></a>
+        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Allerton</strong><span>New boilers from £2,195 fully fitted. Baxi, Worcester Bosch, Vaillant and Ideal. Up to 12-year warranty. Free survey across L18.</span></div><span class="pf-related-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
@@ -225,12 +225,12 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
     <div class="container">
       <h2>Why Allerton Homeowners Choose Us</h2>
       <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>30 Minute Response in Allerton</h3><p>We know Allerton and the L18 postcode. Our engineers travel directly to you   no detours, no delays. Average arrival time across Allerton is under 30 minutes.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>Our Gas Safe registered engineers come to your Allerton property, day or night. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
-        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>First hour £120 on weekdays, £150 evenings and weekends, £180 bank holidays. Parts at cost. Written quote before work begins. The price we quote is the price on the invoice.</p></div>
-        <div class="pf-why-item"><h3>Local Knowledge of Affluent mix of Victorian semis, 1930s detached and modern developments</h3><p>We work in Allerton regularly and understand the specific plumbing and heating challenges of affluent mix of victorian semis, 1930s detached and modern developments. Accurate diagnosis first time saves you money.</p></div>
-        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am and a real person answers. No voicemail, no automated system. Immediate safety advice while your engineer is dispatched.</p></div>
-        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and installation we carry out in Allerton carries a 12-month workmanship guarantee. If anything we fix fails due to our work, we return at no charge.</p></div>
+        <div class="pf-why-item"><h3>30 Minute Response in Allerton</h3><p>We know Allerton and the L18 postcode well. Our engineers come straight to you. We typically arrive within 30 minutes.</p></div>
+        <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>Our Gas Safe registered engineers come to your Allerton home, day or night. You can check our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>.</p></div>
+        <div class="pf-why-item"><h3>Fixed Rates. No Surprises.</h3><p>The first hour is £120 on weekdays, 9am to 4pm. It is £150 evenings and weekends, and £180 on bank holidays. Parts are at cost. You get a written price before we start.</p></div>
+        <div class="pf-why-item"><h3>Local Knowledge of Allerton Homes</h3><p>We work in Allerton often. We know its Victorian semis, 1930s detached houses and newer homes. We aim to find the fault first time, which saves you money.</p></div>
+        <div class="pf-why-item"><h3>Real Person Answers 24/7</h3><p>Call 0151 558 0334 at 3am and a real person answers. No voicemail. No automated menu. We give you safety advice while an engineer heads to you.</p></div>
+        <div class="pf-why-item"><h3>12-Month Workmanship Guarantee</h3><p>Every repair and install we do in Allerton has a 12-month workmanship guarantee. If our work fails, we come back and fix it free.</p></div>
       </div>
     </div>
   </section>
@@ -240,13 +240,12 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Useful Information for Allerton Residents</h2>
-      <p class="pf-sub">Trusted external resources relevant to plumbing and heating in Allerton.</p>
+      <p class="pf-sub">Trusted outside links for plumbing and heating help in Allerton.</p>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
-          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.hse.gov.uk/gas/domestic/co.htm" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">HSE carbon monoxide awareness</a></li><li><a href="https://www.checkatrade.com/blog/cost-guides/plumber-call-out-fee/" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">Checkatrade emergency plumber costs</a></li>
-          <li><a href="https://www.unitedutilities.com/emergencies/" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">United Utilities water emergencies</a>   Report burst mains, low pressure or no water on the United Utilities network (0345 672 3723)</li>
-          <li><a href="https://cadentgas.com/emergencies" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 immediately if you smell gas anywhere in Allerton</li>
-          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">HSE gas safety guidance</a>   Official Health and Safety Executive guidance on gas appliances and safety in the home</li>
+          <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">Gas Safe Register</a></li><li><a href="https://www.hse.gov.uk/gas/domestic/co.htm" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">HSE carbon monoxide awareness</a></li><li><a href="https://www.unitedutilities.com/emergencies/" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">United Utilities water emergencies</a>   Report a burst water main, low pressure or no water (0345 672 3723)</li>
+          <li><a href="https://cadentgas.com/emergencies" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">Cadent Gas emergency line</a>   Call 0800 111 999 straight away if you smell gas in Allerton</li>
+          <li><a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:#c2410c;font-weight:700;">HSE gas safety guidance</a>   Official advice on gas appliances and gas safety at home</li>
         </ul>
       </div>
     </div>
@@ -268,11 +267,11 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
     <div class="container">
       <h2>Emergency Plumber Allerton. Your Questions Answered</h2>
       <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Allerton?</summary><div class="pf-faq-body"><p>Fixed prices for the first hour: £120 on weekdays 9am to 4pm, £150 on weekday evenings, nights and weekends, £180 on bank holidays. Parts charged at cost. Most jobs cost between £120 and £350. Written quote before work begins. No separate call-out fee.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Allerton?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Allerton L18. A real person answers our phone 24 hours a day, 7 days a week   no voicemail, no automated system. We dispatch your engineer immediately on the call.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. Gas work is done by Gas Safe registered engineers. It is illegal to carry out gas work without this qualification. Verify our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We provide gas safety certificates for all gas work carried out.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Allerton?</summary><div class="pf-faq-body"><p>Yes. All our work carries a 12-month workmanship guarantee. If anything we fix in Allerton fails within 12 months due to our workmanship, we return and resolve it at no charge.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS</span>&nbsp; What should I do if I smell gas in my Allerton home?</summary><div class="pf-faq-body"><p>Turn off the gas supply at the meter immediately, open all windows and doors, do not operate any electrical switches and get everyone out of the property. Call Cadent Gas on 0800 111 999   this is the national gas emergency line available 24/7. Once the engineer has made the property safe, call us on 0151 558 0334 for a full gas system inspection and any necessary repairs.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does an emergency plumber cost in Allerton?</summary><div class="pf-faq-body"><p>The first hour is £120 on weekdays, 9am to 4pm. It is £150 on weekday evenings, nights and weekends. It is £180 on bank holidays. There is no call-out fee. Parts are at cost. If the job needs more time, we price it before we carry on. You get a written price before we start.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">RESPONSE</span>&nbsp; How quickly can you reach Allerton?</summary><div class="pf-faq-body"><p>We guarantee a 30 minute response across Allerton L18. A real person answers the phone 24 hours a day, 7 days a week. There is no voicemail. We send an engineer as soon as you call.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are your engineers Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. Our Gas Safe registered engineers do all our gas work. By law, anyone doing gas work must be on the Gas Safe Register. You can check our registration at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. We give you the right paperwork for any gas work we do.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">GUARANTEE</span>&nbsp; Do you guarantee your work in Allerton?</summary><div class="pf-faq-body"><p>Yes. All our work has a 12-month workmanship guarantee. If something we fix in Allerton fails within 12 months because of our work, we come back and put it right free.</p></div></details>
+        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS</span>&nbsp; What should I do if I smell gas in my Allerton home?</summary><div class="pf-faq-body"><p>Turn off the gas at the meter straight away. Open all the doors and windows. Do not use any electrical switches. Get everyone out of the house. Call Cadent Gas on 0800 111 999. This is the national gas emergency line and it is open 24/7. Once their engineer has made it safe, call us on 0151 558 0334. We will check the whole gas system and do any repairs.</p></div></details>
       </div>
     </div>
   </section>
@@ -282,7 +281,7 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
   <section class="pf-section" style="background:#f8fafc;">
     <div class="container">
       <h2>Emergency Plumber in Allerton and Nearby Areas</h2>
-      <p class="pf-sub">We cover Allerton L18 and all surrounding areas. Click any area below for dedicated local cover.</p>
+      <p class="pf-sub">We cover Allerton L18 and the areas around it. Tap an area below for its local page.</p>
       <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
         <a href="/" class="area-pill">Liverpool Hub</a>
         <a href="/emergency-plumber-woolton" class="area-pill">Woolton</a><a href="/emergency-plumber-mossley-hill" class="area-pill">Mossley Hill</a><a href="/emergency-plumber-childwall" class="area-pill">Childwall</a><a href="/emergency-plumber-aigburth" class="area-pill">Aigburth</a>
@@ -299,7 +298,7 @@ Properties in Allerton with kitchen or bathroom extensions frequently have plumb
         Available Now in Allerton. 24/7.
       </div>
       <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Need an Emergency Plumber in Allerton?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed prices from £120. Gas Safe registered. A trusted team of engineers, led by James. Gas Safe registered 12-month guarantee.</p>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">30 minute response. Fixed prices from £120. A trusted team of Gas Safe registered engineers, led by James. 12-month guarantee.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book Online</a>
