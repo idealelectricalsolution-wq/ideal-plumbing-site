@@ -1,527 +1,280 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'vented', tier: 'Loft tank systems', name: 'Vented cylinder replaced', price: '£750', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Like-for-like swap on a loft tank system', 'Immersion heater fitted', 'Old cylinder taken away', 'Usually done in one day'] },
+  { id: 'unvented-150', tier: 'Mains pressure', popular: true, name: 'Unvented cylinder, 150 litres', price: '£1,450', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 1 to 2 people, one bathroom', 'Fitted by a G3 qualified engineer', 'All safety valves fitted and tested', 'Notified as Building Regulations require'] },
+  { id: 'unvented-210', tier: 'Family homes', name: 'Unvented cylinder, 210 litres', price: '£1,695', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 3 to 4 people', 'One bathroom, or a bath and en-suite shower', 'Expansion vessel and discharge pipe', 'Old cylinder taken away'] },
+  { id: 'unvented-250', tier: 'Bigger homes', name: 'Unvented cylinder, 250 to 300 litres', price: '£1,995', from: true, unit: 'supplied and fitted, inc VAT',
+    points: ['Suits 4 or more people', 'Two bathrooms used at once', 'Mains pressure at every tap', 'Free survey to confirm the size'] },
+];
+
+const faqs = [
+  { q: 'How much does a hot water cylinder cost in Liverpool?', a: 'With us, a vented cylinder replaced starts from £750 including VAT. An unvented cylinder starts from £1,450 for 150 litres, £1,695 for 210 litres and £1,995 for 250 to 300 litres. Changing from vented to unvented starts from £1,895. We give you a fixed written price after a free survey.' },
+  { q: 'What is the difference between a vented and unvented cylinder?', a: 'A vented cylinder is fed by a cold water tank in the loft, so the pressure is low. An unvented cylinder is fed straight from the mains, so you get mains pressure hot water. Unvented cylinders must be fitted by a G3 qualified engineer.' },
+  { q: 'Should I get a cylinder or a combi boiler?', a: 'A combi heats water as you use it, with no tank. It suits flats and homes with one bathroom. A system boiler with an unvented cylinder suits homes with two bathrooms or more, because two showers can run at once. We will tell you which suits you at the free survey.' },
+  { q: 'What size hot water cylinder do I need?', a: 'As a guide, 150 litres for 1 to 2 people, 210 litres for 3 to 4 people, and 250 to 300 litres for bigger families or two bathrooms. We check your home and how you use hot water before we pick a size.' },
+  { q: 'Will an unvented cylinder work with my water pressure?', a: 'It needs a good mains supply, with enough pressure and flow. We test both at the survey before we quote. If your supply is too weak, we tell you straight away and suggest the best option.' },
+  { q: 'How long does it take to fit a new cylinder?', a: 'Most cylinder swaps are done in one day. A tight airing cupboard or a change from vented to unvented can take a little longer. We tell you the time at the survey.' },
+  { q: 'Are your engineers G3 qualified?', a: 'Yes. All our engineers are G3 qualified to fit and service unvented cylinders. The work is notified as the Building Regulations require, and you get the paperwork to keep.' },
+  { q: 'Does an unvented cylinder need a yearly service?', a: 'Yes. Makers ask for a service every year to keep the warranty valid, and it keeps the safety valves working. Our unvented cylinder service is £120 including VAT.' },
+  { q: 'How much is a new immersion heater?', a: 'An immersion heater on a vented cylinder is £175 including VAT. On an unvented cylinder it is £275, because it needs the right part for that cylinder. Both are supplied and fitted.' },
+  { q: 'Can you run out of hot water with a cylinder?', a: 'Yes. A cylinder holds a set amount of hot water. If it is all used, you wait while it heats up again. That is why getting the right size matters.' },
+  { q: 'Can a leaking cylinder be repaired?', a: 'If the leak is from a valve or a fitting, often yes. If the tank itself is leaking, it needs replacing. We find out which it is on the visit. Repairs are charged at our first-hour rate, from £120.' },
+  { q: 'Do you take the old cylinder away?', a: 'Yes. We drain it, take it out and take it away. This is included in the price.' },
+  { q: 'Which cylinder brands do you fit?', a: 'We fit leading UK brands, including Megaflo, Gledhill, Telford, Joule and Ariston. We pick the right one for your space, your budget and your boiler.' },
+  { q: 'Are you Gas Safe registered?', a: 'Yes. Gas work is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
+];
 ---
 
-<BaseLayout
-  title="Hot Water Cylinder Installation Liverpool | From £600 | G3"
-  description="Hot water cylinder installation Liverpool from £600. Vented and unvented cylinders. Megaflo, OSO, Telford, RM, Joule, Range Tribune. Annual G3 service from £120. Immersion heater swap from £150. Gas Safe and G3 qualified team. Free survey. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-liverpool"
+<ServiceGuide
+  url={URL_}
+  title="Hot Water Cylinder Installation Liverpool | From £750 | G3 Qualified"
+  description="Hot water cylinder installation in Liverpool. Vented from £750, unvented from £1,450 (150L) inc VAT. G3 qualified engineers, free survey, fixed written price. Call 0151 558 0334."
+  h1="Hot Water Cylinder Installation Liverpool"
+  badge="Vented and unvented · G3 qualified"
+  intro="New hot water cylinders fitted across Liverpool. Vented cylinders from £750 and unvented cylinders from £1,450, including VAT. All our engineers are G3 qualified. We survey for free and give you a fixed written price."
+  stats={[['£750', 'Vented, from'], ['£1,450', 'Unvented, from']]}
+  ticks={['G3 Qualified Engineers', 'Gas Safe Registered', 'Free Survey', '12-Month Guarantee']}
+  pkTitle="Hot water cylinder prices"
+  pkLede="Priced by size, supplied and fitted, including VAT. No call-out fee."
+  packages={packages}
+  pkNote="Prices are a guide for a straight swap in the same place. Your final fixed price comes after a free survey. Moving a cylinder or changing from vented to unvented costs more (see the table below)."
+  factsTitle="Hot water cylinders at a glance"
+  facts={[
+    ['Price', 'Vented from £750. Unvented from £1,450 (150 litres) to £1,995 (250 to 300 litres).'],
+    ['Time', 'Most swaps are done in one day.'],
+    ['Who', 'G3 qualified engineers, part of our team led by James.'],
+    ['Survey', 'Free. We test your water pressure and flow first.'],
+    ['Guarantee', '12 months on our work, plus the maker\'s warranty.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['cost', 'How much does a cylinder cost?'],
+    ['types', 'Vented or unvented?'],
+    ['size', 'What size do I need?'],
+    ['pressure', 'Will unvented work in my home?'],
+    ['signs', 'Repair or replace?'],
+    ['how', 'How does it work?'],
+    ['service', 'Unvented cylinder service'],
+    ['brands', 'Brands and special cylinders'],
+  ]}
+  reviews={['Ellie J', 'Roger D', 'Mark L', 'Peter H']}
+  faqs={faqs}
+  areasTitle="Where do you fit hot water cylinders?"
+  areasText="Every Liverpool postcode, plus the Wirral, St Helens, Formby and the rest of Sefton and Knowsley."
+  areas={[
+    { href: '/hot-water-cylinders-wirral', label: 'Wirral' },
+    { href: '/hot-water-cylinders-st-helens', label: 'St Helens' },
+    { href: '/hot-water-cylinders-formby', label: 'Formby' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-garston', label: 'Garston' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-crosby', label: 'Crosby' },
+    { href: '/emergency-plumber-kirkby', label: 'Kirkby' },
+  ]}
+  related={[
+    { href: '/boiler-installation-liverpool', title: 'Boiler installation', text: 'New combi boilers from £2,195 fully fitted' },
+    { href: '/central-heating-installation-liverpool', title: 'Central heating installation', text: 'Full systems from £4,495' },
+    { href: '/showers-liverpool', title: 'Showers', text: 'Mixer, electric and power showers fitted' },
+    { href: '/power-flushing-liverpool', title: 'Power flushing', text: 'From £395, clears sludge from your system' },
+  ]}
+  finalTitle="Book your free cylinder survey"
+  finalText="Vented from £750. Unvented from £1,450. G3 qualified engineers and a fixed written price."
+  serviceName="Hot Water Cylinder Installation Liverpool"
+  serviceType="Hot water cylinder installation"
+  serviceDesc="Vented and unvented hot water cylinders supplied and fitted across Liverpool and Merseyside by G3 qualified engineers. Immersion heaters, unvented cylinder servicing and vented to unvented conversions."
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Plumber"],
-    "@id": "https://liverpoolemergencyplumber.co.uk/#business",
-    "name": "Liverpool Emergency Plumber",
-    "image": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png",
-    "url": "https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-liverpool",
-    "telephone": "+441515580334",
-    "email": "emergencyplumberliverpool@gmail.com",
-    "priceRange": "££",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "29 Park Road",
-      "addressLocality": "Kirkby",
-      "addressRegion": "Merseyside",
-      "postalCode": "L32 2AL",
-      "addressCountry": "GB"
-    },
-    "geo": { "@type": "GeoCoordinates", "latitude": "53.4844", "longitude": "-2.8964" },
-    "areaServed": [
-      { "@type": "City", "name": "Liverpool" },
-      { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "St Helens" },
-      { "@type": "City", "name": "Bootle" },
-      { "@type": "City", "name": "Crosby" },
-      { "@type": "City", "name": "Formby" },
-      { "@type": "City", "name": "Southport" }
-    ],
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "James Alexander" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Great company, came within 30 mins for emergency burst pipe, couldn’t praise them enough !!"
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "John Manley" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company"
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Elaine McHugh" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Excellent service."
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Hot Water Cylinder Installation Liverpool",
-    "alternateName": ["Cylinder Installation Service Liverpool", "Unvented Cylinder Installation Liverpool", "Megaflo Installation Liverpool", "Annual G3 Cylinder Service Liverpool", "Immersion Heater Replacement Liverpool"],
-    "serviceType": "Hot Water Cylinder Installation, Replacement, Annual G3 Service",
-    "description": "Hot water cylinder installation service across Liverpool from £600. Vented and unvented cylinders. Megaflo Eco, OSO, Telford Tempest, RM Cylinders, Joule, Range Tribune. Annual G3 servicing from £120. Immersion heater replacement from £150. Gas Safe and G3 qualified heating engineers.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": [
-      { "@type": "City", "name": "Liverpool" }, { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "St Helens" }, { "@type": "City", "name": "Bootle" }
-    ],
-    "offers": [
-      { "@type": "Offer", "name": "Vented Hot Water Cylinder Installation Liverpool", "description": "Indirect vented hot water cylinder supply and fit.", "price": "600", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-      { "@type": "Offer", "name": "Unvented Hot Water Cylinder Installation Liverpool", "description": "Mains-pressure unvented hot water cylinder installation by G3 qualified engineer. Building Control notification included.", "price": "900", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-      { "@type": "Offer", "name": "Immersion Heater Replacement Liverpool", "description": "Same-day immersion heater swap.", "price": "150", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" },
-      { "@type": "Offer", "name": "Annual G3 Cylinder Service Liverpool", "description": "Annual G3 service for unvented hot water cylinders. T&P relief valve test, expansion vessel check, tundish inspection, service certificate.", "price": "120", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-12-31" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does a hot water cylinder cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A vented indirect cylinder fitted starts at £600. Unvented starts at £900. Immersion swap from £150. Prices depend on size, type and access. We give a free fixed-price quote after a site visit." } },
-      { "@type": "Question", "name": "What is the difference between a vented and unvented hot water cylinder?", "acceptedAnswer": { "@type": "Answer", "text": "A vented cylinder is fed from a cold water tank in the loft and runs at low pressure. Common in Liverpool's older homes. An unvented cylinder is fed from the mains and gives hot water at mains pressure. Better shower flow. No loft tank. Unvented must be fitted by a G3 qualified engineer." } },
-      { "@type": "Question", "name": "Should I get a cylinder or a combi boiler?", "acceptedAnswer": { "@type": "Answer", "text": "A combi boiler heats water on demand. No cylinder needed. A good fit for smaller Liverpool homes with one bathroom. Bigger homes with two or more bathrooms or high hot water demand do better with a system boiler and an unvented cylinder. You get mains-pressure hot water at every tap with no run-out. We advise at the free survey." } },
-      { "@type": "Question", "name": "What size hot water cylinder do I need?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your home. 130 litres for a small flat. 200 litres for a 2-bed home. 250 litres for a 3-bed home with one or two bathrooms. 300 litres or more for big family homes. We work out the right size at the free survey." } },
-      { "@type": "Question", "name": "What hot water cylinder brands do you fit?", "acceptedAnswer": { "@type": "Answer", "text": "We fit cylinders from Megaflo, Worcester Bosch, OSO, Telford, RM Cylinders, Joule and Gledhill. Standard, premium and speciality types all in the range. Heat pump and solar coil cylinders too. Tell us your needs and we will spec the right one." } },
-      { "@type": "Question", "name": "Do unvented cylinders need an annual service?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unvented cylinders need a service every year. The law says so. The maker's warranty says so. Our annual G3 service starts at £120. Or pair it with a boiler service for £175. We send a service reminder each year." } },
-      { "@type": "Question", "name": "How long does hot water cylinder installation take?", "acceptedAnswer": { "@type": "Answer", "text": "A vented swap takes 4 to 6 hours. An unvented fit takes 6 to 8 hours. A back-of-bath fit can take a full day if the access is tight. We give a clear time at the free survey. Most jobs done in one visit." } },
-      { "@type": "Question", "name": "Are you qualified to install unvented cylinders?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unvented fits need the G3 cert under Part G of the Building Regs. All our team who fit unvented hold this cert. Every job is notified. You get a certificate to keep. Never let a plumber without G3 fit an unvented tank." } },
-      { "@type": "Question", "name": "Are you Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We are on the Gas Safe register. You can check us online. All cylinder fits are done by Gas Safe registered. All gas work is done by a Gas Safe registered plumber." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Hot Water Cylinder Installation Liverpool", "item": "https://liverpoolemergencyplumber.co.uk/hot-water-cylinders-liverpool" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        Liverpool Hot Water Cylinder Installation
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a hot water cylinder cost in Liverpool?</h2>
+      <p class="brx-answer">A vented cylinder replaced starts from £750. An unvented cylinder starts from £1,450, and the price goes up with the size. All prices include VAT.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td>Vented cylinder replaced</td><td>from £750</td></tr>
+            <tr><td>Unvented cylinder, 150 litres</td><td>from £1,450</td></tr>
+            <tr><td>Unvented cylinder, 210 litres</td><td>from £1,695</td></tr>
+            <tr><td>Unvented cylinder, 250 to 300 litres</td><td>from £1,995</td></tr>
+            <tr><td>Change from vented to unvented</td><td>from £1,895</td></tr>
+            <tr><td>Immersion heater, vented cylinder</td><td>£175</td></tr>
+            <tr><td>Immersion heater, unvented cylinder</td><td>£275</td></tr>
+            <tr><td>Unvented cylinder yearly service</td><td>£120</td></tr>
+            <tr><td>Repairs and fault finding</td><td>£120 first hour (weekdays 9am to 4pm)</td></tr>
+          </tbody>
+        </table>
       </div>
-      <h1>Hot Water Cylinder Installation Liverpool</h1>
-      <p class="page-hero-sub">Three options here. Standard from £600. Mains pressure from £900. Immersion swap from £150. G3 trained.</p>
-
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£600</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Vented From</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£900</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Unvented From</div>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;">Book a Free Survey</a>
-      </div>
-
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> G3 Qualified Engineers</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Survey</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> 12-Month Guarantee</span>
-      </div>
+      <h3>What is in the price?</h3>
+      <ul class="sg-ticks">
+        <li>The new cylinder, supplied and fitted</li>
+        <li>All pipe connections, valves and fittings</li>
+        <li>Safety valves, expansion vessel and discharge pipe on unvented cylinders</li>
+        <li>Testing and setting up before we leave</li>
+        <li>Old cylinder drained, removed and taken away</li>
+        <li>Building Regulations paperwork for unvented cylinders</li>
+        <li>12-month workmanship guarantee</li>
+      </ul>
+      <p>Repairs out of hours are £150 for the first hour in the evening, at night and at weekends, and £180 on bank holidays. There is no call-out fee. If a job needs more time, we tell you the price before we carry on.</p>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- REVIEW BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:480px;">"Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company" John Manley, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+  <section class="brx-sec" id="types">
+    <div class="brx-wrap">
+      <h2>Vented or unvented: which do I need?</h2>
+      <p class="brx-answer">If you are happy with your shower and have a loft tank, a vented swap is the cheapest fix. If you want stronger showers or two bathrooms at once, go unvented.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th></th><th>Vented cylinder</th><th>Unvented cylinder</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Fed by</strong></td><td>A cold water tank in the loft</td><td>The mains water supply</td></tr>
+            <tr><td><strong>Pressure</strong></td><td>Low, from gravity</td><td>Mains pressure</td></tr>
+            <tr><td><strong>Showers</strong></td><td>Weaker, unless you add a pump</td><td>Strong at every tap</td></tr>
+            <tr><td><strong>Loft tank</strong></td><td>Needed</td><td>Not needed for hot water</td></tr>
+            <tr><td><strong>Who can fit it</strong></td><td>A qualified plumber</td><td>A G3 qualified engineer only</td></tr>
+            <tr><td><strong>Yearly service</strong></td><td>Not usually needed</td><td>Yes, to keep the warranty</td></tr>
+            <tr><td><strong>Price with us</strong></td><td>from £750</td><td>from £1,450</td></tr>
+          </tbody>
+        </table>
       </div>
+      <h3>Direct and indirect cylinders</h3>
+      <p>An indirect cylinder is heated by your boiler. Hot water from the boiler runs through a coil inside the tank. This is the most common type in Liverpool homes. It usually has an immersion heater as a backup.</p>
+      <p>A direct cylinder is heated by an immersion heater only. You find these in all-electric homes. We fit and replace both types.</p>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Hot Water Cylinder Installation Prices Liverpool</h2>
-      <p class="pf-sub">Fixed prices for our cylinder installation service. Free site survey to confirm size and price. The tank, all fittings and full testing all in the price.</p>
+  <section class="brx-sec brx-tint" id="size">
+    <div class="brx-wrap">
+      <h2>What size hot water cylinder do I need?</h2>
+      <p class="brx-answer">It depends on how many people live in your home and how many bathrooms you use at once. Too small and you run out. Too big and you heat water you never use.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Size</th><th>Good for</th><th>Unvented price</th></tr></thead>
+          <tbody>
+            <tr><td><strong>150 litres</strong></td><td>1 to 2 people, one bathroom, flats and small homes</td><td>from £1,450</td></tr>
+            <tr><td><strong>210 litres</strong></td><td>3 to 4 people, one bathroom, or a bath and a small en-suite</td><td>from £1,695</td></tr>
+            <tr><td><strong>250 to 300 litres</strong></td><td>4 or more people, two bathrooms, lots of baths</td><td>from £1,995</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>This is a guide. Baths use far more hot water than showers. A big bath or a rain shower can push you up a size. We ask how you use hot water at the survey, then pick the size.</p>
+      <p>We also check the space. Many Liverpool terraces have a small airing cupboard. A slim or shorter cylinder can often fit where a standard one will not.</p>
+    </div>
+  </section>
 
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card">
-          <div class="pf-price-tier">VENTED CYLINDER</div>
-          <div class="pf-price-name">Indirect Vented Cylinder</div>
-          <div class="pf-price-sub">Fed from cold water tank in loft</div>
-          <div class="pf-price-amount">£600</div>
-          <ul class="pf-price-list">
-            <li>New cylinder supplied and fitted</li>
-            <li>All pipe connections made</li>
-            <li>Immersion heater fitted and wired</li>
-            <li>Thermostat set and tested</li>
-            <li>Old cylinder removed and taken away</li>
-            <li>12-month workmanship guarantee</li>
+  <section class="brx-sec" id="pressure">
+    <div class="brx-wrap">
+      <h2>Will an unvented cylinder work in my home?</h2>
+      <p class="brx-answer">It will if your mains water supply is strong enough. We test your water pressure and flow at the survey, before we give you a price.</p>
+      <p>An unvented cylinder can only give you what the mains gives it. Every maker sets a minimum pressure and flow. Some older Liverpool homes still have a narrow or old supply pipe. That can limit the flow, even when the pressure looks fine.</p>
+      <p>If your supply is too weak, we tell you straight away. You will not pay for a cylinder that cannot do its job. We explain your options, such as keeping a vented system with a better cylinder.</p>
+      <h3>An unvented cylinder also needs</h3>
+      <ul class="sg-ticks">
+        <li>A discharge pipe from the safety valves to a safe place outside</li>
+        <li>Space for an expansion vessel</li>
+        <li>A boiler that can heat it, such as a system or regular boiler</li>
+      </ul>
+      <h3>Combi boiler or cylinder?</h3>
+      <p>A combi boiler heats water as you use it. There is no tank, so it saves space. It suits flats and homes with one bathroom. See our <a href="/boiler-installation-liverpool">boiler installation prices</a>, from £2,195.</p>
+      <p>A cylinder stores hot water, ready to use. It suits busy homes with two bathrooms, because two showers can run at once. If you want to swap a cylinder for a combi, our <a href="/central-heating-installation-liverpool">combi conversion</a> starts from £2,890.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="signs">
+    <div class="brx-wrap">
+      <h2>Does my cylinder need repairing or replacing?</h2>
+      <p class="brx-answer">Many faults can be fixed, such as a failed immersion heater or a faulty valve. If the tank itself is leaking, it needs replacing.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Often a repair</h3>
+          <ul class="sg-ticks">
+            <li>No hot water from the immersion heater</li>
+            <li>Water is too hot or not hot enough</li>
+            <li>Drip from a valve or fitting</li>
+            <li>Banging or kettling noises from scale</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
         </div>
-
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MAINS PRESSURE HOT WATER</div>
-          <div class="pf-price-tier">UNVENTED CYLINDER</div>
-          <div class="pf-price-name">Mains Pressure System</div>
-          <div class="pf-price-sub">G3 qualified installation required</div>
-          <div class="pf-price-amount">£900</div>
-          <ul class="pf-price-list">
-            <li>New unvented cylinder supplied and fitted</li>
-            <li>All safety devices fitted and tested</li>
-            <li>Expansion vessel and pressure relief fitted</li>
-            <li>Building Control notice included</li>
-            <li>Old cylinder removed and taken away</li>
-            <li>12-month workmanship guarantee</li>
+        <div class="sg-box">
+          <h3>Usually a new cylinder</h3>
+          <ul class="sg-ticks">
+            <li>The tank itself is leaking or rusty</li>
+            <li>You often run out of hot water</li>
+            <li>Weak hot water, but strong cold water</li>
+            <li>The cylinder is 20 years old or more</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
         </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">IMMERSION HEATER</div>
-          <div class="pf-price-name">Immersion Heater Replacement</div>
-          <div class="pf-price-sub">Electric backup or primary heating</div>
-          <div class="pf-price-amount">£150</div>
-          <ul class="pf-price-list">
-            <li>Old immersion heater removed</li>
-            <li>New element supplied and fitted</li>
-            <li>Thermostat replaced if needed</li>
-            <li>Electrical connections checked</li>
-            <li>System tested on the day</li>
-            <li>Same-day available across Liverpool</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Now</a>
-        </div>
+      </div>
+      <p style="margin-top:1rem;">Most cylinders last 15 to 25 years. An old one is more likely to split. A planned swap costs far less than repairing a ceiling after a burst.</p>
+      <p>We find the cause first and tell you honestly if a repair will do. Repairs are charged from £120 for the first hour on weekdays.</p>
+      <div class="brx-cta">
+        <p><strong>No hot water today?</strong> Call and we will tell you what we can do. Immersion heater swaps are often done the same day.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <!-- VENTED VS UNVENTED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Vented vs Unvented Hot Water Cylinders. Which Do You Need?</h2>
-      <p class="pf-sub">The right cylinder system for your home depends on three things. Your property. Your water supply pressure. Your hot water demand. We advise at the free survey.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Vented cylinder. Traditional Liverpool homes.</strong><p>A vented (or open-vented) cylinder is fed from a cold water tank in the loft. Common in Liverpool's older homes. It runs at low pressure and is simple to look after. A good pick for homes where the loft tank still works fine and mains-pressure hot water is not needed.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Unvented cylinder. Mains pressure hot water.</strong><p>An unvented cylinder is fed straight from the mains water supply. It gives mains-pressure hot water across the whole home. Much better shower flow. No cold water tank in the loft. A great pick for bigger Liverpool homes with two or more bathrooms. Must be fitted by a G3 qualified engineer. Every one of our engineers is G3 qualified.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Direct cylinder. Heated by immersion only.</strong><p>A direct tank uses an electric immersion as its main heat source. Common in all-electric homes. Or as a backup when the boiler is down. We fit immersion heaters from £150. Direct tanks from £500.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Indirect cylinder. Heated by your boiler.</strong><p>An indirect tank is heated by your boiler. The heating system runs hot water through a coil in the tank. The most common type in Liverpool homes. Often has a backup immersion too. We fit both vented and unvented.</p></div></div>
-      </div>
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How does a cylinder installation work?</h2>
+      <p class="brx-answer">We survey for free, give you a fixed written price, then fit the new cylinder. Most swaps are done in one day.</p>
+      <ol class="sg-steps">
+        <li><strong>Free survey.</strong> We check your space, your boiler and how much hot water you use. For unvented, we test your mains pressure and flow.</li>
+        <li><strong>Fixed written price.</strong> It covers the cylinder, the fittings, the safety parts and the paperwork. No surprises on the day.</li>
+        <li><strong>Fitting day.</strong> We protect your floors, drain the old cylinder and take it out. Then we fit the new one and connect it up.</li>
+        <li><strong>Testing.</strong> We fill the system, check for leaks and test every safety valve. We set the temperature and show you the controls.</li>
+        <li><strong>Paperwork.</strong> Unvented work is notified as the Building Regulations require. You get the certificate and the maker's warranty details to keep.</li>
+      </ol>
+      <h3>Why G3 matters</h3>
+      <p>An unvented cylinder holds hot water under mains pressure. Its safety valves must work every time. That is why the Building Regulations say only a qualified engineer can fit one. All our engineers are G3 qualified. Never let anyone fit an unvented cylinder without it.</p>
     </div>
   </section>
 
-  <!-- NEW: BRAND TIERS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <span class="pf-section-label">CYLINDER BRAND GUIDE</span>
-      <h2>Hot Water Cylinder Brands We Fit. Standard, Premium and Speciality.</h2>
-      <p class="pf-sub">We fit cylinders from every major UK brand. Pick the right one for your home and your budget.</p>
+  <section class="brx-sec brx-tint" id="service">
+    <div class="brx-wrap">
+      <h2>Do unvented cylinders need servicing?</h2>
+      <p class="brx-answer">Yes, once a year. Makers ask for it to keep the warranty valid, and it checks the safety parts still work. Our unvented cylinder service is £120 including VAT.</p>
+      <h3>What the service includes</h3>
+      <ul class="sg-ticks">
+        <li>Test the temperature and pressure relief valve</li>
+        <li>Check and top up the expansion vessel pressure</li>
+        <li>Check the tundish and discharge pipe are clear</li>
+        <li>Check the pressure reducing valve and inlet strainer</li>
+        <li>Check the thermostats and immersion heater</li>
+        <li>Fill in the service record for your warranty</li>
+      </ul>
+      <p>Book it with your <a href="/boiler-service-liverpool">boiler service</a> to save a second visit. We send you a reminder next year.</p>
+    </div>
+  </section>
 
-      <div style="margin-top:2rem;">
-        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Standard: Telford, RM, Joule and Gledhill</h3>
-        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Standard unvented cylinders from Telford, RM and Joule. Telford Tempest is a popular pick for Liverpool homes. RM is good value. Joule has strong reviews. Gledhill makes one of the lightest tanks too.</p>
-        <div class="pf-who-grid">
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Telford Tempest</strong><p>UK-made. Indirect pre-plumbed type. Good range of sizes. A popular Liverpool fit.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>RM Cylinders</strong><p>Good value pre-plumbed type. Strong on cost. Build quality holds up.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Joule</strong><p>Irish-made tanks. Strong reviews from our team. Solid 25-year warranty.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gledhill StainlessLite</strong><p>One of the lightest unvented tanks on the market. UK-made in Blackpool since 1926.</p></div></div>
+  <section class="brx-sec" id="brands">
+    <div class="brx-wrap">
+      <h2>Which cylinder brands do you fit?</h2>
+      <p class="brx-answer">We fit leading UK brands, including Megaflo, Gledhill, Telford, Joule and Ariston. We pick the one that suits your space, your boiler and your budget.</p>
+      <h3>Special cylinders</h3>
+      <ul class="sg-ticks">
+        <li><strong>Heat pump cylinders.</strong> These have a bigger coil to work with the lower water temperature from a heat pump. We supply and fit them, ready for your heat pump installer.</li>
+        <li><strong>Solar cylinders.</strong> A twin coil cylinder, with one coil for the boiler and one for solar panels.</li>
+        <li><strong>Slim and horizontal cylinders.</strong> For small cupboards, low ceilings and eaves.</li>
+      </ul>
+      <h3>Jobs we do most often in Liverpool</h3>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Loft tank to mains pressure</h3>
+          <p>A Victorian terrace with an old copper cylinder and a loft tank. We fit an unvented cylinder. The showers get stronger, and the loft tank is no longer needed for hot water.</p>
         </div>
-      </div>
-
-      <div style="margin-top:2.5rem;">
-        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Premium: Megaflo, OSO and Range Tribune</h3>
-        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Premium tanks from Megaflo, OSO and Range. Megaflo Eco is the most fitted unvented tank in the UK. OSO is a top brand from Norway. Range Tribune is a UK-made premium choice. All very energy efficient.</p>
-        <div class="pf-who-grid">
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Megaflo Eco (Heatrae Sadia)</strong><p>The most fitted unvented tank in the UK. Tested to 15 bar pressure. Duplex stainless steel. 25-year warranty on the cylinder.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>OSO</strong><p>Top Norwegian brand. Premium build and very energy efficient. Strong on heat loss ratings.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Range Tribune</strong><p>UK-made premium unvented. High output coil for fast reheat. Good range of capacities.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Worcester Bosch Greenstore</strong><p>Pairs well with Worcester boilers. Made to work with the Greenstar range. Plus Greenskies solar panels.</p></div></div>
-        </div>
-      </div>
-
-      <div style="margin-top:2.5rem;">
-        <h3 style="color:var(--navy);font-size:1.25rem;margin-bottom:0.75rem;">Speciality: Solar, Heat Pump and Horizontal</h3>
-        <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Speciality cylinders for big homes and tight spaces. Solar coil cylinders for solar thermal panels. Heat pump cylinders for air source heat pump (ASHP) systems. Horizontal cylinders for low-headroom spots like under the stairs. Tell us your needs and we will spec the right one.</p>
-        <div class="pf-who-grid">
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Solar coil cylinders</strong><p>Twin coil setup. Top coil from the boiler. Bottom coil from solar thermal panels. Cuts gas use in summer.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Heat pump cylinders</strong><p>Bigger coil to work at the lower temps from an air source heat pump. We fit Megaflo HP and OSO Saga.</p></div></div>
-          <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Horizontal cylinders</strong><p>Gledhill StainlessLite Horizontal fits in low-headroom spots. Under the stairs. In the eaves. Anywhere a tall tank will not go.</p></div></div>
+        <div class="sg-box">
+          <h3>Combi struggling with two bathrooms</h3>
+          <p>A combi that cannot keep up with a family bathroom and an en-suite. A system boiler with an unvented cylinder lets both run at once.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- NEW: SIZING GUIDE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <span class="pf-section-label">CYLINDER SIZING GUIDE</span>
-      <h2>What Size Hot Water Cylinder Do You Need?</h2>
-      <p class="pf-sub">What size hot water cylinder do you need? It depends on the home, the number of bathrooms and the people who live there. Here is a rough guide.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>130 litres. Small flat. 1 to 2 people.</strong><p>130 litres works for a small flat with one bathroom and one or two people. Smaller cylinder. Faster to reheat. Fits in tight airing cupboard spaces.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>200 litres. 2-bed home. 2 to 3 people.</strong><p>200 litres works for a 2-bed home with one bathroom and two or three people. The most common size in Liverpool homes. Pairs well with a standard heating system.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>250 litres. 3-bed home. 3 to 4 people.</strong><p>250 litres works for a 3-bed home with one or two bathrooms and three to four people. The sweet spot for most family homes in Liverpool.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>300 litres or more. Big family home.</strong><p>300 litres or more for big 4-bed and 5-bed homes with multiple bathrooms. Or homes with a high hot water demand. Allows long showers without running out.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SIGNS YOU NEED A NEW CYLINDER -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Signs Your Liverpool Hot Water Cylinder Needs Replacing</h2>
-      <p class="pf-sub">Most Liverpool homes with a system or regular boiler rely on a hot water cylinder. These are the signs that a swap is due.</p>
-
-      <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>Running out of hot water often</strong><p>Does your home run out of hot water before everyone has showered? Then the tank is too small for your needs. A bigger tank or a swap to unvented gives more hot water at the same time.</p></div></div>
-        <div class="pf-sign"><div><strong>Cylinder is leaking</strong><p>A leaking cylinder must be swapped. Cylinders cannot be fixed once the tank itself has gone. A small drip from a valve or fitting can sometimes be fixed without a swap. We find which it is on the visit.</p></div></div>
-        <div class="pf-sign"><div><strong>Hot water takes a long time to reheat</strong><p>Does the tank take over 30 minutes to reheat? Often a failing immersion element. Or scale on the heat exchanger. Or a broken thermostat. We find the cause before we suggest a swap.</p></div></div>
-        <div class="pf-sign"><div><strong>Cylinder is over 20 years old</strong><p>Most hot water cylinders last 15 to 25 years. An older one likely loses energy through the walls. Rust inside is more likely. And the risk of a sudden split rises. A planned swap avoids the water damage from a burst.</p></div></div>
-        <div class="pf-sign"><div><strong>Poor hot water pressure across the home</strong><p>If hot water pressure is poor in your Liverpool home but cold pressure is fine, the cylinder type is the cause. A swap to unvented sorts this out. You get mains-pressure hot water at every tap.</p></div></div>
-        <div class="pf-sign"><div><strong>Noisy cylinder or pipework</strong><p>Banging or kettling from the tank or pipes means scale on the immersion element. Or scale on the heat exchanger. Or air in the system. Often fixed with an element swap.</p></div></div>
-      </div>
-
-      <div style="background:#c2410c;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Not sure if your cylinder needs a fix or a swap? We diagnose on the visit before we suggest any work.</p>
-        <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- G3 QUALIFICATION -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>G3 Qualified Unvented Cylinder Installation in Liverpool</h2>
-      <p class="pf-sub">Unvented tank fits need the G3 cert. A plumber without it cannot do this work.</p>
-
-      <div class="pf-card pf-card-navy" style="margin-top:2rem;">
-        <h3>Why G3 Qualification Matters</h3>
-        <p>Under Part G of the Building Regs, an unvented tank needs a G3 trained engineer. It runs at mains pressure. Water up to 65 degrees. Safety valves are a must.</p>
-        <p>All our engineers who fit cylinders hold the G3 cert. Every unvented fit is sent to the council on the day. You get a certificate to keep.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEW: ANNUAL G3 SERVICE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <span class="pf-section-label">ANNUAL G3 SERVICE</span>
-      <h2>Annual G3 Service for Liverpool Unvented Cylinders</h2>
-      <p class="pf-sub">Unvented cylinders need a service every year. The law says so. The warranty needs it too. Most general plumbers cannot do this work without the G3 cert.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Why a yearly service matters</strong><p>An unvented cylinder runs at mains pressure. The safety valves need checking each year. The expansion vessel needs the right air pressure. The tundish must be clear. A yearly G3 service keeps your tank safe and keeps the warranty in date.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>What is included</strong><p>Our G3 service covers all checks set out by the maker. T&P relief valve test. Expansion vessel re-pressure if needed. Tundish check. Inhibitor top-up on indirect tanks. Full system test on the day. Service certificate to keep with your paperwork.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Cost from £120</strong><p>Annual G3 cylinder service from £120. We can pair it with a boiler service for £175. One visit, one fee, all the paperwork in one go.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEW: COMMON LIVERPOOL SCENARIOS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <span class="pf-section-label">LIVERPOOL SCENARIOS</span>
-      <h2>Common Liverpool Cylinder Jobs We Do Every Week</h2>
-      <p class="pf-sub">The three most common cylinder jobs we get called for across Liverpool. Yours probably fits one of these.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Old Loft Tank + Copper Cylinder Swap</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Victorian terrace with an old loft tank and a copper cylinder in the airing cupboard? A swap to an unvented system frees up the loft space, gets rid of the old tank and gives you mains-pressure hot water across the home. A very common Liverpool job.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Combi Boiler Struggling with Two Bathrooms</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Old combi struggling with two bathrooms? A swap to a system boiler with an unvented cylinder lets you run the en suite and the family bath at the same time. No more cold showers when someone else turns a tap on.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Heat Pump Ready Cylinder</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Planning a heat pump? You need a heat pump cylinder, not a standard one. The coil inside is bigger to work with lower water temps. We supply and fit heat pump cylinders ready for an ASHP fit.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Why Liverpool Homeowners Choose Us for Hot Water Cylinder Installation</h2>
-      <p class="pf-sub">G3 qualified. Gas Safe registered. Free survey. Fixed price. Gas Safe registered 12-month workmanship guarantee.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>G3 and Gas Safe Qualified</h3><p>Both vented and unvented cylinder fits done by our own G3 and Gas Safe trained team. Every unvented job is notified to Building Control on the day.</p></div>
-        <div class="pf-why-item"><h3>Free Fixed-Price Survey</h3><p>We visit your Liverpool home, check your system and give you a written fixed-price quote. No shocks on invoice day.</p></div>
-        <div class="pf-why-item"><h3>Same-Day Immersion Swap</h3><p>No hot water? Same-day immersion swaps across Liverpool and the wider area. Call us to check what we can do today.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe registered</h3><p>Every job is done by Gas Safe registered. We are on the Gas Safe register. Public liability cover in place.</p></div>
-        <div class="pf-why-item"><h3>All Major Brands Fitted</h3><p>Megaflo, Worcester Bosch, OSO, Telford, RM, Joule, Range Tribune and Gledhill. Standard, premium and speciality types. We help you pick the right one.</p></div>
-        <div class="pf-why-item"><h3>Annual G3 Service Available</h3><p>Stay on top of your warranty and safety with our annual G3 cylinder service from £120. Pair it with a boiler service for £175.</p></div>
-      </div>
-      <div style="background:var(--navy);border-radius:10px;padding:2rem;text-align:center;margin-top:2rem;">
-        <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;margin-bottom:1.25rem;">G3 trained. Gas Safe registered. Free survey. Fixed price. All major brands. 5.0 average on Google.</p>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-          <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Free Survey</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS - REAL 3 ONLY -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Our Customers Say</h2>
-        <p class="pf-sub" style="margin:0 0 0.75rem;">Real Google reviews from Liverpool Emergency Plumber customers</p>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Great company, came within 30 mins for emergency burst pipe, couldn’t praise them enough !!</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">James Alexander</div><div class="pf-review-loc">Burst Pipe Emergency</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">John Manley</div><div class="pf-review-loc">Shower Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Excellent service.</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Elaine McHugh</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:var(--navy);">See our Google reviews →</a></div>
-    </div>
-  </section>
-
-  <!-- MID CTA -->
-  <section style="background:var(--navy);padding:2rem 0;">
-    <div class="container">
-      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Need a hot water cylinder fitted in Liverpool?</h3>
-      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Free survey. Fixed-price quote in 24 hours. G3 trained team. All major brands fitted.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Survey Online</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>How Our Liverpool Cylinder Installation Works</h2>
-      <p class="pf-sub">The full flow, quote through to a working cylinder. Here is what to expect.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Call or book online for a free survey</strong><p>Call us or book online for a free survey. We visit your Liverpool home. We check your mains pressure, your space and your hot water demand. We spec the right cylinder for the job.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Written fixed-price quote in 24 hours</strong><p>You get a written fixed-price quote within 24 hours. It covers the tank, all fittings, all safety devices and the council notice. No add-ons on the day.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Fit day. Old out, new in.</strong><p>On fit day, we drain and pull out the old tank. We fit the new cylinder. We fit the safety valves. We test everything. Most fits are done in one day. We protect floors and clean up.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Commission, notify, certify</strong><p>We start up the system. We test all the safety valves. We file the council notice. You get a certificate. Plus the maker's warranty. Plus our 12-month guarantee.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BEFORE FAQ -->
-  <section style="background:#c2410c;padding:1.75rem 0;">
-    <div class="container" style="text-align:center;">
-      <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Free survey. Fixed price. G3 trained. Ready to book?</p>
-      <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Hot Water Cylinder Installation Liverpool. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what Liverpool homeowners ask most before booking.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does a hot water cylinder cost in Liverpool?</summary><div class="pf-faq-body"><p>A vented indirect cylinder fitted starts at £600. Unvented starts at £900. Immersion swap from £150. Prices depend on size, type and access. We give a free fixed-price quote after a site visit.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">TYPES</span>&nbsp; What is the difference between vented and unvented?</summary><div class="pf-faq-body"><p>A vented cylinder is fed from a cold water tank in the loft and runs at low pressure. Common in Liverpool's older homes. An unvented cylinder is fed from the mains and gives hot water at mains pressure. Better shower flow. No loft tank. Unvented must be fitted by a G3 qualified engineer.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COMBI</span>&nbsp; Should I get a cylinder or a combi boiler?</summary><div class="pf-faq-body"><p>A combi boiler heats water on demand. No cylinder needed. A good fit for smaller Liverpool homes with one bathroom. Bigger homes with two or more bathrooms or high hot water demand do better with a system boiler and an unvented cylinder. You get mains-pressure hot water at every tap with no run-out. We advise at the free survey.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">SIZE</span>&nbsp; What size hot water cylinder do I need?</summary><div class="pf-faq-body"><p>It depends on your home. 130 litres for a small flat. 200 litres for a 2-bed home. 250 litres for a 3-bed home with one or two bathrooms. 300 litres or more for big family homes. We work out the right size at the free survey.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">BRANDS</span>&nbsp; What hot water cylinder brands do you fit?</summary><div class="pf-faq-body"><p>We fit cylinders from Megaflo, Worcester Bosch, OSO, Telford, RM Cylinders, Joule and Gledhill. Standard, premium and speciality types all in the range. Heat pump and solar coil cylinders too. Tell us your needs and we will spec the right one.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">SERVICE</span>&nbsp; Do unvented cylinders need an annual service?</summary><div class="pf-faq-body"><p>Yes. Unvented cylinders need a service every year. The law says so. The maker's warranty says so. Our annual G3 service starts at £120. Or pair it with a boiler service for £175. We send a service reminder each year.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">TIME</span>&nbsp; How long does cylinder installation take?</summary><div class="pf-faq-body"><p>A vented swap takes 4 to 6 hours. An unvented fit takes 6 to 8 hours. A back-of-bath fit can take a full day if the access is tight. We give a clear time at the free survey. Most jobs done in one visit.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">G3</span>&nbsp; Are you qualified to install unvented cylinders?</summary><div class="pf-faq-body"><p>Yes. Unvented fits need the G3 cert under Part G of the Building Regs. All our team who fit unvented hold this cert. Every job is notified. You get a certificate to keep. Never let a plumber without G3 fit an unvented tank.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body"><p>Yes. We are on the Gas Safe register. You can check us at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. All cylinder fits are done by Gas Safe registered. All gas work is done by a Gas Safe registered plumber.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Cylinder Installation Across Liverpool and Merseyside</h2>
-      <p class="pf-sub" >We fit hot water cylinders across all Liverpool L postcodes and the wider area.</p>
-
-      <div class="pf-card" style="margin-top:2rem;">
-        <h3>Liverpool City and South</h3>
-        <p>We fit cylinders across south Liverpool. Older terraces with loft tanks are our most common job. Plus modern homes with unvented swaps.</p>
-        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">City Centre L1</span><span class="pf-pill">Aigburth L17</span><span class="pf-pill">Allerton L18</span><span class="pf-pill">Woolton L25</span><span class="pf-pill">Garston L19</span><span class="pf-pill">Toxteth L8</span><span class="pf-pill">Sefton Park L17</span><span class="pf-pill">Mossley Hill L18</span></div>
-      </div>
-
-      <div class="pf-card" style="margin-top:2rem;">
-        <h3>North and East Liverpool</h3>
-        <p>Cylinder work in north and east Liverpool. Rentals each week. Family homes too. New fits and swaps.</p>
-        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Anfield L4</span><span class="pf-pill">Wavertree L15</span><span class="pf-pill">West Derby L12</span><span class="pf-pill">Bootle L20</span><span class="pf-pill">Crosby L23</span><span class="pf-pill">Kirkby L32</span><span class="pf-pill">Norris Green L11</span><span class="pf-pill">Fazakerley L9</span></div>
-      </div>
-
-      <div class="pf-card" style="margin-top:2rem;">
-        <h3>Outskirts and Wider Merseyside</h3>
-        <p>Cylinder work in the wider area. Bigger homes here. Many need 250 or 300 litre tanks.</p>
-        <div class="pf-pills" style="margin-top:0.75rem;"><span class="pf-pill">Formby L37</span><span class="pf-pill">Southport PR8</span><span class="pf-pill">Maghull L31</span><span class="pf-pill">Wirral CH</span><span class="pf-pill">St Helens WA</span><span class="pf-pill">Birkenhead CH41</span><span class="pf-pill">Heswall CH60</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RELATED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Related Services in Liverpool</h2>
-      <p class="pf-sub">All Gas Safe registered. All Liverpool postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool</strong><span>New boiler from £2,195 fully fitted. Worcester Bosch, Vaillant and Ideal. Same-day available.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/showers-liverpool" class="pf-related-link"><div><strong>Shower Installation Liverpool</strong><span>Electric, mixer and digital showers from £200. Walk-in shower areas from £800.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/central-heating-installation-liverpool" class="pf-related-link"><div><strong>Central Heating Installation Liverpool</strong><span>Full systems from £3,500. Radiator additions from £200. Free survey.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/bathroom-fitters-liverpool" class="pf-related-link"><div><strong>Bathroom Fitters Liverpool</strong><span>Full bathroom installations from £8,500 premium. Plumbing and tiling included.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link"><div><strong>Power Flushing Liverpool</strong><span>Cold radiators or noisy boiler? Power flush from £350. Protects your boiler and warranty.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Online</strong><span>Free no-obligation survey and fixed-price quote. All Liverpool postcodes covered.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your Free Hot Water Cylinder Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">Vented from £600. Unvented from £900. Immersion swap from £150. Annual G3 service from £120. G3 trained. Gas Safe registered. Free survey. Fixed price.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>
