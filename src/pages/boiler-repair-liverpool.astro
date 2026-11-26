@@ -20,7 +20,7 @@ const problems = [
     id: 'no-heating-no-hot-water', q: 'Why do I have no heating and no hot water?', t: 'No heating and no hot water',
     sign: 'The boiler is silent, shows a fault light or an error code, and nothing is warm.',
     causes: ['Low water pressure (below 1 bar)', 'No gas reaching the boiler: gas off, or a prepayment meter out of credit', 'A frozen condensate pipe in cold weather', 'A failed ignition electrode, fan, gas valve or circuit board (PCB)', 'No power: a tripped fuse spur or a power cut'],
-    tryIt: 'Check the pressure gauge, check your hob works, check the fused switch next to the boiler is on, and in freezing weather check the condensate pipe outside. Then press reset once.',
+    tryIt: 'Check the pressure gauge, check your hob works and check the fused switch next to the boiler is on. In freezing weather, check the condensate pipe outside too. Then press reset once.',
     call: 'If the boiler locks out again, or shows the same error code, the fault is inside the boiler.',
   },
   {
@@ -176,7 +176,7 @@ const faqs = [
   { q: 'Why do I have hot water but no heating?', a: 'First check the thermostat and timer, especially after a power cut. On a combi boiler, a stuck diverter valve is the most common cause. On a system or regular boiler, a failed zone valve or pump is likely.' },
   { q: 'Why is my boiler making a banging or kettling noise?', a: 'Kettling is usually limescale or sludge in the heat exchanger making the water boil. Banging can be the pump, sludge or air in the system. Both get worse if left and put strain on the heat exchanger.' },
   { q: 'Which boiler brands do you repair?', a: 'All the common makes in Liverpool homes, including Worcester Bosch, Vaillant, Ideal, Baxi, Potterton, Glow-worm and Viessmann. Combi, system and regular boilers.' },
-  { q: 'Should I repair or replace my boiler?', a: 'If the boiler is under about 10 years old and the fault is a single part, repairing it is usually the better value. If it is older, breaking down every winter, or the part costs a large share of a new boiler, we will tell you honestly and price both options so you can choose.' },
+  { q: 'Should I repair or replace my boiler?', a: 'If the boiler is under about 10 years old and the fault is a single part, repairing it is usually the better value. It may be older, breaking down every winter, or need a part that costs a large share of a new boiler. If so, we will tell you honestly and price both options so you can choose.' },
   { q: 'My boiler is still under warranty. Should I call you?', a: 'Check your warranty paperwork first. Most manufacturer warranties expect you to call the manufacturer for a repair, and some need a yearly service to stay valid. If your warranty has run out, or you need help sooner, ring us.' },
   { q: 'Is a broken boiler an emergency?', a: 'If you smell gas, ring the National Gas Emergency line on 0800 111 999 first. A boiler leaking water, or no heating for elderly people, babies or anyone unwell in cold weather, is urgent. Ring us 24/7 on 0151 558 0334.' },
   { q: 'Do you repair boilers for landlords and letting agents?', a: 'Yes. We can meet your tenant at the property, send you photos of the fault and agree the cost with you before we fix it. If the CP12 is due, we can do the gas safety check on the same visit.' },
@@ -381,7 +381,7 @@ const schemaCrumbs = {
           <ul class="brx-list">{p.causes.map((c) => <li>{c}</li>)}</ul>
           <p class="brx-label">What you can try</p>
           <p>{p.tryIt}</p>
-          <p class="brx-call"><strong>Call us if:</strong> {p.call}</p>
+          <p class="brx-call"><strong>When to call us:</strong> {p.call}</p>
           {guides[p.id] && <p><a href={guides[p.id][0]}>{guides[p.id][1]} →</a></p>}
         </details>
       ))}
@@ -422,7 +422,7 @@ const schemaCrumbs = {
                   <ul class="brx-list">{c.causes.map((x) => <li>{x}</li>)}</ul>
                 </>)}
                 <p><strong>Try:</strong> {c.try}</p>
-                <p><strong>Call us if:</strong> {c.call}</p>
+                <p><strong>When to call us:</strong> {c.call}</p>
               </article>
             ))}
           </div>
@@ -509,7 +509,7 @@ const schemaCrumbs = {
       </figure>
       <div>
         <h2>Should you repair or replace your boiler?</h2>
-        <p class="brx-answer">Most boilers under about 10 years old are worth repairing. If yours is older, breaks down every winter, or the part would cost a big share of a new one, we will say so honestly and price both options.</p>
+        <p class="brx-answer">Most boilers under about 10 years old are worth repairing. Yours may be older, break down every winter, or need a part that costs a big share of a new one. If so, we will say so honestly and price both options.</p>
         <p class="brx-label">Signs it may be time to replace</p>
         <ul class="brx-list">
           <li>The boiler is over 15 years old</li>
