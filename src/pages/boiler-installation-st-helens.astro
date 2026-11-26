@@ -1,423 +1,241 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/boiler-installation-st-helens';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+// Same five packages and prices as /boiler-installation-liverpool.
+const boilers = [
+  { id: 'pk-essential', tier: 'Essential', name: 'Baxi 600 Combi 2', img: 'baxi-600-combi-2', price: '£2,195', size: '24kW or 30kW', flow: '10.2 to 12.2', warranty: '7 years', best: 'Flats, small terraces and rental homes',
+    points: ['Stainless steel heat exchanger', 'Simple, reliable and easy to service', 'Our lowest price for a named brand'] },
+  { id: 'pk-value', tier: 'Value', name: 'Baxi 800 Combi 2', img: 'baxi-800-combi-2', price: '£2,495', size: '24kW or 30kW', flow: '10.2 to 12.2', warranty: '10 years', best: '2 to 3 bed homes, if you are staying put',
+    points: ['The same boiler as the Baxi 600', 'Magnetic filter in the box', '3 more years of cover for £300 more'] },
+  { id: 'pk-popular', tier: 'Most popular', popular: true, name: 'Worcester Bosch Greenstar 4000', img: 'worcester-greenstar-4000', price: '£2,695', size: '25kW or 30kW', flow: '12.3 (30kW)', warranty: 'Up to 10 years', best: 'Most 2 to 4 bed homes',
+    points: ['A trusted brand with easy-to-get parts', 'Quiet, at 45dB', 'Ticks over gently on mild days, so it switches on and off less'] },
+  { id: 'pk-premium', tier: 'Premium', name: 'Vaillant ecoTEC plus', img: 'vaillant-ecotec-plus', price: '£2,995', size: '26kW or 32kW', flow: '10.6 to 13.0', warranty: 'Up to 10 years', best: 'Busier homes and two bathrooms',
+    points: ['More hot water at each size', 'Quality German brand', 'Works with Vaillant smart controls'] },
+  { id: 'pk-flagship', tier: 'Flagship', name: 'Worcester Bosch Greenstar 8000+ Style', img: 'worcester-greenstar-8000-style', imgAlt: 'Worcester Bosch Greenstar 8000 Style boiler in gloss black', price: '£3,295', size: '32kW', flow: '13.7', warranty: 'Up to 12 years', best: 'Larger homes, or a boiler on show in the kitchen',
+    points: ['Gloss black with a colour touchscreen', 'Optional auto-fill tops up its own pressure', 'The longest cover in our range'] },
+];
+const packages = boilers.map((b) => ({
+  id: b.id, tier: b.tier, name: b.name, price: b.price, popular: b.popular, unit: 'fully fitted, inc VAT',
+  img: `boilers/${b.img}`, imgAlt: b.imgAlt || `${b.name} combi boiler`,
+  specs: [['Size', b.size], ['Hot water', `${b.flow} litres a minute`], ['Warranty', b.warranty], ['Best for', b.best]] as [string, string][],
+  points: b.points,
+}));
+
+const extras = [
+  ['Next size up (for example 30kW to 36kW)', '+£200'],
+  ['Move the boiler within the same room', '+£450'],
+  ['Move the boiler to another room on the same floor', '+£750'],
+  ['Move the boiler to another floor, the loft or the garage', '+£850'],
+  ['Swap a tank system (regular or system boiler) for a combi', '+£695'],
+  ['Power flush instead of a chemical clean', '£350'],
+  ['Back boiler removal, vertical flue or a gas pipe upgrade', 'Priced at the free survey'],
+];
+
+const faqs = [
+  { q: 'How much does a new boiler cost in St Helens?', a: 'Our five fixed-price combi packages run from £2,195 for a Baxi 600 to £3,295 for a Worcester Bosch Greenstar 8000+ Style, fully fitted and including VAT. Our most popular is the Worcester Bosch Greenstar 4000 at £2,695. Back boiler removal, and system or regular boilers, are priced at a free survey.' },
+  { q: 'Can you replace my back boiler in St Helens?', a: 'Yes. We take out the back boiler and the gas fire in front of it, cap the old flue and make the fireplace safe. Then we fit a new combi on a wall, with its own flue. It usually takes 2 days. The removal work is priced at the free survey, on top of the combi package you choose.' },
+  { q: 'Can you service or repair my back boiler instead?', a: 'No. We do not service or repair back boilers. Parts for many of them are now hard to get. We remove them and fit a modern combi.' },
+  { q: 'Do you cover all WA postcodes in St Helens?', a: 'Yes. We cover St Helens town and the wider borough: WA9, WA10 and WA11, Newton-le-Willows and Earlestown in WA12, and Billinge in WN5. The prices are the same as in Liverpool.' },
+  { q: 'How long does a boiler installation take?', a: 'A like-for-like combi swap is usually done in one day. A back boiler swap, a boiler move, or a change from a tank system to a combi takes about 2 to 3 days. We tell you how long at the survey.' },
+  { q: 'Can you fit boilers in my St Helens rental homes?', a: 'Yes. We fit boilers for landlords and letting agents across St Helens. The Baxi 600 at £2,195 is a popular choice for rentals. We can also do the landlord gas safety certificate (CP12) from £75.' },
+  { q: 'What warranty do I get?', a: 'It depends on the boiler: 7 years on the Baxi 600, 10 years on the Baxi 800, up to 10 years on the Worcester Bosch 4000 and Vaillant ecoTEC plus, and up to 12 years on the Worcester Bosch 8000+ Style. We register it on the day. It needs a service every year to stay valid. Our own work is guaranteed for 12 months.' },
+  { q: 'Can I still get a gas boiler?', a: 'Yes. You can replace a gas boiler in an existing home with a new gas boiler. The rules that limit gas boilers apply to newly built homes.' },
+  { q: 'Is my boiler worth repairing instead?', a: 'Often it is. If a modern boiler is under 10 years old and one part has failed, a repair is usually better value. A repair visit is from £120 for the first hour, with no call-out fee. We will tell you honestly which makes sense.' },
+  { q: 'Are you Gas Safe registered?', a: 'Yes. Every boiler is fitted by our Gas Safe registered engineers. By law, only a Gas Safe registered engineer can fit a gas boiler. You can check any engineer on the Gas Safe Register website.' },
+];
 ---
 
-<BaseLayout
-  title="Boiler Installation St Helens | From £2,195 | Gas Safe"
-  description="New boiler installation St Helens from £2,195 fully fitted. Back boiler replacement specialists across WA10, WA11 and WA12. Gas Safe registered. Free survey. Same-day available. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/boiler-installation-st-helens"
+<ServiceGuide
+  url={URL_}
+  title="Boiler Installation St Helens | Back Boiler Swaps | From £2,195"
+  description="New boiler installation in St Helens from £2,195 fully fitted, inc VAT. Five fixed-price packages, back boilers removed and replaced with a combi. Free survey, WA9 to WA12. Call 0151 558 0334."
+  h1="New Boiler Installation St Helens"
+  badge="New boilers and back boiler swaps in St Helens"
+  intro="Five fixed-price combi packages, from a Baxi 600 at £2,195 to a Worcester Bosch 8000+ Style at £3,295, fully fitted and including VAT. Still on a back boiler? We take it out and fit a modern combi. Free survey and a written fixed price."
+  stats={[['£2,195', 'Fully fitted, from'], ['12 yr', 'Warranty, up to']]}
+  ticks={['Gas Safe Registered', 'Free Survey', 'Back Boilers Replaced', '5.0 on Google']}
+  secondaryCta={{ href: '#prices', label: 'See the 5 packages' }}
+  pkTitle="New boiler prices in St Helens"
+  pkLede="Five fixed-price combi packages, including VAT. Every price includes a smart thermostat, magnetic filter, system clean, carbon monoxide alarm and removal of your old boiler."
+  packages={packages}
+  pkNote="Need a bigger boiler? The next size up is £200 more. Ideal Logic Max is also available, at £2,695. Hot water is at a 35°C rise. Warranties are the manufacturer's: 'up to' means the longest cover, which needs the boiler registered (we do it on the day) and serviced every year. Back boiler removal, and system and regular boilers, are priced after a free survey."
+  factsTitle="A new St Helens boiler at a glance"
+  facts={[
+    ['Price', 'Five combi packages from £2,195 to £3,295, fully fitted, inc VAT.'],
+    ['Back boilers', 'Removed and replaced with a combi. Removal priced at the free survey.'],
+    ['Time', 'A combi swap is usually one day. A back boiler swap is usually 2 days.'],
+    ['Warranty', '7 to 12 years from the maker, plus our 12-month workmanship guarantee.'],
+    ['Who', 'Gas Safe registered engineers, part of our team led by James.'],
+    ['Area', 'St Helens, Haydock, Rainford, Newton-le-Willows and Billinge.'],
+  ]}
+  toc={[
+    ['back-boiler', 'Can you replace a back boiler?'],
+    ['choose', 'Which package is right for me?'],
+    ['homes', 'Which boiler suits my St Helens home?'],
+    ['cost', 'What can change the price?'],
+    ['included', 'What is included?'],
+    ['how', 'How does it work?'],
+  ]}
+  reviewTitle="What do customers say about James and the team?"
+  reviews={['Edward M', 'Mark L', 'Peter H', 'Roger D']}
+  faqs={faqs}
+  areasTitle="Do you fit boilers near St Helens?"
+  areasText="Yes. We fit boilers across Merseyside at the same fixed prices."
+  areas={[
+    { href: '/boiler-installation-liverpool', label: 'Boiler installation Liverpool' },
+    { href: '/boiler-installation-wirral', label: 'Boiler installation Wirral' },
+    { href: '/boiler-installation-formby', label: 'Boiler installation Formby' },
+  ]}
+  related={[
+    { href: '/boiler-service-st-helens', title: 'Boiler service St Helens', text: '£95 fixed price, keeps your warranty valid' },
+    { href: '/gas-safety-certificate-st-helens', title: 'Gas safety certificate St Helens', text: 'Landlord CP12 from £75' },
+    { href: '/power-flushing-st-helens', title: 'Power flushing St Helens', text: 'From £395 for up to 6 radiators' },
+    { href: '/hot-water-cylinders-st-helens', title: 'Hot water cylinders St Helens', text: 'Vented from £750, unvented from £1,450' },
+    { href: '/central-heating-installation-st-helens', title: 'Central heating St Helens', text: 'Full systems from £4,495' },
+    { href: '/emergency-plumber-st-helens', title: 'Emergency plumber St Helens', text: 'From £120 for the first hour, no call-out fee' },
+  ]}
+  finalTitle="Book your free St Helens boiler survey"
+  finalText="Five fixed-price packages from £2,195, inc VAT. Back boilers removed and replaced. Smell gas? Call the National Gas Emergency line on 0800 111 999 first."
+  serviceName="Boiler Installation St Helens"
+  serviceType="Gas boiler installation and back boiler replacement"
+  serviceDesc="Five fixed-price combi boiler packages from £2,195 fully fitted, plus back boiler removal and replacement with a combi, across St Helens by Gas Safe registered engineers. Free survey and written fixed price."
+  areaServed={['St Helens', 'Eccleston', 'Sutton', 'Thatto Heath', 'Clock Face', 'Haydock', 'Rainford', 'Billinge', 'Newton-le-Willows', 'Earlestown']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Boiler Installation St Helens",
-    "alternateName": ["New Boiler St Helens", "Boiler Replacement St Helens", "Back Boiler Replacement St Helens"],
-    "serviceType": "Boiler Installation and Replacement",
-    "description": "New boiler installation across St Helens from £2,195 fully fitted. Back boiler replacement specialists across WA10, WA11 and WA12. Gas Safe registered. Free survey. Worcester Bosch, Vaillant, Ideal.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "St Helens, WA10-WA12" },
-    "offers": [
-      { "@type": "Offer", "name": "Combi Boiler Installation St Helens", "price": "1800", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "System Boiler Installation St Helens", "price": "2200", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Regular Boiler Installation St Helens", "price": "2500", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does a new boiler cost in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "A like-for-like combi boiler installation in St Helens starts from £2,195 fully fitted. System and regular boilers are priced at a free survey. Regular boilers from £2,500. All prices include boiler, installation, controls, Benchmark and Gas Safe certificates. Free survey required to confirm exact price." } },
-      { "@type": "Question", "name": "Can you replace a back boiler in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Back boiler replacement is one of our most common St Helens jobs. Many WA10 Victorian terraces still have gas fires with back boilers behind them. A back boiler replacement is more involved than a standard swap because it requires removal of the fire surround and hearth, capping the old flue and replumbing to a new boiler position. We carry out back boiler replacements to full St Helens properties regularly." } },
-      { "@type": "Question", "name": "How long does a boiler installation take in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "A like-for-like combi boiler replacement takes 4 to 6 hours in one day. Back boiler replacement takes 1 to 2 days. System boiler with cylinder takes 1 to 2 days. We confirm the duration at the free survey." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Boiler Installation St Helens", "item": "https://liverpoolemergencyplumber.co.uk/boiler-installation-st-helens" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        St Helens Boiler Installation Specialists
-      </div>
-      <h1>New Boiler Installation St Helens</h1>
-      <p class="page-hero-sub">New boiler from £2,195 fully fitted. Back boiler replacement specialists across WA10, WA11 and WA12. Gas Safe registered. Free survey.</p>
-
-      <div style="display:flex;gap:1rem;max-width:360px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£2,195</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Combi Fitted</div>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a Free St Helens Survey</a>
-      </div>
-
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> No Call-Out Fee</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Back Boiler Replacement</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> 5.0 Google Rating</span>
-      </div>
+  <section class="brx-sec brx-tint" id="back-boiler">
+    <div class="brx-wrap">
+      <h2>Can you replace a back boiler in St Helens?</h2>
+      <p class="brx-answer">Yes. We remove the back boiler and the gas fire in front of it, and fit a modern combi on a wall. It is one of our most common St Helens jobs.</p>
+      <p>A back boiler sits behind a gas fire, inside the chimney breast. They are still common in St Helens, mostly in the WA10 terraces. Many were fitted in the 1970s and 1980s.</p>
+      <h3>Why replace it?</h3>
+      <ul class="sg-ticks">
+        <li>Old back boilers waste far more gas than a modern condensing boiler.</li>
+        <li>Parts for many models are now hard or impossible to get.</li>
+        <li>A crack inside an old boiler is not always easy to see, and can leak carbon monoxide.</li>
+        <li>A combi frees up the airing cupboard and loft, with no tanks or cylinder.</li>
+      </ul>
+      <h3>What does the job involve?</h3>
+      <ol class="sg-steps">
+        <li><strong>Remove the fire and back boiler.</strong> We take out the gas fire, the surround and the back boiler, and cap the gas.</li>
+        <li><strong>Make the chimney safe.</strong> The old flue is capped and the fireplace made good or capped off.</li>
+        <li><strong>Choose the new spot.</strong> We agree with you where the combi goes, often the kitchen.</li>
+        <li><strong>Fit the combi.</strong> We run new pipes, cut a new flue through an outside wall, then fit and test the boiler.</li>
+      </ol>
+      <div class="brx-note"><p><strong>Price and time.</strong> You pick any of the five combi packages. The back boiler removal is priced at the free survey, because every house is laid out differently. Most back boiler swaps take 2 days. We do not service or repair back boilers.</p></div>
     </div>
   </section>
 
-  <div class="pf">
+  <section class="brx-sec" id="choose">
+    <div class="brx-wrap">
+      <h2>Which boiler package is right for you?</h2>
+      <p class="brx-answer">Paying more buys three things: more years of warranty, more hot water, and a better-known brand or design. Here is a quick guide.</p>
+      <div class="sg-quick">
+        <p><strong>Flat, small terrace or rental?</strong> <a href="#pk-essential">Essential, Baxi 600</a></p>
+        <p><strong>Staying put, on a budget?</strong> <a href="#pk-value">Value, Baxi 800</a></p>
+        <p><strong>Most 2 to 4 bed homes</strong> <a href="#pk-popular">Most popular, Worcester Bosch 4000</a></p>
+        <p><strong>Two bathrooms or lots of hot water?</strong> <a href="#pk-premium">Premium, Vaillant ecoTEC plus</a></p>
+        <p><strong>Boiler on show in the kitchen?</strong> <a href="#pk-flagship">Flagship, Worcester Bosch 8000+ Style</a></p>
+      </div>
+      <div class="brx-table-wrap">
+        <table class="brx-table sg-cmp">
+          <thead><tr><th>Package</th><th>Price</th><th>Hot water (litres a minute)</th><th>Warranty</th></tr></thead>
+          <tbody>
+            {boilers.map((b) => <tr><td><a href={`#${b.id}`}><strong>{b.tier}</strong></a><br />{b.name}</td><td><strong>{b.price}</strong></td><td>{b.flow}</td><td>{b.warranty}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+      <h3>Is the Baxi 800 worth £300 more than the Baxi 600?</h3>
+      <p>If you are staying in the house, yes. It is the same boiler, with a magnetic filter in the box and 10 years of cover instead of 7. Landlords, or anyone moving within 5 years, can save with the Baxi 600.</p>
+      <h3>Do I need the extra hot water?</h3>
+      <p>Only if two showers, or a bath and a tap, often run at once. With one bathroom, the Worcester Bosch 4000 is the better value. A bigger combi only gives more hot water if your mains can supply it. We test that at the survey.</p>
+    </div>
+  </section>
 
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>New Boiler Installation Prices St Helens</h2>
-      <p class="pf-sub">Fully fitted prices including the boiler, installation, controls, Benchmark certificate and Gas Safe certificate. Free survey required to confirm your exact price.</p>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">MOST POPULAR</div>
-          <div class="pf-price-tier">COMBI BOILER</div>
-          <div class="pf-price-name">Like-for-Like Replacement</div>
-          <div class="pf-price-sub">Most St Helens 2 to 4 bed properties</div>
-          <div class="pf-price-amount">£2,195</div>
-          <ul class="pf-price-list">
-            <li>New A-rated combi boiler supplied and fitted</li>
-            <li>New smart controls and programmer</li>
-            <li>Magnetic system filter fitted</li>
-            <li>Gas Safe and Benchmark certificate issued</li>
-            <li>Old boiler removed and disposed</li>
-            <li>12-month workmanship guarantee</li>
-            <li>Completed in a single day</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
+  <section class="brx-sec brx-tint" id="homes">
+    <div class="brx-wrap">
+      <h2>Which boiler suits your St Helens home?</h2>
+      <p class="brx-answer">St Helens homes were built in very different eras. The right boiler depends on when yours was built and what it has now.</p>
+      <div class="brx-parts">
+        <div class="brx-part">
+          <h3>Victorian terraces (WA10)</h3>
+          <p>Built for glass and factory workers before 1914. Many still have a back boiler or tanks in the loft. Mains pressure varies from street to street, so we test it first.</p>
         </div>
-        <div class="pf-price-card">
-          <div class="pf-price-tier">SYSTEM BOILER</div>
-          <div class="pf-price-name">With Hot Water Cylinder</div>
-          <div class="pf-price-sub">Larger St Helens and Newton-le-Willows homes</div>
-          <div class="pf-price-amount">Free survey</div>
-          <ul class="pf-price-list">
-            <li>New A-rated system boiler supplied and fitted</li>
-            <li>Hot water cylinder where required</li>
-            <li>New smart controls and programmer</li>
-            <li>Magnetic system filter fitted</li>
-            <li>Gas Safe and Benchmark certificate issued</li>
-            <li>Old boiler removed and disposed</li>
-            <li>12-month workmanship guarantee</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="brx-part">
+          <h3>Haydock semis (WA11)</h3>
+          <p>Mostly 1950s to 1970s semis, often with old boilers and pipes. Most have good mains pressure. A 28kW combi usually suits a 3 bed with one bathroom.</p>
         </div>
-        <div class="pf-price-card">
-          <div class="pf-price-tier">BACK BOILER REPLACEMENT</div>
-          <div class="pf-price-name">Full Conversion to New Boiler</div>
-          <div class="pf-price-sub">WA10 Victorian terraces with gas fire systems</div>
-          <div class="pf-price-amount">Free survey</div>
-          <ul class="pf-price-list">
-            <li>Old back boiler and fire surround removed</li>
-            <li>New A-rated boiler installed in optimum position</li>
-            <li>New flue route cut and fitted</li>
-            <li>Full system replumb as required</li>
-            <li>Gas Safe and Benchmark certificate issued</li>
-            <li>12-month workmanship guarantee</li>
-            <li>Price confirmed at free survey</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
+        <div class="brx-part">
+          <h3>Newton-le-Willows (WA12)</h3>
+          <p>A real mix. Terraces near Earlestown station are like WA10, and back boilers turn up there too. The newer estates on the edge usually take a simple combi swap.</p>
+        </div>
+        <div class="brx-part">
+          <h3>Billinge, Thatto Heath and Clock Face (WN5, WA9)</h3>
+          <p>Older homes in former mining villages, many never changed to a combi. Vented cylinders and old regular boilers are common. We check if a combi will work, or keep a regular boiler.</p>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- BACK BOILER SECTION, UNIQUE ST HELENS CONTENT -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <span class="pf-section-label">ST HELENS SPECIALIST SERVICE</span>
-      <h2>Back Boiler Replacement in St Helens. What You Need to Know.</h2>
-      <p class="pf-sub">Back boilers, the gas boilers fitted behind gas fires, remain more common in St Helens than almost anywhere in Merseyside. Many WA10 Victorian terraces still run on back boiler systems installed in the 1970s and 1980s. Replacing one is not the same as a standard boiler swap.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-red">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Why Back Boilers Must Be Replaced</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Back boilers installed before 1990 were designed with different combustion processes than modern condensing boilers and cannot match modern efficiency standards. Spare parts for back boilers have become increasingly difficult to source over the last decade, and many are now entirely obsolete. A back boiler running at 55 to 65% efficiency is costing you significantly more in gas bills than a modern A-rated condensing boiler would. More importantly, ageing back boiler systems can present carbon monoxide risks when heat exchangers begin to crack, a problem that is not always visible on external inspection.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">What a Back Boiler Replacement Involves</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0 0 0.75rem;line-height:1.65;">A back boiler replacement is a more involved job than a standard combi swap. The process typically involves removing the gas fire and surround, safely disconnecting and removing the back boiler from behind the chimney breast, capping the original flue in the chimney, deciding on the optimal position for the new boiler, cutting a new flue route through an external wall, and replumbing the heating and hot water connections to the new boiler position. In WA10 and WA9 Victorian properties with original internal layouts, this often means working in narrow spaces with aged pipework that needs replacing as part of the installation. We carry out these jobs regularly across St Helens and know exactly what to plan for.</p>
-          <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:var(--radius-sm);padding:0.75rem 1rem;">
-            <p style="font-size:0.88rem;color:#78350f;margin:0;font-weight:600;">Free survey essential. Back boiler replacement prices vary significantly depending on the existing layout of your St Helens property. We always survey in person before quoting. Prices typically start from £2,500 fully completed.</p>
-          </div>
-        </div>
-
+  <section class="brx-sec" id="cost">
+    <div class="brx-wrap">
+      <h2>What can change the price?</h2>
+      <p class="brx-answer">The package prices cover a like-for-like combi swap. These extras are priced openly, so you know before the survey.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Extra</th><th>Price</th></tr></thead>
+          <tbody>{extras.map(([h, p]) => <tr><td>{h}</td><td><strong>{p}</strong></td></tr>)}</tbody>
+        </table>
+      </div>
+      <p>System and regular boilers are priced at the free survey, because the cylinder and pipework vary from house to house. All prices include VAT. Your written price covers everything, so there are no surprises on the day.</p>
+      <div class="brx-cta">
+        <p><strong>Still on a back boiler?</strong> Ring us. We will book a free survey and give you a fixed price.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-
-  <!-- ST HELENS PROPERTY TYPES AND BOILERS -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <span class="pf-section-label">LOCAL KNOWLEDGE</span>
-      <h2>St Helens Property Types. Which Boiler Fits Each One.</h2>
-      <p class="pf-sub">St Helens has a distinct mix of housing built across five different periods. The right boiler depends on which era your home comes from and what heating system is currently in place.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem;">
-          <div style="display:flex;gap:0.75rem;align-items:center;margin-bottom:0.5rem;flex-wrap:wrap;">
-            <span style="background:#c2410c;color:#fff;border-radius:6px;padding:0.2rem 0.6rem;font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-weight:900;font-size:0.82rem;flex-shrink:0;">WA10 VICTORIAN TERRACES</span>
-            <strong style="color:var(--navy);font-size:0.95rem;">Often back boiler or regular boiler. Combi possible with survey.</strong>
-          </div>
-          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Glass worker and industrial worker terraces built before 1914. Many still have back boilers or original gravity-fed systems. Some are on combi boilers already. Mains pressure varies significantly between streets. Survey essential before recommending boiler type.</p>
-        </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem;">
-          <div style="display:flex;gap:0.75rem;align-items:center;margin-bottom:0.5rem;flex-wrap:wrap;">
-            <span style="background:#c2410c;color:#fff;border-radius:6px;padding:0.2rem 0.6rem;font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-weight:900;font-size:0.82rem;flex-shrink:0;">WA11 HAYDOCK SEMIS</span>
-            <strong style="color:var(--navy);font-size:0.95rem;">Typically combi or system boiler. 1950s to 1970s stock.</strong>
-          </div>
-          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Post-war semi-detached housing. End-of-life copper pipework and boilers common in this era. Most properties have adequate mains pressure for a combi. For 3-bedroom properties with one bathroom, a 28kW combi is typically correct. For larger Haydock houses, system boiler may be better value long term.</p>
-        </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem;">
-          <div style="display:flex;gap:0.75rem;align-items:center;margin-bottom:0.5rem;flex-wrap:wrap;">
-            <span style="background:#c2410c;color:#fff;border-radius:6px;padding:0.2rem 0.6rem;font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-weight:900;font-size:0.82rem;flex-shrink:0;">WA12 NEWTON-LE-WILLOWS</span>
-            <strong style="color:var(--navy);font-size:0.95rem;">Mixed. Victorian near station vs modern estates.</strong>
-          </div>
-          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Newton-le-Willows has genuine property diversity. Victorian and Edwardian terraces close to Earlestown station have similar characteristics to WA10, back boilers possible, older systems. The modern private estates on the outskirts are typically 1990s onward and take a straight combi swap very cleanly. We confirm which applies to your specific property at the free survey.</p>
-        </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius);padding:1.25rem;">
-          <div style="display:flex;gap:0.75rem;align-items:center;margin-bottom:0.5rem;flex-wrap:wrap;">
-            <span style="background:#c2410c;color:#fff;border-radius:6px;padding:0.2rem 0.6rem;font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-weight:900;font-size:0.82rem;flex-shrink:0;">WA9 WN5 VILLAGES</span>
-            <strong style="color:var(--navy);font-size:0.95rem;">Older stock, vented cylinders common. Regular boiler often best.</strong>
-          </div>
-          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Billinge, Thatto Heath, Clock Face and surrounding mining community villages have a high proportion of older housing that was never updated to combi systems. Vented hot water cylinders and older regular boilers remain common. We attend properties across WN5 and WA9 regularly and understand the typical configurations.</p>
-        </div>
-      </div>
+  <section class="brx-sec brx-tint" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in the price?</h2>
+      <p class="brx-answer">Everything needed for a safe, finished install. There are no hidden extras.</p>
+      <ul class="sg-ticks">
+        <li><strong>The new boiler</strong>, A-rated and sized for your home.</li>
+        <li><strong>A smart thermostat</strong>, fitted and set up. It meets the Boiler Plus rules.</li>
+        <li><strong>A carbon monoxide alarm</strong> near the boiler.</li>
+        <li><strong>A magnetic filter</strong> to catch sludge before it reaches the boiler.</li>
+        <li><strong>A system clean and inhibitor.</strong> Older St Helens systems often hold years of sludge, which can harm a new boiler.</li>
+        <li><strong>The flue, valves and fittings.</strong></li>
+        <li><strong>Old boiler removed</strong> and taken away. No skip needed.</li>
+        <li><strong>Commissioning.</strong> Gas and safety checks, radiators balanced, and we show you the controls.</li>
+        <li><strong>Paperwork.</strong> Benchmark checklist, warranty registered for you, and the install notified to Gas Safe Register.</li>
+      </ul>
+      <figure class="sg-photo" style="max-width:360px;margin-top:1.25rem;">
+        <picture>
+          <source type="image/webp" srcset="/images/jobs/boiler-smart-thermostat-fitted-480.webp 480w, /images/jobs/boiler-smart-thermostat-fitted-960.webp 960w" sizes="(max-width: 800px) 100vw, 360px" />
+          <img src="/images/jobs/boiler-smart-thermostat-fitted-960.jpg" alt="Boiler and smart thermostat receiver fitted by our team" loading="lazy" decoding="async" width="960" height="1280" />
+        </picture>
+        <figcaption>A recent job: boiler controls fitted by our team.</figcaption>
+      </figure>
     </div>
   </section>
 
-
-  <!-- SIGNS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Signs Your St Helens Boiler Needs Replacing</h2>
-      <p class="pf-sub">If your boiler is over 10 years old or showing any of these signs, replacement is likely more cost-effective than continued repair.</p>
-      <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>Your home still has a back boiler behind a gas fire</strong><p>Back boilers installed before 1990 are running at 55 to 65% efficiency at best, costing significantly more in gas bills than a modern A-rated boiler. Spare parts for back boilers are now largely obsolete. Replacement is rarely a question of if, it is a question of when.</p></div></div>
-        <div class="pf-sign"><div><strong>Boiler over 10 to 12 years old</strong><p>Modern condensing boilers operate at over 90% efficiency. A pre-2010 boiler runs at 65 to 70%. The energy saving on gas bills alone will typically contribute to the installation cost within a few years.</p></div></div>
-        <div class="pf-sign"><div><strong>Mounting repair costs</strong><p>In St Helens's older housing stock, where many boilers were fitted in the 1980s and 1990s, parts availability is declining and labour costs for specialist repairs are rising. If annual repair bills exceed £200 to £300, replacement pays for itself.</p></div></div>
-        <div class="pf-sign"><div><strong>Yellow or orange flame</strong><p>A healthy boiler flame is blue. Yellow or orange indicates potential incomplete combustion and carbon monoxide risk. Stop using the boiler immediately. Call a <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe engineer</a> or Cadent Gas on 0800 111 999 if you suspect a gas emergency.</p></div></div>
-        <div class="pf-sign"><div><strong>Boiler shuts down frequently or loses pressure</strong><p>Frequent lockouts and pressure loss are symptoms of failing internal components. In a boiler over 12 years old, these issues rarely have a single fix, they signal the end of the system's reliable life.</p></div></div>
-        <div class="pf-sign"><div><strong>You have no Gas Safe or Benchmark certificate</strong><p>A boiler without documentation has no verified compliant installation. You have no warranty protection. If you are a landlord in St Helens, this also affects your ability to issue gas safety certificates.</p></div></div>
-      </div>
-
-      <div style="background:#c2410c;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Still on a back boiler? Book a free survey for a written fixed-price quote.</p>
-        <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How does a new boiler install work?</h2>
+      <ol class="sg-steps">
+        <li><strong>Free survey (about 45 minutes).</strong> An engineer checks your boiler, pipes, flue route, gas supply and water pressure. For a back boiler, we agree where the new one goes. You get a written fixed price.</li>
+        <li><strong>You choose a date.</strong> We book the install for a day that suits you. Boiler broken? Tell us and we give you our earliest slot.</li>
+        <li><strong>Clean the system.</strong> The heating is cleaned so old sludge does not harm the new boiler.</li>
+        <li><strong>Fit and commission.</strong> The old boiler comes out and the new one goes in. We test it and balance the radiators. A combi swap is usually one day. A back boiler swap is usually 2.</li>
+        <li><strong>Handover.</strong> We show you the controls, fill in the Benchmark checklist and register the warranty.</li>
+      </ol>
+      <p style="margin-top:1rem;">Landlords: we can also do your <a href="/gas-safety-certificate-st-helens">gas safety certificate</a> from £75. Then book a <a href="/boiler-service-st-helens">boiler service</a> each year to keep the warranty valid.</p>
+      <div class="brx-cta">
+        <p><strong>Book your free survey.</strong> Ring us or book online and we will arrange a time.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
-
-
-  <!-- WHAT IS INCLUDED -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>What Is Included in Your St Helens Boiler Installation</h2>
-      <p class="pf-sub">No hidden extras. No surprise charges on invoice day. Every item below is included in your fully fitted price.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>New boiler supplied and fitted</strong><p>Your chosen boiler from Worcester Bosch, Vaillant, Ideal or Baxi. Correctly sized for your specific St Helens property at the free survey, not a guess from a postcode.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>New smart controls and programmer</strong><p>New room thermostat and programmer installed and set up. Smart controls including Nest and Hive available. Required under Boiler Plus regulations.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Magnetic system filter</strong><p>Fitted to capture debris and magnetite before it reaches the new boiler. Required by Worcester Bosch and Vaillant to maintain manufacturer warranty. Non-negotiable on every installation.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>System flush and inhibitor</strong><p>Flushed and dosed to BS 7593 standard before the new boiler is connected. Essential for older St Helens systems with accumulated sludge and magnetite, which can damage a new heat exchanger within months if not removed.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gas Safe and Benchmark certificates on the day</strong><p>Legal requirement. Both issued on installation day and sent by email. Required to validate the manufacturer warranty and for landlord compliance.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Manufacturer warranty registered on your behalf</strong><p>We register the warranty with Worcester Bosch or Vaillant on installation day. You receive email confirmation immediately.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Old boiler removed and disposed</strong><p>We remove your old boiler, including the fire surround and hearth where applicable in back boiler replacements. All waste taken away. No skips required.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full commissioning and demonstration</strong><p>Every radiator balanced, system pressure set, full heating and hot water cycle run. We walk you through the new controls before we leave.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- BRANDS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Brands We Install in St Helens</h2>
-      <p class="pf-sub">We install the four most trusted boiler brands in the UK. All A-rated condensing boilers compliant with Boiler Plus regulations.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item" style="position:relative;">
-          <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c2410c;color:#ffffff;font-size:0.68rem;font-weight:800;padding:0.2rem 0.75rem;border-radius:999px;white-space:nowrap;letter-spacing:0.05em;">OUR PRIMARY RECOMMENDATION</div>
-          <h3>Worcester Bosch</h3>
-          <p>Consistently the most reliable boiler brand in the UK per <a href="https://www.which.co.uk/reviews/boilers/article/best-boiler-brands" target="_blank" rel="noopener">Which?</a>. Up to 10-year warranty when installed by an accredited engineer and serviced annually. The Greenstar range is our top recommendation for most St Helens homes, whether a back boiler conversion or a straight combi swap.</p>
-        </div>
-        <div class="pf-why-item">
-          <h3>Vaillant</h3>
-          <p>Premium German engineering and one of the quietest boilers on the market. Up to 10-year warranty. Well suited to larger Newton-le-Willows and Haydock properties with higher hot water demand. See <a href="https://www.vaillant.co.uk" target="_blank" rel="noopener">Vaillant</a> for specifications.</p>
-        </div>
-        <div class="pf-why-item">
-          <h3>Ideal Boilers</h3>
-          <p>British-made in Hull. A strong choice for St Helens landlords and rental properties where price efficiency matters. The Logic range is reliable, simple to service and has good parts availability across the North West. Up to 10-year warranty depending on model.</p>
-        </div>
-        <div class="pf-why-item">
-          <h3>Baxi</h3>
-          <p>Dependable and competitively priced. A practical choice for budget-conscious St Helens homeowners or those converting from back boilers where the overall project cost is already significant. 5 to 7-year warranties.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Why St Helens Homeowners Choose Us</h2>
-      <p class="pf-sub">Gas Safe registered. A trusted team of engineers, led by James. WA10, WA11 and WA12 covered.</p>
-      <div class="pf-why-grid">
-        <div class="pf-why-item"><h3>No Call-Out Fee</h3><p>There is no call-out fee. Call 0151 558 0334 to book your free survey.</p></div>
-        <div class="pf-why-item"><h3>Back Boiler Replacement Specialists</h3><p>We carry out back boiler replacements across WA10 and WA9 regularly. We know the typical layouts of St Helens Victorian terraces and plan every conversion correctly from the start. No surprises on installation day.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>Every installation carried out by our Gas Safe registered engineers. You get the same trained professional from survey to completion.</p></div>
-        <div class="pf-why-item"><h3>Free Survey and Fixed Price</h3><p>We visit your St Helens property, assess your heating system and provide a written fixed-price quote. No surprises on invoice day. The price we quote is the price you pay.</p></div>
-        <div class="pf-why-item"><h3>Same-Day and Next-Day Available</h3><p>For emergency boiler replacements in St Helens we offer same-day and next-day installation across WA10, WA11 and WA12. Call us to confirm our earliest slot.</p></div>
-        <div class="pf-why-item"><h3>Landlord and HMO Compliance</h3><p>We install new boilers in St Helens rental properties with all required documentation. CP12 certificates issued on installation day. We work directly with letting agents and portfolio landlords across WA10, WA11 and WA12.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What St Helens Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James came out and fixed a leaking pipe and even got my boiler up and running by fixing an air lock. Professional , on time, cleaned up after himself and charged a fair rate.</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Edward M</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James was very professional, and his standard of work excellent. Would recommend in a heart beat. Thanks for the great work, and sound advice.</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Mark L</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Quick response, clear communication and the plumber was clearly fully trained and knowledgeable. Very good service</p><div class="pf-review-footer"><div class="pf-review-avatar">P</div><div><div class="pf-review-name">Peter H</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- MID-PAGE CTA -->
-  <section style="background:var(--navy);padding:2rem 0;">
-    <div class="container">
-      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Still on a back boiler in St Helens? Boiler broken down?</h3>
-      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Same-day and next-day installation available. Fixed price. Gas Safe registered. If you suspect a gas emergency call Cadent Gas on 0800 111 999 first.</p>
-      <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-    </div>
-  </section>
-
-
-  <!-- THE PROCESS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>How Our St Helens Boiler Installation Works</h2>
-      <p class="pf-sub">From free survey to a fully working new boiler. What to expect at every stage.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>Our Gas Safe engineer visits your St Helens property, assesses the current system and provides a written fixed-price quote. For back boiler homes we confirm the exact scope of work before quoting. Around 45 minutes on site. No obligation.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Boiler selected and installation booked</strong><p>We recommend the right boiler type and output. Once you approve the quote, we book installation typically within 2 to 5 working days. Same-day and next-day slots available for emergencies.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>System flush carried out</strong><p>Before connecting the new boiler, we flush and treat the heating system. For older St Helens properties with accumulated sludge this is particularly important. Required by all manufacturers as a warranty condition. Costs from £350, ask about our bundle price when you call.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Old boiler removed. New boiler installed and commissioned.</strong><p>Old boiler and associated waste removed. For back boiler conversions, the fire surround and hearth are removed and the old flue capped. New boiler fitted, connected, balanced and tested. Full heating and hot water cycle run before we leave.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Certificates issued. Warranty registered. Full demonstration.</strong><p>Gas Safe and Benchmark certificates issued on the day. Manufacturer warranty registered. We walk you through the new controls before leaving. All documentation sent by email same day.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Installation St Helens. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what St Helens homeowners ask most.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">BACK BOILER</span>&nbsp; Can you replace my back boiler in St Helens?</summary><div class="pf-faq-body"><p>Yes. Back boiler replacement is one of our most common St Helens jobs. The process involves removing the gas fire and surround, safely disconnecting the back boiler, capping the old flue, determining the best new boiler position and replumbing to it. For WA10 Victorian terraces this typically takes two days. We survey every back boiler property in person before quoting because the variation between properties is too great for remote estimates. Prices start from £2,500.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">COST</span>&nbsp; How much does a new boiler cost in St Helens?</summary><div class="pf-faq-body"><p>A like-for-like combi boiler installation starts from £2,195 fully fitted. System and regular boilers are priced at a free survey. Back boiler replacements from £2,500 depending on complexity. All prices include the boiler, installation, controls, magnetic filter, system flush, Benchmark and Gas Safe certificates. Written fixed-price quote after the free survey.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">TIME</span>&nbsp; How long does a boiler installation take in St Helens?</summary><div class="pf-faq-body"><p>A like-for-like combi replacement takes 4 to 6 hours in one day. A system boiler with new cylinder takes 1 to 2 days. A back boiler replacement including fire surround removal and replumb takes 1 to 2 days. We confirm the exact duration at the free survey.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered for St Helens boiler work?</summary><div class="pf-faq-body"><p>Yes. Gas work is done by Gas Safe registered engineers. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. It is illegal to install a gas boiler without this registration. Gas Safe and Benchmark certificates issued on installation day for every job.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LANDLORDS</span>&nbsp; Can you fit boilers in my St Helens rental properties?</summary><div class="pf-faq-body"><p>Yes. We install new boilers in St Helens rental properties and provide all required documentation. CP12 gas safety certificates issued on the day. We work with individual landlords and letting agents across WA10, WA11 and WA12. Portfolio landlords can request consolidated invoicing and annual compliance scheduling.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">WARRANTY</span>&nbsp; What warranty does a new boiler carry?</summary><div class="pf-faq-body"><p>Worcester Bosch and Vaillant offer up to 10-year warranties when installed by an accredited engineer and serviced annually. Ideal and Baxi offer between 5 and 10 years depending on the model. All our installations carry a 12-month workmanship guarantee. We register the manufacturer warranty on installation day. Annual servicing is required to keep the warranty valid, see our <a href="/boiler-service-st-helens">boiler service St Helens page</a>.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Boiler Installation Across St Helens and Surrounding Areas</h2>
-      <p class="pf-sub">We carry out boiler installations across all St Helens postcodes and the wider borough.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div class="pf-card"><h3>St Helens Town and Central</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Victorian and Edwardian terraces. Back boiler replacements common.</p><div class="pf-pills"><span class="pf-pill">Town Centre WA10</span><span class="pf-pill">Eccleston WA10</span><span class="pf-pill">Sutton WA9</span><span class="pf-pill">Thatto Heath WA9</span><span class="pf-pill">Clock Face WA9</span></div></div>
-        <div class="pf-card"><h3>Haydock and Rainford</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Post-war semis and detacheds. Combi typically correct for 3-bed properties.</p><div class="pf-pills"><span class="pf-pill">Haydock WA11</span><span class="pf-pill">Rainford WA11</span><span class="pf-pill">Billinge WN5</span><span class="pf-pill">Garswood WN4</span></div></div>
-        <div class="pf-card"><h3>Newton-le-Willows and Earlestown</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Mixed property types. Victorian near station, modern estates on outskirts. Survey determines correct boiler type.</p><div class="pf-pills"><span class="pf-pill">Newton-le-Willows WA12</span><span class="pf-pill">Earlestown WA12</span><span class="pf-pill">Golborne WA3</span><span class="pf-pill">Burtonwood WA5</span></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Related Plumbing and Heating Services in St Helens</h2>
-      <p class="pf-sub">All Gas Safe registered. All St Helens WA postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/boiler-service-st-helens" class="pf-related-link"><div><strong>Annual Boiler Service St Helens</strong><span>£95 fixed price. Benchmark updated. Certificate same day. Annual servicing required to maintain warranty.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/gas-safety-certificate-st-helens" class="pf-related-link"><div><strong>Gas Safety Certificate St Helens</strong><span>CP12 from £75. Same-day available. Combined with service for £150. For landlords across WA10, WA11 and WA12.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/power-flushing-st-helens" class="pf-related-link"><div><strong>Power Flushing St Helens</strong><span>Cold radiators? Noisy boiler? Power flush from £395. Protects new boiler warranty. Bundle price available.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/central-heating-installation-st-helens" class="pf-related-link"><div><strong>Central Heating St Helens</strong><span>Full systems from £4,495. Radiator additions from £245.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/emergency-plumber-st-helens" class="pf-related-link"><div><strong>Emergency Plumber St Helens</strong><span>Boiler broken down? 30 min response 24/7. From £120. No call-out fee. WA10, WA11, WA12.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Online</strong><span>Free no-obligation survey and fixed-price quote. All St Helens postcodes covered.</span></div><span class="pf-related-arrow">→</span></a>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Installation Across Merseyside</h2>
-      <p class="pf-sub">New boiler from £2,195 fully fitted. Gas Safe registered. Free survey. Same fixed pricing in every location.</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-installation-wirral" class="pf-related-link"><div><strong>Boiler Installation Wirral</strong><span>New boiler from £2,195 fully fitted. Combi, system and regular boilers. Free survey across all Wirral CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-liverpool" class="pf-related-link"><div><strong>Boiler Installation Liverpool</strong><span>New boiler from £2,195 fully fitted. Worcester Bosch, Vaillant and Ideal. Same-day available across all Liverpool L postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-installation-formby" class="pf-related-link"><div><strong>Boiler Installation Formby</strong><span>New boiler from £2,195. System boiler specialists for Formby L37. G3 qualified engineers.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book a Free St Helens Boiler Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">From £2,195 fully fitted. Back boiler replacement specialists. Gas Safe registered. Same-day available. All St Helens WA postcodes.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>
