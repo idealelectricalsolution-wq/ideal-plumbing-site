@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Power Flushing Liverpool | Powerflush From £350 Inc VAT"
-  description="Power flushing Liverpool from £350 inc VAT. Powerflush, central heating power flush, radiator flush and microbore powerflush. Priced by radiator count, fixed before we start. Kamco trained engineer, Kamco CF90 Quantum2 machine, microbore systems welcome. Written BS 7593 report. Call 0151 558 0334."
+  description="Power flushing Liverpool from £350 inc VAT. Powerflush, central heating power flush, radiator flush and microbore powerflush. Priced by radiator count, fixed before we start. Kamco CF90 Quantum2 machine, microbore systems welcome. Written BS 7593 report. Call 0151 558 0334."
 >
 
   <script type="application/ld+json" slot="head">
@@ -156,8 +156,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       { "@type": "Question", "name": "Is a power flush always the right fix?", "acceptedAnswer": { "@type": "Answer", "text": "No. A power flush will not repair a broken pump, a stuck valve or a failed boiler part, and it will not fix a system losing pressure through a leak. If your boiler is over 15 years old and the system is badly corroded, replacing it may make more sense than flushing it. We will tell you if that is the case." } },
       { "@type": "Question", "name": "Does a power flush cause leaks?", "acceptedAnswer": { "@type": "Answer", "text": "It can reveal them. A flush pushes water round at speed, and a radiator already corroded to the point of failure may spring a pin hole. That radiator was going to fail anyway. We check the condition of radiators and joints before we start and we tell you honestly if we think something is at risk." } },
       { "@type": "Question", "name": "Are your prices including VAT?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every price on this page includes VAT. Worth checking with anyone else you get a quote from, because a price quoted before VAT goes up by 20 percent when the invoice arrives." } },
+      { "@type": "Question", "name": "What is a power flush?", "acceptedAnswer": { "@type": "Answer", "text": "A power flush is a deep clean of the inside of a central heating system. A pump pushes water and a cleaning chemical through every radiator, pipe and the boiler at high speed and carries the black sludge (magnetite) out of the system. It is followed by a full dose of corrosion inhibitor." } },
+      { "@type": "Question", "name": "What are the signs you need a power flush?", "acceptedAnswer": { "@type": "Answer", "text": "Radiators hot at the top and cold at the bottom, some radiators cold while others work, black water when you bleed a radiator, a house that takes longer to warm up, a banging or kettling boiler, a boiler cutting out on overheat, needing to bleed radiators every few weeks, and a system over 10 years old that has never been cleaned." } },
+      { "@type": "Question", "name": "Do I need a power flush before a new boiler is fitted?", "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, if the new boiler is going onto an existing system. Manufacturers including Worcester Bosch and Vaillant require the system to be cleaned and treated to BS 7593 when a new boiler is fitted. A drain and refill does not meet that standard." } },
+      { "@type": "Question", "name": "What is the difference between a power flush and a chemical flush?", "acceptedAnswer": { "@type": "Answer", "text": "A power flush uses a pump to force water and cleaner through each radiator at speed and is usually done in a day. A chemical flush leaves cleaner circulating over several days using the normal heating pump. A power flush is better for older systems and heavy sludge; a chemical flush can be enough for a newer system with mild symptoms." } },
+      { "@type": "Question", "name": "How long does a power flush last?", "acceptedAnswer": { "@type": "Answer", "text": "Years, if the system is looked after. Have the inhibitor checked and topped up at each annual boiler service and fit a magnetic filter to catch new sludge. Only flush again if the signs come back." } },
       { "@type": "Question", "name": "Do you cover the Wirral and St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We cover all Liverpool postcodes plus the Wirral, St Helens, Crosby, Formby, Bootle, Maghull, Southport, Kirkby and Huyton. Travel is included in the quoted price." } }
     ]
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Power Flushing Liverpool",
+    "url": "https://liverpoolemergencyplumber.co.uk/power-flushing-liverpool",
+    "dateModified": "2026-11-26",
+    "about": { "@type": "Thing", "name": "Central heating power flushing" }
   }
   </script>
 
@@ -408,7 +424,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .fq summary::-webkit-details-marker { display: none; }
     .fq summary::after { content: "+"; font-size: 1.35rem; font-weight: 400;
       color: var(--orange); line-height: 1; flex: 0 0 auto; }
-    .fq details[open] summary::after { content: "2"; }
+    .fq details[open] summary::after { content: "\2212"; }
     .fq-body { padding: 0 1.1rem 1.05rem; }
     .fq-body p { margin: 0; font-size: 0.92rem; line-height: 1.62; color: #445a73; }
 
@@ -454,6 +470,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="#prices" style="display:flex;align-items:center;justify-content:center;min-height:48px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.22);color:#fff;text-decoration:none;font-weight:700;border-radius:10px;">See your price</a>
       </div>
 
+      <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;margin:0 0 1rem;">Updated 26 November 2026</p>
       <div class="cr">
         <div class="cr-item"><div class="k">Kamco pump</div><div class="v">Kamco CF90 Quantum2</div></div>
         <div class="cr-item"><div class="k">Gas Safe</div><div class="v">Registered and verifiable</div></div>
@@ -468,12 +485,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <nav class="pfx-jump" aria-label="Jump to section">
         <a href="#prices">Prices</a>
+        <a href="#what">What is it?</a>
+        <a href="#signs">Signs</a>
         <a href="#nearme">Near me</a>
         <a href="#microbore">Microbore</a>
         <a href="#filter">Magnetic filter</a>
         <a href="#chemicals">Chemicals</a>
         <a href="#process">What happens</a>
+        <a href="#new-boiler">New boiler</a>
+        <a href="#compare">Power vs chemical</a>
+        <a href="#last">How long it lasts</a>
         <a href="#honest">Do I need one?</a>
+        <a href="#hiring">Choosing an engineer</a>
         <a href="#faq">FAQs</a>
       </nav>
     </div>
@@ -597,6 +620,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+
+  <!-- ================= WHAT IS IT ================= -->
+  <section class="pfx pfx-sec pfx-sec--paper" id="what">
+    <div class="container">
+      <div class="pfx-eyebrow">The plain English version</div>
+      <h2>What is a power flush?</h2>
+      <div class="pfx-water pfx-water--sm"></div>
+      <p class="pfx-lede">A power flush is a deep clean of the inside of your central heating. A pump pushes water and a cleaning chemical through every radiator, pipe and the boiler at high speed, and carries the black sludge out of the system.</p>
+      <p class="pfx-lede">Draining and refilling the system does not do the same job. Sludge sticks to the bottom of radiators and to the inside of the boiler, and only fast moving water, a cleaner and flushing each radiator on its own will shift it.</p>
+      <div class="pfx-note">
+        <strong>What the sludge is</strong>
+        <p>Its proper name is magnetite. It is black iron oxide, made when the steel inside radiators and pipe fittings slowly corrodes in the heating water. The particles circulate, then settle wherever the water moves slowest, which is usually the bottom of each radiator.</p>
+        <p>Over the years it turns into a thick black paste. It blocks radiators, makes the pump work harder and builds up inside the boiler heat exchanger, where it causes overheating, noise and early failure.</p>
+      </div>
+      <div class="pfx-note">
+        <strong>Why so many Liverpool homes need one</strong>
+        <p>Liverpool has a huge number of Victorian and Edwardian terraces in areas like Aigburth, Toxteth, Wavertree and Anfield. Many had central heating fitted in the 1970s and 1980s and have never had a thorough clean. Older steel radiators from that era produce more sludge, and the water we see when we open these systems is often jet black.</p>
+        <p>The 1930s semis in Childwall, West Derby and Norris Green usually have systems from the 1980s or 1990s. Sludge there is often moderate, which makes them good candidates for a standard flush with predictable results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SIGNS ================= -->
+  <section class="pfx pfx-sec pfx-sec--mist" id="signs">
+    <div class="container">
+      <div class="pfx-eyebrow">One or two is enough to check</div>
+      <h2>What are the signs you need a power flush?</h2>
+      <p class="pfx-lede">The clearest sign is a radiator that is hot at the top and cold at the bottom. You do not need every sign below. One or two is enough to have the system checked.</p>
+      <div class="vd">
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>Radiators hot at the top, cold at the bottom</strong><p>The classic sludge signature. Sludge is heavier than water, so it settles at the base of the radiator and hot water flows over the top of it.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>Some radiators cold while others are fine</strong><p>Sludge builds up unevenly. Radiators furthest from the boiler or on the ground floor often suffer first.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>Black or dark brown water when you bleed a radiator</strong><p>Clear or slightly cloudy water is normal. Black water is iron oxide, and it is going through your boiler right now.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>The house takes longer to warm up than it used to</strong><p>A gradual slowdown is the early warning. The system is pushing against more and more restricted flow.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>A banging or kettling boiler</strong><p>Kettling is water boiling inside a restricted heat exchanger. Clearing the restriction is far cheaper than a new boiler.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>The boiler cuts out on overheat</strong><p>If flow through the heat exchanger is restricted, the boiler cannot get rid of heat fast enough and trips its safety cut-out. Repeated overheat lockouts with no other fault often point to sludge.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>You bleed the radiators every few weeks</strong><p>Corrosion makes gas. Air that keeps coming back soon after bleeding usually means the system is corroding inside.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>The system is over 10 years old and has never been cleaned</strong><p>Even without symptoms, sludge builds up over time. If you are not sure, we can check the water on a visit.</p></div></div>
+      </div>
+      <div class="pfx-note">
+        <strong>Only one or two radiators cold?</strong>
+        <p>If the rest of the system is fine, a single radiator flush at £80 may be all you need. We will tell you which it is.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= NEAR ME / AREAS ================= -->
   <section class="pfx pfx-sec pfx-sec--paper" id="nearme">
@@ -752,6 +819,64 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- ================= NEW BOILER ================= -->
+  <section class="pfx pfx-sec pfx-sec--mist" id="new-boiler">
+    <div class="container">
+      <div class="pfx-eyebrow">Protect your warranty</div>
+      <h2>Do I need a power flush before a new boiler?</h2>
+      <div class="pfx-water pfx-water--sm"></div>
+      <p class="pfx-lede">Usually yes, if the new boiler is going onto an old system. Boiler manufacturers, including Worcester Bosch and Vaillant, require the heating system to be cleaned and treated to BS 7593 when a new boiler is fitted. Putting a new boiler on a dirty system is the quickest way to shorten its life.</p>
+      <div class="pfx-note">
+        <strong>What BS 7593 asks for</strong>
+        <p>BS 7593 is the British Standard for treating the water in central heating systems. Before a new boiler goes on an existing system, the system should be cleaned of sludge and debris, then dosed with corrosion inhibitor. A simple drain and refill does not meet it.</p>
+        <p>If the new boiler fails and the system was never cleaned, a manufacturer can question the warranty claim. Keep the written report we give you with your boiler paperwork.</p>
+      </div>
+      <div class="pfx-note">
+        <strong>Getting a new boiler from us?</strong>
+        <p>We check the system as part of every <a href="/boiler-installation-liverpool">boiler installation</a>, tell you honestly whether it needs a flush, and can do both as one job.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARE ================= -->
+  <section class="pfx pfx-sec pfx-sec--paper" id="compare">
+    <div class="container">
+      <div class="pfx-eyebrow">An honest comparison</div>
+      <h2>Power flush or chemical flush: which do you need?</h2>
+      <div class="pfx-water pfx-water--sm"></div>
+      <p class="pfx-lede">A power flush is the right choice for older systems and heavy sludge. A chemical flush, where cleaner is left to circulate through the system over several days, can be enough for a newer system with mild symptoms.</p>
+      <table class="ct">
+        <thead><tr><th scope="col">Comparison</th><th scope="col">Power flush</th><th scope="col">Chemical flush</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">How it works</th><td data-label="Power flush">A pump forces water and cleaner through at speed</td><td data-label="Chemical flush">Cleaner circulates with the normal heating pump</td></tr>
+          <tr><th scope="row">Radiators</th><td data-label="Power flush"><span class="ct-win">Each one flushed on its own</span></td><td data-label="Chemical flush">Whole system at once</td></tr>
+          <tr><th scope="row">Heavy sludge</th><td data-label="Power flush"><span class="ct-win">Shifts it</span></td><td data-label="Chemical flush">Often leaves it behind</td></tr>
+          <tr><th scope="row">Time</th><td data-label="Power flush"><span class="ct-win">Usually one day</span></td><td data-label="Chemical flush">Cleaner left in for days</td></tr>
+          <tr><th scope="row">Best for</th><td data-label="Power flush">Systems over 10 years old, black water, cold radiators</td><td data-label="Chemical flush">Newer systems with mild symptoms</td></tr>
+        </tbody>
+      </table>
+      <div class="pfx-note">
+        <strong>Our advice</strong>
+        <p>An older Liverpool system that has never been cleaned and shows two or three of the signs above is a power flush job. A five year old system with one slightly cool radiator may not be. We will tell you which, rather than selling you the bigger job.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW LONG IT LASTS ================= -->
+  <section class="pfx pfx-sec pfx-sec--mist" id="last">
+    <div class="container">
+      <div class="pfx-eyebrow">Keeping it clean</div>
+      <h2>How long does a power flush last?</h2>
+      <p class="pfx-lede">Years, if the system is looked after. Sludge comes back slowly because corrosion never fully stops, but inhibitor slows it right down and a magnetic filter catches what still forms.</p>
+      <div class="pr">
+        <div class="pr-step"><div class="pr-num">1</div><div><strong>Flush</strong><p>Clear the sludge that is in the system now.</p></div></div>
+        <div class="pr-step"><div class="pr-num">2</div><div><strong>Fit a magnetic filter</strong><p>Catches new iron oxide before it settles. £195 fitted on the day.</p></div></div>
+        <div class="pr-step"><div class="pr-num">3</div><div><strong>Check the inhibitor every year</strong><p>Have the inhibitor level checked and topped up at your annual <a href="/boiler-service-liverpool">boiler service</a>, and the filter emptied.</p></div></div>
+        <div class="pr-step"><div class="pr-num">4</div><div><strong>Flush again only if the signs come back</strong><p>A well looked after system with a filter can go a long time before it needs another flush.</p></div></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= HONEST ================= -->
   <section class="pfx pfx-sec pfx-sec--mist" id="honest">
     <div class="container">
@@ -764,14 +889,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>The system is losing pressure</strong><p>That is a leak. A flush will not seal it and can make it worse. The leak needs finding first.</p></div></div>
         <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>The boiler is past saving</strong><p>Over 15 years old and badly corroded, spending on a flush can be throwing good money after bad. Sometimes replacement is the honest answer.</p></div></div>
         <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Radiators are corroded through</strong><p>A flush moves water at speed. A radiator already rotten can spring a pin hole. It was going to fail anyway, but you should know before we start, not after.</p></div></div>
-        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>Cold at the bottom, warm at the top</strong><p>The classic sludge signature. Sludge settles in the bottom and hot water flows over it. Exactly what a flush fixes.</p></div></div>
-        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>Black water when you bleed a rad</strong><p>That black is iron oxide, and it is circulating through your boiler right now. A flush is the right call.</p></div></div>
-        <div class="vd-row"><div class="vd-mark vd-yes">&#10003;</div><div><strong>Banging or kettling boiler</strong><p>Usually restricted flow through the heat exchanger. Clearing it is cheaper than replacing the boiler.</p></div></div>
       </div>
 
       <div class="pfx-note">
         <strong>What a flush will not do</strong>
         <p>It will not remove every last trace of sludge. Nothing does. It will not turn a failing system into a new one. What it does is clear the blockage, get the radiators heating properly and buy the system years it would not otherwise have had. If anyone promises more than that, be careful.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HIRING ================= -->
+  <section class="pfx pfx-sec pfx-sec--paper" id="hiring">
+    <div class="container">
+      <div class="pfx-eyebrow">Whoever you book</div>
+      <h2>What should you ask before hiring a power flush engineer?</h2>
+      <div class="pfx-water pfx-water--sm"></div>
+      <p class="pfx-lede">Ask which machine and chemicals they use, whether inhibitor is included, how long it will take and whether you get a written report. A good engineer answers all of these straight away.</p>
+      <div class="pr">
+        <div class="pr-step"><div class="pr-num">1</div><div><strong>Which power flush machine do you use?</strong><p>Anyone who flushes systems every week can name their machine. Ours is a Kamco CF90 Quantum2.</p></div></div>
+        <div class="pr-step"><div class="pr-num">2</div><div><strong>Which cleaner, and is inhibitor included?</strong><p>Inhibitor at the end is what stops the sludge coming straight back. It should be in the price, not an extra.</p></div></div>
+        <div class="pr-step"><div class="pr-num">3</div><div><strong>Do you flush each radiator on its own?</strong><p>This is the slow part, and the part that actually clears blocked radiators.</p></div></div>
+        <div class="pr-step"><div class="pr-num">4</div><div><strong>How long will it take?</strong><p>A proper flush of a 6 to 10 radiator system takes most of a day. Anyone promising two hours is not doing the whole job.</p></div></div>
+        <div class="pr-step"><div class="pr-num">5</div><div><strong>Do I get a written report?</strong><p>You need it for your boiler warranty. It should come as standard.</p></div></div>
+        <div class="pr-step"><div class="pr-num">6</div><div><strong>Is the price fixed, and does it include VAT?</strong><p>A price quoted before VAT goes up by 20 percent on the invoice.</p></div></div>
+      </div>
+      <div class="vd">
+        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Red flag: a very low price</strong><p>A full flush of a 10 radiator system for a couple of hundred pounds usually means something is missing, like the time, the chemicals or the inhibitor.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Red flag: a flush offered as the cure for a broken boiler</strong><p>A flush clears sludge. It does not fix a failed pump, PCB or valve. That needs a proper <a href="/boiler-repair-liverpool">boiler repair</a> diagnosis.</p></div></div>
+        <div class="vd-row"><div class="vd-mark vd-no">&#10007;</div><div><strong>Red flag: pressure to book today</strong><p>A fair price does not disappear overnight.</p></div></div>
+      </div>
+      <div class="pfx-note">
+        <strong>Check them in two minutes</strong>
+        <p>Check any engineer who will work near your boiler on the Gas Safe Register at <a href="https://www.gassaferegister.co.uk/" target="_blank" rel="noopener">gassaferegister.co.uk</a>. Then read what their Google reviews actually say, not just the star rating.</p>
       </div>
     </div>
   </section>
@@ -804,6 +953,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <details><summary>Is a power flush always the right fix?</summary><div class="fq-body"><p>No. A power flush will not repair a broken pump, a stuck valve or a failed boiler part, and it will not fix a system losing pressure through a leak. If your boiler is over 15 years old and the system is badly corroded, replacing it may make more sense than flushing it. We will tell you if that is the case.</p></div></details>
         <details><summary>Does a power flush cause leaks?</summary><div class="fq-body"><p>It can reveal them. A flush pushes water round at speed, and a radiator already corroded to the point of failure may spring a pin hole. That radiator was going to fail anyway. We check the condition of radiators and joints before we start and we tell you honestly if we think something is at risk.</p></div></details>
         <details><summary>Are your prices including VAT?</summary><div class="fq-body"><p>Yes. Every price on this page includes VAT. Worth checking with anyone else you get a quote from, because a price quoted before VAT goes up by 20 percent when the invoice arrives.</p></div></details>
+        <details><summary>Do I need a power flush before a new boiler is fitted?</summary><div class="fq-body"><p>Usually yes, if the new boiler is going onto an existing system. Manufacturers including Worcester Bosch and Vaillant require the system to be cleaned and treated to BS 7593 when a new boiler is fitted. A drain and refill does not meet that standard. Keep the written report with your boiler paperwork.</p></div></details>
+        <details><summary>What is the difference between a power flush and a chemical flush?</summary><div class="fq-body"><p>A power flush uses a pump to force water and cleaner through each radiator at speed and is usually done in a day. A chemical flush leaves cleaner circulating through the system over several days using the normal heating pump. A power flush is better for older systems and heavy sludge. A chemical flush can be enough for a newer system with mild symptoms.</p></div></details>
+        <details><summary>How long does a power flush last?</summary><div class="fq-body"><p>Years, if the system is looked after. Have the inhibitor checked and topped up at each annual boiler service and fit a magnetic filter to catch new sludge. Only flush again if the signs come back.</p></div></details>
         <details><summary>Do you cover the Wirral and St Helens?</summary><div class="fq-body"><p>Yes. We cover all Liverpool postcodes plus the Wirral, St Helens, Crosby, Formby, Bootle, Maghull, Southport, Kirkby and Huyton. Travel is included in the quoted price.</p></div></details>
       </div>
     </div>
@@ -820,7 +972,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="/boiler-installation-liverpool"><div><strong>Boiler Installation</strong><span class="d">New boiler from £1,800 fully fitted. Worcester Bosch, Vaillant, Ideal.</span></div><span class="x">&#8594;</span></a>
         <a href="/boiler-service-liverpool"><div><strong>Boiler Service</strong><span class="d">Annual service by Gas Safe registered. Keeps your warranty valid.</span></div><span class="x">&#8594;</span></a>
         <a href="/central-heating-installation-liverpool"><div><strong>Central Heating Installation</strong><span class="d">Full systems from £3,500. Free survey and fixed price quote.</span></div><span class="x">&#8594;</span></a>
-        <a href="/blog/what-is-a-power-flush-liverpool"><div><strong>What Is a Power Flush?</strong><span class="d">Plain English guide to what happens and whether you need one.</span></div><span class="x">&#8594;</span></a>
+        <a href="/boiler-repair-liverpool"><div><strong>Boiler Repair</strong><span class="d">Boiler not working? Fault finding and repairs, 24/7.</span></div><span class="x">&#8594;</span></a>
       </div>
     </div>
   </section>
