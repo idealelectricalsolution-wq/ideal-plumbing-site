@@ -1,6 +1,25 @@
 ---
 const { title, description, canonical } = Astro.props;
 const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, ''), 'https://liverpoolemergencyplumber.co.uk').href;
+
+// Sibling links between the same service in each area (helps Google find and value area pages)
+const SERVICES: Record<string, string> = {
+  'boiler-installation': 'Boiler installation', 'boiler-service': 'Boiler servicing', 'central-heating-installation': 'Central heating installation',
+  'gas-safety-certificate': 'Gas safety certificates', 'hot-water-cylinders': 'Hot water cylinders', 'power-flushing': 'Power flushing',
+  'radiators': 'Radiators', 'bathroom-fitters': 'Bathroom fitting',
+};
+const AREAS: [string, string][] = [['liverpool', 'Liverpool'], ['wirral', 'the Wirral'], ['st-helens', 'St Helens'], ['formby', 'Formby']];
+const pathSlug = Astro.url.pathname.replace(/\.html$/, '').replace(/^\/|\/$/g, '');
+const sib = (() => {
+  for (const [svc, label] of Object.entries(SERVICES)) {
+    for (const [area] of AREAS) {
+      if (pathSlug === `${svc}-${area}`) {
+        return { label, here: area, links: AREAS.filter(([a]) => a !== area).map(([a, name]) => ({ href: `/${svc}-${a}`, text: `${label} ${a === 'wirral' ? 'on' : 'in'} ${name}` })) };
+      }
+    }
+  }
+  return null;
+})();
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -881,6 +900,14 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
       .trust-row { gap: 1.25rem; }
     }
   </style>
+  <style is:global>
+    .sib { background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 1.5rem 0; }
+    .sib-wrap { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; text-align: left; }
+    .sib-h { font-weight: 900; color: #1a3a5c; margin: 0 0 0.6rem; font-size: 1.05rem; }
+    .sib ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .sib a { display: block; background: #fff; border: 2px solid #e2e8f0; border-radius: 999px; padding: 0.45rem 0.95rem; font-weight: 700; font-size: 0.95rem; color: #1a3a5c; text-decoration: none; }
+    .sib a:hover { border-color: #f97316; }
+  </style>
 </head>
 <body>
 
@@ -1030,6 +1057,14 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname.replace(/\.html$/, 
 
   <main id="main">
   <slot />
+  {sib && (
+    <nav class="sib" aria-label={`${sib.label} in other areas`}>
+      <div class="sib-wrap">
+        <p class="sib-h">{sib.label} across Merseyside</p>
+        <ul>{sib.links.map((l) => <li><a href={l.href}>{l.text} →</a></li>)}</ul>
+      </div>
+    </nav>
+  )}
   </main>
 
   <!-- FOOTER -->

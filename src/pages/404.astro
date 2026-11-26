@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+const links = [
+  ['/', 'Emergency plumber Liverpool'],
+  ['/boiler-repair-liverpool', 'Boiler repair'],
+  ['/leak-detection-liverpool', 'Leak detection'],
+  ['/emergency-gas-engineer-liverpool', 'Emergency gas engineer'],
+  ['/boiler-service-liverpool', 'Boiler service'],
+  ['/radiators-liverpool', 'Radiators'],
+  ['/showers-liverpool', 'Showers'],
+  ['/get-started', 'Book a visit'],
+];
+---
+
+<BaseLayout
+  title="Page Not Found | Liverpool Emergency Plumber"
+  description="Sorry, that page does not exist. Call 0151 558 0334 for a 24/7 emergency plumber in Liverpool, or choose a service below."
+  canonical="https://liverpoolemergencyplumber.co.uk/404"
+>
+  <meta name="robots" content="noindex" slot="head" />
+  <section class="nf">
+    <div class="nf-wrap">
+      <p class="nf-code">404</p>
+      <h1>Sorry, that page does not exist</h1>
+      <p>The link may be old or mistyped. If you have a plumbing or heating emergency, ring us now. We answer 24/7.</p>
+      <a href={TEL} class="nf-btn">Call {PHONE}</a>
+      <h2>Or choose a service</h2>
+      <ul class="nf-links">
+        {links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf { padding: 3rem 0 4rem; }
+  .nf-wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; text-align: left; }
+  .nf-code { font: 900 4rem/1 'Barlow Condensed', sans-serif; color: #c2410c; margin: 0 0 0.5rem; }
+  .nf h1 { font: 900 clamp(2rem, 6vw, 2.6rem)/1.1 'Barlow Condensed', sans-serif; color: var(--navy); margin: 0 0 0.75rem; text-align: left; }
+  .nf h2 { font: 900 1.5rem 'Barlow Condensed', sans-serif; color: var(--navy); margin: 2rem 0 0.75rem; text-align: left; }
+  .nf p { font-size: 1.1rem; line-height: 1.65; color: #1e293b; }
+  .nf-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; background: #ea580c; color: #fff; border-radius: 10px; padding: 0.6rem 1.5rem; font: 900 1.5rem 'Barlow Condensed', sans-serif; text-decoration: none; margin-top: 0.5rem; }
+  .nf-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .nf-links a { display: block; border: 2px solid var(--border); border-radius: 999px; padding: 0.5rem 1rem; font-weight: 700; color: var(--navy); text-decoration: none; }
+  .nf-links a:hover { border-color: var(--orange); }
+</style>
