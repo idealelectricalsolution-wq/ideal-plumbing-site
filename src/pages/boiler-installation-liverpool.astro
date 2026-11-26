@@ -29,6 +29,10 @@ const signs = [
   ['A major part has failed', 'A cracked heat exchanger on an older boiler usually costs more to fix than the boiler is worth.'],
   ['The flame is yellow or orange', 'Or there are soot marks around the boiler. Stop using it and call us. If you smell gas, call 0800 111 999 first.'],
   ['Your gas bills keep rising', 'With no change in how you use the heating. An old non-condensing boiler wastes far more gas than a modern one.'],
+  ['It takes ages to heat up', 'If the radiators take much longer to warm than they used to, the boiler or the system is struggling. Sludge is often the cause, which a power flush can fix if the boiler is otherwise sound.'],
+  ['Some rooms never get warm', 'Common in homes that have been extended. The boiler was sized for a smaller house and now cannot keep up.'],
+  ['It bangs, whistles or kettles', 'Kettling is limescale in the heat exchanger making the water boil. On a younger boiler it can be cleared. On an old boiler it often means the heat exchanger is close to failing.'],
+  ['The pilot light keeps going out', 'On older boilers this is usually a thermocouple or gas valve. Fixable on its own, but on an old boiler with other faults it is a sign it is near the end.'],
   ['You want to change the system', 'For example, swapping a tank-fed system for a combi to free up the airing cupboard and loft.'],
 ];
 
@@ -71,6 +75,7 @@ const faqs = [
   { q: 'Can I still get a gas boiler?', a: 'Yes. You can replace a gas boiler in an existing home with a new gas boiler. The rules that limit gas boilers apply to newly built homes.' },
   { q: 'Can I fit a boiler myself?', a: 'No. By law, gas boilers must be fitted by a Gas Safe registered engineer. A badly fitted boiler can leak gas or carbon monoxide. You can check any engineer on the Gas Safe Register website.' },
   { q: 'Do you offer finance?', a: 'No, we do not offer finance. You get one fixed price, agreed in writing before any work starts.' },
+  { q: 'How long does a boiler last?', a: 'Most gas boilers last 10 to 15 years. One that is serviced every year usually lasts longer. After about 10 years, parts get harder to find and breakdowns become more frequent.' },
   { q: 'Is my boiler worth repairing instead?', a: 'Often it is. If the boiler is under 10 years old and the fault is a single part, a repair is usually the better value. Our fault diagnosis is £95, and we will tell you honestly whether to repair or replace.' },
   { q: 'Are there free boiler grants in Liverpool?', a: 'Some households on certain benefits may qualify for a free boiler through the government ECO4 scheme. We do not install under ECO4. Our ECO4 guide explains who qualifies and how to apply.' },
 ];
@@ -196,6 +201,14 @@ const schemaCrumbs = {
         <li><strong>The boiler model</strong> and its output.</li>
       </ul>
       <p>All of this is checked at the survey and included in your fixed price, so there are no surprises on the day.</p>
+      <h3>How do you compare boiler quotes?</h3>
+      <ul class="brx-list">
+        <li><strong>Check what is included.</strong> A fair quote names the boiler model and output and says whether the flue, controls, magnetic filter, system clean and inhibitor are included. Some quotes leave these out and add them later.</li>
+        <li><strong>Check the warranty</strong>: how many years, and what you have to do to keep it.</li>
+        <li><strong>Check the engineer</strong> on the <a href="https://www.gassaferegister.co.uk/" target="_blank" rel="noopener">Gas Safe Register</a> before any work starts.</li>
+        <li><strong>Get it in writing.</strong> A written fixed price protects you if anything changes on the day.</li>
+        <li><strong>Plan ahead if you can.</strong> Replacing an old boiler before it fails means you choose the date, rather than going without heating in the middle of winter.</li>
+      </ul>
       <div class="brx-cta">
         <p><strong>Want an exact price?</strong> The survey is free and there is no obligation.</p>
         <a href={TEL} class="brx-btn">Call {PHONE}</a>
@@ -233,7 +246,7 @@ const schemaCrumbs = {
         {signs.map(([h, t]) => <div class="brx-part"><h3>{h}</h3><p>{t}</p></div>)}
       </div>
       <div class="brx-note">
-        <p><strong>Not sure?</strong> If the boiler is under 10 years old and one part has failed, a repair is usually better value. Book a <a href="/boiler-repair-liverpool">boiler repair</a> visit (fault diagnosis £95) and we will tell you honestly which makes sense.</p>
+        <p><strong>Not sure?</strong> Most boilers last 10 to 15 years. The age is on the data label, often inside the front cover, or on the Benchmark checklist. A common rule of thumb: if one repair would cost more than half the price of a new boiler, replace it. If the boiler is under 10 years old and one part has failed, a repair is usually better value. Book a <a href="/boiler-repair-liverpool">boiler repair</a> visit (fault diagnosis £95) and we will tell you honestly which makes sense.</p>
       </div>
     </div>
   </section>
@@ -275,7 +288,10 @@ const schemaCrumbs = {
       <div class="brx-parts">
         {brands.map(([h, t]) => <div class="brx-part"><h3>{h}</h3><p>{t}</p></div>)}
       </div>
-      <p style="margin-top:1rem;">For a side-by-side comparison, read our guide to <a href="/blog/best-boiler-brands-liverpool-2026">the best boiler brands</a>.</p>
+      <h3 style="margin-top:1.5rem;">What keeps the 10-year warranty valid?</h3>
+      <p>Two things. The boiler must be registered with the manufacturer, which we do for you on install day. And it must be serviced every year by a Gas Safe registered engineer. Miss a service and the maker can refuse a claim. Our <a href="/boiler-service-liverpool">annual boiler service</a> is £120 and updates your Benchmark record.</p>
+      <h3>Is a big-name brand worth paying more for?</h3>
+      <p>For most homeowners planning to stay 10 years or more, yes. You get a longer warranty, and parts stay easy to get as the boiler ages, so repairs are quicker. All four brands we fit are well supported in Liverpool. Lesser-known brands can be cheaper to buy, but parts can be harder to find later. We will talk you through the options at the survey.</p>
     </div>
   </section>
 

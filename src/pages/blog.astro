@@ -2,9 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const posts = [
-  { slug: "how-much-does-a-new-boiler-cost-liverpool", category: "BOILERS", borderColor: "#c2410c", title: "How Much Does a New Boiler Cost in Liverpool in 2026?", excerpt: "Liverpool boiler installation prices range from £1,800 for a like-for-like combi swap to £7,000 for a full system replacement. Here is exactly what affects the price and what you should pay.", date: "April 2026", readTime: "6 min read" },
-  { slug: "signs-your-boiler-needs-replacing-liverpool", category: "BOILERS", borderColor: "#c2410c", title: "7 Signs Your Liverpool Boiler Needs Replacing in 2026", excerpt: "Your boiler is trying to tell you something. Here are the seven signs Liverpool homeowners miss that indicate a replacement is more cost-effective than another repair.", date: "March 2026", readTime: "5 min read" },
-  { slug: "best-boiler-brands-liverpool-2026", category: "BOILERS", borderColor: "#c2410c", title: "Worcester Bosch vs Vaillant: Which Is the Best Boiler for Liverpool Homes?", excerpt: "The two most popular premium boiler brands compared head to head. Efficiency, warranty, reliability and price all assessed by our Gas Safe registered engineers.", date: "January 2026", readTime: "7 min read" },
+  { slug: "boiler-installation-liverpool", href: "/boiler-installation-liverpool", category: "BOILERS", borderColor: "#c2410c", title: "New Boiler Installation in Liverpool: Prices, Types, Sizes and Brands", excerpt: "What a new boiler costs, what should be included, combi vs system vs regular, what size you need, how to compare quotes and the signs it is time to replace.", date: "November 2026", readTime: "Complete guide" },
+  { slug: "boiler-repair-liverpool", href: "/boiler-repair-liverpool", category: "BOILERS", borderColor: "#c2410c", title: "Boiler Repair in Liverpool: Common Faults and Error Codes Explained", excerpt: "What to check before you call, the most common boiler problems, error codes for every major brand, and repair prices.", date: "November 2026", readTime: "Complete guide" },
   { slug: "carbon-monoxide-safety-liverpool", category: "GAS SAFETY", borderColor: "#1a3a5c", title: "Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know", excerpt: "Around 40 people die from accidental carbon monoxide poisoning in England every year, most from faulty gas appliances. Here is how to protect your Liverpool home.", date: "December 2025", readTime: "5 min read" },
   { slug: "hmo-gas-safety-liverpool-landlords", category: "LANDLORDS", borderColor: "#7c3aed", title: "HMO Gas Safety in Liverpool: A Complete Compliance Guide for Landlords", excerpt: "HMO landlords in Liverpool face stricter gas safety requirements. This guide covers everything you need for Liverpool City Council HMO licensing.", date: "November 2025", readTime: "7 min read" },
   { slug: "central-heating-liverpool-victorian-terrace", category: "CENTRAL HEATING", borderColor: "#15803d", title: "Installing Central Heating in Liverpool's Victorian Terraces: What You Need to Know", excerpt: "Liverpool has one of the highest concentrations of Victorian housing in England. Here is what is different about installing central heating in a period property and what it costs.", date: "January 2026", readTime: "6 min read" },
@@ -100,6 +99,10 @@ const posts = [
           <span>Boiler repair: faults, error codes, prices and what to check first</span>
           <em>&rarr;</em>
         </a>
+        <a href="/boiler-installation-liverpool">
+          <span>New boilers: prices, types, sizes, brands and when to replace</span>
+          <em>&rarr;</em>
+        </a>
         <a href="/power-flushing-liverpool">
           <span>Power flushing: what it is, the signs, prices and how to choose an engineer</span>
           <em>&rarr;</em>
@@ -122,7 +125,7 @@ const posts = [
   <section class="pf-section" style="background:var(--white);" id="all-guides">
     <div class="container">
       <h2>All Guides and Articles</h2>
-      <p class="section-sub">13 guides covering boilers, gas safety, central heating, bathrooms and emergency plumbing for Liverpool homeowners and landlords.</p>
+      <p class="section-sub">12 guides covering boilers, gas safety, central heating, bathrooms and emergency plumbing for Liverpool homeowners and landlords.</p>
 
       <div class="category-section" id="boilers">
         <div class="cat-header">
@@ -131,7 +134,7 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "BOILERS").map(post => (
-            <a href={`/blog/${post.slug}`} class="post-card">
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
@@ -152,7 +155,7 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "GAS SAFETY").map(post => (
-            <a href={`/blog/${post.slug}`} class="post-card">
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
@@ -173,7 +176,7 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "CENTRAL HEATING").map(post => (
-            <a href={`/blog/${post.slug}`} class="post-card">
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
@@ -194,7 +197,7 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "EMERGENCY").map(post => (
-            <a href={`/blog/${post.slug}`} class="post-card">
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
@@ -215,7 +218,7 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "BATHROOMS").map(post => (
-            <a href={`/blog/${post.slug}`} class="post-card">
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
@@ -236,7 +239,7 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "LANDLORDS").map(post => (
-            <a href={`/blog/${post.slug}`} class="post-card">
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
@@ -257,7 +260,7 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "GRANTS").map(post => (
-            <a href={`/blog/${post.slug}`} class="post-card">
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
                 <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
