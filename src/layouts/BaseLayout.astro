@@ -676,6 +676,10 @@ const guideBox = (() => {
       list-style: none;
     }
     .pf-faq-item summary::-webkit-details-marker { display: none; }
+    .pf-faq-item summary { text-align: left; }
+    .pf-faq-q { flex: 1; text-align: left; }
+    .pf-tag-red { background: #b91c1c; color: #fff; }
+    @media (max-width: 600px) { .page-hero-badge { white-space: normal; max-width: 100%; text-align: center; } .blog-author-avatar { font-size: 0.78rem !important; } }
     .pf-faq-item summary::after { content: "+"; margin-left: auto; color: var(--pf-orange); font-size: 1.2rem; font-weight: 900; flex-shrink: 0; }
     .pf-faq-item[open] summary::after { content: "−"; }
     .pf-faq-body { padding: 0 1.25rem 1rem; }
