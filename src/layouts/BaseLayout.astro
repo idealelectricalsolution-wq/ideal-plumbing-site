@@ -1324,6 +1324,8 @@ const guideBox = (() => {
       if (el.closest('#hdr-mob')) return 'mobile_menu';
       if (el.closest('.hdr')) return 'header';
       if (el.closest('.site-footer')) return 'footer';
+      var cs = el.closest('.cs');
+      if (cs) return 'call_strip_' + (Array.prototype.indexOf.call(document.querySelectorAll('.cs'), cs) + 1);
       var sec = el.closest('section');
       if (!sec) return 'other';
       if (sec.id) return sec.id;
