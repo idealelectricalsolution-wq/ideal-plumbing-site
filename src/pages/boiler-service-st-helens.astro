@@ -1,459 +1,221 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/boiler-service-st-helens';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+// Scope: gas boilers only. We do NOT service gas fires (we can disconnect and cap) or back boilers (we remove them and fit a combi).
+// We do NOT sell a monthly boiler service plan or boiler cover. Pay per service, free yearly reminder.
+const packages = [
+  { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£95', unit: 'fixed price, inc VAT',
+    points: ['Combi, system and regular gas boilers', 'Same price across WA9 to WA12', 'Service record emailed the same day', 'Free reminder next year'] },
+  { id: 'combined', tier: 'Best value', popular: true, name: 'Boiler service + gas safety certificate (CP12)', price: '£150', unit: 'one visit, inc VAT',
+    points: ['Save £20 on booking them apart', 'Ideal for St Helens landlords', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day'] },
+  { id: 'cylinder', tier: 'Unvented hot water', name: 'Unvented cylinder service', price: '£120', unit: 'fixed price, inc VAT',
+    points: ['For mains pressure cylinders', 'Safety valves and expansion vessel checked', 'All our engineers are G3 qualified', 'Keeps the cylinder warranty valid'] },
+];
+
+const faqs = [
+  { q: 'How much does a boiler service cost in St Helens?', a: 'With us it is £95 including VAT, fixed price, with no call-out fee. A boiler service and gas safety certificate together are £150. An unvented cylinder service is £120.' },
+  { q: 'Do you cover all St Helens postcodes?', a: 'Yes. We cover WA9, WA10, WA11 and WA12, from the town centre and Thatto Heath to Haydock, Rainford and Newton-le-Willows. We also cover Billinge and Garswood. The price is the same everywhere.' },
+  { q: 'Can you service a back boiler in St Helens?', a: 'No. We do not service back boilers. Many are now old and parts are hard to find. We can take the back boiler out, cap the gas fire in front of it, and fit a new combi.' },
+  { q: 'Can you service the gas fire at the same visit?', a: 'No. We do not service gas fires. If you no longer need the fire, we can disconnect and cap it safely. If you want to keep it, it must be checked by an engineer registered for gas fires.' },
+  { q: 'Do you provide CP12 certificates for St Helens landlords?', a: 'Yes. A boiler service and CP12 in one visit cost £150. We check the boiler, gas cooker and hob. We can arrange access with your tenant or agent, and email both records the same day.' },
+  { q: 'How long does a boiler service take?', a: 'Most combi services take 45 to 60 minutes. A system boiler takes about 60 to 75 minutes.' },
+  { q: 'Does a service keep my boiler warranty valid?', a: 'Yes. Most boiler makers ask for a service every 12 months by a Gas Safe registered engineer. We fill in the Benchmark service record on every visit, which is what the maker will ask to see.' },
+  { q: 'Do you offer a boiler service plan?', a: 'No. We do not sell a monthly plan or boiler cover. You pay £95 when you have the service. We send a free reminder when the next one is due.' },
+  { q: 'Are you Gas Safe registered?', a: 'Yes. Every boiler service is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
+];
 ---
 
-<BaseLayout
-  title="Boiler Service St Helens | £95 Fixed | Gas Safe"
-  description="Annual boiler service St Helens from £95 fixed price. Back boilers replaced with a new combi. Gas Safe registered. HHIC checklist. Certificate same day. WA10, WA11 and WA12. Combined service and CP12 from £150. Call 0151 558 0334."
-  canonical="https://liverpoolemergencyplumber.co.uk/boiler-service-st-helens"
+<ServiceGuide
+  url={URL_}
+  title="Boiler Service St Helens | WA9 to WA12, Gas Safe From £95"
+  description="Annual boiler service in St Helens for £95 inc VAT. Service + CP12 £150. Gas Safe registered engineers across WA9, WA10, WA11 and WA12. Old back boilers replaced with a combi. Call 0151 558 0334."
+  h1="Boiler Service St Helens"
+  badge="Gas Safe registered · WA9 to WA12"
+  intro="An annual boiler service in St Helens for £95 including VAT, with no call-out fee. Our Gas Safe registered engineers clean and test your boiler in about an hour. Still got an old back boiler? We take it out and fit a new combi."
+  stats={[['£95', 'Boiler service, inc VAT'], ['45–60 min', 'Most services']]}
+  ticks={['Gas Safe Registered', 'WA9 to WA12', 'No Call-Out Fee', '5.0 on Google']}
+  pkTitle="Boiler service prices in St Helens"
+  pkLede="Fixed prices, including VAT. The same across St Helens. No call-out fee."
+  packages={packages}
+  pkNote="Prices are for gas boilers. We do not service back boilers or gas fires. If we find a fault, we tell you the repair price before we do anything."
+  factsTitle="St Helens boiler servicing at a glance"
+  facts={[
+    ['Price', '£95 for a boiler service. With a gas safety certificate: £150.'],
+    ['Time', '45 to 60 minutes for a combi. 60 to 75 minutes for a system boiler.'],
+    ['Paper', 'Benchmark service record emailed the same day.'],
+    ['Back boilers', 'Not serviced. We remove them and fit a new combi.'],
+    ['Who', 'Gas Safe registered engineers, part of our team led by James.'],
+    ['Area', 'St Helens WA9, WA10, WA11 and WA12, plus Billinge and Garswood.'],
+  ]}
+  toc={[
+    ['back-boilers', 'Still got a back boiler?'],
+    ['checks', 'What does a boiler service include?'],
+    ['how', 'How does the visit work?'],
+    ['landlords', 'Boiler service for St Helens landlords'],
+    ['warranty', 'Will a service keep my warranty?'],
+    ['signs', 'Signs your boiler needs a check now'],
+    ['st-helens', 'Where in St Helens?'],
+  ]}
+  reviews={['Edward M', 'David H', 'Peter H', 'Mark L']}
+  faqs={faqs}
+  areasTitle="Boiler servicing in other areas"
+  areasText="The same prices apply across Liverpool, the Wirral and Formby."
+  areas={[
+    { href: '/boiler-service-liverpool', label: 'Liverpool' },
+    { href: '/boiler-service-wirral', label: 'Wirral' },
+    { href: '/boiler-service-formby', label: 'Formby' },
+  ]}
+  related={[
+    { href: '/gas-safety-certificate-st-helens', title: 'Gas safety certificate St Helens', text: 'Landlord CP12 £75, or £150 with a service' },
+    { href: '/boiler-installation-st-helens', title: 'Boiler installation St Helens', text: 'New combi from £2,195, back boilers removed' },
+    { href: '/power-flushing-st-helens', title: 'Power flushing St Helens', text: 'Cold radiators and sludge, from £395' },
+    { href: '/central-heating-installation-st-helens', title: 'Central heating St Helens', text: 'Full new systems from £4,495' },
+    { href: '/radiators-st-helens', title: 'Radiators St Helens', text: 'New radiators supplied and fitted from £245' },
+    { href: '/emergency-plumber-st-helens', title: 'Emergency plumber St Helens', text: 'From £120 for the first hour, no call-out fee' },
+  ]}
+  finalTitle="Book your St Helens boiler service"
+  finalText="£95 including VAT. No call-out fee. WA9 to WA12. Service record emailed the same day."
+  serviceName="Boiler Service St Helens"
+  serviceType="Annual gas boiler service"
+  serviceDesc="Annual gas boiler servicing across St Helens WA9, WA10, WA11 and WA12 by Gas Safe registered engineers. Combi, system and regular boilers. Benchmark service record emailed the same day."
+  areaServed={['St Helens', 'Eccleston', 'Sutton', 'Thatto Heath', 'Clock Face', 'Haydock', 'Rainford', 'Billinge', 'Garswood', 'Newton-le-Willows', 'Earlestown']}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Boiler Service St Helens",
-    "serviceType": "Gas Boiler Servicing",
-    "description": "Annual gas boiler service across St Helens from £95 fixed price. Back boilers replaced with a new combi. Gas Safe registered. HHIC checklist followed on every visit. Certificate same day. WA10, WA11 and WA12. Combined service and CP12 from £150.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": { "@type": "Place", "name": "St Helens, WA10-WA12" },
-    "offers": [
-      { "@type": "Offer", "name": "Annual Boiler Service St Helens", "price": "120", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Boiler Service and Gas Safety Certificate St Helens", "price": "175", "priceCurrency": "GBP" },
-      { "@type": "Offer", "name": "Boiler Fault Diagnosis St Helens", "price": "95", "priceCurrency": "GBP" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does a boiler service cost in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "A standard annual boiler service in St Helens costs £95 fixed price including the service certificate same day. A combined boiler service and CP12 gas safety certificate costs £150. A boiler repair visit is from £120 for the first hour, including diagnosis. No call-out fee." } },
-      { "@type": "Question", "name": "Do you service back boilers in St Helens?", "acceptedAnswer": { "@type": "Answer", "text": "No. We do not service back boilers. St Helens still has many of them, often behind a gas fire in a WA10 Victorian terrace. Most are now old and obsolete. We remove the back boiler, disconnect and safely cap the gas fire in front of it, and fit a new combi. See our St Helens boiler installation page for details." } },
-      { "@type": "Question", "name": "Do you provide CP12 certificates for St Helens landlords?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our combined boiler service and CP12 gas safety certificate costs £150 in a single visit. Both documents emailed the same day. Accepted by all St Helens letting agents. We service landlord portfolios across WA10, WA11 and WA12." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Boiler Service St Helens", "item": "https://liverpoolemergencyplumber.co.uk/boiler-service-st-helens" }
-    ]
-  }
-  </script>
-
-  <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        St Helens Boiler Service Specialists
-      </div>
-      <h1>Boiler Service St Helens</h1>
-      <p class="page-hero-sub">Annual boiler service from £95 fixed price across WA10, WA11 and WA12. Back boilers replaced with a new combi. Gas Safe registered. HHIC checklist on every visit. Certificate emailed same day. Combined service and CP12 from £150.</p>
-
-      <div style="display:flex;gap:1rem;max-width:340px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£120</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Fixed Price</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;white-space:nowrap;">Same Day</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Certificate</div>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;">Book a St Helens Service</a>
-      </div>
-
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Back Boiler Replacement</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> HHIC Checklist</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> WA10 WA11 WA12</span>
-      </div>
+  <section class="brx-sec brx-tint" id="back-boilers">
+    <div class="brx-wrap">
+      <h2>Still got a back boiler in St Helens?</h2>
+      <p class="brx-answer">We do not service back boilers. We take them out, cap the gas fire in front, and fit a new combi boiler in their place.</p>
+      <p>St Helens still has a lot of back boilers. Many WA10 and WA9 Victorian terraces run their heating from a boiler behind the gas fire in the front room. Most of these are now old, and parts are hard to find.</p>
+      <h3>Why are back boilers a worry?</h3>
+      <p>A back boiler sits inside the chimney breast. It has an open flue, so it relies on the chimney to draw fumes up and out. If the chimney gets part blocked, or the boiler cracks, fumes can spill into the room. That includes carbon monoxide. You cannot see it or smell it.</p>
+      <h3>What we do instead</h3>
+      <ul class="sg-ticks">
+        <li>We remove the old back boiler.</li>
+        <li>We disconnect and safely cap the gas fire.</li>
+        <li>We fit a new combi boiler in a place that suits you.</li>
+      </ul>
+      <p>See <a href="/boiler-installation-st-helens">boiler installation in St Helens</a> for fixed-price packages from £2,195 fitted.</p>
+      <div class="brx-note"><p><strong>Got a gas fire but no back boiler?</strong> We do not service gas fires. We can disconnect and cap one you no longer need. If you want to keep it, it must be checked by an engineer registered for gas fires.</p></div>
     </div>
   </section>
 
-  <div class="pf">
-
-  <!-- TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 53 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:520px;">"James came out and fixed a leaking pipe and even got my boiler up and running by fixing an air lock. Professional , on time, cleaned up after himself and charged a fair rate." Edward M, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See all reviews →</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Boiler Service Prices St Helens</h2>
-      <p class="pf-sub">Fixed prices across WA10, WA11 and WA12. No hidden charges. No call-out fee. The price we quote is the price you pay.</p>
-
-      <div style="background:#fff7ed;border:1px solid #fed7aa;border-left:4px solid #f97316;border-radius:10px;padding:0.9rem 1.25rem;margin-bottom:2rem;">
-        <p style="color:#7c2d12;font-size:0.88rem;margin:0;font-weight:600;">If a fault is found during the service we explain it clearly and give you a written repair quote before any additional work begins. No surprise charges. No work started without your approval.</p>
-      </div>
-
-      <div class="pf-pricing-grid">
-        <div class="pf-price-card">
-          <div class="pf-price-tier">ANNUAL SERVICE</div>
-          <div class="pf-price-name">Gas Boiler Service St Helens</div>
-          <div class="pf-price-sub">All major brands. All WA postcodes.</div>
-          <div class="pf-price-amount">£120</div>
-          <ul class="pf-price-list">
-            <li>Full HHIC checklist followed throughout</li>
-            <li>Flue gas analysis and combustion check</li>
-            <li>Gas pressure and flow rate tested</li>
-            <li>All internal components cleaned and checked</li>
-            <li>Inhibitor level tested and topped up</li>
-            <li>Magnetic filter cleaned if fitted</li>
-            <li>Service certificate emailed same day</li>
-            <li>Benchmark record updated</li>
+  <section class="brx-sec" id="checks">
+    <div class="brx-wrap">
+      <h2>What does a boiler service include?</h2>
+      <p class="brx-answer">We take the cover off, clean and check the parts inside, and test that the boiler burns gas safely. Here is the full list.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Safety checks</h3>
+          <ul class="sg-ticks">
+            <li>Flue gas analysis, to prove the boiler burns gas cleanly</li>
+            <li>Gas pressure and gas rate checked</li>
+            <li>The flue checked along its route, with seals and joints</li>
+            <li>A spillage test on older open-flue boilers</li>
+            <li>Safety devices tested, so the boiler shuts down if it should</li>
+            <li>Air vents checked, as they are often blocked in older homes</li>
+            <li>Your carbon monoxide alarm tested, if you have one</li>
           </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book a Service</a>
         </div>
-
-        <div class="pf-price-card pf-price-card-featured">
-          <div class="pf-price-badge">BEST VALUE FOR ST HELENS LANDLORDS</div>
-          <div class="pf-price-tier">COMBINED</div>
-          <div class="pf-price-name">Service and Gas Safety Certificate</div>
-          <div class="pf-price-sub">One visit. Two documents. Same day.</div>
-          <div class="pf-price-amount">£175</div>
-          <ul class="pf-price-list">
-            <li>Full annual boiler service included</li>
-            <li>CP12 gas safety certificate issued same day</li>
-            <li>Boiler, gas cooker and hob checked</li>
-            <li>Flue integrity and ventilation tested</li>
-            <li>Both documents emailed same day</li>
-            <li>Accepted by all St Helens letting agents</li>
-            <li>NRLA compliant</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Combined Visit</a>
-        </div>
-
-        <div class="pf-price-card">
-          <div class="pf-price-tier">BOILER NOT WORKING?</div>
-          <div class="pf-price-name">Fault Diagnosis St Helens</div>
-          <div class="pf-price-sub">First hour, including diagnosis. No call-out fee.</div>
-          <div class="pf-price-amount">From £120</div>
-          <ul class="pf-price-list">
-            <li>Full diagnostic inspection carried out</li>
-            <li>Error codes read and identified</li>
-            <li>Root cause confirmed in writing</li>
-            <li>Written repair quote provided</li>
-            <li>No obligation to proceed</li>
-            <li>Minor repairs carried out where possible</li>
-            <li>Gas Safe engineer throughout</li>
-          </ul>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Diagnostic</a>
-        </div>
-      </div>
-
-      <div class="pf-alert" style="margin-top:2rem;">
-        <strong>What £120 includes that cheaper St Helens services often skip</strong>
-        <p>The Checkatrade average for a St Helens boiler service is £103. At that price point, something typically gets cut. The most commonly skipped steps are the inhibitor test and top-up, the Benchmark certificate update and a full combustion gas analysis. Skipping the Benchmark update means your manufacturer warranty is not properly protected. Skipping the inhibitor check means your heat exchanger is exposed to sludge and corrosion damage. We include all three on every service at £95.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- BACK BOILER SECTION, UNIQUE ST HELENS CONTENT -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <span class="pf-section-label">ST HELENS BACK BOILERS</span>
-      <h2>Still Got a Back Boiler?</h2>
-      <p class="pf-sub">St Helens has more back boilers per square mile than almost anywhere else in Merseyside. Many WA10 Victorian terraces still run heating and hot water from a back boiler behind the gas fire in the living room. We do not service back boilers. Here is why they are a different job, and what we do instead.</p>
-
-      <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;">
-
-        <div class="pf-card pf-card-left-red">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">Why Back Boilers Are a Different Job</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Back boilers operate with a heat exchanger in a confined space, typically within the chimney breast. Unlike a wall-mounted combi, heat exchanger access during the service requires removal of the gas fire or access panel, and the flue path runs internally through the chimney before exiting at the roof rather than through a short external wall flue. This creates several specific service requirements: the flue baffle within the boiler must be checked and repositioned if displaced, the draught diverter must be tested to confirm it is opening and closing correctly, the open flue integrity must be confirmed through a combustion spillage test and any debris in the heat exchanger must be cleared.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-orange">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">The Carbon Monoxide Risk in Back Boiler Properties</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">Back boilers in older WA10 properties are associated with a higher carbon monoxide risk than modern sealed-flue boilers for a specific reason. An open flue back boiler relies on the natural draught within the chimney to draw combustion gases upward and out of the property. If the chimney becomes partially blocked, if the draught diverter fails to open under high-flow conditions, or if the heat exchanger develops micro-cracks, products of combustion including carbon monoxide can spill into the room. This spillage can happen without any obvious sign and is why the combustion spillage test at the annual service is not optional.</p>
-        </div>
-
-        <div class="pf-card pf-card-left-green">
-          <strong style="display:block;color:var(--navy);font-size:1rem;margin-bottom:0.35rem;">What We Do: Remove It and Fit a New Combi</strong>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0 0 0.75rem;line-height:1.65;">We remove old back boilers. He disconnects and safely caps the gas fire in front of it, and fits a new combi boiler. See <a href="/boiler-installation-st-helens">boiler installation in St Helens</a>.</p>
-          <p style="font-size:0.93rem;color:var(--muted);margin:0;line-height:1.65;">We do not service gas fires either. For landlords, the CP12 must cover every gas appliance the landlord supplies, and an uninspected gas fire means the CP12 is incomplete. If you no longer need the fire, we can disconnect and cap it safely, so it no longer has to be on the certificate. If you want to keep using it, it must be checked by an engineer registered for gas fires.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY ANNUAL -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Why Every St Helens Boiler Needs an Annual Service</h2>
-      <p class="pf-sub">Carbon monoxide safety. Warranty protection. Lower bills. Early fault detection. Particularly important in St Helens where back boilers and older systems remain common.</p>
-      <div style="margin-top:2rem;">
-        <div class="pf-pros">
-          <h3 >What an Annual Service Protects</h3>
-          <ul class="pf-check-list">
-            <li>Carbon monoxide safety. Back boilers and older open-flue boilers in WA10 carry a higher CO risk than modern sealed-flue combis. Annual combustion testing and spillage testing is the only reliable way to confirm your boiler is not exposing your household to CO</li>
-            <li>Manufacturer warranty maintained. Worcester Bosch, Vaillant, Ideal and Baxi require annual servicing by a Gas Safe engineer and an updated Benchmark record. Missing a year voids the warranty entirely, regardless of boiler age</li>
-            <li>Lower gas bills. A serviced boiler runs up to 10 to 15% more efficiently. In St Helens properties where many boilers are older models already operating below peak efficiency, annual servicing has a meaningful impact on gas bills</li>
-            <li>Early fault detection before the winter breakdown. In older WA10 and WA11 properties, worn components are more common. Identifying a failing thermocouple in October costs far less than an emergency call-out in December</li>
-            <li>Inhibitor levels maintained. Corrosion inhibitor degrades annually. Every service includes a test and top-up to the correct concentration level</li>
-            <li>Legal compliance for St Helens landlords. Annual gas safety inspection is a legal requirement. The CP12 must cover all gas appliances. See <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">HSE landlord gas safety obligations</a></li>
-            <li>Annual reminder included. We add you to our reminder list after your first service and contact you when the next is due</li>
+        <div class="sg-box">
+          <h3>Inside the boiler</h3>
+          <ul class="sg-ticks">
+            <li>Burner and heat exchanger checked and cleaned</li>
+            <li>Condensate trap cleaned, and the condensate pipe checked</li>
+            <li>Seals and gaskets checked for wear</li>
+            <li>System pressure and expansion vessel checked</li>
+            <li>Inhibitor level checked and topped up if low</li>
+            <li>Magnetic filter cleaned, if you have one</li>
           </ul>
         </div>
       </div>
+      <p>To finish, we test the heating, hot water and controls. Then we fill in the Benchmark record and email you a copy the same day. Larger homes in Haydock and Newton-le-Willows often have a system boiler. For those, we also check the pump, zone valves and cylinder controls, for the same £95.</p>
     </div>
   </section>
 
-
-  <!-- WHAT IS CHECKED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>What Our Gas Safe Plumber Checks During a St Helens Boiler Service</h2>
-      <p class="pf-sub">A thorough 10-point HHIC inspection covering every aspect of your boiler's safety and performance. Open-flue boilers get extra checks specific to open-flue systems.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Flue gas analysis</strong><p>Combustion gases tested to confirm correct and safe burning. Critical for older boilers common across WA10.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Combustion spillage test</strong><p>For open-flue boilers, a spillage test is carried out to confirm combustion products are exiting via the flue and not spilling into the room. A legally required check for all open-flue appliances.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Gas pressure and flow rate</strong><p>Gas supply pressure and flow rate confirmed correct. Low pressure causes lockouts and poor performance across all boiler types.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Burner and heat exchanger</strong><p>Burner removed and inspected. Heat exchanger checked for corrosion and cracking.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Flue baffle and draught diverter</strong><p>Specific to open-flue boilers. Flue baffle checked for correct positioning. Draught diverter tested to confirm it opens correctly under operating conditions.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Flue integrity and ventilation</strong><p>Full flue route inspected. Ventilation in the room checked to confirm adequate air for combustion. Open-flue appliances require permanent ventilation that is often blocked by residents.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Safety devices tested</strong><p>Pressure relief valve, overheat thermostat and gas valve all tested for correct operation under fault conditions.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Inhibitor level tested and topped up</strong><p>Inhibitor concentration tested. Low inhibitor accelerates corrosion and sludge. Topped up to the correct level on every service, never skipped.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Controls and programmer</strong><p>Thermostat, programmer and any zone valves checked for correct operation. A faulty control component causes uneven heating even with a fully functional boiler.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Full function test and Benchmark updated</strong><p>Full heating and hot water cycle run. Benchmark record updated with service date and findings. Certificate emailed same day. This step protects your manufacturer warranty.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WARRANTY -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Protect Your St Helens Boiler Warranty</h2>
-      <p class="pf-sub">Missing a single annual service can void your manufacturer warranty completely.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;">
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Worcester Bosch. Up to 10 years</strong><p>Annual servicing by a Gas Safe registered engineer and a completed Benchmark certificate required. Missing a service voids the warranty regardless of when the boiler was installed. We update the Benchmark on every service.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Vaillant. Up to 10 years</strong><p>Annual servicing recorded in the Benchmark commissioning checklist required. Failure to service annually voids the extended warranty.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Ideal Boilers. Up to 10 years</strong><p>Annual servicing by a Gas Safe registered engineer required. Service record must be retained for warranty claims. We update the Benchmark record on every visit.</p></div></div>
-        <div class="pf-who-item pf-who-yes"><span class="pf-who-icon">✓</span><div><strong>Baxi. Up to 7 years</strong><p>Annual servicing required. An unserviced boiler that develops a maintenance-related fault will not be covered under warranty.</p></div></div>
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How does the visit work?</h2>
+      <p class="brx-answer">You book a time, we service the boiler in about an hour, and you get the record by email the same day.</p>
+      <ol class="sg-steps">
+        <li><strong>Book (2 minutes).</strong> Call or <a href="/get-started">book online</a>. Tell us the make of boiler if you know it, and if you have a gas fire.</li>
+        <li><strong>We arrive.</strong> A Gas Safe registered engineer comes at the agreed time. Anyone can let us in. You can ask to see the Gas Safe card.</li>
+        <li><strong>The service (45 to 75 minutes).</strong> We work through the full checklist. We use dust sheets and tidy up after.</li>
+        <li><strong>What we found.</strong> We tell you how the boiler is doing. If something needs fixing, you get a price first. You decide.</li>
+        <li><strong>Your record.</strong> We fill in the Benchmark record and email you a copy the same day.</li>
+        <li><strong>Next year.</strong> We send a free reminder when the next service is due.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Boiler due a service in St Helens?</strong> Call and we will find you the next free slot.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-
-  <!-- BRANDS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Brands and Types We Service in St Helens</h2>
-      <p class="pf-sub">Experienced with all modern boiler brands and the older appliances still running in WA10 Victorian and Edwardian properties.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;">
-        <div class="pf-why-item"><h3>Modern Combi Boilers</h3><p>We service all Worcester Bosch, Vaillant, Ideal and Baxi combi boilers across WA10, WA11 and WA12. Benchmark updated on every service. Common parts carried on the van for same-visit minor repairs.</p></div>
-        <div class="pf-why-item"><h3>Back Boilers: Replaced, Not Serviced</h3><p>We do not service back boilers. Many still running in WA10 and WA9 Victorian terraces are now obsolete models. We remove them, safely cap the gas fire in front, and fit a new combi. See <a href="/boiler-installation-st-helens">boiler installation</a>.</p></div>
-        <div class="pf-why-item"><h3>Gas Fires: Disconnected and Capped</h3><p>We do not service gas fires. We can disconnect and safely cap one you no longer need. For St Helens landlords, a CP12 must cover every gas appliance the landlord supplies, including gas fires. An uninspected gas fire means an incomplete CP12. If you want to keep using it, it must be checked by an engineer registered for gas fires.</p></div>
-        <div class="pf-why-item"><h3>System Boilers</h3><p>System boilers in larger Newton-le-Willows and Haydock properties are serviced with full zone valve, pump and cylinder checks included. Same £95 fixed price, no system boiler surcharge applied.</p></div>
+  <section class="brx-sec" id="landlords">
+    <div class="brx-wrap">
+      <h2>Do you do boiler services for St Helens landlords?</h2>
+      <p class="brx-answer">Yes. Book the boiler service and gas safety certificate (CP12) together for £150. It saves you £20 and one visit for your tenant.</p>
+      <p>Renting is growing in St Helens, mainly in WA10 and WA12. By law, landlords must have every gas appliance they supply checked every 12 months. Tenants must get a copy within 28 days. The rules come from the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a>.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th></th><th>Boiler service</th><th>Gas safety certificate (CP12)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>What it does</strong></td><td>Cleans, tests and sets up the boiler</td><td>Checks every gas appliance is safe</td></tr>
+            <tr><td><strong>Needed by law?</strong></td><td>No, but most warranties need it</td><td>Yes, for landlords, every 12 months</td></tr>
+            <tr><td><strong>Price</strong></td><td>£95</td><td>£75</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="pf-info-bar" style="margin-top:2rem;">
-        <p style="font-size:0.88rem;color:var(--text);">We also service Potterton, Glow-worm, Viessmann, Alpha and most other brands found across St Helens. If you are unsure, call us on <a href="tel:0151 558 0334">0151 558 0334</a> and we will confirm before you book.</p>
-      </div>
+      <div class="brx-note"><p><strong>Gas fire in the front room?</strong> If you supply it, it must be on the certificate. We check the boiler, cooker and hob, not gas fires. We can cap the fire so it no longer needs to be on the certificate.</p></div>
+      <p>See our <a href="/gas-safety-certificate-st-helens">St Helens gas safety certificate</a> page for more. The <a href="https://www.nrla.org.uk/resources/looking-after-your-property/landlords-gas-safety-responsibilities" target="_blank" rel="noopener">NRLA</a> also has a useful guide.</p>
     </div>
   </section>
 
-
-  <!-- LANDLORD SECTION -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Boiler Service for St Helens Landlords</h2>
-      <p class="pf-sub">St Helens has a large and growing rental sector, particularly in WA10 and WA12. One visit. Service and CP12 together. Boiler, gas cooker and hob covered.</p>
-      <div class="pf-card pf-card-orange" style="margin-top:2rem;">
-        <h3 >Combined Service and Gas Safety Certificate. £150.</h3>
-        <p>St Helens landlords are legally required under the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety Regulations 1998</a> to have every gas appliance they supply, including boilers and gas fires, safety checked every year by a Gas Safe registered engineer, and to hold a valid CP12 gas safety certificate. A copy must be provided to tenants within 28 days of issue.</p>
-        <p>Our combined visit covers the full boiler service and the CP12 inspection of the boiler, gas cooker and hob in one appointment at £150. We do not check gas fires or back boilers. If you have a gas fire, we can disconnect and cap it safely, or it must be checked by an engineer registered for gas fires. Both documents emailed the same day. Accepted by all St Helens letting agents and the <a href="https://www.nrla.org.uk/resources/looking-after-your-property/landlords-gas-safety-responsibilities" target="_blank" rel="noopener">NRLA</a>. We service portfolio landlords across all St Helens WA postcodes and can coordinate tenant access.</p>
-      </div>
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;box-shadow:0 4px 14px rgba(249,115,22,0.3);">Book Combined Visit. £150.</a>
-      </div>
+  <section class="brx-sec brx-tint" id="warranty">
+    <div class="brx-wrap">
+      <h2>Will a service keep my boiler warranty valid?</h2>
+      <p class="brx-answer">Yes. Most boiler makers want a service every 12 months by a Gas Safe registered engineer, written in the Benchmark record. We do both on every visit.</p>
+      <p>Your boiler came with a Benchmark checklist, usually in the back of the manual. Each service goes into it. If the boiler breaks down under warranty, the maker can ask to see it. Miss a year and they can refuse a claim.</p>
+      <p>No service record at all? We can service the boiler and start a fresh record today. We service all the main makes, including Worcester Bosch, Vaillant, Ideal, Baxi, Glow-worm and Potterton.</p>
     </div>
   </section>
 
-
-  <!-- SIGNS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Signs Your St Helens Boiler Needs Servicing Now</h2>
-      <p class="pf-sub">Do not wait for the annual reminder if your boiler is showing any of these signs. We can often attend the same day.</p>
-      <div class="pf-signs" style="margin-top:2rem;">
-        <div class="pf-sign"><div><strong>Gas fire or back boiler with a lazy, yellow or orange flame</strong><p>A healthy gas flame is blue. Yellow or orange on a back boiler or gas fire indicates incomplete combustion. This is particularly dangerous in enclosed living room settings where combustion products can accumulate. Stop using the appliance immediately. Call us or Cadent Gas on 0800 111 999 if you suspect a gas emergency.</p></div></div>
-        <div class="pf-sign"><div><strong>Boiler making unusual noises</strong><p>Banging, kettling, gurgling or whistling sounds indicate developing faults. In older WA10 boilers, these often indicate scale build-up or a failing component that is far cheaper to address at a service than after a full breakdown.</p></div></div>
-        <div class="pf-sign"><div><strong>Boiler locking out repeatedly</strong><p>A boiler shutting itself down repeatedly is detecting a fault. Error codes point to the cause. A diagnostic visit identifies the underlying issue before it causes a complete failure during winter.</p></div></div>
-        <div class="pf-sign"><div><strong>Boiler pressure keeps dropping</strong><p>Repeated pressure loss indicates a leak somewhere in the heating circuit. This can damage the pump and heat exchanger if left unaddressed. A service will identify and document the source.</p></div></div>
-        <div class="pf-sign"><div><strong>More than 12 months since the last service</strong><p>An unserviced boiler is an unmonitored boiler. For back boilers in WA10 terraces, an unmonitored boiler is a specific carbon monoxide risk. Annual servicing is the only reliable way to confirm safe operation.</p></div></div>
-        <div class="pf-sign"><div><strong>No Benchmark certificate or service record on file</strong><p>If you have no record of when your boiler was last serviced, you have no evidence your warranty is protected. We can service and issue a current Benchmark update today.</p></div></div>
-      </div>
-      <div style="background:#c2410c;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Recognise any of these? Book a service today. Same-day available across WA10, WA11 and WA12.</p>
-        <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
-      </div>
+  <section class="brx-sec" id="signs">
+    <div class="brx-wrap">
+      <h2>Does your boiler need a check now?</h2>
+      <p class="brx-answer">If you see any of these signs, do not wait for the yearly service. Call us and we will take a look.</p>
+      <ul class="sg-ticks">
+        <li>The boiler keeps locking out or showing an error code.</li>
+        <li>The pressure keeps dropping, and you keep topping it up.</li>
+        <li>Banging, gurgling or kettling noises.</li>
+        <li>Black marks or soot around the boiler or gas fire.</li>
+        <li>It has been more than 12 months since the last service.</li>
+      </ul>
+      <div class="brx-danger"><p><strong>Yellow or orange flame on a boiler or gas fire, or a carbon monoxide alarm going off?</strong> Stop using it, open the windows and get everyone outside. Call the National Gas Emergency Service on <a href="tel:0800111999">0800 111 999</a> first. Then ring us.</p></div>
+      <p>If the boiler has stopped working, you need a repair, not a service. Call our <a href="/emergency-plumber-st-helens">emergency plumber in St Helens</a>. Cold spots on radiators? A <a href="/power-flushing-st-helens">power flush</a> may help.</p>
     </div>
   </section>
 
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Why St Helens Homeowners Choose Us for Their Annual Service</h2>
-      <p class="pf-sub">Gas Safe registered. £95 fixed price. HHIC checklist. A trusted team of engineers, led by James. Gas Safe registered WA10, WA11 and WA12 covered.</p>
-      <div class="pf-why-grid">
-        <div class="pf-why-item"><h3>Back Boiler Replacement</h3><p>We do not service back boilers. We remove them, disconnect and cap the gas fire, and fit a new combi. See <a href="/boiler-installation-st-helens">boiler installation in St Helens</a>.</p></div>
-        <div class="pf-why-item"><h3>£120 Fixed Price. No Hidden Extras.</h3><p>One price across all St Helens postcodes. No call-out fee, no system boiler surcharge. Any additional repair work quoted in writing before we start.</p></div>
-        <div class="pf-why-item"><h3>Gas Fires Capped Safely</h3><p>We do not check or service gas fires. If you no longer need one, we can disconnect and cap it safely. For landlords, a capped fire no longer has to be on the CP12.</p></div>
-        <div class="pf-why-item"><h3>Benchmark Updated on Every Visit</h3><p>We update the Benchmark commissioning record on every service visit. This is required to maintain manufacturer warranties. Many cheaper St Helens services skip this step. We never do.</p></div>
-        <div class="pf-why-item"><h3>Gas Safe Registered Plumber</h3><p>Every service carried out by our Gas Safe registered engineers. The same professional every year if you choose to rebook.</p></div>
-        <div class="pf-why-item"><h3>Annual Reminder Included Free</h3><p>We add you to our service reminder list and contact you when your next service is due. You never accidentally miss a year and risk voiding your warranty or landlord compliance.</p></div>
+  <section class="brx-sec brx-tint" id="st-helens">
+    <div class="brx-wrap">
+      <h2>Where in St Helens do you service boilers?</h2>
+      <p class="brx-answer">The whole borough and the edges of it. The price is the same in every postcode.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Town and central</h3>
+          <p>Town centre and Eccleston WA10. Sutton, Thatto Heath and Clock Face WA9. The most Victorian terraces, gas fires and back boilers.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Haydock and Rainford</h3>
+          <p>Haydock and Rainford WA11, plus Billinge WN5 and Garswood WN4. Mostly post-war homes, with older combis common.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Newton-le-Willows</h3>
+          <p>Newton-le-Willows and Earlestown WA12. A mix of Victorian terraces and newer homes with modern combis.</p>
+        </div>
       </div>
     </div>
   </section>
-
-
-  <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What St Helens Customers Say</h2>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--muted);">Google · 53 reviews</div>
-      </div>
-      <div class="pf-reviews">
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Amazing service James was very professional. Fixed my boiler and leaking tap very knowledgeable very fast and polite great company 100% recommended</p><div class="pf-review-footer"><div class="pf-review-avatar">D</div><div><div class="pf-review-name">David H</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>Quick response, clear communication and the plumber was clearly fully trained and knowledgeable. Very good service</p><div class="pf-review-footer"><div class="pf-review-avatar">P</div><div><div class="pf-review-name">Peter H</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Google Review</span></div><p>James was very professional, and his standard of work excellent. Would recommend in a heart beat. Thanks for the great work, and sound advice.</p><div class="pf-review-footer"><div class="pf-review-avatar">M</div><div><div class="pf-review-name">Mark L</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- MID CTA -->
-  <section style="background:var(--navy);padding:2rem 0;">
-    <div class="container">
-      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Need a boiler service or gas safety certificate in St Helens today?</h3>
-      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Same-day appointments available across WA10, WA11 and WA12. £120 fixed price. No call-out fee.</p>
-      <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-    </div>
-  </section>
-
-
-  <!-- HOW IT WORKS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>How Our St Helens Boiler Service Works</h2>
-      <p class="pf-sub">Simple, professional and completed within one hour for combi boilers, slightly longer for system boilers.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step"><div class="pf-step-num">1</div><div><strong>Book online or by phone</strong><p>Call 0151 558 0334 or book via our contact page. Morning and afternoon slots available across WA10, WA11 and WA12. Same-day often available. We confirm by text with a 30-minute arrival window.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">2</div><div><strong>Gas Safe engineer arrives at your St Helens property</strong><p>Our own Gas Safe registered engineer arrives with all tools, test equipment and common parts.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">3</div><div><strong>Full HHIC service carried out</strong><p>45 to 60 minutes for combi boilers, 60 to 75 minutes for system boilers. Full combustion gas analysis including spillage test where applicable. Inhibitor tested and topped up. Benchmark updated.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">4</div><div><strong>Findings explained. Any repair quote in writing.</strong><p>Before leaving, exactly what was found is explained clearly. If a repair is needed, a written quote is given before any additional work starts. No surprise charges ever.</p></div></div>
-        <div class="pf-step"><div class="pf-step-num">5</div><div><strong>Certificate emailed same day. Annual reminder set.</strong><p>Service certificate and CP12 where applicable emailed before end of working day. Added to annual reminder list so you never miss a service year.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Boiler Service St Helens. Your Questions Answered</h2>
-      <p class="pf-sub">Straight answers to what St Helens homeowners and landlords ask most.</p>
-      <div class="pf-faq">
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does a boiler service cost in St Helens?</summary><div class="pf-faq-body"><p>A standard annual boiler service costs £95 fixed price. Checkatrade data places the St Helens average at £103. The difference covers the inhibitor test and top-up, the Benchmark update and the full combustion gas analysis, steps that some cheaper services in the area skip. Combined service and CP12 costs £150. Boiler repair from £120 for the first hour, including diagnosis. No call-out fee on any of these.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">BACK BOILER</span>&nbsp; Can you service a back boiler in St Helens?</summary><div class="pf-faq-body"><p>No. We do not service back boilers. St Helens still has many of them, often behind a gas fire in a WA10 Victorian terrace. Most are now old and obsolete. We remove the back boiler, disconnect and safely cap the gas fire in front of it, and fit a new combi. See <a href="/boiler-installation-st-helens">boiler installation in St Helens</a>.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS FIRE</span>&nbsp; Can you service the gas fire at the same visit as the boiler?</summary><div class="pf-faq-body"><p>No. We do not service gas fires. If you no longer need the fire, we can disconnect and cap it safely. For landlords, the CP12 must cover every gas appliance you supply, including a gas fire. A capped fire no longer has to be on the certificate. If you want to keep using it, it must be checked by an engineer registered for gas fires.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-green">LANDLORDS</span>&nbsp; Do you provide CP12 certificates for St Helens landlords?</summary><div class="pf-faq-body"><p>Yes. Combined boiler service and CP12 costs £150 in a single visit. Both documents emailed the same day. Accepted by all St Helens letting agents. We service portfolios across WA10, WA11 and WA12 and coordinate tenant access on your behalf.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">BENCHMARK</span>&nbsp; Does the service include a Benchmark certificate update?</summary><div class="pf-faq-body"><p>Yes. We update the Benchmark commissioning record on every service visit across St Helens. This is required by all major manufacturers to maintain warranty validity. It is also one of the most commonly skipped steps by cheaper engineers in the area. If a previous engineer did not update your Benchmark, your warranty protection may not be intact.</p></div></details>
-        <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">GAS SAFE</span>&nbsp; Are you Gas Safe registered for St Helens boiler work?</summary><div class="pf-faq-body"><p>Yes. Gas work is done by Gas Safe registered engineers. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. All boiler services in St Helens are carried out by our Gas Safe registered engineers. All gas work is done by a Gas Safe registered plumber.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Servicing Across St Helens and Surrounding Areas</h2>
-      <p class="pf-sub">We carry out boiler services across all St Helens postcodes. Same-day available throughout.</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem;">
-        <div class="pf-card"><h3>St Helens Town Centre and Central</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Highest concentration of back boilers and older systems. Back boilers replaced with a new combi. Gas fires disconnected and capped.</p><div class="pf-pills"><span class="pf-pill">Town Centre WA10</span><span class="pf-pill">Eccleston WA10</span><span class="pf-pill">Sutton WA9</span><span class="pf-pill">Thatto Heath WA9</span><span class="pf-pill">Clock Face WA9</span></div></div>
-        <div class="pf-card"><h3>Haydock and Rainford</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Post-war housing stock. Older combi and back boilers common. Inhibitor levels priority on every service.</p><div class="pf-pills"><span class="pf-pill">Haydock WA11</span><span class="pf-pill">Rainford WA11</span><span class="pf-pill">Billinge WN5</span><span class="pf-pill">Garswood WN4</span></div></div>
-        <div class="pf-card"><h3>Newton-le-Willows and Earlestown</h3><p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;">Mixed property types. Modern combis and Victorian terraces. Appropriate service for every boiler type.</p><div class="pf-pills"><span class="pf-pill">Newton-le-Willows WA12</span><span class="pf-pill">Earlestown WA12</span><span class="pf-pill">Golborne WA3</span><span class="pf-pill">Burtonwood WA5</span></div></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f8fafc;">
-    <div class="container">
-      <h2>Related Plumbing and Heating Services in St Helens</h2>
-      <p class="pf-sub">All Gas Safe registered. All St Helens WA postcodes covered.</p>
-      <div class="pf-related">
-        <a href="/boiler-installation-st-helens" class="pf-related-link"><div><strong>Boiler Installation St Helens</strong><span>New boiler from £2,195 fully fitted. Back boiler replacement specialists.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/gas-safety-certificate-st-helens" class="pf-related-link"><div><strong>Gas Safety Certificate St Helens</strong><span>CP12 from £75. Combined with boiler service for £150. Boiler, cooker and hob covered.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/power-flushing-st-helens" class="pf-related-link"><div><strong>Power Flushing St Helens</strong><span>Cold radiators or noisy boiler? Power flush from £395. Protects boiler warranty.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/central-heating-installation-st-helens" class="pf-related-link"><div><strong>Central Heating St Helens</strong><span>Full systems from £4,495. Radiator additions from £245.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/emergency-plumber-st-helens" class="pf-related-link"><div><strong>Emergency Plumber St Helens</strong><span>Boiler broken down? 30 min response 24/7. From £120. No call-out fee. WA10, WA11, WA12.</span></div><span class="pf-related-arrow">→</span></a>
-        <a href="/get-started" class="pf-related-link"><div><strong>Book Online</strong><span>Book your St Helens boiler service online. Same-day often available.</span></div><span class="pf-related-arrow">→</span></a>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- SAME SERVICE OTHER LOCATIONS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Service Across Merseyside</h2>
-      <p class="pf-sub">Annual boiler service from £95 fixed price. Gas Safe registered. HHIC checklist followed. Same pricing in every location.</p>
-      <div class="pf-related" style="margin-top:1.5rem;">
-        <a href="/boiler-service-wirral" class="pf-related-link"><div><strong>Boiler Service Wirral</strong><span>Annual boiler service from £95. System boiler specialists. Certificate same day. All Wirral CH postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-service-liverpool" class="pf-related-link"><div><strong>Boiler Service Liverpool</strong><span>Annual boiler service £95 fixed price. HHIC checklist. Benchmark updated. Certificate same day. All Liverpool postcodes.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-        <a href="/boiler-service-formby" class="pf-related-link"><div><strong>Boiler Service Formby</strong><span>Annual boiler service from £95. System boiler and cylinder specialists. G3 qualified engineers. Formby L37.</span></div><span class="pf-related-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:var(--white);font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book Your St Helens Boiler Service Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">£120 fixed price. HHIC checklist. Certificate same day. Gas Safe registered. WA10, WA11 and WA12 covered.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Service Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;">St Helens landlord? Book the combined service and gas safety certificate for £150.</p>
-    </div>
-  </section>
-
-  </div>
-
-</BaseLayout>
+</ServiceGuide>
