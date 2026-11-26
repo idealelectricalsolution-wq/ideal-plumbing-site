@@ -7,6 +7,14 @@ const PHONE = '0151 558 0334';
 const UPDATED = '26 November 2026';
 
 // ---------- Common problems ----------
+const guides: Record<string, [string, string]> = {
+  'no-heating-no-hot-water': ['/no-heating-no-hot-water-liverpool', 'Full guide: no heating or hot water'],
+  'hot-water-no-heating': ['/no-heating-no-hot-water-liverpool', 'Full guide: no heating or hot water'],
+  'heating-no-hot-water': ['/no-heating-no-hot-water-liverpool', 'Full guide: no heating or hot water'],
+  'losing-pressure': ['/boiler-losing-pressure-liverpool', 'Full guide: boiler losing pressure'],
+  'pressure-too-high': ['/boiler-losing-pressure-liverpool', 'Full guide: boiler pressure'],
+  'frozen-condensate': ['/frozen-condensate-pipe-liverpool', 'Full guide: how to thaw a frozen condensate pipe'],
+};
 const problems = [
   {
     id: 'no-heating-no-hot-water', q: 'Why do I have no heating and no hot water?', t: 'No heating and no hot water',
@@ -374,6 +382,7 @@ const schemaCrumbs = {
           <p class="brx-label">What you can try</p>
           <p>{p.tryIt}</p>
           <p class="brx-call"><strong>Call us if:</strong> {p.call}</p>
+          {guides[p.id] && <p><a href={guides[p.id][0]}>{guides[p.id][1]} →</a></p>}
         </details>
       ))}
       <div class="brx-cta">

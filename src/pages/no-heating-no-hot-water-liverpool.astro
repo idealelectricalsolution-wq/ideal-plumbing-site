@@ -1,0 +1,161 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/no-heating-no-hot-water-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const faqs = [
+  { q: 'Why do I have no heating and no hot water?', a: 'The most common causes are low boiler pressure, no gas reaching the boiler, a frozen condensate pipe in cold weather, or a fault in the boiler itself, such as the ignition, fan or pump. Try the checks on this page first.' },
+  { q: 'Why do I have hot water but no heating?', a: 'On a combi boiler this often points to a stuck diverter valve, the thermostat or timer, or a pump fault. On a system with a hot water tank, it can be a zone valve. Check the thermostat is turned up and the timer is on first.' },
+  { q: 'Why do I have heating but no hot water?', a: 'On a combi boiler, a faulty diverter valve or flow sensor is a common cause. On a system with a tank, check the hot water timer and the cylinder thermostat. An immersion heater can give you hot water while you wait for us.' },
+  { q: 'Should I keep resetting my boiler?', a: 'Reset it once after you have done the checks. If it locks out again, stop and call us. Pressing reset again and again will not fix the fault.' },
+  { q: 'How much does it cost to fix?', a: 'Our first hour is £120 on weekdays from 9am to 4pm, £150 in the evenings, at night and at weekends, and £180 on bank holidays. It includes finding the fault. There is no call-out fee. Parts are priced before we fit them.' },
+  { q: 'Can you come out today?', a: 'Yes. We are open 24/7 and guarantee a 30 minute response across Liverpool. Call 0151 558 0334.' },
+  { q: 'Do you fix all boiler brands?', a: 'Yes. Worcester Bosch, Vaillant, Baxi, Ideal, Glow-worm, Potterton and others. Gas work is done by our Gas Safe registered engineers.' },
+  { q: 'Is my boiler worth fixing?', a: 'Often it is. If it is under 10 years old and the fault is a common part, a repair usually makes sense. If it is old and breaking down often, we will tell you honestly and give you a price for both.' },
+  { q: 'I am a tenant. What should I do?', a: 'Tell your landlord or letting agent straight away. Landlords must keep the heating and hot water working. If your landlord asks us to come out, we can arrange it with you.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="No Heating or Hot Water? 5 Checks + 24/7 Help Liverpool"
+  description="No heating or hot water? Try these 5 quick checks first. Still not working? Our Gas Safe engineers come out 24/7 across Liverpool. First hour £120, no call-out fee. Call 0151 558 0334."
+  h1="No Heating or Hot Water in Liverpool?"
+  badge="24/7 · no call-out fee"
+  intro="No heating, no hot water, or both? Try the 5 quick checks below first. Many people get going again in minutes. If it still will not work, call us. Our Gas Safe registered engineers come out 24/7, with a guaranteed 30 minute response across Liverpool."
+  stats={[['30 min', 'Guaranteed response'], ['£0', 'Call-out fee']]}
+  ticks={['24/7', 'No Call-Out Fee', 'Gas Safe Registered', '5.0 on Google']}
+  secondaryCta={{ href: '#checks', label: 'Try the 5 checks' }}
+  factsTitle="No heating or hot water at a glance"
+  facts={[
+    ['First', 'Check the gas, the power, the pressure, the thermostat and, in freezing weather, the condensate pipe.'],
+    ['Then', 'Reset the boiler once. If it locks out again, call us.'],
+    ['Price', 'First hour £120 weekdays 9am to 4pm, £150 out of hours. Includes finding the fault.'],
+    ['Call-out fee', 'None, day or night.'],
+    ['Response', 'Guaranteed within 30 minutes across Liverpool, 24/7.'],
+  ]}
+  toc={[
+    ['checks', 'What should I check first?'],
+    ['which', 'Heating, hot water or both?'],
+    ['call', 'When should I call you?'],
+    ['cost', 'How much does it cost?'],
+    ['meantime', 'How do I keep warm meanwhile?'],
+  ]}
+  reviews={['Brendan C', 'Roger D', 'David H', 'Edward M']}
+  reviewTitle="What do customers say about our boiler call-outs?"
+  faqs={faqs}
+  areasTitle="Where do you come out to?"
+  areasText="All of Liverpool, L1 to L40, plus Kirkby, Huyton, Bootle, Crosby, Maghull, the Wirral, St Helens, Formby and Southport. Same prices everywhere."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-anfield', label: 'Anfield' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-old-swan', label: 'Old Swan' },
+    { href: '/emergency-plumber-kirkby', label: 'Kirkby' },
+    { href: '/emergency-plumber-huyton', label: 'Huyton' },
+    { href: '/emergency-plumber-norris-green', label: 'Norris Green' },
+  ]}
+  related={[
+    { href: '/boiler-repair-liverpool', title: 'Boiler repair', text: 'All faults and error codes, first hour £120' },
+    { href: '/frozen-condensate-pipe-liverpool', title: 'Frozen condensate pipe', text: 'The 15 minute winter fix' },
+    { href: '/boiler-losing-pressure-liverpool', title: 'Boiler losing pressure', text: 'How to top up, and when to call' },
+    { href: '/boiler-installation-liverpool', title: 'New boilers', text: 'From £2,195 fully fitted' },
+  ]}
+  finalTitle="Still no heating or hot water?"
+  finalText="Call us now. A real person answers 24/7, and there is no call-out fee."
+  serviceName="No Heating or Hot Water Repair Liverpool"
+  serviceType="Boiler repair"
+  serviceDesc="Emergency repairs for no heating and no hot water across Liverpool and Merseyside, 24/7, by Gas Safe registered engineers. First hour from £120, no call-out fee."
+  noPackagesOffers={[
+    { name: 'Boiler repair, first hour, weekdays 9am to 4pm', price: '120' },
+    { name: 'Boiler repair, first hour, evenings, nights and weekends', price: '150' },
+    { name: 'Boiler repair, first hour, bank holidays', price: '180' },
+  ]}
+>
+  <section class="brx-sec brx-tint" id="checks">
+    <div class="brx-wrap">
+      <h2>What should I check first?</h2>
+      <p class="brx-answer">Do these 5 checks, then reset the boiler once. They take about 5 minutes.</p>
+      <ol class="sg-steps">
+        <li><strong>Is the gas on?</strong> Try your gas hob. If it will not light, the gas is off, or a prepayment meter may be out of credit.</li>
+        <li><strong>Is the power on?</strong> Check the boiler display is lit and the switch next to the boiler is on. Check the fuse box for a tripped switch.</li>
+        <li><strong>Is the pressure right?</strong> The gauge on the boiler should read 1 to 1.5 bar when the heating is off. Below 1 bar, top it up. See <a href="/boiler-losing-pressure-liverpool">how to top up boiler pressure</a>.</li>
+        <li><strong>Is the thermostat calling for heat?</strong> Turn it up a few degrees above room temperature. Check the timer or app is set to on. Change the batteries in a wireless thermostat.</li>
+        <li><strong>Is it freezing outside?</strong> If the boiler gurgles and shows a fault, the condensate pipe may be frozen. See <a href="/frozen-condensate-pipe-liverpool">how to thaw it</a>.</li>
+      </ol>
+      <p>Then press the reset button once. If the boiler fires up, you are done. If it locks out again, call us.</p>
+      <div class="brx-note"><p><strong>Smell gas?</strong> Do not touch any switches. Open the windows, leave the house and call the National Gas Emergency line on 0800 111 999. Then call us once it is safe.</p></div>
+      <div class="brx-cta">
+        <p><strong>Done the checks and still no heat?</strong> Our Gas Safe registered engineers come out 24/7.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>No heating, no hot water, or both?</h2>
+      <p class="brx-answer">Which one has stopped tells us a lot about the fault.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>What has stopped</th><th>Common causes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Both heating and hot water</strong></td><td>Low pressure, no gas, a frozen condensate pipe, or a boiler fault such as the ignition, fan or gas valve</td></tr>
+            <tr><td><strong>Heating only, hot water works</strong></td><td>Thermostat or timer, a stuck diverter or zone valve, or the pump</td></tr>
+            <tr><td><strong>Hot water only, heating works</strong></td><td>On a combi, the diverter valve or flow sensor. With a tank, the hot water timer, cylinder thermostat or zone valve</td></tr>
+            <tr><td><strong>Some radiators cold</strong></td><td>Air in the radiators, sludge, or a stuck valve. Try bleeding them first</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Your boiler may show a fault code. Look it up on our <a href="/boiler-repair-liverpool#error-codes">boiler error codes</a> list for Worcester Bosch, Vaillant, Baxi, Ideal and more.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="call">
+    <div class="brx-wrap">
+      <h2>When should I call you?</h2>
+      <p class="brx-answer">Call us if the checks and one reset have not worked, or straight away if you see any of the signs below.</p>
+      <ul class="sg-ticks">
+        <li>The boiler locks out again after a reset</li>
+        <li>Water is leaking from the boiler or pipes</li>
+        <li>The pressure keeps dropping after you top it up</li>
+        <li>Banging, loud whistling or kettling noises</li>
+        <li>Someone at home is elderly, unwell or a baby, and it is cold</li>
+      </ul>
+      <p>Do not take the boiler casing off. By law, only a Gas Safe registered engineer can work on the gas parts of a boiler.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does it cost?</h2>
+      <p class="brx-answer">The first hour is £120 on weekdays, 9am to 4pm, and includes finding the fault. There is no call-out fee.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>When</th><th>First hour, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Weekdays, 9am to 4pm</strong></td><td>£120</td></tr>
+            <tr><td><strong>Evenings, nights and weekends</strong></td><td>£150</td></tr>
+            <tr><td><strong>Bank holidays</strong></td><td>£180</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>If a part is needed, we tell you the price before we fit it. If the job needs more time, we tell you before we carry on. See our full <a href="/plumber-prices-liverpool">price list</a>.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="meantime">
+    <div class="brx-wrap">
+      <h2>How do I keep warm until it is fixed?</h2>
+      <p class="brx-answer">Close doors to keep heat in one room, and use safe back-up heat.</p>
+      <ul class="sg-ticks">
+        <li>Use an electric heater in the room you are in. Keep it away from curtains and bedding</li>
+        <li>If you have a hot water tank, switch on the immersion heater for hot water</li>
+        <li>Close curtains at dusk and keep internal doors shut</li>
+        <li>Never use a gas oven or hob to heat a room</li>
+      </ul>
+    </div>
+  </section>
+</ServiceGuide>
