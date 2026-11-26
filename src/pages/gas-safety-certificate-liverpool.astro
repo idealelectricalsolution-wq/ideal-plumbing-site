@@ -5,23 +5,23 @@ const TEL = 'tel:01515580334';
 const PHONE = '0151 558 0334';
 
 const packages = [
-  { id: 'cp12', tier: 'Landlord certificate', name: 'Gas safety certificate (CP12)', price: '£75', unit: 'boiler or one gas appliance, inc VAT',
+  { id: 'cp12', tier: 'Landlord certificate', name: 'Gas safety certificate (CP12)', price: '£120', unit: 'boiler or one gas appliance, inc VAT',
     points: ['Each extra gas appliance £10', 'Certificate emailed the same day', 'Free reminder next year'] },
-  { id: 'combined', tier: 'Best value', popular: true, name: 'Gas safety certificate + boiler service', price: '£150', unit: 'one visit, inc VAT',
+  { id: 'combined', tier: 'Best value', popular: true, name: 'Gas safety certificate + boiler service', price: '£195', unit: 'one visit, inc VAT',
     points: ['Save £20 on booking them apart', 'Keeps the boiler warranty valid', 'Both records emailed the same day'] },
-  { id: 'portfolio', tier: 'Landlords and agents', name: 'Three or more properties', price: '£70', unit: 'per certificate, inc VAT',
+  { id: 'portfolio', tier: 'Landlords and agents', name: 'Five or more properties', price: '£100', unit: 'per certificate, inc VAT',
     points: ['One contact for every address', 'We arrange access with tenants', 'Renewal dates tracked for you'] },
 ];
 
 const faqs = [
-  { q: 'How much is a gas safety certificate in Liverpool?', a: 'With us it is £75 including VAT for the boiler or one gas appliance, and £10 for each extra appliance, such as a gas cooker or hob. A certificate and a boiler service together are £150. Landlords with three or more properties pay £70 per certificate.' },
+  { q: 'How much is a gas safety certificate in Liverpool?', a: 'With us it is £120 including VAT for the boiler or one gas appliance, and £10 for each extra appliance, such as a gas cooker or hob. A certificate and a boiler service together are £195. Landlords with five or more properties pay £100 per certificate.' },
   { q: 'How long does a gas safety check take?', a: 'Most flats and houses take under an hour. A home with a boiler and a gas hob is often done in 30 to 45 minutes.' },
   { q: 'Do I need to be there?', a: 'No. Many landlords are not. We can arrange a time with your tenant or letting agent, and email the certificate to you afterwards.' },
   { q: 'What if my tenant will not let you in?', a: 'Keep a record of every attempt to get access, such as texts and emails. The law expects you to take reasonable steps. We will try again at a time that suits the tenant, and we can give you a note of each missed visit.' },
   { q: 'Can I renew early without losing months?', a: 'Yes. If the check is done up to 2 months before the old certificate runs out, the new one keeps the old expiry date. You do not lose any time.' },
   { q: 'Do I pay if something fails?', a: 'Yes, the check is still paid for, because the engineer has done the work. If something needs fixing, we tell you the price before we do it. Once it is safe, we issue the certificate.' },
   { q: 'Do you check gas fires?', a: 'No. Our certificate covers boilers, gas cookers and hobs. If a property has a gas fire, it needs an engineer registered for gas fires, or we can disconnect and cap it safely.' },
-  { q: 'Is a gas safety certificate the same as a boiler service?', a: 'No. The certificate checks that every gas appliance is safe to use. A service cleans and checks the boiler inside, so it keeps working well and keeps its warranty. Many landlords book both in one visit for £150.' },
+  { q: 'Is a gas safety certificate the same as a boiler service?', a: 'No. The certificate checks that every gas appliance is safe to use. A service cleans and checks the boiler inside, so it keeps working well and keeps its warranty. Many landlords book both in one visit for £195.' },
   { q: 'Do I need a carbon monoxide alarm?', a: 'In a rented home, yes. Since October 2022, landlords must fit a carbon monoxide alarm in any room with a fixed fuel-burning appliance, such as a gas boiler. Gas cookers are not included. We check the alarm works during the visit.' },
   { q: 'Do I need a certificate to sell my house?', a: 'It is not a legal must for a home you live in. But many buyers and their solicitors ask for one, and it can stop a sale being held up. The same check works for this.' },
   { q: 'Can I get a certificate today?', a: 'Often, yes, when we have a free slot. Call 0151 558 0334 to check. The certificate is emailed the same day.' },
@@ -31,12 +31,12 @@ const faqs = [
 
 <ServiceGuide
   url={URL_}
-  title="Gas Safety Certificate Liverpool | Landlord CP12 From £75 | Same Day"
-  description="Landlord gas safety certificate (CP12) in Liverpool from £75 inc VAT. CP12 + boiler service £150. Gas Safe registered, certificate emailed the same day. Call 0151 558 0334."
+  title="Gas Safety Certificate Liverpool | Landlord CP12 From £120 | Same Day"
+  description="Landlord gas safety certificate (CP12) in Liverpool from £120 inc VAT. CP12 + boiler service £195. Gas Safe registered, certificate emailed the same day. Call 0151 558 0334."
   h1="Gas Safety Certificate Liverpool"
   badge="Landlord CP12 · emailed the same day"
-  intro="A landlord gas safety certificate (CP12) from £75 including VAT. Our Gas Safe registered engineers check your boiler, gas cooker and hob, and email the certificate the same day. We can arrange access with your tenant, so you do not need to be there."
-  stats={[['£75', 'CP12, inc VAT'], ['Same day', 'Certificate emailed']]}
+  intro="A landlord gas safety certificate (CP12) from £120 including VAT. Our Gas Safe registered engineers check your boiler, gas cooker and hob, and email the certificate the same day. We can arrange access with your tenant, so you do not need to be there."
+  stats={[['£120', 'CP12, inc VAT'], ['Same day', 'Certificate emailed']]}
   ticks={['Gas Safe Registered', 'Certificate Same Day', 'Free Renewal Reminder', '5.0 on Google']}
   pkTitle="Gas safety certificate prices"
   pkLede="Fixed prices, including VAT. No call-out fee and no hidden extras."
@@ -44,7 +44,7 @@ const faqs = [
   pkNote="Prices cover boilers, gas cookers and hobs. Gas fires are not included; we can disconnect and cap one safely. Any repair is priced before we do it."
   factsTitle="Gas safety certificates at a glance"
   facts={[
-    ['Price', '£75 for the boiler or one appliance, £10 per extra appliance. With a boiler service: £150.'],
+    ['Price', '£120 for the boiler or one appliance, £10 per extra appliance. With a boiler service: £195.'],
     ['Time', 'Usually under an hour. Certificate emailed the same day.'],
     ['Covers', 'Boilers, gas cookers and hobs. Not gas fires.'],
     ['Law', 'Every rented home needs a new check every 12 months.'],
@@ -82,7 +82,7 @@ const faqs = [
     { href: '/blog/hmo-gas-safety-liverpool-landlords', title: 'HMO gas safety guide', text: 'What Liverpool HMO landlords must do' },
   ]}
   finalTitle="Book your gas safety certificate"
-  finalText="£75 including VAT. Certificate emailed the same day. We can arrange access with your tenant."
+  finalText="£120 including VAT. Certificate emailed the same day. We can arrange access with your tenant."
   serviceName="Gas Safety Certificate Liverpool"
   serviceType="Landlord gas safety certificate (CP12)"
   serviceDesc="Landlord gas safety certificates (CP12) across Liverpool and Merseyside by Gas Safe registered engineers. Boilers, gas cookers and hobs. Certificate emailed the same day."
@@ -180,7 +180,7 @@ const faqs = [
           </tbody>
         </table>
       </div>
-      <p>Book both in one visit for <strong>£150</strong> and save £20. See our <a href="/boiler-service-liverpool">boiler service</a> page for what the service includes.</p>
+      <p>Book both in one visit for <strong>£195</strong> and save £20. See our <a href="/boiler-service-liverpool">boiler service</a> page for what the service includes.</p>
     </div>
   </section>
 
@@ -190,7 +190,7 @@ const faqs = [
       <h3>HMOs in Liverpool</h3>
       <p>Liverpool City Council expects a valid gas safety certificate for every HMO licence. HMOs often have a gas hob in a shared kitchen as well as the boiler. We check them all in one visit and list each one on the certificate.</p>
       <h3>Portfolio landlords and agents</h3>
-      <p>With three or more properties, each certificate is £70. You get one contact, and we track every renewal date for you. We can work straight with your letting agent and tenants.</p>
+      <p>With five or more properties, each certificate is £100. You get one contact, and we track every renewal date for you. We can work straight with your letting agent and tenants.</p>
       <h3>Buying or selling</h3>
       <p>A gas safety check before you sell can answer a buyer's questions early. If you are buying, it tells you the boiler and gas supply are safe before you move in.</p>
       <div class="brx-note">

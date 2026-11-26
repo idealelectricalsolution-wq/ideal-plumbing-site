@@ -9,18 +9,18 @@ const PHONE = '0151 558 0334';
 const packages = [
   { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£95', unit: 'fixed price, inc VAT',
     points: ['Combi, system and regular gas boilers', 'Same price across WA9 to WA12', 'Service record emailed the same day', 'Free reminder next year'] },
-  { id: 'combined', tier: 'Best value', popular: true, name: 'Boiler service + gas safety certificate (CP12)', price: '£150', unit: 'one visit, inc VAT',
+  { id: 'combined', tier: 'Best value', popular: true, name: 'Boiler service + gas safety certificate (CP12)', price: '£195', unit: 'one visit, inc VAT',
     points: ['Save £20 on booking them apart', 'Ideal for St Helens landlords', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day'] },
   { id: 'cylinder', tier: 'Unvented hot water', name: 'Unvented cylinder service', price: '£120', unit: 'fixed price, inc VAT',
     points: ['For mains pressure cylinders', 'Safety valves and expansion vessel checked', 'All our engineers are G3 qualified', 'Keeps the cylinder warranty valid'] },
 ];
 
 const faqs = [
-  { q: 'How much does a boiler service cost in St Helens?', a: 'With us it is £95 including VAT, fixed price, with no call-out fee. A boiler service and gas safety certificate together are £150. An unvented cylinder service is £120.' },
+  { q: 'How much does a boiler service cost in St Helens?', a: 'With us it is £95 including VAT, fixed price, with no call-out fee. A boiler service and gas safety certificate together are £195. An unvented cylinder service is £120.' },
   { q: 'Do you cover all St Helens postcodes?', a: 'Yes. We cover WA9, WA10, WA11 and WA12, from the town centre and Thatto Heath to Haydock, Rainford and Newton-le-Willows. We also cover Billinge and Garswood. The price is the same everywhere.' },
   { q: 'Can you service a back boiler in St Helens?', a: 'No. We do not service back boilers. Many are now old and parts are hard to find. We can take the back boiler out, cap the gas fire in front of it, and fit a new combi.' },
   { q: 'Can you service the gas fire at the same visit?', a: 'No. We do not service gas fires. If you no longer need the fire, we can disconnect and cap it safely. If you want to keep it, it must be checked by an engineer registered for gas fires.' },
-  { q: 'Do you provide CP12 certificates for St Helens landlords?', a: 'Yes. A boiler service and CP12 in one visit cost £150. We check the boiler, gas cooker and hob. We can arrange access with your tenant or agent, and email both records the same day.' },
+  { q: 'Do you provide CP12 certificates for St Helens landlords?', a: 'Yes. A boiler service and CP12 in one visit cost £195. We check the boiler, gas cooker and hob. We can arrange access with your tenant or agent, and email both records the same day.' },
   { q: 'How long does a boiler service take?', a: 'Most combi services take 45 to 60 minutes. A system boiler takes about 60 to 75 minutes.' },
   { q: 'Does a service keep my boiler warranty valid?', a: 'Yes. Most boiler makers ask for a service every 12 months by a Gas Safe registered engineer. We fill in the Benchmark service record on every visit, which is what the maker will ask to see.' },
   { q: 'Do you offer a boiler service plan?', a: 'No. We do not sell a monthly plan or boiler cover. You pay £95 when you have the service. We send a free reminder when the next one is due.' },
@@ -31,7 +31,7 @@ const faqs = [
 <ServiceGuide
   url={URL_}
   title="Boiler Service St Helens | WA9 to WA12, Gas Safe From £95"
-  description="Annual boiler service in St Helens for £95 inc VAT. Service + CP12 £150. Gas Safe registered engineers across WA9, WA10, WA11 and WA12. Old back boilers replaced with a combi. Call 0151 558 0334."
+  description="Annual boiler service in St Helens for £95 inc VAT. Service + CP12 £195. Gas Safe registered engineers across WA9, WA10, WA11 and WA12. Old back boilers replaced with a combi. Call 0151 558 0334."
   h1="Boiler Service St Helens"
   badge="Gas Safe registered · WA9 to WA12"
   intro="An annual boiler service in St Helens for £95 including VAT, with no call-out fee. Our Gas Safe registered engineers clean and test your boiler in about an hour. Still got an old back boiler? We take it out and fit a new combi."
@@ -43,7 +43,7 @@ const faqs = [
   pkNote="Prices are for gas boilers. We do not service back boilers or gas fires. If we find a fault, we tell you the repair price before we do anything."
   factsTitle="St Helens boiler servicing at a glance"
   facts={[
-    ['Price', '£95 for a boiler service. With a gas safety certificate: £150.'],
+    ['Price', '£95 for a boiler service. With a gas safety certificate: £195.'],
     ['Time', '45 to 60 minutes for a combi. 60 to 75 minutes for a system boiler.'],
     ['Paper', 'Benchmark service record emailed the same day.'],
     ['Back boilers', 'Not serviced. We remove them and fit a new combi.'],
@@ -69,7 +69,7 @@ const faqs = [
     { href: '/boiler-service-formby', label: 'Formby' },
   ]}
   related={[
-    { href: '/gas-safety-certificate-st-helens', title: 'Gas safety certificate St Helens', text: 'Landlord CP12 £75, or £150 with a service' },
+    { href: '/gas-safety-certificate-st-helens', title: 'Gas safety certificate St Helens', text: 'Landlord CP12 £75, or £195 with a service' },
     { href: '/boiler-installation-st-helens', title: 'Boiler installation St Helens', text: 'New combi from £2,195, back boilers removed' },
     { href: '/power-flushing-st-helens', title: 'Power flushing St Helens', text: 'Cold radiators and sludge, from £395' },
     { href: '/central-heating-installation-st-helens', title: 'Central heating St Helens', text: 'Full new systems from £4,495' },
@@ -156,7 +156,7 @@ const faqs = [
   <section class="brx-sec" id="landlords">
     <div class="brx-wrap">
       <h2>Do you do boiler services for St Helens landlords?</h2>
-      <p class="brx-answer">Yes. Book the boiler service and gas safety certificate (CP12) together for £150. It saves you £20 and one visit for your tenant.</p>
+      <p class="brx-answer">Yes. Book the boiler service and gas safety certificate (CP12) together for £195. It saves you £20 and one visit for your tenant.</p>
       <p>Renting is growing in St Helens, mainly in WA10 and WA12. By law, landlords must have every gas appliance they supply checked every 12 months. Tenants must get a copy within 28 days. The rules come from the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a>.</p>
       <div class="brx-table-wrap">
         <table class="brx-table">
