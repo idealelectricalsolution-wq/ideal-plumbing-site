@@ -11,6 +11,9 @@ const ICONS = {
   thermo: '<path d="M14 14.8V4.5a2 2 0 0 0-4 0v10.3a4 4 0 1 0 4 0z"/><path d="M4 4l16 16"/>',
   radiator: '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7.5 6v12M12 6v12M16.5 6v12M5 18v2M19 18v2"/>',
   tap: '<path d="M3 9h9a5 5 0 0 1 5 5v1"/><path d="M8 9V5M5 5h6"/><path d="M17 18.5c0 .8-.6 1.5-1.2 2.5h2.4c-.6-1-1.2-1.7-1.2-2.5z"/>',
+  toilet: '<path d="M5 3h6v7H5z"/><path d="M4 10h14a0 0 0 0 1 0 0 6 6 0 0 1-6 6H10a6 6 0 0 1-6-6z"/><path d="M9 16l-1 5h7l-1-5"/>',
+  shower: '<path d="M4 20V8a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4"/><path d="M10 8h8"/><path d="M12 12v1M15 12v1M18 12v1M12 16v1M15 16v1M18 16v1"/>',
+  gauge: '<circle cx="12" cy="13" r="8"/><path d="M12 13l4-4"/><path d="M8 21h8"/>',
 };
 const problems = [
   { icon: 'drop', title: 'Leak or burst pipe', text: 'Water pouring or dripping', href: '/leak-detection-liverpool' },
@@ -19,6 +22,17 @@ const problems = [
   { icon: 'thermo', title: 'No hot water', text: 'Cold taps and showers', href: '/boiler-repair-liverpool' },
   { icon: 'radiator', title: 'Radiator leaking', text: 'Valve, pipe or radiator', href: '/radiators-liverpool' },
   { icon: 'tap', title: 'Sink or tap leaking', text: 'Under the sink or dripping', href: '/leak-detection-liverpool' },
+  { icon: 'shower', title: 'Shower not working', text: 'No flow, too hot or cold', href: '/showers-liverpool' },
+  { icon: 'toilet', title: 'Toilet not flushing', text: 'Or running all the time', href: '/toilet-repair-liverpool' },
+];
+
+const smallJobs = [
+  { title: 'Outside tap fitted', price: '£145', href: '/outside-tap-installation-liverpool' },
+  { title: 'Tap swapped', price: '£110', href: '/tap-replacement-liverpool' },
+  { title: 'Gas hob fitted', price: '£120', href: '/gas-hob-installation-liverpool' },
+  { title: 'Kitchen sink swapped', price: '£225', href: '/kitchen-sink-replacement-liverpool' },
+  { title: 'Radiator valve fitted', price: '£65', href: '/radiator-valve-replacement-liverpool' },
+  { title: 'Smart thermostat, any brand', price: '£120', href: '/smart-thermostat-installation-liverpool' },
 ];
 
 const reviews = [
@@ -33,8 +47,8 @@ const reviews = [
 const jobs = [
   { img: 'leak-under-bath-traced', alt: 'Leak traced under a bath panel in a Liverpool home', cap: 'Leak traced under a bath' },
   { img: 'failed-pipe-fitting-leak', alt: 'Failed pipe fitting found leaking and replaced', cap: 'Failed fitting found and replaced' },
-  { img: 'water-main-connector-repair', alt: 'Water main connector under a bath repaired', cap: 'Water main connector repaired' },
-  { img: 'boiler-smart-thermostat-fitted', alt: 'Boiler with smart thermostat receiver fitted', cap: 'Boiler controls fitted' },
+  { img: 'gas-hob-oven-fitted', alt: 'Gas hob and oven fitted in a Liverpool kitchen', cap: 'Gas hob and oven fitted' },
+  { img: 'shower-room-fitted', alt: 'New shower room fitted in a Liverpool home', cap: 'Shower room fitted' },
   { img: 'towel-radiator-fitted', alt: 'Anthracite towel radiator fitted in a bathroom', cap: 'Towel radiator fitted' },
   { img: 'bathroom-bath-shower-fitted', alt: 'New bath and shower fitted in a Liverpool bathroom', cap: 'Bath and shower fitted' },
 ];
@@ -168,7 +182,7 @@ const faqSchema = {
   }
   </script>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
-  <link rel="preload" as="image" fetchpriority="high" slot="head" href="/images/jobs/leak-under-bath-traced-480.webp" imagesrcset="/images/jobs/leak-under-bath-traced-480.webp 480w, /images/jobs/leak-under-bath-traced-960.webp 960w" imagesizes="(max-width: 900px) 100vw, 520px" />
+  <link rel="preload" as="image" fetchpriority="high" slot="head" media="(min-width: 601px)" href="/images/jobs/leak-under-bath-traced-480.webp" imagesrcset="/images/jobs/leak-under-bath-traced-480.webp 480w, /images/jobs/leak-under-bath-traced-960.webp 960w" imagesizes="(max-width: 900px) 100vw, 520px" />
 
   <!-- HERO -->
   <section class="hp-hero" id="hero">
@@ -182,15 +196,16 @@ const faqSchema = {
           <span class="hp-call-num">{PHONE}</span>
         </a>
         <ul class="hp-promises">
-          <li><strong>30 min</strong> guaranteed response, 28 min average</li>
-          <li><strong>No</strong> call-out fee</li>
-          <li><strong>From £120</strong> for the first hour</li>
-          <li><strong>Gas Safe</strong> registered</li>
+          <li><strong>30 min</strong> guaranteed response</li>
+          <li><strong>£0</strong> call-out fee</li>
+          <li><strong>£120</strong> first hour, weekdays</li>
+          <li><strong>Gas Safe</strong> registered team</li>
         </ul>
         <a class="hp-stars" href="#reviews"><span aria-hidden="true">★★★★★</span> <strong>5.0</strong> from 53 Google reviews</a>
       </div>
       <figure class="hp-hero-photo">
         <picture>
+          <source media="(max-width: 600px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
           <source type="image/webp" srcset="/images/jobs/leak-under-bath-traced-480.webp 480w, /images/jobs/leak-under-bath-traced-960.webp 960w" sizes="(max-width: 900px) 100vw, 520px" />
           <img src="/images/jobs/leak-under-bath-traced-960.jpg" width="960" height="720" alt="Our engineer tracing a leak under a bath in a Liverpool home" fetchpriority="high" />
         </picture>
@@ -381,6 +396,19 @@ const faqSchema = {
   </section>
 
   <!-- RECENT JOBS -->
+  <section class="hp-sec" id="small-jobs">
+    <div class="hp-wrap">
+      <h2>Small jobs, fixed prices</h2>
+      <p class="hp-sub">Not an emergency? We do the small jobs too, at a fixed price including VAT.</p>
+      <div class="hp-small">
+        {smallJobs.map((j) => (
+          <a href={j.href} class="hp-small-item"><span>{j.title}</span><strong>{j.price}</strong></a>
+        ))}
+      </div>
+      <p class="hp-small-more"><a href="/small-plumbing-jobs-liverpool">See all small job prices →</a></p>
+    </div>
+  </section>
+
   <section class="hp-sec hp-sec-tint" id="jobs">
     <div class="hp-wrap">
       <h2>Recent jobs by our team</h2>
@@ -634,12 +662,25 @@ const faqSchema = {
   .hp-feature-links { font-size: 0.95rem !important; color: #475569 !important; margin: 1rem 0 0 !important; }
   .hp-feature-links a { color: var(--navy-mid); font-weight: 700; }
   .hp-h2-spacer { height: 3.4rem; }
+  .hp-tiles { grid-template-columns: repeat(4, 1fr); }
+  .hp-small { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+  .hp-small-item { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; background: #fff; border: 2px solid var(--border); border-radius: 12px; padding: 0.9rem 1rem; text-decoration: none; color: var(--navy); font-weight: 800; font-size: 1.02rem; line-height: 1.25; }
+  .hp-small-item:hover { border-color: var(--orange); }
+  .hp-small-item strong { font: 900 1.6rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #c2410c; white-space: nowrap; }
+  .hp-small-more { margin: 1rem 0 0; font-weight: 800; }
+  .hp-small-more a { color: #c2410c; }
   @media (max-width: 900px) {
     .hp-two-prices, .hp-twin, .hp-wait { grid-template-columns: 1fr; }
+    .hp-tiles { grid-template-columns: repeat(2, 1fr); }
+    .hp-small { grid-template-columns: 1fr 1fr; }
     .hp-h2-spacer { display: none; }
   }
   @media (max-width: 600px) {
     .hp-tiles { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .hp-small { grid-template-columns: 1fr; gap: 0.5rem; }
+    .hp-hero-photo { display: none; }
+    .hp-promises { gap: 0.5rem; }
+    .hp-promises li { padding: 0.55rem 0.7rem; font-size: 0.9rem; }
     .hp-tile { padding: 0.85rem; min-height: 0; }
     .hp-tile strong { font-size: 1rem; }
     .hp-feature img { height: 200px; }
