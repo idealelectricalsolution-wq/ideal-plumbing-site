@@ -209,7 +209,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .cmp-table thead th {
       background: #1a3a5c;
       color: #ffffff;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
       font-size: 1rem;
       font-weight: 800;
       text-transform: uppercase;
@@ -221,7 +221,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       width: 34%;
     }
     .cmp-table tr:last-child th, .cmp-table tr:last-child td { border-bottom: none; }
-    .cmp-win { color: #16a34a; font-weight: 800; }
+    .cmp-win { color: #15803d; font-weight: 800; }
 
     @media (max-width: 560px) {
       .cmp-table, .cmp-table tbody, .cmp-table tr, .cmp-table td, .cmp-table th { display: block; width: auto; }
@@ -250,7 +250,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        color: #64748b;
+        color: #475569;
         margin-bottom: 0.1rem;
       }
     }
@@ -283,10 +283,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .price-strip-row:last-child { border-bottom: none; }
     .price-strip-row span:first-child { font-weight: 700; color: #1e293b; font-size: 0.9rem; }
     .price-strip-row span:last-child {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
       font-weight: 900;
       font-size: 1.35rem;
-      color: #f97316;
+      color: #c2410c;
       white-space: nowrap;
     }
   </style>
@@ -303,11 +303,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="display:flex;gap:1rem;max-width:340px;margin:1.25rem auto;">
         <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">£3,500</div>
+          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£3,500</div>
           <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Supply &amp; Fit From</div>
         </div>
         <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;text-align:center;">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.25rem;font-weight:900;color:var(--orange);line-height:1;">3-5</div>
+          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">3-5</div>
           <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Days On Site</div>
         </div>
       </div>
@@ -318,10 +318,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">&#10003;</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">&#10003;</span> Fixed Price In Writing</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">&#10003;</span> Free Survey</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#16a34a;">&#10003;</span> 12-Month Guarantee</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">&#10003;</span> Gas Safe Registered</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">&#10003;</span> Fixed Price In Writing</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">&#10003;</span> Free Survey</span>
+        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">&#10003;</span> 12-Month Guarantee</span>
       </div>
     </div>
   </section>
@@ -332,9 +332,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section style="background:#1a3a5c;padding:1.25rem 0;">
     <div class="container">
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="color:#f59e0b;font-size:1.1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div style="color:#fbbf24;font-size:1.1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:480px;">"Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company" John Manley, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#f97316;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">Read our Google reviews</a>
+        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">Read our Google reviews</a>
       </div>
     </div>
   </section>
@@ -634,7 +634,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
         <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
       </div>
-      <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
+      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
     </div>
   </section>
 

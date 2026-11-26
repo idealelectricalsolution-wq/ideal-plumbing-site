@@ -214,12 +214,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .pfx-sec--ink .pfx-lede { color: rgba(255,255,255,0.72); }
 
     .pfx-eyebrow {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem;
+      text-transform: uppercase; color: #fb923c; margin-bottom: 0.4rem;
     }
     .pfx h2 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
       font-size: clamp(1.9rem, 6vw, 2.4rem); font-weight: 800; line-height: 1.08;
       color: var(--navy); margin: 0 0 0.5rem; letter-spacing: -0.01em;
     }
@@ -264,7 +264,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       transition: background 0.15s ease, box-shadow 0.15s ease;
     }
     .rc-tabs label .n {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 1.35rem;
       font-weight: 800; color: var(--navy); line-height: 1;
     }
     .rc-tabs label .u {
@@ -285,7 +285,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-transform: uppercase; color: rgba(255,255,255,0.62); line-height: 1.35;
       margin-bottom: 0.15rem; }
     .rc-price {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 3.4rem;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3.4rem;
       font-weight: 900; color: #fff; line-height: 0.95; margin: 0.15rem 0 0;
     }
     .rc-price sup { font-size: 1.3rem; vertical-align: baseline; position: relative; top: -1.35rem; font-weight: 800; margin-right: 0.05rem; }
@@ -306,8 +306,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .rc-inc li:last-child { border-bottom: none; }
     .rc-inc li::before {
       content: ""; position: absolute; left: 2px; top: 0.78rem;
-      width: 10px; height: 5px; border-left: 2px solid #16a34a;
-      border-bottom: 2px solid #16a34a; transform: rotate(-45deg);
+      width: 10px; height: 5px; border-left: 2px solid #15803d;
+      border-bottom: 2px solid #15803d; transform: rotate(-45deg);
     }
 
     /* checked states */
@@ -360,7 +360,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .ct th, .ct td { padding: 0.7rem 0.85rem; text-align: left;
       border-bottom: 1px solid #eef2f7; vertical-align: top; }
     .ct thead th { background: var(--navy); color: #fff;
-      font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 0.95rem;
       font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; }
     .ct tbody th { font-weight: 800; color: var(--navy); width: 32%; }
     .ct tr:last-child th, .ct tr:last-child td { border-bottom: none; }
@@ -399,7 +399,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .pr-num {
       flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--navy);
-      color: #fff; font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+      color: #fff; font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-weight: 800;
       font-size: 1rem; display: flex; align-items: center; justify-content: center;
       position: relative; z-index: 1;
     }
@@ -410,7 +410,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .cr { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 1.25rem; }
     .cr-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
       border-radius: 12px; padding: 0.9rem; }
-    .cr-item .k { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem;
+    .cr-item .k { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 1.05rem;
       font-weight: 800; color: #fff; line-height: 1.1; }
     .cr-item .v { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 0.2rem; line-height: 1.4; }
 
@@ -425,7 +425,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       min-height: 44px; box-sizing: border-box; }
     .fq summary::-webkit-details-marker { display: none; }
     .fq summary::after { content: "+"; font-size: 1.35rem; font-weight: 400;
-      color: var(--orange); line-height: 1; flex: 0 0 auto; }
+      color: #c2410c; line-height: 1; flex: 0 0 auto; }
     .fq details[open] summary::after { content: "\2212"; }
     .fq-body { padding: 0 1.1rem 1.05rem; }
     .fq-body p { margin: 0; font-size: 1rem; line-height: 1.65; color: #445a73; }
@@ -434,7 +434,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .ar { margin-top: 1.25rem; }
     .ar-grp { margin-bottom: 1.25rem; }
     .ar-grp h3 a { color: inherit; text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 3px; }
-    .ar-grp h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem;
+    .ar-grp h3 { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 1.3rem;
       font-weight: 800; color: var(--navy); margin: 0 0 0.15rem; }
     .ar-grp p { margin: 0 0 0.6rem; font-size: 1rem; color: var(--muted); line-height: 1.55; }
     .ar-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; }
@@ -449,7 +449,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 0.9rem 1rem; text-decoration: none; min-height: 44px; }
     .rl strong { display: block; color: var(--navy); font-size: 0.95rem; }
     .rl span.d { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 0.1rem; line-height: 1.45; }
-    .rl span.x { color: var(--orange); font-size: 1.2rem; flex: 0 0 auto; }
+    .rl span.x { color: #c2410c; font-size: 1.2rem; flex: 0 0 auto; }
 
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
@@ -461,7 +461,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="pfx" style="background:var(--ink);padding:2rem 0 2.25rem;">
     <div class="container">
       <div class="pfx-eyebrow">Liverpool &amp; Merseyside</div>
-      <h1 style="color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;line-height:1.02;letter-spacing:-0.02em;margin:0 0 0.6rem;">Power Flushing Liverpool</h1>
+      <h1 style="color:#fff;font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.5rem;font-weight:900;line-height:1.02;letter-spacing:-0.02em;margin:0 0 0.6rem;">Power Flushing Liverpool</h1>
 
       <div class="pfx-water" style="margin-bottom:1rem;"></div>
 
@@ -473,7 +473,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="#prices" style="display:flex;align-items:center;justify-content:center;min-height:48px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.22);color:#fff;text-decoration:none;font-weight:700;border-radius:10px;">See your price</a>
       </div>
 
-      <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;margin:0 0 1rem;">Updated 26 November 2026</p>
+      <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin:0 0 1rem;">Updated 26 November 2026</p>
       <div class="cr">
         <div class="cr-item"><div class="k">Kamco pump</div><div class="v">Kamco CF90 Quantum2</div></div>
         <div class="cr-item"><div class="k">Gas Safe</div><div class="v">Registered and verifiable</div></div>

@@ -93,7 +93,13 @@ const guideBox = (() => {
   <link rel="canonical" href={canonicalURL} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style is:global>
+    /* Metric-matched fallback so headings do not jump when Barlow Condensed loads (CLS) */
+    @font-face { font-family: 'Barlow Condensed Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'), local('Arial'), local('Roboto'), local('Helvetica Neue'); size-adjust: 79%; ascent-override: 126%; descent-override: 25%; line-gap-override: 0%; }
+  </style>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" /></noscript>
   <slot name="head" />
   <style is:global>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -106,13 +112,13 @@ const guideBox = (() => {
       --white:      #ffffff;
       --text:       #1e293b;
       --text-dark:  #0f172a;
-      --muted:      #64748b;
+      --muted:      #475569;
       --bg:         #f8fafc;
       --card:       #ffffff;
       --border:     #e2e8f0;
-      --green:      #16a34a;
-      --red:        #dc2626;
-      --amber:      #d97706;
+      --green:      #15803d;
+      --red:        #b91c1c;
+      --amber:      #b45309;
       --radius:     10px;
       --radius-sm:  6px;
       --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
@@ -122,12 +128,12 @@ const guideBox = (() => {
       --pf-off:           #f8fafc;
       --pf-border:        #e2e8f0;
       --pf-navy:          #1a3a5c;
-      --pf-orange:        #f97316;
+      --pf-orange:        #c2410c;
       --pf-text:          #1e293b;
-      --pf-muted:         #64748b;
-      --pf-green:         #16a34a;
-      --pf-red:           #dc2626;
-      --pf-amber:         #d97706;
+      --pf-muted:         #475569;
+      --pf-green:         #15803d;
+      --pf-red:           #b91c1c;
+      --pf-amber:         #b45309;
       --pf-radius:        10px;
       --pf-shadow:        0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
       --pf-shadow-md:     0 4px 12px rgba(0,0,0,0.08);
@@ -152,7 +158,7 @@ const guideBox = (() => {
     }
 
     h1, h2, h3, h4 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
       font-weight: 900;
       line-height: 1.1;
       color: var(--navy);
@@ -181,7 +187,7 @@ const guideBox = (() => {
       gap: 0.5rem;
       padding: 0.75rem 1.75rem;
       border-radius: var(--radius-sm);
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
       font-size: 1.1rem;
       font-weight: 900;
       letter-spacing: 0.03em;
@@ -206,7 +212,7 @@ const guideBox = (() => {
     ======================================== */
     .hdr { background: var(--navy); border-bottom: 3px solid var(--orange); position: relative; z-index: 200; }
     .hdr-inner { max-width: 1180px; margin: 0 auto; padding: 0.7rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
-    .hdr-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.25rem; line-height: 1; color: #fff; text-decoration: none; white-space: nowrap; }
+    .hdr-logo { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-weight: 900; font-size: 1.25rem; line-height: 1; color: #fff; text-decoration: none; white-space: nowrap; }
     .hdr-logo span { color: #fb923c; }
     .hdr-logo small { display: block; font-family: 'Nunito Sans', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; color: rgba(255,255,255,0.75); margin-top: 0.2rem; }
     .hdr-links { list-style: none; display: flex; gap: 0.25rem; margin: 0 0 0 auto; padding: 0; }
@@ -223,12 +229,12 @@ const guideBox = (() => {
     .hdr-dd a strong { font-weight: 800; display: block; }
     .hdr-dd a small { color: var(--muted); font-size: 0.8rem; }
     .hdr-dd a:hover { background: #fff7ed; }
-    .hdr-dd a:hover strong { color: var(--orange-dark); }
+    .hdr-dd a:hover strong { color: #c2410c; }
     .hdr-dd.areas { min-width: 480px; }
     .hdr-dd.areas .hdr-area-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
     .hdr-dd.areas .hdr-area-grid a { padding: 0.35rem 0.6rem; font-weight: 700; }
     .hdr-call { margin-left: 0.5rem; display: inline-flex; flex-direction: column; align-items: center; background: #c2410c; color: #fff; text-decoration: none; border-radius: 8px; padding: 0.45rem 1rem; line-height: 1.1; white-space: nowrap; box-shadow: 0 4px 14px rgba(194,65,12,0.35); }
-    .hdr-call strong { font: 900 1.25rem 'Barlow Condensed', sans-serif; letter-spacing: 0.02em; }
+    .hdr-call strong { font: 900 1.25rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; letter-spacing: 0.02em; }
     .hdr-call small { font-size: 0.7rem; font-weight: 800; }
     .hdr-call:hover { background: #9a3412; }
     .hdr-menu-btn { display: none; background: rgba(255,255,255,0.1); color: #fff; border: 0; border-radius: 8px; font: 800 0.9rem 'Nunito Sans', sans-serif; padding: 0.7rem 0.9rem; cursor: pointer; min-height: 48px; }
@@ -240,7 +246,7 @@ const guideBox = (() => {
     .hdr-mob .hdr-mob-areas a { font-size: 0.95rem; padding: 0.55rem 0; }
     .hdr-mob details summary { list-style: none; cursor: pointer; font: 800 0.75rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.25rem; }
     .hdr-mob details summary::after { content: ' ▾'; }
-    .hdr-mob-call { margin-top: 1.25rem; display: block; text-align: center; background: var(--orange); color: #fff !important; border: 0 !important; border-radius: 8px; font: 900 1.3rem 'Barlow Condensed', sans-serif !important; padding: 0.9rem !important; }
+    .hdr-mob-call { margin-top: 1.25rem; display: block; text-align: center; background: #c2410c; color: #fff !important; border: 0 !important; border-radius: 8px; font: 900 1.3rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif !important; padding: 0.9rem !important; }
     @media (max-width: 980px) {
       .hdr-links { display: none; }
       .hdr-menu-btn { display: block; }
@@ -288,7 +294,7 @@ const guideBox = (() => {
     }
     .live-dot {
       width: 8px; height: 8px;
-      background: #16a34a;
+      background: #15803d;
       border-radius: 50%;
       display: inline-block;
       animation: pulse 1.5s infinite;
@@ -299,7 +305,7 @@ const guideBox = (() => {
     }
     .badge-dot {
       width: 8px; height: 8px;
-      background: var(--orange);
+      background: #c2410c;
       border-radius: 50%;
       display: inline-block;
     }
@@ -332,10 +338,10 @@ const guideBox = (() => {
     .trust-item { text-align: center; }
     .trust-item strong {
       display: block;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
       font-size: 2rem;
       font-weight: 900;
-      color: var(--orange);
+      color: #c2410c;
       line-height: 1;
     }
     .trust-item span { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
@@ -464,7 +470,7 @@ const guideBox = (() => {
     .pf-limitations { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
     .pf-limit {
       background: #fef3c7;
-      border: 1px solid #f59e0b;
+      border: 1px solid #b45309;
       border-left: 4px solid var(--pf-amber);
       border-radius: 8px;
       padding: 1rem 1.25rem;
@@ -552,7 +558,7 @@ const guideBox = (() => {
     .pf-price-tier { font-size: 0.7rem; font-weight: 800; color: var(--pf-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
     .pf-price-name { font-size: 1.1rem; font-weight: 800; color: var(--pf-navy); margin-bottom: 0.15rem; }
     .pf-price-sub { font-size: 0.9rem; color: var(--pf-muted); margin-bottom: 0.75rem; }
-    .pf-price-amount { font-family: 'Barlow Condensed', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--pf-orange); line-height: 1; margin-bottom: 0.1rem; }
+    .pf-price-amount { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--pf-orange); line-height: 1; margin-bottom: 0.1rem; }
     .pf-price-amount small { font-size: 1rem; color: var(--pf-muted); }
     .pf-price-list { list-style: none; text-align: left; display: flex; flex-direction: column; gap: 0.4rem; margin: 1rem 0; }
     .pf-price-list li { font-size: 0.93rem; color: var(--pf-text); padding-left: 1.3rem; position: relative; }
@@ -571,7 +577,7 @@ const guideBox = (() => {
       gap: 1.25rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
-    .pf-duration-time { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; color: var(--pf-orange); line-height: 1; min-width: 90px; text-align: center; flex-shrink: 0; }
+    .pf-duration-time { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 2rem; font-weight: 900; color: var(--pf-orange); line-height: 1; min-width: 90px; text-align: center; flex-shrink: 0; }
     .pf-duration-card strong { display: block; color: var(--pf-navy); font-size: 0.95rem; margin-bottom: 0.2rem; text-align: left; }
     .pf-duration-card p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; text-align: left; }
 
@@ -586,7 +592,7 @@ const guideBox = (() => {
       align-items: center;
       gap: 0.75rem;
     }
-    .pf-schedule-num { background: var(--pf-orange); color: var(--pf-white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.95rem; min-width: 1.7rem; height: 1.7rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .pf-schedule-num { background: var(--pf-orange); color: var(--pf-white); font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-weight: 900; font-size: 0.95rem; min-width: 1.7rem; height: 1.7rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .pf-schedule-item p { font-size: 0.93rem; color: var(--pf-text); margin: 0; text-align: left; }
 
     /* Steps */
@@ -600,7 +606,7 @@ const guideBox = (() => {
       gap: 1rem;
       align-items: flex-start;
     }
-    .pf-step-num { background: var(--pf-navy); color: var(--pf-white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.05rem; min-width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .pf-step-num { background: var(--pf-navy); color: var(--pf-white); font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-weight: 900; font-size: 1.05rem; min-width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .pf-step strong { display: block; color: var(--pf-navy); font-size: 0.92rem; margin-bottom: 0.2rem; text-align: left; }
     .pf-step p { font-size: 0.93rem; color: var(--pf-muted); margin: 0; line-height: 1.6; text-align: left; }
 
@@ -746,11 +752,11 @@ const guideBox = (() => {
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
     .price-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; box-shadow: var(--shadow-sm); position: relative; }
     .price-card--featured { border: 2px solid var(--orange); box-shadow: 0 8px 24px rgba(249,115,22,0.15); }
-    .price-card-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--orange); color: var(--white); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.08em; padding: 0.2rem 0.85rem; border-radius: 999px; white-space: nowrap; }
-    .price-tier { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; color: var(--orange); text-transform: uppercase; }
-    .price-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--navy); }
+    .price-card-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #c2410c; color: var(--white); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.08em; padding: 0.2rem 0.85rem; border-radius: 999px; white-space: nowrap; }
+    .price-tier { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; color: #c2410c; text-transform: uppercase; }
+    .price-name { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--navy); }
     .price-sub { font-size: 0.9rem; color: var(--muted); }
-    .price-amount { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: var(--navy); padding: 0.5rem 0; }
+    .price-amount { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 1rem; font-weight: 700; color: var(--navy); padding: 0.5rem 0; }
     .price-amount span { font-size: 3.5rem; }
     .price-amount small { font-size: 1rem; }
     .price-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin: 0.5rem 0; }
@@ -770,17 +776,17 @@ const guideBox = (() => {
 
     .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
     .process-step { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.75rem; background: var(--navy); border-radius: var(--radius); padding: 1.75rem 1.25rem; }
-    .step-number { width: 2.75rem; height: 2.75rem; background: var(--orange); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 900; flex-shrink: 0; }
+    .step-number { width: 2.75rem; height: 2.75rem; background: #c2410c; color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 1.3rem; font-weight: 900; flex-shrink: 0; }
     .step-content h3 { font-size: 1.1rem; color: var(--white); margin-bottom: 0.35rem; }
     .step-content p { font-size: 0.94rem; color: rgba(255,255,255,0.8); }
-    .step-note { font-size: 0.78rem; font-weight: 700; color: var(--orange); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 0.2rem 0.6rem; border-radius: 4px; width: fit-content; }
+    .step-note { font-size: 0.78rem; font-weight: 700; color: #c2410c; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 0.2rem 0.6rem; border-radius: 4px; width: fit-content; }
 
     .jobs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
     .job-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; }
     .job-card--warning { border-left: 4px solid var(--red); }
     .job-card h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 0.5rem; }
     .job-meta { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; justify-content: center; }
-    .job-price { font-weight: 800; color: var(--orange); font-size: 0.9rem; }
+    .job-price { font-weight: 800; color: #c2410c; font-size: 0.9rem; }
     .job-time { font-size: 0.85rem; color: var(--muted); }
     .job-card p { font-size: 0.93rem; color: var(--muted); }
 
@@ -790,7 +796,7 @@ const guideBox = (() => {
     .why-header p { color: var(--muted); font-size: 1rem; margin-top: 0.5rem; }
     .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
     .why-card { background: var(--navy); border-radius: var(--radius); padding: 1.5rem; text-align: center; }
-    .why-card strong { display: block; font-size: 1.05rem; color: var(--orange); margin-bottom: 0.4rem; }
+    .why-card strong { display: block; font-size: 1.05rem; color: #c2410c; margin-bottom: 0.4rem; }
     .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
     .why-cta { text-align: center; margin-top: 2rem; }
     .why-cta p { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; }
@@ -799,30 +805,30 @@ const guideBox = (() => {
     .reviews-header { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem; gap: 1rem; }
     .reviews-header h2 { color: var(--navy); }
     .reviews-score { display: flex; align-items: center; gap: 0.75rem; }
-    .score-number { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--navy); line-height: 1; }
-    .stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 0.05em; }
+    .score-number { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .stars { color: #b45309; font-size: 1.1rem; letter-spacing: 0.05em; }
     .score-label { font-size: 0.82rem; color: var(--muted); }
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
     .review-card { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-sm); }
-    .review-quote { font-family: Georgia, serif; font-size: 3rem; color: var(--orange); line-height: 0.5; }
+    .review-quote { font-family: Georgia, serif; font-size: 3rem; color: #c2410c; line-height: 0.5; }
     .review-card > p { font-size: 0.94rem; color: var(--text); line-height: 1.7; }
     .review-footer { display: flex; align-items: center; gap: 0.75rem; margin-top: auto; }
     .reviewer-avatar { width: 2.25rem; height: 2.25rem; background: var(--navy); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; }
     .reviewer-info strong { display: block; font-size: 0.9rem; color: var(--text-dark); }
     .reviewer-info .review-location { font-size: 0.78rem; color: var(--muted); }
-    .review-stars { color: #f59e0b; font-size: 0.85rem; }
+    .review-stars { color: #b45309; font-size: 0.85rem; }
     .reviews-cta { text-align: center; margin-top: 1.5rem; }
-    .link-arrow { color: var(--orange); font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+    .link-arrow { color: #c2410c; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
 
     .faq-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem; }
     .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); }
     .faq-item summary { padding: 1.1rem 1.25rem; cursor: pointer; font-weight: 700; color: var(--navy); font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-    .faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--orange); font-weight: 900; }
+    .faq-item summary::after { content: '+'; font-size: 1.25rem; color: #c2410c; font-weight: 900; }
     .faq-item[open] summary::after { content: '−'; }
     .faq-body { padding: 0 1.25rem 1.25rem; }
     .faq-body p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 0.5rem; }
     .faq-tag { font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 4px; letter-spacing: 0.06em; margin-right: 0.5rem; }
-    .tag-orange { background: #fff7ed; color: var(--orange-dark); }
+    .tag-orange { background: #fff7ed; color: #c2410c; }
     .tag-navy { background: #eff6ff; color: var(--navy); }
     .tag-red { background: #fef2f2; color: var(--red); }
     .tag-green { background: #f0fdf4; color: var(--green); }
@@ -831,17 +837,17 @@ const guideBox = (() => {
     .coverage-area { text-align: center; }
     .coverage-area h3 { font-size: 1rem; color: var(--navy); margin-bottom: 0.75rem; font-weight: 800; }
     .area-pill { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.45rem 1rem; font-size: 0.9rem; color: var(--navy); font-weight: 700; margin: 0.25rem; text-decoration: none; transition: background 0.12s, color 0.12s, border-color 0.12s; }
-    a.area-pill:hover { background: var(--orange); color: var(--white); border-color: var(--orange); cursor: pointer; }
+    a.area-pill:hover { background: #c2410c; color: var(--white); border-color: var(--orange); cursor: pointer; }
 
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
     .service-card { background: var(--navy); border: none; border-top: 3px solid var(--orange); border-radius: var(--radius); padding: 1.5rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; transition: transform 0.18s, box-shadow 0.18s; }
     .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .service-card strong { font-size: 1rem; font-weight: 800; color: var(--orange); }
+    .service-card strong { font-size: 1rem; font-weight: 800; color: #c2410c; }
     .service-card span { font-size: 0.85rem; color: rgba(255,255,255,0.8); }
 
     .quals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     .qual-card { background: var(--white); border: 2px solid var(--navy); border-radius: var(--radius); padding: 1.25rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; box-shadow: var(--shadow-sm); }
-    .qual-num { font-family: 'Barlow Condensed', sans-serif; font-size: 1.75rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .qual-num { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 1.75rem; font-weight: 900; color: #c2410c; line-height: 1; }
     .qual-card strong { font-size: 0.95rem; color: var(--navy); }
     .qual-card span { font-size: 0.82rem; color: var(--muted); }
 
@@ -851,7 +857,7 @@ const guideBox = (() => {
     .selfhelp-header p { color: var(--muted); font-size: 1rem; margin-top: 0.5rem; }
     .selfhelp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
     .selfhelp-step { display: flex; gap: 1rem; align-items: flex-start; }
-    .selfhelp-num { width: 2rem; height: 2rem; background: var(--orange); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0; }
+    .selfhelp-num { width: 2rem; height: 2rem; background: #c2410c; color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0; }
     .selfhelp-step strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.25rem; }
     .selfhelp-step p { font-size: 0.88rem; color: var(--muted); }
     .selfhelp-warning { display: flex; gap: 0.75rem; align-items: center; justify-content: center; text-align: center; background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius-sm); padding: 1rem; margin-top: 1.5rem; }
@@ -868,13 +874,13 @@ const guideBox = (() => {
     .safety-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
     .safety-card--never ul li::before { content: '✕'; color: var(--red); }
 
-    .mid-cta { background: var(--orange); padding: 3rem 0; text-align: center; }
+    .mid-cta { background: #c2410c; padding: 3rem 0; text-align: center; }
     .mid-cta h2 { color: var(--white); margin-bottom: 0.5rem; }
     .mid-cta p { color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; font-size: 1.05rem; }
     .final-cta { background: #1a3a5c; padding: 2.5rem 0; }
 
     .gas-safe-bar { background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius); padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; gap: 0.5rem; margin-top: 2rem; flex-wrap: wrap; }
-    .gas-safe-bar strong { color: var(--orange-dark); font-size: 1rem; }
+    .gas-safe-bar strong { color: #c2410c; font-size: 1rem; }
     .gas-safe-bar span { font-size: 0.9rem; color: var(--muted); }
 
     .insurance-bar { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; background: var(--white); border: 2px solid var(--navy); border-radius: var(--radius); padding: 1rem 1.5rem; margin-top: 1.5rem; font-size: 0.9rem; }
@@ -884,10 +890,10 @@ const guideBox = (() => {
     .copy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
     .copy-block h2 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
     .copy-block p { font-size: 1rem; color: var(--muted); line-height: 1.85; margin-bottom: 0.75rem; }
-    .copy-block a { color: var(--orange); font-weight: 700; text-decoration: none; }
+    .copy-block a { color: #c2410c; font-weight: 700; text-decoration: none; }
 
     .response-badge { display: inline-flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius); padding: 0.75rem 1.5rem; margin: 0 auto 1.5rem; }
-    .response-num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .response-num { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3rem; font-weight: 900; color: #c2410c; line-height: 1; }
     .response-num small { font-size: 1rem; }
     .response-label { color: rgba(255,255,255,0.85); font-weight: 700; font-size: 0.9rem; }
     .response-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
@@ -898,16 +904,16 @@ const guideBox = (() => {
     ======================================== */
     .site-footer { background: #10263d; color: rgba(255,255,255,0.8); padding: 3rem 0 1.5rem; font-size: 0.95rem; }
     .site-footer a { color: #fff; text-decoration: none; }
-    .site-footer a:hover { color: var(--orange); text-decoration: underline; }
+    .site-footer a:hover { color: #fb923c; text-decoration: underline; }
     .ftr-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 2rem; }
     .site-footer .ftr-grid, .site-footer .ftr-areas { text-align: left; }
-    .ftr-grid h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin: 0 0 0.75rem; }
+    .ftr-grid h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: #fb923c; margin: 0 0 0.75rem; }
     .ftr-grid ul { list-style: none; margin: 0; padding: 0; }
     .ftr-grid li { margin: 0 0 0.45rem; }
-    .ftr-brand { font: 900 1.35rem 'Barlow Condensed', sans-serif; color: #fff; }
-    .ftr-call { display: inline-block; margin: 0.75rem 0; background: #c2410c; color: #fff !important; font: 900 1.4rem 'Barlow Condensed', sans-serif; padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none !important; }
+    .ftr-brand { font: 900 1.35rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #fff; }
+    .ftr-call { display: inline-block; margin: 0.75rem 0; background: #c2410c; color: #fff !important; font: 900 1.4rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none !important; }
     .ftr-areas { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); line-height: 2; }
-    .ftr-areas h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin: 0 0 0.25rem; }
+    .ftr-areas h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: #fb923c; margin: 0 0 0.25rem; }
     .ftr-areas a { margin-right: 1rem; white-space: nowrap; }
     .ftr-partner { margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(255,255,255,0.06); border-radius: 10px; }
     .ftr-partner a { color: #fdba74; text-decoration: underline; }

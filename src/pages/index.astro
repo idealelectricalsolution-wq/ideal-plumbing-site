@@ -469,14 +469,14 @@ const faqSchema = {
   .hp-sec-tint { background: #f1f5f9; }
   .hp-sec-navy { background: var(--navy); color: #fff; }
   .hp-sec-navy h2 { color: #fff; }
-  .hp-sec h2, .hp-final h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.05; color: var(--navy); margin: 0 0 0.6rem; text-align: left; }
+  .hp-sec h2, .hp-final h2 { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-weight: 900; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.05; color: var(--navy); margin: 0 0 0.6rem; text-align: left; }
   .hp-sec-navy h2 { color: #fff; }
   .hp-sub { font-size: 1.08rem; color: #475569; margin: 0 0 1.75rem; max-width: 46rem; text-align: left; line-height: 1.6; }
   .hp-center { text-align: center; margin-top: 1.5rem; }
   .hp-more { color: #c2410c; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
   .hp-more:hover { color: var(--navy); }
 
-  .hp-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0.7rem 1.2rem; border-radius: 10px; font: 900 1.2rem 'Barlow Condensed', sans-serif; letter-spacing: 0.02em; text-decoration: none; }
+  .hp-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0.7rem 1.2rem; border-radius: 10px; font: 900 1.2rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; letter-spacing: 0.02em; text-decoration: none; }
   .hp-btn-orange { background: #c2410c; color: #fff; box-shadow: 0 6px 18px rgba(234,88,12,0.28); }
   .hp-btn-orange:hover { background: #9a3412; }
   .hp-btn-wide { display: flex; width: 100%; max-width: 420px; margin: 1.75rem auto 0; font-size: 1.4rem; min-height: 58px; }
@@ -485,18 +485,18 @@ const faqSchema = {
   .hp-hero { background: linear-gradient(180deg, #fff 0%, #fff7ed 100%); padding: 2rem 0 3rem; text-align: left; }
   .hp-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center; }
   .hp-live { display: inline-flex; align-items: center; gap: 0.5rem; background: #ecfdf5; color: #166534; font-weight: 800; font-size: 0.92rem; padding: 0.35rem 0.8rem; border-radius: 999px; margin: 0 0 1rem; }
-  .hp-dot { width: 9px; height: 9px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 4px rgba(22,163,74,0.2); }
-  .hp-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.6rem, 9vw, 4.2rem); line-height: 0.95; color: var(--navy); margin: 0 0 1rem; text-align: left; }
+  .hp-dot { width: 9px; height: 9px; border-radius: 50%; background: #15803d; box-shadow: 0 0 0 4px rgba(22,163,74,0.2); }
+  .hp-hero h1 { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-weight: 900; font-size: clamp(2.6rem, 9vw, 4.2rem); line-height: 0.95; color: var(--navy); margin: 0 0 1rem; text-align: left; }
   .hp-lead { font-size: 1.2rem; line-height: 1.55; color: #1e293b; margin: 0 0 1.5rem; max-width: 34rem; }
   .hp-call-big { display: flex; flex-direction: column; align-items: center; background: #c2410c; color: #fff; text-decoration: none; border-radius: 14px; padding: 0.85rem 1.25rem; max-width: 420px; box-shadow: 0 10px 28px rgba(234,88,12,0.35); transition: transform 0.15s; }
   .hp-call-big:hover { transform: translateY(-2px); background: #9a3412; }
   .hp-call-label { font-weight: 800; font-size: 0.95rem; letter-spacing: 0.03em; text-transform: uppercase; }
-  .hp-call-num { font: 900 2.3rem 'Barlow Condensed', sans-serif; line-height: 1.05; letter-spacing: 0.02em; }
+  .hp-call-num { font: 900 2.3rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; line-height: 1.05; letter-spacing: 0.02em; }
   .hp-promises { list-style: none; padding: 0; margin: 1.5rem 0 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; max-width: 30rem; }
   .hp-promises li { background: #fff; border: 1px solid #fed7aa; border-radius: 10px; padding: 0.6rem 0.8rem; font-size: 0.95rem; color: #334155; }
   .hp-promises strong { display: block; color: var(--navy); font-size: 1.1rem; }
   .hp-stars { display: inline-block; color: #1e293b; text-decoration: none; font-size: 1rem; }
-  .hp-stars span { color: #f59e0b; letter-spacing: 1px; }
+  .hp-stars span { color: #b45309; letter-spacing: 1px; }
   .hp-stars:hover { text-decoration: underline; }
   .hp-hero-photo { margin: 0; }
   .hp-hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; box-shadow: 0 18px 40px rgba(15,23,42,0.2); }
@@ -517,8 +517,8 @@ const faqSchema = {
 
   /* reviews */
   .hp-rating { display: inline-flex; align-items: center; gap: 0.9rem; background: #fff7ed; border-radius: 12px; padding: 0.6rem 1rem; margin-bottom: 1rem; color: #334155; font-weight: 700; }
-  .hp-rating-num { font: 900 2.6rem 'Barlow Condensed', sans-serif; color: var(--navy); line-height: 1; }
-  .hp-rating-stars, .hp-review-stars { color: #f59e0b; letter-spacing: 2px; font-size: 1.1rem; }
+  .hp-rating-num { font: 900 2.6rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: var(--navy); line-height: 1; }
+  .hp-rating-stars, .hp-review-stars { color: #b45309; letter-spacing: 2px; font-size: 1.1rem; }
   .hp-reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
   .hp-review { margin: 0; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; }
   .hp-review blockquote { margin: 0.5rem 0 1rem; font-size: 1.02rem; line-height: 1.6; color: #1e293b; flex: 1; }
@@ -531,7 +531,7 @@ const faqSchema = {
   .hp-prices thead th:last-child { text-align: right; }
   .hp-prices tbody th { text-align: left; padding: 1rem; font-size: 1.1rem; color: var(--navy); border-top: 1px solid var(--border); }
   .hp-prices tbody th span { display: block; font-weight: 600; font-size: 0.92rem; color: #475569; margin-top: 0.15rem; }
-  .hp-prices td { text-align: right; padding: 1rem; font: 900 2rem 'Barlow Condensed', sans-serif; color: #c2410c; border-top: 1px solid var(--border); white-space: nowrap; }
+  .hp-prices td { text-align: right; padding: 1rem; font: 900 2rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #c2410c; border-top: 1px solid var(--border); white-space: nowrap; }
   .hp-ticks { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; }
   .hp-ticks li { padding-left: 1.6rem; position: relative; font-size: 1rem; color: #1e293b; }
   .hp-ticks li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 900; }
@@ -545,7 +545,7 @@ const faqSchema = {
   /* steps */
   .hp-steps { list-style: none; counter-reset: s; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
   .hp-steps li { counter-increment: s; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 1.25rem; font-size: 1.02rem; line-height: 1.6; color: rgba(255,255,255,0.92); }
-  .hp-steps li::before { content: counter(s); display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: #c2410c; color: #fff; font: 900 1.3rem 'Barlow Condensed', sans-serif; margin-bottom: 0.75rem; }
+  .hp-steps li::before { content: counter(s); display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: #c2410c; color: #fff; font: 900 1.3rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; margin-bottom: 0.75rem; }
   .hp-steps strong { display: block; color: #fff; font-size: 1.12rem; margin-bottom: 0.2rem; }
 
   /* why + leak */
@@ -608,7 +608,7 @@ const faqSchema = {
   .hp-price-boiler { margin: 1rem 0 0; font-size: 1.05rem; color: #1e293b; }
   .hp-price-boiler a { color: #c2410c; font-weight: 800; }
   .hp-how { background: var(--navy); color: #fff; border-radius: 18px; padding: 1.5rem; }
-  .hp-how h3 { font: 900 1.7rem 'Barlow Condensed', sans-serif; color: #fff; margin: 0; }
+  .hp-how h3 { font: 900 1.7rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #fff; margin: 0; }
   .hp-how .hp-steps { grid-template-columns: 1fr; margin-top: 1rem; }
   .hp-how .hp-steps li { padding: 1rem; display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 0.8rem; }
   .hp-how .hp-steps li::before { margin: 0; grid-row: span 2; }

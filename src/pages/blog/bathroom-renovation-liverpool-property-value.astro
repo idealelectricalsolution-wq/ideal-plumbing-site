@@ -38,7 +38,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     .blog-post { max-width: 780px; margin: 0 auto; padding: 0 1.25rem; }
     .blog-breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; padding-top: 1.5rem; }
     .blog-breadcrumb a { color: var(--navy); text-decoration: none; font-weight: 600; }
-    .blog-breadcrumb a:hover { color: var(--orange); }
+    .blog-breadcrumb a:hover { color: #c2410c; }
     .blog-cat-tag { display: inline-block; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
     .blog-title { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
     .blog-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; }
@@ -49,17 +49,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     .blog-body ul, .blog-body ol { margin: 0 0 1rem 1.25rem; }
     .blog-body li { color: var(--text); line-height: 1.7; margin-bottom: 0.35rem; font-size: 0.97rem; }
     .blog-body a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
-    .blog-body a:hover { color: var(--orange); border-color: var(--orange); }
+    .blog-body a:hover { color: #c2410c; border-color: var(--orange); }
     .blog-callout { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
     .blog-callout strong { color: var(--navy); display: block; margin-bottom: 0.35rem; font-size: 0.95rem; }
     .blog-callout p { color: var(--text); margin: 0; font-size: 0.9rem; }
     .blog-stat { background: var(--navy); border-radius: var(--radius); padding: 1.5rem; text-align: center; margin: 1.5rem 0; }
-    .blog-stat .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .blog-stat .stat-num { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3rem; font-weight: 900; color: #fb923c; line-height: 1; }
     .blog-stat .stat-label { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-top: 0.35rem; }
-    .blog-warning { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-    .blog-warning strong { color: #dc2626; display: block; margin-bottom: 0.35rem; }
+    .blog-warning { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #b91c1c; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-warning strong { color: #b91c1c; display: block; margin-bottom: 0.35rem; }
     .blog-warning p { color: #7f1d1d; margin: 0; font-size: 0.9rem; }
-    .blog-success { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-success { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #15803d; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
     .blog-success strong { color: #15803d; display: block; margin-bottom: 0.35rem; }
     .blog-success p { color: #166534; margin: 0; font-size: 0.9rem; }
     .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
@@ -72,8 +72,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     .blog-related h3 { color: var(--navy); font-size: 1rem; margin-bottom: 1rem; }
     .blog-related a { display: block; color: var(--navy); text-decoration: none; font-size: 0.88rem; font-weight: 700; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
     .blog-related a:last-child { border-bottom: none; }
-    .blog-related a:hover { color: var(--orange); }
-    .blog-related a::before { content: "→ "; color: var(--orange); }
+    .blog-related a:hover { color: #c2410c; }
+    .blog-related a::before { content: "→ "; color: #c2410c; }
     .blog-author { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
     .blog-author-avatar { background: var(--navy); color: #fff; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; flex-shrink: 0; }
     .blog-author strong { display: block; color: var(--navy); font-size: 0.88rem; }
@@ -84,7 +84,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="blog-breadcrumb">
         <a href="/">Home</a> &rsaquo; <a href="/blog">Learning Centre</a> &rsaquo; Bathrooms
       </div>
-      <span class="blog-cat-tag" style="background:#0891b2;">BATHROOMS</span>
+      <span class="blog-cat-tag" style="background:#0e7490;">BATHROOMS</span>
       <h1 class="blog-title">The Real Property Value Uplift From a New Liverpool Bathroom</h1>
       <p style="font-size:1.05rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem;">A bathroom renovation is one of the highest-return home improvements available to Liverpool homeowners. Here is what the numbers actually show and what you should spend to maximise your return.</p>
       <div class="blog-meta">
@@ -157,7 +157,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h2>Frequently Asked Questions</h2>
         <div class="pf-faq">
-          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-blue" style="background:#0891b2;">VALUE</span>&nbsp; How much value does a new bathroom add to a Liverpool property?</summary><div class="pf-faq-body"><p>Research consistently shows that a modern, well-fitted bathroom can add 3 to 5% to a Liverpool property's value. On a £200,000 property that is £6,000 to £10,000. The return depends on the quality of installation, the style and the specific property and area.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-blue" style="background:#0e7490;color:#fff;">VALUE</span>&nbsp; How much value does a new bathroom add to a Liverpool property?</summary><div class="pf-faq-body"><p>Research consistently shows that a modern, well-fitted bathroom can add 3 to 5% to a Liverpool property's value. On a £200,000 property that is £6,000 to £10,000. The return depends on the quality of installation, the style and the specific property and area.</p></div></details>
           <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">SELL</span>&nbsp; Should I renovate my bathroom before selling my Liverpool property?</summary><div class="pf-faq-body"><p>In most cases yes, particularly if the current bathroom is dated or in poor condition. A dated bathroom is one of the most common reasons Liverpool buyers reduce their offer or withdraw from a purchase. A supply and fit renovation from £4,500 typically recovers its full cost in the sale price and often returns a net profit.</p></div></details>
           <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-orange">TIME</span>&nbsp; How long does a bathroom renovation take in Liverpool?</summary><div class="pf-faq-body"><p>A standard full bathroom renovation takes 5 to 7 working days. An en suite addition takes 3 to 5 days. A wet room takes 5 to 7 days due to the waterproofing requirements. We work to a fixed schedule with no unexplained gaps between trades.</p></div></details>
           <details class="pf-faq-item"><summary><span class="pf-faq-tag pf-tag-navy">LANDLORD</span>&nbsp; Is a bathroom renovation worth it for a Liverpool rental property?</summary><div class="pf-faq-body"><p>Yes. A modern bathroom improves tenant quality, reduces void periods and enables higher rental pricing. For a £850 per month Liverpool rental property, reducing vacancy by two weeks per year adds £408 annually. That recurring gain is compounded by the eventual increased resale value of the property.</p></div></details>
