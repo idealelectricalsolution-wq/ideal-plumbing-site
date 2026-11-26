@@ -1,610 +1,511 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/boiler-installation-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+const UPDATED = '26 November 2026';
+
+const prices = [
+  { type: 'Combi boiler', fits: 'Most 1 to 3 bed homes with one bathroom', price: '£1,800' },
+  { type: 'System boiler', fits: 'Larger homes, two or more bathrooms, with a hot water cylinder', price: '£2,200' },
+  { type: 'Regular boiler', fits: 'Older homes with a cylinder and a cold water tank in the loft', price: '£2,500' },
+];
+
+const included = [
+  ['The new boiler', 'A-rated combi, system or regular boiler from Worcester Bosch, Vaillant, Ideal or Baxi, sized for your home.'],
+  ['Controls', 'A new programmer and room thermostat, set up for you. Smart controls such as Hive or Nest on request.'],
+  ['Magnetic filter', 'Fitted on the return pipe to catch sludge before it reaches the new boiler.'],
+  ['System clean and inhibitor', 'The heating system is cleaned and dosed with inhibitor. Boiler makers ask for this to keep the warranty valid.'],
+  ['Flue and fittings', 'All flue parts, valves and fittings for a safe, compliant install.'],
+  ['Old boiler taken away', 'We disconnect it, remove it and dispose of it. No skip needed.'],
+  ['Commissioning and handover', 'Gas pressure and combustion checked, radiators balanced, and we show you how the controls work.'],
+  ['Paperwork', 'Benchmark checklist filled in, the manufacturer warranty registered for you, and the install notified to Gas Safe Register.'],
+];
+
+const signs = [
+  ['It is over 10 to 15 years old', 'And it is breaking down more often. Parts for older models get harder to find and more expensive.'],
+  ['Repairs are adding up', 'If you are paying for repairs every winter, the money is often better put towards a new boiler.'],
+  ['A major part has failed', 'A cracked heat exchanger on an older boiler usually costs more to fix than the boiler is worth.'],
+  ['The flame is yellow or orange', 'Or there are soot marks around the boiler. Stop using it and call us. If you smell gas, call 0800 111 999 first.'],
+  ['Your gas bills keep rising', 'With no change in how you use the heating. An old non-condensing boiler wastes far more gas than a modern one.'],
+  ['You want to change the system', 'For example, swapping a tank-fed system for a combi to free up the airing cupboard and loft.'],
+];
+
+const sizes = [
+  ['1 to 2 bed flat or terrace, one bathroom', '24 to 28kW combi'],
+  ['3 bed semi or terrace, one bathroom', '28 to 32kW combi'],
+  ['4 bed or larger, one main bathroom', '32 to 40kW combi'],
+  ['Two or more bathrooms used at once', 'System or regular boiler with a cylinder'],
+];
+
+const brands = [
+  ['Worcester Bosch', 'Greenstar range. A common choice in Liverpool homes, with good parts availability.'],
+  ['Vaillant', 'ecoTEC range. Quiet, well built and a good fit for larger homes.'],
+  ['Ideal', 'Logic and Vogue ranges. Built in Hull. Good value, popular with landlords.'],
+  ['Baxi', 'A reliable option when budget matters most.'],
+];
+
+const steps = [
+  ['Free survey', 'An engineer visits, looks at your boiler, pipework, flue route, gas supply and water pressure, and asks how you use your hot water. You get a written fixed price.'],
+  ['You choose a date', 'Once you are happy with the quote, we book the install for a day that suits you. Boiler broken and need it urgently? Tell us and we will give you our earliest slot.'],
+  ['Clean the system', 'Before the new boiler goes on, the heating system is cleaned so old sludge does not damage it.'],
+  ['Out with the old', 'The old boiler and any old controls or pipework being replaced are taken out and taken away.'],
+  ['Fit and commission', 'The new boiler, flue, filter and controls are fitted. Gas pressure, combustion and safety devices are checked, and the radiators are balanced.'],
+  ['Handover', 'We show you how to use the boiler and controls, fill in the Benchmark checklist and register the warranty. A like-for-like combi swap is usually done in one day.'],
+];
+
+const reviews = [
+  { n: 'Brendan C', t: 'James was amazing and was at my house within 30 mins of calling on a sunday. He has not only fixed my boiler but improved it and taught me how to fix the problem in future. Affordable and easygoing great plumber and gas fitter!' },
+  { n: 'Edward M', t: 'James came out and fixed a leaking pipe and even got my boiler up and running by fixing an air lock. Professional , on time, cleaned up after himself and charged a fair rate.' },
+  { n: 'David H', t: 'Amazing service James was very professional. Fixed my boiler and leaking tap very knowledgeable very fast and polite great company 100% recommended' },
+];
+
+const faqs = [
+  { q: 'How much does a new boiler cost in Liverpool?', a: 'With us, a combi boiler is from £1,800 fully fitted, a system boiler from £2,200 and a regular boiler from £2,500. That includes the boiler, controls, magnetic filter, system clean, flue, removal of the old boiler and all the paperwork. Your exact price is fixed in writing after a free survey.' },
+  { q: 'How long does it take to fit a new boiler?', a: 'A like-for-like combi swap is usually done in one day. Moving the boiler, converting from a regular or system boiler to a combi, or adding a cylinder can take 2 to 3 days. We tell you how long at the survey.' },
+  { q: 'What warranty do I get?', a: 'Our boilers come with a 10-year manufacturer warranty, which we register for you on the day. The boiler needs a service every year to keep it valid. On top of that, our own workmanship is guaranteed for 12 months.' },
+  { q: 'Can I swap my old tank system for a combi?', a: 'Usually, yes. A combi heats water straight from the mains, so we check your water pressure and flow at the survey. If they are good enough, we can remove the cylinder and the loft tanks and fit a combi. In homes with two or more bathrooms used at the same time, a system boiler with a cylinder often works better.' },
+  { q: 'Can you move my boiler to a different room?', a: 'Yes. Moving a boiler means new gas, water and condensate pipes and a new flue route, so it costs more than a straight swap. We price it at the survey.' },
+  { q: 'Do I need a power flush with a new boiler?', a: 'The system has to be clean before the new boiler goes on, because boiler makers make it a warranty condition. A system clean is included in our price. If the radiators are badly sludged, cold at the bottom for example, a full power flush is the better option. Power flushing is from £350.' },
+  { q: 'Can I still get a gas boiler?', a: 'Yes. You can replace a gas boiler in an existing home with a new gas boiler. The rules that limit gas boilers apply to newly built homes.' },
+  { q: 'Can I fit a boiler myself?', a: 'No. By law, gas boilers must be fitted by a Gas Safe registered engineer. A badly fitted boiler can leak gas or carbon monoxide. You can check any engineer on the Gas Safe Register website.' },
+  { q: 'Do you offer finance?', a: 'No, we do not offer finance. You get one fixed price, agreed in writing before any work starts.' },
+  { q: 'Is my boiler worth repairing instead?', a: 'Often it is. If the boiler is under 10 years old and the fault is a single part, a repair is usually the better value. Our fault diagnosis is £95, and we will tell you honestly whether to repair or replace.' },
+  { q: 'Are there free boiler grants in Liverpool?', a: 'Some households on certain benefits may qualify for a free boiler through the government ECO4 scheme. We do not install under ECO4. Our ECO4 guide explains who qualifies and how to apply.' },
+];
+
+const toc = [
+  ['cost', 'How much does a new boiler cost?'],
+  ['included', 'What is included?'],
+  ['replace', 'Do you need a new boiler?'],
+  ['type', 'Combi, system or regular?'],
+  ['size', 'What size boiler?'],
+  ['brands', 'Which brands?'],
+  ['install-day', 'What happens on the day?'],
+  ['older-homes', 'Older Liverpool homes'],
+  ['rules', 'The rules'],
+  ['reviews', 'Reviews'],
+  ['faq', 'More questions'],
+];
+
+const schemaFaq = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const schemaService = {
+  '@context': 'https://schema.org', '@type': 'Service',
+  name: 'Boiler Installation Liverpool', serviceType: 'Gas boiler installation and replacement', url: URL_,
+  alternateName: ['New boiler Liverpool', 'Boiler replacement Liverpool'],
+  description: 'New combi, system and regular boilers fitted across Liverpool and Merseyside by Gas Safe registered engineers. Free survey, written fixed price, 10-year manufacturer warranty.',
+  provider: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
+  areaServed: [{ '@type': 'City', name: 'Liverpool' }, { '@type': 'City', name: 'Wirral' }, { '@type': 'City', name: 'St Helens' }, { '@type': 'City', name: 'Formby' }],
+  offers: prices.map((p) => ({ '@type': 'Offer', name: `${p.type} installation, fully fitted`, price: p.price.replace(/[£,]/g, ''), priceCurrency: 'GBP' })),
+};
+const schemaPage = {
+  '@context': 'https://schema.org', '@type': 'WebPage', '@id': URL_ + '#webpage', url: URL_,
+  name: 'Boiler Installation Liverpool: new boiler prices, types, sizes and what to expect',
+  dateModified: '2026-11-26', inLanguage: 'en-GB',
+  about: { '@id': 'https://liverpoolemergencyplumber.co.uk/#business' },
+};
+const schemaCrumbs = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://liverpoolemergencyplumber.co.uk' },
+    { '@type': 'ListItem', position: 2, name: 'Boiler Installation Liverpool', item: URL_ },
+  ],
+};
 ---
 
 <BaseLayout
-  title="Boiler Installation in Liverpool | New Boiler From £1,800 | Gas Safe"
-  description="Boiler installation in Liverpool from £1,800 fully fitted. Same-day and next-day install. Worcester Bosch, Vaillant, Ideal and Baxi. Gas Safe registered. Free survey. Energy efficient combi, system and regular boilers. Call 0151 558 0334."
+  title="Boiler Installation Liverpool | New Boiler Fitted From £1,800 | Gas Safe"
+  description="New boiler installation in Liverpool from £1,800 fully fitted. Free survey, written fixed price, 10-year manufacturer warranty. Worcester Bosch, Vaillant, Ideal and Baxi. Call 0151 558 0334."
+  canonical={URL_}
 >
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Plumber"],
-    "@id": "https://liverpoolemergencyplumber.co.uk/#business",
-    "name": "Liverpool Emergency Plumber",
-    "image": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png",
-    "url": "https://liverpoolemergencyplumber.co.uk/boiler-installation-liverpool",
-    "telephone": "+441515580334",
-    "email": "emergencyplumberliverpool@gmail.com",
-    "priceRange": "££",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "29 Park Road",
-      "addressLocality": "Kirkby",
-      "addressRegion": "Merseyside",
-      "postalCode": "L32 2AL",
-      "addressCountry": "GB"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Liverpool" },
-      { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "St Helens" },
-      { "@type": "City", "name": "Formby" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Boiler Installation in Liverpool",
-    "alternateName": ["New Boiler Liverpool", "Boiler Replacement Liverpool", "Regular Boilers Liverpool"],
-    "serviceType": "Boiler Installation and Replacement",
-    "description": "New boiler installation in Liverpool from £1,800 fully fitted. Same-day and next-day installation. Energy efficient combi, system and regular boilers. Worcester Bosch, Vaillant, Ideal and Baxi. Gas Safe registered. Free survey.",
-    "provider": { "@id": "https://liverpoolemergencyplumber.co.uk/#business" },
-    "areaServed": [
-      { "@type": "City", "name": "Liverpool" },
-      { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "St Helens" },
-      { "@type": "City", "name": "Bootle" },
-      { "@type": "City", "name": "Crosby" },
-      { "@type": "City", "name": "Formby" },
-      { "@type": "City", "name": "Southport" },
-      { "@type": "City", "name": "Maghull" },
-      { "@type": "City", "name": "Kirkby" },
-      { "@type": "City", "name": "Huyton" },
-      { "@type": "City", "name": "Birkenhead" },
-      { "@type": "City", "name": "Wallasey" },
-      { "@type": "City", "name": "Aigburth" },
-      { "@type": "City", "name": "Allerton" },
-      { "@type": "City", "name": "Woolton" },
-      { "@type": "City", "name": "Wavertree" },
-      { "@type": "City", "name": "West Derby" },
-      { "@type": "City", "name": "Anfield" },
-      { "@type": "City", "name": "Garston" },
-      { "@type": "City", "name": "Toxteth" },
-      { "@type": "City", "name": "Childwall" },
-      { "@type": "City", "name": "Norris Green" },
-      { "@type": "City", "name": "Fazakerley" },
-      { "@type": "City", "name": "Aintree" },
-      { "@type": "City", "name": "Waterloo" },
-      { "@type": "City", "name": "Litherland" }
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Combi Boiler Installation Liverpool",
-        "description": "Like-for-like combi boiler installation fully fitted. Includes energy efficient A-rated boiler, smart controls, magnetic filter, Gas Safe and Benchmark certificate.",
-        "price": "1800",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31"
-      },
-      {
-        "@type": "Offer",
-        "name": "System Boiler Installation Liverpool",
-        "description": "Energy efficient system boiler installation for larger Liverpool homes with hot water cylinder. Fully fitted including controls and certificates.",
-        "price": "2200",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31"
-      },
-      {
-        "@type": "Offer",
-        "name": "Regular Boiler Installation Liverpool",
-        "description": "Regular boiler installation for older Liverpool properties with hot water cylinder and cold tank. Fully fitted.",
-        "price": "2500",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31"
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does boiler installation cost in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A like-for-like combi boiler installation in Liverpool starts from £1,800 fully fitted. System boilers start from £2,200 and regular boilers from £2,500. All prices include the energy efficient A-rated boiler, installation, smart controls, Benchmark certificate and Gas Safe certificate. The Checkatrade average for Liverpool is £1,677 to £2,733. Call 0151 558 0334 for a free fixed-price survey." } },
-      { "@type": "Question", "name": "Can I install my own boiler?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is illegal to install a gas boiler yourself unless you are Gas Safe registered. All gas boiler installation must be carried out by a Gas Safe registered engineer. An incorrectly installed boiler is a serious carbon monoxide risk. Always verify your engineer at gassaferegister.co.uk before any gas work." } },
-      { "@type": "Question", "name": "What size boiler do I need for my Liverpool home?", "acceptedAnswer": { "@type": "Answer", "text": "A 1 to 2 bed Liverpool flat or terraced house typically needs a 24 to 28kW combi boiler. A 3-bed semi needs 28 to 32kW. Larger properties with multiple bathrooms need 32 to 40kW or a system boiler. We size the boiler at the free survey based on your property, radiators and hot water demand." } },
-      { "@type": "Question", "name": "What is the difference between combi, system and regular boilers?", "acceptedAnswer": { "@type": "Answer", "text": "A combi boiler heats water on demand and needs no tank or cylinder. Best for most 1 to 3 bed Liverpool homes. A system boiler stores hot water in a cylinder but needs no cold water tank. Best for larger homes with more than one bathroom. A regular boiler (also called conventional or heat-only) needs both a hot water cylinder and a cold water tank in the loft. Common in older Liverpool properties with gravity-fed systems." } },
-      { "@type": "Question", "name": "Are there complications with older Liverpool properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Liverpool has one of the highest concentrations of Victorian and Edwardian housing in England. Many have gravity-fed systems, back boilers, chimneys used as flue routes and pipe runs that differ from modern builds. Our engineers know Liverpool's housing stock well and spot complications before opening a wall. The free survey is essential for any older Liverpool property." } },
-      { "@type": "Question", "name": "How long does boiler installation take in Liverpool?", "acceptedAnswer": { "@type": "Answer", "text": "A like-for-like combi swap takes 4 to 6 hours and is done in one day. Bigger jobs take 1 to 3 days. Same-day and next-day install is available for urgent swaps. We confirm timing at the free survey." } },
-      { "@type": "Question", "name": "What warranty do I get with a new boiler?", "acceptedAnswer": { "@type": "Answer", "text": "Every install carries a 12-month workmanship guarantee for peace of mind. The manufacturer warranty depends on the boiler model and installer accreditation. Standard manufacturer warranties typically run 2 to 5 years on most models. Longer warranties up to 10 years are offered by Worcester Bosch and Vaillant when fitted by an accredited installer and serviced yearly. We register the manufacturer warranty on your behalf on install day." } },
-      { "@type": "Question", "name": "Do I need a power flush before a new boiler?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases yes. All major makers need a clean system as a warranty condition. We do the power flush before connecting the new boiler. A power flush costs from £350 and comes as a bundle with your new boiler at a better combined price." } },
-      { "@type": "Question", "name": "Are you Gas Safe registered?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Liverpool Emergency Plumber is Gas Safe registered. Verify at gassaferegister.co.uk. Every install is done by Gas Safe registered. All gas work is done by a Gas Safe registered plumber." } }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json" slot="head">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
-      { "@type": "ListItem", "position": 2, "name": "Boiler Installation Liverpool", "item": "https://liverpoolemergencyplumber.co.uk/boiler-installation-liverpool" }
-    ]
-  }
-  </script>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaService)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaFaq)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaPage)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaCrumbs)} />
 
   <!-- HERO -->
-  <section class="page-hero">
+  <section class="page-hero" id="hero">
     <div class="container">
-      <div class="page-hero-badge" style="margin:0 auto 1rem;">
-        <span class="badge-dot"></span>
-        Liverpool Boiler Installation Specialists
-      </div>
+      <div class="page-hero-badge"><span class="badge-dot"></span>New boilers fitted across Merseyside</div>
       <h1>Boiler Installation in Liverpool</h1>
-      <p class="page-hero-sub">A new boiler in Liverpool starts from £1,800 fully fitted and can cut heating bills by up to 30%. Same-day and next-day install. Gas Safe registered. Energy efficient combi, system and regular boilers fitted. Certificate same day.</p>
-
-      <div style="display:flex;gap:1rem;max-width:320px;margin:1.25rem auto;">
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">£1,800</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Combi Fitted</div>
-        </div>
-        <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:0.75rem 1rem;">
-          <div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:2.25rem;font-weight:900;color:#c2410c;line-height:1;">Same Day</div>
-          <div style="font-size:0.75rem;color:var(--navy);font-weight:700;margin-top:0.2rem;">Available</div>
-        </div>
+      <p class="page-hero-sub">A new combi boiler fitted from £1,800, with a free survey and a written fixed price before any work starts. Our team of Gas Safe registered engineers, led by James, fits Worcester Bosch, Vaillant, Ideal and Baxi boilers with a 10-year manufacturer warranty.</p>
+      <div class="bi-stats">
+        <div class="br-stat"><div class="br-stat-n">£1,800</div><div class="br-stat-l">Combi, fully fitted</div></div>
+        <div class="br-stat"><div class="br-stat-n">10 yr</div><div class="br-stat-l">Boiler warranty</div></div>
       </div>
-
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:320px;margin:0 auto 1.25rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.15rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;font-weight:700;text-align:center;">Book a Free Survey</a>
+      <div class="bi-ctas">
+        <a href={TEL} class="btn btn-orange btn-lg btn-full">CALL {PHONE}</a>
+        <a href="/get-started" class="btn btn-lg btn-full bi-btn-navy">Book a Free Survey</a>
       </div>
-
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.25rem;border-top:1px solid #e2e8f0;">
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Gas Safe Registered</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Free Survey</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> Manufacturer Warranty</span>
-        <span style="font-size:0.82rem;font-weight:700;color:var(--navy);"><span style="color:#15803d;">✓</span> 12-Month Guarantee</span>
+      <div class="bi-ticks">
+        <span class="br-tick"><span>✓</span> Gas Safe Registered</span>
+        <span class="br-tick"><span>✓</span> Free Survey</span>
+        <span class="br-tick"><span>✓</span> Fixed Price</span>
+        <span class="br-tick"><span>✓</span> 5.0 on Google</span>
       </div>
     </div>
   </section>
 
-  <div class="pf">
+  <div class="brx">
 
-  <!-- MINI REVIEW TRUST BAR -->
-  <section style="background:#1a3a5c;padding:1.25rem 0;">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;">
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <div style="color:#fbbf24;font-size:1.1rem;">★★★★★</div>
-          <div style="color:#ffffff;font-size:0.88rem;font-weight:700;">5.0 · 3 Google Reviews</div>
-        </div>
-        <div style="color:rgba(255,255,255,0.85);font-size:0.84rem;font-style:italic;max-width:480px;">"Great company, came within 30 mins for emergency burst pipe, couldn’t praise them enough !!" James Alexander, Google review</div>
-        <a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="background:#c2410c;color:#ffffff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;padding:0.4rem 1rem;border-radius:999px;">See our Google reviews →</a>
+  <!-- AT A GLANCE -->
+  <section class="brx-sec" id="key-facts">
+    <div class="brx-wrap">
+      <div class="brx-facts">
+        <h2 class="brx-facts-h">A new boiler with us at a glance</h2>
+        <dl>
+          <div><dt>Price</dt><dd>Combi from £1,800, system from £2,200, regular from £2,500, fully fitted</dd></div>
+          <div><dt>Quote</dt><dd>Free survey, then a written fixed price. No finance, no add-ons on the day.</dd></div>
+          <div><dt>Time</dt><dd>A like-for-like combi swap is usually done in one day</dd></div>
+          <div><dt>Warranty</dt><dd>10-year manufacturer warranty, plus our 12-month workmanship guarantee</dd></div>
+          <div><dt>Brands</dt><dd>Worcester Bosch, Vaillant, Ideal and Baxi</dd></div>
+          <div><dt>Covered</dt><dd>Every Liverpool postcode, the Wirral, Sefton, Knowsley and St Helens</dd></div>
+        </dl>
+      </div>
+      <nav class="brx-toc" aria-label="On this page">
+        <p class="brx-toc-h">On this page</p>
+        <ol>{toc.map(([id, t]) => <li><a href={`#${id}`}>{t}</a></li>)}</ol>
+      </nav>
+      <p class="brx-updated">Updated {UPDATED}</p>
+    </div>
+  </section>
+
+  <!-- COST -->
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a new boiler cost in Liverpool?</h2>
+      <p class="brx-answer">With us, a new <strong>combi boiler costs from £1,800 fully fitted</strong>. System boilers are from £2,200 and regular boilers from £2,500. You get a written fixed price after a free survey, and that is the price you pay.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Boiler</th><th>Best for</th><th>Fitted from</th></tr></thead>
+          <tbody>
+            {prices.map((p) => <tr><td><strong>{p.type}</strong></td><td>{p.fits}</td><td><strong>{p.price}</strong></td></tr>)}
+          </tbody>
+        </table>
+      </div>
+      <h3>What can change the price?</h3>
+      <ul class="brx-list">
+        <li><strong>Moving the boiler</strong> to another room, which needs new pipes and a new flue.</li>
+        <li><strong>Changing the system</strong>, for example from a tank-fed regular boiler to a combi.</li>
+        <li><strong>A bigger gas pipe.</strong> Modern boilers need enough gas, and some older homes need the pipe upgrading.</li>
+        <li><strong>A longer or vertical flue</strong> through the roof instead of straight out of a wall.</li>
+        <li><strong>The boiler model</strong> and its output.</li>
+      </ul>
+      <p>All of this is checked at the survey and included in your fixed price, so there are no surprises on the day.</p>
+      <div class="brx-cta">
+        <p><strong>Want an exact price?</strong> The survey is free and there is no obligation.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Boiler Installation Liverpool Prices</h2>
-      <p class="pf-sub">A new combi boiler installation in Liverpool costs from £1,800 fully fitted. The price includes the energy efficient A-rated boiler, install, smart controls, Benchmark certificate and Gas Safe certificate. The free survey confirms your exact price.</p>
-
-      <div style="background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #b91c1c;border-radius:10px;padding:0.9rem 1.25rem;margin-bottom:2rem;">
-        <p style="color:#1a3a5c;font-size:0.88rem;margin:0;font-weight:600;">A boiler that shows warning signs in summer will fail in the first cold snap of autumn. If yours is over 10 years old or making odd noises, book a free survey now.</p>
+  <!-- INCLUDED -->
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap bi-inc">
+      <div>
+        <h2>What is included in the price?</h2>
+        <p class="brx-answer">Everything needed for a safe, finished install. Our fitted price includes:</p>
+        <ul class="bi-checks">
+          {included.map(([h, t]) => <li><strong>{h}.</strong> {t}</li>)}
+        </ul>
+        <p class="brx-small">After the install, Gas Safe Register sends you a Building Regulations Compliance Certificate by post. Keep it with the Benchmark checklist. You will need both if you sell the house.</p>
       </div>
+      <figure class="br-photo">
+        <picture>
+          <source type="image/webp" srcset="/images/jobs/boiler-smart-thermostat-fitted-480.webp 480w, /images/jobs/boiler-smart-thermostat-fitted-960.webp 960w" sizes="(max-width: 800px) 100vw, 300px" />
+          <img src="/images/jobs/boiler-smart-thermostat-fitted-960.jpg" alt="Boiler and smart thermostat receiver fitted by our team in a Liverpool home" loading="lazy" decoding="async" width="960" height="1280" />
+        </picture>
+        <figcaption>A recent job: boiler controls fitted by our team.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-      <div class="pf-pricing-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;">
-
-        <div class="pf-price-card pf-price-card-featured" style="background:#1a3a5c;color:#ffffff;border:2px solid #f97316;border-radius:12px;padding:1.75rem 1.5rem;position:relative;">
-          <div class="pf-price-badge" style="background:#c2410c;color:#ffffff;font-size:0.7rem;font-weight:800;padding:0.25rem 0.75rem;border-radius:999px;position:absolute;top:-12px;left:50%;transform:translateX(-50%);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">MOST POPULAR</div>
-          <div class="pf-price-tier" style="font-size:0.7rem;font-weight:800;color:#fb923c;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;text-align:center;">COMBI BOILER</div>
-          <div class="pf-price-name" style="font-size:1.15rem;font-weight:700;color:#ffffff;text-align:center;">Like-for-Like Replacement</div>
-          <div class="pf-price-sub" style="font-size:0.85rem;color:rgba(255,255,255,0.75);margin-bottom:0.75rem;text-align:center;">2 to 4 bed Liverpool homes</div>
-          <div class="pf-price-amount" style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:3rem;font-weight:900;color:#ffffff;line-height:1;margin-bottom:1rem;text-align:center;">£1,800</div>
-          <div style="display:flex;flex-direction:column;gap:0;margin:0 0 1.25rem;">
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.12);"><span style="color:#fb923c;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#ffffff;font-size:0.88rem;line-height:1.4;">New A-rated energy efficient combi boiler fitted</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.12);"><span style="color:#fb923c;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#ffffff;font-size:0.88rem;line-height:1.4;">Smart controls and programmer</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.12);"><span style="color:#fb923c;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#ffffff;font-size:0.88rem;line-height:1.4;">Magnetic system filter fitted</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.12);"><span style="color:#fb923c;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#ffffff;font-size:0.88rem;line-height:1.4;">Gas Safe and Benchmark certificate</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.12);"><span style="color:#fb923c;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#ffffff;font-size:0.88rem;line-height:1.4;">Old boiler removed and disposed</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.12);"><span style="color:#fb923c;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#ffffff;font-size:0.88rem;line-height:1.4;">12-month workmanship guarantee</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;"><span style="color:#fb923c;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#ffffff;font-size:0.88rem;line-height:1.4;">Done in a single day</span></div>
-          </div>
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-full" style="color:#ffffff;">Book Free Survey</a>
-        </div>
-
-        <div class="pf-price-card" style="background:#f1f5f9;border:1px solid #e2e8f0;border-top:4px solid #1a3a5c;border-radius:12px;padding:1.75rem 1.5rem;">
-          <div class="pf-price-tier" style="font-size:0.7rem;font-weight:800;color:#1a3a5c;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;text-align:center;">SYSTEM BOILER</div>
-          <div class="pf-price-name" style="font-size:1.15rem;font-weight:700;color:#1a3a5c;text-align:center;">With Hot Water Cylinder</div>
-          <div class="pf-price-sub" style="font-size:0.85rem;color:#475569;margin-bottom:0.75rem;text-align:center;">Larger Liverpool homes</div>
-          <div class="pf-price-amount" style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:3rem;font-weight:900;color:#1a3a5c;line-height:1;margin-bottom:1rem;text-align:center;">£2,200</div>
-          <div style="display:flex;flex-direction:column;gap:0;margin:0 0 1.25rem;">
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">New A-rated energy efficient system boiler</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Hot water cylinder where required</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Smart controls and programmer</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Magnetic system filter fitted</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Gas Safe and Benchmark certificate</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Old boiler removed and disposed</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">12-month workmanship guarantee</span></div>
-          </div>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
-        </div>
-
-        <div class="pf-price-card" style="background:#f1f5f9;border:1px solid #e2e8f0;border-top:4px solid #1a3a5c;border-radius:12px;padding:1.75rem 1.5rem;">
-          <div class="pf-price-tier" style="font-size:0.7rem;font-weight:800;color:#1a3a5c;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;text-align:center;">REGULAR BOILER</div>
-          <div class="pf-price-name" style="font-size:1.15rem;font-weight:700;color:#1a3a5c;text-align:center;">Traditional System</div>
-          <div class="pf-price-sub" style="font-size:0.85rem;color:#475569;margin-bottom:0.75rem;text-align:center;">Older Liverpool properties</div>
-          <div class="pf-price-amount" style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:3rem;font-weight:900;color:#1a3a5c;line-height:1;margin-bottom:1rem;text-align:center;">£2,500</div>
-          <div style="display:flex;flex-direction:column;gap:0;margin:0 0 1.25rem;">
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">New A-rated regular boiler fitted</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Hot water cylinder and cold tank</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Smart controls and programmer</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Magnetic system filter fitted</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Gas Safe and Benchmark certificate</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">Old boiler removed and disposed</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.55rem 0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.88rem;line-height:1.4;">12-month workmanship guarantee</span></div>
-          </div>
-          <a href="tel:0151 558 0334" class="btn btn-navy btn-full">Book Free Survey</a>
-        </div>
-
+  <!-- REPLACE OR REPAIR -->
+  <section class="brx-sec brx-tint" id="replace">
+    <div class="brx-wrap">
+      <h2>Do you need a new boiler, or just a repair?</h2>
+      <p class="brx-answer">Not every broken boiler needs replacing. These are the signs that a new one is the better buy:</p>
+      <div class="brx-parts">
+        {signs.map(([h, t]) => <div class="brx-part"><h3>{h}</h3><p>{t}</p></div>)}
       </div>
-
-      <div class="pf-alert" style="margin-top:2rem;background:#ffffff;border:1px solid #e2e8f0;border-left:4px solid #f97316;border-radius:10px;padding:1.25rem 1.5rem;">
-        <strong style="color:#1a3a5c;">How does this compare to the Liverpool market?</strong>
-        <p style="margin-top:0.5rem;">The <a href="https://www.checkatrade.com/blog/cost-guides/new-boiler-cost/" target="_blank" rel="noopener">Checkatrade average for Liverpool is £1,677 to £2,733</a>. Heatable puts the Liverpool average at £2,561. Our prices are at the credible entry end of the market for a Gas Safe registered install with Gas Safe registered We visit, assess and give you a written fixed-price quote with no surprises on invoice day.</p>
-      </div>
-
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;margin-top:2rem;padding:1.25rem 1rem;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;">
-        <div><div style="font-family:'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;font-size:1.75rem;font-weight:900;color:#15803d;line-height:1;">5.0 <span style="color:#b45309;">★★★★★</span></div><div style="font-size:0.78rem;color:#166534;font-weight:700;">5.0 on Google</div></div>
-        <div><div style="font-size:0.85rem;font-weight:700;color:#15803d;">Gas Safe Registered</div><div style="font-size:0.78rem;color:#166534;">Verify at gassaferegister.co.uk</div></div>
-        <div><div style="font-size:0.85rem;font-weight:700;color:#15803d;">Fixed Price Guarantee</div><div style="font-size:0.78rem;color:#166534;">No hidden extras ever</div></div>
+      <div class="brx-note">
+        <p><strong>Not sure?</strong> If the boiler is under 10 years old and one part has failed, a repair is usually better value. Book a <a href="/boiler-repair-liverpool">boiler repair</a> visit (fault diagnosis £95) and we will tell you honestly which makes sense.</p>
       </div>
     </div>
   </section>
 
-  <!-- SIGNS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Signs Your Liverpool Boiler Needs Replacing</h2>
-      <p class="pf-sub">If your boiler is over 10 years old or showing any of these signs, a new energy efficient boiler is worth thinking about.</p>
-      <div class="pf-signs" style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">Boiler is over 10 to 12 years old</strong><p style="margin:0;">Modern A-rated energy efficient boilers run at 90 to 94% efficiency. A boiler from before 2010 runs at 65 to 70%. A new boiler almost always pays back faster than more repairs.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">Repair bills are stacking up</strong><p style="margin:0;">Spending more than £200 to £300 a year on repairs? A new boiler will likely pay for itself in a few years. £1,800 fitted beats years of growing repair costs.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">Boiler breaks down when you need it most</strong><p style="margin:0;">If your boiler fails in a cold snap, the heat exchanger or internal parts are likely failing. Old boilers struggle most when demand is high. Replace before it goes cold for peace of mind.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">Energy bills rising for no reason</strong><p style="margin:0;">A boiler losing efficiency burns more gas for the same heat. If bills rise but your usage has not changed, your boiler is working harder than it should.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">Odd noises from the boiler</strong><p style="margin:0;">Banging, kettling, whistling or gurgling sounds point to internal problems. In an older boiler these often mean replacement is cheaper than repair. On a newer boiler, a <a href="/boiler-repair-liverpool" style="font-weight:700;">boiler repair</a> is usually the better value.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">Pilot light keeps going out</strong><p style="margin:0;">On older boilers a pilot light that keeps going out usually means a faulty thermocouple or carbon build-up. In a boiler over 10 years old this is a strong sign to replace.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">Yellow or orange flame instead of blue</strong><p style="margin:0;">A healthy gas flame is blue. Yellow or orange means incomplete combustion and a possible CO risk. Stop using the boiler now and call a <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe registered</a> engineer. If you think it is a gas emergency, call <a href="https://cadentgas.com" target="_blank" rel="noopener">Cadent Gas on 0800 111 999</a> first.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">EPC rating of F or G</strong><p style="margin:0;">An old boiler is the top cause of a poor EPC rating. A new A-rated energy efficient boiler is the single biggest step to a better EPC. A better EPC can add 14% to property value. See the <a href="https://www.gov.uk/find-energy-certificate" target="_blank" rel="noopener">GOV.UK EPC checker</a>.</p></div>
-        <div class="pf-sign" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #b91c1c;border-radius:10px;padding:1.1rem 1.25rem;"><strong style="display:block;color:#1a3a5c;margin-bottom:0.4rem;">No Gas Safe certificate on record</strong><p style="margin:0;">No certificate on record means no proof it was fitted legally. A new install gives you full paperwork. A Benchmark certificate and Gas Safe certificate on the same day.</p></div>
+  <!-- TYPES -->
+  <section class="brx-sec" id="type">
+    <div class="brx-wrap">
+      <h2>Which boiler do you need: combi, system or regular?</h2>
+      <p class="brx-answer">It depends on how many bathrooms you have, your water pressure and the system you already have.</p>
+      <div class="brx-types">
+        <div><h3>Combi</h3><p>Heats water straight from the mains when you turn a tap on. No cylinder or loft tanks. Best for most homes with one bathroom. <strong>From £1,800.</strong></p></div>
+        <div><h3>System</h3><p>Stores hot water in a cylinder, with no tank in the loft. Good for homes with two or more bathrooms in use at once. <strong>From £2,200.</strong></p></div>
+        <div><h3>Regular</h3><p>Also called conventional or heat-only. Uses a cylinder and a cold water tank in the loft. Often the simplest swap in older homes. <strong>From £2,500.</strong></p></div>
       </div>
-
-      <div style="background:#c2410c;border-radius:10px;padding:1.5rem;text-align:center;margin-top:2rem;">
-        <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Spot two or more signs? Your boiler very likely needs replacing. Book a free survey today.</p>
-        <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
-      </div>
+      <p style="margin-top:1rem;">A combi needs good mains water pressure and flow. We measure both at the survey before recommending one.</p>
     </div>
   </section>
 
-  <!-- BENEFITS -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Why Replace Your Liverpool Boiler Now</h2>
-      <p class="pf-sub">A new energy efficient boiler is one of the soundest home upgrades you can make. The savings start from day one and it gives you peace of mind for years to come.</p>
-      <div style="margin-top:2rem;">
-        <div class="pf-pros" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:4px solid #15803d;border-radius:10px;padding:1.5rem;">
-          <h3 >What a New Boiler Delivers</h3>
-          <div style="display:flex;flex-direction:column;gap:0;margin-top:0.75rem;">
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Up to 30% off heating bills versus a G-rated boiler from before 2010</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Typical yearly saving of £200 to £300 on gas bills, or up to £3,000 over 10 years</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Steady hot water and heating with no more breakdowns</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Quieter running with no more banging, gurgling or failed starts</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Lower carbon output thanks to better combustion</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Property value lift of around 4% on average, per <a href="https://www.energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust</a> research</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Better EPC rating, since a new A-rated energy efficient boiler is the single biggest factor and a better EPC can add 14% to property value</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;border-bottom:1px solid #e2e8f0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Manufacturer warranty protecting your spend, for full peace of mind</span></div>
-            <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0;"><span style="color:#15803d;font-weight:900;flex-shrink:0;line-height:1.4;">✓</span><span style="color:#334155;font-size:0.92rem;line-height:1.5;">Full Boiler Plus regulations compliance</span></div>
-          </div>
-        </div>
-        <div class="pf-info-bar" style="margin-top:2rem;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem;">
-          <div style="display:flex;flex-direction:column;gap:0.5rem;">
-            <div style="font-size:0.85rem;color:#334155;">✓ The <a href="https://energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust</a> ranks new boilers as one of the top home energy upgrades.</div>
-            <div style="font-size:0.85rem;color:#334155;">✓ Ofgem advises replacing boilers over 10 years old as a priority efficiency step.</div>
-            <div style="font-size:0.85rem;color:#334155;">✓ <a href="https://trustedtraders.which.co.uk/" target="_blank" rel="noopener">Which? Trusted Traders</a> advises only using a Gas Safe registered engineer for any boiler install.</div>
-            <div style="font-size:0.85rem;color:#334155;">✓ The <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">Health and Safety Executive</a> requires all home gas work to be done by a Gas Safe registered engineer.</div>
-          </div>
-        </div>
+  <!-- SIZE -->
+  <section class="brx-sec brx-tint" id="size">
+    <div class="brx-wrap">
+      <h2>What size boiler do you need?</h2>
+      <p class="brx-answer">Boiler size is its output in kilowatts (kW). For a combi, size depends mostly on how much hot water you need at once, not the number of radiators.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table bi-size">
+          <thead><tr><th>Your home</th><th>Usual size</th></tr></thead>
+          <tbody>{sizes.map(([h, s]) => <tr><td>{h}</td><td><strong>{s}</strong></td></tr>)}</tbody>
+        </table>
       </div>
-    </div>
-  </section>
-
-  <!-- WHAT IS INCLUDED -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>What Is Included in Your Liverpool Boiler Installation</h2>
-      <p class="pf-sub">No hidden extras and no surprise charges. Here is everything in your fully fitted price.</p>
-      <div class="pf-who-grid" style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>New energy efficient boiler supplied and fitted</strong><p>Your chosen boiler from Worcester Bosch, Vaillant, Ideal or Baxi. All A-rated for efficiency. Right-sized at the free survey.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Smart controls and programmer</strong><p>A new room thermostat and programmer fitted and set up. Smart controls like Nest or Hive on request. Required under Boiler Plus regulations.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Magnetic system filter</strong><p>A magnetic filter catches debris and sludge before it reaches the new boiler. Required by most makers to keep the warranty. Worcester Bosch and Vaillant both name this in their install rules.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>System flush and inhibitor</strong><p>Your heating system is flushed and treated with inhibitor before the new boiler is fitted. Required by all makers to protect the new heat exchanger and keep the warranty valid. We dose inhibitor to the <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">BS 7593 standard</a>.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Flue and fittings</strong><p>All flue pipe, fittings and seals needed for a compliant install. We check the flue route at the survey and price in all the parts.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Gas Safe and Benchmark certificate</strong><p>A <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe Register</a> certificate is required by law for any gas boiler install. The Benchmark certificate is required by all major makers to keep the warranty. Both are issued on install day.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Manufacturer warranty registered for you</strong><p>We register the boiler warranty with the maker on install day for peace of mind. You get a confirm email. This locks your warranty from day one. A step many homeowners forget.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Old boiler removed and disposed</strong><p>We take your old boiler away for safe disposal. No skips needed. No mess left.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Full commissioning, test and demo</strong><p>Every radiator is balanced. Pressure is set. A full heating and hot water cycle runs before we leave. We walk you through the new controls so you are happy using them.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>12-month workmanship guarantee</strong><p>Every install carries a 12-month workmanship guarantee on top of the manufacturer warranty on the boiler.</p></div></div>
-      </div>
+      <p>These are a guide. Too small and the shower runs lukewarm. Too big and the boiler wastes gas switching on and off. We work out the right size at the survey.</p>
     </div>
   </section>
 
   <!-- BRANDS -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Boiler Brands We Install in Liverpool</h2>
-      <p class="pf-sub">We fit the four most trusted boiler brands in the UK. All A-rated, energy efficient and compliant with Boiler Plus regulations. We supply combi, system and regular boilers from each range.</p>
-      <div class="pf-why-grid" style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;">
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-top:4px solid #f97316;border-radius:10px;padding:1.25rem;position:relative;">
-          <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c2410c;color:#ffffff;font-size:0.68rem;font-weight:800;padding:0.2rem 0.75rem;border-radius:999px;white-space:nowrap;letter-spacing:0.05em;">OUR PRIMARY PICK</div>
-          <h3>Worcester Bosch</h3>
-          <p>Rated the most reliable boiler brand in the UK by <a href="https://www.which.co.uk/reviews/boilers/article/best-boiler-brands" target="_blank" rel="noopener">Which?</a>. Strong build, top-tier energy efficient performance and dependable warranties. The Greenstar range is our top pick for most Liverpool homes. Extended warranties available when fitted by an accredited installer. See <a href="https://www.worcester-bosch.co.uk" target="_blank" rel="noopener">Worcester Bosch</a>.</p>
-        </div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;">
-          <h3>Vaillant</h3>
-          <p>Premium German engineering. The ecoTEC range is one of the quietest and most energy efficient on the market. Well suited to larger Liverpool homes and older Victorian and Edwardian properties. Extended warranties available when fitted by an accredited installer. See <a href="https://www.vaillant.co.uk" target="_blank" rel="noopener">Vaillant</a>.</p>
-        </div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;">
-          <h3>Ideal Boilers</h3>
-          <p>British-made in Hull. The Logic and Vogue ranges offer strong reliability and good energy efficiency at a lower price. A solid pick for Liverpool landlords and rental homes. Strong spare parts cover across the North West.</p>
-        </div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;">
-          <h3>Baxi</h3>
-          <p>Solid energy efficient performance at a fair price. A smart pick for Liverpool homeowners on a budget. UK-made with strong service across Merseyside. Standard manufacturer warranties across the range.</p>
-        </div>
+  <section class="brx-sec" id="brands">
+    <div class="brx-wrap">
+      <h2>Which boiler brands do you fit?</h2>
+      <p class="brx-answer">We fit four of the most popular UK brands. Every boiler we fit is A-rated and comes with a 10-year manufacturer warranty.</p>
+      <div class="brx-parts">
+        {brands.map(([h, t]) => <div class="brx-part"><h3>{h}</h3><p>{t}</p></div>)}
       </div>
-      <div class="pf-info-bar" style="margin-top:2rem;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem;">
-        <p style="font-size:0.88rem;color:#334155;font-weight:600;text-align:center;margin:0;">Every boiler we fit is A-rated and meets current Boiler Plus regulations. We also fit smart thermostats to comply with Boiler Plus. See the <a href="https://energysavingtrust.org.uk/advice/boilers/" target="_blank" rel="noopener">Energy Saving Trust boiler guide</a> for honest advice on picking the right boiler.</p>
+      <p style="margin-top:1rem;">For a side-by-side comparison, read our guide to <a href="/blog/best-boiler-brands-liverpool-2026">the best boiler brands</a>.</p>
+    </div>
+  </section>
+
+  <!-- INSTALL DAY -->
+  <section class="brx-sec brx-tint" id="install-day">
+    <div class="brx-wrap">
+      <h2>What happens when you book a new boiler?</h2>
+      <ol class="bi-steps">
+        {steps.map(([h, t]) => <li><h3>{h}</h3><p>{t}</p></li>)}
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Book your free survey.</strong> Ring us or book online and we will arrange a time.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
       </div>
     </div>
   </section>
 
-  <!-- BOILER TYPES EXPLAINER -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Combi, System and Regular Boilers Explained</h2>
-      <p class="pf-sub">There are three main boiler types fitted across Liverpool homes. The right one for you depends on the property, the bathrooms and your hot water needs.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#c2410c;font-weight:900;flex-shrink:0;font-size:1.1rem;">●</span><div><strong>Combi boilers</strong><p>A combi boiler heats hot water on demand from the mains. No tank or cylinder needed. The most common choice in 1 to 3 bed Liverpool homes. From £1,800 fitted. Compact, simple and the cheapest type to install.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#c2410c;font-weight:900;flex-shrink:0;font-size:1.1rem;">●</span><div><strong>System boilers</strong><p>A system boiler heats hot water and stores it in a cylinder. No cold tank needed in the loft. The best pick for larger Liverpool homes with two or more bathrooms. Steady hot water at multiple taps at once. From £2,200 fitted.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#c2410c;font-weight:900;flex-shrink:0;font-size:1.1rem;">●</span><div><strong>Regular boilers</strong><p>A regular boiler, also called a conventional boiler or heat-only boiler, needs a hot water cylinder and a cold water tank in the loft. The right fit for older Liverpool properties with gravity-fed systems. Common in Victorian and Edwardian homes in Aigburth, Allerton, Sefton Park and Crosby. Regular boilers from £2,500 fitted.</p></div></div>
-      </div>
-
-      <div style="background:#fff7ed;border:1px solid #fed7aa;border-left:4px solid #f97316;border-radius:10px;padding:1rem 1.25rem;margin-top:2rem;">
-        <p style="color:#1a3a5c;font-size:0.88rem;margin:0;font-weight:600;">Not sure which boiler type fits? The free survey confirms the best option for your Liverpool property based on the rooms, bathrooms and existing system.</p>
-      </div>
+  <!-- OLDER HOMES -->
+  <section class="brx-sec" id="older-homes">
+    <div class="brx-wrap">
+      <h2>What if you live in an older Liverpool house?</h2>
+      <p class="brx-answer">Many Liverpool homes are Victorian, Edwardian or 1930s, and their heating has often been changed several times. That is fine, but it needs checking first.</p>
+      <ul class="brx-list">
+        <li><strong>Back boilers</strong> behind a gas fire are still found in older terraces. They are taken out and replaced with a wall-mounted boiler, and the fireplace is made good or capped.</li>
+        <li><strong>Gravity-fed systems</strong> with tanks in the loft can be kept with a new regular boiler, or converted to a combi or system boiler if the water pressure allows.</li>
+        <li><strong>Old pipework and radiators</strong> often hold years of sludge. They are cleaned before the new boiler goes on, or <a href="/power-flushing-liverpool">power flushed</a> if they are badly blocked.</li>
+        <li><strong>Condensate pipes</strong> that run outside can freeze in a cold snap and stop the boiler. We route and insulate them to reduce the risk.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- WHAT SIZE BOILER -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>What Size Boiler Do I Need for My Liverpool Home?</h2>
-      <p class="pf-sub">Fitting the wrong size boiler is one of the most common and costly install mistakes. We size the boiler at the free survey.</p>
-
-      <div class="pf-who-grid" style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
-        <div class="pf-who-item pf-who-yes" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>1 to 2 bed flat or terrace. 24 to 28kW</strong><p>A smaller Liverpool home with one bathroom and up to 8 radiators. Common in Toxteth, Anfield, Everton and the city centre. A 24kW or 28kW combi is usually the right pick.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>3 bed semi or terrace. 28 to 32kW</strong><p>The most common Liverpool home type. Found across Aigburth, Wavertree, West Derby, Allerton and Childwall. A 28kW or 32kW combi covers most of these.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>4 or 5 bed property or multiple bathrooms. 32 to 40kW or system boiler</strong><p>Larger Liverpool homes in Woolton, Formby, Heswall and Crosby. Or homes with two or more bathrooms. May need a 36 to 40kW combi or a system boiler with hot water cylinder for steady hot water.</p></div></div>
-        <div class="pf-who-item pf-who-yes" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #15803d;border-radius:10px;padding:1.1rem 1.25rem;display:flex;gap:0.75rem;"><span class="pf-who-icon" style="color:#15803d;font-weight:900;flex-shrink:0;font-size:1.1rem;">✓</span><div><strong>Victorian or Edwardian property with gravity-fed system. Regular boiler</strong><p>Many of Liverpool's older homes in Sefton Park, Mossley Hill, Aigburth and Crosby have gravity-fed systems not suited to combi boilers. A regular boiler with hot water cylinder and cold tank in the loft is often the right pick. Our engineers are experienced with these older systems.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OLDER PROPERTIES -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Installation in Liverpool's Older Properties</h2>
-      <p class="pf-sub">Liverpool has one of the highest concentrations of Victorian and Edwardian housing in England. We know every type.</p>
-
-      <div class="pf-card pf-card-navy" style="margin-top:2rem;background:#1a3a5c;border-radius:10px;padding:1.5rem;color:#ffffff;">
-        <h3 style="color:#ffffff;">What Makes Liverpool Properties Different</h3>
-        <p style="color:rgba(255,255,255,0.9);">Many of Liverpool's Victorian terraces, Georgian townhouses and Edwardian semis were built with gravity-fed heating systems. Back boilers behind fires. Chimneys used as flue routes. Pipe runs that differ from modern builds. Areas like Aigburth, Allerton, Sefton Park, Mossley Hill, Crosby and Woolton have many of these older property types.</p>
-        <p style="color:rgba(255,255,255,0.9);">A boiler installer without Liverpool experience can get the cost wrong or fit the wrong system. We have worked across Liverpool's housing stock for years and know what to anticipate before we open a wall. The free survey is essential for any older Liverpool property because we spot problems before they become surprises on install day.</p>
-        <p style="color:rgba(255,255,255,0.9);">For more on gas install safety rules in older homes, see <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">HSE domestic gas safety guidance</a>.</p>
-      </div>
-
-      <div class="pf-card pf-card-orange" style="margin-top:2rem;background:#fff7ed;border:1px solid #fed7aa;border-left:4px solid #f97316;border-radius:10px;padding:1.5rem;">
-        <h3>Can I Install My Own Boiler?</h3>
-        <p>No. It is illegal to install a gas boiler yourself unless you are Gas Safe registered. All gas boiler work, including install, replacement and some repairs, must be done by a <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe registered engineer</a>. A wrongly fitted boiler is a serious carbon monoxide, gas leak and fire risk. Always check your engineer's Gas Safe number before any gas work. See <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">HSE guidance on domestic gas safety</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Why Liverpool Homeowners Choose Us for Boiler Installation</h2>
-      <p class="pf-sub">Gas Safe registered engineers, fixed prices and our engineers with Gas Safe registered All Liverpool and Merseyside postcodes covered.</p>
-      <div class="pf-why-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem;">
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;"><h3>Free Survey and Fixed Price</h3><p>We visit, assess your heating system and give you a written fixed-price quote before any work. No surprises on invoice day and total peace of mind on what you will pay.</p></div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;"><h3>Same-Day and Next-Day</h3><p>For urgent boiler replacements we offer same-day and next-day install across Liverpool and Merseyside. Call us and we will tell you our earliest slot.</p></div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;"><h3>Gas Safe Registered Plumber</h3><p>Every install is done by our Gas Safe registered engineers.</p></div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;"><h3>Boiler Plus and Building Regs</h3><p>Every install meets Boiler Plus regulations and current <a href="https://www.gov.uk/building-regulations-approval" target="_blank" rel="noopener">Building Regulations</a>. A compliant install protects your warranty and your legal position.</p></div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;"><h3>Liverpool Property Specialists</h3><p>Victorian terraces, 1960s semis, new builds and rental homes. We have fitted boilers in every type of Liverpool property and know the city's housing quirks.</p></div>
-        <div class="pf-why-item" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;"><h3>Gas Safe Registered</h3><p>Gas Safe registered and verifiable at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. Public liability insurance in place. 12-month workmanship guarantee on every install for full peace of mind.</p></div>
-      </div>
-      <div style="background:#1a3a5c;border-radius:10px;padding:2rem;text-align:center;margin-top:2rem;">
-        <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;margin-bottom:1.25rem;">Free survey. Fixed price. Gas Safe registered. Same-day available. 5.0 on Google.</p>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
-          <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-          <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Free Survey Online</a>
+  <!-- RULES -->
+  <section class="brx-sec brx-tint" id="rules">
+    <div class="brx-wrap">
+      <h2>What are the rules for fitting a new boiler?</h2>
+      <div class="brx-two">
+        <div>
+          <h3>Gas Safe registration</h3>
+          <p>By law, gas boilers must be fitted by a Gas Safe registered engineer. You can check any engineer on the <a href="https://www.gassaferegister.co.uk/" target="_blank" rel="noopener">Gas Safe Register</a> website.</p>
+        </div>
+        <div>
+          <h3>Controls</h3>
+          <p>New boilers in England must be fitted with time and temperature controls. Combi boilers also need an extra energy-saving feature, such as a smart thermostat with automation and optimisation. That is included in our price.</p>
+        </div>
+        <div>
+          <h3>Notifying Building Control</h3>
+          <p>A new boiler has to be notified to Building Control. We do that through Gas Safe Register, and you get the certificate by post.</p>
+        </div>
+        <div>
+          <h3>Gas boilers are still allowed</h3>
+          <p>You can replace a gas boiler in an existing home with a new gas boiler. The rules that limit gas boilers apply to newly built homes.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- REVIEWS -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:0.1rem;">What Our Customers Say</h2>
-        <p class="pf-sub" style="margin:0 0 0.75rem;">Real Google reviews from across our coverage area</p>
-        <div style="font-size:2.5rem;font-weight:900;color:#1a3a5c;line-height:1;">5.0</div>
-        <div style="color:#b45309;font-size:1rem;">★★★★★</div>
-        <div style="font-size:0.75rem;color:#475569;">Google · 53 reviews</div>
+  <section class="brx-sec" id="reviews">
+    <div class="brx-wrap">
+      <h2>What do customers say about James and the team?</h2>
+      <p class="brx-rating"><strong>5.0</strong> <span aria-hidden="true">★★★★★</span> from 53 Google reviews</p>
+      <div class="brx-reviews">
+        {reviews.map((r) => (
+          <figure class="brx-review"><blockquote>“{r.t}”</blockquote><figcaption>{r.n} · Google review</figcaption></figure>
+        ))}
       </div>
-      <div class="pf-reviews" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
-        <div class="pf-review" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Great company, came within 30 mins for emergency burst pipe, couldn’t praise them enough !!</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">James Alexander</div><div class="pf-review-loc">Burst Pipe Emergency</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Fantastic service less than two hours after phoneing up to order a new shower the job was done the young man who fitted it was a credit to himself I would highly recommend this company</p><div class="pf-review-footer"><div class="pf-review-avatar">J</div><div><div class="pf-review-name">John Manley</div><div class="pf-review-loc">Shower Installation</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-        <div class="pf-review" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;"><div class="pf-review-quote">"</div><span style="font-size:0.68rem;font-weight:700;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:999px;padding:0.15rem 0.5rem;">Verified Google Review</span></div><p>Excellent service.</p><div class="pf-review-footer"><div class="pf-review-avatar">E</div><div><div class="pf-review-name">Elaine McHugh</div><div class="pf-review-loc">Google Review</div></div><div class="pf-review-stars">★★★★★</div></div></div>
-      </div>
-      <div style="text-align:center;margin-top:2rem;"><a href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:700;color:#1a3a5c;">See our Google reviews →</a></div>
+      <p><a class="brx-link" href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener">See all reviews on Google →</a></p>
     </div>
   </section>
 
-  <!-- MID-PAGE CTA -->
-  <section style="background:#1a3a5c;padding:2rem 0;">
-    <div class="container">
-      <h3 style="color:#ffffff;font-size:1.3rem;margin-bottom:0.4rem;">Boiler broken down right now?</h3>
-      <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Same-day and next-day install across Liverpool with fixed prices and no obligation. If you suspect a gas emergency, call Cadent Gas on 0800 111 999 first.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Book a Free Survey</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE PROCESS -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>How Our Liverpool Boiler Installation Works</h2>
-      <p class="pf-sub">From free survey to a working new boiler. Here is what to expect.</p>
-      <div class="pf-steps" style="margin-top:2rem;">
-        <div class="pf-step" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.75rem;"><div class="pf-step-num">1</div><div><strong>Free site survey</strong><p>Our Gas Safe engineer visits your Liverpool property, assesses your heating system and talks through the options. We give you a written fixed-price quote on the day with no obligation. The survey takes 30 to 45 minutes.</p></div></div>
-        <div class="pf-step" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.75rem;"><div class="pf-step-num">2</div><div><strong>Boiler picked, install booked</strong><p>We pick the right energy efficient boiler and output size for your property. Once you say yes to the quote, we book your install. Usually within 2 to 5 working days. Same-day and next-day slots for urgent swaps.</p></div></div>
-        <div class="pf-step" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.75rem;"><div class="pf-step-num">3</div><div><strong>System power flush</strong><p>Before the new boiler is fitted we flush your heating system to remove sludge, magnetite and debris. Required by all major makers to keep the warranty valid. From £350 and protects your new boiler from day one for full peace of mind. Bundle price with a new boiler install. Ask when you call.</p></div></div>
-        <div class="pf-step" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.75rem;"><div class="pf-step-num">4</div><div><strong>Old boiler removed</strong><p>We safely disconnect and take out your old boiler, controls and any pipework being replaced. All waste taken away. No skips. No mess.</p></div></div>
-        <div class="pf-step" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.75rem;"><div class="pf-step-num">5</div><div><strong>New boiler fitted and commissioned</strong><p>The new boiler is fitted, connected and fully commissioned. Every radiator balanced. System pressure set. A full heating and hot water cycle run to check everything works.</p></div></div>
-        <div class="pf-step" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.75rem;"><div class="pf-step-num">6</div><div><strong>Certificates, warranty and demo</strong><p>We issue your Gas Safe certificate and Benchmark certificate. We register the manufacturer warranty for you. We walk you through the new controls before we leave. All paperwork by email the same day.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POWER FLUSH BUNDLE -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Combine Your New Boiler with a Power Flush</h2>
-      <p class="pf-sub">Fitting a new boiler on a dirty system is one of the top reasons makers reject warranty claims.</p>
-      <div class="pf-card pf-card-orange" style="margin-top:2rem;background:#fff7ed;border:1px solid #fed7aa;border-left:4px solid #f97316;border-radius:10px;padding:1.5rem;">
-        <h3 >Why a Power Flush Before Your New Boiler Matters</h3>
-        <p>All major boiler makers including Worcester Bosch and <a href="https://www.vaillant.co.uk/for-installers/" target="_blank" rel="noopener">Vaillant</a> need a clean system as a warranty condition. Sludge and magnetite from your old system can damage the new heat exchanger in months if not removed first. Under Boiler Plus regulations, installers must also confirm the system is clean and efficient at install.</p>
-        <p>We do the power flush before the new boiler is fitted, not after. This protects the heat exchanger from day one and keeps your warranty intact for full peace of mind. A power flush costs from £350 and comes as a bundle with your new boiler at a better combined price. Ask when you call to book your survey.</p>
-      </div>
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg" style="color:#ffffff;box-shadow:0 4px 14px rgba(249,115,22,0.3);">Ask About Our Bundle Price</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BEFORE FAQ -->
-  <section style="background:#c2410c;padding:1.75rem 0;">
-    <div class="container" style="text-align:center;">
-      <p style="color:#ffffff;font-weight:700;font-size:1rem;margin-bottom:0.75rem;">Ready to book your free survey? Most Liverpool homeowners have their new boiler fitted within 5 working days of calling.</p>
-      <a href="tel:0151 558 0334" class="btn btn-lg" style="background:#1a3a5c;color:#ffffff;box-shadow:0 4px 14px rgba(26,58,92,0.4);">CALL 0151 558 0334</a>
+  <!-- AREAS -->
+  <section class="brx-sec brx-tint" id="areas">
+    <div class="brx-wrap">
+      <h2>Do you fit boilers in my area?</h2>
+      <p>Yes. We cover every Liverpool postcode from L1 to L40, plus the Wirral, Sefton, Knowsley and St Helens.</p>
+      <ul class="brx-jump">
+        <li><a href="/boiler-installation-wirral">Wirral</a></li>
+        <li><a href="/boiler-installation-formby">Formby</a></li>
+        <li><a href="/boiler-installation-st-helens">St Helens</a></li>
+      </ul>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Boiler Installation Liverpool. Your Questions Answered.</h2>
-      <p class="pf-sub">Straight answers to what Liverpool homeowners and landlords ask most before they book.</p>
-      <div class="pf-faq" style="display:flex;flex-direction:column;gap:0.5rem;">
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-orange">COST</span>&nbsp; How much does boiler installation cost in Liverpool?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>A like-for-like combi boiler installation in Liverpool starts from £1,800 fully fitted. System boilers start from £2,200. Regular boilers from £2,500. All prices include the energy efficient A-rated boiler, install, smart controls, magnetic filter, system flush, Benchmark certificate and Gas Safe certificate. The <a href="https://www.checkatrade.com/blog/cost-guides/new-boiler-cost/" target="_blank" rel="noopener">Checkatrade average for Liverpool</a> is £1,677 to £2,733. We give a written fixed-price quote after the free survey.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-navy">LEGAL</span>&nbsp; Can I install my own boiler?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>No. It is illegal to install a gas boiler yourself unless you are Gas Safe registered. All gas boiler install must be done by a <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Gas Safe registered engineer</a>. A wrongly fitted boiler is a serious carbon monoxide and gas leak risk. Always check your engineer's Gas Safe number before any gas work. See <a href="https://www.hse.gov.uk/gas/domestic/" target="_blank" rel="noopener">HSE domestic gas safety guidance</a>.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-orange">TYPES</span>&nbsp; What is the difference between combi, system and regular boilers?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>A combi boiler heats hot water on demand. No tank or cylinder needed. Best for most 1 to 3 bed Liverpool homes. A system boiler stores hot water in a cylinder. No cold tank needed. Best for larger homes with more than one bathroom. A regular boiler, also called a conventional boiler or heat-only boiler, needs both a hot water cylinder and a cold water tank in the loft. Common in older Liverpool properties with gravity-fed systems.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-orange">SIZE</span>&nbsp; What size boiler do I need for my Liverpool home?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>Boiler output is measured in kilowatts. A 1 to 2 bed Liverpool home usually needs a 24 to 28kW combi. A 3-bed semi needs 28 to 32kW. Larger homes with multiple bathrooms need 32 to 40kW or a system boiler. Older Liverpool properties with gravity-fed systems often need regular boilers. We size it at the free survey based on your property, radiators and hot water demand. Wrong size is one of the top install mistakes.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-navy">LIVERPOOL</span>&nbsp; Are there complications with older Liverpool properties?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>Yes. Liverpool has one of the highest concentrations of Victorian and Edwardian housing in England. Many have gravity-fed systems, back boilers, chimneys used as flue routes and pipe runs that differ from modern builds. Our engineers are experienced with Liverpool's specific housing stock. We know what to expect before we open a wall. The free survey is essential for any older Liverpool property.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-navy">TIME</span>&nbsp; How long does a boiler installation take?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>A straight like-for-like combi swap takes 4 to 6 hours. Done in a single day. Bigger jobs take 1 to 3 days. Same-day and next-day install for urgent swaps across Liverpool. We confirm timing at the free survey.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-green">WARRANTY</span>&nbsp; What warranty do I get with a new boiler?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>Every install carries a 12-month workmanship guarantee for peace of mind. The manufacturer warranty depends on the boiler model and installer accreditation. Standard manufacturer warranties typically run 2 to 5 years on most models. Longer warranties up to 10 years are offered by Worcester Bosch and Vaillant when fitted by an accredited installer and serviced yearly. We register the manufacturer warranty on your behalf on install day.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-navy">FLUSH</span>&nbsp; Do I need a power flush before my new boiler?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>In most cases yes. Particularly if your system is more than 5 years old. All major makers need a clean system as a warranty condition. We do the power flush before connecting the new boiler to protect the heat exchanger from day one. A power flush costs from £350 and comes as a bundle with your new boiler at a better combined price.</p></div></details>
-        <details class="pf-faq-item" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:0.5rem;padding:0;"><summary style="cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:#1a3a5c;display:flex;align-items:center;gap:0.5rem;"><span class="pf-faq-tag pf-tag-green">GAS SAFE</span>&nbsp; Are you Gas Safe registered?</summary><div class="pf-faq-body" style="padding:0 1.25rem 1.25rem;border-top:1px solid #f1f5f9;"><p>Yes. Liverpool Emergency Plumber is Gas Safe registered. Verify at <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">gassaferegister.co.uk</a>. Every install is done by Gas Safe registered. All gas work is done by a Gas Safe registered plumber. A Gas Safe registered engineer is required by law for all home gas work in the UK.</p></div></details>
-      </div>
+  <section class="brx-sec" id="faq">
+    <div class="brx-wrap">
+      <h2>More new boiler questions</h2>
+      {faqs.map((f) => (
+        <details class="brx-faq"><summary>{f.q}</summary><p>{f.a}{f.q.includes('grants') && <> <a href="/blog/eco4-scheme-liverpool-free-boiler">Read the ECO4 guide</a>.</>}</p></details>
+      ))}
     </div>
   </section>
 
-  <!-- COVERAGE -->
-  <section class="pf-section" style="background:#ffffff;">
-    <div class="container">
-      <h2>Boiler Installation Across Liverpool and Merseyside</h2>
-      <p class="pf-sub" >We fit boilers across all Liverpool postcodes and the wider Merseyside area.</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:2rem;">
-        <div class="pf-card" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;">
-          <h3 style="margin:0 0 0.6rem;color:#1a3a5c;font-size:1rem;">Liverpool City and South</h3>
-          <p>We fit boilers across Liverpool city centre, Aigburth, Allerton, Woolton, Garston, Toxteth and the south Liverpool postcodes. Many homes in Aigburth and Allerton are Victorian and Edwardian semis. They need specialist knowledge of older heating systems. We carry out many boiler installations in south Liverpool every week.</p>
-          <div class="pf-pills" style="display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.75rem;"><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">City Centre L1</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Aigburth L17</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Allerton L18</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Woolton L25</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Garston L19</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Toxteth L8</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Sefton Park L17</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Mossley Hill L18</span></div>
-        </div>
-
-        <div class="pf-card" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;">
-          <h3 style="margin:0 0 0.6rem;color:#1a3a5c;font-size:1rem;">North and East Liverpool</h3>
-          <p>Boiler installations across Anfield, Wavertree, West Derby, Bootle, Crosby and Kirkby. North Liverpool has a mix of Victorian terraces, post-war council stock and modern builds. Each has different heating system needs. Our engineers know every type.</p>
-          <div class="pf-pills" style="display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.75rem;"><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Anfield L4</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Wavertree L15</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">West Derby L12</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Bootle L20</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Crosby L23</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Kirkby L32</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Norris Green L11</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Fazakerley L9</span></div>
-        </div>
-
-        <div class="pf-card" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;">
-          <h3 style="margin:0 0 0.6rem;color:#1a3a5c;font-size:1rem;">Liverpool Outskirts</h3>
-          <p>We cover Formby, Southport, Maghull, Huyton, Aintree and Childwall. Formby and Southport have many larger detached and semi-detached homes. They often need system boilers or bigger combi boilers. We do a full output calculation at the free survey for every property.</p>
-          <div class="pf-pills" style="display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.75rem;"><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Formby L37</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Southport PR8</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Maghull L31</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Huyton L36</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Aintree L10</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Childwall L16</span></div>
-        </div>
-
-        <div class="pf-card" style="background:#f1f5f9;border:1px solid #e2e8f0;border-left:3px solid #1a3a5c;border-radius:10px;padding:1.25rem;">
-          <h3 style="margin:0 0 0.6rem;color:#1a3a5c;font-size:1rem;">Wider Merseyside</h3>
-          <p>Full boiler installation service across the Wirral, St Helens, Birkenhead and Wallasey. The Wirral has many older homes in Heswall, Bebington and Bromborough. They benefit from our knowledge of gravity-fed and older heating systems.</p>
-          <div class="pf-pills" style="display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.75rem;"><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Wirral CH</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">St Helens WA</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Birkenhead CH41</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Wallasey CH44</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Heswall CH60</span><span class="pf-pill" style="display:inline-block;font-size:0.78rem;font-weight:600;color:#1a3a5c;background:#ffffff;border:1px solid #e2e8f0;border-radius:999px;padding:0.25rem 0.7rem;margin:0.15rem 0.2rem 0.15rem 0;">Bebington CH63</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RELATED SERVICES -->
-  <section class="pf-section" style="background:#f1f5f9;">
-    <div class="container">
-      <h2>Related Boiler and Heating Services in Liverpool</h2>
-      <p class="pf-sub">All Gas Safe registered. All Liverpool postcodes covered.</p>
-      <div class="pf-related" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0.75rem;margin-top:1.5rem;">
-        <a href="/boiler-service-liverpool" class="pf-related-link" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:#334155;"><div><strong style="display:block;color:#1a3a5c;font-size:0.95rem;margin-bottom:0.2rem;">Annual Boiler Service Liverpool</strong><span style="font-size:0.82rem;color:#475569;line-height:1.5;">£120 fixed price. Benchmark updated. Certificate emailed same day.</span></div><span class="pf-related-arrow" style="font-size:1.4rem;color:#c2410c;font-weight:700;flex-shrink:0;">&#8594;</span></a>
-        <a href="/gas-safety-certificate-liverpool" class="pf-related-link" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:#334155;"><div><strong style="display:block;color:#1a3a5c;font-size:0.95rem;margin-bottom:0.2rem;">Gas Safety Certificate Liverpool</strong><span style="font-size:0.82rem;color:#475569;line-height:1.5;">CP12 from £80. Combined with boiler service for £175. Same-day available.</span></div><span class="pf-related-arrow" style="font-size:1.4rem;color:#c2410c;font-weight:700;flex-shrink:0;">&#8594;</span></a>
-        <a href="/central-heating-installation-liverpool" class="pf-related-link" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:#334155;"><div><strong style="display:block;color:#1a3a5c;font-size:0.95rem;margin-bottom:0.2rem;">Central Heating Installation Liverpool</strong><span style="font-size:0.82rem;color:#475569;line-height:1.5;">Full systems from £3,500. Radiator additions from £200. Free survey.</span></div><span class="pf-related-arrow" style="font-size:1.4rem;color:#c2410c;font-weight:700;flex-shrink:0;">&#8594;</span></a>
-        <a href="/power-flushing-liverpool" class="pf-related-link" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:#334155;"><div><strong style="display:block;color:#1a3a5c;font-size:0.95rem;margin-bottom:0.2rem;">Power Flushing Liverpool</strong><span style="font-size:0.82rem;color:#475569;line-height:1.5;">Cold radiators or noisy boiler? Power flush from £350. Protects your new boiler.</span></div><span class="pf-related-arrow" style="font-size:1.4rem;color:#c2410c;font-weight:700;flex-shrink:0;">&#8594;</span></a>
-        <a href="/hot-water-cylinders-liverpool" class="pf-related-link" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:#334155;"><div><strong style="display:block;color:#1a3a5c;font-size:0.95rem;margin-bottom:0.2rem;">Hot Water Cylinders Liverpool</strong><span style="font-size:0.82rem;color:#475569;line-height:1.5;">Vented from £600. Unvented mains pressure from £900. G3 qualified engineers.</span></div><span class="pf-related-arrow" style="font-size:1.4rem;color:#c2410c;font-weight:700;flex-shrink:0;">&#8594;</span></a>
-        <a href="/get-started" class="pf-related-link" style="background:#ffffff;border:1px solid #e2e8f0;border-left:3px solid #f97316;border-radius:10px;padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:#334155;"><div><strong style="display:block;color:#1a3a5c;font-size:0.95rem;margin-bottom:0.2rem;">Book Online</strong><span style="font-size:0.82rem;color:#475569;line-height:1.5;">Free no-obligation survey and fixed-price quote. All Liverpool postcodes covered.</span></div><span class="pf-related-arrow" style="font-size:1.4rem;color:#c2410c;font-weight:700;flex-shrink:0;">&#8594;</span></a>
-      </div>
+  <!-- RELATED -->
+  <section class="brx-sec brx-tint" id="related">
+    <div class="brx-wrap">
+      <h2>Related heating services</h2>
+      <ul class="brx-jump">
+        <li><a href="/boiler-repair-liverpool">Boiler repair</a></li>
+        <li><a href="/boiler-service-liverpool">Boiler service</a></li>
+        <li><a href="/power-flushing-liverpool">Power flushing</a></li>
+        <li><a href="/central-heating-installation-liverpool">Central heating installation</a></li>
+        <li><a href="/radiators-liverpool">Radiators</a></li>
+        <li><a href="/hot-water-cylinders-liverpool">Hot water cylinders</a></li>
+      </ul>
     </div>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <h2 style="color:#ffffff;font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">Book a Free Liverpool Boiler Survey Today</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.75rem;">From £1,800 fully fitted. Free survey. Fixed price. Gas Safe registered. Same-day available. Benchmark and Gas Safe certificate included. No hidden extras.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;max-width:360px;margin:0 auto 1.5rem;">
-        <a href="tel:0151 558 0334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);font-size:1.3rem;color:#ffffff;">CALL 0151 558 0334</a>
-        <a href="/get-started" class="btn btn-outline btn-lg btn-full" style="color:#ffffff;border:2px solid #ffffff;">Book a Free Survey Online</a>
-      </div>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;margin-bottom:0.5rem;">Bundling with a power flush? Ask about our bundle price when you call.</p>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Gas emergency? Call Cadent Gas on <strong style="color:rgba(255,255,255,0.6);">0800 111 999</strong> first, then call us.</p>
+  <section class="brx-final" id="final-cta">
+    <div class="brx-wrap">
+      <h2>Book your free boiler survey</h2>
+      <p>Free survey. Written fixed price. Gas Safe registered. 10-year manufacturer warranty.</p>
+      <a href={TEL} class="brx-btn brx-btn-big">Call {PHONE}</a>
+      <p class="bi-gas">Smell gas? Call the National Gas Emergency line on 0800 111 999 first.</p>
     </div>
   </section>
 
   </div>
-
 </BaseLayout>
+
+<style>
+  .bi-stats { display: flex; gap: 1rem; max-width: 340px; margin: 1.25rem 0; }
+  .bi-ctas { display: flex; flex-direction: column; gap: 0.6rem; max-width: 340px; margin: 0 0 1.25rem; }
+  .bi-btn-navy { background: var(--navy); color: #fff !important; font-weight: 700; }
+  .bi-ticks { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; }
+  .br-stat { flex: 1; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 0.75rem 1rem; text-align: center; }
+  .br-stat-n { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 2.1rem; font-weight: 900; color: #c2410c; line-height: 1; }
+  .br-stat-l { font-size: 0.78rem; color: var(--navy); font-weight: 700; margin-top: 0.2rem; }
+  .br-tick { font-size: 0.85rem; font-weight: 700; color: var(--navy); }
+  .br-tick span { color: #15803d; }
+
+  .brx { text-align: left; }
+  .brx-wrap { max-width: 820px; margin: 0 auto; padding: 0 1.25rem; }
+  .brx-sec { padding: 2.75rem 0; background: #fff; scroll-margin-top: 0.5rem; }
+  .brx-tint { background: #f1f5f9; }
+  .brx h2 { font: 900 clamp(1.8rem, 5.5vw, 2.4rem)/1.1 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: var(--navy); margin: 0 0 0.85rem; text-align: left; }
+  .brx h3 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin: 0 0 0.5rem; line-height: 1.3; text-align: left; }
+  .brx p, .brx li { font-size: 1.05rem; line-height: 1.65; color: #1e293b; }
+  .brx p { margin: 0 0 0.9rem; }
+  .brx-answer { font-size: 1.12rem !important; color: #0f172a !important; }
+  .brx-link, .brx p a, .brx li a { color: #c2410c; font-weight: 800; }
+  .brx-small { font-size: 0.95rem !important; color: #475569 !important; }
+  .brx-list { margin: 0 0 0.75rem; padding-left: 1.25rem; }
+  .brx-list li { margin-bottom: 0.45rem; }
+
+  .brx-facts { background: #fff7ed; border: 2px solid #fed7aa; border-radius: 16px; padding: 1.35rem 1.4rem; }
+  .brx-facts-h { font-size: clamp(1.5rem, 4.5vw, 1.9rem) !important; }
+  .brx-facts dl { margin: 0; display: grid; gap: 0.6rem; }
+  .brx-facts dl div { display: grid; grid-template-columns: 96px 1fr; gap: 0.75rem; }
+  .brx-facts dt { font-weight: 900; color: var(--navy); }
+  .brx-facts dd { margin: 0; line-height: 1.55; color: #1e293b; }
+  .brx-toc { margin-top: 1.5rem; border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1.35rem; }
+  .brx-toc-h { font-weight: 900; color: var(--navy); margin: 0 0 0.5rem !important; }
+  .brx-toc ol { margin: 0; padding-left: 1.3rem; columns: 2; column-gap: 2rem; }
+  .brx-toc li { break-inside: avoid; margin-bottom: 0.3rem; }
+  .brx-toc a { color: var(--navy-mid); font-weight: 700; }
+  .brx-updated { font-size: 0.88rem !important; color: #475569 !important; margin: 0.75rem 0 0 !important; }
+
+  .brx-table-wrap { overflow-x: auto; margin: 0 0 1.25rem; }
+  .brx-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(15,23,42,0.08); }
+  .brx-table th { background: var(--navy); color: #fff; text-align: left; padding: 0.75rem 1rem; font-size: 0.9rem; }
+  .brx-table td { padding: 0.8rem 1rem; border-top: 1px solid var(--border); font-size: 1.02rem; vertical-align: top; }
+  .brx-table td strong { color: var(--navy); font-size: 1.1rem; }
+  .brx-table td:last-child strong { color: #c2410c; white-space: nowrap; }
+  .bi-size td:last-child strong { white-space: normal; }
+  .bi-size td:first-child { width: 50%; }
+
+  .bi-inc { max-width: 960px; display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start; }
+  .bi-checks { list-style: none; padding: 0; margin: 0 0 1rem; }
+  .bi-checks li { position: relative; padding-left: 1.8rem; margin-bottom: 0.6rem; }
+  .bi-checks li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #15803d; font-weight: 900; }
+  .br-photo { margin: 0; }
+  .br-photo img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(15,23,42,0.15); }
+  .br-photo figcaption { font-size: 0.88rem; color: #475569; margin-top: 0.5rem; }
+
+  .brx-parts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+  .brx-part { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--orange); border-radius: 12px; padding: 1rem 1.2rem; }
+  .brx-part h3 { font-size: 1.08rem; }
+  .brx-part p { font-size: 0.98rem; margin: 0; }
+  .brx-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; }
+  .brx-types > div { background: #f8fafc; border: 1px solid var(--border); border-top: 4px solid var(--navy); border-radius: 12px; padding: 1rem 1.1rem; }
+  .brx-types p { font-size: 0.98rem; margin: 0; }
+  .brx-two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 1.75rem; }
+  .brx-two p { margin: 0; }
+  .brx-note { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--navy); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.25rem 0 0; }
+  .brx-note p { margin: 0 !important; }
+
+  .bi-steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+  .bi-steps li { counter-increment: s; position: relative; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem 1rem 3.6rem; }
+  .bi-steps li::before { content: counter(s); position: absolute; left: 1rem; top: 1rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: #c2410c; color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+  .bi-steps h3 { margin-bottom: 0.25rem; }
+  .bi-steps p { margin: 0; }
+
+  .brx-jump { list-style: none; padding: 0; margin: 0 0 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .brx-jump a { display: block; background: #fff; border: 2px solid var(--border); border-radius: 999px; padding: 0.45rem 0.95rem; font-weight: 700; font-size: 0.95rem; color: var(--navy) !important; text-decoration: none; }
+  .brx-jump a:hover { border-color: var(--orange); }
+
+  .brx-cta { background: var(--navy); border-radius: 14px; padding: 1.15rem 1.3rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .brx-cta p { margin: 0 !important; flex: 1 1 260px; color: rgba(255,255,255,0.92) !important; }
+  .brx-cta strong { color: #fff; }
+  .brx-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; background: #c2410c; color: #fff !important; border-radius: 10px; padding: 0.6rem 1.25rem; font: 900 1.3rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; text-decoration: none; white-space: nowrap; }
+  .brx-btn:hover { background: #9a3412; }
+
+  .brx-rating { font-size: 1.15rem !important; }
+  .brx-rating strong { font-size: 1.6rem; color: var(--navy); }
+  .brx-rating span { color: #b45309; }
+  .brx-reviews { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 1rem; }
+  .brx-review { margin: 0; background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem; }
+  .brx-review blockquote { margin: 0 0 0.6rem; font-size: 1rem; line-height: 1.6; color: #1e293b; }
+  .brx-review figcaption { font-weight: 800; color: var(--navy); font-size: 0.92rem; }
+
+  .brx-faq { background: #fff; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.5rem; }
+  .brx-faq summary { cursor: pointer; padding: 1rem 1.2rem; font-weight: 800; color: var(--navy); font-size: 1.05rem; text-align: left; }
+  .brx-faq p { padding: 0 1.2rem 1rem; margin: 0 !important; }
+
+  .brx-final { background: var(--navy); padding: 3rem 0; text-align: center; }
+  .brx-final h2 { color: #fff !important; text-align: center !important; }
+  .brx-final p { color: rgba(255,255,255,0.88) !important; }
+  .brx-btn-big { font-size: 1.6rem; min-height: 60px; width: 100%; max-width: 420px; }
+  .bi-gas { font-size: 0.95rem !important; margin: 1rem 0 0 !important; }
+
+  @media (max-width: 800px) {
+    .bi-inc { grid-template-columns: 1fr; }
+    .br-photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 35%; }
+  }
+  @media (max-width: 640px) {
+    .brx-toc ol { columns: 1; }
+    .brx-parts, .brx-types, .brx-two, .brx-reviews { grid-template-columns: 1fr; }
+    .brx-facts dl div { grid-template-columns: 1fr; gap: 0.1rem; }
+    .brx-cta .brx-btn { width: 100%; }
+  }
+</style>
