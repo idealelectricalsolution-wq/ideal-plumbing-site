@@ -165,8 +165,8 @@ const guideBox = (() => {
     }
 
     h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); }
-    h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); text-align: center; }
-    h3 { font-size: 1.4rem; text-align: center; }
+    h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); text-align: inherit; }
+    h3 { font-size: 1.4rem; text-align: inherit; }
 
     a { color: inherit; }
     img { max-width: 100%; display: block; }
@@ -958,6 +958,30 @@ const guideBox = (() => {
     .sib a { display: block; background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; padding: 0.55rem 0.95rem; line-height: 1.35; font-weight: 700; font-size: 0.95rem; color: #1a3a5c; text-decoration: none; }
     .sib a:hover { border-color: #f97316; }
     .gd + .sib { border-top: 0; padding-top: 0; }
+
+    /* ===== Modern reading layer (area + service pages) =====
+       Left-aligned headings and copy read faster than centred text.
+       Short, punchy elements (CTA bands, stat tiles, prices, step badges) stay centred. */
+    .pf h2, .pf h3 { text-align: inherit; }
+    .section-title, .section-sub, .pf-sub, .pf .pf-sub,
+    .page-hero, .page-hero h1, .page-hero-sub,
+    .pf-sign, .pf-sign strong, .pf-sign p, .pf-info-bar p,
+    .pf-why-item, .pf-why-item h3, .pf-why-item p,
+    .why-header, .selfhelp-header, .coverage-area, .copy-block, .copy-block h2, .copy-block h3 { text-align: left; }
+    .pf-sub, .pf .pf-sub, .section-sub { margin-left: 0; margin-right: 0; }
+    .pf-sign { align-items: flex-start; }
+    .reviews-header { align-items: flex-start; text-align: left; }
+    .pf h2 { font-size: clamp(1.75rem, 5.5vw, 2.3rem); line-height: 1.1; }
+    .pf h3 { font-size: 1.2rem; }
+    .pf p, .pf-sign p, .pf-sub, .pf .pf-sub, .pf-info-bar p { font-size: 1.02rem; line-height: 1.68; }
+    .page-hero-sub { font-size: 1.08rem; line-height: 1.65; }
+    .job-card, .job-card p, .pf-alert, .pf-alert p, .pf-alert strong, .insurance-bar, .pf-info-bar, .featured-card, .urgency-bar, .urgency-bar p { text-align: left; }
+    .insurance-bar, .pf-alert { align-items: flex-start; }
+    .job-meta { justify-content: flex-start; }
+    /* keep these centred */
+    .mid-cta, .mid-cta h2, .mid-cta p, .why-card, .why-card h3, .why-card p, .process-step, .process-step h3,
+    .pf-price-card, .pf-price-card h3, .price-card h3, .trust-item, .service-card h3, .why-cta, .reviews-cta, .stat-num,
+    .hp-center, .sib-wrap .nothing { text-align: center; }
     .sib a.gd-svc { background: #1a3a5c; border-color: #1a3a5c; color: #fff; }
   </style>
 </head>
