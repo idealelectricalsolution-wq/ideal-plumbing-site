@@ -207,7 +207,7 @@ const guideBox = (() => {
     .hdr { background: var(--navy); border-bottom: 3px solid var(--orange); position: relative; z-index: 200; }
     .hdr-inner { max-width: 1180px; margin: 0 auto; padding: 0.7rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
     .hdr-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.25rem; line-height: 1; color: #fff; text-decoration: none; white-space: nowrap; }
-    .hdr-logo span { color: var(--orange); }
+    .hdr-logo span { color: #fb923c; }
     .hdr-logo small { display: block; font-family: 'Nunito Sans', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; color: rgba(255,255,255,0.75); margin-top: 0.2rem; }
     .hdr-links { list-style: none; display: flex; gap: 0.25rem; margin: 0 0 0 auto; padding: 0; }
     .hdr-links > li { position: relative; }
@@ -227,10 +227,10 @@ const guideBox = (() => {
     .hdr-dd.areas { min-width: 480px; }
     .hdr-dd.areas .hdr-area-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
     .hdr-dd.areas .hdr-area-grid a { padding: 0.35rem 0.6rem; font-weight: 700; }
-    .hdr-call { margin-left: 0.5rem; display: inline-flex; flex-direction: column; align-items: center; background: var(--orange); color: #fff; text-decoration: none; border-radius: 8px; padding: 0.45rem 1rem; line-height: 1.1; white-space: nowrap; box-shadow: 0 4px 14px rgba(249,115,22,0.35); }
+    .hdr-call { margin-left: 0.5rem; display: inline-flex; flex-direction: column; align-items: center; background: #c2410c; color: #fff; text-decoration: none; border-radius: 8px; padding: 0.45rem 1rem; line-height: 1.1; white-space: nowrap; box-shadow: 0 4px 14px rgba(194,65,12,0.35); }
     .hdr-call strong { font: 900 1.25rem 'Barlow Condensed', sans-serif; letter-spacing: 0.02em; }
-    .hdr-call small { font-size: 0.7rem; font-weight: 800; opacity: 0.95; }
-    .hdr-call:hover { background: var(--orange-dark); }
+    .hdr-call small { font-size: 0.7rem; font-weight: 800; }
+    .hdr-call:hover { background: #9a3412; }
     .hdr-menu-btn { display: none; background: rgba(255,255,255,0.1); color: #fff; border: 0; border-radius: 8px; font: 800 0.9rem 'Nunito Sans', sans-serif; padding: 0.7rem 0.9rem; cursor: pointer; min-height: 48px; }
     .hdr-mob { display: none; background: #fff; border-top: 1px solid var(--border); padding: 0.5rem 1.25rem 1.25rem; }
     .hdr-mob.open { display: block; }
@@ -905,7 +905,7 @@ const guideBox = (() => {
     .ftr-grid ul { list-style: none; margin: 0; padding: 0; }
     .ftr-grid li { margin: 0 0 0.45rem; }
     .ftr-brand { font: 900 1.35rem 'Barlow Condensed', sans-serif; color: #fff; }
-    .ftr-call { display: inline-block; margin: 0.75rem 0; background: var(--orange); color: #fff !important; font: 900 1.4rem 'Barlow Condensed', sans-serif; padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none !important; }
+    .ftr-call { display: inline-block; margin: 0.75rem 0; background: #c2410c; color: #fff !important; font: 900 1.4rem 'Barlow Condensed', sans-serif; padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none !important; }
     .ftr-areas { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); line-height: 2; }
     .ftr-areas h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin: 0 0 0.25rem; }
     .ftr-areas a { margin-right: 1rem; white-space: nowrap; }
@@ -1031,7 +1031,7 @@ const guideBox = (() => {
         <li><a href="/#reviews">Reviews</a></li>
         <li><a href="/blog">Advice</a></li>
       </ul>
-      <a href="tel:01515580334" class="hdr-call"<strong>0151 558 0334</strong><small>Call now, 24/7</small></a>
+      <a href="tel:01515580334" class="hdr-call"><strong>0151 558 0334</strong><small>Call now, 24/7</small></a>
       <button class="hdr-menu-btn" id="hdr-menu-btn" type="button" aria-expanded="false" aria-controls="hdr-mob">Menu</button>
     </div>
     <nav class="hdr-mob" id="hdr-mob" aria-label="Mobile menu">
