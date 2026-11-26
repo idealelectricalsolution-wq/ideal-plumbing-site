@@ -218,7 +218,8 @@ const guideBox = (() => {
     .hdr-links > li > a:hover, .hdr-links > li > button:hover, .hdr-links > li:focus-within > button { background: rgba(255,255,255,0.1); }
     .hdr-links > li > button::after { content: ' ▾'; font-size: 0.75em; opacity: 0.8; }
     .hdr-dd { display: none; position: absolute; top: 100%; left: 0; background: #fff; border-radius: 10px; box-shadow: 0 12px 32px rgba(15,23,42,0.18); padding: 0.75rem; min-width: 290px; }
-    .hdr-dd.wide { min-width: 560px; }
+    .hdr-dd.wide { min-width: 780px; }
+    .hdr-dd.wide .hdr-dd-cols { grid-template-columns: 1fr 1fr 1fr; }
     .hdr-links > li:hover .hdr-dd, .hdr-links > li:focus-within .hdr-dd { display: block; }
     .hdr-dd-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 1rem; }
     .hdr-dd h4 { font: 800 0.72rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0.35rem 0.6rem 0.3rem; }
@@ -995,6 +996,7 @@ const guideBox = (() => {
               <a href="/leak-detection-liverpool"><strong>Leak Detection</strong><small>Leaks found and fixed</small></a>
               <a href="/boiler-repair-liverpool"><strong>Boiler Repair</strong><small>No heating or hot water</small></a>
               <a href="/emergency-gas-engineer-liverpool"><strong>Emergency Gas Engineer</strong><small>Gas Safe registered</small></a>
+              <a href="/toilet-repair-liverpool"><strong>Toilet Repair</strong><small>Not flushing or running</small></a>
           </div>
         </li>
         <li>
@@ -1015,6 +1017,14 @@ const guideBox = (() => {
               <a href="/hot-water-cylinders-liverpool"><strong>Hot Water Cylinders</strong><small>Vented from £750</small></a>
               <a href="/bathroom-fitters-liverpool"><strong>Bathroom Fitting</strong><small>Plumbing and tiling</small></a>
               <a href="/showers-liverpool"><strong>Showers</strong><small>Fitted from £375</small></a>
+              </div>
+              <div>
+                <h4>Small jobs</h4>
+              <a href="/small-plumbing-jobs-liverpool"><strong>All Small Jobs</strong><small>Fixed prices, no job too small</small></a>
+              <a href="/outside-tap-installation-liverpool"><strong>Outside Tap Fitted</strong><small>£145 fitted</small></a>
+              <a href="/tap-replacement-liverpool"><strong>Tap Replacement</strong><small>£110 per tap</small></a>
+              <a href="/kitchen-sink-replacement-liverpool"><strong>Kitchen Sink Swap</strong><small>£225 fitted</small></a>
+              <a href="/gas-hob-installation-liverpool"><strong>Gas Hob Fitting</strong><small>£120, Gas Safe</small></a>
                 <h4>Not urgent?</h4>
               <a href="/get-started"><strong>Book a Visit</strong><small>Pick a time that suits you</small></a>
               </div>
@@ -1067,6 +1077,7 @@ const guideBox = (() => {
           <a href="/leak-detection-liverpool">Leak Detection</a>
           <a href="/boiler-repair-liverpool">Boiler Repair</a>
           <a href="/emergency-gas-engineer-liverpool">Emergency Gas Engineer</a>
+          <a href="/toilet-repair-liverpool">Toilet Repair</a>
       <h4>Boilers and heating</h4>
           <a href="/boiler-service-liverpool">Boiler Service</a>
           <a href="/boiler-installation-liverpool">Boiler Installation</a>
@@ -1078,6 +1089,12 @@ const guideBox = (() => {
           <a href="/hot-water-cylinders-liverpool">Hot Water Cylinders</a>
           <a href="/bathroom-fitters-liverpool">Bathroom Fitting</a>
           <a href="/showers-liverpool">Showers</a>
+      <h4>Small jobs</h4>
+          <a href="/small-plumbing-jobs-liverpool">All Small Jobs</a>
+          <a href="/outside-tap-installation-liverpool">Outside Tap Fitted</a>
+          <a href="/tap-replacement-liverpool">Tap Replacement</a>
+          <a href="/kitchen-sink-replacement-liverpool">Kitchen Sink Swap</a>
+          <a href="/gas-hob-installation-liverpool">Gas Hob Fitting</a>
       <details>
         <summary>Areas we cover</summary>
         <div class="hdr-mob-areas">
@@ -1182,6 +1199,12 @@ const guideBox = (() => {
           <li><a href="/hot-water-cylinders-liverpool">Hot Water Cylinders</a></li>
           <li><a href="/bathroom-fitters-liverpool">Bathroom Fitting</a></li>
           <li><a href="/showers-liverpool">Showers</a></li>
+          <li><a href="/small-plumbing-jobs-liverpool">Small Plumbing Jobs</a></li>
+          <li><a href="/outside-tap-installation-liverpool">Outside Taps</a></li>
+          <li><a href="/tap-replacement-liverpool">Tap Replacement</a></li>
+          <li><a href="/kitchen-sink-replacement-liverpool">Kitchen Sinks</a></li>
+          <li><a href="/gas-hob-installation-liverpool">Gas Hob Fitting</a></li>
+          <li><a href="/toilet-repair-liverpool">Toilet Repair</a></li>
           </ul>
         </div>
         <div>

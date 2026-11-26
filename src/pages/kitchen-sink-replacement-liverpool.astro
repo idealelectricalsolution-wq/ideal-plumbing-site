@@ -1,0 +1,255 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/kitchen-sink-replacement-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'sink-swap', tier: 'Fit only', popular: true, name: 'Kitchen sink replaced, like for like', price: '£225', unit: 'fixed price, inc VAT',
+    points: ['You supply the sink, tap and waste', 'Old sink out, new sink fitted and sealed', 'Tap and waste connected, tested for leaks', 'Old sink taken away if you want'] },
+  { id: 'leak-repair', tier: 'Repairs', name: 'Leaking sink waste or trap', price: '£120', unit: 'first hour, weekdays 9am–4pm, inc VAT',
+    points: ['No call-out fee', 'Most trap and waste leaks fixed in the first hour', '£150 evenings, nights and weekends', 'Parts priced before we fit them'] },
+  { id: 'tap-only', tier: 'Just the tap', name: 'Kitchen tap replaced', price: '£110', unit: 'one tap, you supply it, inc VAT',
+    points: ['Old tap off, new tap on', 'New flexible hoses checked', 'Second tap on the same visit: £50', 'See our tap replacement page'] },
+];
+
+const faqs = [
+  { q: 'How much does it cost to replace a kitchen sink in Liverpool?', a: 'With us it is £225 including VAT for a like-for-like swap. You supply the sink, tap and waste, and we fit them. Moving the sink or cutting a new hole in the worktop is priced before we start.' },
+  { q: 'How long does it take to replace a kitchen sink?', a: 'Most like-for-like swaps take 2 to 3 hours. A stuck old sink, rusted fittings or a tricky tap can add a little time. The price stays fixed for a like-for-like job.' },
+  { q: 'Do I need to buy the sink and tap first?', a: 'Yes. Our £225 price is fit only. Buy the sink, tap and waste kit before we come. Send us a link to what you want, and we will check it suits your worktop and pipes.' },
+  { q: 'Can you fit a bigger or different shaped sink?', a: 'Often, yes. If the new sink is bigger, the hole in the worktop has to be cut larger. We price that before we start. If the new sink is smaller than the old hole, it will not fit, so check the sizes first.' },
+  { q: 'Can you fit an undermount or Belfast sink?', a: 'An undermount sink needs a solid worktop cut and finished to suit it. A Belfast sink needs a special base unit and a worktop cut around it. We do not fit worktops, so these are best done by your kitchen fitter. We can do the plumbing once the sink is in place.' },
+  { q: 'Can you move my kitchen sink?', a: 'Yes. We can move the water pipes and the waste pipe to a new spot. The price depends on the distance and the route of the waste pipe, so we price it before we start.' },
+  { q: 'My sink is leaking underneath. What is it?', a: 'Most leaks under a kitchen sink come from the trap, the waste, the overflow or a tap hose. A loose or cracked trap is common. We fix these by the hour. The first hour is £120 on weekdays 9am to 4pm, with no call-out fee.' },
+  { q: 'What should I do if my sink is leaking now?', a: 'Put a bowl under the drip and stop using the sink. If water is coming from a pipe or hose, turn off the isolation valve under the sink, or the stopcock. Then call us on 0151 558 0334.' },
+  { q: 'Will you reconnect my dishwasher or washing machine?', a: 'If the drain hose already runs to the old sink trap, we reconnect it to the new one. Plumbing in a new appliance, or adding new pipes for one, is priced before we start.' },
+  { q: 'Do you replace bathroom basins?', a: 'Yes. We swap bathroom basins and pedestals, and fit new basin taps and wastes. Tell us what you have and what you are fitting, and we will give you a fixed price before we start.' },
+  { q: 'Do you take the old sink away?', a: 'Yes, if you want us to. Just tell us when you book.' },
+  { q: 'Is the work guaranteed?', a: 'Yes. Our workmanship has a 12-month guarantee. The sink and tap are covered by the maker’s warranty. We carry £2 million public liability insurance.' },
+  { q: 'Can you replace the tap without changing the sink?', a: 'Yes. A kitchen tap swap is £110 including VAT when you supply the tap. A second tap on the same visit is £50. See our tap replacement page for more.' },
+  { q: 'Do you cover my area?', a: 'We cover all of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens. There is no call-out fee in any of these areas.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Kitchen Sink Replacement Liverpool | Fitted From £225"
+  description="Kitchen sink replacement in Liverpool: £225 fixed price inc VAT to fit your new sink, tap and waste. Leaking sink trap repairs from £120. No call-out fee. Call 0151 558 0334."
+  h1="Kitchen Sink Replacement Liverpool"
+  badge="Sinks fitted at a fixed price"
+  intro="We replace kitchen sinks across Liverpool for a fixed £225 including VAT. You buy the sink, tap and waste. We take the old one out, fit the new one, connect it all up and test it for leaks. Most swaps take 2 to 3 hours."
+  stats={[['£225', 'Sink fitted, inc VAT'], ['2–3 hrs', 'For most swaps']]}
+  ticks={['Fixed Prices', 'No Call-Out Fee', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Kitchen sink replacement prices"
+  pkLede="Fixed prices, including VAT. No call-out fee and no hidden extras."
+  packages={packages}
+  pkNote="Moving the sink, cutting a bigger worktop hole or plumbing in a new appliance is priced before we start. We do not fit worktops. Bathroom basin swaps are priced on the phone or at a free visit."
+  factsTitle="Kitchen sink replacement at a glance"
+  facts={[
+    ['Price', '£225 to fit your sink, tap and waste, like for like. Inc VAT.'],
+    ['Time', 'Most swaps take 2 to 3 hours.'],
+    ['Leaks', 'Trap and waste repairs: first hour £120 weekdays 9am to 4pm. No call-out fee.'],
+    ['Extras', 'Moving the sink or a bigger worktop hole: priced before we start.'],
+    ['Guarantee', '12 months on our workmanship. £2 million public liability insurance.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['cost', 'How much does it cost?'],
+    ['included', 'What is included?'],
+    ['how', 'How does it work?'],
+    ['which', 'Which sinks can you fit?'],
+    ['buying', 'What should I buy?'],
+    ['leaks', 'Is your sink leaking?'],
+    ['basin', 'Bathroom basin replacement'],
+    ['why', 'Why choose us?'],
+  ]}
+  reviews={['Sara R', 'Tonia K', 'Frank B', 'Chris C']}
+  faqs={faqs}
+  areasTitle="Where do you replace kitchen sinks?"
+  areasText="We cover all of Liverpool, the Wirral, Sefton, Knowsley and St Helens. Here are some of the Liverpool areas we cover."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-garston', label: 'Garston' },
+  ]}
+  related={[
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Several small jobs in one visit, priced first' },
+    { href: '/tap-replacement-liverpool', title: 'Tap replacement', text: '£110 to fit your tap, £50 for a second' },
+    { href: '/outside-tap-installation-liverpool', title: 'Outside tap', text: '£145 supplied and fitted' },
+    { href: '/gas-hob-installation-liverpool', title: 'Gas hob fitting', text: '£120 by Gas Safe registered engineers' },
+    { href: '/toilet-repair-liverpool', title: 'Toilet repair', text: 'First hour £120, no call-out fee' },
+    { href: '/radiators-liverpool', title: 'Radiators', text: 'New radiators from £245 supplied and fitted' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Hidden leaks found and fixed' },
+  ]}
+  finalTitle="Book your kitchen sink replacement"
+  finalText="£225 including VAT to fit your new sink, tap and waste. Fixed price, no call-out fee, 12-month guarantee."
+  serviceName="Kitchen Sink Replacement Liverpool"
+  serviceType="Kitchen sink replacement and sink plumbing"
+  serviceDesc="Kitchen sink replacement across Liverpool and Merseyside. New sinks, taps and wastes fitted at a fixed price, plus leaking sink trap and waste repairs and bathroom basin replacement."
+  areaServed={['Liverpool', 'Wirral', 'Sefton', 'Knowsley', 'St Helens']}
+>
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does kitchen sink replacement cost in Liverpool?</h2>
+      <p class="brx-answer">A like-for-like kitchen sink swap costs £225 including VAT. That is a fixed price to fit the sink, tap and waste you have bought.</p>
+      <p>Like for like means the new sink fits the same hole in the worktop, in the same place.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price (inc VAT)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Kitchen sink replaced, like for like</strong> (you supply sink, tap and waste)</td><td>£225 fixed</td></tr>
+            <tr><td><strong>Kitchen tap only</strong> (you supply the tap)</td><td>£110</td></tr>
+            <tr><td><strong>Second tap on the same visit</strong></td><td>£50</td></tr>
+            <tr><td><strong>Leaking trap, waste or tap hose</strong></td><td>First hour £120 weekdays 9am to 4pm</td></tr>
+            <tr><td><strong>Moving the sink, bigger worktop hole</strong></td><td>Priced before we start</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Repairs out of hours are £150 for the first hour on evenings, nights and weekends, and £180 on bank holidays. There is never a call-out fee. If a job needs more time, we tell you the price before we carry on.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in a sink replacement?</h2>
+      <p class="brx-answer">Everything needed to take the old sink out and leave the new one working. You only buy the sink, tap and waste kit.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Included in £225</h3>
+          <ul class="sg-ticks">
+            <li>Water turned off and the old sink taken out</li>
+            <li>The tap fitted to the new sink</li>
+            <li>The waste, overflow and trap fitted</li>
+            <li>The sink set in the worktop and sealed</li>
+            <li>Hot and cold supplies connected</li>
+            <li>New isolation valves if the old ones are missing or stuck</li>
+            <li>An existing dishwasher or washing machine drain hose reconnected</li>
+            <li>Full leak test, then a clean-up</li>
+            <li>The old sink taken away, if you want</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>Priced before we start</h3>
+          <ul class="brx-list">
+            <li>Moving the sink to a new spot</li>
+            <li>Cutting a bigger hole in the worktop</li>
+            <li>New waste pipe runs through a wall</li>
+            <li>Plumbing in a new dishwasher or washing machine</li>
+          </ul>
+          <h3>Not something we do</h3>
+          <ul class="brx-list">
+            <li>Fitting new worktops or kitchen units</li>
+            <li>Unblocking drains</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How does a kitchen sink replacement work?</h2>
+      <p class="brx-answer">You call, we agree a fixed price, and an engineer swaps the sink in one visit. Most jobs take 2 to 3 hours.</p>
+      <ol class="sg-steps">
+        <li><strong>Call or send a photo.</strong> Tell us about the old sink and the new one. A photo of the pipes under the sink helps. We confirm the £225 price, or price any extras.</li>
+        <li><strong>Book a time.</strong> We agree a day that suits you. Have the sink, tap and waste ready, still boxed.</li>
+        <li><strong>Old sink out (about 30 minutes).</strong> We turn off the water, disconnect the pipes and lift the old sink out.</li>
+        <li><strong>New sink in (1 to 2 hours).</strong> We fit the tap and waste to the sink first. Then we set it in the worktop, seal it and connect the pipes.</li>
+        <li><strong>Test and tidy (about 15 minutes).</strong> We run the taps, fill the bowl and check every joint for leaks. Then we clean up and take the old sink away.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Got your new sink?</strong> Call and we will book you in.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which kitchen sinks can you fit?</h2>
+      <p class="brx-answer">We fit any inset (top-mount) sink, in stainless steel, composite or ceramic. Undermount and Belfast sinks need worktop work, so your kitchen fitter should set those in place first.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Sink type</th><th>What it is</th><th>Can we fit it?</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Inset (top-mount)</strong></td><td>Sits on top of the worktop, with a rim. The most common type.</td><td>Yes, £225 like for like</td></tr>
+            <tr><td><strong>Inset, different size</strong></td><td>Bigger than the old hole in the worktop.</td><td>Yes, the bigger cut-out is priced first</td></tr>
+            <tr><td><strong>Undermount</strong></td><td>Fixed under a solid worktop, such as quartz or granite.</td><td>Plumbing only, once it is fixed in</td></tr>
+            <tr><td><strong>Belfast or butler</strong></td><td>A deep ceramic sink on its own base unit.</td><td>Plumbing only, once it is set in</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Which option is right for me?</h3>
+      <ul class="sg-ticks">
+        <li><strong>Your sink is tired, chipped or stained:</strong> a like-for-like swap at £225 is the simple fix.</li>
+        <li><strong>The sink is fine but the tap drips or is stiff:</strong> just change the tap for £110.</li>
+        <li><strong>Water is dripping under the sink:</strong> it is usually the trap or a hose. Book a repair, from £120 for the first hour.</li>
+        <li><strong>You want a whole new kitchen:</strong> use a kitchen fitter for the units and worktops. We can do the plumbing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="buying">
+    <div class="brx-wrap">
+      <h2>What should I buy before you come?</h2>
+      <p class="brx-answer">Buy the sink, the tap and a waste kit to suit the sink. Many sinks come with the waste in the box, so check before you buy one.</p>
+      <ul class="sg-ticks">
+        <li><strong>Measure the old sink.</strong> Measure the width and depth of the rim. A new sink the same size or slightly bigger keeps it like for like.</li>
+        <li><strong>Check the tap holes.</strong> Most kitchen taps need one hole. Some sinks have no hole, so the tap goes through the worktop instead.</li>
+        <li><strong>Get the right waste.</strong> One bowl, one and a half bowls and two bowls all need different waste kits.</li>
+        <li><strong>Check the water pressure.</strong> Some taps are made for low-pressure systems, such as a tank in the loft. Others need mains pressure. The box will say.</li>
+        <li><strong>Buy an approved tap.</strong> Look for a tap that meets UK water rules, such as one marked as WRAS approved.</li>
+      </ul>
+      <div class="brx-note"><p><strong>Not sure?</strong> Send us a link to the sink and tap before you buy. We will tell you if they suit your kitchen. It is free and saves a second trip to the shop.</p></div>
+      <p>Want a socket under the sink, for example for a boiling water tap? That is electrical work. Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/">Ideal Electrical Solutions</a> can fit it.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="leaks">
+    <div class="brx-wrap">
+      <h2>Is your kitchen sink leaking underneath?</h2>
+      <p class="brx-answer">Most sink leaks come from the trap, the waste or a tap hose. We fix them by the hour, and most are done in the first hour, which is £120 on weekdays.</p>
+      <h3>Common causes</h3>
+      <ul class="brx-list">
+        <li><strong>A loose or cracked trap.</strong> The U-bend under the sink can work loose or split. It drips when you empty the bowl.</li>
+        <li><strong>A worn waste seal.</strong> The seal under the plughole wears out. Water seeps out when the sink is full.</li>
+        <li><strong>A leaking overflow.</strong> The pipe from the overflow slot can come loose at the back.</li>
+        <li><strong>A worn tap hose.</strong> Flexible tap hoses can corrode and burst. These leak all the time, not just when you use the sink.</li>
+        <li><strong>A failed seal round the sink.</strong> Water gets under the rim and into the unit.</li>
+      </ul>
+      <div class="brx-danger"><p><strong>Water spraying from a pipe or hose?</strong> Turn off the isolation valve under the sink with a flat screwdriver, or turn the stopcock clockwise. Keep water away from sockets. Then call <a href={TEL}>{PHONE}</a>.</p></div>
+      <p>If the leak has gone on a long time, the unit base may be wet or swollen. We can tell you if water has spread further. For leaks you cannot see, read about our <a href="/leak-detection-liverpool">leak detection</a> service.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="basin">
+    <div class="brx-wrap">
+      <h2>Do you do bathroom basin replacement too?</h2>
+      <p class="brx-answer">Yes. We swap bathroom basins, pedestals and vanity basins, and fit the taps and waste. We give you a fixed price before we start.</p>
+      <p>A basin swap is much like a kitchen sink swap. We turn off the water, take the old basin off the wall and fit the new one. Then we connect the taps and waste and test for leaks.</p>
+      <p>Tell us the type of basin you have now and the one you are fitting. A photo helps. If the new basin needs the pipes moved, we price that first.</p>
+      <p>Just changing basin taps? That is £110 for one basin mixer, or a pair of taps counts as one. See our <a href="/tap-replacement-liverpool">tap replacement</a> page. Planning a full new bathroom? See our <a href="/bathroom-fitters-liverpool">bathroom fitters</a> page.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="why">
+    <div class="brx-wrap">
+      <h2>Why choose us to replace your sink?</h2>
+      <p class="brx-answer">You get a fixed written price, a tidy job and a 12-month guarantee. Our team of engineers is led by James and covers all of Liverpool.</p>
+      <ul class="sg-ticks">
+        <li>Fixed price before we start, including VAT</li>
+        <li>No call-out fee</li>
+        <li>12-month guarantee on our workmanship</li>
+        <li>£2 million public liability insurance</li>
+        <li>5.0 from 53 Google reviews</li>
+        <li>We cover Liverpool, the Wirral, Sefton, Knowsley and St Helens</li>
+      </ul>
+      <p>Got a few small jobs as well as the sink? Make a list. Many small jobs fit into one visit, and we price them all before we start. See our <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a> page.</p>
+    </div>
+  </section>
+</ServiceGuide>

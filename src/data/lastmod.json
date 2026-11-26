@@ -53,6 +53,7 @@
  "/emergency-plumber-west-derby": "2026-11-26",
  "/emergency-plumber-wirral": "2026-11-26",
  "/emergency-plumber-woolton": "2026-11-26",
+ "/gas-hob-installation-liverpool": "2026-11-26",
  "/gas-safety-certificate-formby": "2026-11-26",
  "/gas-safety-certificate-liverpool": "2026-11-26",
  "/gas-safety-certificate-st-helens": "2026-11-26",
@@ -63,7 +64,9 @@
  "/hot-water-cylinders-st-helens": "2026-11-26",
  "/hot-water-cylinders-wirral": "2026-11-26",
  "/": "2026-11-26",
+ "/kitchen-sink-replacement-liverpool": "2026-11-26",
  "/leak-detection-liverpool": "2026-11-26",
+ "/outside-tap-installation-liverpool": "2026-11-26",
  "/power-flushing-formby": "2026-11-26",
  "/power-flushing-liverpool": "2026-11-26",
  "/power-flushing-st-helens": "2026-11-26",
@@ -73,5 +76,8 @@
  "/radiators-liverpool": "2026-11-26",
  "/radiators-st-helens": "2026-11-26",
  "/radiators-wirral": "2026-11-26",
- "/showers-liverpool": "2026-11-26"
+ "/showers-liverpool": "2026-11-26",
+ "/small-plumbing-jobs-liverpool": "2026-11-26",
+ "/tap-replacement-liverpool": "2026-11-26",
+ "/toilet-repair-liverpool": "2026-11-26"
 }

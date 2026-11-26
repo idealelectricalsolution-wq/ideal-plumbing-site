@@ -1,0 +1,242 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/gas-hob-installation-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'hob', tier: 'Fit only', popular: true, name: 'Gas hob fitted', price: '£120', unit: 'you supply the hob, inc VAT',
+    points: ['Gas point already in place', 'Hob connected and sealed in the worktop', 'Gas tightness test', 'Every burner lit and checked'] },
+  { id: 'cooker', tier: 'Freestanding', name: 'Gas cooker connected', price: '£120', unit: 'you supply the cooker, inc VAT',
+    points: ['New bayonet hose if needed', 'Stability chain or bracket fitted', 'Gas tightness test', 'Hob, oven and grill checked'] },
+  { id: 'disconnect', tier: 'Moving or swapping', name: 'Disconnect and cap', price: '£120', unit: 'first hour, weekdays 9am–4pm, inc VAT',
+    points: ['Old hob or cooker disconnected', 'Gas pipe capped safely', 'Tightness test after', 'Often done with a new fit on the same visit'] },
+  { id: 'new-point', tier: 'New gas supply', name: 'New or moved gas point', price: 'Free', unit: 'visit, then a fixed written price',
+    points: ['New gas pipe runs', 'Moving the gas point', 'Changing from electric to gas', 'Price agreed before we start'] },
+];
+
+const faqs = [
+  { q: 'How much does it cost to fit a gas hob in Liverpool?', a: 'With us it is £120 including VAT when you supply the hob and there is a gas point in place. That covers the connection, a gas tightness test and checking every burner. New pipe runs are priced at a free visit.' },
+  { q: 'How much is it to connect a gas cooker?', a: 'A freestanding gas cooker connected is £120 including VAT. We fit a new bayonet hose if the old one is worn or the wrong length, and a stability chain or bracket so the cooker cannot tip.' },
+  { q: 'Can I fit a gas hob myself?', a: 'No. By law, only a Gas Safe registered engineer may fit or connect a gas appliance for you. A bad joint can leak gas or carbon monoxide. Many hob makers also void the warranty if it is not fitted by a Gas Safe engineer.' },
+  { q: 'Can a kitchen fitter connect my gas hob?', a: 'Only if they are Gas Safe registered for cookers and hobs. Many kitchen fitters are not. Your fitter can cut the worktop, then we make the gas connection and test it.' },
+  { q: 'How long does it take to fit a gas hob?', a: 'Usually about an hour for a like-for-like swap. If the worktop needs cutting or the gas point is in the wrong place, it takes longer. We tell you before we start.' },
+  { q: 'Can a gas hob go on a flexible hose?', a: 'Only if the hob maker allows it, and only with the approved type of hose. Most built-in hobs are hard-piped in copper. Freestanding cookers use a bayonet hose. We follow the maker\'s instructions every time.' },
+  { q: 'Do I need a new gas pipe for a new hob?', a: 'Not usually. If the gas point is close and in good order, we connect to it. If it is too far away, in the wrong place or not safe, we price a new pipe run first.' },
+  { q: 'Can you disconnect my gas cooker before I move?', a: 'Yes. We disconnect it, cap the gas pipe safely and test it. This is covered by our first hour, £120 on weekdays. Tell us when you book if you want the new owner\'s cooker or your new one fitted too.' },
+  { q: 'Can I change from an electric cooker to gas?', a: 'Yes, if there is gas in the house. We run a new gas pipe to the kitchen and fit an isolation valve. We price this at a free visit, so you know the cost first.' },
+  { q: 'Can I change from gas to an induction hob?', a: 'Yes. We disconnect and cap the gas. An induction hob usually needs its own electric circuit. Our partner firm Ideal Electrical Solutions can fit that.' },
+  { q: 'Do you supply the hob?', a: 'Most customers buy their own hob online or in store. Our £120 price is for fitting a hob you supply. Buy a natural gas (G20) model, not an LPG one, unless your home runs on bottled gas.' },
+  { q: 'Do I get a certificate?', a: 'You get a written record of the work and the gas tightness test, emailed the same day. Landlords also need a yearly gas safety certificate (CP12), which we can do on the same visit for £100.' },
+  { q: 'Do you fit gas fires?', a: 'No. We fit and connect gas hobs and gas cookers only. If you have an old gas fire you no longer use, we can disconnect and cap it safely.' },
+  { q: 'What if I smell gas?', a: 'Turn the gas off at the meter if it is safe, open windows, do not use light switches, get everyone out and ring the National Gas Emergency line on 0800 111 999. Once it is made safe, we can find and fix the fault.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Gas Hob Installation Liverpool | Gas Safe, Fitted From £120"
+  description="Gas hob installation in Liverpool for £120 inc VAT. Gas cookers connected for £120. Gas Safe registered engineers, tightness test included, no call-out fee. Call 0151 558 0334."
+  h1="Gas Hob Installation Liverpool"
+  badge="Gas Safe registered · fixed prices"
+  intro="We fit gas hobs and connect gas cookers across Liverpool for £120 including VAT. Our Gas Safe registered engineers connect it, test for leaks and check every burner lights properly. You get a fixed price before we start."
+  stats={[['£120', 'Gas hob fitted, inc VAT'], ['£120', 'Gas cooker connected']]}
+  ticks={['Gas Safe Registered', 'Fixed Prices', 'No Call-Out Fee', '5.0 on Google']}
+  pkTitle="Gas hob and cooker fitting prices"
+  pkLede="Fixed prices, including VAT. No call-out fee and no hidden extras."
+  packages={packages}
+  noPackagesOffers={[
+    { name: 'Gas hob fitted (you supply the hob)', price: '120' },
+    { name: 'Freestanding gas cooker connected', price: '120' },
+    { name: 'Disconnect and cap a gas hob or cooker (first hour, weekdays)', price: '120' },
+  ]}
+  pkNote="Prices assume a working gas point close to the hob or cooker. New pipe runs, moving the gas point or changing from electric to gas are priced at a free visit. We fit gas hobs and cookers only, not gas fires."
+  factsTitle="Gas hob fitting at a glance"
+  facts={[
+    ['Price', 'Gas hob fitted £120. Freestanding gas cooker connected £120. Both include VAT.'],
+    ['Time', 'About an hour for a like-for-like swap.'],
+    ['Includes', 'Connection, gas tightness test and a check that every burner burns correctly.'],
+    ['Law', 'Only a Gas Safe registered engineer may fit or connect a gas hob or cooker.'],
+    ['Who', 'Gas Safe registered engineers, part of our team led by James.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['cost', 'How much does it cost?'],
+    ['law', 'Do I need a Gas Safe engineer?'],
+    ['included', 'What is included?'],
+    ['how', 'How does it work?'],
+    ['which', 'Which option is right for me?'],
+    ['cooker', 'Gas cookers and disconnections'],
+    ['before', 'Before we arrive'],
+  ]}
+  reviews={['Brendan C', 'Mark L', 'Peter H', 'Chris C']}
+  faqs={faqs}
+  areasTitle="Where do you fit gas hobs?"
+  areasText="We fit gas hobs and cookers in every part of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-crosby', label: 'Crosby' },
+    { href: '/emergency-plumber-old-swan', label: 'Old Swan' },
+  ]}
+  related={[
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Many small jobs fit in our £120 first hour' },
+    { href: '/kitchen-sink-replacement-liverpool', title: 'Kitchen sink replacement', text: 'Like-for-like sink swap, £225 fit only' },
+    { href: '/tap-replacement-liverpool', title: 'Tap replacement', text: '£110 to fit a tap you supply' },
+    { href: '/outside-tap-installation-liverpool', title: 'Outside tap installation', text: '£145 supplied and fitted' },
+    { href: '/toilet-repair-liverpool', title: 'Toilet repair', text: 'Most faults fixed in the first hour' },
+    { href: '/radiators-liverpool', title: 'Radiators', text: 'Supplied and fitted from £245' },
+    { href: '/gas-safety-certificate-liverpool', title: 'Gas safety certificate', text: 'Landlord CP12 from £100' },
+    { href: '/emergency-gas-engineer-liverpool', title: 'Emergency gas engineer', text: 'Gas faults made safe and repaired' },
+  ]}
+  finalTitle="Book your gas hob fitting"
+  finalText="£120 including VAT for a gas hob or a freestanding gas cooker. Gas Safe registered engineers. Fixed price before we start."
+  serviceName="Gas Hob Installation Liverpool"
+  serviceType="Gas hob and gas cooker installation"
+  serviceDesc="Gas hob installation and gas cooker connection across Liverpool and Merseyside by Gas Safe registered engineers. Includes gas tightness test and burner checks. Disconnect and cap service."
+>
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does gas hob installation cost in Liverpool?</h2>
+      <p class="brx-answer">£120 including VAT to fit a gas hob you supply, where a gas point is already in place. A freestanding gas cooker connected is also £120.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Gas hob fitted</strong></td><td>£120</td><td>You supply the hob. Gas point in place.</td></tr>
+            <tr><td><strong>Gas cooker connected</strong></td><td>£120</td><td>Freestanding cooker on a bayonet hose.</td></tr>
+            <tr><td><strong>Disconnect and cap</strong></td><td>£120 first hour</td><td>Weekdays 9am–4pm. £150 evenings and weekends.</td></tr>
+            <tr><td><strong>New or moved gas point</strong></td><td>Free visit</td><td>Fixed written price before we start.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>There is no call-out fee. If we find something that needs extra work, such as a worn gas pipe, we tell you the price before we carry on. You can say no.</p>
+      <p>Got other jobs too? Our first hour often covers a few small jobs. See our <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a> page.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="law">
+    <div class="brx-wrap">
+      <h2>Do I need a Gas Safe engineer to fit a gas hob?</h2>
+      <p class="brx-answer">Yes. Under the Gas Safety (Installation and Use) Regulations, only a Gas Safe registered engineer may fit or connect a gas appliance for you.</p>
+      <p>That includes gas hobs and gas cookers. It also includes taking one out and capping the pipe. A poor joint can leak gas. A badly set hob can make carbon monoxide.</p>
+      <ul class="sg-ticks">
+        <li>Ask to see the engineer's Gas Safe ID card. It shows what they can work on.</li>
+        <li>Check the card says they are qualified for cookers and hobs.</li>
+        <li>You can check any engineer on the Gas Safe Register before they start.</li>
+      </ul>
+      <p>Most hob makers also say the hob must be fitted by a Gas Safe engineer. If it is not, the warranty may not count.</p>
+      <div class="brx-note"><p><strong>Kitchen fitters:</strong> many are not Gas Safe registered. That is fine. Your fitter can cut the worktop, and our Gas Safe registered engineers make the gas connection.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="included">
+    <div class="brx-wrap">
+      <h2>What is included when you fit a gas hob?</h2>
+      <p class="brx-answer">The full job: we connect the hob, test the gas for leaks and check every burner works safely. Then we show you how to use it.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>The fitting</h3>
+          <ul class="sg-ticks">
+            <li>Old hob disconnected and taken out</li>
+            <li>New hob seated and sealed in the worktop</li>
+            <li>Connected to your gas point the way the maker says</li>
+            <li>A gas isolation valve, so it can be turned off on its own</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>The safety checks</h3>
+          <ul class="sg-ticks">
+            <li>A gas tightness test on the whole supply</li>
+            <li>Gas pressure checked at the hob</li>
+            <li>Every burner lit, with a clean, steady flame</li>
+            <li>Flame safety cut-outs tested where fitted</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">We also check the space around the hob is right for the model, such as the gap to the cooker hood. A record of the work is emailed the same day.</p>
+      <figure class="sg-photo" style="max-width:360px;margin-top:1.25rem;">
+        <picture>
+          <source type="image/webp" srcset="/images/jobs/gas-hob-oven-fitted-480.webp 480w, /images/jobs/gas-hob-oven-fitted-960.webp 960w" sizes="(max-width: 640px) 100vw, 360px" />
+          <img src="/images/jobs/gas-hob-oven-fitted-960.jpg" alt="Gas hob and oven fitted in a Liverpool kitchen" width="960" height="1280" loading="lazy" decoding="async" />
+        </picture>
+        <figcaption>A gas hob and oven fitted by our team in a Liverpool kitchen.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How does gas hob fitting work?</h2>
+      <p class="brx-answer">Book, we arrive, we fit and test. A like-for-like swap takes about an hour.</p>
+      <ol class="sg-steps">
+        <li><strong>Call or book online.</strong> Tell us the hob model and where the gas point is. A photo helps. We confirm the price. (5 minutes)</li>
+        <li><strong>We arrive.</strong> We turn the gas off and check the old hob and pipe. If the price would change, we tell you first.</li>
+        <li><strong>We fit the new hob.</strong> It is seated in the worktop and connected to the gas. (About 30 minutes)</li>
+        <li><strong>We test it.</strong> A gas tightness test, then every burner is lit and checked. (About 15 minutes)</li>
+        <li><strong>All done.</strong> We show you how it works, take the old hob away if you want and email you a record.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>New hob arriving this week?</strong> Call and we will book it in.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="which">
+    <div class="brx-wrap">
+      <h2>Which option is right for me?</h2>
+      <p class="brx-answer">If your old gas hob or cooker sits in the same place as the new one, it is the £120 fixed price. If the gas has to go somewhere new, book a free visit.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Your kitchen</th><th>What you need</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>Swapping an old gas hob for a new one</td><td>Gas hob fitted</td><td>£120</td></tr>
+            <tr><td>New freestanding gas cooker</td><td>Gas cooker connected</td><td>£120</td></tr>
+            <tr><td>Moving house or going electric</td><td>Disconnect and cap</td><td>£120 first hour</td></tr>
+            <tr><td>New kitchen with the hob in a new spot</td><td>New or moved gas point</td><td>Free visit, then fixed price</td></tr>
+            <tr><td>Electric cooker now, want gas</td><td>New gas point</td><td>Free visit, then fixed price</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Not sure? Send us a photo of the gas point behind your old hob or cooker. We will tell you which one it is.</p>
+      <p>Going from gas to induction? We cap the gas. The new hob usually needs its own electric circuit. Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/">Ideal Electrical Solutions</a> can fit that.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="cooker">
+    <div class="brx-wrap">
+      <h2>Gas cooker installation and disconnection</h2>
+      <p class="brx-answer">We connect freestanding gas cookers for £120, and we disconnect and cap gas cookers and hobs when you move or change.</p>
+      <h3>Gas cooker connection</h3>
+      <p>A freestanding gas cooker connects with a bayonet hose. It plugs into a socket on the wall, so the cooker can be pulled out to clean. We fit a new hose if yours is old, worn or the wrong length.</p>
+      <p>We also fit a stability chain or bracket. This stops the cooker tipping forward if someone leans on the open oven door. Then we test for leaks and check the hob, oven and grill.</p>
+      <h3>Gas hobs are different</h3>
+      <p>A built-in gas hob is usually hard-piped in copper. Some makers allow a special approved flexible hose. We follow what the maker's instructions say for your model.</p>
+      <h3>Disconnect a gas cooker or hob</h3>
+      <p>Moving out, or taking the old cooker with you? We disconnect it, cap the gas pipe and test it is sealed. This is covered by our first hour: £120 on weekdays 9am–4pm, £150 evenings and weekends.</p>
+      <p>We do not fit, service or check gas fires. If you have an old one you no longer use, we can disconnect and cap it.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="before">
+    <div class="brx-wrap">
+      <h2>What should I do before you arrive?</h2>
+      <p class="brx-answer">Check the hob runs on natural gas, keep the box and instructions, and clear the cupboard under the hob.</p>
+      <ul class="sg-ticks">
+        <li><strong>Natural gas or LPG?</strong> Most Liverpool homes are on natural gas (G20). Check the hob box says so.</li>
+        <li><strong>Keep the instructions.</strong> We fit it the way the maker sets out.</li>
+        <li><strong>Worktop cut-out.</strong> A new kitchen should have the hole cut to the hob's size. On a swap, we check the new hob fits the old hole.</li>
+        <li><strong>Clear the space.</strong> Empty the cupboard below so we can reach the gas point.</li>
+        <li><strong>Landlords.</strong> We can arrange access with your tenant and do the yearly <a href="/gas-safety-certificate-liverpool">gas safety certificate</a> on the same visit.</li>
+      </ul>
+      <div class="brx-danger">
+        <p><strong>Smell gas?</strong> Do not use the hob or any light switches. Open windows, turn the gas off at the meter if it is safe, get everyone out and ring the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a>. Once it is made safe, our <a href="/emergency-gas-engineer-liverpool">emergency gas engineers</a> can find and fix the fault.</p>
+      </div>
+    </div>
+  </section>
+</ServiceGuide>

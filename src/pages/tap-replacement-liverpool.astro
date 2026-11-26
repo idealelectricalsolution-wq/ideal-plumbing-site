@@ -1,0 +1,226 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/tap-replacement-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'one-tap', tier: 'Fit only', popular: true, name: 'One tap replaced', price: '£110', unit: 'you supply the tap, inc VAT',
+    points: ['Kitchen mixer, basin mixer or a pair of bath taps', 'Old tap taken out and taken away', 'Checked for leaks and left clean'] },
+  { id: 'two-taps', tier: 'Same visit', name: 'Second tap swapped', price: '£50', unit: 'extra, same visit, inc VAT',
+    points: ['Two taps for £160 in total', 'Kitchen and bathroom in one go', 'One visit, one fixed price'] },
+  { id: 'we-supply', tier: 'Supply and fit', name: 'We supply the tap', price: '£110', unit: 'fitting, plus the tap at cost',
+    points: ['We source a tap that suits your sink and pressure', 'You pay what we pay for it, no mark-up', 'Price agreed before we order'] },
+  { id: 'repair', tier: 'Dripping or leaking tap', name: 'Tap repair', price: '£120', unit: 'first hour, weekdays 9am–4pm, inc VAT',
+    points: ['No call-out fee', 'Most drips fixed in the first hour', 'Parts priced before we fit them'] },
+];
+
+const faqs = [
+  { q: 'How much does tap replacement cost in Liverpool?', a: 'With us it is £110 including VAT to fit one tap you have bought. A pair of bath taps counts as one tap. A second tap on the same visit is £50 more. If we supply the tap, you pay what it costs us, plus the £110 fitting.' },
+  { q: 'Do you charge a call-out fee?', a: 'No. Tap fitting is a fixed price. Tap repairs are charged by time, from £120 for the first hour on weekdays 9am to 4pm, with no call-out fee.' },
+  { q: 'How long does it take to change a tap?', a: 'A kitchen or basin mixer usually takes about an hour. Bath taps can take longer if the bath panel has to come off.' },
+  { q: 'Can you fit a tap I bought online?', a: 'Yes. Check it suits your water pressure and your sink before you order. Send us the link and we will check it for you.' },
+  { q: 'Can you replace a tap without replacing the sink?', a: 'Yes, in almost every case. A new mixer fits the same hole as the old one. If you are moving from two pillar taps to one mixer, the sink needs a single tap hole, or a blanking plate for the spare hole.' },
+  { q: 'Do I need isolation valves?', a: 'They are a good idea. An isolation valve lets you turn the water off to one tap without turning off the whole house. If yours has none, we can fit them on the same visit. We tell you the price first.' },
+  { q: 'Will a new tap work with my water pressure?', a: 'Most modern taps need a mains or combi system. If your hot water comes from a tank in the loft, the pressure is low, and you need a tap marked for low pressure. We check this before you buy.' },
+  { q: 'Why is my tap dripping?', a: 'In an older tap with a rubber washer, the washer is worn. In a mixer or quarter-turn tap, the ceramic cartridge is usually worn. Water around the base of the spout often means a worn O-ring. All three can usually be fixed.' },
+  { q: 'Should I repair or replace a dripping tap?', a: 'If the tap is in good shape and parts are easy to get, a repair is cheaper. If it is old, loose, corroded, or the parts are hard to find, a new tap is often better value. We will tell you honestly which makes sense.' },
+  { q: 'Can a dripping tap wait?', a: 'A slow drip is not an emergency, but it wastes water and can stain the sink. If water is leaking under the sink or into a cupboard, turn it off at the isolation valve or stopcock and call us.' },
+  { q: 'Do you fit boiling water taps?', a: 'Yes. A boiling water tap has a tank under the sink and needs a power socket. We price it before we start. If you need a new socket, our partner firm Ideal Electrical Solutions can fit one.' },
+  { q: 'Do you take the old tap away?', a: 'Yes. We take the old tap and packaging away and leave the sink clean. It is included in the price.' },
+  { q: 'Can you do other small jobs on the same visit?', a: 'Yes. Many customers add a second tap, a toilet fix or a new outside tap. Make a list and we will tell you the full price before we start.' },
+  { q: 'Is the work guaranteed?', a: 'Yes. Our workmanship is guaranteed for 12 months, and we carry £2 million public liability insurance. The tap itself is covered by its maker.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Tap Replacement Liverpool | Taps Fitted From £110 | Leaking Taps Fixed"
+  description="Tap replacement in Liverpool for £110 inc VAT. Kitchen mixer, basin and bath taps fitted. Second tap £50 on the same visit. Dripping taps repaired, no call-out fee. Call 0151 558 0334."
+  h1="Tap Replacement Liverpool"
+  badge="Kitchen, basin and bath taps · fixed price"
+  intro="We fit your new tap for £110 including VAT. That covers a kitchen mixer, a basin mixer or a pair of bath taps. A second tap on the same visit is just £50. Dripping or leaking tap? We fix that too, with no call-out fee."
+  stats={[['£110', 'One tap fitted, inc VAT'], ['£50', 'Second tap, same visit']]}
+  ticks={['Fixed Price', 'No Call-Out Fee', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="How much does tap replacement cost in Liverpool?"
+  pkLede="Fixed prices, including VAT. You know the price before we start."
+  packages={packages}
+  pkNote="A pair of bath taps counts as one tap. Repairs after the first hour are priced before we carry on. Evening, night and weekend repairs are £150 for the first hour, and £180 on bank holidays."
+  factsTitle="Tap replacement at a glance"
+  facts={[
+    ['Price', '£110 for one tap you supply. £50 for a second tap on the same visit.'],
+    ['Taps', 'Kitchen mixers, basin mixers, bath taps, bath fillers and bath shower mixers.'],
+    ['Time', 'About an hour for most kitchen and basin taps.'],
+    ['Repairs', 'Dripping and leaking taps from £120 for the first hour. No call-out fee.'],
+    ['Cover', '12-month workmanship guarantee and £2 million public liability insurance.'],
+    ['Area', 'All of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['included', 'What is included?'],
+    ['which', 'Which option is right for me?'],
+    ['how', 'How does it work?'],
+    ['buying', 'Buying your own tap'],
+    ['dripping', 'Dripping or leaking taps'],
+    ['more-jobs', 'Other small jobs'],
+  ]}
+  reviews={['David H', 'Tonia K', 'Sara R', 'Mark L']}
+  faqs={faqs}
+  areasTitle="Where do you replace taps?"
+  areasText="We cover all of Liverpool, the Wirral, Sefton, Knowsley and St Helens."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-old-swan', label: 'Old Swan' },
+  ]}
+  related={[
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Fixed prices for the small jobs on your list' },
+    { href: '/outside-tap-installation-liverpool', title: 'Outside tap installation', text: '£145 supplied and fitted, inc VAT' },
+    { href: '/kitchen-sink-replacement-liverpool', title: 'Kitchen sink replacement', text: '£225 like-for-like, fit only' },
+    { href: '/toilet-repair-liverpool', title: 'Toilet repair', text: 'From £120 for the first hour, no call-out fee' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Hidden leaks found and fixed' },
+    { href: '/bathroom-fitters-liverpool', title: 'Bathroom fitting', text: 'Full bathrooms, including tiling' },
+  ]}
+  finalTitle="Book your tap replacement"
+  finalText="£110 including VAT for one tap, £50 for a second on the same visit. No call-out fee."
+  serviceName="Tap Replacement Liverpool"
+  serviceType="Tap replacement and tap repair"
+  serviceDesc="Kitchen, basin and bath taps replaced across Liverpool and Merseyside at a fixed price. Mixer tap installation and dripping or leaking tap repairs."
+  noPackagesOffers={[
+    { name: 'One tap replaced (you supply the tap)', price: '110' },
+    { name: 'Second tap swapped on the same visit', price: '50' },
+    { name: 'Tap repair, first hour, weekdays 9am-4pm', price: '120' },
+  ]}
+>
+  <section class="brx-sec brx-tint" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in a tap replacement?</h2>
+      <p class="brx-answer">Everything needed to swap your old tap for the new one. We take the old tap out, fit the new one, test it and take the old one away.</p>
+      <ul class="sg-ticks">
+        <li>Turning off the water and draining the pipes to the tap</li>
+        <li>Taking out the old tap, even if the nuts have seized</li>
+        <li>Fitting the new tap and its flexible hoses</li>
+        <li>Connecting it to your hot and cold pipes</li>
+        <li>Checking the tap is firm and does not wobble</li>
+        <li>Running the water and checking every joint for leaks</li>
+        <li>Taking the old tap and packaging away</li>
+        <li>A 12-month guarantee on our work</li>
+      </ul>
+      <p>We fit kitchen mixer taps, pull-out spray taps, basin mono mixers, pillar taps, bath fillers and bath shower mixers. A pair of bath taps or basin pillar taps counts as one tap.</p>
+      <div class="brx-note"><p><strong>Not included:</strong> moving the pipes, cutting a new tap hole, or changing the sink. If your job needs any of these, we tell you the price before we start.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which option is right for me?</h2>
+      <p class="brx-answer">If your tap works but looks tired, or drips again and again, replace it. If it is fairly new and only drips, a repair is usually cheaper.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Your situation</th><th>Best option</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>You have bought a new tap</td><td>Fit only</td><td>£110</td></tr>
+            <tr><td>Kitchen and bathroom taps both need changing</td><td>Two taps, one visit</td><td>£160</td></tr>
+            <tr><td>You do not know which tap to buy</td><td>We supply the tap</td><td>£110 + tap at cost</td></tr>
+            <tr><td>Tap is fairly new but drips</td><td>Repair</td><td>From £120, first hour</td></tr>
+            <tr><td>Tap is old, loose or keeps dripping</td><td>Replace it</td><td>£110</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Not sure? Send us a photo of the tap and the pipes under the sink. We will tell you which way is cheaper.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How does a tap replacement work?</h2>
+      <p class="brx-answer">Most kitchen and basin taps take about an hour, from start to finish. Bath taps can take a little longer.</p>
+      <ol class="sg-steps">
+        <li><strong>Call or book online.</strong> Tell us which taps you want changed. We confirm the fixed price.</li>
+        <li><strong>We check the tap.</strong> If you have bought one, we check it suits your sink and water pressure.</li>
+        <li><strong>Water off.</strong> We turn off the water at the isolation valve or the stopcock.</li>
+        <li><strong>Old tap out.</strong> We take out the old tap. Seized nuts are common in older homes, and we have the tools for them.</li>
+        <li><strong>New tap in.</strong> We fit the new tap and connect it to the pipes. This takes about 30 minutes.</li>
+        <li><strong>Test and tidy.</strong> We run the hot and cold, check for leaks, clean up and take the old tap away.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Got your new tap ready?</strong> Call and we will book the next free slot.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="buying">
+    <div class="brx-wrap">
+      <h2>What should I check before I buy a new tap?</h2>
+      <p class="brx-answer">Check three things: your water pressure, the number of tap holes in your sink, and the space under it. Getting these right saves a second trip.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Water pressure</h3>
+          <p>Most modern mixers need mains pressure. That is fine with a combi boiler or an unvented cylinder. If your hot water comes from a tank in the loft, buy a tap marked for low pressure.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Tap holes</h3>
+          <p>A mono mixer needs one hole. Pillar taps need two. Going from two taps to one mixer? You need a new sink or a blanking plate for the spare hole.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Space under the sink</h3>
+          <p>Pull-out spray taps need room for the hose. Boiling water and filter taps need room for a tank or filter, and a boiling tap needs a power socket too.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Approved for UK water</h3>
+          <p>Taps must meet the UK water fittings rules. A WRAS-approved tap from a UK seller is the safest bet. Very cheap imported taps can leak and be hard to get parts for.</p>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">Rather not choose? We can supply a good tap for you, at the price we pay for it. You still pay £110 to fit it.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="dripping">
+    <div class="brx-wrap">
+      <h2>Can you fix a dripping or leaking tap?</h2>
+      <p class="brx-answer">Yes. Tap repairs cost £120 for the first hour on weekdays, 9am to 4pm, with no call-out fee. Most dripping taps are fixed in that first hour.</p>
+      <h3>What causes a dripping tap?</h3>
+      <ul class="brx-list">
+        <li><strong>Worn washer.</strong> Older taps that turn several times use a rubber washer. It wears out and the tap drips.</li>
+        <li><strong>Worn cartridge.</strong> Mixers and quarter-turn taps use a ceramic cartridge. When it wears, the tap drips or will not turn off fully.</li>
+        <li><strong>Worn O-ring.</strong> Water around the base of the spout usually means a worn seal.</li>
+        <li><strong>Leak under the sink.</strong> Often a loose or split flexible hose. Left alone, it can rot the cupboard floor.</li>
+      </ul>
+      <div class="brx-danger"><p><strong>Water pouring under the sink?</strong> Turn off the isolation valve on the pipe, or the stopcock, then call {PHONE}. We typically arrive within 30 minutes for emergencies.</p></div>
+      <h3>Repair prices</h3>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>When</th><th>First hour, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td>Weekdays 9am to 4pm</td><td>£120</td></tr>
+            <tr><td>Evenings, nights and weekends</td><td>£150</td></tr>
+            <tr><td>Bank holidays</td><td>£180</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>There is no call-out fee. Parts are priced before we fit them. If the job needs more time, we tell you the price before we carry on. If a repair is not worth it, we say so, and you can switch to a new tap for £110.</p>
+      <p>A leak that has soaked into a ceiling or floor may need tracing. See our <a href="/leak-detection-liverpool">leak detection</a> page.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="more-jobs">
+    <div class="brx-wrap">
+      <h2>Can you do other small jobs on the same visit?</h2>
+      <p class="brx-answer">Yes. Adding jobs to one visit saves you money. Make a list and we will give you one price before we start.</p>
+      <ul class="sg-ticks">
+        <li><a href="/outside-tap-installation-liverpool">Outside tap supplied and fitted</a>: £145</li>
+        <li><a href="/kitchen-sink-replacement-liverpool">Kitchen sink swap</a>, like-for-like, fit only: £225</li>
+        <li><a href="/gas-hob-installation-liverpool">Gas hob fitted</a> by our Gas Safe registered engineers: £120</li>
+        <li><a href="/toilet-repair-liverpool">Toilet repair</a>: from £120 for the first hour</li>
+        <li><a href="/radiators-liverpool">Radiator swap</a>: from £245 supplied and fitted</li>
+      </ul>
+      <p>Changing the kitchen sink as well? The sink swap price includes fitting the tap to the new sink. See all our fixed prices on the <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a> page.</p>
+      <div class="brx-note"><p><strong>Fitting a boiling water tap?</strong> It needs a power socket under the sink. Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/">Ideal Electrical Solutions</a> can fit one safely.</p></div>
+    </div>
+  </section>
+</ServiceGuide>

@@ -1,0 +1,257 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/toilet-repair-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'weekday', tier: 'Weekday repair', popular: true, name: 'Toilet repair, first hour', price: '£120', unit: 'weekdays 9am–4pm, inc VAT',
+    points: ['No call-out fee', 'Most flush and fill valve faults fixed in the first hour', 'Parts priced before we fit them', '12-month guarantee on our work'] },
+  { id: 'out-of-hours', tier: 'Evenings, nights, weekends', name: 'Out-of-hours toilet repair', price: '£150', unit: 'first hour, inc VAT',
+    points: ['Toilet overflowing or leaking now', 'Typically with you within 30 minutes', 'No call-out fee', 'Extra time priced before we carry on'] },
+  { id: 'new-toilet', tier: 'Supply and fit', name: 'New toilet supplied and fitted', price: '£250', from: true, unit: 'inc VAT',
+    points: ['Standard close-coupled toilet and seat', 'New pan connector and seals', 'Old toilet taken away', 'Fixed written price before we start'] },
+];
+
+const faqs = [
+  { q: 'How much does a toilet repair cost in Liverpool?', a: 'Our first hour is £120 including VAT on weekdays, 9am to 4pm. Evenings, nights and weekends are £150, and bank holidays are £180. There is no call-out fee. Most flush and fill valve faults are fixed in that first hour. Parts are priced before we fit them.' },
+  { q: 'Do you unblock toilets?', a: 'No. We do not offer blocked toilet or drain clearing. If the water rises in the bowl and drains away slowly, that is a blockage, so you need a drainage company. If the toilet will not flush because the handle, button or valve is broken, that is a repair, and we can fix it.' },
+  { q: 'Why does my toilet keep running?', a: 'Usually the flush valve seal is worn, so water leaks into the pan all the time. Or the fill valve does not shut off, so the cistern overfills into the overflow. Both are common, quick fixes.' },
+  { q: 'Why is my toilet not flushing?', a: 'Most often the handle linkage, the button cable or the chain has snapped or slipped off. It can also be a broken flush valve, or no water coming into the cistern. Do the simple checks on this page first. If it is still not flushing, call us.' },
+  { q: 'Why does my toilet have a weak flush?', a: 'The cistern may not fill high enough, or the flush valve may not lift fully. A worn siphon in an older lever toilet is another cause. We set the water level and repair or replace the part.' },
+  { q: 'Why is water on the floor around my toilet?', a: 'The usual causes are the pan connector at the back, the seal between the cistern and the pan, or the pipe feeding the cistern. Condensation can look like a leak too. We find the source before we fix anything.' },
+  { q: 'Is a running toilet an emergency?', a: 'Not usually, unless it is overflowing onto the floor. But it wastes water and can push up a metered water bill. Turn off the isolation valve if you can, and book a weekday visit at £120.' },
+  { q: 'Can you fix a concealed cistern?', a: 'Often, yes. Most back-to-wall and wall-hung toilets have an access panel or a removable flush plate. If there is no way in, we tell you before we cut or remove anything.' },
+  { q: 'Do you repair old high-level chain toilets?', a: 'Yes. Many older Liverpool terraces still have them. The chain, the lever and the valve inside can usually be repaired or replaced.' },
+  { q: 'Should I repair or replace my toilet?', a: 'Repair it if the pan and cistern are sound. Replace it if the pan or cistern is cracked, parts are no longer made, or you want a more modern, water-saving toilet. A new toilet supplied and fitted is from £250.' },
+  { q: 'How long does it take to fit a new toilet?', a: 'A like-for-like swap usually takes 2 to 3 hours. Moving the toilet, or a back-to-wall or wall-hung toilet, takes longer. We give you a fixed written price first.' },
+  { q: 'Can you fit a toilet I have bought?', a: 'Yes. Tell us the make and model when you call, and we will give you the price before we start.' },
+  { q: 'Do I pay extra for parts?', a: 'Yes, parts are on top of the labour. We always tell you the part price before we fit it, so there are no surprises.' },
+  { q: 'Can you do other small jobs on the same visit?', a: 'Yes. Many small jobs fit in our first hour. Make a list, such as a dripping tap and a running toilet, and we will tell you the price before we start.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Toilet Repair Liverpool | Not Flushing? From £120, 24/7"
+  description="Toilet repair in Liverpool from £120 for the first hour, inc VAT. Toilet not flushing, running or leaking? No call-out fee, 24/7. New toilet fitted from £250. Call 0151 558 0334."
+  h1="Toilet Repair Liverpool"
+  badge="Not flushing, running or leaking · 24/7"
+  intro="Toilet not flushing, running all the time or leaking? Our first hour is £120 including VAT on weekdays, with no call-out fee. Most flush and fill valve faults are fixed in that first hour. We also supply and fit new toilets from £250."
+  stats={[['£120', 'First hour, inc VAT'], ['No call-out', 'Fee, day or night']]}
+  ticks={['No Call-Out Fee', 'Parts Priced First', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Toilet repair prices in Liverpool"
+  pkLede="Clear prices, including VAT. No call-out fee. Parts are priced before we fit them."
+  packages={packages}
+  pkNote="Bank holidays: £180 for the first hour. Extra time is priced before we carry on. We do not offer blocked toilet or drain clearing."
+  factsTitle="Toilet repairs at a glance"
+  facts={[
+    ['Price', 'First hour £120 weekdays 9am to 4pm. £150 evenings, nights and weekends. £180 bank holidays.'],
+    ['Call-out fee', 'None. You pay for the time and any parts.'],
+    ['Time', 'Most flush and fill valve faults are fixed in the first hour.'],
+    ['New toilet', 'Supplied and fitted from £250. Usually 2 to 3 hours.'],
+    ['Not covered', 'Blocked toilets and drains. We do not unblock them.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['cost', 'How much does a toilet repair cost?'],
+    ['checks', 'What can I check first?'],
+    ['faults', 'What faults do you fix?'],
+    ['blocked', 'Is my toilet blocked or broken?'],
+    ['how', 'How does a repair work?'],
+    ['new', 'Repair or new toilet?'],
+  ]}
+  reviews={['Tonia K', 'Sara R', 'Frank B', 'Chris C']}
+  faqs={faqs}
+  areasTitle="Where do you repair toilets?"
+  areasText="We cover all of Liverpool, the Wirral, Sefton, Knowsley and St Helens. These are some of the Liverpool areas we visit most."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-old-swan', label: 'Old Swan' },
+    { href: '/emergency-plumber-childwall', label: 'Childwall' },
+  ]}
+  related={[
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Several jobs in one visit, priced first' },
+    { href: '/tap-replacement-liverpool', title: 'Tap replacement', text: 'Your tap fitted for £110' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Hidden leaks found and fixed' },
+    { href: '/bathroom-fitters-liverpool', title: 'Bathroom fitting', text: 'Full bathrooms, plumbing and tiling' },
+    { href: '/', title: 'Emergency plumber', text: '24/7, typically within 30 minutes' },
+    { href: '/outside-tap-installation-liverpool', title: 'Outside tap', text: 'Supplied and fitted for £145' },
+  ]}
+  finalTitle="Toilet playing up? Call us now"
+  finalText="First hour £120 on weekdays, including VAT. No call-out fee. Most faults fixed in the first hour."
+  serviceName="Toilet Repair Liverpool"
+  serviceType="Toilet repair and toilet installation"
+  serviceDesc="Toilet repairs across Liverpool and Merseyside: toilets not flushing, running constantly, leaking or with a weak flush. Cistern, flush valve and fill valve repairs, and new toilets supplied and fitted. We do not unblock toilets or drains."
+>
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does a toilet repair cost in Liverpool?</h2>
+      <p class="brx-answer">Our first hour is £120 including VAT on weekdays, 9am to 4pm. There is no call-out fee, and most toilet faults are fixed in that hour.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>When</th><th>First hour, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Weekdays, 9am to 4pm</strong></td><td>£120</td></tr>
+            <tr><td><strong>Evenings, nights and weekends</strong></td><td>£150</td></tr>
+            <tr><td><strong>Bank holidays</strong></td><td>£180</td></tr>
+            <tr><td><strong>New toilet supplied and fitted</strong></td><td>From £250, fixed price</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Parts are extra. We tell you the price of each part before we fit it. If a job needs more than an hour, we price the extra time before we carry on. You never get a bill you did not expect.</p>
+      <p>Is it not urgent? A running toilet can usually wait for a weekday slot. That saves you £30 on the out-of-hours rate.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="checks">
+    <div class="brx-wrap">
+      <h2>What can I check before I call?</h2>
+      <p class="brx-answer">A few simple, safe checks can find the problem in minutes. Some of them fix it for free.</p>
+      <p>Lift the cistern lid first. It is heavy and breaks easily, so rest it on a towel on the floor.</p>
+      <ol class="sg-steps">
+        <li><strong>Check the handle or button.</strong> Does the handle feel loose or floppy? The arm inside may have come off the flush valve. On a push button, see if the cable or rod has slipped off.</li>
+        <li><strong>Check the chain.</strong> On an old high-level toilet, the chain may have snapped or come off its hook. On some lever toilets, a short chain or link joins the handle to the valve.</li>
+        <li><strong>Check the isolation valve.</strong> This is a small valve on the pipe that feeds the cistern. It often has a screw slot. If the slot runs along the pipe, it is open. If it runs across the pipe, it is shut. Open it with a flat screwdriver.</li>
+        <li><strong>Check the cistern fills.</strong> After a flush, the cistern should refill in a minute or two. If it stays empty, the float may be stuck. Lift it gently and let it go.</li>
+        <li><strong>Check for a silent leak.</strong> Put a few drops of food colouring in the cistern. Do not flush. If colour shows in the pan after 15 minutes, the flush valve seal is leaking.</li>
+      </ol>
+      <div class="brx-danger"><p><strong>Water coming through a ceiling?</strong> Turn off the isolation valve or the main stopcock straight away. If water is near lights or sockets, do not touch them. Turn the electrics off at the fuse box only if it is safe to reach. If the electrics got wet, our partner firm <a href="https://www.idealelectricalsolutions.co.uk/">Ideal Electrical Solutions</a> can test them. Then call us on {PHONE}.</p></div>
+      <p>Do not take the cistern off or undo pipe joints yourself. A cracked cistern or a loose joint can flood a room fast.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="faults">
+    <div class="brx-wrap">
+      <h2>What toilet faults do you fix?</h2>
+      <p class="brx-answer">We fix toilets that will not flush, keep running, leak or have a weak flush. We repair cisterns of all types, from push button to high-level chain.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Toilet not flushing</h3>
+          <ul class="sg-ticks">
+            <li>Broken or loose flush handle</li>
+            <li>Snapped push-button cable</li>
+            <li>Broken flush valve or siphon</li>
+            <li>No water filling the cistern</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>Toilet keeps running</h3>
+          <ul class="sg-ticks">
+            <li>Worn flush valve seal</li>
+            <li>Fill valve not shutting off</li>
+            <li>Water level set too high</li>
+            <li>Cistern overflowing into the pan</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>Leaking toilet</h3>
+          <ul class="sg-ticks">
+            <li>Leaking pan connector at the back</li>
+            <li>Worn seal between cistern and pan</li>
+            <li>Loose cistern bolts</li>
+            <li>Dripping supply pipe or valve</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>Cistern repair</h3>
+          <ul class="sg-ticks">
+            <li>New fill valve or flush valve</li>
+            <li>Weak flush fixed and water level set</li>
+            <li>Concealed cisterns behind a panel</li>
+            <li>New isolation valve fitted</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">A cracked pan or cistern cannot be safely repaired. We will tell you, and give you a price for a new toilet.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="blocked">
+    <div class="brx-wrap">
+      <h2>Is my toilet blocked or broken?</h2>
+      <p class="brx-answer">If the handle works but the water rises and drains away slowly, it is blocked. If nothing happens when you flush, or it never stops running, it is broken.</p>
+      <div class="brx-note"><p><strong>We do not unblock toilets or drains.</strong> Blocked drain clearing is not a service we offer. For a blockage, call a drainage company. If a shared drain or sewer outside your boundary is blocked, United Utilities may be responsible.</p></div>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>What you see</th><th>Likely cause</th><th>Can we help?</th></tr></thead>
+          <tbody>
+            <tr><td>Handle does nothing, or feels loose</td><td>Broken handle, linkage or chain</td><td>Yes</td></tr>
+            <tr><td>Button pushes in but no flush</td><td>Snapped cable or broken flush valve</td><td>Yes</td></tr>
+            <tr><td>Cistern stays empty after a flush</td><td>Fill valve fault or valve turned off</td><td>Yes</td></tr>
+            <tr><td>Water trickles into the pan all the time</td><td>Worn flush valve seal</td><td>Yes</td></tr>
+            <tr><td>Water on the floor</td><td>Leaking connector, seal or pipe</td><td>Yes</td></tr>
+            <tr><td>Water rises in the bowl, drains slowly</td><td>Blockage</td><td>No, call a drainage company</td></tr>
+            <tr><td>Gurgling, or other drains backing up</td><td>Blocked drain</td><td>No, call a drainage company</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How does a toilet repair work?</h2>
+      <p class="brx-answer">You call, we come out, find the fault and tell you the price. Most repairs are done in under an hour.</p>
+      <ol class="sg-steps">
+        <li><strong>Call us.</strong> Tell us what the toilet is doing. We give you the hourly rate and a time. Out of hours, we are typically with you within 30 minutes.</li>
+        <li><strong>We find the fault.</strong> An engineer from our team checks the cistern, valves and pipes. This takes 10 to 15 minutes.</li>
+        <li><strong>You get the price.</strong> We explain the fault and tell you the cost of any part before we fit it.</li>
+        <li><strong>We fix it.</strong> A fill valve or flush valve usually takes 30 to 60 minutes. A close-coupled toilet may need the cistern lifted off.</li>
+        <li><strong>We test it.</strong> We flush it several times, set the water level and check for drips. Then we tidy up.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Toilet overflowing or leaking now?</strong> Call us day or night. No call-out fee.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+      <h3>Why choose us for toilet repairs?</h3>
+      <ul class="sg-ticks">
+        <li>No call-out fee, day or night</li>
+        <li>Parts and extra time priced before we go ahead</li>
+        <li>A team of engineers led by James, across all of Liverpool</li>
+        <li>12-month guarantee on our workmanship</li>
+        <li>£2 million public liability insurance</li>
+        <li>5.0 from 53 Google reviews</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="new">
+    <div class="brx-wrap">
+      <h2>Should I repair my toilet or get a new one?</h2>
+      <p class="brx-answer">Repair it if the pan and cistern are sound. A new toilet makes sense if either is cracked, parts are no longer made, or you want a better flush.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Repair is right if</h3>
+          <ul class="sg-ticks">
+            <li>The toilet is not cracked</li>
+            <li>It is one fault, such as a valve</li>
+            <li>Parts are still easy to get</li>
+            <li>You are happy with how it looks</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>A new toilet is right if</h3>
+          <ul class="sg-ticks">
+            <li>The pan or cistern is cracked</li>
+            <li>It keeps going wrong</li>
+            <li>It uses far more water than a new one</li>
+            <li>You are updating the bathroom</li>
+          </ul>
+        </div>
+      </div>
+      <h3>New toilet supplied and fitted from £250</h3>
+      <p>The price covers a standard close-coupled toilet and seat in the same spot. We fit a new pan connector and seals, connect the water and take the old toilet away. A like-for-like swap usually takes 2 to 3 hours.</p>
+      <p>New toilets must use no more than 6 litres a flush. Most have a dual flush button, so you use less water for a small flush. Back-to-wall, wall-hung and moved toilets cost more. We give you a fixed written price before we start.</p>
+      <p>Planning a full new bathroom? See our <a href="/bathroom-fitters-liverpool">bathroom fitting</a> page. We do the plumbing and the tiling.</p>
+      <h3>Got other small jobs?</h3>
+      <p>Many small jobs fit in our first hour. Make a list, and we will tell you the price before we start. We also do fixed-price jobs, such as a <a href="/tap-replacement-liverpool">new tap</a>, a <a href="/radiators-liverpool">new radiator</a>, a <a href="/kitchen-sink-replacement-liverpool">kitchen sink swap</a>, a <a href="/gas-hob-installation-liverpool">gas hob</a> or an <a href="/outside-tap-installation-liverpool">outside tap</a>. See all our <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a>.</p>
+    </div>
+  </section>
+
+</ServiceGuide>

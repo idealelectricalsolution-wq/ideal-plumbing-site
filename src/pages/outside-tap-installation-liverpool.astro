@@ -1,0 +1,237 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/outside-tap-installation-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'fitted', tier: 'New outside tap', popular: true, name: 'Outside tap supplied and fitted', price: '£145', unit: 'fixed price, inc VAT',
+    points: ['Standard cold garden tap with hose fitting', 'Double check valve to protect your drinking water', 'Isolation valve inside, so you can drain it in winter', 'Up to about 2m of pipe from the kitchen supply', 'Frost advice before we leave'] },
+  { id: 'repair', tier: 'Leaking or frozen tap', name: 'Outside tap repair', price: '£120', unit: 'first hour, weekdays 9am–4pm, inc VAT',
+    points: ['No call-out fee', 'Most leaks and stiff taps fixed in the first hour', 'Parts priced before we fit them', 'Extra time priced before we carry on'] },
+  { id: 'urgent', tier: 'Burst or won\'t turn off', name: 'Evening and weekend repair', price: '£150', unit: 'first hour, evenings, nights and weekends, inc VAT',
+    points: ['For a burst pipe or a tap that will not stop', '£180 first hour on bank holidays', 'No call-out fee', 'Typically with you within 30 minutes'] },
+];
+
+const faqs = [
+  { q: 'How much does it cost to fit an outside tap in Liverpool?', a: 'With us it is £145 including VAT. That covers the tap, a double check valve, an isolation valve inside and up to about 2m of pipe from your kitchen supply. Longer runs are priced before we start.' },
+  { q: 'How long does it take to fit an outside tap?', a: 'Most standard outside taps take about 1 to 2 hours. A longer pipe run, or a tap on a different wall, can take longer. We tell you before we start.' },
+  { q: 'Do I need a double check valve on an outside tap?', a: 'Yes. The water rules say a garden tap needs protection against backflow, so dirty water from a hose cannot get back into your drinking water. A double check valve does this. Every tap we fit has one.' },
+  { q: 'Do I need planning permission for an outside tap?', a: 'For most homes, no. It is a small fitting on the wall. If you live in a listed building, check with the council first.' },
+  { q: 'Can you fit an outside tap if my kitchen is at the front?', a: 'Often, yes. We find the nearest cold supply to where you want the tap. If the pipe has to go further than about 2m, or through more than one wall, we give you a fixed price first.' },
+  { q: 'Can I have a hot and cold outside tap?', a: 'Yes. A hot and cold outside tap is useful for washing cars, dogs and bins. It needs a hot supply as well as a cold one, so we price it before we start.' },
+  { q: 'Will an outside tap work with a pressure washer?', a: 'Yes. Our taps run off your mains cold supply and take a standard hose connector. Most pressure washers plug straight into the hose.' },
+  { q: 'My outside tap is leaking. Can you fix it?', a: 'Yes. A drip from the spout is often a worn washer. A leak behind the wall can be a split pipe or a failed joint. Repairs are £120 for the first hour on weekdays, with no call-out fee.' },
+  { q: 'My outside tap is frozen. What should I do?', a: 'Turn off the isolation valve inside. Open the outside tap and leave it open. Warm the pipe gently with a cloth soaked in warm water. Never use a flame or boiling water. If it has split, call us.' },
+  { q: 'How do I stop my outside tap freezing?', a: 'Before the first frost, turn off the valve inside and open the outside tap to drain it. Then close the tap and fit a frost cover. Turn the valve back on in spring.' },
+  { q: 'Can you move or remove an old outside tap?', a: 'Yes. We can move a tap to a better spot, or remove an old one and cap the pipe safely inside. We price it before we start.' },
+  { q: 'My outside tap will not turn off. Is that an emergency?', a: 'It can waste a lot of water. Turn off the isolation valve inside, or your stop tap if there is no valve. Then call us on 0151 558 0334. We work 24/7.' },
+  { q: 'Is your work guaranteed?', a: 'Yes. Every outside tap we fit comes with a 12-month workmanship guarantee. We also carry £2 million public liability insurance.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Outside Tap Installation Liverpool | Fitted From £145"
+  description="Outside tap installation in Liverpool for £145 inc VAT. Garden tap, double check valve and inside isolation valve fitted. Leaking or frozen tap repairs, no call-out fee. Call 0151 558 0334."
+  h1="Outside Tap Installation Liverpool"
+  badge="Garden taps fitted · fixed price"
+  intro="A new outside tap supplied and fitted for £145 including VAT. We fit a garden tap with a double check valve and an isolation valve inside, so it is safe and easy to drain for winter. We also repair leaking, frozen and burst outside taps across Liverpool."
+  stats={[['£145', 'Tap fitted, inc VAT'], ['1–2 hours', 'Most fits']]}
+  ticks={['Fixed Prices', 'No Call-Out Fee', '12-Month Guarantee', '5.0 on Google']}
+  pkTitle="Outside tap prices"
+  pkLede="Fixed prices, including VAT. No call-out fee and no hidden extras."
+  packages={packages}
+  pkNote="The £145 price covers a standard cold tap run from the kitchen supply, through an outside wall, with up to about 2m of pipe. Longer runs, hot and cold taps or awkward routes are priced before we start."
+  factsTitle="Outside taps at a glance"
+  facts={[
+    ['Price', '£145 supplied and fitted. Repairs from £120 for the first hour on weekdays.'],
+    ['Time', 'Most outside taps take 1 to 2 hours.'],
+    ['Includes', 'Tap, double check valve, inside isolation valve and up to about 2m of pipe.'],
+    ['Guarantee', '12 months on our work. £2 million public liability insurance.'],
+    ['Who', 'Our team of engineers, led by James.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['cost', 'How much does an outside tap cost?'],
+    ['included', 'What is included?'],
+    ['how', 'How do you fit it?'],
+    ['which', 'Which option is right for me?'],
+    ['repair', 'Leaking or frozen outside tap?'],
+    ['winter', 'How do I protect it in winter?'],
+  ]}
+  reviews={['Sara R', 'Tonia K', 'Frank B', 'James Alexander']}
+  faqs={faqs}
+  areasTitle="Where do you fit outside taps?"
+  areasText="We cover all of Liverpool, the Wirral, Sefton, Knowsley and St Helens. Here are some of the Liverpool areas we work in most."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-childwall', label: 'Childwall' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+  ]}
+  related={[
+    { href: '/small-plumbing-jobs-liverpool', title: 'Small plumbing jobs', text: 'Fixed prices for taps, sinks, toilets and more' },
+    { href: '/tap-replacement-liverpool', title: 'Tap replacement', text: '£110 to swap a kitchen or bathroom tap' },
+    { href: '/kitchen-sink-replacement-liverpool', title: 'Kitchen sink replacement', text: '£225 like-for-like, fit only' },
+    { href: '/gas-hob-installation-liverpool', title: 'Gas hob installation', text: '£120 by our Gas Safe registered engineers' },
+    { href: '/toilet-repair-liverpool', title: 'Toilet repair', text: 'From £120 for the first hour, no call-out fee' },
+    { href: '/radiators-liverpool', title: 'Radiators', text: 'Supplied and fitted from £245' },
+    { href: '/leak-detection-liverpool', title: 'Leak detection', text: 'Hidden leaks found and fixed' },
+    { href: '/', title: 'Emergency plumber', text: '24/7, typically with you within 30 minutes' },
+  ]}
+  finalTitle="Book your outside tap"
+  finalText="£145 including VAT, fitted with a double check valve and an inside isolation valve. No call-out fee."
+  serviceName="Outside Tap Installation Liverpool"
+  serviceType="Outside tap installation and repair"
+  serviceDesc="Outside garden taps supplied and fitted across Liverpool and Merseyside for £145 inc VAT, with a double check valve and inside isolation valve. Leaking, frozen and burst outside tap repairs."
+>
+  <section class="brx-sec brx-tint" id="cost">
+    <div class="brx-wrap">
+      <h2>How much does outside tap installation cost in Liverpool?</h2>
+      <p class="brx-answer">A standard outside tap costs £145 with us, supplied and fitted, including VAT. That is a fixed price, with no call-out fee.</p>
+      <p>The price covers most homes. We take the water from your kitchen cold supply. Then we run a short pipe through the outside wall to the tap. That is up to about 2m of pipe.</p>
+      <p>Some jobs need more work. We always tell you the price before we start.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Cold outside tap, short run from the kitchen</strong></td><td>£145 fixed</td></tr>
+            <tr><td><strong>Longer pipe run or a different wall</strong></td><td>Priced before we start</td></tr>
+            <tr><td><strong>Hot and cold outside taps</strong></td><td>Priced before we start</td></tr>
+            <tr><td><strong>Leaking, frozen or stiff tap repair</strong></td><td>£120 first hour, weekdays 9am–4pm</td></tr>
+            <tr><td><strong>Repair in the evening, at night or at the weekend</strong></td><td>£150 first hour (£180 bank holidays)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Have some other small jobs? Make a list. Many fit into the same visit, and we tell you the price before we start. See our <a href="/small-plumbing-jobs-liverpool">small plumbing jobs</a> page.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="included">
+    <div class="brx-wrap">
+      <h2>What is included when you fit an outside tap?</h2>
+      <p class="brx-answer">Everything you need for a safe, working garden tap. You do not need to buy any parts.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>The parts</h3>
+          <ul class="sg-ticks">
+            <li>A standard garden tap with a hose fitting</li>
+            <li>A double check valve, to stop backflow</li>
+            <li>An isolation valve inside the house</li>
+            <li>Copper pipe and fittings, up to about 2m</li>
+            <li>Pipe clips and a sealed hole through the wall</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>The work</h3>
+          <ul class="sg-ticks">
+            <li>Finding the best spot for the tap</li>
+            <li>Drilling the wall and sealing it after</li>
+            <li>Testing every joint for leaks</li>
+            <li>Showing you how to drain it for winter</li>
+            <li>Tidying up before we leave</li>
+          </ul>
+        </div>
+      </div>
+      <div class="brx-note"><p><strong>Why the double check valve matters.</strong> A hose left in a bucket or pond can pull dirty water back into the pipe. The water rules say a garden tap must be protected against this. Some cheap DIY kits leave it out. Ours never do.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="how">
+    <div class="brx-wrap">
+      <h2>How do you fit an outside tap?</h2>
+      <p class="brx-answer">Most outside taps are fitted in 1 to 2 hours. Here is what happens.</p>
+      <ol class="sg-steps">
+        <li><strong>Call us.</strong> Tell us where you want the tap and where your kitchen sink is. We confirm the price. (5 minutes)</li>
+        <li><strong>We plan the route.</strong> On the day, we find the nearest cold supply and agree the spot with you. (10 minutes)</li>
+        <li><strong>We fit the valves.</strong> We turn the water off and add the isolation valve and the double check valve. (20–30 minutes)</li>
+        <li><strong>We drill and run the pipe.</strong> We drill through the wall, run the pipe and fix the tap firmly. (30–45 minutes)</li>
+        <li><strong>We test it.</strong> The water goes back on. We check every joint for leaks and run the tap. (10 minutes)</li>
+        <li><strong>We show you.</strong> You see how to turn it off and drain it for winter. Then we tidy up.</li>
+      </ol>
+      <div class="brx-cta">
+        <p><strong>Want an outside tap this week?</strong> Call and we will find the next free slot.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="which">
+    <div class="brx-wrap">
+      <h2>Which outside tap option is right for me?</h2>
+      <p class="brx-answer">For watering the garden or washing the car, a standard cold tap at £145 is all most people need.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>If you want to...</th><th>Best choice</th></tr></thead>
+          <tbody>
+            <tr><td>Water plants or fill a paddling pool</td><td>Standard cold garden tap</td></tr>
+            <tr><td>Use a hose or pressure washer</td><td>Standard cold garden tap</td></tr>
+            <tr><td>Wash a dog, bins or muddy boots in warm water</td><td>Hot and cold outside taps</td></tr>
+            <tr><td>Have a tap at the front and the back</td><td>Two taps, priced together</td></tr>
+            <tr><td>Fix an old tap that drips or sticks</td><td>Repair, or swap it for a new tap</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Where should the tap go?</h3>
+      <p>The cheapest spot is on the outside of the kitchen wall, near the sink. That keeps the pipe short. A tap on another wall works too, but it needs more pipe.</p>
+      <p>Many Liverpool terraces have a back yard behind the kitchen. That makes a tap in the yard quick and simple. In semis in areas like Allerton, Childwall and West Derby, the kitchen is often at the back, near the garden.</p>
+      <h3>Want an outside socket too?</h3>
+      <p>A pressure washer or garden lights need power as well as water. Our partner firm <a href="https://www.idealelectricalsolutions.co.uk/">Ideal Electrical Solutions</a> fits outdoor sockets.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="repair">
+    <div class="brx-wrap">
+      <h2>Is your outside tap leaking or frozen?</h2>
+      <p class="brx-answer">We fix leaking, frozen and burst outside taps. The first hour is £120 on weekdays, with no call-out fee.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Common faults</h3>
+          <ul class="brx-list">
+            <li><strong>Drips from the spout:</strong> usually a worn washer.</li>
+            <li><strong>Leaks round the handle:</strong> often a worn gland or seal.</li>
+            <li><strong>Water behind the wall:</strong> a split pipe or failed joint.</li>
+            <li><strong>Tap will not turn:</strong> stiff with age or limescale.</li>
+            <li><strong>No water at all:</strong> the pipe may be frozen, or the valve is off.</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <h3>What we do</h3>
+          <ul class="sg-ticks">
+            <li>Find the cause and tell you the fix</li>
+            <li>Price any parts before we fit them</li>
+            <li>Replace the tap if it is not worth repairing</li>
+            <li>Add a double check valve if it is missing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="brx-danger">
+        <p><strong>Burst pipe or a tap that will not stop?</strong> Turn off the isolation valve inside. If there is none, turn off your stop tap, often under the kitchen sink. Then call {PHONE}. We are typically with you within 30 minutes.</p>
+      </div>
+      <p>Water inside the house from a split pipe? Our <a href="/leak-detection-liverpool">leak detection</a> service finds hidden leaks and can provide a report for your insurer.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="winter">
+    <div class="brx-wrap">
+      <h2>How do I stop my outside tap freezing?</h2>
+      <p class="brx-answer">Turn off the valve inside and drain the tap before the first frost. Then fit a frost cover.</p>
+      <ol class="sg-steps">
+        <li><strong>Turn off the isolation valve</strong> inside the house.</li>
+        <li><strong>Open the outside tap</strong> and let the water run out.</li>
+        <li><strong>Unplug the hose,</strong> so water cannot sit in the tap.</li>
+        <li><strong>Close the tap</strong> and fit an insulated frost cover.</li>
+        <li><strong>Turn the valve back on</strong> in spring.</li>
+      </ol>
+      <p>Water swells as it freezes. That can split the pipe or the tap. You may not see it until the thaw, when water starts to leak behind the wall.</p>
+      <p>Is it frozen already? Turn off the valve inside and open the tap. Warm the pipe gently with a cloth soaked in warm water. Never use a flame, a heat gun or boiling water.</p>
+      <h3>Who does the work?</h3>
+      <p>Our engineers are part of our team led by James. Every outside tap we fit comes with a 12-month workmanship guarantee. We carry £2 million public liability insurance and give you a fixed price before we start.</p>
+    </div>
+  </section>
+</ServiceGuide>

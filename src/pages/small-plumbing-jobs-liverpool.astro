@@ -1,0 +1,275 @@
+---
+import ServiceGuide from '../components/ServiceGuide.astro';
+const URL_ = 'https://liverpoolemergencyplumber.co.uk/small-plumbing-jobs-liverpool';
+const TEL = 'tel:01515580334';
+const PHONE = '0151 558 0334';
+
+const packages = [
+  { id: 'outside-tap', tier: 'Supplied and fitted', popular: true, name: 'Outside tap fitted', price: '£145', unit: 'fixed price, inc VAT',
+    points: ['Cold outside tap with a double check valve', 'Isolation valve fitted inside', 'Up to about 2m of pipe through the wall'] },
+  { id: 'tap-swap', tier: 'You supply the tap', name: 'Tap swapped', price: '£110', unit: 'one tap, inc VAT',
+    points: ['Kitchen mixer, basin mixer or a pair of bath taps', 'Second tap on the same visit: £50', 'Old tap taken away'] },
+  { id: 'sink-swap', tier: 'Fit only', name: 'Kitchen sink swapped', price: '£225', unit: 'like for like, inc VAT',
+    points: ['You supply the sink, tap and waste', 'Old sink taken out and taken away', 'Waste and supplies connected and tested'] },
+  { id: 'gas-hob', tier: 'Gas Safe registered', name: 'Gas hob fitted', price: '£120', unit: 'you supply the hob, inc VAT',
+    points: ['Connected to your existing gas point', 'Gas tightness test', 'Every burner checked'] },
+];
+
+const faqs = [
+  { q: 'Do you do small plumbing jobs in Liverpool?', a: 'Yes. No job is too small. We swap taps, fit outside taps, fix toilets, swap sinks, fit gas hobs and change radiators. Most small jobs have a fixed price, including VAT.' },
+  { q: 'Is there a minimum charge?', a: 'Fixed price jobs cost the price we quote, and nothing more. For repairs, we charge by time. The first hour is £120 on weekdays 9am to 4pm, and there is no call-out fee.' },
+  { q: 'How much does a plumber charge for a small job?', a: 'With us, a tap swap is £110, an outside tap fitted is £145 and a gas hob fitted is £120. Repairs start with a first hour of £120 on weekdays. All prices include VAT.' },
+  { q: 'Can you do several small jobs in one visit?', a: 'Yes, and it saves you money. Send us your list. We tell you the price before we start. Many small jobs fit inside our first hour of £120 on weekdays.' },
+  { q: 'Do you charge a call-out fee?', a: 'No. There is no call-out fee on any job. You pay the fixed price or the time we spend, and we tell you the price first.' },
+  { q: 'Can I supply my own tap, sink or toilet?', a: 'Yes. Most of our small job prices assume you supply the part. We fit it and take the old one away. Check the part fits your space before you buy. We are happy to help.' },
+  { q: 'Can you supply the parts?', a: 'Yes. We can supply a tap at cost. Radiators and toilets can be supplied and fitted too. We tell you the price of any part before we fit it.' },
+  { q: 'How soon can you come?', a: 'We book small jobs at a time that suits you. If water is leaking, call us now. For emergencies we typically arrive within 30 minutes.' },
+  { q: 'Can a handyman fit my gas hob?', a: 'Only if they are Gas Safe registered. By law, anyone who works on gas must be on the Gas Safe Register. Our Gas Safe registered engineers fit gas hobs for £120.' },
+  { q: 'Do you fit gas cookers?', a: 'Yes. A freestanding gas cooker connected to your existing gas point is £120. We test for leaks and check every burner before we leave.' },
+  { q: 'Do you guarantee small jobs?', a: 'Yes. Every job has our 12-month workmanship guarantee, big or small. We also carry £2 million public liability insurance.' },
+  { q: 'Do you plumb in washing machines or dishwashers?', a: 'Not as a job on its own. If we are already swapping your kitchen sink, we can price a plumb-in on top before we start.' },
+  { q: 'Do you unblock drains?', a: 'No, we do not do blocked drains. We fix taps, toilets, pipes, sinks, radiators and gas appliances.' },
+  { q: 'Do you cover my area?', a: 'We cover all of Liverpool, plus the Wirral, Sefton, Knowsley and St Helens. Small jobs cost the same price in every area.' },
+];
+---
+
+<ServiceGuide
+  url={URL_}
+  title="Small Plumbing Jobs Liverpool | Fixed Prices From £110, No Job Too Small"
+  description="Small plumbing jobs in Liverpool at fixed prices, inc VAT. Tap swap £110, outside tap £145, gas hob £120, sink swap £225. Got a list? First hour £120. Call 0151 558 0334."
+  h1="Small Plumbing Jobs Liverpool"
+  badge="No job too small · fixed prices"
+  intro="No job is too small for our team. Taps from £110, outside taps £145 and gas hobs £120, all fixed prices including VAT. Got a list of jobs? We price the lot before we start, with no call-out fee."
+  stats={[['£110', 'Tap swapped, inc VAT'], ['£0', 'Call-out fee']]}
+  ticks={['Gas Safe Registered', 'Fixed Prices', 'No Call-Out Fee', '5.0 on Google']}
+  pkTitle="Small plumbing job prices"
+  pkLede="Our most booked small jobs. Fixed prices, including VAT. No call-out fee and no hidden extras."
+  packages={packages}
+  pkNote="Need more than one job done? Most small jobs fit in our first hour, which is £120 on weekdays. See the full price list below."
+  factsTitle="Small plumbing jobs at a glance"
+  facts={[
+    ['Prices', 'Tap swap £110. Outside tap £145. Gas hob £120. Sink swap £225.'],
+    ['A list of jobs', 'First hour £120 weekdays 9am to 4pm. We price your list first.'],
+    ['Call-out fee', 'None, on any job.'],
+    ['Guarantee', '12 months on our workmanship.'],
+    ['Who', 'Our team of engineers, led by James. Gas work by Gas Safe registered engineers.'],
+    ['Area', 'All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.'],
+  ]}
+  toc={[
+    ['price-list', 'How much do small plumbing jobs cost?'],
+    ['list', 'Got a list of jobs?'],
+    ['included', 'What is included?'],
+    ['how', 'How does it work?'],
+    ['which', 'Fixed price or hourly?'],
+    ['jobs', 'Which small jobs do you do?'],
+    ['why', 'Why not a handyman?'],
+  ]}
+  reviews={['David H', 'Edward M', 'Stephen D', 'Mark L']}
+  reviewTitle="What do customers say about our smaller jobs?"
+  faqs={faqs}
+  areasTitle="Where do you do small plumbing jobs?"
+  areasText="We cover all of Liverpool, the Wirral, Sefton, Knowsley and St Helens. The price is the same wherever you live."
+  areas={[
+    { href: '/emergency-plumber-city-centre', label: 'City Centre' },
+    { href: '/emergency-plumber-wavertree', label: 'Wavertree' },
+    { href: '/emergency-plumber-allerton', label: 'Allerton' },
+    { href: '/emergency-plumber-aigburth', label: 'Aigburth' },
+    { href: '/emergency-plumber-west-derby', label: 'West Derby' },
+    { href: '/emergency-plumber-old-swan', label: 'Old Swan' },
+    { href: '/emergency-plumber-walton', label: 'Walton' },
+    { href: '/emergency-plumber-woolton', label: 'Woolton' },
+  ]}
+  related={[
+    { href: '/outside-tap-installation-liverpool', title: 'Outside tap installation', text: '£145 supplied and fitted' },
+    { href: '/tap-replacement-liverpool', title: 'Tap replacement', text: '£110 for one tap, £50 for a second' },
+    { href: '/kitchen-sink-replacement-liverpool', title: 'Kitchen sink replacement', text: '£225 like for like, fit only' },
+    { href: '/gas-hob-installation-liverpool', title: 'Gas hob installation', text: '£120 by Gas Safe registered engineers' },
+    { href: '/toilet-repair-liverpool', title: 'Toilet repair', text: 'First hour £120, no call-out fee' },
+    { href: '/radiators-liverpool', title: 'Radiators', text: 'Supplied and fitted from £245' },
+    { href: '/showers-liverpool', title: 'Showers', text: 'Fit only from £195' },
+  ]}
+  finalTitle="Book your small plumbing job"
+  finalText="Fixed prices, including VAT. No call-out fee. Send us your list and we will tell you the price first."
+  serviceName="Small Plumbing Jobs Liverpool"
+  serviceType="Small plumbing jobs and odd jobs"
+  serviceDesc="Small plumbing jobs across Liverpool and Merseyside at fixed prices: taps, outside taps, kitchen sinks, gas hobs, toilets, radiators and showers. No call-out fee. Several jobs done in one visit."
+>
+  <section class="brx-sec brx-tint" id="price-list">
+    <div class="brx-wrap">
+      <h2>How much do small plumbing jobs cost in Liverpool?</h2>
+      <p class="brx-answer">Most small jobs cost between £95 and £250 with us, including VAT. Each one below has a fixed price or a clear hourly rate.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Job</th><th>Price inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="/tap-replacement-liverpool">Tap swapped</a></strong></td><td>£110</td><td>You supply the tap. Second tap on the same visit: £50</td></tr>
+            <tr><td><strong><a href="/outside-tap-installation-liverpool">Outside tap fitted</a></strong></td><td>£145</td><td>Supplied and fitted, with a double check valve</td></tr>
+            <tr><td><strong><a href="/gas-hob-installation-liverpool">Gas hob fitted</a></strong></td><td>£120</td><td>You supply the hob. Existing gas point</td></tr>
+            <tr><td><strong><a href="/gas-hob-installation-liverpool">Freestanding gas cooker connected</a></strong></td><td>£120</td><td>Existing gas point</td></tr>
+            <tr><td><strong><a href="/kitchen-sink-replacement-liverpool">Kitchen sink swapped</a></strong></td><td>£225</td><td>Like for like. You supply the sink, tap and waste</td></tr>
+            <tr><td><strong><a href="/radiators-liverpool">Radiator swapped</a></strong></td><td>From £245</td><td>Supplied and fitted, new TRV, old one taken away</td></tr>
+            <tr><td><strong><a href="/radiators-liverpool">Fit your own radiator</a></strong></td><td>From £95</td><td>Same spot, no new pipework</td></tr>
+            <tr><td><strong><a href="/toilet-repair-liverpool">Toilet repair</a></strong></td><td>First hour £120</td><td>Most flush and fill valve faults fixed in the first hour</td></tr>
+            <tr><td><strong><a href="/toilet-repair-liverpool">New toilet</a></strong></td><td>From £250</td><td>Supplied and fitted</td></tr>
+            <tr><td><strong><a href="/showers-liverpool">Shower fitted</a></strong></td><td>From £195</td><td>Fit only</td></tr>
+            <tr><td><strong>Leaks and other repairs</strong></td><td>First hour £120</td><td>Weekdays 9am to 4pm. No call-out fee</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Hourly work costs £120 for the first hour on weekdays, 9am to 4pm. It is £150 in the evenings, at night and at weekends, and £180 on bank holidays. If a job needs more time, we tell you the price before we carry on.</p>
+      <div class="brx-note"><p><strong>The price you are told is the price you pay.</strong> Parts are priced before we fit them. Nothing is added on the day without asking you first.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="list">
+    <div class="brx-wrap">
+      <h2>Got a list of jobs?</h2>
+      <p class="brx-answer">Send it to us. Our first hour is £120 on weekdays, and it often covers several small jobs. We tell you the price before we start.</p>
+      <p>Most homes have a few small things waiting. A dripping tap. A toilet that keeps running. A radiator that needs bleeding. On their own they feel too small to call a plumber. Together, they make a good use of one visit.</p>
+      <h3>How to get the best value</h3>
+      <ol class="sg-steps">
+        <li><strong>Write your list.</strong> Walk round the house. Note each job and which room it is in.</li>
+        <li><strong>Take a photo of each one.</strong> A quick picture of the tap, pipe or toilet helps us a lot.</li>
+        <li><strong>Send it or call us.</strong> Ring {PHONE}. We will tell you how to send any photos.</li>
+        <li><strong>Get your price.</strong> We tell you what fits in the first hour and what each extra job costs.</li>
+        <li><strong>One visit.</strong> Our engineer works through the list. Anything new we find is priced before we touch it.</li>
+      </ol>
+      <h3>Jobs that often fit in the first hour</h3>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <ul class="sg-ticks">
+            <li>A dripping tap re-washered</li>
+            <li>A toilet that keeps running</li>
+            <li>A weak or broken flush</li>
+            <li>A leaking trap under a sink</li>
+          </ul>
+        </div>
+        <div class="sg-box">
+          <ul class="sg-ticks">
+            <li>A stiff or leaking stop tap checked</li>
+            <li>Radiators bled and boiler pressure topped up</li>
+            <li>A noisy or leaking isolation valve changed</li>
+            <li>A loose basin or toilet seat fixed</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">Bigger fixed price jobs can join the same visit too. For example, a tap swap and an outside tap on the same day. Just ask and we will price them together.</p>
+      <div class="brx-cta">
+        <p><strong>Got a few jobs that need doing?</strong> Call with your list and get a price first.</p>
+        <a href={TEL} class="brx-btn">Call {PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="included">
+    <div class="brx-wrap">
+      <h2>What is included in the price?</h2>
+      <p class="brx-answer">The labour, the fittings needed for a standard job, testing and a tidy finish. You know the full price before we begin.</p>
+      <ul class="sg-ticks">
+        <li>A fixed written price, or a clear hourly rate, before we start</li>
+        <li>No call-out fee, on any day</li>
+        <li>The standard fittings a normal job needs</li>
+        <li>Water turned off safely and back on again</li>
+        <li>Every joint checked for leaks before we leave</li>
+        <li>Gas work tightness tested by our Gas Safe registered engineers</li>
+        <li>The old tap, sink or radiator taken away</li>
+        <li>Dust sheets down and the area cleaned up</li>
+        <li>Our 12-month workmanship guarantee</li>
+      </ul>
+      <h3>What costs extra</h3>
+      <p>Some jobs turn out bigger than they look. A long pipe run, a moved sink, a new gas pipe or a seized valve all take more time. When that happens, we stop and tell you the price. You decide if we carry on.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="how">
+    <div class="brx-wrap">
+      <h2>How does it work?</h2>
+      <p class="brx-answer">You call, we give you a price, and we book a time that suits you. Most single small jobs take one to two hours.</p>
+      <ol class="sg-steps">
+        <li><strong>Call us.</strong> Tell us what needs doing. It only takes a few minutes.</li>
+        <li><strong>Get your price.</strong> Fixed price jobs are priced on the phone. A photo helps for anything unusual.</li>
+        <li><strong>Pick a time.</strong> We book a time that suits you.</li>
+        <li><strong>The job.</strong> A tap swap takes about an hour. A sink swap or outside tap takes about two to three.</li>
+        <li><strong>Checked and tidy.</strong> We test everything, show you what we did and clean up.</li>
+      </ol>
+      <div class="brx-note"><p><strong>Water coming through the ceiling?</strong> That is not a small job. Call us now on <a href={TEL}>{PHONE}</a>. We typically arrive within 30 minutes. See our <a href="/">emergency plumber</a> page.</p></div>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="which">
+    <div class="brx-wrap">
+      <h2>Fixed price or hourly: which is right for me?</h2>
+      <p class="brx-answer">If you know what you want fitted, pick a fixed price. If something is broken and you are not sure why, the hourly rate is fairer.</p>
+      <div class="brx-table-wrap">
+        <table class="brx-table">
+          <thead><tr><th>Your job</th><th>Best option</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td><strong>New tap, sink, hob or outside tap</strong></td><td>Fixed price</td><td>The work is known, so the price is set</td></tr>
+            <tr><td><strong>One fault, such as a running toilet</strong></td><td>First hour £120</td><td>Most faults are fixed inside the hour</td></tr>
+            <tr><td><strong>Three or four small jobs</strong></td><td>First hour £120</td><td>One visit covers the lot</td></tr>
+            <tr><td><strong>A list plus a fitting job</strong></td><td>Ask us</td><td>We price both together</td></tr>
+            <tr><td><strong>A leak you cannot find</strong></td><td><a href="/leak-detection-liverpool">Leak detection</a></td><td>We trace it first, then fix it</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Not sure? Tell us what is wrong. We will say which option costs you less. We would rather you get a fair price and call us again.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec" id="jobs">
+    <div class="brx-wrap">
+      <h2>Which small plumbing jobs do you do?</h2>
+      <p class="brx-answer">Most jobs around taps, sinks, toilets, radiators, showers and gas hobs. Each one has its own page with full prices and details.</p>
+      <h3>Taps</h3>
+      <p>We swap kitchen mixers, basin mixers and bath taps for £110. A second tap on the same visit is £50. Dripping taps are often fixed with a new washer or cartridge. See <a href="/tap-replacement-liverpool">tap replacement</a>.</p>
+      <h3>Outside taps</h3>
+      <p>An outside tap is £145 supplied and fitted. It comes with a double check valve, which stops garden water flowing back into your supply. We fit an isolation valve inside, so you can turn it off for winter. Longer runs are priced before we start. See <a href="/outside-tap-installation-liverpool">outside tap installation</a>.</p>
+      <h3>Kitchen sinks</h3>
+      <p>A like-for-like sink swap is £225, fit only. You supply the sink, tap and waste. If the sink needs to move, or the worktop needs a new cut-out, we price that first. See <a href="/kitchen-sink-replacement-liverpool">kitchen sink replacement</a>.</p>
+      <h3>Gas hobs and cookers</h3>
+      <p>Our Gas Safe registered engineers fit a gas hob for £120, using your existing gas point. A freestanding gas cooker is also £120. We test for leaks and check each burner. A new gas pipe or a switch from electric to gas is priced at a free visit. See <a href="/gas-hob-installation-liverpool">gas hob installation</a>.</p>
+      <figure class="sg-photo" style="max-width:360px;margin-top:1.25rem;">
+        <picture>
+          <source type="image/webp" srcset="/images/jobs/gas-hob-oven-fitted-480.webp 480w, /images/jobs/gas-hob-oven-fitted-960.webp 960w" sizes="(max-width: 700px) 100vw, 360px" />
+          <img src="/images/jobs/gas-hob-oven-fitted-960.jpg" alt="Gas hob and oven fitted by our Gas Safe registered engineers" width="960" height="1280" loading="lazy" decoding="async" />
+        </picture>
+        <figcaption>A real job: gas hob and oven fitted.</figcaption>
+      </figure>
+      <h3>Toilets</h3>
+      <p>A toilet that will not flush, runs all the time or leaks at the base is charged by time. The first hour is £120 on weekdays, and most flush and fill valve faults are fixed in it. A new toilet supplied and fitted is from £250. See <a href="/toilet-repair-liverpool">toilet repair</a>.</p>
+      <h3>Radiators</h3>
+      <p>A radiator swap is from £245 supplied and fitted, with a new TRV. If you buy your own radiator, fitting is from £95. See <a href="/radiators-liverpool">radiators</a>.</p>
+      <h3>Showers</h3>
+      <p>We fit showers from £195, fit only. An electric shower supplied and fitted is from £375. If it needs a new electric circuit, our partner firm <a href="https://www.idealelectricalsolutions.co.uk">Ideal Electrical Solutions</a> does that part. See <a href="/showers-liverpool">showers</a>.</p>
+      <h3>What we do not do</h3>
+      <p>We do not unblock drains. We do not plumb in a washing machine or dishwasher as a job on its own. We do not service gas fires, but we can disconnect and cap one safely.</p>
+    </div>
+  </section>
+
+  <section class="brx-sec brx-tint" id="why">
+    <div class="brx-wrap">
+      <h2>Why use a plumber instead of a handyman?</h2>
+      <p class="brx-answer">A handyman may be cheaper per hour, but some small jobs need a plumber. Gas work by law needs a Gas Safe registered engineer.</p>
+      <div class="sg-cols">
+        <div class="sg-box">
+          <h3>Gas</h3>
+          <p>Anyone who connects a gas hob or cooker must be on the Gas Safe Register. It is the law. A bad joint can leak gas or carbon monoxide. Our Gas Safe registered engineers test every gas job before they leave.</p>
+        </div>
+        <div class="sg-box">
+          <h3>Water</h3>
+          <p>Outside taps need the right backflow protection to keep your drinking water clean. A poor joint under a floor can leak for weeks before you see it. We fit and test to the water rules.</p>
+        </div>
+      </div>
+      <h3>What you get with us</h3>
+      <ul class="sg-ticks">
+        <li>A team of engineers led by James, not whoever is free</li>
+        <li>Fixed prices, including VAT, before we start</li>
+        <li>No call-out fee</li>
+        <li>12-month workmanship guarantee</li>
+        <li>£2 million public liability insurance</li>
+        <li>5.0 from 53 Google reviews</li>
+      </ul>
+      <div class="brx-note"><p><strong>Got small electrical jobs too?</strong> A new socket, a light fitting or an extractor fan is a job for an electrician. Our partner firm <a href="https://www.idealelectricalsolutions.co.uk">Ideal Electrical Solutions</a> covers Liverpool and is NICEIC approved.</p></div>
+    </div>
+  </section>
+</ServiceGuide>
