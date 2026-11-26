@@ -397,6 +397,7 @@ const guideBox = (() => {
     .pf .btn-orange:hover { color: #ffffff; border-bottom: none; }
 
     .pf-section { padding: 2rem 0; }
+
     .pf-section-sm { padding: 2rem 0; }
 
     /* Cards */
@@ -946,6 +947,27 @@ const guideBox = (() => {
       .services-grid { grid-template-columns: 1fr; }
       .quals-grid { grid-template-columns: 1fr 1fr; }
       .trust-row { gap: 1.25rem; }
+    }
+      /* Mobile: area pages show prices and emergency jobs first, cards tighter */
+    @media (max-width: 600px) {
+      .pf:has(> .pf-section) { display: flex; flex-direction: column; }
+      .pf:has(> .pf-section) > section[style*="1a3a5c"] { order: -4; }
+      .pf:has(> .pf-section) > .pf-section:has(.pf-price-card) { order: -3; }
+      .pf:has(> .pf-section) > .pf-section:has(.job-card) { order: -2; }
+      .pf-section { padding: 1.6rem 0; }
+      .pf-card { padding: 1.1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+      .pf-card + .pf-card { margin-top: 0.9rem; }
+      .pf-pricing-grid { gap: 0.9rem; }
+      .pf-price-card { padding: 1rem 1rem 0.9rem; display: grid; grid-template-columns: 1fr auto; align-items: center; text-align: left; column-gap: 0.75rem; }
+      .pf-price-card > * { grid-column: 1; }
+      .pf-price-card .pf-price-amount { grid-column: 2; grid-row: 1 / span 3; font-size: 2.6rem; text-align: right; margin: 0; }
+      .pf-price-card .pf-price-amount small { display: block; font-size: 0.8rem; }
+      .pf-price-card .pf-price-list { display: none; }
+      .pf-price-card .btn, .pf-price-card a { grid-column: 1 / -1; margin-top: 0.75rem; }
+      .pf-price-card .pf-price-sub { margin-bottom: 0; }
+      .pf-price-card > *:not(.pf-price-amount) { text-align: left; }
+      .pf-price-card:not(.pf-price-card-featured) a, .pf-price-card:not(.pf-price-card-featured) .btn { display: none; }
+      .job-card { padding: 1.1rem; text-align: left; }
     }
   </style>
   <style is:global>

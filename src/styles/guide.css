@@ -204,3 +204,9 @@
 .sg-photo img { width: 100%; height: auto; border-radius: 14px; display: block; }
 .sg-photo figcaption { font-size: 0.88rem; color: #475569; margin-top: 0.45rem; }
 .sg-wide { max-width: 1100px; }
+
+/* Mobile: tighter guide pages; page contents list hidden on phones (facts box stays) */
+@media (max-width: 600px) {
+  .brx-toc { display: none; }
+  .brx-updated { margin-top: 0.75rem; }
+}
