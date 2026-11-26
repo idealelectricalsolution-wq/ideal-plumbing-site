@@ -7,26 +7,26 @@ const PHONE = '0151 558 0334';
 // Scope: gas boilers only. We do NOT service gas fires (we can disconnect and cap) or back boilers (we remove them and fit a combi).
 // We do NOT sell a monthly boiler service plan or boiler cover. Pay per service, free yearly reminder.
 const packages = [
-  { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£95', unit: 'fixed price, inc VAT',
+  { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£120', unit: 'fixed price, inc VAT',
     points: ['Combi, system and regular gas boilers', 'Benchmark service record filled in', 'Service record emailed the same day', 'Free reminder next year'] },
-  { id: 'combined', tier: 'Best value', popular: true, name: 'Boiler service + gas safety certificate (CP12)', price: '£195', unit: 'one visit, inc VAT',
-    points: ['Save £20 on booking them apart', 'Ideal for landlords', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day'] },
+  { id: 'combined', tier: 'Best value', popular: true, name: 'Boiler service + gas safety certificate (CP12)', price: '£199', unit: 'one visit, inc VAT',
+    points: ['Save £21 on booking them apart', 'Ideal for landlords', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day'] },
   { id: 'cylinder', tier: 'Unvented hot water', name: 'Unvented cylinder service', price: '£120', unit: 'fixed price, inc VAT',
     points: ['For Megaflo-style mains pressure cylinders', 'Safety valves and expansion vessel checked', 'All our engineers are G3 qualified', 'Keeps the cylinder warranty valid'] },
 ];
 
 const faqs = [
-  { q: 'How much is a boiler service in Liverpool?', a: 'With us it is £95 including VAT, fixed price. There is no call-out fee. A boiler service and a landlord gas safety certificate together are £195. An unvented cylinder service is £120.' },
+  { q: 'How much is a boiler service in Liverpool?', a: 'With us it is £120 including VAT, fixed price. There is no call-out fee. A boiler service and a landlord gas safety certificate together are £199. An unvented cylinder service is £120.' },
   { q: 'How long does a boiler service take?', a: 'Most boiler services take 45 to 60 minutes. A service and gas safety certificate together usually take about an hour and a quarter.' },
   { q: 'Do I need a boiler service every year?', a: 'Yes, if you want to keep the boiler safe and keep its warranty. Most boiler makers ask for a service every 12 months by a Gas Safe registered engineer. Miss one and a warranty claim can be refused.' },
-  { q: 'Do you offer a boiler service plan?', a: 'No. We do not sell a monthly plan or boiler cover. You pay £95 when you have the service, and nothing in between. We send you a free reminder when the next one is due, so you do not miss a year.' },
+  { q: 'Do you offer a boiler service plan?', a: 'No. We do not sell a monthly plan or boiler cover. You pay £120 when you have the service, and nothing in between. We send you a free reminder when the next one is due, so you do not miss a year.' },
   { q: 'Can you service any make of boiler?', a: 'We service gas boilers from all the main makers, including Worcester Bosch, Baxi, Vaillant, Ideal, Viessmann, Glow-worm and Potterton. If you are not sure about yours, call and tell us the make and model.' },
   { q: 'Do you service back boilers or gas fires?', a: 'No. We do not service back boilers. We can take an old back boiler out and fit a new combi in its place. We do not service gas fires either, but we can disconnect and cap one safely.' },
   { q: 'Can someone else let the engineer in?', a: 'Yes. A neighbour, a family member, a tenant or a letting agent can let us in. We just need someone there to open the door. We email the service record to you afterwards.' },
   { q: 'What if you find a fault?', a: 'We stop and explain it to you first. Then we give you a price for the repair. Nothing extra is done unless you say yes. Small repairs can often be done on the same visit.' },
   { q: 'When do I get my service record?', a: 'The same day. We fill in the Benchmark service record and email you a copy. Landlords get the gas safety certificate the same day as well.' },
   { q: 'Is a boiler service a legal requirement?', a: 'Not for home owners. For landlords, the law says gas appliances must be kept safe, with a gas safety check every 12 months. A yearly service is the usual way to keep the boiler in safe order, so most landlords book both.' },
-  { q: 'Is a boiler service the same as a gas safety certificate?', a: 'No. A service cleans and checks the inside of the boiler, so it runs well and keeps its warranty. A gas safety certificate (CP12) checks that every gas appliance is safe. Landlords need the certificate by law. Both in one visit cost £195.' },
+  { q: 'Is a boiler service the same as a gas safety certificate?', a: 'No. A service cleans and checks the inside of the boiler, so it runs well and keeps its warranty. A gas safety certificate (CP12) checks that every gas appliance is safe. Landlords need the certificate by law. Both in one visit cost £199.' },
   { q: 'When is the best time to book?', a: 'Spring or summer, if you can. Autumn and winter are our busiest months, because that is when boilers break down. Booking early gets you a slot that suits you and finds faults before the cold weather.' },
   { q: 'Can I service my own boiler?', a: 'No. Work on a gas boiler must be done by a Gas Safe registered engineer. It is against the law to do it yourself, and it is not safe.' },
   { q: 'Are you Gas Safe registered?', a: 'Yes. Every boiler service is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
@@ -35,12 +35,12 @@ const faqs = [
 
 <ServiceGuide
   url={URL_}
-  title="Boiler Service Liverpool | Annual Service From £95 | Gas Safe"
-  description="Annual boiler service in Liverpool for £95 inc VAT. Service + gas safety certificate £195. Gas Safe registered engineers, Benchmark record emailed the same day. No call-out fee. Call 0151 558 0334."
+  title="Boiler Service Liverpool | Annual Service From £120 | Gas Safe"
+  description="Annual boiler service in Liverpool for £120 inc VAT. Service + gas safety certificate £199. Gas Safe registered engineers, Benchmark record emailed the same day. No call-out fee. Call 0151 558 0334."
   h1="Annual Boiler Service Liverpool"
   badge="Gas Safe registered · record emailed same day"
-  intro="A full annual boiler service for £95 including VAT, with no call-out fee. Our Gas Safe registered engineers clean and test your boiler in about an hour. We fill in your Benchmark record, so your warranty stays valid, and email it to you the same day."
-  stats={[['£95', 'Boiler service, inc VAT'], ['45–60 min', 'Most services']]}
+  intro="A full annual boiler service for £120 including VAT, with no call-out fee. Our Gas Safe registered engineers clean and test your boiler in about an hour. We fill in your Benchmark record, so your warranty stays valid, and email it to you the same day."
+  stats={[['£120', 'Boiler service, inc VAT'], ['45–60 min', 'Most services']]}
   ticks={['Gas Safe Registered', 'Fixed Price', 'No Call-Out Fee', '5.0 on Google']}
   pkTitle="Boiler service prices"
   pkLede="Fixed prices, including VAT. No call-out fee and no extras on the day."
@@ -48,7 +48,7 @@ const faqs = [
   pkNote="Prices are for gas boilers. If we find a fault, we tell you the repair price before we do anything. We do not sell monthly plans: you pay per service, and we send a free reminder each year."
   factsTitle="Boiler servicing at a glance"
   facts={[
-    ['Price', '£95 for a boiler service. With a gas safety certificate: £195.'],
+    ['Price', '£120 for a boiler service. With a gas safety certificate: £199.'],
     ['Time', 'Most services take 45 to 60 minutes.'],
     ['Paper', 'Benchmark service record emailed the same day.'],
     ['Warranty', 'Most makers ask for a service every 12 months.'],
@@ -85,7 +85,7 @@ const faqs = [
     { href: '/emergency-plumber-kirkby', label: 'Kirkby' },
   ]}
   related={[
-    { href: '/gas-safety-certificate-liverpool', title: 'Gas safety certificate', text: 'Landlord CP12 £75, or £195 with a service' },
+    { href: '/gas-safety-certificate-liverpool', title: 'Gas safety certificate', text: 'Landlord CP12 £100, or £199 with a service' },
     { href: '/boiler-repair-liverpool', title: 'Boiler repair', text: 'From £120 for the first hour, no call-out fee' },
     { href: '/boiler-installation-liverpool', title: 'New boiler', text: 'Fixed-price combi packages from £2,195 fitted' },
     { href: '/power-flushing-liverpool', title: 'Power flushing', text: 'Cold radiators and sludge, from £395' },
@@ -93,7 +93,7 @@ const faqs = [
     { href: '/central-heating-installation-liverpool', title: 'Central heating', text: 'Full new systems from £4,495' },
   ]}
   finalTitle="Book your boiler service"
-  finalText="£95 including VAT. No call-out fee. Service record emailed the same day."
+  finalText="£120 including VAT. No call-out fee. Service record emailed the same day."
   serviceName="Boiler Service Liverpool"
   serviceType="Annual gas boiler service"
   serviceDesc="Annual gas boiler servicing across Liverpool and Merseyside by Gas Safe registered engineers. Combi, system and regular boilers. Benchmark service record emailed the same day."
@@ -155,7 +155,7 @@ const faqs = [
       <h2>How does the visit work?</h2>
       <p class="brx-answer">You book a time, we service the boiler in about an hour, and you get the record by email the same day.</p>
       <ol class="sg-steps">
-        <li><strong>Book (2 minutes).</strong> Call or <a href="/get-started">book online</a>. Tell us the make of boiler if you know it. The price is fixed at £95.</li>
+        <li><strong>Book (2 minutes).</strong> Call or <a href="/get-started">book online</a>. Tell us the make of boiler if you know it. The price is fixed at £120.</li>
         <li><strong>We arrive.</strong> A Gas Safe registered engineer comes at the agreed time. Anyone can let us in. You can ask to see the Gas Safe card.</li>
         <li><strong>The service (45 to 60 minutes).</strong> We work through the full checklist above. We use dust sheets and tidy up after.</li>
         <li><strong>What we found.</strong> We tell you how the boiler is doing. If something needs fixing, you get a price first. You decide.</li>
@@ -172,15 +172,15 @@ const faqs = [
   <section class="brx-sec" id="which">
     <div class="brx-wrap">
       <h2>Which option is right for me?</h2>
-      <p class="brx-answer">Most home owners need the £95 boiler service. Landlords should book the £195 service and gas safety certificate. Add the £120 cylinder service if you have an unvented hot water cylinder.</p>
+      <p class="brx-answer">Most home owners need the £120 boiler service. Landlords should book the £199 service and gas safety certificate. Add the £120 cylinder service if you have an unvented hot water cylinder.</p>
       <div class="sg-cols">
         <div class="sg-box">
           <h3>You own your home</h3>
-          <p>Book the <strong>boiler service for £95</strong>. It keeps the warranty valid and the boiler safe. You do not need a gas safety certificate by law.</p>
+          <p>Book the <strong>boiler service for £120</strong>. It keeps the warranty valid and the boiler safe. You do not need a gas safety certificate by law.</p>
         </div>
         <div class="sg-box">
           <h3>You rent out a home</h3>
-          <p>Book the <strong>service and certificate for £195</strong>. You need the gas safety certificate every 12 months by law. Doing both in one visit saves you £20 and one trip for your tenant.</p>
+          <p>Book the <strong>service and certificate for £199</strong>. You need the gas safety certificate every 12 months by law. Doing both in one visit saves you £20 and one trip for your tenant.</p>
         </div>
       </div>
       <h3>Do you have a cylinder as well as a boiler?</h3>
@@ -201,11 +201,11 @@ const faqs = [
             <tr><td><strong>Covers</strong></td><td>The boiler</td><td>Boiler, gas cooker and hob</td></tr>
             <tr><td><strong>Needed by law?</strong></td><td>No, but most warranties need it</td><td>Yes, for landlords, every 12 months</td></tr>
             <tr><td><strong>Paperwork</strong></td><td>Benchmark service record</td><td>Landlord gas safety record</td></tr>
-            <tr><td><strong>Price</strong></td><td>£95</td><td>£75</td></tr>
+            <tr><td><strong>Price</strong></td><td>£120</td><td>£100</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Both in one visit cost <strong>£195</strong>. See our <a href="/gas-safety-certificate-liverpool">gas safety certificate</a> page for what landlords must do.</p>
+      <p>Both in one visit cost <strong>£199</strong>. See our <a href="/gas-safety-certificate-liverpool">gas safety certificate</a> page for what landlords must do.</p>
     </div>
   </section>
 

@@ -7,23 +7,23 @@ const PHONE = '0151 558 0334';
 // Scope: gas boilers only. We do NOT service gas fires (we can disconnect and cap) or back boilers (we remove them and fit a combi).
 // We do NOT sell a monthly boiler service plan or boiler cover. Pay per service, free yearly reminder.
 const packages = [
-  { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£95', unit: 'fixed price, inc VAT',
+  { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£120', unit: 'fixed price, inc VAT',
     points: ['Combi, system and regular gas boilers', 'System boilers at the same price', 'Service record emailed the same day', 'Free reminder next year'] },
   { id: 'cylinder', tier: 'Unvented hot water', popular: true, name: 'Unvented cylinder service', price: '£120', unit: 'fixed price, inc VAT',
     points: ['For mains pressure cylinders', 'Can be done on the same visit as the boiler', 'All our engineers are G3 qualified', 'Keeps the cylinder warranty valid'] },
-  { id: 'combined', tier: 'Landlords', name: 'Boiler service + gas safety certificate (CP12)', price: '£195', unit: 'one visit, inc VAT',
-    points: ['Save £20 on booking them apart', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day', 'We can arrange access with tenants'] },
+  { id: 'combined', tier: 'Landlords', name: 'Boiler service + gas safety certificate (CP12)', price: '£199', unit: 'one visit, inc VAT',
+    points: ['Save £21 on booking them apart', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day', 'We can arrange access with tenants'] },
 ];
 
 const faqs = [
-  { q: 'How much does a boiler service cost in Formby?', a: 'With us it is £95 including VAT, fixed price, with no call-out fee. System boilers cost the same as combis. An unvented cylinder service is £120. A boiler service and gas safety certificate together are £195.' },
+  { q: 'How much does a boiler service cost in Formby?', a: 'With us it is £120 including VAT, fixed price, with no call-out fee. System boilers cost the same as combis. An unvented cylinder service is £120. A boiler service and gas safety certificate together are £199.' },
   { q: 'Do you cover all of Formby and nearby villages?', a: 'Yes. We cover Formby, Freshfield and Little Altcar in L37, plus Hightown, Ince Blundell, Ainsdale, Crosby, Thornton, Maghull and Lydiate. The price is the same everywhere.' },
-  { q: 'Do you service system boilers in Formby at the same price?', a: 'Yes. A system boiler service takes a little longer, because we also check the pump, zone valves and cylinder controls. The price is still £95.' },
-  { q: 'Does my unvented cylinder need a yearly service?', a: 'Yes, if you want to keep its warranty. Cylinder makers ask for a yearly service by a qualified engineer. It is a separate job from the boiler service. We can do both on the same visit for £95 plus £120.' },
+  { q: 'Do you service system boilers in Formby at the same price?', a: 'Yes. A system boiler service takes a little longer, because we also check the pump, zone valves and cylinder controls. The price is still £120.' },
+  { q: 'Does my unvented cylinder need a yearly service?', a: 'Yes, if you want to keep its warranty. Cylinder makers ask for a yearly service by a qualified engineer. It is a separate job from the boiler service. We can do both on the same visit for £120 plus £120.' },
   { q: 'Are you G3 qualified for unvented cylinders?', a: 'Yes. All our engineers are G3 qualified, which is the qualification for working on unvented hot water cylinders.' },
   { q: 'How long does a boiler service take?', a: 'A combi takes 45 to 60 minutes. A system boiler takes 60 to 75 minutes. A system boiler and unvented cylinder together take about 75 to 90 minutes.' },
   { q: 'Does a service keep my boiler warranty valid?', a: 'Yes. Most boiler makers ask for a service every 12 months by a Gas Safe registered engineer. We fill in the Benchmark service record on every visit, which is what the maker will ask to see.' },
-  { q: 'Do you provide CP12 certificates for Formby landlords?', a: 'Yes. A boiler service and CP12 in one visit cost £195. We can arrange access with your tenant or agent, and email both records the same day.' },
+  { q: 'Do you provide CP12 certificates for Formby landlords?', a: 'Yes. A boiler service and CP12 in one visit cost £199. We can arrange access with your tenant or agent, and email both records the same day.' },
   { q: 'Do you offer a boiler service plan?', a: 'No. We do not sell a monthly plan or boiler cover. You pay when you have the service. We send a free reminder when the next one is due.' },
   { q: 'Are you Gas Safe registered?', a: 'Yes. Every boiler service is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
 ];
@@ -31,20 +31,20 @@ const faqs = [
 
 <ServiceGuide
   url={URL_}
-  title="Boiler Service Formby | System Boilers & Cylinders From £95"
-  description="Annual boiler service in Formby for £95 inc VAT, system boilers included. Unvented cylinder service £120 by G3 qualified engineers. Service + CP12 £195. Gas Safe registered, L37. Call 0151 558 0334."
+  title="Boiler Service Formby | System Boilers & Cylinders From £120"
+  description="Annual boiler service in Formby for £120 inc VAT, system boilers included. Unvented cylinder service £120 by G3 qualified engineers. Service + CP12 £199. Gas Safe registered, L37. Call 0151 558 0334."
   h1="Boiler Service Formby"
   badge="Gas Safe registered · G3 qualified · L37"
-  intro="An annual boiler service in Formby for £95 including VAT, with no call-out fee. System boilers cost the same as combis. Got an unvented cylinder? Our G3 qualified engineers can service it on the same visit for £120."
-  stats={[['£95', 'Boiler service, inc VAT'], ['£120', 'Unvented cylinder service']]}
+  intro="An annual boiler service in Formby for £120 including VAT, with no call-out fee. System boilers cost the same as combis. Got an unvented cylinder? Our G3 qualified engineers can service it on the same visit for £120."
+  stats={[['£120', 'Boiler service, inc VAT'], ['£120', 'Unvented cylinder service']]}
   ticks={['Gas Safe Registered', 'G3 Qualified', 'No Call-Out Fee', '5.0 on Google']}
   pkTitle="Boiler service prices in Formby"
   pkLede="Fixed prices, including VAT. The same across Formby. No call-out fee."
   packages={packages}
-  pkNote="Prices are for gas boilers. Boiler and cylinder on one visit: £95 plus £120. If we find a fault, we tell you the repair price before we do anything."
+  pkNote="Prices are for gas boilers. Boiler and cylinder on one visit: £120 plus £120. If we find a fault, we tell you the repair price before we do anything."
   factsTitle="Formby boiler servicing at a glance"
   facts={[
-    ['Price', '£95 for a boiler service, combi or system. Unvented cylinder: £120.'],
+    ['Price', '£120 for a boiler service, combi or system. Unvented cylinder: £120.'],
     ['Time', '45 to 60 minutes for a combi. About 75 to 90 minutes for a system boiler and cylinder.'],
     ['Paper', 'Benchmark service record and cylinder record emailed the same day.'],
     ['Cylinders', 'All our engineers are G3 qualified for unvented cylinders.'],
@@ -71,14 +71,14 @@ const faqs = [
   ]}
   related={[
     { href: '/hot-water-cylinders-formby', title: 'Hot water cylinders Formby', text: 'Unvented cylinders from £1,450 fitted' },
-    { href: '/gas-safety-certificate-formby', title: 'Gas safety certificate Formby', text: 'Landlord CP12 £75, or £195 with a service' },
+    { href: '/gas-safety-certificate-formby', title: 'Gas safety certificate Formby', text: 'Landlord CP12 £100, or £199 with a service' },
     { href: '/boiler-installation-formby', title: 'Boiler installation Formby', text: 'Fixed-price packages from £2,195 fitted' },
     { href: '/power-flushing-formby', title: 'Power flushing Formby', text: 'Cold radiators and sludge, from £395' },
     { href: '/radiators-formby', title: 'Radiators Formby', text: 'New radiators supplied and fitted from £245' },
     { href: '/emergency-plumber-formby', title: 'Emergency plumber Formby', text: 'From £120 for the first hour, no call-out fee' },
   ]}
   finalTitle="Book your Formby boiler service"
-  finalText="£95 including VAT. System boilers the same price. Cylinder service £120 on the same visit."
+  finalText="£120 including VAT. System boilers the same price. Cylinder service £120 on the same visit."
   serviceName="Boiler Service Formby"
   serviceType="Annual gas boiler service"
   serviceDesc="Annual gas boiler servicing across Formby L37 by Gas Safe registered engineers. Combi, system and regular boilers, plus unvented cylinder servicing by G3 qualified engineers. Records emailed the same day."
@@ -87,16 +87,16 @@ const faqs = [
   <section class="brx-sec brx-tint" id="which">
     <div class="brx-wrap">
       <h2>Which service does your Formby home need?</h2>
-      <p class="brx-answer">It depends on your boiler. A combi needs the £95 boiler service. A system boiler with an unvented cylinder needs the boiler service and the £120 cylinder service.</p>
+      <p class="brx-answer">It depends on your boiler. A combi needs the £120 boiler service. A system boiler with an unvented cylinder needs the boiler service and the £120 cylinder service.</p>
       <p>Many Formby homes are larger 3 to 5 bedroom houses. These often have a system boiler, a hot water cylinder and more than one heating zone. Some have underfloor heating too. A quick 45-minute combi service does not cover all of that.</p>
       <div class="brx-table-wrap">
         <table class="brx-table">
           <thead><tr><th>Your setup</th><th>What you need</th><th>Time</th><th>Price</th></tr></thead>
           <tbody>
-            <tr><td><strong>Combi boiler</strong></td><td>Boiler service</td><td>45 to 60 min</td><td>£95</td></tr>
-            <tr><td><strong>System boiler, vented cylinder</strong></td><td>Boiler service, with pump and zone valve checks</td><td>60 to 75 min</td><td>£95</td></tr>
-            <tr><td><strong>System boiler, unvented cylinder</strong></td><td>Boiler service + cylinder service</td><td>75 to 90 min</td><td>£95 + £120</td></tr>
-            <tr><td><strong>Rented home</strong></td><td>Boiler service + gas safety certificate</td><td>About 75 min</td><td>£195</td></tr>
+            <tr><td><strong>Combi boiler</strong></td><td>Boiler service</td><td>45 to 60 min</td><td>£120</td></tr>
+            <tr><td><strong>System boiler, vented cylinder</strong></td><td>Boiler service, with pump and zone valve checks</td><td>60 to 75 min</td><td>£120</td></tr>
+            <tr><td><strong>System boiler, unvented cylinder</strong></td><td>Boiler service + cylinder service</td><td>75 to 90 min</td><td>£120 + £120</td></tr>
+            <tr><td><strong>Rented home</strong></td><td>Boiler service + gas safety certificate</td><td>About 75 min</td><td>£199</td></tr>
           </tbody>
         </table>
       </div>
@@ -182,7 +182,7 @@ const faqs = [
       <h2>Will a service keep my boiler warranty valid?</h2>
       <p class="brx-answer">Yes. Most boiler makers want a service every 12 months by a Gas Safe registered engineer, written in the Benchmark record. We do both on every visit.</p>
       <p>Your boiler came with a Benchmark checklist, usually in the back of the manual. Each service goes into it. If the boiler breaks down under warranty, the maker can ask to see it. Miss a year and they can refuse a claim.</p>
-      <p>We service all the main makes, including Worcester Bosch, Vaillant, Ideal, Baxi, Viessmann, Glow-worm and Potterton. Landlord? Book the service and gas safety certificate together for £195. See <a href="/gas-safety-certificate-formby">gas safety certificates in Formby</a>.</p>
+      <p>We service all the main makes, including Worcester Bosch, Vaillant, Ideal, Baxi, Viessmann, Glow-worm and Potterton. Landlord? Book the service and gas safety certificate together for £199. See <a href="/gas-safety-certificate-formby">gas safety certificates in Formby</a>.</p>
     </div>
   </section>
 

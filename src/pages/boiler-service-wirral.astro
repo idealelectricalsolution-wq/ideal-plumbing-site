@@ -7,36 +7,36 @@ const PHONE = '0151 558 0334';
 // Scope: gas boilers only. We do NOT service gas fires (we can disconnect and cap) or back boilers (we remove them and fit a combi).
 // We do NOT sell a monthly boiler service plan or boiler cover. Pay per service, free yearly reminder.
 const packages = [
-  { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£95', unit: 'fixed price, inc VAT',
+  { id: 'service', tier: 'Homeowners', name: 'Annual boiler service', price: '£120', unit: 'fixed price, inc VAT',
     points: ['Combi, system and regular gas boilers', 'Same price in every CH postcode', 'Service record emailed the same day', 'Free reminder next year'] },
-  { id: 'combined', tier: 'Best value', popular: true, name: 'Boiler service + gas safety certificate (CP12)', price: '£195', unit: 'one visit, inc VAT',
-    points: ['Save £20 on booking them apart', 'Ideal for Wirral landlords', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day'] },
+  { id: 'combined', tier: 'Best value', popular: true, name: 'Boiler service + gas safety certificate (CP12)', price: '£199', unit: 'one visit, inc VAT',
+    points: ['Save £21 on booking them apart', 'Ideal for Wirral landlords', 'Boiler, gas cooker and hob checked', 'Both records emailed the same day'] },
   { id: 'cylinder', tier: 'Unvented hot water', name: 'Unvented cylinder service', price: '£120', unit: 'fixed price, inc VAT',
     points: ['For mains pressure cylinders', 'Safety valves and expansion vessel checked', 'All our engineers are G3 qualified', 'Keeps the cylinder warranty valid'] },
 ];
 
 const faqs = [
-  { q: 'How much does a boiler service cost on the Wirral?', a: 'With us it is £95 including VAT, fixed price, with no call-out fee. A boiler service and gas safety certificate together are £195. An unvented cylinder service is £120.' },
+  { q: 'How much does a boiler service cost on the Wirral?', a: 'With us it is £120 including VAT, fixed price, with no call-out fee. A boiler service and gas safety certificate together are £199. An unvented cylinder service is £120.' },
   { q: 'Do you cover all Wirral CH postcodes?', a: 'Yes. We cover CH41 to CH64, from Birkenhead and Wallasey to Hoylake, West Kirby, Heswall and Neston. The price is the same in every postcode.' },
-  { q: 'Do you service system boilers in Heswall and West Kirby?', a: 'Yes. A system boiler service takes a little longer, because we also check the pump, zone valves and cylinder controls. The price is still £95. There is no extra charge for a system boiler.' },
+  { q: 'Do you service system boilers in Heswall and West Kirby?', a: 'Yes. A system boiler service takes a little longer, because we also check the pump, zone valves and cylinder controls. The price is still £120. There is no extra charge for a system boiler.' },
   { q: 'My Birkenhead terrace has an old boiler. Is it worth servicing?', a: 'Usually, yes. Most boilers can be serviced at any age. On older boilers we pay close attention to the heat exchanger and flue seals. If it keeps breaking down, we will tell you honestly if a new boiler makes more sense.' },
-  { q: 'Do you provide CP12 certificates for Wirral landlords?', a: 'Yes. A boiler service and CP12 in one visit cost £195. We can arrange access with your tenant or letting agent, and email both records the same day.' },
+  { q: 'Do you provide CP12 certificates for Wirral landlords?', a: 'Yes. A boiler service and CP12 in one visit cost £199. We can arrange access with your tenant or letting agent, and email both records the same day.' },
   { q: 'How long does a boiler service take?', a: 'Most combi services take 45 to 60 minutes. A system boiler takes about 60 to 75 minutes.' },
   { q: 'Does a service keep my boiler warranty valid?', a: 'Yes. Most boiler makers ask for a service every 12 months by a Gas Safe registered engineer. We fill in the Benchmark service record on every visit, which is what the maker will ask to see.' },
   { q: 'Do you service back boilers or gas fires?', a: 'No. We can take an old back boiler out and fit a new combi in its place. We do not service gas fires, but we can disconnect and cap one safely.' },
-  { q: 'Do you offer a boiler service plan?', a: 'No. We do not sell a monthly plan or boiler cover. You pay £95 when you have the service. We send a free reminder when the next one is due.' },
+  { q: 'Do you offer a boiler service plan?', a: 'No. We do not sell a monthly plan or boiler cover. You pay £120 when you have the service. We send a free reminder when the next one is due.' },
   { q: 'Are you Gas Safe registered?', a: 'Yes. Every boiler service is done by our Gas Safe registered engineers. You can check any engineer on the Gas Safe Register before they start.' },
 ];
 ---
 
 <ServiceGuide
   url={URL_}
-  title="Boiler Service Wirral | All CH Postcodes, Gas Safe From £95"
-  description="Annual boiler service on the Wirral for £95 inc VAT. Service + CP12 £195. Gas Safe registered engineers, CH41 to CH64, Benchmark record emailed the same day. No call-out fee. Call 0151 558 0334."
+  title="Boiler Service Wirral | All CH Postcodes, Gas Safe From £120"
+  description="Annual boiler service on the Wirral for £120 inc VAT. Service + CP12 £199. Gas Safe registered engineers, CH41 to CH64, Benchmark record emailed the same day. No call-out fee. Call 0151 558 0334."
   h1="Boiler Service Wirral"
   badge="Gas Safe registered · CH41 to CH64"
-  intro="An annual boiler service on the Wirral for £95 including VAT, with no call-out fee. Our Gas Safe registered engineers clean and test your boiler in about an hour. We cover every CH postcode, from Birkenhead terraces to Heswall system boilers."
-  stats={[['£95', 'Boiler service, inc VAT'], ['45–60 min', 'Most services']]}
+  intro="An annual boiler service on the Wirral for £120 including VAT, with no call-out fee. Our Gas Safe registered engineers clean and test your boiler in about an hour. We cover every CH postcode, from Birkenhead terraces to Heswall system boilers."
+  stats={[['£120', 'Boiler service, inc VAT'], ['45–60 min', 'Most services']]}
   ticks={['Gas Safe Registered', 'All CH Postcodes', 'No Call-Out Fee', '5.0 on Google']}
   pkTitle="Boiler service prices on the Wirral"
   pkLede="Fixed prices, including VAT. The same across the Wirral. No call-out fee."
@@ -44,7 +44,7 @@ const faqs = [
   pkNote="Prices are for gas boilers. System boilers cost the same as combis. If we find a fault, we tell you the repair price before we do anything."
   factsTitle="Wirral boiler servicing at a glance"
   facts={[
-    ['Price', '£95 for a boiler service. With a gas safety certificate: £195.'],
+    ['Price', '£120 for a boiler service. With a gas safety certificate: £199.'],
     ['Time', '45 to 60 minutes for a combi. 60 to 75 minutes for a system boiler.'],
     ['Paper', 'Benchmark service record emailed the same day.'],
     ['Warranty', 'Most makers ask for a service every 12 months.'],
@@ -70,7 +70,7 @@ const faqs = [
     { href: '/boiler-service-formby', label: 'Formby' },
   ]}
   related={[
-    { href: '/gas-safety-certificate-wirral', title: 'Gas safety certificate Wirral', text: 'Landlord CP12 £75, or £195 with a service' },
+    { href: '/gas-safety-certificate-wirral', title: 'Gas safety certificate Wirral', text: 'Landlord CP12 £100, or £199 with a service' },
     { href: '/boiler-installation-wirral', title: 'Boiler installation Wirral', text: 'Fixed-price combi packages from £2,195 fitted' },
     { href: '/power-flushing-wirral', title: 'Power flushing Wirral', text: 'Cold radiators and sludge, from £395' },
     { href: '/hot-water-cylinders-wirral', title: 'Hot water cylinders Wirral', text: 'Replacements and unvented servicing' },
@@ -78,7 +78,7 @@ const faqs = [
     { href: '/emergency-plumber-wirral', title: 'Emergency plumber Wirral', text: 'From £120 for the first hour, no call-out fee' },
   ]}
   finalTitle="Book your Wirral boiler service"
-  finalText="£95 including VAT. No call-out fee. Every CH postcode. Service record emailed the same day."
+  finalText="£120 including VAT. No call-out fee. Every CH postcode. Service record emailed the same day."
   serviceName="Boiler Service Wirral"
   serviceType="Annual gas boiler service"
   serviceDesc="Annual gas boiler servicing across the Wirral, CH41 to CH64, by Gas Safe registered engineers. Combi, system and regular boilers. Benchmark service record emailed the same day."
@@ -99,7 +99,7 @@ const faqs = [
         </div>
         <div class="sg-box">
           <h3>Heswall, Pensby and Neston (CH60, CH61, CH64)</h3>
-          <p>Bigger homes here often have a system boiler with a hot water cylinder, and more than one heating zone. We check the pump, zone valves, expansion vessel and cylinder thermostat too. It takes longer, but the price stays at £95.</p>
+          <p>Bigger homes here often have a system boiler with a hot water cylinder, and more than one heating zone. We check the pump, zone valves, expansion vessel and cylinder thermostat too. It takes longer, but the price stays at £120.</p>
         </div>
         <div class="sg-box">
           <h3>Prenton, Moreton, Bebington and Bromborough (CH43, CH46, CH62, CH63)</h3>
@@ -169,7 +169,7 @@ const faqs = [
   <section class="brx-sec" id="landlords">
     <div class="brx-wrap">
       <h2>Do you do boiler services for Wirral landlords?</h2>
-      <p class="brx-answer">Yes. Book the boiler service and gas safety certificate (CP12) together for £195. It saves you £20 and one visit for your tenant.</p>
+      <p class="brx-answer">Yes. Book the boiler service and gas safety certificate (CP12) together for £199. It saves you £20 and one visit for your tenant.</p>
       <p>The Wirral has one of the biggest rental markets in Merseyside. Most of it is in Birkenhead CH41, Wallasey CH44, Bromborough CH62 and Bebington CH63.</p>
       <p>By law, landlords must have every gas appliance they supply checked every 12 months. Tenants must get a copy of the certificate within 28 days. The rules come from the <a href="https://www.hse.gov.uk/gas/landlords/index.htm" target="_blank" rel="noopener">Gas Safety (Installation and Use) Regulations 1998</a>.</p>
       <div class="brx-table-wrap">
@@ -178,7 +178,7 @@ const faqs = [
           <tbody>
             <tr><td><strong>What it does</strong></td><td>Cleans, tests and sets up the boiler</td><td>Checks every gas appliance is safe</td></tr>
             <tr><td><strong>Needed by law?</strong></td><td>No, but most warranties need it</td><td>Yes, for landlords, every 12 months</td></tr>
-            <tr><td><strong>Price</strong></td><td>£95</td><td>£75</td></tr>
+            <tr><td><strong>Price</strong></td><td>£120</td><td>£100</td></tr>
           </tbody>
         </table>
       </div>
