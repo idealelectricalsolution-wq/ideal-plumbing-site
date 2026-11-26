@@ -25,3 +25,4 @@ pnpm-debug.log*
 .truth_lap_backup/
 .pricebook.md
 .gbp-posts.md
+.directories.md
