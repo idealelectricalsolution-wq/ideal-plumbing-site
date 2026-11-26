@@ -4,6 +4,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { REVIEWS } from '../data/reviews';
 import CallStrip from './CallStrip.astro';
+import { telify } from '../lib/tel';
 import '../styles/guide.css';
 
 export interface Pkg {
@@ -117,7 +118,7 @@ const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
       <div class="brx-wrap">
         <div class="brx-facts">
           <h2 class="brx-facts-h">{p.factsTitle}</h2>
-          <dl>{p.facts.map(([d, v]) => <div><dt>{d}</dt><dd>{v}</dd></div>)}</dl>
+          <dl>{p.facts.map(([d, v]) => <div><dt>{d}</dt><dd set:html={telify(v)} /></div>)}</dl>
         </div>
         <nav class="brx-toc" aria-label="On this page">
           <p class="brx-toc-h">On this page</p>
@@ -156,7 +157,7 @@ const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
     <section class={`brx-sec${p.areas && p.areas.length ? ' brx-tint' : ''}`} id="faq">
       <div class="brx-wrap">
         <h2>More questions</h2>
-        {p.faqs.map((f) => <details class="brx-faq"><summary>{f.q}</summary><p>{f.a}</p></details>)}
+        {p.faqs.map((f) => <details class="brx-faq"><summary>{f.q}</summary><p set:html={telify(f.a)} /></details>)}
       </div>
     </section>
 

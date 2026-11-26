@@ -77,6 +77,7 @@ const faqSchema = {
   mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 import CallStrip from '../components/CallStrip.astro';
+import { telify } from '../lib/tel';
 ---
 
 <BaseLayout
@@ -461,7 +462,7 @@ import CallStrip from '../components/CallStrip.astro';
         {faqs.map((f, i) => (
           <details class="hp-faq" open={i === 0}>
             <summary>{f.q}</summary>
-            <p>{f.a}</p>
+            <p set:html={telify(f.a)} />
           </details>
         ))}
       </div>

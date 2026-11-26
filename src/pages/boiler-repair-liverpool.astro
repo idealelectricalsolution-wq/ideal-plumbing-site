@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { telify } from '../lib/tel';
 
 const URL_ = 'https://liverpoolemergencyplumber.co.uk/boiler-repair-liverpool';
 const TEL = 'tel:01515580334';
@@ -380,8 +381,8 @@ const schemaCrumbs = {
           <p class="brx-label">Likely causes</p>
           <ul class="brx-list">{p.causes.map((c) => <li>{c}</li>)}</ul>
           <p class="brx-label">What you can try</p>
-          <p>{p.tryIt}</p>
-          <p class="brx-call"><strong>When to call us:</strong> {p.call}</p>
+          <p set:html={telify(p.tryIt)} />
+          <p class="brx-call"><strong>When to call us:</strong> <Fragment set:html={telify(p.call)} /></p>
           {guides[p.id] && <p><a href={guides[p.id][0]}>{guides[p.id][1]} →</a></p>}
         </details>
       ))}
@@ -421,8 +422,8 @@ const schemaCrumbs = {
                   <p class="brx-label">Common causes</p>
                   <ul class="brx-list">{c.causes.map((x) => <li>{x}</li>)}</ul>
                 </>)}
-                <p><strong>Try:</strong> {c.try}</p>
-                <p><strong>When to call us:</strong> {c.call}</p>
+                <p><strong>Try:</strong> <Fragment set:html={telify(c.try)} /></p>
+                <p><strong>When to call us:</strong> <Fragment set:html={telify(c.call)} /></p>
               </article>
             ))}
           </div>
@@ -586,7 +587,7 @@ const schemaCrumbs = {
     <div class="brx-wrap">
       <h2>More boiler repair questions</h2>
       {faqs.map((f) => (
-        <details class="brx-faq"><summary>{f.q}</summary><p>{f.a}</p></details>
+        <details class="brx-faq"><summary>{f.q}</summary><p set:html={telify(f.a)} /></details>
       ))}
     </div>
   </section>
