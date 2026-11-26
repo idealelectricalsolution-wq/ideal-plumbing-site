@@ -9,9 +9,13 @@ try { shallow = execSync('git rev-parse --is-shallow-repository').toString().tri
 if (shallow) { console.log('lastmod: shallow or no git, keeping', OUT); process.exit(0); }
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); return statSync(p).isDirectory() ? walk(p) : [p]; });
 const map = {};
+const today = new Date().toISOString().slice(0, 10);
+let dirty = '';
+try { dirty = execSync('git status --porcelain -- src/pages').toString(); } catch {}
 for (const f of walk('src/pages').filter((f) => f.endsWith('.astro'))) {
   let d = '';
   try { d = execSync(`git log -1 --format=%cs -- "${f}"`).toString().trim(); } catch {}
+  if (dirty.includes(f)) d = today; // edited but not committed yet
   if (!d) continue;
   const path = '/' + f.replace(/^src\/pages\//, '').replace(/\.astro$/, '').replace(/(^|\/)index$/, '');
   map[path.replace(/\/$/, '') || '/'] = d;
