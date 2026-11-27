@@ -228,3 +228,8 @@
   .sg-photo-pair .sg-photo img { border-radius: 10px; }
   .sg-photo-pair figcaption { font-size: 0.8rem; line-height: 1.35; }
 }
+
+.sg-steps-tight { gap: 0; background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.sg-steps-tight li { border: 0; border-radius: 0; border-top: 1px solid #f1f5f9; padding: 0.7rem 1rem 0.7rem 3.2rem; }
+.sg-steps-tight li:first-child { border-top: 0; }
+.sg-steps-tight li::before { top: 0.6rem; width: 1.6rem; height: 1.6rem; }
