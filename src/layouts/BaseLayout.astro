@@ -24,22 +24,24 @@ const sib = (() => {
 // Helpful guides: links service pages to matching blog guides, and guides to each other
 const GUIDES: Record<string, string> = {
   'bathroom-renovation-liverpool-property-value': 'Does a new bathroom add value to a Liverpool home?',
+  'boiler-making-noise-liverpool': 'Boiler making a noise? What it means',
   'carbon-monoxide-safety-liverpool': 'Carbon monoxide: signs, alarms and what to do',
   'central-heating-liverpool-victorian-terrace': 'Central heating in a Victorian terrace',
   'eco4-scheme-liverpool-free-boiler': 'Could you get a free boiler? ECO4 explained',
   'emergency-plumber-liverpool-what-to-do': 'Burst pipe? What to do in the first 5 minutes',
   'frozen-pipes-liverpool-winter-guide': 'Frozen pipes: prevention, thawing and emergencies',
   'hmo-gas-safety-liverpool-landlords': 'HMO landlord gas safety checklist',
+  'radiator-cold-at-top-or-bottom-liverpool': 'Radiator cold at the top or bottom?',
   'what-is-a-gas-safety-certificate-landlords-guide': 'Gas safety certificates: a landlord\'s guide',
 };
 const TOPICS: Record<string, { svc: [string, string]; guides: string[] }> = {
   'boiler-installation': { svc: ['/boiler-installation-liverpool', 'Boiler installation in Liverpool'], guides: ['eco4-scheme-liverpool-free-boiler', 'carbon-monoxide-safety-liverpool'] },
-  'boiler-repair': { svc: ['/boiler-repair-liverpool', 'Boiler repair in Liverpool'], guides: ['carbon-monoxide-safety-liverpool', 'frozen-pipes-liverpool-winter-guide'] },
-  'boiler-service': { svc: ['/boiler-service-liverpool', 'Boiler servicing in Liverpool'], guides: ['carbon-monoxide-safety-liverpool'] },
+  'boiler-repair': { svc: ['/boiler-repair-liverpool', 'Boiler repair in Liverpool'], guides: ['boiler-making-noise-liverpool', 'carbon-monoxide-safety-liverpool', 'frozen-pipes-liverpool-winter-guide'] },
+  'boiler-service': { svc: ['/boiler-service-liverpool', 'Boiler servicing in Liverpool'], guides: ['carbon-monoxide-safety-liverpool', 'boiler-making-noise-liverpool'] },
   'central-heating-installation': { svc: ['/central-heating-installation-liverpool', 'Central heating installation in Liverpool'], guides: ['central-heating-liverpool-victorian-terrace'] },
   'gas-safety-certificate': { svc: ['/gas-safety-certificate-liverpool', 'Gas safety certificates in Liverpool'], guides: ['what-is-a-gas-safety-certificate-landlords-guide', 'hmo-gas-safety-liverpool-landlords', 'carbon-monoxide-safety-liverpool'] },
-  'power-flushing': { svc: ['/power-flushing-liverpool', 'Power flushing in Liverpool'], guides: ['central-heating-liverpool-victorian-terrace'] },
-  'radiators': { svc: ['/radiators-liverpool', 'Radiators in Liverpool'], guides: ['central-heating-liverpool-victorian-terrace'] },
+  'power-flushing': { svc: ['/power-flushing-liverpool', 'Power flushing in Liverpool'], guides: ['radiator-cold-at-top-or-bottom-liverpool', 'boiler-making-noise-liverpool', 'central-heating-liverpool-victorian-terrace'] },
+  'radiators': { svc: ['/radiators-liverpool', 'Radiators in Liverpool'], guides: ['radiator-cold-at-top-or-bottom-liverpool', 'central-heating-liverpool-victorian-terrace'] },
   'hot-water-cylinders': { svc: ['/hot-water-cylinders-liverpool', 'Hot water cylinders in Liverpool'], guides: ['central-heating-liverpool-victorian-terrace'] },
   'bathroom-fitters': { svc: ['/bathroom-fitters-liverpool', 'Bathroom fitting in Liverpool'], guides: ['bathroom-renovation-liverpool-property-value', 'emergency-plumber-liverpool-what-to-do'] },
   'showers': { svc: ['/showers-liverpool', 'Shower installation in Liverpool'], guides: ['bathroom-renovation-liverpool-property-value', 'emergency-plumber-liverpool-what-to-do'] },
@@ -1068,6 +1070,7 @@ const guideBox = (() => {
       table.brx-table.stk-note td:nth-child(n+3)::before { content: attr(data-label) ": "; position: static; width: auto; display: inline; font-size: inherit; letter-spacing: 0; text-transform: none; color: var(--navy); font-weight: 700; }
       table.brx-table.stk-note td:first-child { padding-bottom: 0.1rem !important; }
       table.price-table.stk td { background: none !important; }
+      table.price-table.stk-price td.price-td { color: #c2410c !important; }
       table.price-table.stk { margin: 1.25rem 0; }
       table.brx-table.defl thead { display: none; }
       table.brx-table.defl, table.brx-table.defl tbody, table.brx-table.defl tr, table.brx-table.defl td { display: block; width: 100% !important; }

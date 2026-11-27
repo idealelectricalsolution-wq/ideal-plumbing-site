@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallStrip from '../../components/CallStrip.astro';
+---
+
+<BaseLayout
+  title="Boiler Making a Noise? Banging, Whistling and Gurgling Explained"
+  description="Boiler banging, whistling, gurgling or humming? What each noise usually means, what you can check yourself, and when to call a Gas Safe engineer in Liverpool. First hour £120, no call-out fee."
+  canonical="https://liverpoolemergencyplumber.co.uk/blog/boiler-making-noise-liverpool"
+>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Boiler Making a Noise? Banging, Whistling and Gurgling Explained",
+    "description": "Boiler banging, whistling, gurgling or humming? What each noise usually means, what you can check yourself, and when to call a Gas Safe engineer in Liverpool. First hour £120, no call-out fee.",
+    "author": { "@type": "Organization", "name": "Liverpool Emergency Plumber", "url": "https://liverpoolemergencyplumber.co.uk" },
+    "publisher": { "@type": "Organization", "name": "Liverpool Emergency Plumber", "logo": { "@type": "ImageObject", "url": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png" } },
+    "datePublished": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://liverpoolemergencyplumber.co.uk/blog/boiler-making-noise-liverpool" },
+    "keywords": "boiler making noise, boiler banging, boiler kettling, boiler whistling, boiler gurgling Liverpool"
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Learning Centre", "item": "https://liverpoolemergencyplumber.co.uk/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Boiler Making a Noise? Banging, Whistling and Gurgling Explained", "item": "https://liverpoolemergencyplumber.co.uk/blog/boiler-making-noise-liverpool" }
+    ]
+  }
+  </script>
+  <style>
+    .blog-post { max-width: 780px; margin: 0 auto; padding: 0 1.25rem; }
+    .blog-breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; padding-top: 1.5rem; }
+    .blog-breadcrumb a { color: var(--navy); text-decoration: none; font-weight: 600; }
+    .blog-breadcrumb a:hover { color: #c2410c; }
+    .blog-cat-tag { display: inline-block; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; }
+    .blog-meta strong { color: var(--navy); }
+    .blog-body h2 { color: var(--navy); font-size: 1.4rem; font-weight: 800; margin: 2rem 0 0.75rem; }
+    .blog-body h3 { color: var(--navy); font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+    .blog-body p { color: var(--text); line-height: 1.75; margin-bottom: 1rem; font-size: 0.97rem; }
+    .blog-body ul, .blog-body ol { margin: 0 0 1rem 1.25rem; }
+    .blog-body li { color: var(--text); line-height: 1.7; margin-bottom: 0.35rem; font-size: 0.97rem; }
+    .blog-body a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
+    .blog-body a:hover { color: #c2410c; border-color: var(--orange); }
+    .blog-callout { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-callout strong { color: var(--navy); display: block; margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .blog-callout p { color: var(--text); margin: 0; font-size: 0.9rem; }
+    .blog-stat { background: var(--navy); border-radius: var(--radius); padding: 1.5rem; text-align: center; margin: 1.5rem 0; }
+    .blog-stat .stat-num { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3rem; font-weight: 900; color: #fb923c; line-height: 1; }
+    .blog-stat .stat-label { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-top: 0.35rem; }
+    .blog-warning { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #b91c1c; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-warning strong { color: #b91c1c; display: block; margin-bottom: 0.35rem; }
+    .blog-warning p { color: #7f1d1d; margin: 0; font-size: 0.9rem; }
+    .blog-success { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #15803d; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-success strong { color: #15803d; display: block; margin-bottom: 0.35rem; }
+    .blog-success p { color: #166534; margin: 0; font-size: 0.9rem; }
+    .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    .price-table th { background: var(--navy); color: #fff; padding: 0.75rem 1rem; text-align: left; font-size: 0.82rem; letter-spacing: 0.03em; }
+    .price-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text); }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table .price-td { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .blog-related { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 2.5rem; }
+    .blog-related h3 { color: var(--navy); font-size: 1rem; margin-bottom: 1rem; }
+    .blog-related a { display: block; color: var(--navy); text-decoration: none; font-size: 0.88rem; font-weight: 700; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .blog-related a:last-child { border-bottom: none; }
+    .blog-related a:hover { color: #c2410c; }
+    .blog-related a::before { content: "→ "; color: #c2410c; }
+    .blog-author { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .blog-author-avatar { background: var(--navy); color: #fff; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; flex-shrink: 0; }
+    .blog-author strong { display: block; color: var(--navy); font-size: 0.88rem; }
+    .blog-author span { color: var(--muted); font-size: 0.78rem; }
+  </style>
+  <section style="background:var(--white);border-bottom:3px solid var(--orange);padding:2rem 0 0;">
+    <div class="blog-post">
+      <div class="blog-breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog">Learning Centre</a> &rsaquo; Boilers
+      </div>
+      <span class="blog-cat-tag" style="background:#c2410c;">BOILERS</span>
+      <h1 class="blog-title">Boiler Making a Noise? Banging, Whistling and Gurgling Explained</h1>
+      <p style="font-size:1.05rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem;">A boiler makes a soft hum when it runs. Anything louder is a sign that something needs attention. Here is what each noise usually means, and what to do about it.</p>
+      <div class="blog-meta">
+        <span><strong>By</strong> Liverpool Emergency Plumber</span>
+        <span><strong>Gas Safe Registered Plumber</strong></span>
+        <span>Published 27 November 2026</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--white);padding:2rem 0 3rem;">
+    <div class="blog-post">
+      <div class="blog-body">
+        <div class="blog-warning">
+          <strong>Smell gas, or a carbon monoxide alarm going off?</strong>
+          <p>That is not a noise problem. Turn the boiler off if you can, open the windows and get everyone outside. Call the National Gas Emergency line on <a href="tel:0800111999">0800 111 999</a>. Then call us once it is safe.</p>
+        </div>
+
+        <h2>The Short Answer</h2>
+        <p>Most boiler noises come from one of four things: air in the system, sludge or limescale, low or high water pressure, or a part wearing out. The noise itself is a good clue to which one it is.</p>
+
+        <div class="blog-stat">
+          <div class="stat-num">£120</div>
+          <div class="stat-label">Our first hour for a boiler repair, weekdays 9am to 4pm, including finding the fault. No call-out fee.</div>
+        </div>
+        <CallStrip inline title="Boiler making a strange noise?" text="Tell us what it sounds like. Our Gas Safe engineers come out 24/7." />
+
+        <h2>Banging or Rumbling, Like a Kettle</h2>
+        <p>This is often called kettling. Sludge or limescale builds up on the heat exchanger inside the boiler. Water gets trapped and overheats in small pockets, then boils with a bang or a rumble.</p>
+        <p>Kettling is more common in older systems, and where the system has never been cleaned. Signs that go with it:</p>
+        <ul>
+          <li>Radiators cold at the bottom</li>
+          <li>Dark or black water when you bleed a radiator</li>
+          <li>The heating takes longer to warm up than it used to</li>
+        </ul>
+        <p>A kettling boiler works harder and wears out sooner. The usual fix is to clean the system with a <a href="/power-flushing-liverpool">power flush</a> and fit a magnetic filter. If the heat exchanger is badly scaled, it may need more work. We tell you the price before we start.</p>
+
+        <h2>Whistling</h2>
+        <p>A whistle is usually a milder version of kettling, from scale or sludge restricting flow. It can also come from low pressure, or air trapped in the system.</p>
+        <p>Check the pressure gauge first. It should read 1 to 1.5 bar when the heating is off. If it is lower, <a href="/boiler-losing-pressure-liverpool">top up the pressure</a> and listen again.</p>
+
+        <h2>Gurgling</h2>
+        <p>Gurgling usually means air in the system, or low pressure. Bleed the radiators and check the pressure. See our guide to <a href="/blog/radiator-cold-at-top-or-bottom-liverpool">bleeding radiators</a>.</p>
+        <div class="blog-callout">
+          <strong>Gurgling in freezing weather, then the boiler stops?</strong>
+          <p>That is very likely a frozen condensate pipe. You can often fix it yourself in 15 minutes with warm water. See <a href="/frozen-condensate-pipe-liverpool">how to thaw a frozen condensate pipe</a>.</p>
+        </div>
+
+        <h2>Humming or Vibrating</h2>
+        <p>A loud hum often comes from the pump. It may be set too high, or starting to wear out. It can also be a loose pipe or a boiler that is not fixed firmly to the wall.</p>
+        <p>Pumps and fans are common parts to replace on an older boiler. An engineer can tell which one it is in a short visit.</p>
+
+        <h2>Clicking, and the Boiler Will Not Light</h2>
+        <p>A few clicks when the boiler starts is normal. That is the ignition making a spark. Clicking over and over, with no flame and then a fault code, means the boiler is trying to light and failing.</p>
+        <p>Check the gas is on by trying your gas hob. If it lights, reset the boiler once. If it locks out again, call us. Look up the code on our <a href="/boiler-repair-liverpool#error-codes">boiler error codes</a> list.</p>
+
+        <h2>Dripping, Hissing or Water Coming From a Pipe Outside</h2>
+        <p>If water drips from the copper pipe outside near the boiler, the pressure may be too high. The boiler is letting water out through its safety valve. This often happens when the pressure gauge goes above 2.5 to 3 bar.</p>
+        <p>Check the filling loop under the boiler is fully closed. If the pressure keeps climbing, the expansion vessel or filling valve may need looking at. This needs a Gas Safe engineer.</p>
+
+        <h2>What You Can Safely Check Yourself</h2>
+        <ol>
+          <li><strong>The pressure gauge.</strong> 1 to 1.5 bar when cold. Top up if it is low.</li>
+          <li><strong>Bleed the radiators</strong> if you hear gurgling or they are cold at the top.</li>
+          <li><strong>The condensate pipe</strong> outside, if it is freezing.</li>
+          <li><strong>Reset the boiler once</strong> if it shows a fault code.</li>
+        </ol>
+        <p>Do not take the boiler casing off. By law, only a Gas Safe registered engineer can work on the gas parts of a boiler.</p>
+
+        <h2>What Does It Cost?</h2>
+        <table class="price-table brx-table stk stk-price">
+          <thead><tr><th>Job</th><th>Price, inc VAT</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Boiler repair, weekdays 9am to 4pm</td><td class="price-td">£120 first hour</td><td>Includes finding the fault. Parts priced first</td></tr>
+            <tr><td>Boiler repair, evenings, nights and weekends</td><td class="price-td">£150 first hour</td><td>£180 on bank holidays</td></tr>
+            <tr><td>Power flush, up to 6 radiators</td><td class="price-td">£395</td><td>For kettling and sludge</td></tr>
+            <tr><td>Power flush, 7 to 10 radiators</td><td class="price-td">£525</td><td>Most 3-bed homes</td></tr>
+          </tbody>
+        </table>
+        <p>There is never a call-out fee. See our <a href="/boiler-repair-liverpool">boiler repair</a> page for more.</p>
+        <CallStrip inline title="Want us to take a look?" text="Call for advice or a price. Gas Safe registered, no call-out fee." />
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="pf-faq">
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Is a noisy boiler dangerous?</span></summary><div class="pf-faq-body"><p>Usually not on its own. Most noises come from air, sludge or pressure. But a noisy boiler is working harder than it should, and the fault can get worse. If you smell gas, see soot or a yellow flame, or your CO alarm goes off, call 0800 111 999 straight away.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">What is boiler kettling?</span></summary><div class="pf-faq-body"><p>A banging or rumbling noise like a kettle boiling. Sludge or limescale on the heat exchanger traps water, which overheats and boils. Cleaning the system with a power flush, then fitting a magnetic filter, is the usual fix.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Why is my boiler gurgling?</span></summary><div class="pf-faq-body"><p>Usually air in the system or low pressure. Bleed the radiators and top up the pressure to 1 to 1.5 bar. In freezing weather, a gurgle followed by a fault code is often a frozen condensate pipe.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Can a boiler service stop the noise?</span></summary><div class="pf-faq-body"><p>A service cleans and checks the boiler, and can catch a part that is wearing out. But it does not clean sludge out of the radiators and pipes. If sludge is the cause, the system needs a power flush.</p></div></details>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <div class="blog-author-avatar">LEP</div>
+        <div>
+          <strong>Liverpool Emergency Plumber</strong>
+          <span>A team of Gas Safe registered engineers, led by James</span>
+        </div>
+      </div>
+
+      <div class="blog-related">
+        <h3>Related Guides and Services</h3>
+        <a href="/boiler-repair-liverpool">Boiler Repair Liverpool, First Hour £120</a>
+        <a href="/power-flushing-liverpool">Power Flushing Liverpool from £395</a>
+        <a href="/boiler-service-liverpool">Boiler Service Liverpool, £120</a>
+        <a href="/boiler-losing-pressure-liverpool">Boiler Losing Pressure? How to Top It Up</a>
+        <a href="/frozen-condensate-pipe-liverpool">Frozen Condensate Pipe: The 15 Minute Fix</a>
+        <a href="/blog/radiator-cold-at-top-or-bottom-liverpool">Radiator Cold at the Top or Bottom?</a>
+        <a href="/blog/carbon-monoxide-safety-liverpool">Carbon Monoxide: Signs, Alarms and What to Do</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--navy);padding:2.5rem 0;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#ffffff;font-size:1.5rem;margin-bottom:0.5rem;">Need a Gas Safe Engineer in Liverpool?</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.5rem;">Gas Safe registered. A trusted team of engineers, led by James. Fixed prices. All Liverpool postcodes covered.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:01515580334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Not urgent? Book a visit</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
