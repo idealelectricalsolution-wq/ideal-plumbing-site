@@ -219,3 +219,12 @@
   .tr-no li { position: relative; padding-left: 1.6rem; margin-bottom: 0.5rem; line-height: 1.55; }
   .tr-no li::before { content: "\2715"; position: absolute; left: 0; top: 0; color: #b91c1c; font-weight: 900; }
   .brx-cta + h3, .brx-cta + h2 { margin-top: 1.75rem !important; }
+
+.sg-photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; grid-column: 1 / -1; margin-bottom: 1.25rem; }
+.sg-photo-pair .sg-photo { margin: 0; }
+@media (max-width: 700px) {
+  .sg-photo-pair { gap: 0.75rem; margin-bottom: 1.25rem; }
+  .sg-photo-pair .sg-photo { margin: 0; }
+  .sg-photo-pair .sg-photo img { border-radius: 10px; }
+  .sg-photo-pair figcaption { font-size: 0.8rem; line-height: 1.35; }
+}
