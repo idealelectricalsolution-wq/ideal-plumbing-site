@@ -89,7 +89,7 @@ const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
         <div class={`sg-pk-grid ${nCls}`}>
           {pk.map((x, i) => (
             <article class={`sg-pk${x.popular ? ' sg-pk-pop' : ''}`} id={x.id}>
-              {x.popular ? <p class="sg-pk-badge">Most popular</p> : <p class="sg-pk-tier">{x.tier}</p>}
+              {x.popular ? <p class="sg-pk-badge">Most homes</p> : <p class="sg-pk-tier">{x.tier}</p>}
               {x.img && (
                 <picture>
                   <source type="image/webp" srcset={`/images/${x.img}-400.webp 400w, /images/${x.img}-800.webp 800w`} sizes="(max-width: 640px) 60vw, 220px" />
