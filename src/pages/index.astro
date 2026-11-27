@@ -53,7 +53,7 @@ const jobs = [
   { img: 'bathroom-bath-shower-fitted', alt: 'New bath and shower fitted in a Liverpool bathroom', cap: 'Bath and shower fitted' },
 ];
 
-const areas = ['aigburth','aintree','allerton','anfield','bootle','childwall','city-centre','crosby','everton','fazakerley','formby','garston','huyton','kirkby','maghull','mossley-hill','norris-green','old-swan','southport','st-helens','toxteth','walton','wavertree','west-derby','wirral','woolton'];
+const areas = ['aigburth','aintree','allerton','anfield','bootle','childwall','city-centre','everton','fazakerley','garston','huyton','maghull','mossley-hill','norris-green','old-swan','toxteth','walton','wavertree','west-derby','woolton'];
 const areaName = (a) => ({ 'city-centre': 'City Centre', 'st-helens': 'St Helens', 'mossley-hill': 'Mossley Hill', 'norris-green': 'Norris Green', 'old-swan': 'Old Swan', 'west-derby': 'West Derby' }[a] ?? a[0].toUpperCase() + a.slice(1));
 
 const faqs = [
@@ -366,9 +366,9 @@ import { telify } from '../lib/tel';
             </ul>
             <div class="hp-feature-actions">
               <a href={TEL} class="hp-btn hp-btn-orange">Call {PHONE}</a>
-              <a href="/boiler-repair-liverpool" class="hp-more">Boiler repair Liverpool →</a>
+              
             </div>
-            <p class="hp-feature-links">Also: <a href="/no-heating-no-hot-water-liverpool">no heating or hot water</a> · <a href="/boiler-losing-pressure-liverpool">boiler losing pressure</a> · <a href="/frozen-condensate-pipe-liverpool">frozen condensate pipe</a> · <a href="/boiler-repair-liverpool#error-codes">boiler error codes</a> · <a href="/boiler-service-liverpool">boiler service £120</a> · <a href="/boiler-installation-liverpool">new boilers</a> · <a href="/gas-safety-certificate-liverpool">gas safety certificates</a></p>
+            <div class="hp-links"><a class="hp-linkcard" href="/boiler-repair-liverpool"><span>Boiler repair Liverpool</span><span class="hp-arr" aria-hidden="true">→</span></a></div><p class="hp-chips-h">Also see</p><ul class="hp-chips"><li><a href="/no-heating-no-hot-water-liverpool">No heating or hot water</a></li><li><a href="/boiler-losing-pressure-liverpool">Boiler losing pressure</a></li><li><a href="/frozen-condensate-pipe-liverpool">Frozen condensate pipe</a></li><li><a href="/boiler-repair-liverpool#error-codes">Boiler error codes</a></li></ul>
           </div>
         </article>
         <article class="hp-feature">
@@ -388,9 +388,9 @@ import { telify } from '../lib/tel';
             </ul>
             <div class="hp-feature-actions">
               <a href={TEL} class="hp-btn hp-btn-orange">Call {PHONE}</a>
-              <a href="/leak-detection-liverpool" class="hp-more">Leak detection Liverpool →</a>
+              
             </div>
-            <p class="hp-feature-links">Also: <a href="/burst-pipe-repair-liverpool">burst pipes</a> · <a href="/shower-repair-liverpool">shower repair</a> · <a href="/radiators-liverpool">radiators</a> · <a href="/hot-water-cylinders-liverpool">hot water cylinders</a> · <a href="/bathroom-fitters-liverpool">bathrooms</a></p>
+            <div class="hp-links"><a class="hp-linkcard" href="/leak-detection-liverpool"><span>Leak detection Liverpool</span><span class="hp-arr" aria-hidden="true">→</span></a></div><p class="hp-chips-h">Also see</p><ul class="hp-chips"><li><a href="/burst-pipe-repair-liverpool">Burst pipes</a></li><li><a href="/shower-repair-liverpool">Shower repair</a></li><li><a href="/toilet-repair-liverpool">Toilet repair</a></li><li><a href="/radiators-liverpool">Radiators</a></li></ul>
           </div>
         </article>
       </div>
@@ -408,11 +408,19 @@ import { telify } from '../lib/tel';
         ))}
       </div>
       <div class="hp-links"><a class="hp-linkcard" href="/small-plumbing-jobs-liverpool"><span>See all small job prices</span><span class="hp-arr" aria-hidden="true">→</span></a><a class="hp-linkcard" href="/plumber-prices-liverpool"><span>Full plumber price list</span><span class="hp-arr" aria-hidden="true">→</span></a></div>
-      <p class="hp-small-text">Looking for a local plumber in Liverpool for something bigger? We also do <a href="/boiler-service-liverpool">boiler servicing for £120</a>, <a href="/boiler-installation-liverpool">new boilers from £2,195</a>, <a href="/gas-safety-certificate-liverpool">gas safety certificates from £100</a>, <a href="/showers-liverpool">showers</a>, <a href="/radiators-liverpool">radiators</a> and <a href="/bathroom-fitters-liverpool">full bathrooms</a>. One team, led by James, for every plumbing and heating job in your home.</p>
     </div>
   </section>
 
-  <section class="hp-sec hp-sec-tint" id="jobs">
+
+  <section class="hp-sec hp-sec-tint" id="planned">
+    <div class="hp-wrap">
+      <h2>New boilers, central heating and gas safety certificates</h2>
+      <p class="hp-sub">Not an emergency? The same Gas Safe registered team fits new boilers and full central heating systems, and does landlord certificates. Free surveys and fixed written prices.</p>
+      <div class="hp-big"><a class="hp-big-card" href="/gas-safety-certificate-liverpool"><span class="hp-kicker">Landlords</span><span class="hp-big-top"><strong>Gas safety certificate (CP12)</strong><span class="hp-big-price">From £100</span></span><span class="hp-big-text">Boiler, cooker and hob checked. Certificate emailed the same day. With a boiler service £199.</span><span class="hp-big-go">See prices <span aria-hidden="true">→</span></span></a><a class="hp-big-card" href="/boiler-installation-liverpool"><span class="hp-kicker">New boilers</span><span class="hp-big-top"><strong>New boiler fitted</strong><span class="hp-big-price">From £2,195</span></span><span class="hp-big-text">Five fixed-price combi packages, fully fitted, with up to a 12-year warranty. Free survey.</span><span class="hp-big-go">See prices <span aria-hidden="true">→</span></span></a><a class="hp-big-card" href="/central-heating-installation-liverpool"><span class="hp-kicker">Full systems</span><span class="hp-big-top"><strong>Central heating installation</strong><span class="hp-big-price">From £4,495</span></span><span class="hp-big-text">A complete new system for a 2-bed home: boiler, radiators, pipework and controls, in 3 to 5 days.</span><span class="hp-big-go">See prices <span aria-hidden="true">→</span></span></a><a class="hp-big-card" href="/boiler-service-liverpool"><span class="hp-kicker">Every year</span><span class="hp-big-top"><strong>Boiler service</strong><span class="hp-big-price">£120</span></span><span class="hp-big-text">Annual service by our Gas Safe registered engineers. Record emailed the same day.</span><span class="hp-big-go">See prices <span aria-hidden="true">→</span></span></a></div>
+      <p class="hp-chips-h">Also see</p><ul class="hp-chips"><li><a href="/bathroom-fitters-liverpool">Bathrooms from £4,995</a></li><li><a href="/showers-liverpool">Showers from £375</a></li><li><a href="/radiators-liverpool">Radiators from £245</a></li><li><a href="/hot-water-cylinders-liverpool">Hot water cylinders from £750</a></li><li><a href="/power-flushing-liverpool">Power flushing from £395</a></li></ul>
+    </div>
+  </section>
+  <section class="hp-sec" id="jobs">
     <div class="hp-wrap">
       <h2>Recent jobs by our team</h2>
       <p class="hp-sub">Real photos from Liverpool homes. No stock images.</p>
@@ -473,7 +481,9 @@ import { telify } from '../lib/tel';
   <section class="hp-sec hp-sec-tint" id="areas">
     <div class="hp-wrap">
       <h2>Plumber near me in Liverpool</h2>
-      <p class="hp-sub">We cover all Liverpool postcodes from L1 to L40, plus the rest of Merseyside. Our base is in Kirkby, so we are also your <a href="/emergency-plumber-kirkby">local plumber in Kirkby</a>. Further out, see our <a href="/emergency-plumber-wirral">emergency plumber Wirral</a>, <a href="/emergency-plumber-st-helens">emergency plumber St Helens</a>, <a href="/emergency-plumber-southport">plumbers in Southport</a>, <a href="/emergency-plumber-crosby">plumbers in Crosby</a> and <a href="/emergency-plumber-formby">plumbers in Formby</a> pages. Or pick your area:</p>
+      <p class="hp-sub">We cover all Liverpool postcodes from L1 to L40, plus the rest of Merseyside. Our base is in Kirkby.</p>
+      <div class="hp-area-feature"><a class="hp-linkcard" href="/emergency-plumber-kirkby"><span>Local plumber in Kirkby, our base</span><span class="hp-arr" aria-hidden="true">→</span></a><a class="hp-linkcard" href="/emergency-plumber-wirral"><span>Emergency plumber Wirral</span><span class="hp-arr" aria-hidden="true">→</span></a><a class="hp-linkcard" href="/emergency-plumber-st-helens"><span>Emergency plumber St Helens</span><span class="hp-arr" aria-hidden="true">→</span></a><a class="hp-linkcard" href="/emergency-plumber-southport"><span>Plumbers in Southport</span><span class="hp-arr" aria-hidden="true">→</span></a><a class="hp-linkcard" href="/emergency-plumber-crosby"><span>Plumbers in Crosby</span><span class="hp-arr" aria-hidden="true">→</span></a><a class="hp-linkcard" href="/emergency-plumber-formby"><span>Plumbers in Formby</span><span class="hp-arr" aria-hidden="true">→</span></a></div>
+      <p class="hp-chips-h">Or pick your area</p>
       <ul class="hp-areas">
         {areas.map((a) => <li><a href={`/emergency-plumber-${a}`}>{areaName(a)}</a></li>)}
       </ul>
@@ -528,6 +538,23 @@ import { telify } from '../lib/tel';
   .hp-promises { list-style: none; padding: 0; margin: 1.5rem 0 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; max-width: 30rem; }
   .hp-promises li { background: #fff; border: 1px solid #fed7aa; border-radius: 10px; padding: 0.6rem 0.8rem; font-size: 0.95rem; color: #334155; text-align: center; }
   .hp-promises strong { display: block; color: var(--navy); font-size: 1.1rem; }
+
+  .hp-chips-h { margin: 1.25rem 0 0.5rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #64748b; }
+  .hp-chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .hp-chips a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.5rem 0.95rem; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 999px; color: var(--navy); font-weight: 700; font-size: 0.95rem; text-decoration: none; }
+  .hp-chips a:hover { border-color: #c2410c; color: #c2410c; }
+  .hp-big { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .hp-big-card { display: flex; flex-direction: column; gap: 0.45rem; background: #fff; border: 2px solid #fed7aa; border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: #334155; }
+  .hp-big-card:hover { border-color: #c2410c; }
+  .hp-big-card .hp-kicker { margin: 0; }
+  .hp-big-top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+  .hp-big-top strong { color: var(--navy); font-size: 1.15rem; line-height: 1.25; }
+  .hp-big-price { flex: none; font: 900 1.5rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #c2410c; white-space: nowrap; }
+  .hp-big-text { font-size: 0.98rem; line-height: 1.5; }
+  .hp-big-go { margin-top: auto; padding-top: 0.3rem; font-weight: 800; color: #c2410c; }
+  .hp-area-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.5rem; }
+  .hp-area-feature .hp-linkcard { font-size: 1rem; }
+  @media (max-width: 700px) { .hp-big, .hp-area-feature { grid-template-columns: 1fr; } }
   .hp-stars { display: block; max-width: 30rem; text-align: center; color: #1e293b; text-decoration: none; font-size: 1rem; }
   .hp-links { display: grid; gap: 0.6rem; margin: 1.25rem 0 0; max-width: 34rem; }
   .hp-links-center { margin: 1.5rem auto 0; }
@@ -670,8 +697,6 @@ import { telify } from '../lib/tel';
   .hp-kicker { font-size: 0.8rem !important; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #c2410c !important; margin: 0 0 0.3rem !important; }
   .hp-ticks-one { grid-template-columns: 1fr; margin: 0 0 1.25rem; }
   .hp-feature-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: auto; }
-  .hp-feature-links { font-size: 0.95rem !important; color: #475569 !important; margin: 1rem 0 0 !important; }
-  .hp-feature-links a { color: var(--navy-mid); font-weight: 700; }
   .hp-h2-spacer { height: 3.4rem; }
   .hp-tiles { grid-template-columns: repeat(4, 1fr); }
   .hp-small { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
@@ -681,8 +706,6 @@ import { telify } from '../lib/tel';
   .hp-small-more { margin: 1rem 0 0; font-weight: 800; }
   .hp-small-more a { color: #c2410c; }
   .hp-sub a { color: var(--navy-mid); font-weight: 700; }
-  .hp-small-text { margin: 1rem 0 0; font-size: 1.02rem; line-height: 1.6; color: #1e293b; }
-  .hp-small-text a { color: var(--navy-mid); font-weight: 800; }
   @media (max-width: 900px) {
     .hp-two-prices, .hp-twin, .hp-wait { grid-template-columns: 1fr; }
     .hp-tiles { grid-template-columns: repeat(2, 1fr); }
