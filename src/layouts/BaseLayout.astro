@@ -1062,6 +1062,10 @@ const guideBox = (() => {
       table.brx-table.cmp3:not(.stk) th:first-child, table.brx-table.cmp3:not(.stk) td:first-child { width: 28% !important; padding-left: 0.75rem !important; }
       table.brx-table.cmp3:not(.stk) th:not(:first-child), table.brx-table.cmp3:not(.stk) td:not(:first-child) { width: 36% !important; }
       table.brx-table.cmp3 td strong { font-size: 0.9rem !important; }
+      table.brx-table.stk-note td:not(:first-child) { padding: 0.15rem 0 0 !important; border: 0 !important; min-height: 0; color: #334155; font-size: 0.95rem; line-height: 1.5; }
+      table.brx-table.stk-note td:nth-child(2)::before { content: none; }
+      table.brx-table.stk-note td:nth-child(n+3)::before { content: attr(data-label) ": "; position: static; width: auto; display: inline; font-size: inherit; letter-spacing: 0; text-transform: none; color: var(--navy); font-weight: 700; }
+      table.brx-table.stk-note td:first-child { padding-bottom: 0.1rem !important; }
       table.brx-table.defl thead { display: none; }
       table.brx-table.defl, table.brx-table.defl tbody, table.brx-table.defl tr, table.brx-table.defl td { display: block; width: 100% !important; }
       table.brx-table.defl tr { padding: 0.8rem 1rem; border-bottom: 1px solid #e2e8f0; }
