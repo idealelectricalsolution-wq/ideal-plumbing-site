@@ -352,7 +352,7 @@ const schemaCrumbs = {
       <h2>Do you need a new boiler, or just a repair?</h2>
       <p class="brx-answer">Not every broken boiler needs replacing. These are the signs that a new one is the better buy:</p>
       <div class="brx-parts">
-        {signs.map(([h, t]) => <div class="brx-part"><h3>{h}</h3><p>{t}</p></div>)}
+        {signs.map(([h, t]) => <details class="brx-part m-acc" open><summary><h3>{h}</h3></summary><p>{t}</p></details>)}
       </div>
       <div class="brx-note">
         <p><strong>Not sure?</strong> Most boilers last 10 to 15 years. The age is on the data label, often inside the front cover, or on the Benchmark checklist. A common rule of thumb: if one repair would cost more than half the price of a new boiler, replace it. If the boiler is under 10 years old and one part has failed, a repair is usually better value. Book a <a href="/boiler-repair-liverpool">boiler repair</a> visit (from £120 for the first hour, including diagnosis) and we will tell you honestly which makes sense.</p>
