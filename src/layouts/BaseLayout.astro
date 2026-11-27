@@ -1053,6 +1053,11 @@ const guideBox = (() => {
       table.brx-table.stk td:not(:first-child) { display: block; position: relative; padding: 0.4rem 0 0.4rem calc(40% + 0.75rem) !important; border-top: 1px solid #f1f5f9 !important; min-height: 1.6rem; }
       table.brx-table.stk td:not(:first-child)::before { position: absolute; left: 0; top: 0.55rem; width: 40%; content: attr(data-label); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #475569; }
       table.brx-table.stk td strong { font-size: 1.05rem; }
+      table.brx-table.stk-price tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1rem; align-items: baseline; }
+      table.brx-table.stk-price td:nth-child(2) { padding: 0 !important; border: 0 !important; text-align: right; white-space: normal; max-width: 9.5rem; font-size: 1.05rem; line-height: 1.35; min-height: 0; }
+      table.brx-table.stk-price td:nth-child(3) { grid-column: 1 / -1; padding: 0.2rem 0 0 !important; border: 0 !important; color: #475569; font-size: 0.93rem; line-height: 1.5; min-height: 0; }
+      table.brx-table.stk-price td:nth-child(2)::before, table.brx-table.stk-price td:nth-child(3)::before { content: none; }
+      table.brx-table.stk-price td:first-child { padding-bottom: 0.1rem !important; }
       table.brx-table.stk td[data-label^="Price"], table.brx-table.stk td[data-label^="First hour"] { font-weight: 800; color: #c2410c; }
     }
 
