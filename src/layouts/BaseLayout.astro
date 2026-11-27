@@ -1058,6 +1058,11 @@ const guideBox = (() => {
       table.brx-table.stk-price td:nth-child(3) { grid-column: 1 / -1; padding: 0.2rem 0 0 !important; border: 0 !important; color: #475569; font-size: 0.93rem; line-height: 1.5; min-height: 0; }
       table.brx-table.stk-price td:nth-child(2)::before, table.brx-table.stk-price td:nth-child(3)::before { content: none; }
       table.brx-table.stk-price td:first-child { padding-bottom: 0.1rem !important; }
+      table.brx-table.cmp3 th, table.brx-table.cmp3 td { padding: 0.6rem 0.5rem !important; font-size: 0.9rem; line-height: 1.4; vertical-align: top; }
+      table.brx-table.cmp3:not(.stk) th:first-child, table.brx-table.cmp3:not(.stk) td:first-child { width: 28% !important; padding-left: 0.75rem !important; }
+      table.brx-table.cmp3:not(.stk) th:not(:first-child), table.brx-table.cmp3:not(.stk) td:not(:first-child) { width: 36% !important; }
+      table.brx-table.cmp3 td strong { font-size: 0.9rem !important; }
+      table.brx-table.stk-price td:nth-child(2) { color: #c2410c; font-weight: 800; }
       table.brx-table.stk td[data-label^="Price"], table.brx-table.stk td[data-label^="First hour"] { font-weight: 800; color: #c2410c; }
     }
 
