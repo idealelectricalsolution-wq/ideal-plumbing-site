@@ -138,6 +138,7 @@ const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
           <div class="brx-reviews">
             {revs.map((r) => <figure class="brx-review"><blockquote>“{r.t}”</blockquote><figcaption>{r.n} · Google review</figcaption></figure>)}
           </div>
+          <a class="sg-linkcard" href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener"><span>Read all our Google reviews<small>5.0 from 53 reviews</small></span><span class="lc-arr" aria-hidden="true">→</span></a>
         </div>
       </section>
     )}
@@ -165,7 +166,7 @@ const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
       <section class="brx-sec" id="related">
         <div class="brx-wrap">
           <h2>Related services</h2>
-          <div class="sg-related">{p.related.map((r) => <a href={r.href}><strong>{r.title}</strong><span>{r.text}</span></a>)}</div>
+          <div class="sg-related">{p.related.map((r) => <a href={r.href}><span><strong>{r.title}</strong><span>{r.text}</span></span><span class="lc-arr" aria-hidden="true">→</span></a>)}</div>
         </div>
       </section>
     )}
