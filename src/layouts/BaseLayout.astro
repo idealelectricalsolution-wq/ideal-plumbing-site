@@ -1062,6 +1062,15 @@ const guideBox = (() => {
       table.brx-table.cmp3:not(.stk) th:first-child, table.brx-table.cmp3:not(.stk) td:first-child { width: 28% !important; padding-left: 0.75rem !important; }
       table.brx-table.cmp3:not(.stk) th:not(:first-child), table.brx-table.cmp3:not(.stk) td:not(:first-child) { width: 36% !important; }
       table.brx-table.cmp3 td strong { font-size: 0.9rem !important; }
+      table.brx-table.defl thead { display: none; }
+      table.brx-table.defl, table.brx-table.defl tbody, table.brx-table.defl tr, table.brx-table.defl td { display: block; width: 100% !important; }
+      table.brx-table.defl tr { padding: 0.8rem 1rem; border-bottom: 1px solid #e2e8f0; }
+      table.brx-table.defl tr:last-child { border-bottom: 0; }
+      table.brx-table.defl td { padding: 0 !important; border: 0 !important; background: none !important; }
+      table.brx-table.defl:not(.stk) td:first-child, table.brx-table.defl:not(.stk) td:last-child { width: 100% !important; }
+      table.brx-table.defl td:first-child { padding-bottom: 0.25rem !important; font-weight: 800; color: var(--navy); font-size: 1rem; line-height: 1.4; }
+      table.brx-table.defl td:first-child strong { font-size: 1rem !important; }
+      table.brx-table.defl td:last-child { color: #334155; font-size: 0.95rem; line-height: 1.55; }
       table.brx-table.stk-price td:nth-child(2) { color: #c2410c; font-weight: 800; }
       table.brx-table.stk-price td:nth-child(4) { grid-column: 1 / -1; padding: 0.15rem 0 0 !important; border: 0 !important; color: #475569; font-size: 0.93rem; line-height: 1.5; min-height: 0; }
       table.brx-table.stk-price td:nth-child(4)::before { content: attr(data-label) ": "; position: static; width: auto; display: inline; font-size: inherit; letter-spacing: 0; text-transform: none; color: var(--navy); font-weight: 700; }
