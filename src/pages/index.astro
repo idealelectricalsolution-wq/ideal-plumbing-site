@@ -427,23 +427,17 @@ import { telify } from '../lib/tel';
 
   <!-- WHY US -->
   <section class="hp-sec hp-sec-tint" id="why-us">
-    <div class="hp-wrap hp-two">
-      <div>
-        <h2>Why choose our Liverpool plumbers?</h2>
-        <ul class="hp-why">
+    <div class="hp-wrap">
+      <h2>Why choose our Liverpool plumbers?</h2>
+      <ul class="hp-why hp-why-grid">
           <li><strong>A trusted local team.</strong> Highly trained plumbing and heating engineers, led by James. Many of our Google reviews mention him by name.</li>
           <li><strong>Gas Safe registered.</strong> Boilers, gas cookers and hobs. <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Check the Gas Safe Register</a>.</li>
           <li><strong>Guaranteed 30 minute response.</strong> Average arrival 28 minutes, across every postcode from L1 to L40.</li>
-        </ul>
-      </div>
-      <div>
-        <div class="hp-h2-spacer" aria-hidden="true"></div>
-        <ul class="hp-why">
+
           <li><strong>Clear prices.</strong> From £120 for the first hour, no call-out fee, written quote first.</li>
           <li><strong>Guaranteed work.</strong> 12 months on workmanship and £2 million public liability insurance.</li>
           <li><strong>Homes and businesses.</strong> Commercial properties at the same rates as homes.</li>
-        </ul>
-      </div>
+      </ul>
     </div>
   </section>
 
@@ -451,7 +445,7 @@ import { telify } from '../lib/tel';
 
   <!-- FAQ -->
   <section class="hp-sec" id="faq">
-    <div class="hp-wrap hp-narrow">
+    <div class="hp-wrap">
       <h2>Questions people ask</h2>
       <div class="hp-faqs">
         {faqs.map((f, i) => (
@@ -526,7 +520,7 @@ import { telify } from '../lib/tel';
   .hp-promises li { background: #fff; border: 1px solid #fed7aa; border-radius: 10px; padding: 0.6rem 0.8rem; font-size: 0.95rem; color: #334155; text-align: center; }
   .hp-promises strong { display: block; color: var(--navy); font-size: 1.1rem; }
 
-  .hp-chips-h { margin: 1.25rem 0 0.5rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #64748b; }
+  .hp-chips-h { margin: 1.25rem 0 0.5rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #475569; }
   .hp-chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .hp-chips a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.5rem 0.95rem; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 999px; color: var(--navy); font-weight: 700; font-size: 0.95rem; text-decoration: none; }
   .hp-chips a:hover { border-color: #c2410c; color: #c2410c; }
@@ -557,6 +551,13 @@ import { telify } from '../lib/tel';
   details.hp-wait-card ol { padding: 0 1.25rem 0.5rem 2.55rem; }
   .hp-wait-gas { margin: 1rem 0 0; background: #fef2f2; border: 1px solid #fecaca; border-left: 5px solid var(--red); border-radius: 10px; padding: 0.8rem 1.1rem; color: #7f1d1d; }
   .hp-wait-gas a { color: #991b1b; font-weight: 800; }
+
+  .hp-why-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem; }
+  .hp-wait { grid-template-columns: repeat(3, 1fr) !important; }
+  #small-jobs .hp-links { grid-template-columns: 1fr 1fr; max-width: none; }
+  .hp-feature-body .hp-chips-h { margin: 1.25rem 0 0.5rem !important; font-size: 0.8rem !important; color: #475569 !important; }
+  @media (max-width: 900px) { .hp-why-grid, .hp-wait, #small-jobs .hp-links { grid-template-columns: 1fr !important; } }
+  #faq .hp-faqs { max-width: 50rem; }
   .hp-stars { display: block; max-width: 30rem; text-align: center; color: #1e293b; text-decoration: none; font-size: 1rem; }
   .hp-links { display: grid; gap: 0.6rem; margin: 1.25rem 0 0; max-width: 34rem; }
   .hp-links-center { margin: 1.5rem auto 0; }
@@ -713,8 +714,6 @@ import { telify } from '../lib/tel';
     .hp-tiles { grid-template-columns: repeat(2, 1fr); }
     .hp-small { grid-template-columns: 1fr 1fr; }
     .hp-h2-spacer { display: none; }
-    #why-us .hp-two { row-gap: 0; }
-    #why-us .hp-two > div + div .hp-why { margin-top: 0; }
   }
   @media (max-width: 600px) {
     .hp-tiles { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
