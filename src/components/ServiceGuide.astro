@@ -116,10 +116,10 @@ const schemaCrumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
   <div class="brx">
     <section class="brx-sec" id="key-facts">
       <div class="brx-wrap">
-        <div class="brx-facts">
-          <h2 class="brx-facts-h">{p.factsTitle}</h2>
+        <details class="brx-facts m-acc" open>
+          <summary><h2 class="brx-facts-h">{p.factsTitle}</h2></summary>
           <dl>{p.facts.map(([d, v]) => <div><dt>{d}</dt><dd set:html={telify(v)} /></div>)}</dl>
-        </div>
+        </details>
         <nav class="brx-toc" aria-label="On this page">
           <p class="brx-toc-h">On this page</p>
           <ol>{toc.map(([id, t]) => <li><a href={`#${id}`}>{t}</a></li>)}</ol>

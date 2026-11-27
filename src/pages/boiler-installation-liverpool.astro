@@ -271,8 +271,8 @@ const schemaCrumbs = {
   <!-- AT A GLANCE -->
   <section class="brx-sec" id="key-facts">
     <div class="brx-wrap">
-      <div class="brx-facts">
-        <h2 class="brx-facts-h">A new boiler with us at a glance</h2>
+      <details class="brx-facts m-acc" open>
+        <summary><h2 class="brx-facts-h">A new boiler with us at a glance</h2></summary>
         <dl>
           <div><dt>Price</dt><dd>Five combi packages from £2,195 to £3,295, fully fitted</dd></div>
           <div><dt>Quote</dt><dd>Free survey, then a written fixed price. No finance, no add-ons on the day.</dd></div>
@@ -281,7 +281,7 @@ const schemaCrumbs = {
           <div><dt>Brands</dt><dd>Baxi, Worcester Bosch and Vaillant, with Ideal on request</dd></div>
           <div><dt>Covered</dt><dd>Every Liverpool postcode, the Wirral, Sefton, Knowsley and St Helens</dd></div>
         </dl>
-      </div>
+      </details>
       <nav class="brx-toc" aria-label="On this page">
         <p class="brx-toc-h">On this page</p>
         <ol>{toc.map(([id, t]) => <li><a href={`#${id}`}>{t}</a></li>)}</ol>

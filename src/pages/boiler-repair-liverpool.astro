@@ -282,8 +282,8 @@ const schemaCrumbs = {
   <!-- KEY FACTS + CONTENTS -->
   <section class="brx-sec" id="key-facts">
     <div class="brx-wrap">
-      <div class="brx-facts">
-        <h2 class="brx-facts-h">Boiler repair in Liverpool at a glance</h2>
+      <details class="brx-facts m-acc" open>
+        <summary><h2 class="brx-facts-h">Boiler repair in Liverpool at a glance</h2></summary>
         <dl>
           <div><dt>Who</dt><dd>A trusted team of Gas Safe registered heating engineers, led by James.</dd></div>
           <div><dt>Price</dt><dd>First hour, including diagnosis: £120 weekdays 9am to 4pm, £150 evenings, nights and weekends, £180 bank holidays. No call-out fee.</dd></div>
@@ -292,7 +292,7 @@ const schemaCrumbs = {
           <div><dt>Guarantee</dt><dd>12 months on workmanship. £2 million public liability insurance.</dd></div>
           <div><dt>Area</dt><dd>All of Liverpool, plus Wirral, Sefton, Knowsley and St Helens.</dd></div>
         </dl>
-      </div>
+      </details>
 
       <nav class="brx-toc" aria-label="On this page">
         <p class="brx-toc-h">On this page</p>
@@ -406,12 +406,8 @@ const schemaCrumbs = {
         <p id="code-finder-status" class="brx-finder-status" aria-live="polite"></p>
       </div>
 
-      <ul class="brx-jump brx-brands">
-        {brands.map((b) => <li><a href={`#${b.id}`}>{b.name}</a></li>)}
-      </ul>
-
       {brands.map((b) => (
-        <details class="brx-brand" id={b.id} data-brand data-mcollapse open>
+        <details class="brx-brand" id={b.id} data-brand data-mcollapse>
           <summary class="brx-brand-sum"><h3 class="brx-brand-h">{b.name} boiler error codes</h3><span class="brx-chev" aria-hidden="true"></span></summary>
           <p class="brx-small">{b.models}</p>
           <div class="brx-codes">
@@ -743,7 +739,10 @@ const schemaCrumbs = {
   .brx-finder input { width: 100%; box-sizing: border-box; font-size: 1.15rem; padding: 0.75rem 0.9rem; border: 2px solid var(--border); border-radius: 10px; }
   .brx-finder input:focus { outline: 3px solid var(--orange); border-color: var(--orange); }
   .brx-finder-status { margin: 0.4rem 0 0 !important; font-size: 0.92rem !important; color: #475569 !important; min-height: 1.2em; }
-  .brx-brand { margin-bottom: 2rem; scroll-margin-top: 1rem; }
+  .brx-brand { scroll-margin-top: 1rem; }
+  details.brx-brand { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 0.6rem; }
+  details.brx-brand .brx-brand-h { font-size: 1.35rem !important; }
+  details.brx-brand:hover { border-color: #c2410c; }
   .brx-brand-h { font: 900 1.6rem/1.15 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif !important; margin-bottom: 0.2rem !important; }
   .brx-codes { display: grid; gap: 0.85rem; }
   .brx-code { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--orange); border-radius: 12px; padding: 1rem 1.2rem; }

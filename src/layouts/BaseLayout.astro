@@ -1037,6 +1037,11 @@ const guideBox = (() => {
     .pf-faq { gap: 0.75rem; }
     .final-cta .container { text-align: center; }
     .pf-faq-q { display: block; }
+    details.brx-faq > summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; }
+    details.brx-faq > summary::-webkit-details-marker { display: none; }
+    details.brx-faq > summary::after { content: "+"; color: #c2410c; font-size: 1.3rem; font-weight: 900; flex-shrink: 0; }
+    details.brx-faq[open] > summary::after { content: "\2212"; }
+    @media (max-width: 600px) { nav.brx-toc { display: none !important; } }
     /* Phones: wide tables become stacked cards (labels from data-label) */
     @media (max-width: 600px) {
       table.brx-table.stk thead { display: none; }
@@ -1069,7 +1074,7 @@ const guideBox = (() => {
     .m-acc > summary h3 { margin: 0 0 0.4rem; }
     @media (max-width: 560px) {
       .m-acc > summary { cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; min-height: 44px; }
-      .m-acc > summary h3 { margin: 0; }
+      .m-acc > summary h3, .m-acc > summary h2 { margin: 0 !important; }
       .m-acc > summary::after { content: "+"; color: #c2410c; font-size: 1.3rem; font-weight: 900; }
       .m-acc[open] > summary::after { content: "\2212"; }
       .m-acc[open] > summary { margin-bottom: 0.4rem; }
