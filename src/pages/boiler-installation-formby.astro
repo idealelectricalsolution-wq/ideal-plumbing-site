@@ -115,17 +115,17 @@ const faqs = [
       <h2>Which boiler package is right for you?</h2>
       <p class="brx-answer">Paying more buys three things: more years of warranty, more hot water, and a better-known brand or design. Here is a quick guide.</p>
       <div class="sg-quick">
-        <p><strong>Flat, cottage or rental?</strong> <a href="#pk-essential">Essential, Baxi 600</a></p>
-        <p><strong>Small home, staying put?</strong> <a href="#pk-value">Value, Baxi 800</a></p>
-        <p><strong>Most 2 to 4 bed homes</strong> <a href="#pk-popular">Most popular, Worcester Bosch 4000</a></p>
-        <p><strong>Two bathrooms or lots of hot water?</strong> <a href="#pk-premium">Premium, Vaillant ecoTEC plus</a></p>
-        <p><strong>Boiler on show in the kitchen?</strong> <a href="#pk-flagship">Flagship, Worcester Bosch 8000+ Style</a></p>
+        <a class="q-link" href="#pk-essential"><span><small>Flat, cottage or rental?</small><strong>Essential, Baxi 600</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-value"><span><small>Small home, staying put?</small><strong>Value, Baxi 800</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-popular"><span><small>Most 2 to 4 bed homes</small><strong>Most popular, Worcester Bosch 4000</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-premium"><span><small>Two bathrooms or lots of hot water?</small><strong>Premium, Vaillant ecoTEC plus</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-flagship"><span><small>Boiler on show in the kitchen?</small><strong>Flagship, Worcester Bosch 8000+ Style</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
       </div>
       <div class="brx-table-wrap">
-        <table class="brx-table sg-cmp">
+        <table class="brx-table sg-cmp stk">
           <thead><tr><th>Package</th><th>Price</th><th>Hot water (litres a minute)</th><th>Warranty</th></tr></thead>
           <tbody>
-            {boilers.map((b) => <tr><td><a href={`#${b.id}`}><strong>{b.tier}</strong></a><br />{b.name}</td><td><strong>{b.price}</strong></td><td>{b.flow}</td><td>{b.warranty}</td></tr>)}
+            {boilers.map((b) => <tr><td data-label="Package"><a href={`#${b.id}`}><strong>{b.tier}</strong></a><br />{b.name}</td><td data-label="Price"><strong>{b.price}</strong></td><td data-label="Hot water (litres a minute)">{b.flow}</td><td data-label="Warranty">{b.warranty}</td></tr>)}
           </tbody>
         </table>
       </div>

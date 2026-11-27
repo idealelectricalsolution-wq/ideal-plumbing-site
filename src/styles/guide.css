@@ -164,8 +164,6 @@
   .sg-quick { display: grid; gap: 0.5rem; margin: 0 0 1.75rem; }
   .sg-quick p { margin: 0; background: #f8fafc; border: 1px solid var(--border); border-left: 5px solid #c2410c; border-radius: 10px; padding: 0.75rem 1rem; line-height: 1.5; }
   .sg-quick strong { color: var(--navy); margin-right: 0.35rem; }
-  .sg-quick a { font-weight: 800; color: #c2410c; white-space: nowrap; }
-  .sg-quick a:hover { color: #9a3412; }
   .sg-cmp td a { color: #c2410c; }
 
 /* ---- ServiceGuide additions ---- */
@@ -215,3 +213,18 @@
 .sg-linkcard { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 34rem; margin-top: 1rem; background: #fff; border: 2px solid #fed7aa; border-radius: 12px; padding: 0.9rem 1.1rem; min-height: 52px; color: var(--navy); font-weight: 800; font-size: 1.05rem; line-height: 1.3; text-decoration: none; }
 .sg-linkcard small { display: block; margin-top: 0.15rem; font-weight: 600; font-size: 0.9rem; color: #475569; }
 .sg-linkcard:hover { border-color: #c2410c; }
+
+  /* Phones: wide tables become stacked cards (labels from data-label) */
+  @media (max-width: 600px) {
+    .brx-table.stk thead { display: none; }
+    .brx-table.stk, .brx-table.stk tbody, .brx-table.stk tr, .brx-table.stk td { display: block; width: 100%; }
+    .brx-table.stk { background: none; box-shadow: none; border-radius: 0; overflow: visible; }
+    .brx-table.stk tr { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem 1rem; margin-bottom: 0.6rem; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
+    .brx-table.stk td { border: 0; padding: 0.25rem 0; font-size: 1rem; }
+    .brx-table.stk td:first-child { padding-bottom: 0.45rem; font-weight: 800; color: var(--navy); }
+    .brx-table.stk td:not(:first-child) { display: grid; grid-template-columns: minmax(6rem, 40%) 1fr; gap: 0.75rem; align-items: baseline; border-top: 1px solid #f1f5f9; padding: 0.4rem 0; }
+    .brx-table.stk td:not(:first-child)::before { content: attr(data-label); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #475569; }
+    .brx-table.stk td strong { font-size: 1.05rem; }
+    .brx-table.stk td[data-label^="Price"], .brx-table.stk td[data-label^="First hour"] { font-weight: 800; color: #c2410c; }
+  }
+

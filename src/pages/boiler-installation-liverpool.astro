@@ -220,11 +220,11 @@ const schemaCrumbs = {
       <h2>Which boiler package is right for you?</h2>
       <p class="brx-answer">Paying more buys three things: more years of warranty, more hot water, and a better-rated brand or design. Here is how to decide.</p>
       <div class="bi-quick">
-        <p><strong>Flat, small terrace or rental?</strong> <a href="#pk-essential">Essential, Baxi 600</a></p>
-        <p><strong>Staying put, on a budget?</strong> <a href="#pk-value">Value, Baxi 800</a></p>
-        <p><strong>Most 2 to 4 bed homes</strong> <a href="#pk-popular">Most popular, Worcester Bosch 4000</a></p>
-        <p><strong>Two bathrooms or lots of hot water?</strong> <a href="#pk-premium">Premium, Vaillant ecoTEC plus</a></p>
-        <p><strong>Boiler on show in the kitchen?</strong> <a href="#pk-flagship">Flagship, Worcester Bosch 8000+ Style</a></p>
+        <a class="q-link" href="#pk-essential"><span><small>Flat, small terrace or rental?</small><strong>Essential, Baxi 600</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-value"><span><small>Staying put, on a budget?</small><strong>Value, Baxi 800</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-popular"><span><small>Most 2 to 4 bed homes</small><strong>Most popular, Worcester Bosch 4000</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-premium"><span><small>Two bathrooms or lots of hot water?</small><strong>Premium, Vaillant ecoTEC plus</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
+        <a class="q-link" href="#pk-flagship"><span><small>Boiler on show in the kitchen?</small><strong>Flagship, Worcester Bosch 8000+ Style</strong></span><span class="lc-arr" aria-hidden="true">→</span></a>
       </div>
       <details class="bi-qa" data-mcollapse open>
         <summary><h3>Baxi 600 or Baxi 800: is the extra £300 worth it?</h3><span class="brx-chev" aria-hidden="true"></span></summary>
@@ -254,10 +254,10 @@ const schemaCrumbs = {
     <div class="brx-wrap">
       <h2>Compare all five boilers</h2>
       <div class="brx-table-wrap">
-        <table class="brx-table bi-cmp">
+        <table class="brx-table bi-cmp stk">
           <thead><tr><th>Package</th><th>Price</th><th>Hot water (litres a minute)</th><th>Warranty</th><th>Best for</th></tr></thead>
           <tbody>
-            {packages.map((p) => <tr><td><a href={`#${p.id}`}><strong>{p.tier}</strong></a><br />{p.name}</td><td><strong>£{p.price}</strong></td><td>{p.flow}</td><td>{p.warranty}</td><td>{p.best}</td></tr>)}
+            {packages.map((p) => <tr><td data-label="Package"><a href={`#${p.id}`}><strong>{p.tier}</strong></a><br />{p.name}</td><td data-label="Price"><strong>£{p.price}</strong></td><td data-label="Hot water (litres a minute)">{p.flow}</td><td data-label="Warranty">{p.warranty}</td><td data-label="Best for">{p.best}</td></tr>)}
           </tbody>
         </table>
       </div>
@@ -626,10 +626,6 @@ const schemaCrumbs = {
   .bi-pk-link { display: block; text-align: center; margin-top: 0.6rem; font-weight: 700; font-size: 0.95rem; color: var(--navy) !important; }
   .bi-pk-note { margin: 1.25rem 0 0; font-size: 0.92rem; line-height: 1.55; color: #475569; max-width: 900px; }
   .bi-quick { display: grid; gap: 0.5rem; margin: 0 0 1.75rem; }
-  .bi-quick p { margin: 0; background: #f8fafc; border: 1px solid var(--border); border-left: 5px solid #c2410c; border-radius: 10px; padding: 0.75rem 1rem; line-height: 1.5; }
-  .bi-quick strong { color: var(--navy); margin-right: 0.35rem; }
-  .bi-quick a { font-weight: 800; color: #c2410c; white-space: nowrap; }
-  .bi-quick a:hover { color: #9a3412; }
   .bi-cmp td a { color: #c2410c; }
 
   .bi-inc { max-width: 960px; display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start; }
