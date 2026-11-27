@@ -977,6 +977,7 @@ const guideBox = (() => {
       .pf:has(> .pf-section) > .pf-section:has(.job-card) { order: -2; }
       .pf:has(> .pf-section) > .pf-section:has(.job-card) + aside.cs { order: -2; }
       .pf:has(> .pf-section) > .pf-reviews { order: -1; }
+      .pf:has(> .pf-section):has(.area-pill) > section.rs { order: -1; }
       .pf-section { padding: 1.6rem 0; }
       .pf-card { padding: 1.1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
       .pf-card + .pf-card { margin-top: 0.9rem; }
@@ -1036,6 +1037,8 @@ const guideBox = (() => {
     .pf-faq { gap: 0.75rem; }
     .final-cta .container { text-align: center; }
     .pf-faq-q { display: block; }
+    .pf-related, .pf-why-grid, .pf-who-grid { gap: 0.75rem; }
+    .pf-related-arrow { color: #c2410c !important; }
     .area-acc { padding: 0 !important; }
     .area-acc + .area-acc { margin-top: 0 !important; }
     .area-acc summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.1rem; min-height: 56px; }
