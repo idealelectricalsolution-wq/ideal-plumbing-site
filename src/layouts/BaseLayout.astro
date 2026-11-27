@@ -1024,6 +1024,32 @@ const guideBox = (() => {
     .mid-cta, .mid-cta h2, .mid-cta p, .why-card, .why-card h3, .why-card p, .process-step, .process-step h3,
     .pf-price-card, .pf-price-card h3, .price-card h3, .trust-item, .service-card h3, .why-cta, .reviews-cta, .stat-num,
     .hp-center, .sib-wrap .nothing { text-align: center; }
+
+    /* area pages: desktop layout + alignment pass */
+    .ui-links { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; gap: 0.6rem; }
+    .ui-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: #fff; border: 2px solid #fed7aa; border-radius: 12px; padding: 0.8rem 1rem; text-decoration: none; min-height: 52px; }
+    .ui-link strong { display: block; color: var(--navy); font-weight: 800; }
+    .ui-link small { display: block; color: #475569; font-size: 0.9rem; line-height: 1.45; margin-top: 0.1rem; }
+    .ui-link:hover { border-color: #c2410c; }
+    div:has(> .area-pill) { justify-content: flex-start !important; }
+    .pf-faq { gap: 0.75rem; }
+    .final-cta .container { text-align: center; }
+    .pf-faq-q { display: block; }
+    .pf-related > :last-child:nth-child(odd), .ui-links > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .pf-related-arrow { font-size: 1.35rem; padding-left: 0.5rem; }
+    .final-cta .container > p { max-width: 40rem; margin-left: auto; margin-right: auto; }
+    .rs-in { max-width: 1100px !important; }
+    .sib-wrap { max-width: 1140px; }
+    @media (min-width: 768px) {
+      .page-hero, .page-hero h1, .page-hero-sub { text-align: center; }
+      .page-hero-sub { margin-left: auto; margin-right: auto; }
+      .pf-related, .pf-why-grid, .ui-links { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+      .pf-related-link { height: 100%; }
+    }
+    @media (min-width: 900px) {
+      .pf-pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: stretch; }
+      .pf-why-grid { grid-template-columns: repeat(3, 1fr); }
+    }
     .sib a.gd-svc { background: #1a3a5c; border-color: #1a3a5c; color: #fff; }
     .sib a.gd-svc .lc-arr { color: #fb923c; }
   </style>
