@@ -917,6 +917,18 @@ const guideBox = (() => {
     .site-footer .ftr-grid, .site-footer .ftr-areas { text-align: left; }
     .ftr-grid h3 { font: 800 0.8rem 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: #fb923c; margin: 0 0 0.75rem; }
     .ftr-grid ul { list-style: none; margin: 0; padding: 0; }
+    .ftr-col summary { list-style: none; cursor: default; }
+    .ftr-col summary::-webkit-details-marker { display: none; }
+    @media (max-width: 560px) {
+      .ftr-grid { gap: 0 !important; }
+      .ftr-grid > div:first-child { margin-bottom: 1rem; }
+      .ftr-col { border-top: 1px solid rgba(255,255,255,0.12); }
+      .ftr-col summary { cursor: pointer; display: flex; justify-content: space-between; align-items: center; min-height: 52px; }
+      .ftr-col summary h3 { margin: 0 !important; }
+      .ftr-col summary::after { content: '+'; color: #fb923c; font-size: 1.4rem; font-weight: 700; }
+      .ftr-col[open] summary::after { content: '–'; }
+      .ftr-col ul { padding-bottom: 1rem !important; }
+    }
     .ftr-grid li { margin: 0 0 0.45rem; }
     .ftr-brand { font: 900 1.35rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; color: #fff; }
     .ftr-call { display: inline-block; margin: 0.75rem 0; background: #c2410c; color: #fff !important; font: 900 1.4rem 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none !important; }
@@ -1227,8 +1239,8 @@ const guideBox = (() => {
           <a href="tel:01515580334" class="ftr-call">0151 558 0334</a>
           <p style="margin:0;"><a href="mailto:emergencyplumberliverpool@gmail.com">emergencyplumberliverpool@gmail.com</a><br />29 Park Road, Kirkby, L32 2AL</p>
         </div>
-        <div>
-          <h3>Emergencies</h3>
+        <details class="ftr-col">
+          <summary><h3>Emergencies</h3></summary>
           <ul>
           <li><a href="/">Emergency Plumber 24/7</a></li>
           <li><a href="/burst-pipe-repair-liverpool">Burst Pipe Repair</a></li>
@@ -1241,9 +1253,9 @@ const guideBox = (() => {
           <li><a href="/toilet-repair-liverpool">Toilet Repair</a></li>
           <li><a href="/emergency-gas-engineer-liverpool">Emergency Gas Engineer</a></li>
           </ul>
-        </div>
-        <div>
-          <h3>Services</h3>
+        </details>
+        <details class="ftr-col">
+          <summary><h3>Services</h3></summary>
           <ul>
           <li><a href="/boiler-service-liverpool">Boiler Service</a></li>
           <li><a href="/boiler-installation-liverpool">Boiler Installation</a></li>
@@ -1263,9 +1275,9 @@ const guideBox = (() => {
           <li><a href="/radiator-valve-replacement-liverpool">Radiator Valves</a></li>
           <li><a href="/smart-thermostat-installation-liverpool">Smart Thermostats</a></li>
           </ul>
-        </div>
-        <div>
-          <h3>Help and advice</h3>
+        </details>
+        <details class="ftr-col">
+          <summary><h3>Help and advice</h3></summary>
           <ul>
           <li><a href="/#prices">Prices</a></li>
           <li><a href="/#reviews">Reviews</a></li>
@@ -1274,7 +1286,7 @@ const guideBox = (() => {
           <li><a href="/blog">Advice and guides</a></li>
           <li><a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Check Gas Safe Register</a></li>
           </ul>
-        </div>
+        </details>
       </div>
       <div class="ftr-areas">
         <h3>Areas we cover</h3>
@@ -1286,6 +1298,7 @@ const guideBox = (() => {
       <p class="ftr-legal">&copy; 2026 Liverpool Emergency Plumber · Gas Safe registered · <a href="https://www.gassaferegister.co.uk" target="_blank" rel="noopener">Verify at gassaferegister.co.uk</a> · <a href="/privacy">Privacy and cookies</a> · <button type="button" class="ftr-optout" data-analytics-toggle>Turn off analytics</button></p>
     </div>
   </footer>
+  <script is:inline>(function(){var m=window.matchMedia("(min-width: 561px)");function f(){document.querySelectorAll("details.ftr-col").forEach(function(d){d.open=m.matches})}f();m.addEventListener&&m.addEventListener("change",f);document.querySelectorAll("details.ftr-col > summary").forEach(function(x){x.addEventListener("click",function(e){if(m.matches)e.preventDefault()})});})();</script>
 
 
   <script is:inline>

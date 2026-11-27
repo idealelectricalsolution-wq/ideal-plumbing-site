@@ -204,6 +204,7 @@ import { telify } from '../lib/tel';
           <li><strong>Gas Safe</strong> registered team</li>
         </ul>
         <a class="hp-stars" href="#reviews"><span aria-hidden="true">★★★★★</span> <strong>5.0</strong> from 53 Google reviews</a>
+        <a class="hp-notemerg" href="#small-jobs"><span>Not an emergency?<small>Small jobs, new boilers and gas certificates</small></span><span aria-hidden="true">↓</span></a>
       </div>
       <figure class="hp-hero-photo">
         <picture>
@@ -275,7 +276,7 @@ import { telify } from '../lib/tel';
   </section>
 
   <!-- REVIEWS -->
-  <section class="hp-sec" id="reviews">
+  <section class="hp-sec hp-sec-tint" id="reviews">
     <div class="hp-wrap">
       <div class="hp-rating">
         <div class="hp-rating-num">5.0</div>
@@ -300,13 +301,13 @@ import { telify } from '../lib/tel';
   </section>
 
   <!-- WHILE YOU WAIT -->
-  <section class="hp-sec hp-sec-tint" id="while-you-wait">
+  <section class="hp-sec" id="while-you-wait">
     <div class="hp-wrap">
       <h2>What to do while you wait</h2>
       <p class="hp-sub">Help is on the way. These steps stop the damage getting worse.</p>
+      <p class="hp-wait-tap">Tap your problem to see the steps.</p>
       <div class="hp-wait">
-        <div class="hp-wait-card">
-          <h3>Leak or burst pipe</h3>
+        <details class="hp-wait-card"><summary><h3>Leak or burst pipe</h3></summary>
           <ol>
             <li>Turn off the water at the stopcock. It is usually under the kitchen sink, in a hallway cupboard or under the stairs. Turn it clockwise.</li>
             <li>Switch off the boiler and any immersion heater.</li>
@@ -314,39 +315,31 @@ import { telify } from '../lib/tel';
             <li>Catch drips with buckets and towels. Move valuables away.</li>
             <li>Take photos of the damage for your insurer.</li>
           </ol>
-        </div>
-        <div class="hp-wait-card hp-wait-warn">
-          <h3>Water near electrics</h3>
+        </details>
+        <details class="hp-wait-card hp-wait-warn"><summary><h3>Water near electrics</h3></summary>
           <ol>
             <li>Do not touch switches, sockets or light fittings that are wet.</li>
             <li>If water is coming through a light fitting, turn off the electricity at the fuse box if it is safe to reach.</li>
             <li>Do not turn it back on until an electrician has checked it. Our partner <a href="https://www.idealelectricalsolutions.co.uk/emergency-electrician">emergency electrician</a> can help.</li>
           </ol>
-        </div>
-        <div class="hp-wait-card">
-          <h3>Boiler stopped working</h3>
+        </details>
+        <details class="hp-wait-card"><summary><h3>Boiler stopped working</h3></summary>
           <ol>
             <li>Check the pressure gauge. It should read between 1 and 1.5 bar.</li>
             <li>If it is below 1 bar, you can top it up with the filling loop if you know how.</li>
             <li>Note any error code on the display. It helps our engineer bring the right part.</li>
             <li>Never take the boiler casing off. Only a Gas Safe registered engineer should work inside it.</li>
           </ol>
-        </div>
-        <div class="hp-wait-card hp-wait-danger">
-          <h3>Smell of gas</h3>
-          <ol>
-            <li>Do not use switches, flames or anything that could spark.</li>
-            <li>Open doors and windows.</li>
-            <li>Turn off the gas at the meter if it is safe to do so.</li>
-            <li>Get everyone outside and call the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a>.</li>
-          </ol>
-        </div>
+        </details>
       </div>
+      <p class="hp-wait-gas"><strong>Smell gas?</strong> Get everyone outside and call the National Gas Emergency line on <a href="tel:08001119999">0800 111 999</a> first.</p>
     </div>
   </section>
 
   <!-- BOILER REPAIR + LEAK DETECTION -->
-  <section class="hp-sec" id="boilers-and-leaks">
+  <CallStrip title="Done the steps? Call us now." text="A real person answers 24/7. Guaranteed 30 minute response across Liverpool, and no call-out fee." book={false} />
+
+  <section class="hp-sec hp-sec-tint" id="boilers-and-leaks">
     <div class="hp-wrap">
       <div class="hp-twin">
         <article class="hp-feature hp-feature-boiler">
@@ -364,10 +357,6 @@ import { telify } from '../lib/tel';
               <li>Pressure, pilot light, pump and PCB faults</li>
               <li>Boiler beyond repair? New boilers from £2,195 with up to a 12-year warranty</li>
             </ul>
-            <div class="hp-feature-actions">
-              <a href={TEL} class="hp-btn hp-btn-orange">Call {PHONE}</a>
-              
-            </div>
             <div class="hp-links"><a class="hp-linkcard" href="/boiler-repair-liverpool"><span>Boiler repair Liverpool</span><span class="hp-arr" aria-hidden="true">→</span></a></div><p class="hp-chips-h">Also see</p><ul class="hp-chips"><li><a href="/no-heating-no-hot-water-liverpool">No heating or hot water</a></li><li><a href="/boiler-losing-pressure-liverpool">Boiler losing pressure</a></li><li><a href="/frozen-condensate-pipe-liverpool">Frozen condensate pipe</a></li><li><a href="/boiler-repair-liverpool#error-codes">Boiler error codes</a></li></ul>
           </div>
         </article>
@@ -386,10 +375,6 @@ import { telify } from '../lib/tel';
               <li>Leaks under sinks, baths, radiators and floors</li>
               <li>Leak reports for your insurer</li>
             </ul>
-            <div class="hp-feature-actions">
-              <a href={TEL} class="hp-btn hp-btn-orange">Call {PHONE}</a>
-              
-            </div>
             <div class="hp-links"><a class="hp-linkcard" href="/leak-detection-liverpool"><span>Leak detection Liverpool</span><span class="hp-arr" aria-hidden="true">→</span></a></div><p class="hp-chips-h">Also see</p><ul class="hp-chips"><li><a href="/burst-pipe-repair-liverpool">Burst pipes</a></li><li><a href="/shower-repair-liverpool">Shower repair</a></li><li><a href="/toilet-repair-liverpool">Toilet repair</a></li><li><a href="/radiators-liverpool">Radiators</a></li></ul>
           </div>
         </article>
@@ -398,7 +383,7 @@ import { telify } from '../lib/tel';
   </section>
 
   <!-- RECENT JOBS -->
-  <section class="hp-sec" id="small-jobs">
+  <section class="hp-sec hp-sec-tint" id="small-jobs">
     <div class="hp-wrap">
       <h2>Plumbers in Liverpool for everyday jobs</h2>
       <p class="hp-sub">Not an emergency? Our Liverpool plumbers do the everyday jobs too. Small jobs have a fixed price, including VAT.</p>
@@ -412,7 +397,7 @@ import { telify } from '../lib/tel';
   </section>
 
 
-  <section class="hp-sec hp-sec-tint" id="planned">
+  <section class="hp-sec" id="planned">
     <div class="hp-wrap">
       <h2>New boilers, central heating and gas safety certificates</h2>
       <p class="hp-sub">Not an emergency? The same Gas Safe registered team fits new boilers and full central heating systems, and does landlord certificates. Free surveys and fixed written prices.</p>
@@ -420,6 +405,8 @@ import { telify } from '../lib/tel';
       <p class="hp-chips-h">Also see</p><ul class="hp-chips"><li><a href="/bathroom-fitters-liverpool">Bathrooms from £4,995</a></li><li><a href="/showers-liverpool">Showers from £375</a></li><li><a href="/radiators-liverpool">Radiators from £245</a></li><li><a href="/hot-water-cylinders-liverpool">Hot water cylinders from £750</a></li><li><a href="/power-flushing-liverpool">Power flushing from £395</a></li></ul>
     </div>
   </section>
+  <CallStrip title="Want a price or a free survey?" text="Call us or book online. You get a fixed written price before any work starts." />
+
   <section class="hp-sec" id="jobs">
     <div class="hp-wrap">
       <h2>Recent jobs by our team</h2>
@@ -439,7 +426,7 @@ import { telify } from '../lib/tel';
   </section>
 
   <!-- WHY US -->
-  <section class="hp-sec" id="why-us">
+  <section class="hp-sec hp-sec-tint" id="why-us">
     <div class="hp-wrap hp-two">
       <div>
         <h2>Why choose our Liverpool plumbers?</h2>
@@ -555,6 +542,21 @@ import { telify } from '../lib/tel';
   .hp-area-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.5rem; }
   .hp-area-feature .hp-linkcard { font-size: 1rem; }
   @media (max-width: 700px) { .hp-big, .hp-area-feature { grid-template-columns: 1fr; } }
+
+  .hp-notemerg { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 30rem; margin: 0.9rem 0 0; background: #fff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 0.7rem 1rem; color: var(--navy); font-weight: 800; text-decoration: none; line-height: 1.3; }
+  .hp-notemerg small { display: block; font-weight: 600; font-size: 0.9rem; color: #475569; }
+  .hp-notemerg > span:last-child { color: #c2410c; font-size: 1.3rem; }
+  .hp-notemerg:hover { border-color: #c2410c; }
+  .hp-wait-tap { margin: -0.75rem 0 1rem; font-weight: 700; color: #475569; }
+  details.hp-wait-card { padding: 0; align-self: start; }
+  details.hp-wait-card summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; min-height: 56px; }
+  details.hp-wait-card summary::-webkit-details-marker { display: none; }
+  details.hp-wait-card summary::after { content: '+'; font-size: 1.5rem; font-weight: 700; color: #c2410c; line-height: 1; }
+  details.hp-wait-card[open] summary::after { content: '–'; }
+  details.hp-wait-card summary h3 { margin: 0 !important; }
+  details.hp-wait-card ol { padding: 0 1.25rem 0.5rem 2.55rem; }
+  .hp-wait-gas { margin: 1rem 0 0; background: #fef2f2; border: 1px solid #fecaca; border-left: 5px solid var(--red); border-radius: 10px; padding: 0.8rem 1.1rem; color: #7f1d1d; }
+  .hp-wait-gas a { color: #991b1b; font-weight: 800; }
   .hp-stars { display: block; max-width: 30rem; text-align: center; color: #1e293b; text-decoration: none; font-size: 1rem; }
   .hp-links { display: grid; gap: 0.6rem; margin: 1.25rem 0 0; max-width: 34rem; }
   .hp-links-center { margin: 1.5rem auto 0; }
