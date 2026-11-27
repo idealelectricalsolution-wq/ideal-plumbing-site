@@ -1050,8 +1050,8 @@ const guideBox = (() => {
       table.brx-table.stk tr { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem 1rem; margin-bottom: 0.6rem; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
       table.brx-table.stk td { border: 0 !important; padding: 0.25rem 0 !important; font-size: 1rem; width: 100% !important; }
       table.brx-table.stk td:first-child { padding-bottom: 0.45rem !important; font-weight: 800; color: var(--navy); }
-      table.brx-table.stk td:not(:first-child) { display: grid; grid-template-columns: minmax(6rem, 40%) 1fr; gap: 0.75rem; align-items: baseline; border-top: 1px solid #f1f5f9 !important; padding: 0.4rem 0 !important; }
-      table.brx-table.stk td:not(:first-child)::before { content: attr(data-label); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #475569; }
+      table.brx-table.stk td:not(:first-child) { display: block; position: relative; padding: 0.4rem 0 0.4rem calc(40% + 0.75rem) !important; border-top: 1px solid #f1f5f9 !important; min-height: 1.6rem; }
+      table.brx-table.stk td:not(:first-child)::before { position: absolute; left: 0; top: 0.55rem; width: 40%; content: attr(data-label); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #475569; }
       table.brx-table.stk td strong { font-size: 1.05rem; }
       table.brx-table.stk td[data-label^="Price"], table.brx-table.stk td[data-label^="First hour"] { font-weight: 800; color: #c2410c; }
     }
