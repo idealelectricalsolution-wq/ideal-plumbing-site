@@ -1063,6 +1063,8 @@ const guideBox = (() => {
       table.brx-table.cmp3:not(.stk) th:not(:first-child), table.brx-table.cmp3:not(.stk) td:not(:first-child) { width: 36% !important; }
       table.brx-table.cmp3 td strong { font-size: 0.9rem !important; }
       table.brx-table.stk-price td:nth-child(2) { color: #c2410c; font-weight: 800; }
+      table.brx-table.stk-price td:nth-child(4) { grid-column: 1 / -1; padding: 0.15rem 0 0 !important; border: 0 !important; color: #475569; font-size: 0.93rem; line-height: 1.5; min-height: 0; }
+      table.brx-table.stk-price td:nth-child(4)::before { content: attr(data-label) ": "; position: static; width: auto; display: inline; font-size: inherit; letter-spacing: 0; text-transform: none; color: var(--navy); font-weight: 700; }
       table.brx-table.stk td[data-label^="Price"], table.brx-table.stk td[data-label^="First hour"] { font-weight: 800; color: #c2410c; }
     }
 
