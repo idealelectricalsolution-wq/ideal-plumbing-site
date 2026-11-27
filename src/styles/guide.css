@@ -234,3 +234,4 @@
 .sg-steps-tight li:first-child { border-top: 0; }
 .sg-steps-tight li::before { top: 0.6rem; width: 1.6rem; height: 1.6rem; }
 .sg-cols + p { margin-top: 1rem; }
+.sg-cols + h3 { margin-top: 1.5rem; }
