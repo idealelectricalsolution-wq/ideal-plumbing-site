@@ -13,7 +13,7 @@ const revs = names.filter((n) => REVIEWS[n]).map((n) => ({ n, t: REVIEWS[n] }));
       <div class="rs-grid">
         {revs.map((r) => <figure class="rs-card"><blockquote>“{r.t}”</blockquote><figcaption>{r.n} · Google review</figcaption></figure>)}
       </div>
-      <a class="rs-more" href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener">Read all our Google reviews</a>
+      <a class="rs-more" href="https://www.google.com/search?q=Liverpool+Emergency+Plumber+reviews" target="_blank" rel="noopener"><span>Read all our Google reviews<small>5.0 from 53 reviews</small></span><span class="lc-arr" aria-hidden="true">→</span></a>
     </div>
   </section>
 )}
@@ -28,5 +28,8 @@ const revs = names.filter((n) => REVIEWS[n]).map((n) => ({ n, t: REVIEWS[n] }));
   .rs-card { margin: 0; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.15rem; }
   .rs-card blockquote { margin: 0 0 0.6rem; font-size: 1rem; line-height: 1.6; color: #1e293b; }
   .rs-card figcaption { font-weight: 800; color: #1a3a5c; font-size: 0.92rem; }
-  .rs-more { display: inline-block; margin-top: 1rem; font-weight: 700; color: #1a3a5c; text-underline-offset: 3px; }
+  .rs-more { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 34rem; margin-top: 1rem; background: #fff; border: 2px solid #fed7aa; border-radius: 12px; padding: 0.9rem 1.1rem; min-height: 52px; color: #1a3a5c; font-weight: 800; font-size: 1.05rem; line-height: 1.3; text-decoration: none; }
+  .rs-more small { display: block; margin-top: 0.15rem; font-weight: 600; font-size: 0.9rem; color: #475569; }
+  .rs-more .lc-arr { flex: none; color: #c2410c; font-size: 1.35rem; }
+  .rs-more:hover { border-color: #c2410c; }
 </style>

@@ -71,11 +71,11 @@ import ReviewStrip from '../components/ReviewStrip.astro';
         <a href="/get-started" class="btn btn-lg btn-full" style="background:var(--navy);color:#ffffff;border:2px solid var(--navy);">BOOK ONLINE</a>
       </div>
 
-      <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Gas Safe Registered</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ No Call-Out Fee</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ 12-Month Guarantee</span>
-        <span style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;color:var(--navy);">✓ Fixed Prices from £120</span>
+      <div class="hero-chips">
+        <span>✓ Gas Safe Registered</span>
+        <span>✓ No Call-Out Fee</span>
+        <span>✓ 12-Month Guarantee</span>
+        <span>✓ Fixed Prices from £120</span>
       </div>
     </div>
   </section>
@@ -174,14 +174,14 @@ import ReviewStrip from '../components/ReviewStrip.astro';
           <h3>1930s Semi Heating System Failures</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
           <p>West Derby's large 1930s estates have heating systems of all ages. Systems fitted in the 1970s and 1980s are now 40 to 50 years old. They break down often. We carry parts for older system boilers. We can usually fix them on the first visit.</p>
-          <a class="job-link" href="/boiler-repair-liverpool">Boiler repair →</a>
+          <a class="job-link" href="/boiler-repair-liverpool"><span>Boiler repair</span><span class="lc-arr" aria-hidden="true">→</span></a>
         </div>
 
         <div class="job-card">
           <h3>Cold Radiators in Larger Family Homes</h3>
           <div class="job-meta"><span class="job-price">Gas Safe registered</span><span class="job-time">30 min response</span></div>
           <p>West Derby's bigger family homes often have eight or more radiators. Sludge builds up and some radiators stay cold. A power flush for 7 to 10 radiators is £525. It gets the water flowing again. Boiler makers ask for a clean system when a new boiler goes in, to keep the warranty valid.</p>
-          <a class="job-link" href="/radiators-liverpool">Radiators →</a>
+          <a class="job-link" href="/radiators-liverpool"><span>Radiators</span><span class="lc-arr" aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
