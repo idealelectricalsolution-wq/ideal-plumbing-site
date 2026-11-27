@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallStrip from '../../components/CallStrip.astro';
+---
+
+<BaseLayout
+  title="Moving Into a New Home? A Plumbing and Gas Checklist for Liverpool"
+  description="Just moved into a Liverpool home? Find the stopcock, check the boiler and gas, look for hidden leaks and get the paperwork you need. A plain first-week checklist from Gas Safe engineers."
+  canonical="https://liverpoolemergencyplumber.co.uk/blog/moving-into-new-home-plumbing-gas-checklist-liverpool"
+>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Moving Into a New Home? A Plumbing and Gas Checklist for Liverpool",
+    "description": "Just moved into a Liverpool home? Find the stopcock, check the boiler and gas, look for hidden leaks and get the paperwork you need. A plain first-week checklist from Gas Safe engineers.",
+    "author": { "@type": "Organization", "name": "Liverpool Emergency Plumber", "url": "https://liverpoolemergencyplumber.co.uk" },
+    "publisher": { "@type": "Organization", "name": "Liverpool Emergency Plumber", "logo": { "@type": "ImageObject", "url": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png" } },
+    "datePublished": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://liverpoolemergencyplumber.co.uk/blog/moving-into-new-home-plumbing-gas-checklist-liverpool" },
+    "keywords": "moving into a new home checklist, new home plumbing checks, new home gas safety check Liverpool, first week new house boiler"
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Learning Centre", "item": "https://liverpoolemergencyplumber.co.uk/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Moving Into a New Home? A Plumbing and Gas Checklist for Liverpool", "item": "https://liverpoolemergencyplumber.co.uk/blog/moving-into-new-home-plumbing-gas-checklist-liverpool" }
+    ]
+  }
+  </script>
+  <style>
+    .blog-post { max-width: 780px; margin: 0 auto; padding: 0 1.25rem; }
+    .blog-breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; padding-top: 1.5rem; }
+    .blog-breadcrumb a { color: var(--navy); text-decoration: none; font-weight: 600; }
+    .blog-breadcrumb a:hover { color: #c2410c; }
+    .blog-cat-tag { display: inline-block; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; }
+    .blog-meta strong { color: var(--navy); }
+    .blog-body h2 { color: var(--navy); font-size: 1.4rem; font-weight: 800; margin: 2rem 0 0.75rem; }
+    .blog-body h3 { color: var(--navy); font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+    .blog-body p { color: var(--text); line-height: 1.75; margin-bottom: 1rem; font-size: 0.97rem; }
+    .blog-body ul, .blog-body ol { margin: 0 0 1rem 1.25rem; }
+    .blog-body li { color: var(--text); line-height: 1.7; margin-bottom: 0.35rem; font-size: 0.97rem; }
+    .blog-body a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
+    .blog-body a:hover { color: #c2410c; border-color: var(--orange); }
+    .blog-callout { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-callout strong { color: var(--navy); display: block; margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .blog-callout p { color: var(--text); margin: 0; font-size: 0.9rem; }
+    .blog-stat { background: var(--navy); border-radius: var(--radius); padding: 1.5rem; text-align: center; margin: 1.5rem 0; }
+    .blog-stat .stat-num { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3rem; font-weight: 900; color: #fb923c; line-height: 1; }
+    .blog-stat .stat-label { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-top: 0.35rem; }
+    .blog-warning { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #b91c1c; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-warning strong { color: #b91c1c; display: block; margin-bottom: 0.35rem; }
+    .blog-warning p { color: #7f1d1d; margin: 0; font-size: 0.9rem; }
+    .blog-success { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #15803d; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-success strong { color: #15803d; display: block; margin-bottom: 0.35rem; }
+    .blog-success p { color: #166534; margin: 0; font-size: 0.9rem; }
+    .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    .price-table th { background: var(--navy); color: #fff; padding: 0.75rem 1rem; text-align: left; font-size: 0.82rem; letter-spacing: 0.03em; }
+    .price-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text); }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table .price-td { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .blog-related { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 2.5rem; }
+    .blog-related h3 { color: var(--navy); font-size: 1rem; margin-bottom: 1rem; }
+    .blog-related a { display: block; color: var(--navy); text-decoration: none; font-size: 0.88rem; font-weight: 700; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .blog-related a:last-child { border-bottom: none; }
+    .blog-related a:hover { color: #c2410c; }
+    .blog-related a::before { content: "→ "; color: #c2410c; }
+    .blog-author { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .blog-author-avatar { background: var(--navy); color: #fff; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; flex-shrink: 0; }
+    .blog-author strong { display: block; color: var(--navy); font-size: 0.88rem; }
+    .blog-author span { color: var(--muted); font-size: 0.78rem; }
+  </style>
+  <section style="background:var(--white);border-bottom:3px solid var(--orange);padding:2rem 0 0;">
+    <div class="blog-post">
+      <div class="blog-breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog">Learning Centre</a> &rsaquo; Homeowners
+      </div>
+      <span class="blog-cat-tag" style="background:#0f766e;">HOMEOWNERS</span>
+      <h1 class="blog-title">Moving Into a New Home? A Plumbing and Gas Checklist for Liverpool</h1>
+      <p style="font-size:1.05rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem;">The first week in a new home is the best time to learn how its water and gas work. Ten minutes now saves a panic later. Here is what to check, room by room.</p>
+      <div class="blog-meta">
+        <span><strong>By</strong> Liverpool Emergency Plumber</span>
+        <span><strong>Gas Safe Registered Plumber</strong></span>
+        <span>Published 27 November 2026</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--white);padding:2rem 0 3rem;">
+    <div class="blog-post">
+      <div class="blog-body">
+        <h2>The Short Answer</h2>
+        <p>Find the stopcock and the gas shut-off, check the boiler and its paperwork, fit carbon monoxide alarms, and look for signs of leaks. If you do not know when the boiler was last serviced, book a service or a gas safety check.</p>
+
+        <div class="blog-stat">
+          <div class="stat-num">Day 1</div>
+          <div class="stat-label">Find your stopcock on the day you move in. In an emergency, it is the one thing you need to know.</div>
+        </div>
+        <CallStrip inline title="Just moved in?" text="Book a boiler service or gas safety check and start with a clean record." />
+
+        <h2>1. Find the Stopcock and Check It Turns</h2>
+        <p>The stopcock turns off all the water to the house. It is usually under the kitchen sink. In older Liverpool terraces it can be in the cellar, under the stairs or near the front door. There is often a second one outside, under a small cover in the path.</p>
+        <p>Turn it clockwise to close it, then open it again. If it is stiff or will not move, get it looked at now, not when a pipe bursts. Show everyone in the house where it is.</p>
+
+        <h2>2. Find the Gas Meter and the Shut-Off Lever</h2>
+        <p>Next to the gas meter there is a lever, called the emergency control valve. When the lever is in line with the pipe, the gas is on. Turn it a quarter turn so it is across the pipe, and the gas is off.</p>
+        <div class="blog-warning">
+          <strong>If you ever smell gas</strong>
+          <p>Turn the gas off at the meter, open doors and windows, do not use any switches, and leave the house. Call the National Gas Emergency line on <a href="tel:0800111999">0800 111 999</a>.</p>
+        </div>
+
+        <h2>3. Check the Boiler and Its Paperwork</h2>
+        <p>Ask the seller, landlord or agent for:</p>
+        <ul>
+          <li>The boiler manual and the Benchmark checklist, which records each service</li>
+          <li>The date of the last service</li>
+          <li>Any warranty paperwork, as many warranties need a yearly service to stay valid</li>
+          <li>A gas safety certificate, if you are renting</li>
+        </ul>
+        <p>Then check the boiler itself. The pressure gauge should read 1 to 1.5 bar when the heating is off. There should be no water under it, and no soot or black marks on the case. Turn the heating and hot water on and make sure every radiator warms up.</p>
+        <p>If there is no record of a service in the last 12 months, book one. Our <a href="/boiler-service-liverpool">boiler service</a> is £120. Selling or just bought? A <a href="/gas-safety-certificate-liverpool">gas safety check</a> on the boiler, cooker and hob is £100.</p>
+
+        <h2>4. Fit Carbon Monoxide Alarms</h2>
+        <p>Fit a carbon monoxide alarm in every room with a gas boiler, gas fire or other appliance that burns fuel. Test any alarms already there. Look for alarms marked BS EN 50291. Our <a href="/blog/carbon-monoxide-safety-liverpool">carbon monoxide guide</a> explains the signs to watch for.</p>
+        <p>If the house has an old gas fire you do not plan to use, we can disconnect and cap it safely.</p>
+
+        <h2>5. Look for Leaks</h2>
+        <p>A hidden leak can run for months before anyone notices. In the first week, check:</p>
+        <ul>
+          <li>Under the kitchen and bathroom sinks, with a dry tissue</li>
+          <li>Around the base of the toilet and behind the cistern</li>
+          <li>Ceilings under the bathroom, for stains or soft patches</li>
+          <li>Around the bath and shower, for gaps in the sealant</li>
+          <li>The water meter, if you have one. Turn every tap off and see if the dial still moves</li>
+        </ul>
+        <p>A meter that moves with everything off means water is escaping somewhere. See our <a href="/leak-detection-liverpool">leak detection</a> page.</p>
+
+        <h2>6. Learn How the Hot Water Works</h2>
+        <p>Work out which system you have:</p>
+        <ul>
+          <li><strong>A combi boiler</strong> heats water as you use it. There is no hot water tank.</li>
+          <li><strong>A hot water tank in a cupboard</strong> stores hot water. If there is a cold water tank in the loft too, it is a vented system.</li>
+          <li><strong>A sealed metal tank with no loft tank</strong> is an unvented cylinder. It needs a yearly service by a G3 qualified engineer. See our <a href="/hot-water-cylinders-liverpool">hot water cylinders</a> page.</li>
+        </ul>
+
+        <h2>7. Get Ready for Winter</h2>
+        <ul>
+          <li>Lag any bare pipes in the loft, the cellar or a cold extension</li>
+          <li>Find the outside tap's isolation valve inside, so you can drain it before frost</li>
+          <li>Buy a radiator key and learn how to bleed a radiator</li>
+          <li>Find the boiler's condensate pipe outside, in case it freezes</li>
+        </ul>
+        <p>Our guides to <a href="/blog/frozen-pipes-liverpool-winter-guide">frozen pipes</a> and <a href="/blog/radiator-cold-at-top-or-bottom-liverpool">cold radiators</a> cover these in more detail.</p>
+
+        <h2>Renting? What Your Landlord Must Do</h2>
+        <p>Your landlord must have every gas appliance they provide checked every 12 months, and give you a copy of the gas safety certificate before you move in. They must also fit a carbon monoxide alarm in any room with a fixed fuel-burning appliance, other than a gas cooker. If anything breaks, tell your landlord or letting agent first.</p>
+        <CallStrip inline title="Want us to check it over?" text="Call for advice or a price. Gas Safe registered, no call-out fee." />
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="pf-faq">
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Should I get the boiler serviced when I move in?</span></summary><div class="pf-faq-body"><p>If there is no record of a service in the last 12 months, yes. A service checks the boiler is burning gas safely and keeps most warranties valid. It also gives you a starting point for your own records.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Do I need a gas safety certificate for a home I own?</span></summary><div class="pf-faq-body"><p>The law does not say you need one for a home you live in. A yearly check is still wise, and many buyers ask for one when you sell. If you rent the home out, you must have one every 12 months.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Where is the stopcock in a Liverpool terrace?</span></summary><div class="pf-faq-body"><p>Most often under the kitchen sink. In older terraces it can also be in the cellar, under the stairs or just inside the front door. There is usually another one outside, under a small cover in the path.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">How do I know how old the boiler is?</span></summary><div class="pf-faq-body"><p>Check the data label, often inside the front cover or underneath, or the Benchmark checklist in the manual. Most boilers last 10 to 15 years. If yours is older and has no service history, get it checked.</p></div></details>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <div class="blog-author-avatar">LEP</div>
+        <div>
+          <strong>Liverpool Emergency Plumber</strong>
+          <span>A team of Gas Safe registered engineers, led by James</span>
+        </div>
+      </div>
+
+      <div class="blog-related">
+        <h3>Related Guides and Services</h3>
+        <a href="/boiler-service-liverpool">Boiler Service Liverpool, £120</a>
+        <a href="/gas-safety-certificate-liverpool">Gas Safety Certificate Liverpool from £100</a>
+        <a href="/leak-detection-liverpool">Leak Detection Liverpool: Find Hidden Leaks</a>
+        <a href="/blog/low-water-pressure-liverpool">Low Water Pressure at Home? Causes and Fixes</a>
+        <a href="/blog/carbon-monoxide-safety-liverpool">Carbon Monoxide: Signs, Alarms and What to Do</a>
+        <a href="/blog/frozen-pipes-liverpool-winter-guide">Frozen Pipes: Prevention, Thawing and Emergencies</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--navy);padding:2.5rem 0;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#ffffff;font-size:1.5rem;margin-bottom:0.5rem;">Need a Gas Safe Plumber in Liverpool?</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.5rem;">Gas Safe registered. A trusted team of engineers, led by James. Fixed prices. All Liverpool postcodes covered.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:01515580334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Not urgent? Book a visit</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

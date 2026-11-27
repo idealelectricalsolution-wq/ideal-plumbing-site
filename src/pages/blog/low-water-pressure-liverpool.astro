@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallStrip from '../../components/CallStrip.astro';
+---
+
+<BaseLayout
+  title="Low Water Pressure at Home? Causes, Quick Checks and Who Fixes It"
+  description="Weak taps or a slow shower in your Liverpool home? The common causes of low water pressure, the checks you can do in 10 minutes, and when to call United Utilities or a plumber."
+  canonical="https://liverpoolemergencyplumber.co.uk/blog/low-water-pressure-liverpool"
+>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Low Water Pressure at Home? Causes, Quick Checks and Who Fixes It",
+    "description": "Weak taps or a slow shower in your Liverpool home? The common causes of low water pressure, the checks you can do in 10 minutes, and when to call United Utilities or a plumber.",
+    "author": { "@type": "Organization", "name": "Liverpool Emergency Plumber", "url": "https://liverpoolemergencyplumber.co.uk" },
+    "publisher": { "@type": "Organization", "name": "Liverpool Emergency Plumber", "logo": { "@type": "ImageObject", "url": "https://liverpoolemergencyplumber.co.uk/ideal-plumbing-logo.png" } },
+    "datePublished": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://liverpoolemergencyplumber.co.uk/blog/low-water-pressure-liverpool" },
+    "keywords": "low water pressure Liverpool, weak water pressure house, low water pressure taps, United Utilities low pressure"
+  }
+  </script>
+
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liverpoolemergencyplumber.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Learning Centre", "item": "https://liverpoolemergencyplumber.co.uk/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Low Water Pressure at Home? Causes, Quick Checks and Who Fixes It", "item": "https://liverpoolemergencyplumber.co.uk/blog/low-water-pressure-liverpool" }
+    ]
+  }
+  </script>
+  <style>
+    .blog-post { max-width: 780px; margin: 0 auto; padding: 0 1.25rem; }
+    .blog-breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; padding-top: 1.5rem; }
+    .blog-breadcrumb a { color: var(--navy); text-decoration: none; font-weight: 600; }
+    .blog-breadcrumb a:hover { color: #c2410c; }
+    .blog-cat-tag { display: inline-block; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; }
+    .blog-meta strong { color: var(--navy); }
+    .blog-body h2 { color: var(--navy); font-size: 1.4rem; font-weight: 800; margin: 2rem 0 0.75rem; }
+    .blog-body h3 { color: var(--navy); font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+    .blog-body p { color: var(--text); line-height: 1.75; margin-bottom: 1rem; font-size: 0.97rem; }
+    .blog-body ul, .blog-body ol { margin: 0 0 1rem 1.25rem; }
+    .blog-body li { color: var(--text); line-height: 1.7; margin-bottom: 0.35rem; font-size: 0.97rem; }
+    .blog-body a { color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.25); }
+    .blog-body a:hover { color: #c2410c; border-color: var(--orange); }
+    .blog-callout { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-callout strong { color: var(--navy); display: block; margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .blog-callout p { color: var(--text); margin: 0; font-size: 0.9rem; }
+    .blog-stat { background: var(--navy); border-radius: var(--radius); padding: 1.5rem; text-align: center; margin: 1.5rem 0; }
+    .blog-stat .stat-num { font-family: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif; font-size: 3rem; font-weight: 900; color: #fb923c; line-height: 1; }
+    .blog-stat .stat-label { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-top: 0.35rem; }
+    .blog-warning { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #b91c1c; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-warning strong { color: #b91c1c; display: block; margin-bottom: 0.35rem; }
+    .blog-warning p { color: #7f1d1d; margin: 0; font-size: 0.9rem; }
+    .blog-success { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #15803d; border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .blog-success strong { color: #15803d; display: block; margin-bottom: 0.35rem; }
+    .blog-success p { color: #166534; margin: 0; font-size: 0.9rem; }
+    .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    .price-table th { background: var(--navy); color: #fff; padding: 0.75rem 1rem; text-align: left; font-size: 0.82rem; letter-spacing: 0.03em; }
+    .price-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text); }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table .price-td { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .blog-related { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 2.5rem; }
+    .blog-related h3 { color: var(--navy); font-size: 1rem; margin-bottom: 1rem; }
+    .blog-related a { display: block; color: var(--navy); text-decoration: none; font-size: 0.88rem; font-weight: 700; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .blog-related a:last-child { border-bottom: none; }
+    .blog-related a:hover { color: #c2410c; }
+    .blog-related a::before { content: "→ "; color: #c2410c; }
+    .blog-author { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .blog-author-avatar { background: var(--navy); color: #fff; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; flex-shrink: 0; }
+    .blog-author strong { display: block; color: var(--navy); font-size: 0.88rem; }
+    .blog-author span { color: var(--muted); font-size: 0.78rem; }
+  </style>
+  <section style="background:var(--white);border-bottom:3px solid var(--orange);padding:2rem 0 0;">
+    <div class="blog-post">
+      <div class="blog-breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog">Learning Centre</a> &rsaquo; Homeowners
+      </div>
+      <span class="blog-cat-tag" style="background:#0f766e;">HOMEOWNERS</span>
+      <h1 class="blog-title">Low Water Pressure at Home? Causes, Quick Checks and Who Fixes It</h1>
+      <p style="font-size:1.05rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem;">Weak taps, a shower that barely runs or a bath that takes forever to fill. Low water pressure has a handful of common causes. Some you can sort in minutes. Here is how to find yours.</p>
+      <div class="blog-meta">
+        <span><strong>By</strong> Liverpool Emergency Plumber</span>
+        <span><strong>Gas Safe Registered Plumber</strong></span>
+        <span>Published 27 November 2026</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--white);padding:2rem 0 3rem;">
+    <div class="blog-post">
+      <div class="blog-body">
+        <h2>The Short Answer</h2>
+        <p>First work out if it is every tap or just one. If it is just one tap or the shower, the problem is usually that tap or shower, often limescale. If every tap is weak, the cause is in your supply pipe, your stopcock or the mains in the street.</p>
+
+        <div class="blog-stat">
+          <div class="stat-num">10 min</div>
+          <div class="stat-label">About how long the checks below take. Most need nothing more than a bucket and a watch.</div>
+        </div>
+        <CallStrip inline title="Taps still weak?" text="Tell us what you have checked and we will tell you the likely cause. No call-out fee." />
+
+        <h2>Step 1: Is It One Tap or Every Tap?</h2>
+        <p>Run the kitchen cold tap, then a bathroom tap, then the shower. Compare them.</p>
+        <ul>
+          <li><strong>Only one tap or the shower is weak.</strong> The fault is at that outlet. See step 2.</li>
+          <li><strong>Every cold tap is weak.</strong> The problem is in the supply. See step 3.</li>
+          <li><strong>Only the hot taps are weak.</strong> The problem is on the hot water side, such as the boiler or the cylinder. See step 4.</li>
+        </ul>
+
+        <h2>Step 2: One Weak Tap or Shower</h2>
+        <h3>Clean the tap aerator</h3>
+        <p>Most modern taps have a small mesh screen at the spout, called an aerator. Limescale and grit block it. Unscrew it, rinse it, soak it in vinegar or descaler, and refit it.</p>
+        <h3>Descale the shower head</h3>
+        <p>Unscrew the shower head and soak it in descaler or white vinegar for an hour. Limescale is the most common cause of a weak shower. Our <a href="/shower-repair-liverpool">shower repair</a> page has more checks.</p>
+        <h3>Check the isolation valve</h3>
+        <p>Under most sinks and on many shower pipes there is a small valve with a screwdriver slot. If the slot is across the pipe, it is closed or part-closed. Turn it so the slot runs along the pipe.</p>
+
+        <h2>Step 3: Every Cold Tap Is Weak</h2>
+        <h3>Check your stopcock is fully open</h3>
+        <p>The stopcock is usually under the kitchen sink. In older Liverpool terraces it can be in the cellar, under the stairs or near the front door. Turn it anticlockwise as far as it goes. Stopcocks are often left part-closed after work on the plumbing.</p>
+        <h3>Do the bucket test</h3>
+        <p>Put a bucket with a known size under the kitchen cold tap. Turn it fully on and time how long it takes to fill. Work out how many litres come out in a minute. Write it down, as United Utilities may ask for it. As a rough guide, around 9 litres a minute or more is normal for a kitchen tap.</p>
+        <h3>Ask the neighbours</h3>
+        <p>If the people next door have weak taps too, the problem is likely in the street. Check the <a href="https://www.unitedutilities.com/" target="_blank" rel="noopener">United Utilities</a> website for works in your area, or call them. They look after the water main up to your boundary.</p>
+        <h3>Look for a leak</h3>
+        <p>A hidden leak on your supply pipe lowers the pressure inside. Signs include a wet patch in the garden or path, damp floors, or a water meter that moves when every tap is off. See our <a href="/leak-detection-liverpool">leak detection</a> page.</p>
+
+        <div class="blog-callout">
+          <strong>Old lead pipe in an older Liverpool home?</strong>
+          <p>Many Victorian and pre-war homes still have a lead supply pipe from the boundary into the house. Old lead pipes are narrow and can get furred up, which lowers the pressure. The pipe inside your boundary is usually yours to replace. We replace lead supply pipes with copper or plastic. We look first and give you a fixed price.</p>
+        </div>
+
+        <h2>Step 4: Only the Hot Taps Are Weak</h2>
+        <p>With a combi boiler, hot water pressure is a little lower than cold. That is normal. If it has got much weaker, the boiler's plate heat exchanger or a flow part may be scaled up.</p>
+        <p>With a hot water tank in an airing cupboard, check how the tank is fed. A tank fed from a cold water tank in the loft works on gravity, so the pressure is low by design. An unvented cylinder runs at mains pressure, and a sudden drop can point to a blocked strainer or a faulty valve. See our <a href="/hot-water-cylinders-liverpool">hot water cylinders</a> page.</p>
+
+        <h2>Who Fixes What?</h2>
+        <table class="price-table brx-table defl">
+          <thead><tr><th>Where the problem is</th><th>Who usually fixes it</th></tr></thead>
+          <tbody>
+            <tr><td><strong>The water main in the street</strong></td><td>United Utilities. Call them, it costs you nothing.</td></tr>
+            <tr><td><strong>Your supply pipe, from the boundary into the house</strong></td><td>Usually you, as the owner. We can find the fault and fix it.</td></tr>
+            <tr><td><strong>Stopcock, valves, taps and shower</strong></td><td>You, or a plumber. Many are quick fixes.</td></tr>
+            <tr><td><strong>Boiler or unvented cylinder</strong></td><td>A Gas Safe or G3 qualified engineer, such as our team.</td></tr>
+            <tr><td><strong>You rent your home</strong></td><td>Tell your landlord or letting agent first.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>What Does It Cost?</h2>
+        <p>Finding and fixing a pressure fault is charged by time. The first hour is £120 on weekdays from 9am to 4pm, £150 in the evenings, at night and at weekends, and £180 on bank holidays. There is no call-out fee. Parts, and bigger jobs such as a new supply pipe, are priced before we start.</p>
+        <CallStrip inline title="Want us to take a look?" text="Call for advice or a price. Gas Safe registered, no call-out fee." />
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="pf-faq">
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Why has my water pressure suddenly dropped?</span></summary><div class="pf-faq-body"><p>A sudden drop on every tap is often work on the mains in your street, or a burst nearby. Ask your neighbours and check the United Utilities website. If it is only your home, check the stopcock is fully open and look for signs of a leak.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Why is my shower weak but the taps are fine?</span></summary><div class="pf-faq-body"><p>Usually limescale in the shower head or hose, or a part-closed isolation valve on the shower pipe. On an electric shower or a mixer, a worn part can also cut the flow. Descale the head first.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Is low water pressure my responsibility or United Utilities'?</span></summary><div class="pf-faq-body"><p>United Utilities looks after the main in the street up to your boundary. The supply pipe from your boundary into the house, and everything inside, is usually yours as the owner. If you rent, tell your landlord.</p></div></details>
+          <details class="pf-faq-item"><summary><span class="pf-faq-q">Can old lead pipes cause low water pressure?</span></summary><div class="pf-faq-body"><p>Yes. Lead supply pipes are often narrow and can get furred up inside over the years. Many older Liverpool homes still have one. Replacing it with copper or plastic often improves the pressure.</p></div></details>
+        </div>
+      </div>
+
+      <div class="blog-author">
+        <div class="blog-author-avatar">LEP</div>
+        <div>
+          <strong>Liverpool Emergency Plumber</strong>
+          <span>A team of Gas Safe registered engineers, led by James</span>
+        </div>
+      </div>
+
+      <div class="blog-related">
+        <h3>Related Guides and Services</h3>
+        <a href="/leak-detection-liverpool">Leak Detection Liverpool: Find Hidden Leaks</a>
+        <a href="/shower-repair-liverpool">Shower Repair Liverpool, First Hour £120</a>
+        <a href="/hot-water-cylinders-liverpool">Hot Water Cylinders Liverpool from £750</a>
+        <a href="/tap-replacement-liverpool">Tap Replacement Liverpool, £110 Fitted</a>
+        <a href="/blog/moving-into-new-home-plumbing-gas-checklist-liverpool">Moving Into a New Home: Plumbing and Gas Checklist</a>
+        <a href="/blog/central-heating-liverpool-victorian-terrace">Central Heating in Liverpool's Victorian Terraces</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--navy);padding:2.5rem 0;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#ffffff;font-size:1.5rem;margin-bottom:0.5rem;">Need a Gas Safe Plumber in Liverpool?</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:1.5rem;">Gas Safe registered. A trusted team of engineers, led by James. Fixed prices. All Liverpool postcodes covered.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;max-width:300px;margin:0 auto;">
+        <a href="tel:01515580334" class="btn btn-orange btn-lg btn-full" style="box-shadow:0 4px 14px rgba(249,115,22,0.4);color:#ffffff;">CALL 0151 558 0334</a>
+        <a href="/get-started" class="btn btn-full" style="background:rgba(255,255,255,0.12);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">Not urgent? Book a visit</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

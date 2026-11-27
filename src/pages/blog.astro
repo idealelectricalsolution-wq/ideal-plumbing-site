@@ -6,6 +6,8 @@ const posts = [
   { slug: "boiler-repair-liverpool", href: "/boiler-repair-liverpool", category: "BOILERS", borderColor: "#c2410c", title: "Boiler Repair in Liverpool: Common Faults and Error Codes Explained", excerpt: "What to check before you call, the most common boiler problems, error codes for every major brand, and repair prices.", date: "November 2026", readTime: "Complete guide" },
   { slug: "boiler-making-noise-liverpool", category: "BOILERS", borderColor: "#c2410c", title: "Boiler Making a Noise? Banging, Whistling and Gurgling Explained", excerpt: "What banging, kettling, whistling, gurgling and humming usually mean, what you can safely check yourself, and when to call a Gas Safe engineer.", date: "November 2026", readTime: "5 min read" },
   { slug: "radiator-cold-at-top-or-bottom-liverpool", category: "CENTRAL HEATING", borderColor: "#15803d", title: "Radiator Cold at the Top or Bottom? What It Means and How to Fix It", excerpt: "Cold at the top means air, cold at the bottom usually means sludge. How to bleed a radiator safely, and when a stuck valve or a power flush is the fix.", date: "November 2026", readTime: "5 min read" },
+  { slug: "low-water-pressure-liverpool", category: "HOMEOWNERS", borderColor: "#0f766e", title: "Low Water Pressure at Home? Causes, Quick Checks and Who Fixes It", excerpt: "One weak tap or every tap? The common causes of low water pressure, the checks you can do in 10 minutes, and when to call United Utilities or a plumber.", date: "November 2026", readTime: "5 min read" },
+  { slug: "moving-into-new-home-plumbing-gas-checklist-liverpool", category: "HOMEOWNERS", borderColor: "#0f766e", title: "Moving Into a New Home? A Plumbing and Gas Checklist for Liverpool", excerpt: "Find the stopcock and gas shut-off, check the boiler and its paperwork, fit CO alarms and look for hidden leaks. A plain first-week checklist.", date: "November 2026", readTime: "5 min read" },
   { slug: "carbon-monoxide-safety-liverpool", category: "GAS SAFETY", borderColor: "#1a3a5c", title: "Carbon Monoxide in Liverpool Homes: The Silent Risk Every Homeowner Should Know", excerpt: "Around 25 people die each year in England and Wales from accidental carbon monoxide poisoning. The signs to watch for, which alarm to fit and how to protect your Liverpool home.", date: "April 2026", readTime: "5 min read" },
   { slug: "hmo-gas-safety-liverpool-landlords", category: "LANDLORDS", borderColor: "#7c3aed", title: "HMO Gas Safety in Liverpool: A Complete Compliance Guide for Landlords", excerpt: "HMO landlords in Liverpool face stricter gas safety requirements. This guide covers everything you need for Liverpool City Council HMO licensing.", date: "April 2026", readTime: "7 min read" },
   { slug: "central-heating-liverpool-victorian-terrace", category: "CENTRAL HEATING", borderColor: "#15803d", title: "Installing Central Heating in Liverpool's Victorian Terraces: What You Need to Know", excerpt: "Liverpool has one of the highest concentrations of Victorian housing in England. Here is what is different about installing central heating in a period property and what it costs.", date: "April 2026", readTime: "6 min read" },
@@ -133,6 +135,7 @@ const posts = [
         <a href="#emergency" class="category-pill">Emergency</a>
         <a href="#bathrooms" class="category-pill">Bathrooms</a>
         <a href="#landlords" class="category-pill">Landlords</a>
+        <a href="#homeowners" class="category-pill">Homeowners</a>
         <a href="#grants" class="category-pill">Grants</a>
       </div>
     </div>
@@ -255,6 +258,27 @@ const posts = [
         </div>
         <div class="posts-grid">
           {posts.filter(p => p.category === "LANDLORDS").map(post => (
+            <a href={post.href || `/blog/${post.slug}`} class="post-card">
+              <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
+              <div class="post-card-inner">
+                <span class="post-cat-tag" style={`background:${post.borderColor};`}>{post.category}</span>
+                <h3 class="post-card-title">{post.title}</h3>
+                <div class="post-meta">{post.date} &middot; {post.readTime}</div>
+                <p class="post-card-excerpt">{post.excerpt}</p>
+                <span class="post-read-link">Read guide &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="category-section" id="homeowners">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:#0f766e;"></div>
+          <h3>Homeowners</h3>
+        </div>
+        <div class="posts-grid">
+          {posts.filter(p => p.category === "HOMEOWNERS").map(post => (
             <a href={post.href || `/blog/${post.slug}`} class="post-card">
               <div class="post-card-bar" style={`background:${post.borderColor};`}></div>
               <div class="post-card-inner">
